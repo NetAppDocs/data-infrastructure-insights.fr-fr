@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: reporting_data_retention.html 
+summary: 'Conservation des données des informations exploitables de l"infrastructure de données à des fins de reporting' 
+keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying, retention 
+---
+= Conservation des données historiques pour les rapports
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights conserve les données historiques à utiliser dans Reporting en fonction des magasins de données et de la granularité des données, comme indiqué dans le tableau suivant.
+
+|===
+
+
+| Un data Mart | Objet mesuré | Granularité | Durée de conservation 
+
+
+| Marts de performance | Volumes et volumes internes | Horaire | 14 jours 
+
+
+| Marts de performance | Volumes et volumes internes | Tous les jours | 13 mois 
+
+
+| Marts de performance | Client supplémentaire | Horaire | 13 mois 
+
+
+| Marts de performance | Hôte | Horaire | 13 mois 
+
+
+| Marts de performance | Performances du commutateur pour le port | Horaire | 35 jours 
+
+
+| Marts de performance | Performances de commutateur pour l'hôte, le stockage et les bandes | Horaire | 13 mois 
+
+
+| Marts de performance | Nœud de stockage | Horaire | 14 jours 
+
+
+| Marts de performance | Nœud de stockage | Tous les jours | 13 mois 
+
+
+| Marts de performance | Performances des machines virtuelles | Horaire | 14 jours 
+
+
+| Marts de performance | Performances des machines virtuelles | Tous les jours | 13 mois 
+
+
+| Marts de performance | Performances de l'hyperviseur | Horaire | 35 jours 
+
+
+| Marts de performance | Performances de l'hyperviseur | Tous les jours | 13 mois 
+
+
+| Marts de performance | Performances VMDK | Horaire | 35 jours 
+
+
+| Marts de performance | Performances VMDK | Tous les jours | 13 mois 
+
+
+| Marts de performance | Performances des disques | Horaire | 14 jours 
+
+
+| Marts de performance | Performances des disques | Tous les jours | 13 mois 
+
+
+| Marts de capacité | Tous (sauf volumes individuels) | Tous les jours | 13 mois 
+
+
+| Marts de capacité | Tous (sauf volumes individuels) | Représentant mensuel | 14 mois et plus 
+
+
+| Marts d'inventaire | Volumes individuels | État actuel | 1 jour (ou jusqu'au prochain CÉC) 
+|===

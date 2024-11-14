@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: task_create_application.html 
+summary: Vous définissez les applications que vous appliquez ensuite aux ressources de votre environnement selon les besoins. 
+keywords: application, create application, 
+---
+= Création d'applications
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour suivre les données associées à des applications spécifiques s'exécutant dans votre environnement, vous pouvez définir les applications dans Data Infrastructure Insights.
+
+.Avant de commencer
+Si vous souhaitez associer l'application à une entité métier, vous devez créer l'entité métier avant de définir l'application.
+
+.Description de la tâche
+Les informations sur l'infrastructure de données vous permettent de suivre les données des ressources associées aux applications, par exemple pour l'utilisation ou le reporting des coûts.
+
+.Étapes
+. Dans le menu informations sur l'infrastructure de données, cliquez sur *observabilité > enrichir > applications*. Sélectionnez
++
+La boîte de dialogue Ajouter une application s'affiche.
+
+. Saisissez un nom unique pour l'application.
+. Sélectionnez une priorité pour l'application.
+. Cliquez sur *Enregistrer*.
+
+
+Après avoir défini une application, elle peut être affectée à des actifs.
+
+
+
+== Affectation d'applications aux ressources
+
+Cette procédure attribue l'application à un hôte comme exemple. Vous pouvez affecter un hôte, une machine virtuelle, un volume ou des volumes internes à une application.
+
+.Étapes
+. Recherchez la ressource à attribuer à l'application :
+. Cliquez sur *Queries > +New Query* et recherchez Host.
+. Cochez la case à gauche de l'hôte que vous souhaitez associer à l'application.
+. Cliquez sur *actions groupées > Ajouter une application*.
+. Sélectionnez l'application à laquelle vous affectez la ressource.
+
+
+Toutes les nouvelles applications que vous attribuez remplacent toutes les applications de la ressource dérivées d'une autre ressource. Par exemple, les volumes héritent des applications des hôtes. Lorsque de nouvelles applications sont attribuées à un volume, la nouvelle application est prioritaire sur l'application dérivée.
+
+
+NOTE: Pour les environnements disposant d'un grand nombre de ressources associées, l'héritage des affectations d'applications peut prendre plusieurs minutes. Veuillez laisser plus de temps à l'héritage si vous disposez de nombreux biens connexes.
+
+.Une fois que vous avez terminé
+Après avoir affecté l'hôte à l'application, vous pouvez affecter les ressources restantes à l'application. Pour accéder à la page d'accueil de l'application, cliquez sur *gérer > application* et sélectionnez l'application que vous avez créée.

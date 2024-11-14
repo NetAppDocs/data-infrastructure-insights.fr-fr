@@ -1,0 +1,116 @@
+---
+sidebar: sidebar 
+permalink: security_overview.html 
+summary: Data Infrastructure Insights applique de bonnes pratiques de sécurité tout au long du cycle de vie des versions. 
+keywords: security, risk, protection 
+---
+= Sécurité des informations exploitables de l'infrastructure de données
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Chez NetApp, la sécurité des données des produits et des clients est au cœur de toute importance. Data Infrastructure Insights applique de bonnes pratiques de sécurité tout au long du cycle de vie des versions pour s'assurer que les informations et les données des clients bénéficient d'une sécurité optimale.
+
+
+
+== Présentation de la sécurité
+
+
+
+=== Sécurité physique
+
+L'infrastructure de production Data Infrastructure Insights est hébergée dans Amazon Web Services (AWS). Les contrôles de sécurité physiques et environnementaux des serveurs de production Data Infrastructure Insights, qui comprennent des bâtiments ainsi que des verrous ou des clés utilisés sur les portes, sont gérés par AWS. Conformément à AWS : « l'accès physique est contrôlé à la fois en périphérie et aux points d'entrée des bâtiments par du personnel de sécurité professionnel qui utilise la vidéosurveillance, les systèmes de détection d'intrusion et d'autres moyens électroniques. Le personnel autorisé utilise des mécanismes d'authentification multi-facteurs pour accéder aux sols des centres de données. »
+
+Le service Data Infrastructure Insights respecte les bonnes pratiques de la link:https://aws.amazon.com/compliance/shared-responsibility-model/["Modèle de responsabilité partagée"] décrit par AWS.
+
+
+
+=== Sécurité des produits
+
+Data Infrastructure Insights suit un cycle de développement conforme aux principes agiles, ce qui nous permet de traiter plus rapidement tout défaut logiciel orienté sécurité, par rapport aux méthodologies de développement de cycle de lancement plus long. Grâce aux méthodologies d'intégration continue, nous sommes en mesure de répondre rapidement aux changements fonctionnels et de sécurité. Les procédures et les politiques de gestion du changement définissent le moment et la façon dont les changements se produisent et contribuent au maintien de la stabilité de l'environnement de production. Tout changement important est officiellement communiqué, coordonné, correctement examiné et approuvé avant leur libération dans l'environnement de production.
+
+
+
+=== Sécurité réseau
+
+L'accès réseau aux ressources dans l'environnement Data Infrastructure Insights est contrôlé par des pare-feu basés sur hôte. Chaque ressource (par exemple, un équilibreur de charge ou une instance de machine virtuelle) dispose d'un pare-feu basé sur l'hôte qui limite le trafic entrant aux ports nécessaires à cette ressource pour exécuter sa fonction.
+
+Data Infrastructure Insights utilise divers mécanismes, notamment des services de détection des intrusions, pour surveiller l'environnement de production à la recherche d'anomalies de sécurité.
+
+
+
+=== Évaluation des risques
+
+L'équipe Data Infrastructure Insights suit un processus d'évaluation des risques formalisé afin de fournir un moyen systématique et reproductible d'identifier et d'évaluer les risques afin qu'ils puissent être gérés de manière appropriée par le biais d'un plan de traitement des risques.
+
+
+
+=== Protection des données
+
+L'environnement de production Data Infrastructure Insights est configuré dans une infrastructure hautement redondante utilisant plusieurs zones de disponibilité pour tous les services et composants. Outre l'utilisation d'une infrastructure de calcul extrêmement disponible et redondante, les données stratégiques sont sauvegardées à intervalles réguliers et les restaurations sont régulièrement testées. Des politiques et procédures de sauvegarde formelles minimisent l'impact des interruptions d'activités commerciales et protègent les processus de l'entreprise contre les défaillances des systèmes d'information ou des incidents et assurent leur reprise en temps voulu et adéquate.
+
+
+
+=== Authentification et gestion des accès
+
+Tout accès client à Data Infrastructure Insights se fait via des interactions de l'interface du navigateur via https. L'authentification s'effectue via le service tiers, Auth0. NetApp a centralisé cette démarche en tant que couche d'authentification pour l'ensemble des services de données cloud.
+
+Data Infrastructure Insights suit de bonnes pratiques du secteur, notamment le « privilège minimal » et le « contrôle d'accès basé sur des rôles » concernant l'accès logique à l'environnement de production Data Infrastructure Insights. L'accès est contrôlé selon un besoin strict et ne peut être accordé que par du personnel autorisé grâce à des mécanismes d'authentification multifacteur.
+
+
+
+=== Collecte et protection des données clients
+
+Toutes les données des clients sont chiffrées en transit sur des réseaux publics et chiffrées au repos. Data Infrastructure Insights utilise le chiffrement à divers points du système pour protéger les données des clients à l'aide de technologies telles que TLS (transport Layer Security) et l'algorithme AES-256 standard.
+
+
+
+=== Déprovisionnement du client
+
+Des notifications par e-mail sont envoyées à divers intervalles pour informer le client que son abonnement arrive à expiration. Une fois l'abonnement expiré, l'interface utilisateur est limitée et la collecte des données commence. Le client est alors averti par e-mail. Les abonnements d'essai bénéficient d'une période de grâce de 14 jours et les comptes d'abonnement payant bénéficient d'un délai de grâce de 28 jours. Une fois le délai de grâce expiré, le client est averti par e-mail que le compte sera supprimé dans 2 jours. Un client payant peut également demander directement de ne pas bénéficier du service.
+
+Les locataires arrivés à expiration et toutes les données client associées sont supprimés par l'équipe Data Infrastructure Insights Operations (SRE) à la fin du délai de grâce ou après confirmation de la demande de résiliation du compte d'un client. Dans les deux cas, l'équipe SRE effectue un appel d'API pour supprimer le compte. L'appel d'API supprime l'instance de tenant et toutes les données client. La suppression du client est vérifiée en appelant la même API et en vérifiant que le statut du locataire client est "SUPPRIMÉ".
+
+
+
+=== Gestion des incidents de sécurité
+
+Ces données sont intégrées au processus d'équipe d'intervention en cas d'incident de sécurité des produits (PSIRT) de NetApp afin de détecter, d'évaluer et de résoudre les vulnérabilités connues. PSIRT affiche les informations de vulnérabilité provenant de plusieurs canaux, notamment les rapports clients, l'ingénierie interne et des sources largement reconnues comme la base de données CVE.
+
+Si un problème est détecté par l'équipe d'ingénierie Data Infrastructure Insights, l'équipe lance le processus PSIRT, évalue et peut éventuellement résoudre le problème.
+
+Il est également possible qu'un client ou un chercheur Data Infrastructure Insights identifie un problème de sécurité avec le produit Data Infrastructure Insights et le signale au support technique ou directement à l'équipe de réponse aux incidents de NetApp. Dans ce cas, l'équipe Data Infrastructure Insights lancera le processus PSIRT, évaluera le problème et pourra éventuellement le résoudre.
+
+
+
+=== Tests de vulnérabilité et de pénétration
+
+Data Infrastructure Insights applique les bonnes pratiques du secteur et procède régulièrement à des tests de vulnérabilité et d'intrusion auprès de professionnels et d'entreprises de sécurité internes et externes.
+
+
+
+=== Formation à la sensibilisation à la sécurité
+
+Tous les membres du personnel Data Infrastructure Insights suivent une formation sur la sécurité, développée pour chaque rôle, afin de s'assurer que chaque employé est équipé pour gérer les défis spécifiques liés à la sécurité de son poste.
+
+
+
+=== La conformité
+
+La solution Data Infrastructure Insights confie à une entreprise externe détenant une licence CPA la réalisation d'un audit et de validations tiers indépendants portant sur la sécurité, les processus et les services, notamment l'exécution de l'audit SOC 2.
+
+
+
+=== Avis de sécurité NetApp
+
+Vous pouvez afficher les conseils de sécurité disponibles link:https://security.netapp.com/advisory/["ici"]deNetApp .

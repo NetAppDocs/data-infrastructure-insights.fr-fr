@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: concept_cs_integration_with_ontap_arp.html 
+summary: 'La sécurité des charges de travail s"intègre avec ONTAP la protection autonome contre les ransomwares pour améliorer la détection des attaques par ransomware.' 
+keywords: ransomware, ARP, Protection, Security 
+---
+= Intégration avec la protection ONTAP autonome contre les ransomwares
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+La fonction ONTAP de protection autonome contre les ransomwares (Autonoman ransomware protection, ARP) utilise l'analyse des workloads dans les environnements NAS (NFS et SMB) pour détecter et avertir de manière proactive les anomalies d'activité dans les fichiers qui peuvent indiquer une attaque par ransomware.
+
+Vous trouverez des détails supplémentaires et des exigences de licence concernant ARP link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ici"].
+
+La sécurité des charges de travail s'intègre à ONTAP pour recevoir des événements ARP et fournir une couche d'analyse et de réponses automatiques supplémentaires.
+
+La sécurité des charges de travail reçoit les événements ARP de ONTAP et effectue les opérations suivantes :
+
+. Met en corrélation les événements de cryptage des volumes avec l'activité des utilisateurs pour identifier qui est à l'origine des dommages.
+. Met en œuvre des politiques de réponse automatique (si définies)
+. Offre des fonctionnalités d'analyse :
++
+** Permettre aux clients de mener des enquêtes sur les violations de données.
+** Identifier les fichiers affectés, ce qui permet de les récupérer plus rapidement et de mener des enquêtes sur les violations de données.
+
+
+
+
+
+
+== Prérequis
+
+. Version minimale de ONTAP : 9.11.1
+. Volumes compatibles ARP. Vous trouverez des détails sur l'activation d'ARP link:https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["ici"]. ARP doit être activé via OnCommand System Manager. La sécurité des charges de travail ne peut pas activer ARP.
+. Le collecteur de sécurité de la charge de travail doit être ajouté via l'IP du cluster.
+. Des informations d'identification au niveau du cluster sont nécessaires pour que cette fonctionnalité fonctionne. En d'autres termes, les identifiants au niveau du cluster doivent être utilisés lors de l'ajout de la SVM.
+
+
+
+
+== Autorisations utilisateur requises
+
+Si vous utilisez les informations d'identification d'administration du cluster, aucune nouvelle autorisation n'est nécessaire.
+
+Si vous utilisez un utilisateur personnalisé (par exemple, _csuser_) avec les autorisations accordées à l'utilisateur, suivez les étapes ci-dessous pour donner les autorisations à la sécurité de la charge de travail afin de collecter des informations relatives à ARP à partir de ONTAP.
+
+Pour _csuser_ avec les informations d'identification du cluster, effectuez les opérations suivantes à partir de la ligne de commande ONTAP :
+
+....
+security login rest-role create -role arwrole -api /api/storage/volumes -access readonly -vserver <cluster_name>
+security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role arwrole
+....
+En savoir plus sur la configuration d'autres link:task_add_collector_svm.html["Autorisations ONTAP"].
+
+
+
+== Alerte exemple
+
+Un exemple d'alerte générée en raison d'un événement ARP est illustré ci-dessous :
+
+image:CS_Ransomware_Example_1.png["Alerte par ransomware, section supérieure"] image:CS_Ransomware_Example_2.png["Alerte par ransomware, section supérieure"] image:CS_Ransomware_Example_3.png["Alerte par ransomware, section supérieure"]
+
+Une bannière de confiance élevée indique que l'attaque a montré un comportement par ransomware avec les activités de chiffrement de fichiers. Le graphique fichiers chiffrés indique l'horodatage auquel l'activité de chiffrement de volume a été détectée par la solution ARP.
+
+
+
+== Limites
+
+Si un SVM n'est pas surveillé par la sécurité des charges de travail, mais que des événements ARP sont générés par ONTAP, les événements sont tout de même reçus et affichés par la sécurité des charges de travail. Cependant, les informations judiciaires liées à l'alerte, ainsi que le mappage des utilisateurs, ne seront pas capturées ni affichées.
+
+
+
+== Dépannage
+
+Les problèmes connus et leurs résolutions sont décrits dans le tableau suivant.
+
+[cols="2*"]
+|===
+| Problème : | Résolution : 
+
+
+| Les alertes par e-mail sont reçues 24 heures après la détection d'une attaque. Dans l'interface utilisateur, les alertes s'affichent 24 heures avant que les e-mails soient reçus par Data Infrastructure Insights Workload Security. | Lorsque ONTAP envoie l'événement _ransomware Detected_ à la sécurité de la charge de travail des informations de l'infrastructure de données (sécurité de la charge de travail), l'e-mail est envoyé. L'événement contient une liste d'attaques et de ses horodatages. L'interface utilisateur de la sécurité de la charge de travail affiche l'horodatage d'alerte du premier fichier attaqué. ONTAP envoie l'événement _ransomware détecté_ aux informations de l'infrastructure de données lorsqu'un certain nombre de fichiers sont codés. Par conséquent, il peut y avoir une différence entre l'heure d'affichage de l'alerte dans l'interface utilisateur et l'heure d'envoi de l'e-mail. 
+|===

@@ -1,0 +1,335 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_diagrams.html 
+keywords: Schema, DB Schema, premium, dwh, data warehouse 
+summary: Diagrammes de schéma de rapport 
+---
+= Diagrammes de schéma de reporting des informations d'infrastructure de données
+:hardbreaks:
+:allow-uri-read: 
+:toclevekls: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ce document fournit les schémas de schéma de la base de données de rapports. Vous pouvez également télécharger un fichier contenant le link:ci_reporting_database_schema.pdf["tables de schéma"].
+
+
+NOTE: La fonction de génération de rapports est disponible dans Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Édition Premium"].
+
+
+
+== Données d'inventaire
+
+Les images suivantes décrivent le datamart de l'inventaire.
+
+
+
+=== Annotations
+
+image:annotations.png["annotations"]
+
+
+
+=== En termes de latence
+
+image:apps_annot.png["en termes de latence"]
+
+
+
+=== Metrics Kubernetes
+
+image:k8s_schema.jpg["Kubernetes"]
+
+
+
+==== Metrics de cluster Kubernetes
+
+image:k8s_cluster_metrics_fact.jpg["Metrics de cluster Kubernetes"]
+
+
+
+==== Données chiffrées de l'espace de noms Kubernetes
+
+image:k8s_namespace_metrics_fact.jpg["Données chiffrées de l'espace de noms Kubernetes"]
+
+
+
+==== Metrics des nœuds Kubernetes
+
+image:k8s_node_metrics_fact.jpg["Metrics des nœuds Kubernetes"]
+
+
+
+==== Informations sur les metrics de PVC Kubernetes
+
+image:k8s_pvc_metrics_fact.jpg["Informations sur les metrics de PVC Kubernetes"]
+
+
+
+==== Réalité des metrics des workloads Kubernetes
+
+image:k8s_workload_metrics_fact.jpg["Réalité des metrics des workloads Kubernetes"]
+
+
+
+=== NAS
+
+image:nas.png["nas"]
+
+
+
+=== Chemins et violations
+
+image:logical.png["chemins et violations"]
+
+
+
+=== Connectivité des ports
+
+image:connectivity.png["connectivité du port"]
+
+
+
+=== Structure SAN
+
+image:fabric.png["Structure SAN"]
+
+
+
+=== Stockage
+
+image:storage.png["stockage"]
+
+
+
+=== Nœud de stockage
+
+image:storage_node.png["nœud de stockage"]
+
+
+
+=== VM
+
+image:vm.png["machine virtuelle"]
+
+'''
+
+
+== Capacité Datamart
+
+Les images suivantes décrivent la capacité du datamart.
+
+
+
+=== Refacturation
+
+image:Chargeback_Fact.png["refacturation"]
+
+
+
+=== Capacité du groupe de disques
+
+image:Disk_Group_Capacity.png["Capacité du groupe de disques"]
+
+
+
+=== Utilisation du système de fichiers
+
+image:fs_util.png["Utilisation du système de fichiers"]
+
+
+
+=== Capacité du volume interne
+
+image:Internal_Volume_Capacity_Fact.png["Capacité du volume interne"]
+
+
+
+=== Capacité PV Kubernetes
+
+image:k8s_pvc_capacity_fact.jpg["Capacité PV Kubernetes"]
+
+
+
+=== Capacité du port
+
+image:ports.png["Capacité du port"]
+
+
+
+=== Capacité qtree
+
+image:Qtree_Capacity_Fact.png["Capacité qtree"]
+
+
+
+=== Efficacité des capacités de stockage
+
+image:efficiency.png["Efficacité des capacités de stockage"]
+
+
+
+=== Capacité du pool de stockage et de stockage
+
+image:Storage_and_Storage_Pool_Capacity_Fact.png["Capacité du pool de stockage et de stockage"]
+
+
+
+=== Capacité du nœud de stockage
+
+image:Storage_Node_Capacity_Fact.jpg["Capacité du nœud de stockage"]
+
+
+
+=== Capacité des machines virtuelles
+
+image:VM_Capacity_Fact.png["Capacité des machines virtuelles"]
+
+
+
+=== Capacité du volume
+
+image:Volume_Capacity.png["Capacité du volume"]
+
+'''
+
+
+== Performance Datamart
+
+Les images suivantes décrivent le datamart de performance.
+
+
+
+=== Volume de l'application performances horaires
+
+image:application_performance_fact.jpg["Volume de l'application performances horaires"]
+
+
+
+=== Performances quotidiennes des disques
+
+image:disk_daily_performance_fact.png["Performances quotidiennes des disques"]
+
+
+
+=== Performances des disques horaires
+
+image:disk_hourly_performance_fact.png["Performances des disques horaires"]
+
+
+
+=== Performances de l'hôte horaire
+
+image:host_performance_fact.jpg["Performances de l'hôte horaire"]
+
+
+
+=== Volume interne rendement horaire
+
+image:internal_volume_performance_fact.jpg["Volume interne rendement horaire"]
+
+
+
+=== Volume interne Performance quotidienne
+
+image:internal_volume_daily_performance_fact.jpg["Volume interne Performance quotidienne"]
+
+
+
+=== Performances quotidiennes des qtrees
+
+image:QtreeDailyPerformanceFact.png["Performances quotidiennes des qtrees"]
+
+
+
+=== Performances quotidiennes du nœud de stockage
+
+image:storage_node_daily_performance_fact.jpg["Performances quotidiennes du nœud de stockage"]
+
+
+
+=== Performances du nœud de stockage horaire
+
+image:storage_node_hourly_performance_fact.jpg["Performances du nœud de stockage horaire"]
+
+
+
+=== Changer les performances horaires de l'hôte
+
+image:switch_performance_for_host_hourly_fact.png["Changer les performances horaires de l'hôte"]
+
+
+
+=== Changer les performances horaires pour le port
+
+image:switch_performance_for_port_hourly_fact.png["Changer les performances horaires pour le port"]
+
+
+
+=== Changez les performances horaires pour le stockage
+
+image:switch_performance_for_storage_hourly_fact.png["Changez les performances horaires pour le stockage"]
+
+
+
+=== Changez les performances horaires pour les bandes
+
+image:switch_performance_for_tape_hourly_fact.png["Changez les performances horaires pour les bandes"]
+
+
+
+=== Performances des machines virtuelles
+
+image:vm_hourly_performance_fact.png["Performances des machines virtuelles"]
+
+
+
+=== Performances quotidiennes des machines virtuelles pour l'hôte
+
+image:vm_daily_performance_fact.png["Performances quotidiennes des machines virtuelles pour l'hôte"]
+
+
+
+=== Performances des machines virtuelles horaires pour l'hôte
+
+image:vm_hourly_performance_fact.png["Performances des machines virtuelles horaires pour l'hôte"]
+
+
+
+=== Performances quotidiennes des machines virtuelles pour l'hôte
+
+image:vm_daily_performance_fact.png["Performances quotidiennes des machines virtuelles pour l'hôte"]
+
+
+
+=== Performances des machines virtuelles horaires pour l'hôte
+
+image:vm_hourly_performance_fact.png["Performances des machines virtuelles horaires pour l'hôte"]
+
+
+
+=== Performances quotidiennes des VMDK
+
+image:vmdk_daily_performance_fact.png["Performances quotidiennes des VMDK"]
+
+
+
+=== Performances VMDK à l'heure
+
+image:vmdk_hourly_performance_fact.png["Performances VMDK à l'heure"]
+
+
+
+=== Volume – rendement horaire
+
+image:volume_performance_fact.jpg["Volume – rendement horaire"]
+
+
+
+=== Volume performances quotidiennes
+
+image:volume_daily_performance_fact.jpg["Volume performances quotidiennes"]

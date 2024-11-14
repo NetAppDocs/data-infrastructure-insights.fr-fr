@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: concept_notifications_email.html 
+summary: 'Ajout d"adresses e-mail pour les notifications.' 
+keywords: email, notifications, signature, recipient, list, subscription 
+---
+= Configuration des notifications par e-mail
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Vous pouvez configurer une liste d'e-mails pour les notifications relatives à un abonnement, ainsi qu'une liste globale de destinataires pour la notification des violations de seuil de la stratégie de performances.
+
+Pour configurer les paramètres du destinataire de la notification, accédez à la page *Admin > Notifications* et sélectionnez l'onglet _Email_.
+
+[role="thumb"]
+image:Notifications_email_list.png["Notifications par email"]
+
+
+
+== Destinataires de la notification d'abonnement
+
+Pour configurer des destinataires pour les notifications d'événements liés à un abonnement, accédez à la section « destinataires de la notification d'abonnement ». Vous pouvez choisir d'envoyer des notifications par e-mail pour les événements liés à un abonnement à l'un ou l'ensemble des destinataires suivants :
+
+* Tous les propriétaires de compte
+* Tous les administrateurs _Monitor & Optimize_
+* Adresses e-mail supplémentaires que vous spécifiez
+
+
+Voici des exemples de types de notifications pouvant être envoyées et d'actions utilisateur que vous pouvez effectuer.
+
+|===
+
+
+| *Notification:* | *Action de l'utilisateur:* 
+
+
+| La version d'essai ou l'abonnement a été mis à jour | Consultez les détails de l'abonnement sur la link:concept_subscribing_to_cloud_insights.html["Abonnement"]page 
+
+
+| L'abonnement expirera dans 90 jours. L'abonnement expirera dans 30 jours | Aucune action requise si le renouvellement automatique est activé Contact link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Ventes NetApp"] pour renouveler l'abonnement 
+
+
+| L'essai se termine dans 2 jours | Renouveler l'essai à partir de la link:concept_subscribing_to_cloud_insights.html["Abonnement"]page. Vous pouvez renouveler une version d'évaluation une seule fois. Contactez link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Ventes NetApp"] pour acheter un abonnement 
+
+
+| La période d'essai ou l'abonnement a expiré le compte cessera de collecter les données dans 48 heures. Le compte sera supprimé après 48 heures | Contactez link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Ventes NetApp"] pour acheter un abonnement 
+|===
+
+
+== Liste globale des destinataires des alertes
+
+Les notifications par e-mail d'alertes sont envoyées à la liste des destinataires de l'alerte pour chaque action de l'alerte. Vous pouvez choisir d'envoyer des notifications d'alerte à une liste de destinataires globale.
+
+Pour configurer les destinataires d'alertes globales, sélectionnez les destinataires souhaités dans la section *destinataires de notification du moniteur global*.
+
+Vous pouvez toujours remplacer la liste globale des destinataires d'un moniteur individuel lors de la création ou de la modification du moniteur.
+
+
+NOTE: Les notifications ONTAP Data Collector prévalent sur toute notification Monitor spécifique pertinente au cluster/Data Collector. La liste des destinataires que vous définissez pour le Data Collector lui-même recevra les alertes du Data Collector. Si aucune alerte de collecte de données n'est active, des alertes générées par le moniteur seront envoyées à des destinataires de moniteur spécifiques.
+
+
+
+== Modification des notifications pour ONTAP
+
+Vous pouvez modifier les notifications pour les clusters ONTAP en sélectionnant _Modifier les notifications_ dans le menu déroulant situé en haut à droite de la page d'accueil stockage.
+
+image:EditONTAPNotifications.png["ONTAP Modifier les notifications"]
+
+À partir de là, vous pouvez définir des notifications pour les alertes critiques, d'avertissement, d'information et/ou résolues. Chaque scénario peut avertir la liste des destinataires globaux ou les autres destinataires que vous choisissez.
+
+image:EditONTAPNotifications_MultipleScenarios.png["Notifications ONTAP pour différents scénarios"]

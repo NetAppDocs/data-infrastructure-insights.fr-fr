@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_db_host.html 
+keywords: data collector, generic db 
+summary: Collecteur de résolveur hôte DB générique 
+---
+= Résolveur d'hôte de BD générique NetApp
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ce collecteur de données acquiert l'inventaire
+
+
+
+== Terminologie
+
+Data Infrastructure Insights acquiert l'inventaire à partir de ce collecteur.
+
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Adresse IP du serveur DB | Adresse IP du serveur DB 
+
+
+| Port du serveur DB | la valeur par défaut est 3306 
+
+
+| Nom de classe de conducteur qualifié | Nom de classe du pilote. 
+
+
+| URL du pilote JDBC | URL du pilote 
+
+
+| Requête SQL | Requête utilisée pour renvoyer des données de la table 
+|===
+
+
+== Configuration avancée
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Intervalle d'interrogation d'inventaire (min) | La valeur par défaut est 60 minutes 
+
+
+| Activez la connexion SSL | Sélectionnez cette option pour activer la connexion via SSL 
+
+
+| Signaler l'alias WWN | Sélectionnez cette option pour signaler l'alias WWN 
+|===
+Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].

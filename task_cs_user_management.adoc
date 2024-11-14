@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: task_cs_user_management.html 
+keywords: Workload Security, User, Login, account, cloud secure 
+summary: Sécurité des workloads les comptes utilisateur sont gérés via la gestion des utilisateurs Data Infrastructure Insights 
+---
+= Gestion des utilisateurs
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les comptes utilisateur Workload Security sont gérés via les informations exploitables de l'infrastructure de données.
+
+Data Infrastructure Insights offre quatre niveaux de compte utilisateur : propriétaire de compte, administrateur, utilisateur et invité. Chaque compte se voit attribuer des niveaux d'autorisation spécifiques. Un compte utilisateur disposant de privilèges d'administrateur peut créer ou modifier des utilisateurs et attribuer à chaque utilisateur l'un des rôles de sécurité de charge de travail suivants :
+
+|===
+
+
+| Rôle | Accès à la sécurité du workload 
+
+
+| Administrateur | Peut exécuter toutes les fonctions de sécurité de la charge de travail, y compris celles pour les alertes, les analyses approfondies, les collecteurs de données, les stratégies de réponse automatisées et les API pour la sécurité de la charge de travail. Un administrateur peut également inviter d'autres utilisateurs, mais peut uniquement attribuer des rôles de sécurité de la charge de travail. 
+
+
+| Utilisateur | Peut afficher et gérer des alertes et afficher des informations judiciaires. Le rôle de l'utilisateur peut modifier l'état des alertes, ajouter une note, effectuer des instantanés manuellement et limiter l'accès des utilisateurs. 
+
+
+| Invité | Peut afficher les alertes et les analyses approfondies. Le rôle invité ne peut pas modifier le statut des alertes, ajouter une note, effectuer des instantanés manuellement ou restreindre l'accès des utilisateurs. 
+|===
+.Étapes
+. Connectez-vous à la sécurité des charges de travail
+. Dans le menu, cliquez sur *Admin > gestion des utilisateurs*
++
+Vous serez transféré à la page gestion des utilisateurs de Data Infrastructure Insights.
+
+. Sélectionnez le rôle souhaité pour chaque utilisateur.
+
+
+Lors de l'ajout d'un nouvel utilisateur, il suffit de sélectionner le rôle souhaité (généralement utilisateur ou invité).
+
+Pour plus d'informations sur les comptes et les rôles utilisateur, reportez-vous à la documentation Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["Rôle utilisateur"].

@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_unisphere_rest.html 
+keywords: data collector, Unisphere, EMC 
+summary: Configuration du collecteur de données REST Dell EMC Unisphere. 
+---
+= Configuration du collecteur de données REST Dell EMC Unisphere
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Ce collecteur de données acquiert les données d'inventaire et de performances de Dell EMC Unisphere pour les systèmes de gestion PowerMax / Vmax 3.
+
+Veuillez noter que Dell/EMC n'a pas introduit de statistiques par volume avant Unisphere 10.0 - ce collecteur de données prend en charge 9.2.0+, mais ne pourra pas collecter les statistiques de volume car elles n'existent pas.
+
+Une instance Unisphere for Vmax/PowerMax peut gérer une ou plusieurs baies de stockage Symmetrix Vmax 3 ou supérieures. Ce collecteur tente par défaut de découvrir toutes les baies « locales » de cette instance Unisphere. Si une instance Unisphere voit des baies « distantes » (c'est-à-dire celles connectées via la réplication SRDF), elles seront ignorées et pour découvrir celles-ci, vous devez créer un collecteur Unisphere supplémentaire dans Data Infrastructure Insights pointés à n'importe quelle instance Unisphere de ce site les considère comme locales.
+
+Pour la configuration, le collecteur de données nécessite une adresse IP/FQDN du serveur Unisphere, la connectivité TCP au port 8443, ainsi qu'un nom d'utilisateur et un mot de passe.
+
+
+
+== De formation
+
+* Adresse IP/Nom de domaine complet du serveur Unisphere
+* Nom d'utilisateur et mot de passe
+* Orifice 8443.
+
+
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Adresse IP du serveur Unisphere | Adresse IP ou nom de domaine complet du serveur Unisphere 
+
+
+| Port Unisphere | La valeur par défaut est 8443 
+
+
+| Nom d'utilisateur | Nom d'utilisateur du serveur Unisphere 
+
+
+| Mot de passe | Mot de passe utilisé pour le serveur Unisphere 
+|===
+
+
+== Configuration avancée
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 40 minutes. 
+
+
+| Intervalle d'interrogation des performances (s) | Intervalle entre les sondages de performances. 
+
+
+| Choisissez 'exclure' ou 'inclure' pour spécifier une liste | Indiquez s'il faut inclure ou exclure des VM 
+
+
+| Liste des périphériques de filtre d'inventaire | Liste des machines virtuelles à filtrer (séparées par des virgules ou séparées par des points-virgules si la virgule est utilisée dans la valeur) pour le filtrage 
+
+
+| Intervalle d'interrogation des performances Unisphere (s) | La valeur par défaut est 300 secondes 
+|===
+
+
+== Dépannage
+
+Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+
+
+
+=== Inventaire
+
+[cols="2*"]
+|===
+| Problème : | Essayer : 
+
+
+| Erreur : l'authentification de l'utilisateur a échoué. | Assurez-vous que vos informations d'identification pour ce périphérique sont correctes. 
+
+
+| État récent de l'inventaire : données inattendues récupérées -Array a signalé 0 volume | Indique généralement un problème d'autorisation (et non d'authentification). Assurez-vous que vos informations d'identification sont correctes et que le nom d'utilisateur est habilité à répertorier tous les volumes et à voir leurs attributs. 
+|===
+Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].

@@ -1,0 +1,164 @@
+---
+sidebar: sidebar 
+permalink: task_dc_oracle_zfs.html 
+keywords: data collector, Oracle, ZFS, storage applicance 
+summary: Configuration du collecteur de données Oracle ZFS. 
+---
+= Collecteur de données Oracle ZFS Storage Appliance
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilise le collecteur de données Oracle ZFS Storage Appliance pour collecter les données d'inventaire et de performances.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights acquiert les informations d'inventaire avec le collecteur de données Oracle ZFS. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+
+[cols="2*"]
+|===
+| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+
+
+| Disque (SSD) | Disque 
+
+
+| Cluster | Stockage 
+
+
+| Contrôleur | Nœud de stockage 
+
+
+| LUN | Volumétrie 
+
+
+| Mappage de LUN | Carte de volume 
+
+
+| Initiateur,cible | Masque de volume 
+
+
+| Partagez | Volume interne 
+|===
+Remarque : il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+
+
+== De formation
+
+* Noms d'hôte pour le ZFS Controller-1 et le ZFS Controller-2
+* Nom d'utilisateur et mot de passe administrateur
+* Port requis : 215 HTTP/HTTPS
+
+
+
+
+== Mesures de performances requises
+
+Les appliances Oracle ZFS offrent aux administrateurs de stockage une flexibilité considérable pour la capture des statistiques de performances. Data Infrastructure Insights attend de vous que _chaque_ contrôleur d'une paire haute disponibilité soit configuré pour capturer les mesures suivantes :
+
+* smb2.ops[part]
+* nfs3.ops[part]
+* nfs4.ops[part]
+* nfs4-1.ops[part]
+
+
+Si le contrôleur n'est pas en mesure de capturer l'un ou l'autre de ces éléments, les informations sur l'infrastructure de données n'auront probablement pas, ou ne sous-auront pas, la charge de travail sur les « volumes internes ».
+
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Nom d'hôte ZFS Controller-1 | Nom d'hôte du contrôleur de stockage 1 
+
+
+| Nom d'hôte ZFS Controller-2 | Nom d'hôte du contrôleur de stockage 2 
+
+
+| Nom d'utilisateur | Nom d'utilisateur du compte d'administrateur du système de stockage 
+
+
+| Mot de passe | Mot de passe du compte utilisateur administrateur 
+|===
+
+
+== Configuration avancée
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Type de connexion | HTTPS ou HTTP, affiche également le port par défaut 
+
+
+| Remplacer le port de connexion | Si ce champ est vide, utilisez le port par défaut dans le champ Type de connexion, sinon entrez le port de connexion à utiliser 
+
+
+| Intervalle d'interrogation d'inventaire | La valeur par défaut est 60 secondes 
+
+
+| Intervalle d'interrogation des performances (s) | La valeur par défaut est 300. 
+|===
+
+
+== Dépannage
+
+Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+
+
+
+=== Inventaire
+
+[cols="2a, 2a"]
+|===
+| Problème : | Essayer : 
+
+
+ a| 
+« Identifiants de connexion non valides »
+ a| 
+Valider le compte utilisateur et le mot de passe ZFS
+
+
+
+ a| 
+"Erreur de configuration" avec le message d'erreur "le service REST est désactivé"
+ a| 
+Vérifiez que le service REST est activé sur ce périphérique.
+
+
+
+ a| 
+"Erreur de configuration" avec message d'erreur "utilisateur non autorisé pour la commande"
+ a| 
+Cette erreur est probablement due à certains rôles (par exemple, 'Advanced_analytics') qui ne sont pas inclus pour l'utilisateur configuré.
+
+L'application de la portée analytique pour l'utilisateur avec un rôle en lecture seule peut supprimer l'erreur. Voici la procédure à suivre :
+
+. Sur le système ZFS, à partir de l'écran Configuration -> utilisateurs, déplacez votre souris sur le rôle et double-cliquez pour autoriser la modification
+. Sélectionnez « analyse » dans le menu déroulant objectif. Une liste des propriétés possibles s'affiche.
+. Cliquez sur la case la plus en haut pour sélectionner les trois propriétés.
+. Cliquez sur le bouton Ajouter à droite.
+. Cliquez sur le bouton appliquer en haut à droite de la fenêtre contextuelle. La fenêtre contextuelle se ferme.
+
+
+|===
+Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].

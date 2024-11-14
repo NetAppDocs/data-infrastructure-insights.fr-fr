@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: concept_anomaly_detection.html 
+keywords: Anomalies, anomaly, patterns, monitor, alert 
+summary: 'Surveillez les indicateurs d"anomalie' 
+---
+= Moniteurs de détection d'anomalies
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:toclevels: 1
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+La détection des anomalies fournit des informations sur les changements inattendus dans les modèles de données de votre environnement. Une anomalie se produit lorsque le comportement d'un objet change dans votre environnement, par exemple, si un objet subit un certain niveau de latence le mercredi, mais que la latence dépasse ce niveau le mercredi suivant, ce pic serait considéré comme une anomalie. Les informations sur l'infrastructure de données permettent de créer des moniteurs qui envoient des alertes en cas d'anomalies de ce type.
+
+La détection des anomalies convient aux metrics objet qui présentent un modèle prévisible et récurrent. Lorsque ces metrics d'objet dépassent ou dépassent les niveaux attendus, Data Infrastructure Insights peut générer une alerte pour une investigation rapide.
+
+image:anomaly_detection_expert_view.png["graphique montrant l'anomalie détectée"]
+
+
+
+== Qu'est-ce que la détection des anomalies ?
+
+Une anomalie se produit lorsque la valeur moyenne d'une mesure est un certain nombre d'écarts-types par rapport à la moyenne pondérée de cette mesure pour les semaines précédentes, avec des semaines récentes ayant plus de poids que les semaines précédentes. Les informations sur l'infrastructure de données permettent de surveiller les données et d'émettre des alertes en cas de détection d'anomalies. Vous avez le choix de définir les niveaux de « sensibilité » de détection. Par exemple, une sensibilité plus élevée serait lorsque la valeur moyenne est moins d'écarts standard par rapport à la moyenne, ce qui entraînerait la génération d'alertes supplémentaires. Inversement, une sensibilité plus faible = des écarts plus standard par rapport à la moyenne = moins d'alertes.
+
+
+
+=== La surveillance de la détection des anomalies diffère de la surveillance du seuil.
+
+* *La surveillance basée sur le seuil* fonctionne lorsque vous avez des seuils prédéfinis pour des mesures spécifiques. En d'autres termes, lorsque vous avez une compréhension claire de ce qui est attendu (c'est-à-dire dans une plage normale).
+
+
+image:MetricMonitor_blurb.png["Les moniteurs métriques sont utilisés lorsque vous connaissez la plage de fonctionnement"]
+
+* *La surveillance de la détection d'anomalie* utilise des algorithmes d'apprentissage automatique pour identifier les valeurs aberrantes qui dévient de la norme, car lorsque la définition de « normal » n'est pas claire.
+
+
+image:ADMonitor_blurb.png["Les moniteurs de détection des anomalies sont destinés à identifier les pics ou les chutes"]
+
+
+
+== Quand aurais-je besoin de la détection des anomalies ?
+
+La surveillance de la détection des anomalies peut fournir des alertes utiles dans de nombreuses situations, notamment :
+
+* Lorsque la définition de _normal_ n'est pas claire. Par exemple, les taux d'erreur SAN peuvent varier en fonction du port. Les alertes d'une erreur sont bruyantes et inutiles, mais une augmentation soudaine ou importante peut indiquer un problème à grande échelle.
+* Là où il y a des changements dans le temps. Charges de travail soumises à des variations saisonnières (c'est-à-dire occupées ou peu actives à certains moments). Cela peut inclure des périodes de silence inattendues qui peuvent indiquer un blocage par lots.
+* Vous ne pouvez pas travailler avec de grandes quantités de données pour définir et ajuster manuellement des seuils. Par exemple, un environnement comprenant un grand nombre d'hôtes et/ou de volumes avec des charges de travail variables. Si chacun d'entre eux présente différents SLA, il est donc important de comprendre ceux qui dépassent la norme.
+
+
+
+
+== Création d'un moniteur de détection des anomalies
+
+Pour signaler des anomalies, créez un moniteur en accédant à *observabilité > alertes > +Monitor*. Sélectionnez _surveillance de détection d'anomalie_ comme type de moniteur.
+
+image:AnomalyDetectionMonitorChoice.png["Sélection de la détection des anomalies lors de la création d'un moniteur, largeur=480"]
+
+Choisissez l'objet et la mesure à surveiller. Vous pouvez définir des filtres et des groupes comme pour d'autres types de moniteurs.
+
+Définissez ensuite les conditions du moniteur.
+
+* Déclencher une alerte lorsque la mesure sélectionnée est _surportée_ les limites prévues, _chute en dessous_ ces limites, ou les deux.
+* Réglez la sensibilité sur _moyenne_, _faible_ (moins d'anomalies détectées) ou _élevée_ (plus d'anomalies détectées).
+* Déterminez si le niveau d'alerte est _critique_ ou _Avertissement_.
+* Vous pouvez également définir une valeur au-dessous de laquelle les anomalies sont _ignorées_. Cela peut contribuer à réduire le bruit. Cette valeur s'affiche sous la forme d'une ligne pointillée sur le graphique échantillon.
+
+
+image:AnomalyDetectionMonitorConditions.png["Réglage des conditions du moniteur de détection d'anomalie"]
+
+Enfin, vous pouvez configurer une méthode de livraison pour les alertes (e-mail, webhook, ou les deux), fournir au moniteur une description facultative ou des actions correctives, et ajouter le moniteur à un groupe personnalisé, si vous le souhaitez.
+
+Enregistrez le moniteur avec un nom significatif, et vous avez terminé.
+
+Lors de sa création, le moniteur analyse les données de la semaine précédente afin d'établir une base initiale. La détection des anomalies est plus précise au fil du temps et l'historique s'en trouve accru.
+
+
+
+== Affichage des anomalies
+
+Sur une page d'accueil d'alerte, les alertes déclenchées lorsque des anomalies sont détectées affichent une bande mise en surbrillance dans le graphique, à partir du moment où la mesure a surpassé les limites prévues jusqu'au moment où elle est replacée à l'intérieur de ces limites.
+
+image:Anomaly_Detection_Chart_Example_Expert_View.png["Graphique indiquant l'heure à laquelle une anomalie s'est produite"]
+
+Lorsque vous affichez un graphique d'anomalies sur une page d'accueil d'alerte, vous pouvez choisir les options suivantes :
+
+* Tendance hebdomadaire : comparez les valeurs à la même heure, le jour même des semaines précédentes, pour un maximum de 5 semaines précédentes.
+* Limites d'anomalie complètes : par défaut, le graphique se concentre sur la valeur de la mesure pour vous permettre de mieux analyser le comportement de la mesure. Sélectionnez cette option pour afficher les limites d'anomalie complètes (valeur maximale, etc.)
+
+
+Vous pouvez également afficher les objets qui ont contribué à l'anomalie en les sélectionnant dans la vue experte de la page d'accueil. Le graphique affiche le comportement des objets sélectionnés.
+
+image:Anomaly_Detection_Contributing_Objects.png["transcription d'objets contribuant à l'anomalie"]

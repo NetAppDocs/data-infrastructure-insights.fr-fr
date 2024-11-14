@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: reference_object_icons.html 
+summary: 'Référence des icônes d"objet informations sur l"infrastructure de données.' 
+keywords: icons, assets, objects, reference, map 
+---
+= Référence de l'icône d'objet
+:allow-uri-read: 
+
+
+[role="lead"]
+Icônes d'objet utilisées dans Data Infrastructure Insights.
+
+
+
+== Icônes d'infrastructure :
+
+image:Icon_Glossary.png["Référence des icônes d'infrastructure"]
+
+
+
+== Icônes Kubernetes :
+
+image:K8sIconsWithLabels.png["Référence des icônes Kubernetes, largeur=180"]
+
+
+
+== Contrôle des performances du réseau Kubernetes et icônes de carte :
+
+image:ServiceMap_Icons.png["Surveillance et mappage des performances du réseau Kubernetes, largeur=640"]

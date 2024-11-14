@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: task_webhook_example_slack.html 
+keywords: webhook, notification, Slack, integration 
+summary: 'Créez un crochet Web pour signaler les seuils de performance ou d"inventaire pour le mou' 
+---
+= Exemple de mousqueton pour le mou
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Les Webpatères permettent aux utilisateurs d'envoyer des notifications d'alerte à diverses applications à l'aide d'un canal Web personnalisé. Cette page fournit un exemple de configuration des crochets pour le mou.
+
+
+NOTE: Cette page fait référence aux instructions de tiers, qui peuvent faire l'objet de modifications. Reportez-vous au link:https://slack.com/help/articles/115005265063-Incoming-webhooks-for-Slack["Documentation Slack"] pour obtenir les informations les plus récentes.
+
+
+
+== Exemple de mou :
+
+* Accédez à https://api.slack.com/apps[] et créez une nouvelle application Donnez un nom significatif et sélectionnez l'espace de travail Slack.
++
+image:Webhooks_Slack_Create_Webhook.png["Créer un crochet mou"]
+
+* Accédez aux Webpatères entrants, cliquez sur _Activer les Webpatères entrants_, demander à _Ajouter un nouveau Webhook_ et sélectionnez le canal sur lequel envoyer.
+* Copiez l'URL du Webhook. Vous devez coller cette information dans la configuration du webhook Data Infrastructure Insights.
+
+
+
+
+== Créer le Webhook Data Infrastructure Insights :
+
+. Dans Data Infrastructure Insights, accédez à *Admin > Notifications* et sélectionnez l'onglet *Webhooks*. Cliquez sur *+Webhook* pour créer un nouveau mousqueton.
+. Donnez au webhook un nom significatif, tel que « Slack Webhook ».
+. Dans la liste déroulante _Template Type_, sélectionnez *Slack*.
+. Collez l'URL ci-dessus dans le champ _URL_.
+
+
+image:Webhooks-Slack_example.png["Modèle de crochet mou"]
+
+
+
+== Notifications via Webhook
+
+Pour signaler des événements via Webhook, accédez à *alertes > moniteurs* dans Data Infrastructure Insights et cliquez sur *+Monitor* pour créer un nouveau link:task_create_monitor.html["superviser"].
+
+* Sélectionnez une mesure et définissez les conditions du moniteur.
+* Sous _configurer la ou les notifications d'équipe, choisissez la méthode de livraison *Webhook*.
+* Choisissez le crochet pour le « mou » pour les événements souhaités (critique, Avertissement, résolu)
++
+image:Webhooks_Slack_Notifications.png["Notifications de Webhook"]
+
+
+
+
+
+==== Pour aller plus loin :
+
+* Pour modifier le format et la disposition des messages, voir https://api.slack.com/messaging/composing[]
+* Gestion des erreurs : https://api.slack.com/messaging/webhooks#handling_errors[]
+

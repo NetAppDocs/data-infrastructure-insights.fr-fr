@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: reporting_managing_reports.html 
+summary: 'Personnalisation de la sortie et de la livraison du rapport, copie des rapports dans le presse-papiers, ouverture des rapports (XML).' 
+keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying 
+---
+= Gestion des rapports
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Vous pouvez personnaliser le format de sortie et la diffusion d'un rapport, définir les propriétés ou les horaires des rapports et les rapports par e-mail.
+
+
+NOTE: La fonction de génération de rapports est disponible dans Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Édition Premium"].
+
+
+IMPORTANT: Avant d'apporter des modifications aux autorisations ou à la sécurité des rapports, vous devez copier les rapports « mon contenu » dans le dossier « contenu de l'équipe » pour vous assurer que les rapports sont enregistrés.
+
+
+
+== Personnalisation du format de sortie et de l'envoi d'un rapport
+
+Vous pouvez personnaliser le format et la méthode de diffusion des rapports.
+
+. Dans le portail de génération de rapports Data Infrastructure Insights, accédez à *Menu > contenu > mon contenu/contenu d'équipe*. Placez le pointeur de la souris sur le rapport que vous souhaitez personnaliser et ouvrez le menu « trois points ».
+
+
+image:Reporting_Output_and_Delivery.png["Sortie et livraison du rapport"]
+
+. Cliquez sur *Propriétés > Programme*
+
+
+. Vous pouvez définir les options suivantes :
++
+** *Planifier* lorsque vous souhaitez que les rapports s'exécutent.
+** Choisissez *Options* pour le format et la livraison du rapport (Enregistrer, Imprimer, E-mail) et les langues du rapport.
+
+
+. Cliquez sur *Enregistrer* pour produire le rapport à l'aide des sélections que vous avez effectuées.
+
+
+
+
+== Copie d'un rapport dans le presse-papiers
+
+Utilisez ce processus pour copier un rapport dans le presse-papiers.
+
+. Sélectionnez un rapport à copier à partir de (*Menu > contenu > mon contenu ou contenu d'équipe*)
+. Choisissez _Modifier le rapport_ dans le menu déroulant du rapport
++
+image:Reporting_Edit_Report.png["Modification d'un rapport"]
+
+. Dans le coin supérieur droit de l'écran, ouvrez le menu « trois points » à côté de « Propriétés ».
+. Sélectionnez *Copier le rapport dans le presse-papiers*.
++
+image:Reporting_Copy_To_Clipboard.png["Copie d'un rapport dans le presse-papiers"]
+
+
+
+
+
+== Ouverture de rapports à partir du presse-papiers
+
+Vous pouvez ouvrir une spécification de rapport qui a été précédemment copiée dans le presse-papiers.
+
+A propos de cette tâche commencez par créer un nouveau rapport ou ouvrir un rapport existant que vous souhaitez remplacer par le rapport copié. Les étapes ci-dessous concernent un nouveau rapport.
+
+. Sélectionnez *Menu > +Nouveau > Rapport* et créez un rapport vierge.
+. Dans le coin supérieur droit de l'écran, ouvrez le menu « trois points » à côté de « Propriétés ».
+. Sélectionnez *Ouvrir le rapport à partir du presse-papiers*.
+
+
+image:Reporting_Open_From_Clipboard.png["Ouverture d'un rapport à partir du presse-papiers"]
+
+. Collez le code copié dans la fenêtre et sélectionnez *OK*.
+. Sélectionnez l'icône de la disquette pour enregistrer le rapport.
+. Choisissez où enregistrer le rapport (_mon contenu_, _contenu de l'équipe_ ou créez un nouveau dossier).
+. Donnez un nom significatif au nouveau rapport et sélectionnez *Enregistrer*.
+
+
+
+
+== Modification d'un rapport existant
+
+N'oubliez pas que la modification des fichiers à leur emplacement par défaut risque d'écraser ces rapports lors de la prochaine actualisation du catalogue de rapports. Il est recommandé d'enregistrer le rapport modifié sous un nouveau nom ou de le stocker dans un emplacement autre que celui par défaut.
+
+
+
+== Dépannage
+
+Vous trouverez ici des suggestions pour résoudre les problèmes liés à la création de rapports.
+
+|===
+
+
+| *Problème:* | *Essayez ceci:* 
+
+
+| Lorsque vous planifiez l'envoi d'un rapport par e-mail, le nom de l'utilisateur connecté est pré-renseigné dans le champ « à » de l'e-mail. Toutefois, le nom est sous la forme de "prénom nom lastname" (prénom, espace, nom de famille). Étant donné que cette adresse e-mail n'est pas valide, l'e-mail ne peut pas être envoyé lorsque le rapport programmé est exécuté. | Lorsque vous planifiez l'envoi du rapport par e-mail, effacez le nom pré-rempli et saisissez une adresse e-mail valide et correctement formatée dans le champ « à ». 
+|===

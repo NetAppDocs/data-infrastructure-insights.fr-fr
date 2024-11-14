@@ -1,0 +1,175 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_isilon_rest.html 
+keywords: data collector, isilon, EMC, DELL, PowerScale 
+summary: Configuration du collecteur de données REST Dell EMC Isilon / PowerScale. 
+---
+= Collecteur de données DE REPOS Dell EMC Isilon / PowerScale
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilise le collecteur de données REST Dell EMC Isilon / PowerScale pour acquérir des données d'inventaire et de performances à partir du stockage Dell EMC Isilon ou PowerScale. Ce collecteur prend en charge les baies exécutant OneFS 8.0.0+.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir de ce collecteur de données. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+
+[cols="2*"]
+|===
+| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+
+
+| Lecteur | Disque 
+
+
+| Cluster | Stockage 
+
+
+| Nœud | Nœud de stockage 
+
+
+| Système de fichiers OneFS | Volume interne 
+
+
+| Système de fichiers OneFS | Pool de stockage 
+
+
+| Qtree | Qtree 
+|===
+Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+
+
+
+== De formation
+
+Vous avez besoin des informations suivantes pour configurer ce collecteur de données :
+
+* Un compte utilisateur et un mot de passe. Ce compte N'a PAS besoin d'être admin/root, mais vous DEVEZ accorder un nombre important de privilèges en lecture seule à votre compte de service - voir le tableau ci-dessous
+* Adresse IP / Nom de domaine complet du cluster Dell EMC Isilon / PowerScale
+* Accès HTTPS au port 8080
+* Cluster Isilon / PowerScale exécutant OneFS 8.0.0 ou supérieur
+
+
+[cols="3*"]
+|===
+| Nom de privilège | Description | r(lecture) ou rw (lecture+écriture) 
+
+
+| ISI_PRIV_LOGIN_PAPI | API de plateforme | r 
+
+
+| ISI_PRIV_SYS_TIME | Heure | r 
+
+
+| ISI_PRIV_AUTH | Auth | r 
+
+
+| ISI_PRIV_ROLE | Privilège | r 
+
+
+| ISI_PRIV_DEVICES | Périphériques | r 
+
+
+| ISI_PRIV_EVENT | Événement | r 
+
+
+| ISI_PRIV_HDFS | HDFS | r 
+
+
+| ISI_PRIV_NDMP | NDMP | r 
+
+
+| ISI_PRIV_NETWORK | Le réseau | r 
+
+
+| ISI_PRIV_NFS | NFS | r 
+
+
+| ISI_PRIV_PAPI_CONFIG | Configurer l'API de la plate-forme | r 
+
+
+| ISI_PRIV_QUOTA | Quota | r 
+
+
+| ISI_PRIV_SMARTPOOLS | SmartPools | r 
+
+
+| ISI_PRIV_SMB | PME | r 
+
+
+| ISI_PRIV_STATISTICS | Statistiques | r 
+
+
+| ISI_PRIV_SWIFT | SWIFT | r 
+
+
+| ISI_PRIV_JOB_ENGINE | Moteur de tâches | r 
+|===
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Adresse IP d'Isilon | L'adresse IP ou le nom de domaine complet du stockage Isilon 
+
+
+| Nom d'utilisateur | Nom d'utilisateur de l'Isilon 
+
+
+| Mot de passe | Mot de passe utilisé pour l'Isilon 
+|===
+
+
+== Configuration avancée
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Port HTTPS | La valeur par défaut est 8080. 
+
+
+| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 20. 
+
+
+| Intervalle d'interrogation des performances (s) | Intervalle entre les sondages de performances. La valeur par défaut est 300. 
+|===
+
+
+== Dépannage
+
+Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+
+
+
+=== Inventaire
+
+[cols="2*"]
+|===
+| Problème : | Essayer : 
+
+
+| "Informations d'identification non valides" avec des messages d'erreur "les commandes non activées pour l'administration basée sur les rôles nécessitent un accès utilisateur root" | * Vérifiez que l'utilisateur dispose des autorisations nécessaires pour exécuter les commandes suivantes sur le périphérique : > version isi osrelease > statut isi -q > statut isi -n > périphériques isi -d %s > licence isi * Vérifiez que les informations d'identification utilisées dans l'assistant correspondent aux informations d'identification de l'appareil 
+
+
+| "Erreur interne" avec les messages d'erreur "commande <votre commande> l'exécution a échoué avec l'autorisation: <votre autorisation actuelle>. Problème d'autorisation d'exécution de la commande sudo » | Vérifiez que l'utilisateur dispose des autorisations de sudo pour exécuter la commande suivante sur le périphérique 
+|===
+Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].

@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: task_dc_pure_flashblade.html 
+keywords: data collector, Pure Storage, pure, FlashBlade 
+summary: Configuration du collecteur de données Pure Storage. 
+---
+= Collecteur de données Pure Storage FlashBlade
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilise le collecteur de données Pure Storage FlashBlade pour collecter les données d'inventaire et de performance des clusters FlashBlade qui exposent la version 2 de leur API REST
+
+
+
+== Terminologie
+
+Pour chaque type de ressource acquise par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+
+[cols="2*"]
+|===
+| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+
+
+| Disque (SSD) | Disque 
+
+
+| Baie | Stockage 
+
+
+| Lame | Nœud de stockage 
+
+
+| Système de fichiers | Volume interne 
+
+
+| Compartiment de stockage objet | Qtree 
+
+
+| Initiateur,cible | Masque de volume 
+|===
+Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+
+
+
+== De formation
+
+* Adresse IP du système de stockage ou nom de domaine complet
+* Jeton API, idéalement avec une durée de vie infinie. Un utilisateur de niveau lecture seule devrait suffire.
+* Port requis : HTTPS 443
+
+
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Adresse IP de l'hôte FlashBlade | Adresse IP du système de stockage 
+
+
+| Nom d'utilisateur | Nom d'utilisateur permettant aux administrateurs Data Infrastructure Insights de se rappeler à quel utilisateur appartient leur jeton d'API 
+
+
+| Jeton API | Jeton API 
+|===
+
+
+== Configuration avancée
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Type de connexion | Choisissez HTTP ou HTTPS. Affiche également le port par défaut. 
+
+
+| Remplacer le port TCP | Si ce champ est vide, utilisez le port par défaut dans le champ Type de connexion, sinon entrez le port de connexion à utiliser 
+
+
+| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 minutes 
+
+
+| Intervalle d'interrogation des performances (s) | La valeur par défaut est 300 
+|===
+
+
+== Dépannage
+
+Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+
+
+
+=== Inventaire
+
+[cols="2*"]
+|===
+| Problème : | Essayer : 
+
+
+| "Informations d'identification non valides" avec les messages d'erreur "la stratégie n'autorise pas" ou "vous n'êtes pas autorisé" | Valider le compte utilisateur et le mot de passe Pure via l'interface http Pure 
+|===
+Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].

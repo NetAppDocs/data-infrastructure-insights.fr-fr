@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task_dc_cohesity_smartfiles.html 
+keywords: data collector, cohesity 
+summary: Configuration du collecteur de données SmartFiles de Cohesity. 
+---
+= Le collecteur de données SmartFiles de Cohesity
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Ce collecteur basé sur l'API REST va acquérir un cluster Cohesity, découvrant les « vues » (comme les volumes internes Data Infrastructure Insights), les différents nœuds, ainsi que la collecte des metrics de performance.
+
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Groupe d'instruments IP de Cohesity | Adresse IP du cluster Cohesity 
+
+
+| Nom d'utilisateur | Nom d'utilisateur du cluster Cohesity 
+
+
+| Mot de passe | Mot de passe utilisé pour le cluster Cohesity 
+|===
+
+
+== Configuration avancée
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Port TCP | Port utilisé pour la communication TCP avec le cluster Cohesity 
+
+
+| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 60 minutes. 
+
+
+| Intervalle d'interrogation des performances (min) | Intervalle entre les sondages de performances. La valeur par défaut est 900 secondes. 
+|===
+
+
+== Dépannage
+
+Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].

@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task_configure_data_collectors.html 
+keywords: acquisition, AU, data collector, collector, notification, notify, 
+summary: Instructions générales relatives au collecteur de données 
+---
+= Configuration des collecteurs de données
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Vous configurez les collecteurs de données dans votre environnement Data Infrastructure Insights pour collecter les données des terminaux du data Center.
+
+.Avant de commencer
+* Vous devez avoir configuré une unité d'acquisition pour pouvoir commencer à collecter des données.
+* Vous avez besoin d'informations d'identification pour les périphériques à partir desquels vous recueillez des données.
+* Les adresses réseau du périphérique, les informations de compte et les mots de passe sont requis pour tous les périphériques à partir de qui vous recueillez des données.
+
+
+.Étapes
+. Dans le menu Data Infrastructure Insights, cliquez sur *observabilité > Collectors*
++
+Le système affiche les collecteurs de données disponibles classés par fournisseur.
+
+. Cliquez sur *+ Collector* et sélectionnez le collecteur de données à configurer.
++
+Dans la boîte de dialogue, vous pouvez configurer le collecteur de données et ajouter une unité d'acquisition.
+
+. Entrez un nom pour le collecteur de données.
+. Cliquez sur *Configuration avancée* pour ajouter des champs de configuration supplémentaires. (Tous les collecteurs de données ne nécessitent pas une configuration avancée.)
+. Cliquez sur *Tester la configuration* pour vérifier que le collecteur de données est correctement configuré.
+. Cliquez sur *Ajouter un collecteur* pour enregistrer la configuration et ajouter le collecteur de données à votre locataire Data Infrastructure Insights.
+
+
+Il peut prendre jusqu'à deux périodes d'interrogation avant que les données du service soient affichées dans les tableaux de bord ou disponibles pour les requêtes.
+
+* 1er sondage d'inventaire : immédiatement
+* 1er sondage de données sur les performances pour établir une ligne de base : immédiatement après l'inventaire des stocks
+* 2e sondage de performance : dans les 15 secondes après la fin du 1er sondage de performance
+
+
+L'interrogation se poursuit ensuite en fonction des intervalles d'inventaire et d'interrogation des performances configurés.

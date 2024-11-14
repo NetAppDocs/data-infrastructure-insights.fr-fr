@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: kubernetes_landing_page.html 
+keywords: telegraf, installation, install, kubernetes, pods, clusters, filters, filtering, k8s 
+summary: 'La page d"accueil Kubernetes s"est expliquée' 
+---
+= Présentation du cluster Kubernetes
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+L'explorateur Kubernetes de Data Infrastructure Insights est un outil puissant pour afficher l'état et l'utilisation généraux de vos clusters Kubernetes. Il vous permet d'explorer facilement les domaines d'enquête.
+
+Cliquez sur *tableaux de bord > Kubernetes Explorer* pour ouvrir la page liste des clusters Kubernetes. Cette page de présentation contient un tableau des clusters Kubernetes de votre environnement.
+
+image:Kubernetes_List_Page_new.png["Page de liste Kubernetes"]
+
+
+
+=== Liste des clusters
+
+La liste des clusters affiche les informations suivantes pour chaque cluster de votre environnement :
+
+* Nom * du cluster. Si vous cliquez sur le nom d'un cluster, le système s'ouvriralink:kubernetes_cluster_detail.html["*page de détails*"].
+* *Pourcentages de saturation*. La saturation globale est la saturation totale la plus élevée du processeur, de la mémoire ou du stockage.
+* Nombre de *nœuds* dans le cluster. Cliquez sur ce numéro pour ouvrir la page liste des nœuds.
+* Nombre de *Pods* dans le cluster. Cliquez sur ce numéro pour ouvrir la page de liste Pod.
+* Nombre de *espaces de noms* dans le cluster. Cliquez sur ce numéro pour ouvrir la page de la liste d'espace de noms.
+* Nombre de *charges de travail* dans le cluster. Cliquez sur ce numéro pour ouvrir la page de la liste des charges de travail.
+
+
+
+
+== Raffinage du filtre
+
+Lorsque vous filtrez, lorsque vous commencez à taper, vous avez la possibilité de créer un *filtre générique* basé sur le texte en cours. Si vous sélectionnez cette option, tous les résultats correspondant à l'expression de caractère générique seront résélectionnés. Vous pouvez également créer *expressions* à l'aide DE NOT ou ET, ou sélectionner l'option "aucun" pour filtrer les valeurs nulles dans le champ.
+
+image:Filter_Kubernetes_Explorer.png["Filtrage avec caractère générique dans l'explorateur K8S"]
+
+Filtres basés sur des caractères génériques ou des expressions (par exemple NON, ET, « aucun », etc.) s'affichent en bleu foncé dans le champ du filtre. Les éléments que vous sélectionnez directement dans la liste s'affichent en bleu clair.
+
+image:Filter_Kubernetes_Explorer_2.png["Filtrer l'affichage des éléments génériques et sélectionnés"]
+
+Les filtres Kubernetes sont contextuels, ce qui signifie par exemple que si vous vous trouvez sur une page de nœud spécifique, le filtre pod_name ne répertorie que les pods associés à ce nœud. De plus, si vous appliquez un filtre à un espace de noms spécifique, le filtre nom_pod répertorie uniquement les pods sur ce nœud _et_ dans cet espace de noms.
+
+Notez que le filtrage des caractères génériques et des expressions fonctionne avec du texte ou des listes, mais pas avec des valeurs numériques, des dates ou des valeurs booléennes.

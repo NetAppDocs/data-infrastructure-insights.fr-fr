@@ -1,0 +1,154 @@
+---
+sidebar: sidebar 
+permalink: cs_alert_data.html 
+keywords: alert, attack, ransomware, activity, security, abnormal 
+summary: 'La sécurité des charges de travail génère des alertes en cas d"activité anormale de l"utilisateur ou d"attaque potentielle. La page alertes répertorie ces activités pour une investigation rapide et facile.' 
+---
+= Alertes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media
+
+
+[role="lead"]
+La page alertes de sécurité de la charge de travail affiche un calendrier des attaques et/ou avertissements récents et vous permet d'afficher les détails de chaque problème.
+
+image:CloudSecureAlertsListPage.png["Liste des alertes"]
+
+
+
+== Alerte
+
+La liste alerte affiche un graphique indiquant le nombre total d'attaques potentielles et/ou d'avertissements qui ont été soulevés dans la plage horaire sélectionnée, suivi d'une liste des attaques et/ou avertissements survenus dans cette plage de temps. Vous pouvez modifier la plage horaire en ajustant les curseurs heure de début et heure de fin dans le graphique.
+
+Pour chaque alerte, les éléments suivants s'affichent :
+
+*Attaques potentielles:*
+
+* Le type _attaque potentielle_ (par exemple, ransomware ou sabotage)
+* Date et heure de l'attaque potentielle _Detected_
+* Le _Status_ de l'alerte :
++
+** *Nouveau* : il s'agit de la valeur par défaut pour les nouvelles alertes.
+** *En cours* : l'alerte est en cours d'enquête par un ou plusieurs membres de l'équipe.
+** *Résolu* : l'alerte a été marquée comme résolue par un membre de l'équipe.
+** *Rejeté*: L'alerte a été rejetée comme un comportement faux positif ou attendu.
++
+Un administrateur peut modifier l'état de l'alerte et ajouter une note pour faciliter l'enquête.
+
++
+image:CloudSecureChangeAlertStatus.png["Modifier le statut de l'alerte"]
+
+
+
+* Le _User_ dont le comportement a déclenché l'alerte
+* _Evidence_ de l'attaque (par exemple, un grand nombre de fichiers ont été cryptés)
+* La _action entreprise_ (par exemple, un instantané a été créé)
+
+
+*Avertissements:*
+
+* Le _comportement anormal_ qui a déclenché l'avertissement
+* La date et l'heure auxquelles le comportement a été _détecté_
+* Le _Status_ de l'alerte (Nouveau, en cours, etc.)
+* Le _User_ dont le comportement a déclenché l'alerte
+* Une description de _change_ (par exemple, une augmentation anormale de l'accès aux fichiers)
+* La _action entreprise_
+
+
+
+
+== Options de filtre
+
+Vous pouvez filtrer les alertes en procédant comme suit :
+
+* Le _Status_ de l'alerte
+* Texte spécifique dans la _Note_
+* Type de _attaques/Avertissements_
+* Le _User_ dont les actions ont déclenché l'alerte/l'avertissement
+
+
+
+
+== La page Détails de l'alerte
+
+Vous pouvez cliquer sur un lien d'alerte sur la page de la liste des alertes pour ouvrir une page de détails pour l'alerte. Les détails de l'alerte peuvent varier en fonction du type d'attaque ou d'alerte. Par exemple, une page de détails sur les attaques par ransomware peut afficher les informations suivantes :
+
+
+
+=== Section Récapitulatif :
+
+* Type d'attaque (ransomware, sabotage) et ID d'alerte (attribué par la sécurité de la charge de travail)
+* Date et heure de détection de l'attaque
+* Action entreprise (par exemple, un instantané automatique a été effectué. L'heure de l'instantané s'affiche immédiatement sous la section récapitulative)
+* État (Nouveau, en cours, etc.)
+
+
+
+
+=== Section des résultats d'attaque :
+
+* Nombre de volumes et de fichiers affectés
+* Un résumé de la détection
+* Graphique montrant l'activité du fichier pendant l'attaque
+
+
+
+
+=== Section utilisateurs associés :
+
+Cette section présente des détails sur l'utilisateur impliqué dans l'attaque potentielle, y compris un graphique de l'activité supérieure pour l'utilisateur.
+
+Page alertes (cet exemple montre une attaque potentielle par ransomware) : image:RansomwareAlertExample.png["Exemple d'alerte par ransomware"]
+
+Page de détails (cet exemple montre une attaque potentielle par ransomware) : image:RansomwareDetailPageExample.png["Exemple de page de détails sur les ransomwares"]
+
+
+
+== _Prendre une action instantané_
+
+La sécurité des charges de travail protège vos données en prenant automatiquement un instantané en cas de détection d'une activité malveillante, ce qui garantit la sauvegarde sécurisée de vos données.
+
+Vous pouvez définir link:cs_automated_response_policies.html["stratégies de réponse automatisées"] qu'il faut une copie Snapshot lors de la détection d'une attaque par ransomware ou d'une autre activité anormale des utilisateurs. Vous pouvez également prendre un instantané manuellement à partir de la page d'alerte.
+
+Instantané automatique pris : image:AlertActionsAutomaticExample.png["Écran action d'alerte,1000"]
+
+Instantané manuel : image:AlertActionsExample.png["Écran action d'alerte,1000"]
+
+
+
+== Notifications d'alerte
+
+Les notifications par e-mail d'alertes sont envoyées à une liste de destinataires d'alertes pour chaque action de l'alerte. Pour configurer les destinataires d'alertes, cliquez sur *Admin > Notifications* et entrez une adresse e-mail pour chaque destinataire.
+
+
+
+== Stratégie de conservation
+
+Les alertes et avertissements sont conservés pendant 13 mois. Les alertes et avertissements de plus de 13 mois seront supprimés. Si l'environnement de sécurité de la charge de travail est supprimé, toutes les données associées à l'environnement sont également supprimées.
+
+
+
+== Dépannage
+
+|===
+| Problème : | Essayer : 
+
+
+| Dans certains cas, ONTAP effectue des copies Snapshot par jour toutes les heures. Les snapshots de sécurité des workloads (WS) l'affecteront-ils ? Le snapshot de la station de travail prend-il la place du snapshot horaire ? Le snapshot horaire par défaut sera-t-il arrêté ? | Les snapshots de sécurité de la charge de travail n'affectent pas les snapshots horaires. Les instantanés WS ne prennent pas l'espace horaire de snapshot et doivent continuer comme précédemment. Le snapshot horaire par défaut n'est pas arrêté. 
+
+
+| Que se passera-t-il si le nombre maximal de snapshots est atteint dans ONTAP ? | Si le nombre maximal de snapshots est atteint, la prise de snapshots suivante échoue et la sécurité de la charge de travail affiche un message d'erreur signalant que le snapshot est plein. L'utilisateur doit définir des règles de snapshot pour supprimer les snapshots les plus anciens, sinon les snapshots ne seront pas effectués. Dans ONTAP 9.3 et versions antérieures, un volume peut contenir jusqu'à 255 copies Snapshot. Dans ONTAP 9.4 et versions ultérieures, un volume peut contenir jusqu'à 1023 copies Snapshot. Voir la documentation ONTAP pour plus d'informations sur link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-cmpr-960%2Fvolume__snapshot__autodelete__modify.html["Définition de la règle de suppression Snapshot"]. 
+
+
+| La sécurité de la charge de travail ne peut pas prendre de snapshots du tout. | Assurez-vous que le rôle utilisé pour créer des snapshots a le lien suivant : https://docs.NetApp.com/US-en/cloudInsights/task_add_Collector_svm.html#a-note-about-permissions[droits appropriés attribués]. Assurez-vous que _csrole_ est créé avec les droits d'accès appropriés pour la prise de snapshots : Security login role create -vserver <vservername> -role csrole -cmddirname « volume snapshot » -Access All 
+
+
+| Les snapshots échouent pour les alertes plus anciennes sur les SVM qui ont été supprimées de la sécurité des charges de travail, puis rajoutées à nouveau. Pour les nouvelles alertes qui se produisent après l'ajout d'un SVM, des snapshots sont réalisés. | Ce scénario est rare. Si vous rencontrez ce problème, connectez-vous à ONTAP et prenez manuellement les snapshots pour les anciennes alertes. 
+
+
+| Dans la page _Alert Details_, le message "Last tentative failed" (dernière tentative échouée) s'affiche sous le bouton _prendre snapshot_. Lorsque vous passez la souris sur l'erreur, "la commande Invoke API a expiré pour le collecteur de données avec ID" s'affiche. | Cela peut se produire lorsqu'un collecteur de données est ajouté à la sécurité de la charge de travail via SVM Management IP, si le LIF du SVM est dans _Disabled_ state dans ONTAP. Activez la LIF particulière dans ONTAP et déclenchez _Take snapshot manuellement_ à partir de la sécurité des charges de travail. L'action Snapshot va alors réussir. 
+|===

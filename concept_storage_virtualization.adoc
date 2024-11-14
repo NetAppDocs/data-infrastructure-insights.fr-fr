@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: concept_storage_virtualization.html 
+summary: 'Les informations concernant l"infrastructure de données peuvent fournir des vues du stockage virtualisé frontal et back-end.' 
+keywords: storage, virtual, virtualized, virtualization, 
+---
+= Virtualisation du stockage
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Les informations d'infrastructure de données permettent de différencier une baie de stockage dotée d'un stockage local ou de la virtualisation d'autres baies de stockage. Vous pouvez ainsi établir le lien entre les coûts et distinguer les performances du stockage frontal et du stockage interne de votre infrastructure.
+
+
+
+=== Virtualisation dans un widget Table
+
+L'un des moyens les plus simples de commencer à examiner votre virtualisation du stockage est de créer un widget de tableau de bord montrant le type virtualisé. Lors de la création de la requête pour le widget, ajoutez simplement "virtualizedType" à votre groupement ou filtre.
+
+image:StorageVirtualization_TableWidgetSettings.png["Requête de base pour afficher les virtualizedTypes du stockage"]
+
+Le widget de table qui en résulte affiche les stockages _Standard_, _Backend_ et _Virtual_ de votre environnement.
+
+image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["Tableau indiquant les types virtualisés"]
+
+
+
+=== Les pages d'accueil affichent des informations virtualisées
+
+Sur une page de stockage, de volume, de volume interne ou de disque, vous pouvez consulter les informations pertinentes sur la virtualisation. Par exemple, sur la page d'accueil du stockage ci-dessous, vous pouvez voir qu'il s'agit d'un stockage virtuel et quel système de stockage back-end s'applique. Tous les tableaux pertinents figurant sur les pages d'accueil indiqueront également des informations sur la virtualisation, le cas échéant.
+
+image:StorageVirtualization_StorageSummary.png["Page d'accueil du stockage affichant des informations sur le stockage virtuel et sauvegardé"]
+
+
+
+=== Pages d'accueil et tableaux de bord existants
+
+Sachez que si votre environnement comporte actuellement des pages d'accueil ou des tableaux de bord personnalisés, ceux-ci n'afficheront pas automatiquement toutes les informations de virtualisation par défaut. Cependant, vous pouvez _revenir à la valeur par défaut_ tout tableau de bord ou page d'accueil personnalisé (vous devrez à nouveau mettre en œuvre vos personnalisations), ou modifier les widgets pertinents pour inclure les attributs ou mesures de virtualisation souhaités.
+
+_Rétablir par défaut_ est disponible dans le coin supérieur droit d'un tableau de bord personnalisé ou d'un écran de page d'accueil.
+
+image:RevertToDefault.png["Revenir au bouton par défaut"]

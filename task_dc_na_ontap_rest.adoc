@@ -1,0 +1,261 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_ontap_rest.html 
+keywords: data collector, ontap, ontap, CDOT, REST 
+summary: Collecteur de données REST ONTAP 
+---
+= Collecteur de données REST NetApp ONTAP
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ce collecteur de données acquiert les données d'inventaire, les journaux EMS et les données de performances des systèmes de stockage exécutant ONTAP 9.14.1 et versions ultérieures en utilisant des appels d'API REST. Pour les systèmes ONTAP des versions antérieures, utilisez le type de collecteur « logiciel de gestion des données NetApp ONTAP » basé sur ZAPI.
+
+
+NOTE: Le collecteur REST ONTAP peut être utilisé en remplacement du collecteur basé sur ONTAPI précédent. Ainsi, il peut y avoir des différences dans les mesures qui sont collectées ou déclarées. Pour plus d'informations sur les différences entre ONTAPI et REST, consultez la link:https://docs.netapp.com/us-en/ontap-restmap-9141/index.html["Mappage de ONTAP 9.14.1 ONTAPI-to-REST"] documentation.
+
+
+
+== De formation
+
+Les conditions suivantes sont requises pour configurer et utiliser ce collecteur de données :
+
+* Vous devez avoir accès à un compte utilisateur avec le niveau d'accès requis. Notez que les autorisations d'administrateur sont requises si vous créez un nouvel utilisateur/rôle REST.
++
+** Fonctionnellement, Data Infrastructure Insights effectue principalement des requêtes de lecture, mais certaines autorisations d'écriture sont requises pour que les informations d'infrastructure de données s'enregistrent sur la baie ONTAP. Voir la _remarque sur les autorisations_ ci-dessous.
+
+
+* ONTAP version 9.14.1 ou supérieure.
+* Exigences relatives aux ports : 443
+
+
+
+
+== Remarque sur les autorisations
+
+Comme plusieurs tableaux de bord ONTAP de Data Infrastructure Insights reposent sur des compteurs ONTAP avancés, vous devez conserver *Activer la collecte avancée de données de compteur* activé dans la section Configuration avancée du collecteur de données.
+
+Pour créer un compte local pour les données d'infrastructure de données au niveau du cluster, connectez-vous à ONTAP avec le nom d'utilisateur/mot de passe de l'administrateur de gestion du cluster et exécutez les commandes suivantes sur le serveur ONTAP :
+
+. Avant de commencer, vous devez être connecté à ONTAP avec un compte _Administrator_ et _diagnostics-level commands_ doit être activé.
+. Récupérer le nom du vServer de type _admin_. Vous utiliserez ce nom dans les commandes suivantes.
++
+ vserver show -type admin
+. Créez un rôle à l'aide des commandes suivantes :
++
+....
+security login rest-role create -role {role name} -api /api -access readonly
+security login rest-role create -role {role name} -api /api/cluster/agents -access all
+vserver services web access create -name spi -role {role name} -vserver {vserver name as retrieved above}
+security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}
+....
+. Créez l'utilisateur en lecture seule à l'aide de la commande suivante. Une fois la commande create exécutée, vous êtes invité à saisir un mot de passe pour cet utilisateur.
++
+ security login create -username ci_user -application http -authentication-method password -role ci_readonly
+
+
+Si le compte AD/LDAP est utilisé, la commande doit être
+
+ security login create -user-or-group-name DOMAIN\aduser/adgroup -application http -authentication-method domain -role ci_readonly
+Le rôle et la connexion de l'utilisateur ainsi obtenus seront similaires à ceux qui suivent. Votre sortie réelle peut varier :
+
+[listing]
+----
+security login rest-role show -vserver <vserver name> -role restRole
+
+               Role                                    Access
+Vserver        Name            API                     Level
+----------     -------------   -------------------     ------
+<vserver name> restRole        /api                    readonly
+                               /api/cluster/agents     all
+2 entries were displayed.
+
+security login show -vserver <vserver name> -user-or-group-name restUser
+
+Vserver: <vserver name>
+                                                                 Second
+User/Group                 Authentication                 Acct   Authentication
+Name           Application Method        Role Name        Locked Method
+-------------- ----------- ------------- ---------------- ------ --------------
+restUser       http        password      restRole         no     none
+----
+
+
+== Migration
+
+Pour migrer d'un précédent collecteur de données ONTAP (ontapi) vers le nouveau collecteur de données REST ONTAP, procédez comme suit :
+
+. Ajoutez le collecteur de REPOS. Il est recommandé de saisir des informations pour un utilisateur différent de celui configuré pour le collecteur précédent. Par exemple, utilisez l'utilisateur noté dans la section autorisations ci-dessus.
+. Mettez le collecteur précédent en pause pour qu'il ne continue pas à collecter des données.
+. Laissez le nouveau collecteur de REPOS acquérir les données pendant au moins 30 minutes. Ignorez les données qui n'apparaissent pas « normales » pendant cette période.
+. Après la période de repos, vous devriez voir vos données se stabiliser au fur et à mesure que le collecteur de REPOS continue à acquérir.
+
+
+Vous pouvez utiliser ce même processus pour revenir au collecteur précédent, si vous le souhaitez.
+
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Adresse IP de gestion ONTAP | Adresse IP ou nom de domaine complet du cluster NetApp. Doit être l'adresse IP/FQDN de Cluster Management. 
+
+
+| Nom d'utilisateur REST ONTAP | Nom d'utilisateur du cluster NetApp 
+
+
+| Mot de passe REST ONTAP | Mot de passe pour le cluster NetApp 
+|===
+
+
+== Configuration avancée
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 minutes. 
+
+
+| Intervalle d'interrogation des performances (s) | La valeur par défaut est 60 secondes. 
+
+
+| Collecte avancée des données du compteur | Sélectionnez cette option pour inclure les données de compteur avancé ONTAP dans les sondages. Activé par défaut. 
+
+
+| Activer la collecte d'événements EMS | Sélectionnez cette option pour inclure les données des événements du journal EMS ONTAP. Activé par défaut. 
+
+
+| Intervalle d'interrogation EMS (s) | La valeur par défaut est 60 secondes. 
+|===
+
+
+== Terminologie
+
+Les informations d'infrastructure de données font l'acquisition d'inventaires, de journaux et de données de performances à partir du collecteur de données ONTAP. Pour chaque type d'actif acquis, la terminologie la plus utilisée pour l'actif est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+
+[cols="2*"]
+|===
+| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+
+
+| Disque | Disque 
+
+
+| Groupe RAID | Groupe de disques 
+
+
+| Cluster | Stockage 
+
+
+| Nœud | Nœud de stockage 
+
+
+| Agrégat | Pool de stockage 
+
+
+| LUN | Volumétrie 
+
+
+| Volumétrie | Volume interne 
+
+
+| Storage Virtual machine/Vserver | Storage Virtual machine (SVM) 
+|===
+
+
+== Terminologie de la gestion des données ONTAP
+
+Les termes suivants s'appliquent aux objets ou aux références que vous trouverez sur les pages d'accueil des ressources de stockage de gestion des données ONTAP. Un grand nombre de ces termes s'appliquent également à d'autres collecteurs de données.
+
+
+
+=== Stockage
+
+* Modèle – liste délimitée par des virgules des noms de modèles de nœud uniques et discrets au sein de ce cluster. Si tous les nœuds des clusters sont du même type de modèle, un seul nom de modèle apparaît.
+* Fournisseur : même nom de fournisseur que vous pouvez voir si vous configurez une nouvelle source de données.
+* Numéro de série : UUID de la baie
+* IP : il s'agit généralement des adresses IP ou des noms d'hôte configurés dans la source de données.
+* Version du microcode : micrologiciel.
+* Capacité brute : somme de base 2 de tous les disques physiques du système, quel que soit leur rôle.
+* Latence : représentation des charges de travail côté hôte, à la fois en lecture et en écriture. Idéalement, les informations sur l'infrastructure de données génèrent directement cette valeur, mais ce n'est souvent pas le cas. À la place de la baie qui propose cela, Data Infrastructure Insights effectue généralement un calcul pondéré par IOPS à partir des statistiques des volumes internes individuels.
+* Débit : agrégé à partir de volumes internes. Gestion – il peut contenir un lien hypertexte pour l'interface de gestion du périphérique. Créé par programmation par la source de données Data Infrastructure Insights dans le cadre du reporting d'inventaire.
+
+
+
+
+=== Pool de stockage
+
+* Stockage : sur quelle baie de stockage ce pool vit. Obligatoire.
+* Type – valeur descriptive d'une liste de possibilités énumérées. Le plus souvent sera “agrégat” ou “RAID Group”.
+* Node – si l'architecture de cette matrice de stockage est telle que les pools appartiennent à un nœud de stockage spécifique, son nom sera vu ici comme un lien hypertexte vers sa propre page d'accueil.
+* Utilise Flash Pool – valeur Oui/non – ce pool basé sur SATA/SAS utilise-t-il des disques SSD pour accélérer la mise en cache ?
+* Redondance : niveau RAID ou schéma de protection. RAID_DP est la double parité, RAID_TP est la triple parité.
+* Capacité : les valeurs indiquées ici sont les valeurs logiques utilisées, la capacité utilisable et la capacité totale logique, ainsi que le pourcentage utilisé sur ces valeurs.
+* Capacité sursollicitée : si grâce aux technologies d'efficacité, vous avez alloué une somme totale de capacités de volume ou de volume interne supérieure à la capacité logique du pool de stockage, le pourcentage de valeur ici est supérieur à 0 %.
+* Snapshot : les capacités des copies Snapshot utilisées et totales, si l'architecture des pools de stockage consacre une partie de sa capacité à la segmentation uniquement des snapshots. Ce document présente notamment la solution ONTAP dans les configurations MetroCluster, tandis que les autres configurations ONTAP sont moins nombreuses.
+* Utilisation : pourcentage indiquant le pourcentage le plus élevé d'occupation du disque de tout disque contribuant à la capacité de ce pool de stockage. L'utilisation du disque n'est pas forcément synonyme de performances de la baie. L'utilisation peut être élevée en raison des reconstructions des disques et des activités de déduplication, etc. En l'absence de charges de travail pilotées par l'hôte. De plus, les implémentations de réplication de nombreuses baies peuvent conduire à l'utilisation du disque sans apparaître comme volume interne ou charge de travail du volume.
+* IOPS : somme des IOPS de tous les disques qui fournissent la capacité à ce pool de stockage. Débit : somme du débit de tous les disques qui fournissent la capacité à ce pool de stockage.
+
+
+
+
+=== Nœud de stockage
+
+* Stockage : de quelle baie de stockage ce nœud fait partie. Obligatoire.
+* Partenaire HAUTE DISPONIBILITÉ : sur les plateformes où un nœud bascule vers un seul et même nœud, cela se voit généralement ici.
+* State : santé du nœud. Uniquement disponible lorsque la matrice est suffisamment saine pour être inventoriée par une source de données.
+* Model : nom de modèle du nœud.
+* Version : nom de version du périphérique.
+* Numéro de série – numéro de série du nœud.
+* Mémoire – mémoire de base 2 si disponible.
+* Utilisation – sur ONTAP, il s'agit d'un indice de contrainte de contrôleur provenant d'un algorithme propriétaire. À chaque sondage sur les performances, un nombre compris entre 0 et 100 % est indiqué, soit plus le conflit entre le disque WAFL, soit l'utilisation moyenne du CPU. Si vous constatez des valeurs durables supérieures à 50 %, c'est-à-dire un sous-dimensionnement. Un contrôleur/nœud peut être trop volumineux ou pas assez de disques rotatifs pour absorber la charge de travail d'écriture.
+* IOPS : provient directement des appels REST ONTAP sur l'objet de nœud.
+* Latence : dérivée des appels REST ONTAP sur l'objet de nœud.
+* Débit : dérivé directement des appels REST ONTAP sur l'objet de nœud.
+* Processeurs – nombre de processeurs.
+
+
+
+
+== Mesures de puissance ONTAP
+
+Plusieurs modèles ONTAP fournissent des metrics de puissance pour les informations exploitables de l'infrastructure de données, qui peuvent être utilisés à des fins de surveillance ou d'alerte. Les listes des modèles pris en charge et non pris en charge ci-dessous ne sont pas exhaustives, mais doivent fournir des conseils ; en général, si un modèle se trouve dans la même famille qu'un modèle de la liste, le support doit être le même.
+
+Modèles pris en charge :
+
+A200 A250 A300 A320 A400 A700 A220 A700S A800 A900 C190 FAS2240-4 FAS2552 FAS2650 FAS2720 FAS2750 FAS8200 FAS8300 FAS8700 FAS9000
+
+Modèles non pris en charge :
+
+FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/AFF 8020 FAS/AFF 8040 FAS/AFF 8060 FAS/AFF 8080
+
+
+
+== Dépannage
+
+Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+
+[cols="2*"]
+|===
+| Problème : | Essayer : 
+
+
+| Lors de la tentative de création d'un collecteur de données REST ONTAP, une erreur du type suivant s'affiche : configuration : 10.193.70.14 : l'API REST ONTAP à l'adresse 10.193.70.14 n'est pas disponible : 10.193.70.14 échec de l'OBTENTION DE /api/cluster : 400 demande incorrecte | Cela est probablement dû à une baie de ONTAP olDeer, par exemple, ONTAP 9.6) qui ne possède pas de fonctionnalités d'API REST. ONTAP 9.14.1 est la version minimale de ONTAP prise en charge par le collecteur REST ONTAP. Les réponses « 400 Bad Request » doivent être attendues sur les versions ONTAP pré-REST. Pour les versions ONTAP qui prennent en charge REST mais qui ne sont pas 9.14.1 ou plus tard, vous pouvez voir le message simillar suivant: Configuration: 10.193.98.84: ONTAP Rest API at 10.193.98.84 n'est pas disponible: 10.193.98.84: ONTAP Rest API at 10.193.98.84 est disponible: Cheryl5-cluster-2 9.10.1 a3cb3247-3d3c-11ee-8ff3-005056b364a7 mais n'est pas de la version minimale 9.14.1. 
+
+
+| Je vois des métriques vides ou « 0 » où le collecteur ONTAP ontapi affiche des données. | ONTAP REST ne signale pas les mesures utilisées en interne sur le système ONTAP uniquement. Par exemple, les agrégats système ne seront pas collectés par ONTAP REST, seuls les SVM de type « données » seront collectés. Autres exemples de mesures REST ONTAP qui peuvent signaler zéro ou des données vides : Internalvolumes : REST n'indique plus vol0. Agrégats : REST ne signale plus aggr0. Stockage : la plupart des mesures sont un cumul des mesures du volume interne et seront affectées par ce qui précède. Machines virtuelles de stockage : REST ne signale plus des SVM de type autre que « données » (par exemple, « cluster », « gmt », « nœud »). Vous pouvez également remarquer un changement dans l'apparence des graphiques qui ont des données, en raison de la modification de la période d'interrogation de performance par défaut de 15 minutes à 5 minutes. Une interrogation plus fréquente signifie plus de points de données à tracer. 
+|===
+Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].

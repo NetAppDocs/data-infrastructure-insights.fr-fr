@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: faq-config-support.html 
+keywords: FAQ, Frequently asked questions, questions, configuration, 
+summary:  
+---
+= Configuration et périphériques pris en charge
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cette FAQ répond aux questions les plus courantes sur la configuration de Data Infrastructure Insights et les périphériques pris en charge.
+
+
+
+== Les informations sur l'infrastructure de données modifient-elles mon environnement ?
+
+Non. Data Infrastructure Insights est un outil en lecture seule qui collecte des informations sur votre environnement. Les informations sur l'infrastructure de données ne modifient jamais vos ressources ou vos configurations.
+
+
+
+== Quels sont les accès de niveau autorisation dont Data Infrastructure Insights a besoin pour mes périphériques ?
+
+Dans la plupart des cas où le périphérique le prend en charge, un accès en lecture seule est tout ce qui est nécessaire. Certaines solutions n'autorisent pas l'accès en lecture seule et requièrent donc les autorisations élevées appropriées.
+
+
+
+== À quelle fréquence les informations collectées par Data Infrastructure Insights sont-elles ?
+
+Data Infrastructure Insights collecte généralement des données de performances toutes les 5 minutes et la découverte de constructions logiques et physiques toutes les ½ heures Data Infrastructure Insights définit les intervalles d'interrogation par défaut en fonction des meilleures pratiques suggérées et de l'évolutivité, mais permet à l'utilisateur de contrôler totalement ces intervalles.
+
+
+
+== Quel est l'impact des informations exploitables sur l'infrastructure de données sur mon environnement ?
+
+Les communications IP sans agent, hors bande et passives Data Infrastructure Insights contribuent à réduire la configuration, la maintenance et l'impact sur l'écosystème du data Center. L'équipe de développement des performances de Data Infrastructure Insights prend d'excellentes mesures pour minimiser tout impact sur les performances du data Center dans les activités de contrôle des performances. L'impact est considéré comme négligeable dans les environnements d'exploitation normaux et peut être détendu ou resserré dans des plateformes technologiques hautement utilisées ou sous-performantes. Pour plus d'informations, consultez le Guide d'installation de Data Infrastructure Insights.
+
+
+
+== Comment puis-je répertorier tous les hôtes/machines virtuelles dans Data Infrastructure Insights ?
+
+Le complément de widgets et les possibilités de listes de requêtes de Data Infrastructure Insights peuvent être utilisés pour fournir des listes de styles d'inventaire pour les ressources de data Center. Les listes des machines virtuelles jusqu'aux piles de disques et de nombreuses constructions entre elles peuvent toutes être mises à disposition pour les requêtes, les widgets, les tableaux de bord et les rapports d'entrepôts de données, et sont accessibles via l'API RESTful.
+
+
+
+== Les informations sur l'infrastructure de données fournissent-elles le même type de prise en charge pour les hôtes non hyperviseurs associés (par exemple, les serveurs physiques) ?
+
+Les hyperviseurs tels que VMware fournissent des informations détaillées sur les hôtes ESXI et leurs machines virtuelles (VM). Pour les serveurs physiques, Data Infrastructure Insights collecte des metrics jusqu'au HBA hôte. Data Infrastructure Insights utilise une méthode unique pour détecter les serveurs physiques à l'aide d'une technologie en attente de brevet. Une fois le stockage et/ou les commutateurs découverts, les noms d'hôtes des serveurs physiques figurent dans les informations d'alias de structure. Data Infrastructure Insights sélectionne ces noms d'hôte, les compare dans DNS et apporte automatiquement les hôtes dans Data Infrastructure Insights. Cette technique réduit considérablement le besoin de mises à jour manuelles des entrées et de maintenance de l'inventaire des outils.
+
+
+
+== Les informations d'infrastructure de données fournissent-elles la même profondeur de mesure (parité) pour les systèmes dans les environnements hétérogènes ?
+
+Il existe différents degrés de standardisation, de similarité et de nomenclature au sein des plateformes et des technologies des fournisseurs tiers. Data Infrastructure Insights tente de normaliser les informations de capacité et de performance dans une structure cohérente. Certaines mesures de capacité et de performance sont fournies de manière native depuis les compteurs de l'appareil, tels que les IOPS, la latence et la capacité brute. Lorsque des compteurs ne sont pas fournis, Data Infrastructure Insights peut tenter de résumer les valeurs (par exemple, en additionnant les IOPS ou les capacités des volumes sous-jacents). Dans les cas où aucune des deux n'est disponible, Data Infrastructure Insights tente de dériver les valeurs métriques via divers algorithmes de calcul. Data Infrastructure Insights fournit une fonctionnalité d'intégration SNMP générique qui permet d'intégrer des metrics supplémentaires qui ne sont pas encore collectés par Data Infrastructure Insights aujourd'hui.
+
+
+
+== Data Infrastructure Insights prend-il en charge les commutateurs Fibre Channel ?
+
+Oui. En plus de collecter les données de vos ressources de stockage, elles peuvent également acquérir des données d'inventaire et de performances des commutateurs Cisco, Brocade et QLogic dans votre environnement.
+
+
+
+== Les vues topologiques de l'ensemble de l'infrastructure sont-elles disponibles ? Les informations concernant l'infrastructure de données indiquent-elles une visibilité de bout en bout ?
+
+Oui. Les informations sur l'infrastructure de données permettent de détecter et de cartographier dynamiquement les constructions logiques et physiques et de bénéficier d'une vue topologique interactive de bout en bout des ressources de calcul, des fabrics, des virtualisateurs et du stockage interne. Les icônes de topologie permettent de parcourir rapidement les ressources affectées et d'identifier les charges de travail et les violations dans les environnements de stockage partagé.

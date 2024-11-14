@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: index.html 
+summary: Bienvenue dans le portail de documentation Data Infrastructure Insights. 
+keywords:  
+---
+= Documentation Data Infrastructure Insights
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Infrastructure Insights (anciennement Cloud Insights) est un outil de surveillance de l'infrastructure cloud qui permet de bénéficier d'une grande visibilité sur l'ensemble de votre infrastructure. Avec Data Infrastructure Insights, vous pouvez surveiller et optimiser toutes les ressources et résoudre les problèmes, y compris dans les clouds publics et dans vos data centers privés.
+
+
+
+== Avantages de la fonctionnalité Data Infrastructure
+
+Les informations sur l'infrastructure de données fournissent une surveillance multicloud hybride, ce qui assure l'observabilité intégrale de l'infrastructure et des workloads.
+
+* Collecteurs de données pour infrastructure et workloads hétérogènes, y compris Kubernetes
+* Ouvrez le collecteur Telegraf et les API ouvertes pour faciliter l'intégration
+* Alertes et notifications complètes
+* Machine learning pour des informations exploitables
+* Optimisez l'utilisation des ressources
+* Tableaux de bord intégrés ou personnalisables avec filtres avancés pour réduire le bruit d'affichage afin de répondre aux questions
+* Découvrez l'état de santé des opérations de stockage ONTAP 
+* Protégez vos ressources les plus précieuses : les données contre les attaques par ransomware ou les destructions de données
+
+
+'''
+
+
+== Mise en route
+
+* Comment link:task_cloud_insights_onboarding_1.html["*lancez-vous*"]utiliser une infrastructure de données exploitables ?
+* Je suis inscrit. Que dois-je faire ? link:task_getting_started_with_cloud_insights.html["Acquisition des données"] link:concept_user_roles.html["Configuration des utilisateurs"]
+* Génial ! Et la suite ? link:task_defining_annotations.html["Préparation des ressources : annotation"] link:concept_querying_assets.html["Recherche des ressources que vous voulez : interrogation"] link:concept_dashboards_overview.html["Voir les données que vous voulez : tableaux de bord"] link:task_create_monitor.html["Surveillance et alertes"] link:task_cs_getting_started.html["Sécurisation des données"]
+* C'est super ! Je suis prêt à link:concept_subscribing_to_cloud_insights.html["*abonnez-vous*"].
+

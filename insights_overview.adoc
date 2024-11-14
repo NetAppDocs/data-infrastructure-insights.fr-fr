@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: insights_overview.html 
+keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload, ttf, time to full, k8s, kubernetes, namespace 
+summary: 'Des informations vous permettent d"examiner l"utilisation des ressources et les tendances.' 
+---
+= Visibilité
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Grâce aux informations exploitables, vous pouvez examiner différentes choses, comme l'utilisation des ressources et leur incidence sur d'autres ressources ou des analyses complètes.
+
+Plusieurs informations sont disponibles. Naviguez jusqu'à *tableaux de bord > Insights* pour commencer à plonger dans. Vous pouvez afficher les informations actives (les informations qui se produisent actuellement) dans l'onglet principal ou les informations inactives dans l'onglet _informations inactives_. Les informations inactives sont celles qui étaient précédemment actives, mais qui n'ont plus lieu.
+
+
+
+== Types d'Insight
+
+
+
+=== Ressources partagées sous contrainte
+
+Les charges de travail à fort impact peuvent réduire les performances d'autres workloads d'une ressource partagée. La ressource partagée est alors contrainte. Les outils Data Infrastructure Insights permettent d'étudier la saturation des ressources et l'impact sur votre environnement. link:insights_shared_resources_under_stress.html["En savoir plus"]
+
+
+
+=== Espaces de noms Kubernetes manque d'espace
+
+L'espace de noms Kubernetes épuisé dans l'espace Insight vous offre une vue d'ensemble des workloads de vos espaces de noms Kubernetes qui risquent de manquer d'espace, avec une estimation du nombre de jours restants avant que chaque espace ne soit plein. link:insights_k8s_namespaces_running_out_of_space.html["En savoir plus"]
+
+
+
+=== Récupération du stockage à froid ONTAP
+
+L'outil _Reclaim ONTAP Cold Storage_ Insight fournit des données sur la capacité à froid, les économies potentielles en termes de coûts/d'énergie et les actions recommandées pour les volumes des systèmes ONTAP. link:insights_reclaim_ontap_cold_storage.html["En savoir plus"]
+
+
+NOTE: Il s'agit d'une fonction _Preview_ qui peut changer au fil du temps à mesure que des améliorations sont apportées. link:/concept_preview_features.html["En savoir plus >>"] A propos des fonctionnalités de prévisualisation de Data Infrastructure Insights.

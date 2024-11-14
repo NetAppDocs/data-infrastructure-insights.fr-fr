@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: insights_reclaim_ontap_cold_storage.html 
+keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
+summary: 'Ces informations vous permettent d"examiner l"impact des ressources sur les autres ressources de votre environnement.' 
+---
+= Informations : récupération du stockage à froid ONTAP
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+L'outil _Reclaim ONTAP Cold Storage_ Insight fournit des données sur la capacité à froid, les économies potentielles en termes de coûts/d'énergie et les actions recommandées pour les volumes des systèmes ONTAP.
+
+Pour en savoir plus, accédez à *tableaux de bord > Insights* et découvrez l'analyse _Reclaim ONTAP Cold Storage_ Insight. Notez que cette Insight répertorie uniquement les stockages affectés si Data Infrastructure Insights a détecté un stockage à froid. Sinon, un message « tout effacer » s'affiche.
+
+N'oubliez pas que les données inactives de moins de 30 jours ne sont pas affichées.
+
+image:Cold_Data_Insight_List.png["Liste Insight affichant 3 stockages avec données inactives"]
+
+La description d'Insight fournit une indication rapide de la quantité de données détectées en tant que « inactives » et du stockage sur lequel résident les données. Le tableau indique également le nombre de charges de travail avec des données inactives.
+
+Si vous sélectionnez un Insight dans la liste, une page contenant plus de détails s'ouvre. Vous y trouverez notamment des recommandations pour transférer des données vers le cloud ou arrêter des disques non isés, ainsi qu'une estimation des coûts et des économies d'énergie que vous pourriez réaliser grâce à l'implémentation de ces recommandations. La page fournit même un lien pratique vers link:https://bluexp.netapp.com/cloud-tiering-service-tco["Calculateur de TCO de NetApp"] afin que vous puissiez expérimenter avec les nombres.
+
+image:Cold_Data_Power_Info.png["Informations sur la puissance des données inactives"]
+
+
+
+=== Recommandations
+
+Sur la page Insight, développez les *recommandations* pour explorer les options suivantes :
+
+* Déplacez les workloads non utilisés (zombies) vers un Tier de stockage moins coûteux (HDD).
++
+En utilisant l'indicateur zombie, le stockage à froid et le nombre de jours, trouvez la quantité de données la plus froide et la plus importante, puis déplacez la charge de travail vers un niveau de stockage moins coûteux (par exemple, un pool de stockage utilisant du stockage sur disque dur). Une charge de travail est considérée comme un « zombie » lorsque le système IS n'a reçu aucune demande d'E/S significative pendant au moins 30 jours.
+
+* Supprimez les charges de travail inutilisées
++
+Vérifiez quelles charges de travail ne sont pas utilisées et envisagez de les archiver ou de les supprimer du système de stockage.
+
+* Prenons l'exemple de la solution NetApp Fabric Pool
++
+NetApp link:https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html#features["Solution FabricPool"]transfère automatiquement les données inactives vers un stockage cloud à faible coût, ce qui augmente l'efficacité de votre Tier de performance tout en assurant la protection des données à distance.
+
+
+
+
+
+=== Visualiser et explorer
+
+Les graphiques et le tableau fournissent des informations supplémentaires sur les tendances et vous permettent d'explorer chaque charge de travail.
+
+image:Cold_Data_Storage_Trend.png["Graphiques récapitulatifs des données inactives"] image:Cold_Data_Workload_Table.png["Tableau des charges de travail des données inactives"]

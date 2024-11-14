@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: reporting_overview.html 
+summary: Reporting prédéfini et personnalisé pour vos données avec Data Infrastructure Insights. 
+keywords: reporting, cognos, data warehouse, dwh 
+---
+= Présentation des rapports sur les informations d'infrastructure de données
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le reporting Data Infrastructure Insights est un outil de veille stratégique qui vous permet d'afficher des rapports prédéfinis ou de créer des rapports personnalisés.
+
+
+NOTE: La fonction de génération de rapports est disponible dans Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Édition Premium"].
+
+Les rapports Data Infrastructure Insights vous permettent d'effectuer les tâches suivantes :
+
+* Exécuter un rapport prédéfini
+* Créer un rapport personnalisé
+* Personnalisez le format et la méthode de livraison d'un rapport
+* Planifiez l'exécution automatique des rapports
+* Rapports par e-mail
+* Utilisez des couleurs pour représenter des seuils sur les données
+
+
+Le reporting Data Infrastructure Insights permet de générer des rapports personnalisés pour différents domaines tels que la facturation interne, l'analyse de consommation et la prévision. Il aide également à répondre à plusieurs questions :
+
+* Quel inventaire ai-je à faire ?
+* Où est mon inventaire?
+* Qui utilise nos ressources ?
+* Quelle est la refacturation du stockage alloué à une unité commerciale ?
+* Combien de temps me faut-il pour acquérir de la capacité de stockage supplémentaire ?
+* Les unités commerciales sont-elles alignées sur les niveaux de stockage appropriés ?
+* Dans quelle mesure les allocations de stockage sont-elles changeantes en un mois, un trimestre ou une année ?
+
+
+
+
+== Accès au reporting Data Infrastructure Insights
+
+Vous pouvez accéder au rapport Data Infrastructure Insights en cliquant sur le lien *Rapports* dans le menu.
+
+Vous serez redirigé vers l'interface de génération de rapports. Data Infrastructure Insights utilise IBM Cognos Analytics pour son moteur de reporting.
+
+
+
+== Qu'est-ce que le CÉC?
+
+Lorsque vous travaillez avec les rapports, vous entendrez les termes « entrepôt de données » et « ETL ». ETL signifie « extraire, transformer et charger ». Le processus ETL récupère les données collectées dans Data Infrastructure Insights et les transforme dans un format pour les utiliser dans Reporting. « Entrepôt de données » fait référence aux données collectées disponibles pour la génération de rapports.
+
+Le processus ETL comprend les processus individuels suivants :
+
+* *Extract* : prend des données à partir de Data Infrastructure Insights.
+* *Transform* : applique des règles ou des fonctions de logique applicative aux données lorsqu'elles sont extraites de Data Infrastructure Insights.
+* *Load*: Enregistre les données transformées dans l'entrepôt de données pour utilisation dans Reporting.
+

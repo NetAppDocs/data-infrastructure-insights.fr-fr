@@ -1,0 +1,144 @@
+---
+sidebar: sidebar 
+permalink: task_dc_brocade_rest.html 
+keywords: data collector, Brocade, FC switch, FOS, Rest 
+summary: Configuration du collecteur de données REST Brocade FOS. 
+---
+= Collecteur de données REST Brocade FOS
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilise le collecteur REST Brocade FOS pour détecter l'inventaire et les performances des commutateurs Brocade exécutant le firmware FabricOS (FOS) version 8.2 et ultérieure.
+
+Remarque : le niveau « utilisateur » par défaut de FOS n'est pas suffisamment puissant pour que Data Infrastructure Insights affiche tous les aspects logiques d'un périphérique. Nous avons besoin d'un compte utilisateur avec le rôle « châssis » activé, ainsi que des autorisations sur toutes les structures virtuelles configurées sur un commutateur.
+
+Voici un exemple de procédure permettant de créer un compte utilisateur « avec le moins de privilèges » pour l'utilisation de Data Infrastructure Insights dans une session SSH vers un périphérique FOS :
+
+UserConfig --add NetAppCIUser -r user -l 1-128 -c user -p Qwerty !
+
+Cela créera un utilisateur « NetAppCIUser » avec le mot de passe « Qwerty! ». Cet utilisateur a le rôle « user » (-r) sur les 128 structures virtuelles possibles ( -l ). Cet utilisateur possède en outre le rôle “Chassis” ( -c) requis, avec un accès de niveau utilisateur attribué.
+
+Par défaut, ce collecteur tentera de découvrir tous les périphériques FOS faisant partie de toutes les structures dont le commutateur fait partie.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données REST Brocade FOS. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+
+[cols="2*"]
+|===
+| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+
+
+| Commutateur | Commutateur 
+
+
+| Port | Port 
+
+
+| Structure virtuelle, structure physique | Structure 
+
+
+| Zone | Zone 
+
+
+| Commutateur logique | Commutateur logique 
+
+
+| Zone LSAN | Zone IVR 
+|===
+Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+
+
+
+== De formation
+
+* Il doit y avoir une connectivité TCP à tous les commutateurs de la structure. Ce type de collecteur de données essaiera de manière transparente HTTP et HTTPS pour chaque périphérique de la structure. Si vous cochez la case _détecter tous les commutateurs dans la structure_, Data Infrastructure Insights identifie tous les commutateurs de la structure. Cependant, il faut que la connectivité TCP à ces commutateurs supplémentaires soit nécessaire pour les découvrir.
+* Le même compte est nécessaire au niveau global pour tous les commutateurs du maillage. Vous pouvez utiliser l'interface Web du périphérique pour confirmer l'accès.
+
+
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| IP du commutateur | Adresse IP ou nom de domaine complet du commutateur FOS 
+
+
+| Nom d'utilisateur | Nom d'utilisateur du commutateur 
+
+
+| Mot de passe | Mot de passe du commutateur 
+|===
+
+
+== Configuration avancée
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Périphériques exclus | Liste séparée par des virgules des adresses IPv4 de périphérique à exclure de l'interrogation. 
+
+
+| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 60. 
+
+
+| Découvrir tous les commutateurs du tissu | Sélectionnez pour découvrir tous les switchs de la structure. 
+
+
+| Choisissez de favoriser HBA par rapport aux alias de zone | Choisissez de favoriser les alias de HBA ou de zone. 
+
+
+| Type de connexion | HTTP ou HTTPS. 
+
+
+| Notez que ce paramètre ne modifie que l'EC de protocole qui tente d'utiliser d'abord par périphérique. L'EC essaiera automatiquement le protocole opposé si la valeur par défaut échoue | Remplacer le port TCP 
+
+
+| Spécifiez un port si la valeur par défaut n'est pas utilisée. | Intervalle d'interrogation des performances (s) 
+|===
+
+
+== Dépannage
+
+Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+
+
+
+=== Inventaire
+
+[cols="2*"]
+|===
+| Problème : | Essayer : 
+
+
+| La fonction de test m'avertit qu'un protocole est inaccessible | Un périphérique Brocade FOS 8.2+ donné ne veut parler que sur HTTP ou HTTPS. Si un commutateur est équipé d'un certificat numérique, le commutateur affichera des erreurs HTTP si l'on tente de communiquer avec lui avec HTTP ou HTTPS non chiffré. La fonction de test tente de communiquer avec HTTP et HTTPS. Si le test vous indique qu'un protocole réussit, vous pouvez enregistrer le collecteur en toute sécurité et ne vous inquiétez pas que l'autre protocole a échoué. Le collecteur tentera les deux protocoles pendant la collecte et n'échouera que si aucun des deux protocoles ne fonctionne. 
+
+
+| Erreur : « les informations de l'infrastructure de données ont reçu un rôle de châssis non valide » | Vérifiez que l'utilisateur configuré dans cette source de données a reçu l'autorisation de rôle de châssis. 
+
+
+| Erreur : « adresse IP du châssis non concordante » | Modifiez la configuration de la source de données pour utiliser l'adresse IP du châssis. 
+
+
+| Échec de l'inventaire avec un 403 interdit | Il peut s'agir simplement de mauvaises informations d'identification ou indiquer que vous essayez d'utiliser un rôle suffisamment puissant. Rappelez-vous que les utilisateurs de niveau « utilisateur » NE disposent PAS du droit requis de « rôle de châssis », ou consultez l'accès aux structures virtuelles non par défaut. 
+|===
+Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].

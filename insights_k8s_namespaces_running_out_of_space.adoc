@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: insights_k8s_namespaces_running_out_of_space.html 
+keywords: insight, pv, persistent volume, backend 
+summary: 'Les informations exploitables permettent de prédire à quel moment les espaces Kubernetes sont susceptibles d"être pleins.' 
+---
+= Indications : espaces de noms Kubernetes manque d'espace
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Le manque d'espace de votre environnement n'est jamais une bonne situation. Les informations sur l'infrastructure de données vous aident à prévoir le temps nécessaire avant que les volumes persistants de Kubernetes ne soient pleins.
+
+La _Kubernetes Namespaces étant hors d'Space_ Insight, vous disposez d'une vue détaillée des workloads sur vos espaces de noms Kubernetes qui risquent d'être à court d'espace, avec une estimation du nombre de jours restants avant que chaque volume persistant ne soit plein.
+
+Vous pouvez visualiser cette présentation en accédant à *tableaux de bord > Insights*.
+
+image:K8sRunningOutOfSpaceWorkloadList.png["Liste des charges de travail des espaces de noms des K8s susceptibles de manquer d'espace"]
+
+Cliquez sur une charge de travail pour ouvrir une page détaillée de la conférence Insight. Sur cette page, un graphique répertoriant les tendances de capacité de charge de travail s'affiche, ainsi qu'un tableau répertoriant les éléments suivants :
+
+* Nom de la charge de travail
+* Volume persistant affecté
+* Temps avant plein prévu en jours
+* Capacité de volume persistant
+* Ressource de stockage interne affectée, la capacité actuelle étant utilisée à partir de la capacité totale. En cliquant sur ce lien, vous accédez à la page d'accueil détaillée du volume principal.
+
+
+image:K8sRunningOutOfSpaceWorkloadTable.png["Le tableau des charges de travail affiche les détails"]
+
+
+
+=== Que faire si l'espace est insuffisant ?
+
+Sur la page Insight, cliquez sur *+Afficher les recommandations* pour voir les solutions possibles. En cas de manque d'espace, l'option la plus simple consiste à ajouter toujours plus de capacité, et Data Infrastructure Insights vous montre la capacité optimale à ajouter pour accélérer le temps de traitement d'une prévision cible de 60 jours. D'autres recommandations sont également présentées.
+
+image:K8sRunningOutOfSpaceRecommendations.png["Capacité à ajouter pour revenir au TTF de 60 jours"]
+
+C'est également ici que vous pouvez copier un lien pratique vers cette présentation, ajouter une page à vos signets ou partager facilement avec votre équipe.

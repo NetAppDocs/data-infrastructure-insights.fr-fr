@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: task_dc_rubrik_cdm.html 
+keywords: data collector, Rubrik, 
+summary: Configuration du collecteur de données Rubrik CDM. 
+---
+= Data Collector Rubrik CDM
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilise le collecteur de données Rubrik pour acquérir des données d'inventaire et de performances à partir des appliances de stockage Rubrik.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données Rubrik. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+
+[cols="2*"]
+|===
+| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+
+
+| Cluster | Stockage, pool de stockage 
+
+
+| Nœud | Nœud de stockage 
+
+
+| Disque | Disque 
+|===
+Remarque : il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+
+
+== De formation
+
+Les éléments suivants sont nécessaires pour configurer ce collecteur de données :
+
+* L'unité d'acquisition Data Infrastructure Insights initie les connexions au port TCP 443 vers le cluster Rubrik. Un collecteur par cluster.
+* Adresse IP du cluster Rubrik.
+* Nom d'utilisateur et mot de passe pour le cluster.
+* Adresse IP ou nom d'hôte du cluster Rubrik.
+* Pour l'authentification de base, un nom d'utilisateur et un mot de passe pour le cluster. Si vous préférez utiliser l'authentification basée sur le compte de service, vous devez disposer d'un compte de service, d'un secret et d'un ID d'organisation
+* Port requis : HTTPS 443
+
+
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| IP | Adresse IP du cluster Rubrik 
+
+
+| Nom d'utilisateur | Nom d'utilisateur du cluster 
+
+
+| Mot de passe | Mot de passe pour le cluster 
+|===
+
+
+== Configuration avancée
+
+[cols="2*"]
+|===
+| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 
+
+
+| Intervalle d'interrogation des performances (s) | La valeur par défaut est 300 
+|===
+
+
+== Dépannage
+
+Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+
+
+
+=== Inventaire
+
+[cols="2*"]
+|===
+| Problème : | Essayer : 
+
+
+| J'ai reçu un message indiquant que plusieurs stockages sont créés. | Vérifiez que le cluster est correctement configuré et que le collecteur pointe vers un seul cluster. 
+
+
+| J'ai reçu un avertissement indiquant que l'API du disque a renvoyé plus de données | Contactez le support pour obtenir des données supplémentaires. 
+|===
+Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].

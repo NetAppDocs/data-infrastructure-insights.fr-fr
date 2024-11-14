@@ -1,0 +1,291 @@
+---
+sidebar: sidebar 
+permalink: concept_user_roles.html 
+keywords: roles, guest, user, administrator, SSO, Federate, federation, identity, single sign-on, Account Owner, Reporting, Cloud Secure, Monitor and Optimize, security, observability 
+summary: 'Data Infrastructure Insights fournit plusieurs comptes d"utilisateur avec différents niveaux d"autorisation.' 
+---
+= Comptes utilisateur et rôles
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights fournit jusqu'à quatre rôles de compte utilisateur : propriétaire de compte, administrateur, utilisateur et invité. Chaque compte se voit attribuer des niveaux d'autorisation spécifiques, comme indiqué dans le tableau ci-dessous. Les utilisateurs link:#creating-accounts-by-inviting-users["invités"]accèdent aux informations de l'infrastructure de données et se voient attribuer un rôle spécifique, ou peuvent se connecter via link:#single-sign-on-sso-and-identity-federation["Autorisation SSO (Single Sign-On)"] avec un rôle par défaut. L'autorisation SSO est disponible en tant que fonctionnalité dans Data Infrastructure Insights Premium Edition.
+
+
+
+== Niveaux d'autorisation
+
+Vous utilisez un compte disposant des privilèges d'administrateur pour créer ou modifier des comptes d'utilisateur. Un rôle est attribué à chaque compte utilisateur pour chaque fonctionnalité Data Infrastructure Insights à partir des niveaux d'autorisation suivants.
+
+|===
+| Rôle | Observabilité | Sécurité des workloads | Création de rapports | Admin 
+
+
+| Propriétaire du compte | Identique à Administrateur | Identique à Administrateur | Identique à Administrateur | Identique à Administrator, et gère la configuration de l'authentification SSO et de la fédération des identités. Peut également attribuer des propriétaires supplémentaires. 
+
+
+| Administrateur | Peut exécuter toutes les fonctions d'observabilité, ainsi que la gestion des collecteurs de données. | Peut exécuter toutes les fonctions de sécurité, y compris celles pour les alertes, les analyses approfondies, les collecteurs de données, les stratégies de réponse automatisées et les jetons d'API pour la sécurité. Un administrateur peut également inviter d'autres utilisateurs, mais peut uniquement attribuer des rôles de sécurité. | Peut exécuter toutes les fonctions utilisateur/auteur, y compris la gestion des tokens API Reporting, ainsi que toutes les tâches administratives telles que la configuration des rapports, l'arrêt et le redémarrage des tâches de reporting. Un administrateur peut également inviter d'autres utilisateurs, mais peut uniquement attribuer des rôles de rapport. | Peut inviter d'autres utilisateurs, mais ne peut affecter que des rôles d'observabilité. Peut afficher, mais pas modifier la configuration SSO. Peut créer et gérer des jetons d'accès aux API. Peut afficher les informations d'audit. Permet d'afficher les informations d'abonnement, l'utilisation et l'historique. Peut gérer les listes de destinataires des notifications d'alertes globales et des notifications d'abonnement. 
+
+
+| Utilisateur | Peut afficher et modifier les tableaux de bord, les requêtes, les alertes, les annotations, les règles d'annotation, et des applications, et gérez la résolution des périphériques. | Peut afficher et gérer des alertes et afficher des informations judiciaires. Le rôle de l'utilisateur peut modifier l'état des alertes, ajouter une note, effectuer des instantanés manuellement et gérer l'accès des utilisateurs limité. | Peut exécuter toutes les fonctions invité/consommateur ainsi que créer et gérer des rapports et des tableaux de bord. | Non disponible 
+
+
+| Invité | Dispose d'un accès en lecture seule aux pages de ressources, aux tableaux de bord, aux alertes et peut afficher et exécuter des requêtes. | Peut afficher les alertes et les analyses approfondies. Le rôle invité ne peut pas modifier le statut des alertes, ajouter une note, effectuer des instantanés manuellement ou restreindre l'accès des utilisateurs. | Permet d'afficher, de planifier et d'exécuter des rapports et de définir des préférences personnelles telles que celles pour les langues et les fuseaux horaires. Les clients/clients ne peuvent pas créer de rapports ni effectuer des tâches administratives. | Non disponible 
+|===
+La meilleure pratique consiste à limiter le nombre d'utilisateurs disposant d'autorisations d'administrateur. Le plus grand nombre de comptes doit être celui des comptes utilisateur ou invités.
+
+
+
+=== Autorisations d'accès aux informations sur l'infrastructure de données par rôle d'utilisateur
+
+Le tableau suivant présente les autorisations Data Infrastructure Insights accordées à chaque rôle d'utilisateur.
+
+|===
+
+
+| Fonction | Administrateur/propriétaire du compte | Utilisateur | Invité 
+
+
+| Unités d'acquisition : ajouter/Modifier/Supprimer | Y | N | N 
+
+
+| Alertes* : créer/Modifier/Supprimer | Y | Y | N 
+
+
+| Alertes*: Affichage | Y | Y | Y 
+
+
+| Règles d'annotation : créer/Exécuter/Modifier/Supprimer | Y | Y | N 
+
+
+| Annotations : créer/Modifier/affecter/Afficher/Supprimer/Supprimer | Y | Y | N 
+
+
+| Accès API* : créer/Renommer/Désactiver/révoquer | Y | N | N 
+
+
+| Applications : créer/Afficher/Modifier/Supprimer | Y | Y | N 
+
+
+| Pages de ressources : modifier | Y | Y | N 
+
+
+| Pages de ressources : afficher | Y | Y | Y 
+
+
+| Audit : afficher | Y | N | N 
+
+
+| Coût du cloud | Y | N | N 
+
+
+| Sécurité | Y | N | N 
+
+
+| Tableaux de bord : créer/Modifier/Supprimer | Y | Y | N 
+
+
+| Tableaux de bord : vue | Y | Y | Y 
+
+
+| Collecteurs de données : ajouter/Modifier/Sondage/Supprimer | Y | N | N 
+
+
+| Notifications : afficher | Y | Y | Y 
+
+
+| Notifications : modifier | Y | N | N 
+
+
+| Requêtes : créer/Modifier/Supprimer | Y | Y | N 
+
+
+| Requêtes : afficher/exécuter | Y | Y | Y 
+
+
+| Résolution du périphérique | Y | Y | N 
+
+
+| Rapports* : afficher/Exécuter | Y | Y | Y 
+
+
+| Rapports* : créer/Modifier/Supprimer/planifier | Y | Y | N 
+
+
+| Abonnement : afficher/Modifier | Y | N | N 
+
+
+| Gestion des utilisateurs : inviter/Ajouter/Modifier/Désactiver | Y | N | N 
+|===
+*Nécessite Premium Edition
+
+
+
+== Créer des comptes en invitant des utilisateurs
+
+La création d'un compte utilisateur est possible via BlueXP. Un utilisateur peut répondre à l'invitation envoyée par e-mail, mais s'il ne dispose pas d'un compte BlueXP, il doit s'inscrire auprès de BlueXP pour accepter l'invitation.
+
+.Avant de commencer
+* Le nom d'utilisateur est l'adresse électronique de l'invitation.
+* Comprendre les rôles utilisateur que vous allez attribuer.
+* Les mots de passe sont définis par l'utilisateur pendant le processus d'inscription.
+
+
+.Étapes
+. Connectez-vous à Data Infrastructure Insights
+. Dans le menu, cliquez sur *Admin > gestion des utilisateurs*
++
+L'écran gestion des utilisateurs s'affiche. L'écran contient une liste de tous les comptes du système.
+
+. Cliquez sur *+ utilisateur*
++
+L'écran *inviter utilisateur* s'affiche.
+
+. Entrez une adresse e-mail ou plusieurs adresses pour les invitations.
++
+*Remarque :* lorsque vous saisissez plusieurs adresses, elles sont toutes créées avec le même rôle. Vous ne pouvez définir que plusieurs utilisateurs sur le même rôle.
+
+
+
+. Sélectionnez le rôle de l'utilisateur pour chaque fonctionnalité de Data Infrastructure Insights.
++
+
+NOTE: Les fonctions et les rôles que vous pouvez choisir dépendent des fonctionnalités auxquelles vous avez accès dans votre rôle d'administrateur particulier. Par exemple, si vous avez un rôle d'administrateur uniquement pour Reporting, vous serez en mesure d'affecter des utilisateurs à n'importe quel rôle dans Reporting, mais vous ne pourrez pas attribuer de rôles à des fins d'observabilité ou de sécurité.
+
++
+image:UserRoleChoices.png["Choix du rôle utilisateur"]
+
+. Cliquez sur *inviter*
++
+L'invitation est envoyée à l'utilisateur. Les utilisateurs auront 14 jours pour accepter l'invitation. Une fois l'invitation acceptée, l'utilisateur sera redirigé vers le portail NetApp Cloud Portal où il utilisera l'adresse e-mail de l'invitation. S'il dispose déjà d'un compte pour cette adresse e-mail, il lui suffit de se connecter pour accéder à son environnement Data Infrastructure Insights.
+
+
+
+
+
+== Modification du rôle d'un utilisateur existant
+
+Pour modifier le rôle d'un utilisateur existant, y compris l'ajouter en tant que *propriétaire de compte secondaire*, procédez comme suit.
+
+. Cliquez sur *Admin > gestion des utilisateurs*. L'écran affiche la liste de tous les comptes du système.
+. Cliquez sur le nom d'utilisateur du compte que vous souhaitez modifier.
+. Modifiez le rôle de l'utilisateur dans chaque ensemble de fonctionnalités Data Infrastructure Insights si nécessaire.
+. Cliquez sur _Enregistrer les modifications_.
+
+
+
+
+=== Pour attribuer un propriétaire de compte secondaire
+
+Vous devez être connecté en tant que propriétaire de compte pour l'observabilité afin d'affecter le rôle propriétaire du compte à un autre utilisateur.
+
+. Cliquez sur *Admin > gestion des utilisateurs*.
+. Cliquez sur le nom d'utilisateur du compte que vous souhaitez modifier.
+. Dans la boîte de dialogue utilisateur, cliquez sur *attribuer en tant que propriétaire*.
+. Enregistrez les modifications.
+
+
+image:Assign_Account_Owner.png["boîte de dialogue de modification d'utilisateur indiquant le choix du propriétaire du compte"]
+
+Vous pouvez avoir autant de propriétaires de compte que vous le souhaitez, mais la meilleure pratique consiste à limiter le rôle de propriétaire à seulement sélectionner des personnes.
+
+
+
+== Suppression d'utilisateurs
+
+Un utilisateur avec le rôle Administrateur peut supprimer un utilisateur (par exemple, quelqu'un n'ayant plus la société) en cliquant sur le nom de l'utilisateur et en cliquant sur _Supprimer l'utilisateur_ dans la boîte de dialogue. L'utilisateur sera supprimé de l'environnement Data Infrastructure Insights.
+
+Notez que tous les tableaux de bord, requêtes, etc. Créés par l'utilisateur restent disponibles dans l'environnement Data Infrastructure Insights même après la suppression de l'utilisateur.
+
+
+
+== Authentification unique (SSO) et fédération des identités
+
+
+
+=== Qu'est-ce que la fédération des identités ?
+
+Avec la fédération des identités :
+
+* L'authentification est déléguée au système de gestion des identités du client, en utilisant les informations d'identification du client de votre annuaire d'entreprise et les stratégies d'automatisation telles que l'authentification multifacteur (MFA).
+* Les utilisateurs se connectent une seule fois à tous les services NetApp BlueXP (authentification unique).
+
+
+Les comptes utilisateur sont gérés dans NetApp BlueXP pour tous les services cloud. Par défaut, l'authentification s'effectue à l'aide d'un profil utilisateur local BlueXP. Voici une présentation simplifiée de ce processus :
+
+image:BlueXP_Authentication_Local.png["Authentification BlueXP via une authentification locale"]
+
+Cependant, certains clients souhaitent utiliser leur propre fournisseur d'identité pour authentifier leurs utilisateurs afin de bénéficier des informations exploitables de l'infrastructure de données et de leurs autres services NetApp BlueXP . Grâce à la fédération des identités, les comptes NetApp BlueXP sont authentifiés à l'aide d'informations d'identification provenant de votre annuaire d'entreprise.
+
+Voici un exemple simplifié de ce processus :
+
+image:BlueXP_Authentication_Federated.png["Authentification BlueXP via la fédération"]
+
+Dans le diagramme ci-dessus, lorsqu'un utilisateur accède à Data Infrastructure Insights, cet utilisateur est dirigé vers le système de gestion des identités du client à des fins d'authentification. Une fois le compte authentifié, l'utilisateur est dirigé vers l'URL du locataire Data Infrastructure Insights.
+
+
+
+=== Activation de la fédération des identités
+
+BlueXP utilise Auth0 pour implémenter la fédération des identités et intégrer des services tels que ADFS (Active Directory Federation Services) et Active Directory de Microsoft Azure. Pour configurer la fédération des identités, reportez-vous au link:https://services.cloud.netapp.com/misc/federation-support["Instructions de fédération BlueXP"].
+
+
+NOTE: Vous devez configurer la fédération des identités BlueXP  avant de pouvoir utiliser SSO avec les informations d'infrastructure de données.
+
+Il est important de comprendre que la modification de la fédération des identités dans BlueXP  s'appliquera non seulement aux informations exploitables sur l'infrastructure de données, mais aussi à tous les services NetApp BlueXP . Le client doit discuter de ce changement avec l'équipe NetApp de chaque produit BlueXP qu'il possède pour s'assurer que la configuration qu'il utilise fonctionnera avec la fédération des identités ou si des ajustements doivent être effectués sur les comptes. Le client devra également faire appel à son équipe interne SSO pour modifier la fédération des identités.
+
+Il est également important de réaliser qu'une fois la fédération des identités activée, toute modification du fournisseur d'identité de l'entreprise (comme le passage de SAML à Microsoft AD) nécessitera probablement des dépannages/modifications/une attention particulière dans BlueXP pour mettre à jour les profils des utilisateurs.
+
+Pour ce problème de fédération ou pour tout autre problème de fédération, vous pouvez ouvrir un ticket de support à l'adresse https://mysupport.netapp.com/site/help[] et sélectionner la catégorie « BlueXP .NetApp.com > problèmes de fédération ».
+
+
+
+=== Mise en service automatique par l'utilisateur SSO
+
+En plus d'inviter des utilisateurs, les administrateurs peuvent activer l'accès *Single Sign-On (SSO) User Auto-Provisioning* à Data Infrastructure Insights pour tous les utilisateurs de leur domaine d'entreprise, sans avoir à les inviter individuellement. Lorsque SSO est activé, tout utilisateur possédant la même adresse e-mail de domaine peut se connecter à Data Infrastructure Insights à l'aide de ses informations d'identification d'entreprise.
+
+
+NOTE: _SSO User Auto-Provisioning_ est disponible dans Data Infrastructure Insights Premium Edition et doit être configuré avant de pouvoir être activé pour Data Infrastructure Insights. La configuration de l'auto-approvisionnement utilisateur SSO inclut link:https://services.cloud.netapp.com/misc/federation-support["Fédération des identités"] via NetApp BlueXP  comme décrit dans la section ci-dessus. La fédération permet aux utilisateurs d'authentification unique d'accéder à vos comptes NetApp BlueXP à l'aide d'identifiants de votre répertoire d'entreprise, en utilisant des normes ouvertes telles que le langage SAML (Security assertion Markup Language 2.0) et OpenID Connect (OIDC).
+
+Pour configurer _SSO User Auto-Provisioning_, vous devez d'abord avoir configuré BlueXP Identity Federation sur la page *Admin > User Management*. Sélectionnez le lien *configurer la fédération* dans la bannière pour passer à la fédération BlueXP. Une fois configuré, les administrateurs Data Infrastructure Insights peuvent activer la connexion utilisateur SSO. Lorsqu'un administrateur active _SSO User Auto-Provisioning_, il choisit un rôle par défaut pour tous les utilisateurs SSO (comme invité ou utilisateur). Les utilisateurs qui se connectent via SSO possèdent ce rôle par défaut.
+
+image:Roles_federation_Banner.png["Gestion des utilisateurs avec fédération"]
+
+Il arrive parfois qu'un administrateur souhaite promouvoir un utilisateur unique à partir du rôle SSO par défaut (par exemple, pour lui faire un administrateur). Ils peuvent le faire sur la page *Admin > User Management* en cliquant sur le menu de droite de l'utilisateur et en sélectionnant _Assign role_. Les utilisateurs auxquels un rôle explicite est attribué de cette façon continuent d'avoir accès à Data Infrastructure Insights même si _SSO User Auto-Provisioning_ est désactivé par la suite.
+
+Si l'utilisateur n'a plus besoin du rôle élevé, vous pouvez cliquer sur le menu pour _Supprimer l'utilisateur_. L'utilisateur sera supprimé de la liste. Si _SSO User Auto-Provisioning_ est activé, l'utilisateur peut continuer à se connecter à Data Infrastructure Insights via SSO, avec le rôle par défaut.
+
+Vous pouvez choisir de masquer les utilisateurs SSO en décochant la case *Afficher les utilisateurs SSO*.
+
+Cependant, n'activez pas l'option _SSO User Auto-Provisioning_ si l'un de ces éléments est vrai :
+
+* Votre entreprise dispose de plusieurs locataires Data Infrastructure Insights
+* Votre entreprise ne souhaite pas que tous les utilisateurs du domaine fédéré disposent d'un certain niveau d'accès automatique au locataire Data Infrastructure Insights. _À ce stade dans le temps, nous n'avons pas la possibilité d'utiliser des groupes pour contrôler l'accès aux rôles avec cette option_.
+
+
+
+
+== Restriction de l'accès par domaine
+
+Les informations sur l'infrastructure de données peuvent limiter l'accès des utilisateurs aux seuls domaines que vous spécifiez. Sur la page *Admin > gestion des utilisateurs*, sélectionnez « restreindre les domaines ».
+
+image:Restrict_Domains_Modal.png["Restriction des domaines aux domaines par défaut uniquement, valeurs par défaut plus domaines supplémentaires que vous spécifiez, ou aucune restriction"]
+
+Les choix suivants s'offrent à vous :
+
+* Aucune restriction : les informations concernant l'infrastructure de données restent accessibles aux utilisateurs, quel que soit leur domaine.
+* Limiter l'accès aux domaines par défaut : les domaines par défaut sont ceux utilisés par les propriétaires de compte d'environnement Data Infrastructure Insights. Ces domaines sont toujours accessibles.
+* Limitez l'accès aux valeurs par défaut et aux domaines que vous spécifiez. Répertoriez tous les domaines que vous souhaitez avoir accès à votre environnement Data Infrastructure Insights, en plus des domaines par défaut.
+
+
+image:Restrict_Domains_Tooltip.png["Info-bulle restreindre les domaines"]

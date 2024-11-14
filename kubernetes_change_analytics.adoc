@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: kubernetes_change_analytics.html 
+keywords: changes, management, analysis 
+summary: Le suivi des modifications Kubernetes est plus simple que jamais. 
+---
+= Analyse des changements Kubernetes
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+L'analytique des changements Kubernetes vous offre une vue complète des modifications récentes de votre environnement K8s. Les alertes et l'état du déploiement sont à portée de main. Avec change Analytics, vous pouvez suivre chaque changement de déploiement et de configuration et le mettre en corrélation avec l'état et les performances des services, de l'infrastructure et des clusters K8s.
+
+Comment l'analyse des changements peut-elle aider ?
+
+* Dans les environnements Kubernetes mutualisés, les pannes peuvent se produire en raison de modifications mal configurées. L'analyse des changements permet d'y apporter une solution en fournissant une seule interface pour afficher et mettre en corrélation l'état des workloads et les modifications de configuration. Cela peut vous aider dans le dépannage des environnements Kubernetes dynamiques.
+
+
+Pour afficher l'analyse des changements Kubernetes, accédez à *Kubernetes > analyse des changements*.
+
+image:ChangeAnalytitcs_Main_Screen.png["L'écran principal de l'analytique des changements Kubernetes affiche les alertes avertissement et critiques, les déploiements réussis ou non, ainsi que les 3 workloads qui déclenchent des alertes"].
+
+La page est automatiquement actualisée en fonction de la plage horaire Data Infrastructure Insights actuellement sélectionnée. Des plages de temps plus petites permettent un rafraîchissement plus fréquent de l'écran.
+
+
+
+== Filtrage
+
+Comme toutes les fonctionnalités de Data Infrastructure Insights, il est intuitif de filtrer la liste de modifications : en haut de la page, entrez ou sélectionnez des valeurs pour votre cluster, espace de noms ou workload Kubernetes, ou ajoutez vos propres filtres en cliquant sur le bouton {+].
+
+Lorsque vous filtrez vers un cluster, un espace de noms et une charge de travail spécifique (ainsi que tous les autres filtres que vous avez définis), la chronologie des déploiements et des alertes s'affiche pour cette charge de travail dans cet espace de noms sur ce cluster. Pour effectuer un zoom avant, cliquez sur le graphique et faites-le glisser pour vous concentrer sur une plage horaire plus spécifique.
+
+image:ChangeAnalytitcs_Filtered_Timeline.png["Exemple de chronologie de la charge de travail"]
+
+
+
+== Statut rapide
+
+Sous la zone de filtrage se trouvent un certain nombre d'indicateurs de haut niveau. Le nombre d'alertes (Avertissement et critique) se trouve à gauche. Ce nombre inclut les alertes _Active_ ainsi que les alertes _Resolved_. Pour afficher uniquement les alertes _Active_, définissez un filtre pour « Status » et choisissez « Active ».
+
+image:ChangeAnalytitcs_Alerts.png["Modifier les alertes d'analyse"]
+
+L'état du déploiement est également indiqué ici. Encore une fois, la valeur par défaut est d'afficher le nombre de déploiements _démarrés_, _complets_ et _échoués_. Pour afficher uniquement les déploiements _FAILED_, définissez un filtre pour « Status » et sélectionnez « FAILED ».
+
+image:ChangeAnalytitcs_Deploys.png["Analyse des changements - procédures"]
+
+Les 3 principaux workloads avec le plus grand nombre d'alertes viennent ensuite. Le nombre en rouge en regard de chaque charge de travail indique le nombre d'alertes associées à cette charge de travail. Cliquez sur le lien correspondant aux workloads pour explorer votre infrastructure (Explorateur Kubernetes), les dépendances (carte des workloads) ou l'analyse des journaux (journaux d'événements).
+
+image:ChangeAnalytitcs_ExploreWorkloadAlerts.png["Options d'exploration des charges de travail d'analyse des changements"]
+
+
+
+== Panneau de détails
+
+La sélection d'une modification dans la liste ouvre un panneau décrivant la modification plus en détail. Par exemple, la sélection d'un déploiement en échec affiche un résumé du déploiement, avec les heures de début et de fin, la durée et l'endroit où le déploiement a été déclenché, avec des liens permettant d'explorer ces ressources. Il affiche également la raison de l'échec, les modifications associées et les événements associés.
+
+image:ChangeAnalytitcs_DeployDetailPanel.png["Panneau de détails de l'échec de déploiement"]
+
+La sélection d'une alerte de même type fournit des détails sur l'alerte, y compris le moniteur qui a déclenché l'alerte, ainsi qu'un graphique montrant un chronogramme visuel pour l'alerte.

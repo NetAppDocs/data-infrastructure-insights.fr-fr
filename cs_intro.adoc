@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: cs_intro.html 
+keywords: CloudSecure, Cloud Secure 
+summary: Présentation 
+---
+= À propos de la sécurité des charges de travail du stockage
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Informations exploitables sur les menaces internes avec le système de stockage Workload Security (anciennement Cloud Secure), vous protégez vos données. Elle assure la visibilité et le contrôle centralisés sur tous les accès aux données de l'entreprise à l'échelle des environnements de cloud hybride, afin de garantir l'atteinte des objectifs de sécurité et de conformité.
+
+
+NOTE: La sécurité des workloads n'est pas disponible dans Data Infrastructure Insights Federal Edition.
+
+
+
+== Visibilité
+
+Bénéficiez d'une visibilité et d'un contrôle centralisés sur l'accès des utilisateurs aux données stratégiques de l'entreprise stockées sur site ou dans le cloud.
+
+Remplacez les outils et les processus manuels qui n'offrent pas de visibilité opportune et exacte sur l'accès aux données et leur contrôle. La sécurité des charges de travail fonctionne de façon unique sur les systèmes de stockage cloud et sur site pour vous avertir en temps réel des comportements malveillants des utilisateurs.
+
+
+
+== La protection
+
+Protégez les données de l'entreprise contre les activités abusives ou les usurpations d'identité à l'aide de fonctionnalités avancées de machine learning et de détection des anomalies.
+
+Vous alerte en cas d'accès anormal aux données au moyen du machine learning avancé et de la détection des anomalies du comportement des utilisateurs.
+
+
+
+== La conformité
+
+Assurez la conformité aux règles de l'entreprise en vérifiant l'accès des utilisateurs aux données critiques stockées dans des infrastructures sur site ou dans le cloud.
