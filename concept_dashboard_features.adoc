@@ -639,9 +639,6 @@ Si vous cliquez sur le lien dans un widget à valeur unique ou un widget de jaug
 
 Comme les widgets à valeur unique et jauge, vous pouvez définir un formatage conditionnel dans les widgets de tableau, ce qui vous permet de mettre en évidence des données avec des couleurs et/ou des icônes spéciales.
 
-
-NOTE: Le formatage conditionnel n'est pas disponible actuellement dans Data Infrastructure Insights Federal Edition.
-
 La mise en forme conditionnelle vous permet de définir et de mettre en évidence les seuils de niveau d'avertissement et de niveau critique dans les widgets de tableau, offrant ainsi une visibilité instantanée des valeurs aberrantes et des points de données exceptionnels.
 
 image:ConditionalFormattingExample.png["Exemple de formatage conditionnel"]

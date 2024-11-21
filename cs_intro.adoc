@@ -22,9 +22,6 @@ summary: Présentation
 Informations exploitables sur les menaces internes avec le système de stockage Workload Security (anciennement Cloud Secure), vous protégez vos données. Elle assure la visibilité et le contrôle centralisés sur tous les accès aux données de l'entreprise à l'échelle des environnements de cloud hybride, afin de garantir l'atteinte des objectifs de sécurité et de conformité.
 
 
-NOTE: La sécurité des workloads n'est pas disponible dans Data Infrastructure Insights Federal Edition.
-
-
 
 == Visibilité
 

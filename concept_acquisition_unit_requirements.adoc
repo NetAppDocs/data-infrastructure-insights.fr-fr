@@ -73,10 +73,3 @@ Vous vous attendez à :
 Pour chaque réponse "Oui" ci-dessus, il est recommandé d'ajouter 8 Go de mémoire et 50 Go d'espace disque à l'au. Donc, par exemple, si vous avez répondu « Oui » aux deux, vous devriez déployer un système de 24 Go avec 150 Go ou plus d'espace disque. Sous Linux, l'espace disque à ajouter à l'emplacement du journal.
 
 Pour toute question sur le dimensionnement, contactez le support NetApp.
-
-
-
-== Exigence supplémentaire de l'édition fédérale
-
-* Pour les installations d'unités d'acquisition dans les clusters Data Infrastructure Insights Federal Edition, le système d'exploitation sous-jacent doit avoir une bonne source d'entropie. Sur les systèmes Linux, cela se fait généralement en installant _rng-Tools_ ou en utilisant la génération de nombres aléatoires (RNG). Il incombe au client de s'assurer que cette exigence est remplie sur la machine de l'unité d'acquisition.
-

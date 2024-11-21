@@ -21,9 +21,6 @@ summary: 'Les informations sur l"infrastructure de données collectent les donn�
 [role="lead"]
 NetApp link:https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["Active IQ"]fournit aux clients NetApp une série de visualisations, d'analyses et d'autres services de support pour leurs systèmes matériels et logiciels. Les données rapportées par Active IQ peuvent améliorer le dépannage des problèmes système et fournir des informations sur l'optimisation et l'analyse prédictive liées à vos appareils.
 
-
-NOTE: ActiveIQ n'est pas disponible dans Data Infrastructure Insights Federal Edition.
-
 Data Infrastructure Insights collecte les *risques* pour tout système de stockage NetApp clustered Data ONTAP surveillé et signalé par Active IQ. Les risques signalés pour les systèmes de stockage sont automatiquement collectés par Data Infrastructure Insights dans le cadre de leur collecte de données sur ces périphériques. Vous devez ajouter le collecteur de données approprié aux informations sur l'infrastructure de données pour collecter les informations sur les risques Active IQ.
 
 Les informations sur l'infrastructure de données n'affichent pas les données sur les risques des systèmes ONTAP qui ne sont pas surveillés et signalés par Active IQ.
