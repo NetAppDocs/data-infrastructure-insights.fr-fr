@@ -29,7 +29,7 @@ L'un des moyens les plus simples de commencer à examiner votre virtualisation d
 
 image:StorageVirtualization_TableWidgetSettings.png["Requête de base pour afficher les virtualizedTypes du stockage"]
 
-Le widget de table qui en résulte affiche les stockages _Standard_, _Backend_ et _Virtual_ de votre environnement.
+Le widget de table qui en résulte affiche les stockages _Standard_, _Backend_ et _Virtual_ de votre locataire.
 
 image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["Tableau indiquant les types virtualisés"]
 
@@ -45,7 +45,7 @@ image:StorageVirtualization_StorageSummary.png["Page d'accueil du stockage affic
 
 === Pages d'accueil et tableaux de bord existants
 
-Sachez que si votre environnement comporte actuellement des pages d'accueil ou des tableaux de bord personnalisés, ceux-ci n'afficheront pas automatiquement toutes les informations de virtualisation par défaut. Cependant, vous pouvez _revenir à la valeur par défaut_ tout tableau de bord ou page d'accueil personnalisé (vous devrez à nouveau mettre en œuvre vos personnalisations), ou modifier les widgets pertinents pour inclure les attributs ou mesures de virtualisation souhaités.
+Sachez que si vous disposez actuellement de pages d'accueil ou de tableaux de bord personnalisés sur votre locataire, ceux-ci n'afficheront pas automatiquement toutes les informations de virtualisation par défaut. Cependant, vous pouvez _revenir à la valeur par défaut_ tout tableau de bord ou page d'accueil personnalisé (vous devrez à nouveau mettre en œuvre vos personnalisations), ou modifier les widgets pertinents pour inclure les attributs ou mesures de virtualisation souhaités.
 
 _Rétablir par défaut_ est disponible dans le coin supérieur droit d'un tableau de bord personnalisé ou d'un écran de page d'accueil.
 

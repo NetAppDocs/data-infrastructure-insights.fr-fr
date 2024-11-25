@@ -36,7 +36,7 @@ Les informations d'infrastructure de données fournissent également un certain 
 
 == Meilleures pratiques en matière de sécurité
 
-Les alertes Data Infrastructure Insights sont conçues pour mettre en évidence les points de données et les tendances de votre environnement, et Data Infrastructure Insights vous permet d'entrer n'importe quelle adresse e-mail valide en tant que destinataire des alertes. Si vous travaillez dans un environnement sécurisé, soyez particulièrement attentif à la personne qui reçoit la notification ou a accès à l'alerte.
+Les alertes Data Infrastructure Insights sont conçues pour mettre en évidence les points de données et les tendances de votre locataire, et Data Infrastructure Insights vous permet d'entrer n'importe quelle adresse e-mail valide en tant que destinataire des alertes. Si vous travaillez dans un environnement sécurisé, soyez particulièrement attentif à la personne qui reçoit la notification ou a accès à l'alerte.
 
 
 
@@ -232,7 +232,7 @@ Si un moniteur n'est plus nécessaire, vous pouvez le supprimer en sélectionnan
 
 == Groupes de surveillance
 
-Le regroupement vous permet d'afficher et de gérer les moniteurs associés. Par exemple, vous pouvez disposer d'un groupe de moniteurs dédié au stockage de votre environnement ou de moniteurs pertinents à une liste de destinataires donnée.
+Le regroupement vous permet d'afficher et de gérer les moniteurs associés. Par exemple, vous pouvez avoir un groupe de moniteurs dédié au stockage de votre locataire ou des moniteurs pertinents pour une liste de destinataires donnée.
 
 image:Monitors_GroupList.png["Regroupement du moniteur"]
 
@@ -297,7 +297,7 @@ image:Monitors_PauseGroup.png["Mettre un groupe en pause"]
 
 == Moniteurs définis par le système
 
-Les informations d'infrastructure de données comprennent un certain nombre de contrôles définis par le système pour les metrics et les journaux. Les moniteurs système disponibles dépendent des collecteurs de données présents dans votre environnement. De ce fait, les moniteurs disponibles dans Data Infrastructure Insights peuvent changer à mesure que des collecteurs de données sont ajoutés ou que leurs configurations changent.
+Les informations d'infrastructure de données comprennent un certain nombre de contrôles définis par le système pour les metrics et les journaux. Les moniteurs système disponibles dépendent des collecteurs de données présents sur votre locataire. De ce fait, les moniteurs disponibles dans Data Infrastructure Insights peuvent changer à mesure que des collecteurs de données sont ajoutés ou que leurs configurations changent.
 
 Consultez la link:task_system_monitors.html["Moniteurs définis par le système"] page pour obtenir la description des moniteurs inclus dans Data Infrastructure Insights.
 

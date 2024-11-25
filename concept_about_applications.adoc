@@ -13,11 +13,11 @@ summary: 'Connaître les applications utilisées dans l"environnement de votre e
 :revdate: Understanding the applications used in your company's environment helps you to keep track of asset usage and cost.
 
 
-Avant de pouvoir suivre les données associées aux applications exécutées dans votre environnement, vous devez d'abord définir ces applications et les associer aux ressources appropriées. Vous pouvez associer des applications aux ressources suivantes : hôtes, machines virtuelles, volumes, volumes internes, qtrees, les partages et les hyperviseurs.
+Avant de pouvoir suivre les données associées aux applications s'exécutant sur votre locataire, vous devez d'abord définir ces applications et les associer aux ressources appropriées. Vous pouvez associer des applications aux ressources suivantes : hôtes, machines virtuelles, volumes, volumes internes, qtrees, les partages et les hyperviseurs.
 
 Cette rubrique fournit un exemple de suivi de l'utilisation des machines virtuelles que l'équipe marketing utilise pour son courrier électronique Exchange.
 
-Vous pouvez créer un tableau similaire à ce qui suit pour identifier les applications utilisées dans votre environnement et noter le groupe ou l'unité commerciale utilisant chaque application.
+Vous pouvez créer un tableau similaire à celui ci-dessous pour identifier les applications utilisées sur votre tenant et noter le groupe ou l'unité commerciale utilisant chaque application.
 
 [cols="5*"]
 |===

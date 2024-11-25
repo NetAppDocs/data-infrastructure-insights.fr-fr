@@ -16,7 +16,7 @@ summary: 'Cloud Insights effectue le suivi des modifications de l"infrastructure
 
 
 [role="lead"]
-L'analyse des modifications de l'infrastructure vous offre un aperçu complet des modifications récentes apportées à l'infrastructure (stockage, commutateur, etc.) de votre environnement. Avec l'analyse des modifications, vous pouvez suivre les modifications de configuration et explorer les problèmes attendus et inattendus.
+L'analyse des modifications de l'infrastructure vous offre un aperçu complet des modifications récentes apportées à l'infrastructure (stockage, commutateur, etc.) de votre locataire. Avec l'analyse des modifications, vous pouvez suivre les modifications de configuration et explorer les problèmes attendus et inattendus.
 
 
 

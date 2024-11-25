@@ -19,7 +19,7 @@ keywords: query, queries
 
 
 [role="lead"]
-Les requêtes vous permettent de rechercher les ressources de votre environnement à un niveau granulaire, ce qui vous permet de filtrer les données dont vous avez besoin et de trier les résultats selon vos besoins.
+Les requêtes vous permettent de rechercher les ressources de votre locataire à un niveau granulaire, ce qui vous permet de filtrer les données que vous souhaitez et de trier les résultats selon vos préférences.
 
 Par exemple, vous pouvez créer une requête pour _volumes_, ajouter un filtre pour trouver des _stockages_ particuliers associés aux volumes sélectionnés, ajouter un autre filtre pour trouver une _annotation_ particulière, par exemple "Tier 1" dans les stockages sélectionnés, Et enfin, ajoutez un autre filtre pour trouver tous les stockages avec _IOPS - Read (IO/s)_ supérieur à 25. Lorsque les résultats sont affichés, vous pouvez trier les colonnes d'informations associées à la requête dans l'ordre croissant ou décroissant.
 

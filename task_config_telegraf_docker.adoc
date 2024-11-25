@@ -27,7 +27,7 @@ Data Infrastructure Insights utilise ce collecteur de données pour collecter de
 
 . Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez Docker.
 +
-Si vous n'avez pas configuré un agent pour la collecte, vous êtes invité à link:task_config_telegraf_agent.html["installez un agent"]le faire dans votre environnement.
+Si vous n'avez pas configuré un agent pour la collecte, vous êtes invité à link:task_config_telegraf_agent.html["installez un agent"]le faire sur votre locataire.
 
 +
 Si un agent est déjà configuré, sélectionnez le système d'exploitation ou la plate-forme approprié et cliquez sur *Continuer*.

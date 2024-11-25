@@ -26,7 +26,7 @@ Conditions requises pour l'accès à l'API :
 
 == Documentation API (swagger)
 
-Pour obtenir les dernières informations sur l'API, connectez-vous à la sécurité de la charge de travail et accédez à *Admin > API Access*. Cliquez sur le lien *API Documentation*. La documentation API est basée sur swagger, qui fournit une brève description et des informations d'utilisation de l'API et vous permet de l'essayer dans votre environnement.
+Pour obtenir les dernières informations sur l'API, connectez-vous à la sécurité de la charge de travail et accédez à *Admin > API Access*. Cliquez sur le lien *API Documentation*. La documentation de l'API est basée sur swagger, qui fournit une brève description et des informations d'utilisation pour l'API et vous permet de l'essayer sur votre locataire.
 
 
 NOTE: Si vous appelez l'API Forensics Activity, utilisez l'API cloudsecure_Forensics.Activities.*v2*. Si vous effectuez plusieurs appels vers cette API, assurez-vous que les appels se produisent séquentiellement et non en parallèle. Plusieurs appels parallèles peuvent entraîner la temporisation de l'API.
@@ -50,7 +50,7 @@ NOTE: Votre jeton ne sera disponible que pour la copie dans le presse-papiers et
 
 Vous pouvez désactiver, activer et révoquer des jetons. Les tokens désactivés peuvent être activés.
 
-Les jetons accordent un accès général aux API du point de vue du client, et gèrent l'accès aux API dans le cadre de leur propre environnement.
+Les tokens accordent un accès à usage général aux API du point de vue du client, ce qui permet de gérer l'accès aux API dans le cadre de leur propre locataire.
 
 L'application reçoit un token d'accès après l'authentification et l'autorisation de l'accès, puis transmet le token d'accès en tant qu'identifiant lorsqu'il appelle l'API cible. Le jeton transmis informe l'API que le porteur du jeton a été autorisé à accéder à l'API et à effectuer des actions spécifiques en fonction de l'étendue accordée lors de l'autorisation.
 

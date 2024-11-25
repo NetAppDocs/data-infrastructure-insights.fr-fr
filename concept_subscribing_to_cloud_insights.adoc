@@ -135,7 +135,7 @@ Votre abonnement sera mesuré par l'une de ces méthodes, selon que vous avez un
 
 ==== Mesure de la capacité
 
-Informations sur l'infrastructure de données : l'observabilité mesure l'utilisation en fonction du Tier de stockage dans votre environnement. Vous pouvez avoir des stockages qui entrent dans une ou plusieurs de ces catégories :
+Informations sur l'infrastructure de données : l'observabilité mesure l'utilisation en fonction du Tier de stockage de votre locataire. Vous pouvez avoir des stockages qui entrent dans une ou plusieurs de ces catégories :
 
 * Primaire brut
 * Objet brut

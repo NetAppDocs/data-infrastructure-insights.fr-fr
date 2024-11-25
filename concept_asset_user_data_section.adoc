@@ -25,7 +25,7 @@ La section données utilisateur d'une page ressource s'affiche et vous permet de
 
 == Utilisation de la section données utilisateur pour attribuer ou modifier des applications
 
-Vous pouvez affecter des applications exécutées dans votre environnement à certaines ressources (hôte, machines virtuelles, volumes, volumes internes, qtrees, et les hyperviseurs). La section données utilisateur vous permet d'ajouter, de modifier ou de supprimer les applications affectées à un bien. Pour tous ces types d'actif, à l'exception des volumes, vous pouvez attribuer plusieurs applications.
+Vous pouvez attribuer des applications exécutées sur votre locataire à certains actifs (hôte, machines virtuelles, volumes, volumes internes, qtrees et hyperviseurs). La section données utilisateur vous permet d'ajouter, de modifier ou de supprimer les applications affectées à un bien. Pour tous ces types d'actif, à l'exception des volumes, vous pouvez attribuer plusieurs applications.
 
 .Étapes
 . Recherchez une page de ressources en procédant de l'une des façons suivantes :

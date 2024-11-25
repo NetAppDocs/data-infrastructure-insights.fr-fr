@@ -21,7 +21,7 @@ summary: 'La page d"accueil Kubernetes s"est expliquée'
 [role="lead"]
 L'explorateur Kubernetes de Data Infrastructure Insights est un outil puissant pour afficher l'état et l'utilisation généraux de vos clusters Kubernetes. Il vous permet d'explorer facilement les domaines d'enquête.
 
-Cliquez sur *tableaux de bord > Kubernetes Explorer* pour ouvrir la page liste des clusters Kubernetes. Cette page de présentation contient un tableau des clusters Kubernetes de votre environnement.
+Cliquez sur *tableaux de bord > Kubernetes Explorer* pour ouvrir la page liste des clusters Kubernetes. Cette page de présentation contient le tableau des clusters Kubernetes de votre locataire.
 
 image:Kubernetes_List_Page_new.png["Page de liste Kubernetes"]
 
@@ -29,7 +29,7 @@ image:Kubernetes_List_Page_new.png["Page de liste Kubernetes"]
 
 === Liste des clusters
 
-La liste des clusters affiche les informations suivantes pour chaque cluster de votre environnement :
+La liste des clusters affiche les informations suivantes pour chaque cluster de votre locataire :
 
 * Nom * du cluster. Si vous cliquez sur le nom d'un cluster, le système s'ouvriralink:kubernetes_cluster_detail.html["*page de détails*"].
 * *Pourcentages de saturation*. La saturation globale est la saturation totale la plus élevée du processeur, de la mémoire ou du stockage.

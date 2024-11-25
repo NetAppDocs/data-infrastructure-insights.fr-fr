@@ -19,7 +19,7 @@ keywords: dashboard, gallery, import
 
 
 [role="lead"]
-Data Infrastructure Insights fournit un certain nombre de tableaux de bord recommandés pour fournir des informations stratégiques sur vos données. Chaque tableau de bord contient des widgets conçus pour répondre à une question spécifique ou résoudre un problème particulier lié aux données actuellement collectées dans votre environnement.
+Data Infrastructure Insights fournit un certain nombre de tableaux de bord recommandés pour fournir des informations stratégiques sur vos données. Chaque tableau de bord contient des widgets conçus pour vous aider à répondre à une question particulière ou à résoudre un problème particulier concernant les données actuellement collectées sur votre locataire.
 
 Pour importer un tableau de bord à partir de la galerie, procédez comme suit :
 

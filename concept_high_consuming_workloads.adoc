@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_high_consuming_workloads.html 
 keywords: insight, greedy, degraded, bully, victim, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: 'Ces informations vous permettent d"examiner l"impact des ressources sur les autres ressources de votre environnement.' 
+summary: 'Ces informations vous permettent d"examiner l"impact des ressources sur les autres ressources de votre locataire.' 
 ---
 = Informations exploitables : workloads consommateurs
 :toc: macro
@@ -19,7 +19,7 @@ summary: 'Ces informations vous permettent d"examiner l"impact des ressources su
 
 
 [role="lead"]
-Les charges de travail à fort impact peuvent réduire les performances d'autres workloads d'une ressource partagée. Les outils Data Infrastructure Insights permettent d'étudier la saturation des ressources et l'impact sur votre environnement.
+Les charges de travail à fort impact peuvent réduire les performances d'autres workloads d'une ressource partagée. Les informations sur l'infrastructure de données fournissent des outils qui vous aident à étudier la saturation des ressources et l'impact sur votre locataire.
 
 
 
@@ -59,7 +59,7 @@ image:Insights_Demanding_Workload_Chart.png["Tableau des charges de travail exig
 
 === Que dois-je faire pour résoudre la saturation ?
 
-Il existe plusieurs mesures que vous pouvez prendre pour réduire ou éliminer les risques de saturation dans votre environnement. Voici quelques choses que vous pouvez essayer.
+Vous pouvez prendre plusieurs mesures pour réduire ou éliminer le risque de saturation de votre locataire. Voici quelques choses que vous pouvez essayer.
 
 * Grands consommateurs d'IOPS
 +

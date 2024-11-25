@@ -19,11 +19,11 @@ keywords: Assets, landing page, filtering, context, related
 
 
 [role="lead"]
-Lors de la configuration d'un widget sur la page d'accueil d'une ressource, vous pouvez définir des filtres _dans-contexte_ pour afficher uniquement les objets directement liés à l'actif actuel. Par défaut, lorsque vous ajoutez un widget, les _tous_ objets du type sélectionné dans votre environnement sont affichés. Les filtres dans le contexte vous permettent d'afficher uniquement les données pertinentes pour votre ressource actuelle.
+Lors de la configuration d'un widget sur la page d'accueil d'une ressource, vous pouvez définir des filtres _dans-contexte_ pour afficher uniquement les objets directement liés à l'actif actuel. Par défaut, lorsque vous ajoutez un widget, les objets _all_ du type sélectionné sur votre locataire s'affichent. Les filtres dans le contexte vous permettent d'afficher uniquement les données pertinentes pour votre ressource actuelle.
 
 Sur la plupart des pages d'accueil des ressources, les widgets vous permettent de filtrer les objets associés à la ressource actuelle. Dans les listes déroulantes de filtres, les types d'objets qui affichent une icône de lien peuvent être filtrés dans le contexte de l'actif actuel.
 
-Par exemple, sur une page Storage Asset, vous pouvez ajouter un widget Bar Chart pour afficher les IOPS les plus élevées sur les volumes internes uniquement sur ce stockage. Par défaut, lorsque vous ajoutez un widget, les _All_ volumes internes de votre environnement sont affichés.
+Par exemple, sur une page Storage Asset, vous pouvez ajouter un widget Bar Chart pour afficher les IOPS les plus élevées sur les volumes internes uniquement sur ce stockage. Par défaut, lorsque vous ajoutez un widget, _all_ volumes internes sur votre tenant s'affichent.
 
 Pour afficher uniquement les volumes internes de l'actif de stockage actuel, procédez comme suit :
 
@@ -46,6 +46,6 @@ Le graphique à barres indique uniquement les volumes internes résidant sur l'a
 
 Le widget s'affiche sur les pages d'actifs de tous les objets de stockage. Lorsque le lien In-context est activé dans le widget, le graphique à barres affiche les données des volumes internes liés uniquement à l'actif de stockage actuellement affiché.
 
-Pour dissocier les données de l'objet, modifiez le widget et cliquez sur l'icône de lien en regard du type d'objet. Le lien devient désactivé et le graphique affiche les données de _tous_ objets dans votre environnement.
+Pour dissocier les données de l'objet, modifiez le widget et cliquez sur l'icône de lien en regard du type d'objet. Le lien devient désactivé et le graphique affiche les données de _tous_ objets sur votre locataire.
 
 Vous pouvez également utiliser link:concept_dashboard_features.html#variables["*variables spéciales dans les widgets*"] pour afficher les informations relatives aux ressources sur les pages d'accueil.

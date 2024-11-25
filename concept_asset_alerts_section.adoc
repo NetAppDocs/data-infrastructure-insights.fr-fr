@@ -19,7 +19,7 @@ keywords: asset, landing page, violations, Alerts,
 
 
 [role="lead"]
-Vous pouvez utiliser la section alertes associées d'une page de ressources pour afficher toutes les alertes qui se produisent dans votre environnement suite à un moniteur affecté à une ressource. Les moniteurs génèrent des alertes en fonction des conditions que vous définissez et vous permettent d'identifier l'implication et d'analyser l'impact et la cause première du problème de manière à permettre une correction rapide et efficace.
+Vous pouvez utiliser la section alertes associées d'une page de ressources pour afficher toutes les alertes qui se produisent sur votre locataire à la suite d'un moniteur attribué à un actif. Les moniteurs génèrent des alertes en fonction des conditions que vous définissez et vous permettent d'identifier l'implication et d'analyser l'impact et la cause première du problème de manière à permettre une correction rapide et efficace.
 
 L'exemple suivant montre une section typique des alertes associées qui s'affiche sur une page de ressource :
 

@@ -182,7 +182,7 @@ Si vous voyez un message “erreur du serveur (NotFound)”, votre opérateur do
 
 === Configuration du support de proxy
 
-Vous pouvez utiliser un proxy dans votre environnement à deux endroits pour installer l'opérateur de surveillance Kubernetes. Il peut s'agir de systèmes proxy identiques ou distincts :
+Vous pouvez utiliser un proxy sur votre locataire à deux endroits pour installer l'opérateur Kubernetes Monitoring. Il peut s'agir de systèmes proxy identiques ou distincts :
 
 * Proxy nécessaire lors de l'exécution de l'extrait de code d'installation (à l'aide de « curl ») pour connecter le système sur lequel l'extrait de code est exécuté à votre environnement Data Infrastructure Insights
 * Proxy requis par le cluster Kubernetes cible pour communiquer avec votre environnement Data Infrastructure Insights

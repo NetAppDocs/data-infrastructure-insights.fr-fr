@@ -19,7 +19,7 @@ keywords: dashboard, widget, custom, example, virtual machine, vm, performance
 
 
 [role="lead"]
-Les opérations IT sont confrontées à de nombreux défis. Les administrateurs doivent en faire plus avec moins, et une visibilité complète sur vos data centers dynamiques est primordiale. Dans cet exemple, nous vous montrerons comment créer un tableau de bord avec des widgets qui vous offrent des informations opérationnelles sur la performance des machines virtuelles dans votre environnement. En suivant cet exemple et en créant des widgets pour cibler vos propres besoins spécifiques, vous pouvez exemple visualiser les performances de stockage back-end par rapport aux performances des machines virtuelles front-end, ou afficher la latence des machines virtuelles par rapport à la demande d'E/S.
+Les opérations IT sont confrontées à de nombreux défis. Les administrateurs doivent en faire plus avec moins, et une visibilité complète sur vos data centers dynamiques est primordiale. Dans cet exemple, nous allons vous montrer comment créer un tableau de bord avec des widgets qui vous fournissent des informations opérationnelles sur les performances des machines virtuelles de votre locataire. En suivant cet exemple et en créant des widgets pour cibler vos propres besoins spécifiques, vous pouvez exemple visualiser les performances de stockage back-end par rapport aux performances des machines virtuelles front-end, ou afficher la latence des machines virtuelles par rapport à la demande d'E/S.
 
 .Description de la tâche
 Dans cette section, nous allons créer un tableau de bord des performances des ordinateurs virtuels comprenant les éléments suivants :
@@ -43,7 +43,7 @@ La page *Nouveau tableau de bord* s'ouvre.
 . Commençons à ajouter nos widgets. Si nécessaire, cliquez sur l'icône *Edit* pour activer le mode Edit.
 . Cliquez sur l'icône *Add widget* et sélectionnez *Table* pour ajouter un nouveau widget de tableau de bord.
 +
-La boîte de dialogue Modifier le widget s'ouvre. Les données affichées par défaut sont pour tous les stockages de votre environnement.
+La boîte de dialogue Modifier le widget s'ouvre. Les données affichées par défaut s'affichent pour tous les stockages de votre locataire.
 
 
 
@@ -52,7 +52,7 @@ image:VMDashboard-TableWidget1.png["Boîte de dialogue Modifier le widget de tab
 . Nous pouvons personnaliser ce widget. Dans le champ Nom en haut, supprimez le widget 1 et entrez le tableau performances de l'ordinateur virtuel.
 . Cliquez sur la liste déroulante Type de ressource et remplacez _Storage_ par _Virtual machine_.
 +
-Les données du tableau changent pour afficher toutes les machines virtuelles de votre environnement.
+Les données du tableau changent pour afficher toutes les machines virtuelles de votre locataire.
 
 . Ajoutons quelques colonnes à la table. Cliquez sur l'icône engrenage à droite et sélectionnez _Hypervisor name_, _IOPS - Total_ et _latence - Total_. Vous pouvez également essayer de saisir le nom dans la recherche pour afficher rapidement le champ souhaité.
 +

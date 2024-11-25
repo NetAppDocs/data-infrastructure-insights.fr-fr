@@ -21,7 +21,7 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 [role="lead"]
 Les fonctionnalités utiles de Data Infrastructure Insights vous permettent de trouver rapidement et facilement des données, de résoudre des problèmes et d'obtenir des informations sur votre environnement d'entreprise. Trouvez facilement des données grâce à des requêtes puissantes, visualisez des données dans des tableaux de bord et envoyez des alertes par e-mail pour les seuils de données que vous définissez.
 
-Data Infrastructure Insights inclut un certain nombre de didacticiels vidéo qui vous aideront à comprendre ces fonctionnalités et à mieux implémenter vos stratégies d'analyse de l'entreprise. Tous les utilisateurs ayant accès à votre environnement Data Infrastructure Insights peuvent tirer parti de ces didacticiels.
+Data Infrastructure Insights inclut un certain nombre de didacticiels vidéo qui vous aideront à comprendre ces fonctionnalités et à mieux implémenter vos stratégies d'analyse de l'entreprise. Chaque utilisateur ayant accès à votre locataire Data Infrastructure Insights peut tirer parti de ces didacticiels.
 
 
 

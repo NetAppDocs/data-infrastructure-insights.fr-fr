@@ -38,7 +38,7 @@ Par exemple, si vous n'avez pas terminé le processus d'identification du périp
 Avant de concevoir vos rapports, effectuez les tâches suivantes :
 
 * Tout configurer link:task_configure_data_collectors.html["collecteurs de données"]correctement.
-* Entrez des annotations (telles que les niveaux, les data centers et les entités) sur les terminaux et les ressources de votre environnement. Il est avantageux d'avoir des annotations stables avant de générer des rapports, car le reporting Data Infrastructure Insights collecte des informations d'historique.
+* Entrez des annotations (telles que des niveaux, des data centers et des entités commerciales) sur les périphériques et les ressources de votre locataire. Il est avantageux d'avoir des annotations stables avant de générer des rapports, car le reporting Data Infrastructure Insights collecte des informations d'historique.
 
 
 
@@ -194,7 +194,7 @@ Capacités dans le modèle de données VM Capacity sont extraites de disques vir
 
 ==== Modèle de données Volume Capacity
 
-Vous permet d'analyser tous les aspects des volumes de votre environnement et d'organiser les données par fournisseur, modèle, niveau, niveau de service et data Center.
+Vous permet d'analyser tous les aspects des volumes de votre locataire et d'organiser les données par fournisseur, modèle, niveau, niveau de service et data Center.
 
 Vous pouvez afficher la capacité des volumes orphelins, des volumes inutilisés et des volumes de protection (utilisés pour la réplication). Vous pouvez également voir différentes technologies de volumes (iSCSI ou FC) et comparer des volumes virtuels à des volumes non virtuels pour des problèmes de virtualisation de baies.
 

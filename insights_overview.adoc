@@ -31,7 +31,7 @@ Plusieurs informations sont disponibles. Naviguez jusqu'à *tableaux de bord > I
 
 === Ressources partagées sous contrainte
 
-Les charges de travail à fort impact peuvent réduire les performances d'autres workloads d'une ressource partagée. La ressource partagée est alors contrainte. Les outils Data Infrastructure Insights permettent d'étudier la saturation des ressources et l'impact sur votre environnement. link:insights_shared_resources_under_stress.html["En savoir plus"]
+Les charges de travail à fort impact peuvent réduire les performances d'autres workloads d'une ressource partagée. La ressource partagée est alors contrainte. Les informations sur l'infrastructure de données fournissent des outils qui vous aident à étudier la saturation des ressources et l'impact sur votre locataire. link:insights_shared_resources_under_stress.html["En savoir plus"]
 
 
 

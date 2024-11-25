@@ -19,7 +19,7 @@ summary: 'Surveillez les indicateurs d"anomalie'
 
 
 [role="lead"]
-La détection des anomalies fournit des informations sur les changements inattendus dans les modèles de données de votre environnement. Une anomalie se produit lorsque le comportement d'un objet change dans votre environnement, par exemple, si un objet subit un certain niveau de latence le mercredi, mais que la latence dépasse ce niveau le mercredi suivant, ce pic serait considéré comme une anomalie. Les informations sur l'infrastructure de données permettent de créer des moniteurs qui envoient des alertes en cas d'anomalies de ce type.
+La détection des anomalies fournit des informations sur les changements inattendus dans les modèles de données de votre locataire. Une anomalie se produit lorsque le comportement d'un objet change, par exemple, si un objet subit un certain niveau de latence le mercredi, mais que la latence dépasse ce niveau le mercredi suivant, ce pic est considéré comme une anomalie. Les informations sur l'infrastructure de données permettent de créer des moniteurs qui envoient des alertes en cas d'anomalies de ce type.
 
 La détection des anomalies convient aux metrics objet qui présentent un modèle prévisible et récurrent. Lorsque ces metrics d'objet dépassent ou dépassent les niveaux attendus, Data Infrastructure Insights peut générer une alerte pour une investigation rapide.
 
@@ -53,7 +53,7 @@ La surveillance de la détection des anomalies peut fournir des alertes utiles d
 
 * Lorsque la définition de _normal_ n'est pas claire. Par exemple, les taux d'erreur SAN peuvent varier en fonction du port. Les alertes d'une erreur sont bruyantes et inutiles, mais une augmentation soudaine ou importante peut indiquer un problème à grande échelle.
 * Là où il y a des changements dans le temps. Charges de travail soumises à des variations saisonnières (c'est-à-dire occupées ou peu actives à certains moments). Cela peut inclure des périodes de silence inattendues qui peuvent indiquer un blocage par lots.
-* Vous ne pouvez pas travailler avec de grandes quantités de données pour définir et ajuster manuellement des seuils. Par exemple, un environnement comprenant un grand nombre d'hôtes et/ou de volumes avec des charges de travail variables. Si chacun d'entre eux présente différents SLA, il est donc important de comprendre ceux qui dépassent la norme.
+* Vous ne pouvez pas travailler avec de grandes quantités de données pour définir et ajuster manuellement des seuils. Par exemple, un locataire qui compte un grand nombre d'hôtes et/ou de volumes avec des charges de travail variables. Si chacun d'entre eux présente différents SLA, il est donc important de comprendre ceux qui dépassent la norme.
 
 
 

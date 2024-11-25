@@ -407,7 +407,7 @@ image::SecondaryAxisExplained.png[Exemple d'axe secondaire]
 
 == Expressions dans les widgets
 
-Dans un tableau de bord, n'importe quel widget de séries chronologiques (ligne, spline, zone, zone empilée) graphique à barres, graphique à colonnes, graphique à secteurs ou widget de tableau vous permet de créer des expressions à partir des mesures que vous choisissez et d'afficher le résultat de ces expressions dans un seul graphique (ou colonne dans le cas du <<expressions-in-a-table-widget,widget de tableau>>). Les exemples suivants utilisent des expressions pour résoudre des problèmes spécifiques. Dans le premier exemple, nous souhaitons afficher les IOPS en lecture sous forme de pourcentage du nombre total d'IOPS pour l'ensemble des ressources de stockage de notre environnement. Le deuxième exemple donne une visibilité sur les IOPS du système ou de surcharge de votre environnement--ces IOPS qui ne sont pas directement liées à la lecture ou à l'écriture des données.
+Dans un tableau de bord, n'importe quel widget de séries chronologiques (ligne, spline, zone, zone empilée) graphique à barres, graphique à colonnes, graphique à secteurs ou widget de tableau vous permet de créer des expressions à partir des mesures que vous choisissez et d'afficher le résultat de ces expressions dans un seul graphique (ou colonne dans le cas du <<expressions-in-a-table-widget,widget de tableau>>). Les exemples suivants utilisent des expressions pour résoudre des problèmes spécifiques. Dans le premier exemple, nous souhaitons afficher les IOPS en lecture sous forme de pourcentage des IOPS totales pour toutes les ressources de stockage de votre locataire. Le deuxième exemple offre une visibilité sur les IOPS système ou indirectes qui se produisent sur votre locataire, à savoir les IOPS qui ne sont pas directement lues ou écrites les données.
 
 Vous pouvez utiliser des variables dans des expressions (par exemple, _$Var1 * 100_)
 
@@ -537,7 +537,7 @@ La sélection d'une variable de type d'attribut permet de filtrer les données d
 
 image:Variables_Node_Example_Before_Variable_Applied.png["Nœuds d'agent avant le filtre de variable"]
 
-Mais si vous souhaitez temporairement voir uniquement les nœuds sur des sous-réseaux individuels de votre environnement, vous pouvez définir ou modifier la variable en IP ou IP de nœud d'agent spécifique. Ici, nous n'visualise que les nœuds sur le sous-réseau « 123 » :
+Mais si vous voulez temporairement voir uniquement les nœuds sur des sous-réseaux individuels de votre locataire, vous pouvez définir ou modifier la variable en une ou plusieurs adresses IP de nœud d'agent spécifiques. Ici, nous n'visualise que les nœuds sur le sous-réseau « 123 » :
 
 image:Variables_Node_Example_After_Variable_Applied.png["Nœuds agent après le filtre de variables"]
 
@@ -808,7 +808,7 @@ image:AutoRefreshPaused.png["Actualisation automatique mise en pause"]
 
 == Groupes de tableaux de bord
 
-Le regroupement vous permet d'afficher et de gérer les tableaux de bord associés. Par exemple, vous pouvez disposer d'un groupe de tableau de bord dédié au stockage dans votre environnement. Les groupes de tableaux de bord sont gérés sur la page *tableaux de bord > Afficher tous les tableaux de bord*.
+Le regroupement vous permet d'afficher et de gérer les tableaux de bord associés. Par exemple, vous pouvez disposer d'un groupe de tableaux de bord dédié au stockage de votre locataire. Les groupes de tableaux de bord sont gérés sur la page *tableaux de bord > Afficher tous les tableaux de bord*.
 
 image:DashboardGroupNoPin.png["Regroupement du tableau de bord"]
 
@@ -822,7 +822,7 @@ Le nombre de tableaux de bord contenus dans chaque groupe s'affiche en regard du
 
 Pour créer un nouveau groupe, cliquez sur le bouton *"+" Créer un nouveau groupe de tableau de bord*. Entrez un nom pour le groupe et cliquez sur *Créer un groupe*. Un groupe vide est créé avec ce nom.
 
-Pour ajouter des tableaux de bord au groupe, cliquez sur le groupe _All Dashboards_ pour afficher tous les tableaux de bord de votre environnement, cliquez sur _My Dashboards_ si vous ne souhaitez voir que les tableaux de bord que vous possédez et effectuez l'une des opérations suivantes :
+Pour ajouter des tableaux de bord au groupe, cliquez sur le groupe _tous les tableaux de bord_ pour afficher tous les tableaux de bord de votre locataire, cliquez sur _Mes tableaux de bord_ si vous souhaitez uniquement afficher les tableaux de bord que vous possédez, puis effectuez l'une des opérations suivantes :
 
 * Pour ajouter un tableau de bord unique, cliquez sur le menu à droite du tableau de bord et sélectionnez _Ajouter au groupe_.
 * Pour ajouter plusieurs tableaux de bord à un groupe, sélectionnez-les en cochant la case en regard de chaque tableau de bord, puis cliquez sur le bouton *actions groupées* et sélectionnez _Ajouter au groupe_.

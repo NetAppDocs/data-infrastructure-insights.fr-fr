@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: insights_shared_resources_under_stress.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: 'Ces informations vous permettent d"examiner l"impact des ressources sur les autres ressources de votre environnement.' 
+summary: 'Ces informations vous permettent d"examiner l"impact des ressources sur les autres ressources de votre locataire.' 
 ---
 = Perspectives : partage de ressources sous stress
 :toc: macro
@@ -19,7 +19,7 @@ summary: 'Ces informations vous permettent d"examiner l"impact des ressources su
 
 
 [role="lead"]
-Les charges de travail à fort impact peuvent réduire les performances d'autres workloads d'une ressource partagée. La ressource partagée est alors contrainte. Les outils Data Infrastructure Insights permettent d'étudier la saturation des ressources et l'impact sur votre environnement.
+Les charges de travail à fort impact peuvent réduire les performances d'autres workloads d'une ressource partagée. La ressource partagée est alors contrainte. Les informations sur l'infrastructure de données fournissent des outils qui vous aident à étudier la saturation des ressources et l'impact sur votre locataire.
 
 
 
@@ -63,7 +63,7 @@ Le tableau ci-dessous répertorie les charges de travail et/ou les ressources qu
 
 == Que dois-je faire pour résoudre la saturation ?
 
-Il existe plusieurs mesures que vous pouvez prendre pour réduire ou éliminer les risques de saturation dans votre environnement. Elles sont présentées en développant le lien *+Afficher les recommandations* sur la page. Voici quelques choses que vous pouvez essayer.
+Vous pouvez prendre plusieurs mesures pour réduire ou éliminer le risque de saturation de votre locataire. Elles sont présentées en développant le lien *+Afficher les recommandations* sur la page. Voici quelques choses que vous pouvez essayer.
 
 * Grands consommateurs d'IOPS
 +

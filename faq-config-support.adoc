@@ -64,7 +64,7 @@ Il existe différents degrés de standardisation, de similarité et de nomenclat
 
 == Data Infrastructure Insights prend-il en charge les commutateurs Fibre Channel ?
 
-Oui. En plus de collecter les données de vos ressources de stockage, elles peuvent également acquérir des données d'inventaire et de performances des commutateurs Cisco, Brocade et QLogic dans votre environnement.
+Oui. En plus de collecter les données de vos ressources de stockage, elles peuvent également acquérir des données d'inventaire et de performances des commutateurs Cisco, Brocade et QLogic de votre locataire.
 
 
 

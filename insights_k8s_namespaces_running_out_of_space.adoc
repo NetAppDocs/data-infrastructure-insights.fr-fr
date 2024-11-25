@@ -19,7 +19,7 @@ summary: 'Les informations exploitables permettent de prédire à quel moment le
 
 
 [role="lead"]
-Le manque d'espace de votre environnement n'est jamais une bonne situation. Les informations sur l'infrastructure de données vous aident à prévoir le temps nécessaire avant que les volumes persistants de Kubernetes ne soient pleins.
+Manquer d'espace sur votre locataire n'est jamais une bonne situation. Les informations sur l'infrastructure de données vous aident à prévoir le temps nécessaire avant que les volumes persistants de Kubernetes ne soient pleins.
 
 La _Kubernetes Namespaces étant hors d'Space_ Insight, vous disposez d'une vue détaillée des workloads sur vos espaces de noms Kubernetes qui risquent d'être à court d'espace, avec une estimation du nombre de jours restants avant que chaque volume persistant ne soit plein.
 

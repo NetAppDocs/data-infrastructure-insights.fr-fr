@@ -34,12 +34,12 @@ Les étapes de ce guide peuvent également être appliquées aux systèmes de st
 
 
 
-== Création d'une requête permettant d'identifier les agrégats racine NetApp dans votre environnement
+== Création d'une requête pour identifier les agrégats racine NetApp
 
-Les requêtes fournissent une recherche granulaire, en fonction des critères sélectionnés par l'utilisateur. Une requête vous permet de rechercher des volumes internes dans votre environnement contenant l'agrégat racine NetApp.
+Les requêtes fournissent une recherche granulaire, en fonction des critères sélectionnés par l'utilisateur. Une requête vous permet de rechercher des volumes internes sur votre locataire qui contiennent l'agrégat racine NetApp.
 
 .Étapes
-. Créer une requête pour identifier les agrégats racine NetApp dans votre environnement : cliquez sur *Queries > New Query > Select Resource Type* (?)
+. Créez une requête pour identifier les agrégats racine NetApp sur votre locataire : cliquez sur *requêtes > Nouvelle requête > Sélectionner un type de ressource* (?)
 . Cliquez sur *pool de stockage*
 . Entrer le nom de l'agrégat root
 +
@@ -48,7 +48,7 @@ Cet exemple utilise "aggr0" pour le nom. Lors de la création d'un agrégat, seu
 +
 .. Il doit commencer par une lettre ou un trait de soulignement (_).
 .. Il ne peut contenir que des lettres, des chiffres et des traits de soulignement.
-.. Elle peut comporter 250 caractères maximum. Dans la plupart des cas, l'agrégat est nommé aggr0, aggr_0 ou quelque chose de similaire. Cela peut impliquer un processus itératif pour identifier tous les agrégats racines NetApp de votre environnement.
+.. Elle peut comporter 250 caractères maximum. Dans la plupart des cas, l'agrégat est nommé aggr0, aggr_0 ou quelque chose de similaire. Elle peut nécessiter un processus itératif pour identifier tous les agrégats racine NetApp de votre locataire.
 
 
 . Cliquez sur *Enregistrer* et entrez un nom pour la nouvelle requête.
@@ -61,7 +61,7 @@ Comme mentionné précédemment, il peut s'agir d'un processus itératif et néc
 
 == Créez une annotation pour les volumes racine renvoyés par vos requêtes
 
-Les annotations sont des notes spécialisées que vous attribuez à vos ressources, ce qui vous permet de filtrer les ressources par leurs annotations. Cette annotation vous permettra d'identifier les agrégats NetApp racine dans votre environnement et de vérifier qu'ils ne sont pas inclus dans un rapport spécifique.
+Les annotations sont des notes spécialisées que vous attribuez à vos ressources, ce qui vous permet de filtrer les ressources par leurs annotations. Les annotations que vous créez seront utilisées pour identifier les agrégats racine NetApp de votre locataire et vous assurer qu'ils ne sont pas inclus dans un rapport spécifique.
 
 .Avant de commencer
 Vous devez avoir identifié tous les agrégats racine à exclure du rapport « densité d'E/S élevée ».
@@ -85,7 +85,7 @@ Vous devez avoir identifié tous les agrégats racine à exclure du rapport « d
 Au lieu d'appliquer manuellement des annotations à des ressources individuelles, vous pouvez appliquer automatiquement des annotations à plusieurs ressources à l'aide de règles d'annotation. Les règles d'annotation sont basées sur les requêtes que vous créez et lorsqu'elles sont exécutées sur le système, elles ajoutent de nouvelles ressources à des ensembles de ressources existants. Lorsque ces ensembles d'actifs sont exclus d'un rapport, les nouveaux actifs sont également automatiquement exclus.
 
 .Avant de commencer
-Vous devez avoir créé et enregistré une requête qui identifie les agrégats racine NetApp que vous avez identifiés dans votre environnement.
+Vous devez avoir créé et enregistré une requête qui identifie les agrégats racine NetApp que vous avez identifiés sur votre locataire.
 
 .Étapes
 . Dans la barre d'outils informations sur l'infrastructure de données, cliquez sur *gérer > règles d'annotation*.

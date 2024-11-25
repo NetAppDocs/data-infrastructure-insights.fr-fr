@@ -19,11 +19,11 @@ keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, 
 
 
 [role="lead"]
-Les requêtes vous permettent de surveiller et de dépanner votre réseau en effectuant une recherche granulaire des ressources et des metrics de votre environnement en fonction de critères sélectionnés par l'utilisateur (par exemple, des annotations).
+Les requêtes vous permettent de surveiller et de dépanner votre réseau en recherchant les ressources et les mesures de votre locataire à un niveau granulaire basé sur des critères sélectionnés par l'utilisateur (par exemple, les annotations).
 
 Notez que les règles d'annotation, qui attribuent automatiquement des annotations aux ressources, _exigent_ une requête.
 
-Vous pouvez interroger les ressources d'inventaire physiques ou virtuelles (ainsi que les metrics associées) de votre environnement, ou bien les mesures fournies avec l'intégration, telles que Kubernetes ou les données avancées ONTAP.
+Vous pouvez interroger les ressources d'inventaire physiques ou virtuelles (et leurs metrics associés) sur votre locataire, ou les metrics fournis avec l'intégration, comme Kubernetes ou ONTAP Advanced Data.
 
 
 

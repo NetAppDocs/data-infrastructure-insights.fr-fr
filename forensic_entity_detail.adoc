@@ -17,7 +17,7 @@ summary: Entités judiciaires
 
 
 [role="lead"]
-La page entités judiciaires fournit des informations détaillées sur l'activité de l'entité dans votre environnement.
+La page entités Forensics fournit des informations détaillées sur l'activité des entités sur votre locataire.
 
 
 
@@ -25,7 +25,7 @@ La page entités judiciaires fournit des informations détaillées sur l'activit
 
 Cliquez sur *Forensics > activités médico-légales* et cliquez sur l'onglet _entités_ pour accéder à la page entités.
 
-Cette page présente l'activité de l'entité dans votre environnement, en soulignant les informations suivantes : * Un graphique montrant _unique entités_ accédées par minute * Un graphique de _types d'entités accédées_ * Une ventilation des _chemins communs_ * Une liste des _50 principales entités_ sur le nombre total d'entités
+Cette page fournit une vue d'ensemble de l'activité de l'entité sur votre locataire, en mettant en évidence les informations suivantes : * Un graphique montrant _entités uniques_ consultées par minute * Un graphique de _types d'entité accédés_ * Une ventilation des _chemins communs_ * Une liste des _50 entités principales_ sur le nombre total d'entités
 
 image:CS-Entities-Page.png["Page entités"]
 

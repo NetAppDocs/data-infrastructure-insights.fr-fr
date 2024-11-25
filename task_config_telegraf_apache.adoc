@@ -19,7 +19,7 @@ summary: Configuration du collecteur de données Apache
 
 
 [role="lead"]
-Ce collecteur de données permet de collecter des données à partir des serveurs Apache de votre environnement.
+Ce collecteur de données permet la collecte de données à partir des serveurs Apache de votre locataire.
 
 .Conditions préalables
 * Votre serveur HTTP Apache doit être configuré et en cours d'exécution

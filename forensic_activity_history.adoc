@@ -23,7 +23,7 @@ La page toutes les activités vous aide à comprendre les actions effectuées su
 
 == Examen de toutes les données d'activité
 
-Cliquez sur *Forensics > activité Forensics* et cliquez sur l'onglet *toutes les activités* pour accéder à la page toutes les activités. Cette page présente les activités de votre environnement et présente les informations suivantes :
+Cliquez sur *Forensics > activité Forensics* et cliquez sur l'onglet *toutes les activités* pour accéder à la page toutes les activités. Cette page présente les activités de votre locataire, en mettant en évidence les informations suivantes :
 
 * Graphique indiquant _Historique des activités_ (accessible par minute/par 5 minutes/10 minutes en fonction de la plage horaire globale sélectionnée)
 +

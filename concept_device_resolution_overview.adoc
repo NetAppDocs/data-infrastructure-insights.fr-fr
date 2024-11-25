@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_device_resolution_overview.html 
 keywords: Automatic, AR, AHR, Host, automatic device resolution 
-summary: 'La résolution automatique des périphériques vous aide à suivre avec précision les performances et l"inventaire de votre environnement.' 
+summary: 'La résolution automatique des périphériques vous aide à suivre avec précision les performances et l"inventaire de votre locataire.' 
 ---
 = Présentation de la résolution automatique des périphériques
 :hardbreaks:
@@ -16,11 +16,11 @@ summary: 'La résolution automatique des périphériques vous aide à suivre ave
 
 
 [role="lead"]
-Vous devez identifier tous les dispositifs que vous souhaitez contrôler avec Data Infrastructure Insights. Une identification est nécessaire afin de suivre précisément les performances et le stock de votre environnement. En général, la plupart des périphériques découverts dans votre environnement sont identifiés par _résolution automatique des périphériques_.
+Vous devez identifier tous les dispositifs que vous souhaitez contrôler avec Data Infrastructure Insights. L'identification est nécessaire pour effectuer un suivi précis des performances et de l'inventaire de votre locataire. Généralement, la majorité des périphériques découverts sur votre locataire sont identifiés par _Automatic Device Resolution_.
 
-Une fois que vous avez configuré des collecteurs de données, les périphériques de votre environnement, y compris les commutateurs, les baies de stockage et votre infrastructure virtuelle d'hyperviseurs et de machines virtuelles sont identifiés. Toutefois, cela ne permet pas d'identifier 100 % des périphériques de votre environnement.
+Une fois que vous avez configuré des collecteurs de données, les périphériques de votre locataire, y compris les switchs, les baies de stockage et votre infrastructure virtuelle d'hyperviseurs et de VM, sont identifiés. Cependant, cela ne permet généralement pas d'identifier 100 % des périphériques de votre locataire.
 
-Une fois que les périphériques de type Data Collector ont été configurés, il est recommandé d'exploiter les règles de résolution des périphériques afin d'identifier les périphériques inconnus restants dans votre environnement. La résolution de périphérique peut vous aider à résoudre les périphériques inconnus comme étant les types de périphériques suivants :
+Une fois les périphériques de type collecteur de données configurés, il est recommandé d'exploiter les règles de résolution des périphériques pour identifier les périphériques inconnus restants de votre locataire. La résolution de périphérique peut vous aider à résoudre les périphériques inconnus comme étant les types de périphériques suivants :
 
 * Hôtes physiques
 * Les baies de stockage
@@ -60,7 +60,7 @@ Vous devez répondre à des questions similaires aux suivantes pour vous aider �
 * Votre environnement utilise-t-il un alias de commutateur ou un alias de stockage et correspond-il au nom d'hôte ?
 
 
-* À quelle fréquence les schémas de nommage évoluent-ils dans votre environnement ?
+* À quelle fréquence les schémas de dénomination changent-ils pour votre locataire ?
 * Y a-t-il eu des acquisitions ou des fusions qui ont introduit différents systèmes de dénomination ?
 
 
@@ -74,7 +74,7 @@ Dans cet exemple, le plus grand nombre de périphériques sont représentés de 
 
 == Étapes d'identification des périphériques
 
-En règle générale, vous devez utiliser un flux de travail similaire à celui qui suit pour identifier les périphériques de votre environnement. L'identification est un processus itératif qui peut nécessiter plusieurs étapes de planification et de raffinage des règles.
+En général, vous utilisez un flux de travail similaire à celui ci-dessous pour identifier les périphériques de votre locataire. L'identification est un processus itératif qui peut nécessiter plusieurs étapes de planification et de raffinage des règles.
 
 * Environnement de recherche
 * Règles de plan
@@ -85,6 +85,6 @@ En règle générale, vous devez utiliser un flux de travail similaire à celui 
 
 
 
-NOTE: Si votre environnement contient des périphériques non identifiés (appelés périphériques inconnus ou génériques) et que vous configurez ensuite une source de données qui identifie ces périphériques lors de l'interrogation, ils ne seront plus affichés ni comptés comme périphériques génériques.
+NOTE: Si vous avez des périphériques non identifiés (ou des périphériques inconnus ou génériques) sur votre locataire et que vous configurez ensuite une source de données qui identifie ces périphériques lors de l'interrogation, ils ne seront plus affichés ou comptés comme périphériques génériques.
 
 Relié : link:task_device_resolution_rules.html["Création de règles de résolution de périphérique"] link:task_device_resolution_fibre_channel.html["Résolution de périphérique Fibre Channel"] link:task_device_resolution_ip.html["Résolution de périphérique IP"] link:task_device_resolution_preferences.html["Définition des préférences de résolution du périphérique"]

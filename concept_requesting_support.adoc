@@ -113,7 +113,7 @@ En plus des options de libre-service ci-dessus, si vous disposez d'un abonnement
 
 NOTE: Vous devez vous inscrire <<activating-support-entitlement,activer le support>>pour bénéficier des produits cloud NetApp. Pour vous inscrire, rendez-vous sur NetApp's link:https://register.netapp.com["Inscription au support Services de données cloud"].
 
-Lors de votre session de support, il est fortement recommandé de cocher la case afin qu'un ingénieur du support NetApp puisse accéder à votre environnement Data Infrastructure Insights. Ainsi, le technicien pourra résoudre le problème rapidement. Lorsque votre problème est résolu ou que votre session d'assistance a pris fin, vous pouvez décocher la case.
+Lors de votre session de support, il est fortement recommandé de cocher la case afin qu'un ingénieur du support NetApp puisse accéder à votre locataire Data Infrastructure Insights. Ainsi, le technicien pourra résoudre le problème rapidement. Lorsque votre problème est résolu ou que votre session d'assistance a pris fin, vous pouvez décocher la case.
 
 Vous pouvez demander de l'aide par l'une des méthodes suivantes. Vous devez disposer d'un abonnement actif à Data Infrastructure Insights pour utiliser les options de support suivantes :
 

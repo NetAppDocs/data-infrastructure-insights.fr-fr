@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_cloud_insights_onboarding_1.html 
-summary: 'En vous inscrivant pour obtenir des informations exploitables sur l"infrastructure de données et créer votre environnement.' 
+summary: 'Vous inscrire pour obtenir des informations exploitables sur l"infrastructure de données et créer votre locataire.' 
 keywords: onboarding, new user 
 ---
 = Intégration de données exploitables de l'infrastructure de données
@@ -49,11 +49,11 @@ image:BlueXP_CloudInsights.png["Essai gratuit des informations d'infrastructure 
 
 == Commencez l'essai gratuit de Data Infrastructure Insights
 
-Si vous vous connectez pour la première fois à Data Infrastructure Insights, sous l'offre Data Infrastructure Insights, cliquez sur *commencer l'essai gratuit*. Les informations sur l'infrastructure de données vous aideront à créer l'environnement de votre entreprise, notamment à sélectionner la région dans laquelle vous souhaitez placer votre environnement.
+Si vous vous connectez pour la première fois à Data Infrastructure Insights, sous l'offre Data Infrastructure Insights, cliquez sur *commencer l'essai gratuit*. Les informations sur l'infrastructure de données vous aideront à créer le locataire de votre entreprise, notamment à sélectionner la région dans laquelle vous souhaitez placer votre locataire.
 
-image:trial_region_selector.png["Sélection de la région dans laquelle héberger votre environnement Data Infrastructure Insights"]
+image:trial_region_selector.png["Sélectionnez la région dans laquelle héberger votre locataire Data Infrastructure Insights"]
 
-Une fois votre environnement créé, vous pouvez utiliser vos identifiants BlueXP  pour vous connecter et commencer votre essai gratuit de 30 jours d'informations exploitables sur l'infrastructure de données. Pendant la période d'essai, vous pouvez explorer les fonctionnalités offertes par Data Infrastructure Insights.
+Une fois votre locataire créé, vous pouvez utiliser vos identifiants BlueXP  pour vous connecter et commencer votre essai gratuit de 30 jours des informations exploitables sur l'infrastructure de données. Pendant la période d'essai, vous pouvez explorer les fonctionnalités offertes par Data Infrastructure Insights.
 
 Pendant l'essai gratuit, vous pouvez link:concept_subscribing_to_cloud_insights.html["commencez votre abonnement"] à tout moment accéder à la vue sur l'infrastructure de données. Lorsque vous êtes abonné, vous pouvez utiliser les fonctionnalités Data Infrastructure Insights basées sur votre abonnement actuel.
 
@@ -61,17 +61,17 @@ Pendant l'essai gratuit, vous pouvez link:concept_subscribing_to_cloud_insights.
 
 == Connectez-vous et allez
 
-Une fois votre environnement créé, il vous suffit à tout moment de vous connecter au portail NetApp BlueXP  et de cliquer sur *aller à informations sur l'infrastructure de données*. Vous serez directement dirigé vers votre environnement Data Infrastructure Insights.
+Une fois votre locataire créé, il vous suffit à tout moment de vous connecter au portail NetApp BlueXP  et de cliquer sur *aller à informations sur l'infrastructure de données*. Vous serez directement dirigé vers votre locataire Data Infrastructure Insights.
 
-Vous pouvez également ouvrir un navigateur directement vers l'URL de votre environnement Data Infrastructure Insights, par exemple :
+Vous pouvez également ouvrir un navigateur directement vers l'URL du locataire Data Infrastructure Insights, par exemple :
 
- \https://<environment-prefix>.c01.cloudinsights.netapp.com/
+ \https://<tenant-prefix>.c01.cloudinsights.netapp.com/
 L'URL sera également incluse dans l'e-mail d'invitation de chaque utilisateur pour faciliter l'accès et le signet. Si l'utilisateur n'est pas déjà connecté à BlueXP, il est invité à se connecter.
 
 
-NOTE: Les nouveaux utilisateurs doivent toujours s'inscrire pour accéder à BlueXP avant de pouvoir accéder à leur URL d'environnement.
+NOTE: Les nouveaux utilisateurs doivent quand même s'inscrire pour accéder à BlueXP  avant de pouvoir accéder à l'URL de leur locataire.
 
-La première fois que vous vous connectez à un nouvel environnement, vous serez guidé lors de la configuration de link:task_getting_started_with_cloud_insights.html["*commencer la collecte de données*"].
+La première fois que vous vous connectez à un nouveau locataire, vous serez guidé lors de la configuration de link:task_getting_started_with_cloud_insights.html["*commencer la collecte de données*"].
 
 
 

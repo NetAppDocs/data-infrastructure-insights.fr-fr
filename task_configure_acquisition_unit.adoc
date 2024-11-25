@@ -105,7 +105,7 @@ Vous pouvez afficher les URL de votre point final proxy en cliquant sur le lien 
 
 image:ProxyEndpoints_NewTable.png["Table des noeuds finaux du proxy"]
 
-Si vous avez la sécurité de la charge de travail dans votre environnement, les URL de point final configurées s'affichent également dans cette liste.
+Si votre locataire dispose de Workload Security, les URL de point de terminaison configurées seront également affichées dans cette liste.
 
 
 
@@ -161,7 +161,7 @@ Vous pouvez afficher les URL de votre point final proxy en cliquant sur le lien 
 
 image:ProxyEndpoints_NewTable.png["Table des noeuds finaux du proxy"]
 
-Si vous avez la sécurité de la charge de travail dans votre environnement, les URL de point final configurées s'affichent également dans cette liste.
+Si votre locataire dispose de Workload Security, les URL de point de terminaison configurées seront également affichées dans cette liste.
 
 
 

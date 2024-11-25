@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: insights_reclaim_ontap_cold_storage.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: 'Ces informations vous permettent d"examiner l"impact des ressources sur les autres ressources de votre environnement.' 
+summary: 'Ces informations vous permettent d"examiner l"impact des ressources sur les autres ressources de votre locataire.' 
 ---
 = Informations : récupération du stockage à froid ONTAP
 :toc: macro
