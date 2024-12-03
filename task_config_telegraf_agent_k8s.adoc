@@ -294,6 +294,16 @@ OpenShift peut implémenter un niveau de sécurité supplémentaire qui peut blo
 
 
 
+=== Tolérances et tainations
+
+Les _netapp-ci-telegraf-ds_, _netapp-ci-Fluent-bit-ds_ et _netapp-ci-net-observateur-l4-ds_ Demonsets doivent planifier un pod sur chaque nœud de votre cluster afin de collecter correctement les données sur tous les nœuds. L'opérateur a été configuré pour tolérer certains *taints* bien connus. Si vous avez configuré des fichiers d'accès personnalisés sur vos nœuds, empêchant ainsi les modules de s'exécuter sur chaque nœud, vous pouvez créer une *tolérance* pour ces fichiers d'accès link:telegraf_agent_k8s_config_options.html["Dans _AgentConfiguration_"]. Si vous avez appliqué des rejets personnalisés à tous les nœuds de votre cluster, vous devez également ajouter les tolérances nécessaires au déploiement de l'opérateur pour permettre la planification et l'exécution du pod opérateur.
+
+En savoir plus sur Kubernetes link:https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/["Teintes et tolérances"].
+
+Revenir au link:task_config_telegraf_agent_k8s.html["*Page installation de l'opérateur de surveillance NetApp Kubernetes*"]
+
+
+
 == Remarque sur les secrets
 
 Pour supprimer l'autorisation pour l'opérateur de surveillance Kubernetes d'afficher les secrets à l'échelle du cluster, supprimez les ressources suivantes du fichier _Operator-setup.yaml_ avant d'installer :
@@ -323,61 +333,29 @@ Si l'option analyse des modifications est activée, modifiez _AgentConfiguration
 ....
 
 
-== Vérification des checksums Kubernetes
+== Vérification des signatures d'images de l'opérateur de surveillance Kubernetes
 
-Le programme d'installation de l'agent Data Infrastructure Insights effectue des vérifications d'intégrité, mais certains utilisateurs peuvent vouloir effectuer leurs propres vérifications avant d'installer ou d'appliquer des artéfacts téléchargés. Pour effectuer une opération de téléchargement uniquement (par opposition au téléchargement et à l'installation par défaut), ces utilisateurs peuvent modifier la commande d'installation de l'agent obtenue à partir de l'interface utilisateur et supprimer l'option "installation" de fin.
+L'image de l'opérateur et toutes les images associées qu'il déploie sont signées par NetApp. Vous pouvez vérifier manuellement les images avant l'installation à l'aide de l'outil de co-signer ou configurer un contrôleur d'admission Kubernetes. Pour plus de détails, veuillez consulter le link:https://kubernetes.io/docs/tasks/administer-cluster/verify-signed-artifacts/#verifying-image-signatures["Documentation Kubernetes"].
 
-Voici la procédure à suivre :
+La clé publique utilisée pour vérifier les signatures d'image est disponible dans la mosaïque d'installation de l'opérateur de surveillance sous _Facultatif : télécharger les images de l'opérateur dans votre référentiel privé > clé publique de signature d'image_
 
-. Copiez l'extrait de code Agent installer comme indiqué.
-. Au lieu de coller le fragment dans une fenêtre de commande, collez-le dans un éditeur de texte.
-. Supprimez le "--install" de la commande.
-. Copiez la commande entière à partir de l'éditeur de texte.
-. Ensuite, collez-la dans votre fenêtre de commande (dans un répertoire de travail) et exécutez-la.
-+
-** Téléchargement et installation (par défaut) :
-+
- installerName=cloudinsights-rhel_centos.sh … && sudo -E -H ./$installerName --download –-install
-** Téléchargement uniquement :
-+
- installerName=cloudinsights-rhel_centos.sh … && sudo -E -H ./$installerName --download
+Pour vérifier manuellement une signature d'image, effectuez les opérations suivantes :
+
+. Copiez et exécutez l'extrait d'image
+. Copiez et saisissez le mot de passe du référentiel lorsque vous y êtes invité
+. Stocker la clé publique de signature d'image (dii-image-Signing.pub dans l'exemple)
+. Vérifiez les images à l'aide du cosigne. Reportez-vous à l'exemple suivant d'utilisation des coenseignes
 
 
-
-
-La commande de téléchargement uniquement télécharge tous les artefacts requis depuis Data Infrastructure Insights vers le répertoire de travail. Les artefacts incluent, mais ne se limitent pas aux éléments suivants :
-
-* un script d'installation
-* un fichier d'environnement
-* Fichiers YAML
-* un fichier de somme de contrôle signé (sha256.signé)
-* Un fichier PEM (netapp_cert.pem) pour la vérification de la signature
-
-
-Le script d'installation, le fichier d'environnement et les fichiers YAML peuvent être vérifiés à l'aide d'une inspection visuelle.
-
-Le fichier PEM peut être vérifié en confirmant son empreinte digitale comme suit :
-
- 1A918038E8E127BB5C87A202DF173B97A05B4996
-Plus spécifiquement,
-
- openssl x509 -fingerprint -sha1 -noout -inform pem -in netapp_cert.pem
-Le fichier de somme de contrôle signé peut être vérifié à l'aide du fichier PEM :
-
- openssl smime -verify -in sha256.signed -CAfile netapp_cert.pem -purpose any
-Une fois tous les artefacts vérifiés de manière satisfaisante, l'installation de l'agent peut être lancée en exécutant :
-
- sudo -E -H ./<installation_script_name> --install
-
-
-=== Tolérances et tainations
-
-Les _netapp-ci-telegraf-ds_, _netapp-ci-Fluent-bit-ds_ et _netapp-ci-net-observateur-l4-ds_ Demonsets doivent planifier un pod sur chaque nœud de votre cluster afin de collecter correctement les données sur tous les nœuds. L'opérateur a été configuré pour tolérer certains *taints* bien connus. Si vous avez configuré des fichiers d'accès personnalisés sur vos nœuds, empêchant ainsi les modules de s'exécuter sur chaque nœud, vous pouvez créer une *tolérance* pour ces fichiers d'accès link:telegraf_agent_k8s_config_options.html["Dans _AgentConfiguration_"]. Si vous avez appliqué des rejets personnalisés à tous les nœuds de votre cluster, vous devez également ajouter les tolérances nécessaires au déploiement de l'opérateur pour permettre la planification et l'exécution du pod opérateur.
-
-En savoir plus sur Kubernetes link:https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/["Teintes et tolérances"].
-
-Revenir au link:task_config_telegraf_agent_k8s.html["*Page installation de l'opérateur de surveillance NetApp Kubernetes*"]
-
+[listing]
+----
+$ cosign verify --key dii-image-signing.pub --insecure-ignore-sct --insecure-ignore-tlog <repository>/<image>:<tag>
+Verification for <repository>/<image>:<tag> --
+The following checks were performed on each of these signatures:
+  - The cosign claims were validated
+  - The signatures were verified against the specified public key
+[{"critical":{"identity":{"docker-reference":"<repository>/<image>"},"image":{"docker-manifest-digest":"sha256:<hash>"},"type":"cosign container image signature"},"optional":null}]
+----
 
 
 == Dépannage
