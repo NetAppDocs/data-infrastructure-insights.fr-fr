@@ -19,8 +19,6 @@ summary: 'L"opérateur de surveillance Kubernetes collecte les données Kubernet
 Data Infrastructure Insights propose l'opérateur *Kubernetes Monitoring Operator* pour la collecte Kubernetes. Accédez à *Kubernetes > Collectors > +Kubernetes Collector* pour déployer un nouvel opérateur.
 
 
-toc::[]
-
 
 == Avant d'installer l'opérateur de surveillance Kubernetes
 
@@ -65,15 +63,11 @@ image:KubernetesModifyDeploymentMenu.png["Modifier le menu de déploiement sur l
 
 L'écran affiche l'état actuel de chaque composant et vous permet de désactiver ou d'activer les composants pour ce collecteur selon vos besoins.
 
-image:KubernetesModifyDeploymentScreen.png["Options de déploiement de Mody, 700"]
+image:KubernetesModifyDeploymentScreen.png["Modifier les options de déploiement, largeur=700"]
 
 
 
-== Mise à niveau
-
-
-
-=== Mise à niveau vers le dernier opérateur de surveillance Kubernetes
+== Mise à niveau vers le dernier opérateur de surveillance Kubernetes
 
 Déterminez si une configuration d'agentConfiguration existe avec l'opérateur existant (si votre espace de noms n'est pas le _netapp-monitoring_ par défaut, remplacez l'espace de noms approprié) :
 

@@ -8880,9 +8880,6 @@
   <block id="4a8935a67aadaec6ba4fbfd58e9329b9" category="inline-image-macro">Modifier le menu de déploiement sur la page de liste du collecteur Kubernetes</block>
   <block id="7a9e68f513e02f6f4993d88781b49637" category="paragraph"><block ref="7a9e68f513e02f6f4993d88781b49637" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e1ab0e7895c9df2539e36203b84c90d1" category="paragraph">L'écran affiche l'état actuel de chaque composant et vous permet de désactiver ou d'activer les composants pour ce collecteur selon vos besoins.</block>
-  <block id="9cef0071e460e946beaa92e847eee7a2" category="inline-image-macro">Options de déploiement de Mody, 700</block>
-  <block id="680dda670e97a05d2baca651224019c6" category="paragraph"><block ref="680dda670e97a05d2baca651224019c6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="edcc6d64ff09289fd7b549c0265f3ea6" category="section-title">Mise à niveau</block>
   <block id="8b54cfbc7f4622be8f18ef9e6b323931" category="section-title">Mise à niveau vers le dernier opérateur de surveillance Kubernetes</block>
   <block id="59f9e8b92a6bc55e991031f0b5fea324" category="paragraph">Déterminez si une configuration d'agentConfiguration existe avec l'opérateur existant (si votre espace de noms n'est pas le _netapp-monitoring_ par défaut, remplacez l'espace de noms approprié) :</block>
   <block id="bb5c0afa0b80550de02b1ac19c1226b4" category="paragraph">Si une configuration d'agentConfiguration existe :</block>
@@ -11823,4 +11820,6 @@
   <block id="2e9d4d6615af62102584a57c2c8ddacd" category="list-text">Copiez et saisissez le mot de passe du référentiel lorsque vous y êtes invité</block>
   <block id="2cea2fa4f716d1fa2efbffe877eb702c" category="list-text">Stocker la clé publique de signature d'image (dii-image-Signing.pub dans l'exemple)</block>
   <block id="55d6bfb079ee69230d07a9a9c1c17b66" category="list-text">Vérifiez les images à l'aide du cosigne. Reportez-vous à l'exemple suivant d'utilisation des coenseignes</block>
+  <block id="f0eddc4fb4218ed4ec07da7604fbc1c8" category="inline-image-macro">Modifier les options de déploiement, largeur=700</block>
+  <block id="593e78308f625f4551ee5b44b6d582e5" category="paragraph"><block ref="593e78308f625f4551ee5b44b6d582e5" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
