@@ -1,0 +1,135 @@
+---
+sidebar: sidebar 
+permalink: task_dc_vast_datastore.html 
+keywords: data collector, VAST storage, VAST data 
+summary: Configuration du collecteur de données de stockage VAST Data DataStore. 
+---
+= Collecteur de données VAST DataStore
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilise le GRAND collecteur de données de DataStore pour collecter les données d’inventaire et de performance.
+
+
+
+== Terminologie
+
+Pour chaque type de ressource acquise par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+
+[cols="2*"]
+|===
+| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+
+
+| Transporteurs | Disques (champ d'emplacement du tiroir disque) 
+
+
+| Cluster | Stockage 
+
+
+| CNODES | StorageNode (type = cnode) 
+
+
+| Nœuds dét | StorageNode (type = dnode) 
+
+
+| NVRAMS | Disques 
+
+
+| Chemins protégés | Synchronisation de volume interne 
+
+
+| Règles de QOS | Volume interne (limites de QoS) 
+
+
+| Quotas | Quota 
+
+
+| SSD | Disques 
+
+
+| Locataires | Storage Virtual machine (SVM) 
+
+
+| Politiques de visualisation | Partage de fichiers (pour les autorisations) 
+
+
+| Vues | Volume interne 
+|===
+Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+
+
+
+== De formation
+
+* Adresse IP du système VAST DataStore ou nom de domaine complet
+* Nom d'utilisateur / Mot de passe pour accéder au système VAST
+* Exigences de port : HTTPS 443
+
+
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Adresse IP/Nom d'hôte du stockage de VASTES datastores | Adresse IP ou FQDN du système de stockage 
+
+
+| Utilisateur | Nom d'utilisateur du VASTE stockage 
+
+
+| Mot de passe | Mot de passe de VASTE espace de stockage 
+|===
+
+
+== Configuration avancée
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Type de connexion | Choisissez HTTP ou HTTPS. Affiche également le port par défaut. 
+
+
+| Remplacer le port TCP | Si ce champ est vide, utilisez le port par défaut dans le champ Type de connexion, sinon entrez le port de connexion à utiliser 
+
+
+| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 minutes 
+
+
+| Intervalle d'interrogation des performances (s) | La valeur par défaut est 300 
+|===
+
+
+== Dépannage
+
+Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+
+
+
+=== Inventaire
+
+[cols="2*"]
+|===
+| Problème : | Essayer : 
+
+
+| "Informations d'identification non valides" avec les messages d'erreur "la stratégie n'autorise pas" ou "vous n'êtes pas autorisé" | Valider le compte utilisateur et le mot de passe Pure via l'interface http Pure 
+|===
+Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
