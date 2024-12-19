@@ -6197,15 +6197,10 @@
   <block id="4bf5863c996526f74970c19dc17d7167" category="doc">Analyse - toute l'activité</block>
   <block id="58ecb418298e803c7a0ae49007466440" category="paragraph">La page toutes les activités vous aide à comprendre les actions effectuées sur les entités de l'environnement de sécurité de la charge de travail.</block>
   <block id="33a203d3623a54e6d264ebf5af5db210" category="section-title">Examen de toutes les données d'activité</block>
-  <block id="c86905ef58808f0a9e9e433a9f0ef22e" category="list-text">Graphique indiquant _Historique des activités_ (accessible par minute/par 5 minutes/10 minutes en fonction de la plage horaire globale sélectionnée)</block>
   <block id="dde100b78d6d436ad1c738fca1b98fc6" category="paragraph">Vous pouvez zoomer sur le graphique en faisant glisser un rectangle dans le graphique. La page entière sera chargée pour afficher la plage de temps agrandie. Lorsque vous effectuez un zoom avant, un bouton s'affiche pour permettre à l'utilisateur d'effectuer un zoom arrière.</block>
-  <block id="e7247ec6fc6f0b522bf9ec41eece5696" category="list-text">Un graphique de _types d'activités_. Pour obtenir les données de l'historique d'activité par type d'activité, cliquez sur le lien du libellé de l'axe X correspondant.</block>
-  <block id="6e50520e7dc49bfd428e7f668c37d876" category="list-text">Un graphique d'activité sur _types d'entité_. Pour obtenir les données de l'historique d'activité par type d'entité, cliquez sur le lien du libellé de l'axe X correspondant.</block>
-  <block id="5b5144202e6576c79b813b887fea658e" category="list-text">Une liste des données _All Activity_</block>
   <block id="be2a0bbd0e52bd10107615bcddc56fba" category="paragraph">Le tableau _*toutes les activités*_ indique les informations suivantes. Notez que toutes ces colonnes ne sont pas affichées par défaut. Vous pouvez sélectionner les colonnes à afficher en cliquant sur l'icône « engrenage ».</block>
   <block id="10b85952c1ec4b6508b7012df066ef83" category="list-text">Le *temps* où une entité a été consultée, y compris l'année, le mois, le jour et l'heure du dernier accès.</block>
   <block id="38d1b0982212e47a2dd73e4c40793793" category="inline-link-macro">Informations utilisateur</block>
-  <block id="6e4775595cef760df16cfc31845a509d" category="list-text">*Utilisateur* qui a accédé à l'entité avec un lien vers le <block ref="62cf04ad66abc0c5964885d5ae0624ca" category="inline-link-macro-rx"></block>.</block>
   <block id="6bf51f11b7d2354b7c099ad162d81b7a" category="list-text">L'activité * réalisée par l'utilisateur. Les types pris en charge sont les suivants :</block>
   <block id="9a04c053eaff60b85a2cae86b2356445" category="inline-link-macro">ce lien.</block>
   <block id="53972c5d1f69f8d23ae301127e80e7e7" category="list-text">*Changer la propriété du groupe* - la propriété du groupe est de fichier ou de dossier est modifiée. Pour plus d'informations sur la propriété du groupe, reportez-vous à la section <block ref="6cc284c6f1b230da48f23553af5add55" category="inline-link-macro-rx"></block></block>
@@ -6220,15 +6215,11 @@
   <block id="bc2e1628223bbd57334a725f0401d199" category="list-text">*Write Metadata* - les métadonnées de fichier sont écrites, par exemple, les autorisations modifiées.</block>
   <block id="d05ab97003568ddbd1e124e280eff44d" category="list-text">*Autre changement* - tout autre événement qui n'est pas décrit ci-dessus. Tous les événements non mappés sont mappés au type d'activité “autre changement”. Applicable aux fichiers et dossiers.</block>
   <block id="d97c308acbc0f0d3e5a290abc82e12a0" category="inline-link-macro">Données de détail d'entité</block>
-  <block id="f88377a34fbf609b422c589ee5d35273" category="list-text">Le *chemin* vers l'entité avec un lien vers le <block ref="633539366fa6408c302917ca137b4662" category="inline-link-macro-rx"></block></block>
-  <block id="37e766be9feefb3190b34a91a3d508a1" category="list-text">Le *Type d'entité*, y compris l'extension d'entité (c.-à-d. fichier) (.doc, .docx, .tmp, etc.)</block>
-  <block id="e62fdb6053340eb340a1208c156c6121" category="list-text">Le *périphérique* où résident les entités</block>
   <block id="5d7a5f24f08d7baa937ba58212dc4cb3" category="list-text">Le *Protocole* utilisé pour récupérer des événements.</block>
   <block id="760b2221e00b39c02b810e7c86cb4944" category="list-text">Le *chemin d'origine* utilisé pour renommer les événements lorsque le fichier d'origine a été renommé. Par défaut, cette colonne n'est pas visible dans le tableau. Utilisez le sélecteur de colonne pour ajouter cette colonne à la table.</block>
   <block id="5da00530f210d269eaa47bd0630398c7" category="list-text">Le *Volume* où résident les entités. Par défaut, cette colonne n'est pas visible dans le tableau. Utilisez le sélecteur de colonne pour ajouter cette colonne à la table.</block>
   <block id="119f264c2e26701f999cacca54ff6a5a" category="section-title">Filtrage des données d'historique d'activité Forensic</block>
   <block id="e2dc5b88c4f53d2a648a9f81fdc77ecb" category="paragraph">Vous pouvez utiliser deux méthodes pour filtrer les données.</block>
-  <block id="377a8e308f4633976cbdc6b890bb79fe" category="list-text">Placez le pointeur de la souris sur le champ du tableau et cliquez sur l'icône de filtre qui s'affiche. La valeur est ajoutée aux filtres appropriés dans la liste _Filter by_ supérieure.</block>
   <block id="b44d27d7b6b6912f12597adc1f9fa486" category="list-text">Filtrez les données en entrant dans le champ _Filter by_ :</block>
   <block id="94d39d472f5515f9137731ff36ee8221" category="paragraph">Sélectionnez le filtre approprié dans le widget filtre par en haut en cliquant sur le bouton *[+]* :</block>
   <block id="9aca188b05e6e40de4b37c9a1ae88452" category="inline-image-macro">Filer entité, largeur=500</block>
@@ -6244,7 +6235,6 @@
   <block id="3a6aae5bc174d27a503441e1d24d0c68" category="list-text">*Domaine* de l'utilisateur exécutant l'activité. Vous devez fournir le *domaine exact* à filtrer. La recherche d'un domaine partiel, ou d'un domaine partiel préfixé ou suffixé avec le caractère générique ('*'), ne fonctionnera pas. _None_ peut être spécifié pour rechercher un domaine manquant.</block>
   <block id="5e5226f8443d6c79a977ffd6e71a8d9d" category="paragraph">Les champs suivants sont soumis à des règles de filtrage spéciales :</block>
   <block id="28894211649d8f9f99c54dc12f77784e" category="list-text">*Type d'entité*, avec l'extension entité (fichier) - il est préférable de spécifier le type d'entité exact entre guillemets. Par exemple _“txt”_.</block>
-  <block id="cfacc3a890c7b76e916de509a258355f" category="list-text">*Chemin* de l'entité - filtres de chemin d'accès de répertoire (chaîne de chemin se terminant par /) jusqu'à 4 répertoires profonds sont recommandés pour des résultats plus rapides. Par exemple, _/home/userX/nested1/nested2/_ OU _"/home/userX/nested1/nested2/"_. Voir le tableau ci-dessous pour plus de détails.</block>
   <block id="0d97b222b080d69a549c4eb4a4bfe399" category="list-text">*Utilisateur* exécutant l'activité - il est préférable de spécifier l'utilisateur exact entre guillemets. Par exemple, _« Administrateur »_.</block>
   <block id="793b0425edef55b10657fd6cc2a5ab5a" category="list-text">*Périphérique* (SVM) où résident les entités</block>
   <block id="6bbd4f26d0615caf6a29b9c2d238dad2" category="list-text">*Volume* où résident les entités</block>
@@ -6258,27 +6248,17 @@
   <block id="13876d45cb0b459833e4aebb72877939" category="cell">Résultat attendu</block>
   <block id="b77349ead71592d04cbccd89fee71c70" category="cell">Évaluation des performances</block>
   <block id="0be8406951cdfda82f00f79328cf4efc" category="cell">Commentaire</block>
-  <block id="f2e392688127fe27ba86956a289d1516" category="cell">Chemin = /home/userX/nested1/nested2/ ou /home/userX/nested1/nested2/* ou "/home/userX/nested1/nested2/"</block>
   <block id="1fec62ac6ef0096301dec6c9552701f7" category="cell">Recherche récursive de tous les fichiers et dossiers sous le répertoire donné</block>
   <block id="e16b5b7f26f54214445cbe38d72c2828" category="cell">Rapides</block>
   <block id="f6a092f816e6eb604694d6a921395ccb" category="cell">Les recherches de répertoire jusqu'à 4 répertoires seront rapides.</block>
-  <block id="aec252fe472926926066b015c61018d2" category="cell">Chemin = /home/userX/nested1/ ou /home/userX/nested1/* ou "/home/userX/nested1/"</block>
-  <block id="83f594a149a47f77a9d0ffd06bd887fa" category="cell">Chemin = /home/userX/nested1/test* ou /home/userX/nested1/test</block>
   <block id="840207e609d7b9a7b687b3b2712e903d" category="cell">Recherche récursive de tous les fichiers et dossiers sous le chemin regex donné(test* peut signifier fichier OU répertoire OU les deux)</block>
   <block id="e7b02c274fe199317927b2a2d54e280e" category="cell">Plus lent</block>
   <block id="4b88bc6659fa6ffa1353db049ea38556" category="cell">La recherche de Regex répertoire+fichier sera plus lente que les recherches d'annuaire.</block>
-  <block id="5ebfaf9d735f32f7095e67382caa89fa" category="cell">Chemin = /home/userX/nested1/nested2/nested3/ ou /home/userX/nested1/nested2/nested3/* ou "/home/userX/nested1/nested2/nested3/"</block>
   <block id="1bd0462f5987c1382af61035c6ea62ff" category="cell">La recherche dans plus de 4 répertoires est plus lente.</block>
-  <block id="60f679d95b13137d0f02dac90990fa24" category="cell">Path=\*userX/nested1/test*</block>
-  <block id="42779f1f471dcd0efc744707a9d12fb3" category="cell">Recherche récursive de tous les fichiers et dossiers sous une chaîne de caractères génériques donnée(test* peut signifier fichier OU répertoire OU les deux)</block>
-  <block id="53ad658aa3b68ee6f8ac34262f27efc5" category="cell">Plus lente</block>
-  <block id="baf0959545ccd91564d61f6f09d3d6fc" category="cell">Les recherches les plus lentes sont les recherches les plus lentes.</block>
   <block id="2127f473d96f54c997a492a6ca024c5b" category="cell">Tout autre filtre sans chemin d'accès. Il est recommandé de placer les filtres utilisateur et Type d'entité entre guillemets, par exemple, utilisateur=« Administrateur » Type d'entité=« txt »</block>
   <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">REMARQUE :</block>
   <block id="d8255e556913387acdb6c6f885c59f99" category="list-text">Le nombre d'activités affiché à côté de l'icône toutes les activités est arrondi à 30 minutes lorsque la plage de temps sélectionnée s'étend sur plus de 3 jours. Par exemple, une plage de temps de _1er sept 10:15 à 7 sept 10:15_ affichera le nombre d'activités du 1er sept 10:00 au 7 sept 10:30.</block>
-  <block id="3ba96afd89f810071e642a2580c035d0" category="list-text">De même, les mesures de comptage affichées dans les graphiques types d'activité, types d'activité sur entité et Historique des activités sont arrondies à 30 minutes lorsque la plage horaire sélectionnée s'étend sur plus de 3 jours.</block>
   <block id="b94c2ef661065c39f8d83558c3eafe45" category="section-title">Tri des données d'historique d'activité Forensic</block>
-  <block id="95389b3cb82b7172ea6147fa876a9ffa" category="paragraph">Vous pouvez trier les données de l'historique des activités par _heure, utilisateur, IP source, activité,_ et _Type d'entité_. Par défaut, la table est triée par ordre décroissant _time_, ce qui signifie que les dernières données seront affichées en premier. Le tri est désactivé pour les champs _Device_ et _Protocol_.</block>
   <block id="5203772926767a923fffeec0454915d0" category="section-title">Guide de l'utilisateur pour les exportations asynchrones</block>
   <block id="e51ee07acf4b7676b7e8d7d9ddfcc237" category="paragraph">La fonction d'exportation asynchrone de Storage Workload Security est conçue pour gérer les exportations de données volumineuses.</block>
   <block id="34e6887c3fe7a34ac28d932e0916f098" category="section-title">Guide étape par étape : exportation de données avec des exportations asynchrones</block>
@@ -6299,37 +6279,24 @@
   <block id="5ac805f98623b1f23909793e4ff3a262" category="cell">Applicable à ces filtres</block>
   <block id="b1b275726951e4adc620b69d947baf49" category="cell">Ne s'applique pas à ces filtres</block>
   <block id="0a3087cfc2ea9ac71095f821d14ee027" category="cell">Auto*03172022 si le texte de recherche contient un tiret ou un trait de soulignement, donner une expression entre parenthèses, par exemple (svm*) pour la recherche de svm-123</block>
-  <block id="a95d3431c2b5559d818d2555fcc3e835" category="cell">Utilisateur, CHEMIN, Type d'entité, périphérique, Volume, chemin d'origine</block>
-  <block id="de49d77f1ec8a76ce0ab6d070d1a883c" category="cell">Renvoie toutes les ressources commençant par "Auto" et se terminant par "03172022"</block>
   <block id="3518217f55c95e834c4ea7984f8aa0cd" category="cell">AutoSabotageUser1_03172022 ?</block>
-  <block id="4e264b37a7e8d68a4e163769aad53d58" category="cell">Utilisateur, Type d'entité, périphérique, volume</block>
   <block id="a28771ee6ad9a7771a86f5d6ceeed78e" category="cell">Renvoie AutoSabotageUser1_03172022A, AutoSabotageUser1_03172022B, AutoSabotageUser1_031720225, etc</block>
   <block id="3adefd54fc738f8196af6304ed8929ac" category="cell">AutoSalotageUser1_03172022 OU AutoRansomUser4_03162022</block>
-  <block id="c7cf1f6ecae876f330364b876e6cbc83" category="cell">Utilisateur, domaine, CHEMIN, Type d'entité, CHEMIN d'origine</block>
   <block id="0a01700b4705c6c47c24699ad7d4a4cb" category="cell">Renvoie AutoSalotageUser1_03172022 OU AutoRansomUser4_03162022</block>
   <block id="0ca071eb91357e8d4685daee24bd3360" category="cell">NOT AutoRansomUser4_03162022</block>
-  <block id="317a59d89beb67b7ebe23ef56d3b409e" category="cell">Utilisateur,domaine, CHEMIN, Type d'entité, CHEMIN D'origine</block>
   <block id="e0ac20adce6ffee48c7151b070aa5737" category="cell">Périphérique</block>
   <block id="e0c965c954b5a9fdc33c5b0516799f7d" category="cell">Renvoie tout ce qui ne commence pas par "AutoRansomUser4_03162022"</block>
   <block id="eae639a70006feff484a39363c977e24" category="cell">Domaine</block>
   <block id="3c16a1572c295ef2bbd770516679c559" category="cell">renvoie les résultats où le champ cible est vide</block>
   <block id="012f3ec70fcf8eccc1fce56e4a0b94b6" category="section-title">Chemin d'accès / chemin d'origine recherche</block>
   <block id="64048c881c93933680d02730e9d9ce63" category="paragraph">Les résultats de la recherche avec et sans / seront différents</block>
-  <block id="cc2d816075324608acf344b23cf3e6bb" category="cell">/AutoDir1/AutoFile</block>
-  <block id="7b8af977b90a67e053ff2667a26828fe" category="cell">Fonctionne</block>
-  <block id="d8c67b8ac649f41c2a92277fb6c013ce" category="cell">AutoDir1/AutoFile</block>
   <block id="53ca5edb3205aa3468395e1789114a60" category="cell">Ne fonctionne pas</block>
-  <block id="5ccae7957209ff321acad5f697fee3fb" category="cell">/AutoDir1/AutoFile (Dir1)</block>
-  <block id="63f523ece51ecefa957ca39c100af8cb" category="cell">Dir1 la sous-chaîne partielle ne fonctionne pas</block>
   <block id="1d7531d059e4088a0878ea4eb94d32b6" category="cell">"/AutoDir1/AutoFile03242022"</block>
-  <block id="a38f318e70e36e7cc00c72afcc7e5fc0" category="cell">La recherche exacte fonctionne</block>
-  <block id="7cce9e39c248f665a5808932eb5899ed" category="cell">Auto*03242022</block>
   <block id="888f8ecf6256a9875ff5de4f10099453" category="cell">/AutoDir1/AutoFile03242022 OU /AutoDir1/AutoFile03242022</block>
   <block id="d87dd477d16107bb862f99dedbcacce4" category="cell">NON /AutoDir1/AutoFile03242022</block>
   <block id="867d74d5a7cefddb9c7bc445d7c5b7e1" category="cell">NON /AutoDir1</block>
   <block id="137812c306b0ede761fedbc1e1b88824" category="cell">NON /AutoFile03242022</block>
   <block id="3389dae361af79b04c9c8e7057f60cc6" category="cell">*</block>
-  <block id="8bc6542329adc040b119d4b8973c0d7f" category="cell">Affiche toutes les entrées</block>
   <block id="6170d8ef618bd7f0badc437283eafda2" category="section-title">Modifications de l'activité des utilisateurs du SVM root local</block>
   <block id="9c8deec3d6d59e3389ce0b911bb6d4e8" category="paragraph">Lorsqu'un utilisateur du SVM racine local réalise une activité, l'adresse IP du client sur lequel le partage NFS est monté est à présent prise en compte dans le nom d'utilisateur, qui sera affiché sous la forme root@&lt;ip-address-of-the-client&gt; sur les pages d'activité d'analyse et d'activité des utilisateurs.</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">Par exemple :</block>
@@ -6342,11 +6309,9 @@
   <block id="65524feb61d50c77bb7ba2638a763f8e" category="cell">Certains événements NFS n'apparaissent pas dans l'interface utilisateur.</block>
   <block id="57312d53719f5635163cdff04dd88136" category="cell">Vérifier ce qui suit : 1. Un collecteur d'annuaire utilisateur pour serveur AD avec un jeu d'attributs POSIX doit être exécuté avec l'attribut unixid activé à partir de l'interface utilisateur. 2. Tout utilisateur ayant accès au NFS doit être visible lors d'une recherche dans la page utilisateur de l'interface utilisateur 3. Les événements bruts (événements pour lesquels l'utilisateur n'est pas encore découvert) ne sont pas pris en charge par NFS 4. L'accès anonyme à l'exportation NFS ne sera pas surveillé. 5. Assurez-vous que la version NFS utilisée est inférieure à NFS4.1.</block>
   <block id="9bb3efbd29374edfd5411d3bf02b3b92" category="cell">Après avoir saisi des lettres contenant un caractère générique comme l'astérisque (*) dans les filtres des pages Forensics _All Activity_ ou _Entities_, les pages se chargent très lentement.</block>
-  <block id="a4bef4c7f69527b57f21a4e1042859e6" category="cell">Un astérisque (\*) dans la chaîne de recherche recherche recherche tout. Cependant, les chaînes de caractères génériques comme _*&lt;searchTerm&gt;_ ou _*&lt;searchTerm&gt;*_ entraînent une requête lente. Pour obtenir de meilleures performances, utilisez plutôt des chaînes de préfixe, au format _&lt;searchTerm&gt;*_ (en d'autres termes, ajoutez l'astérisque (*) _après_ un terme de recherche). Exemple : utilisez la chaîne _testvolume*_, plutôt que _*testvolume_ ou _*test*volume_. Utilisez une recherche de répertoire pour voir toutes les activités sous un dossier donné de manière récursive (recherche hiérarchique). Par exemple, /path1/path2/path3/ ou “/path1/path2/path3/” répertoriera toutes les activités récursivement sous /path1/path2/path3. Vous pouvez également utiliser l'option « Ajouter au filtre » sous l'onglet toutes les activités.</block>
   <block id="e7b6c39291eb31c1a3a49eb83274bc99" category="cell">J'ai rencontré une erreur « Echec de la demande avec le code d'état 500/503 » lors de l'utilisation d'un filtre de chemin.</block>
   <block id="62ce499553ccf0270c3a01cc146e46fd" category="cell">Essayez d'utiliser une plage de dates plus petite pour filtrer les enregistrements.</block>
   <block id="1fb20c216d1008aa26dd3559c9f0c877" category="cell">L'interface utilisateur d'analyse effectue un chargement lent des données lors de l'utilisation du filtre _PATH_.</block>
-  <block id="5476c41b7c022f91a0f9bbdf0fc8ce23" category="cell">Pour obtenir des 4 résultats plus rapides, il est recommandé d'utiliser des filtres de chemin d'accès au répertoire (chaîne se terminant par /). Par exemple, si le chemin d'accès au répertoire est /AAA/BBB/CCC/DDD, essayez de rechercher /AAA/BBB/CCC/DDD/ ou “/AAA/BBB/CCC/DDD/” pour charger les données plus rapidement.</block>
   <block id="4ed13073e0e17eddac59bbd07534d454" category="summary">détails de l'alerte</block>
   <block id="2bd2674780743dda05f63eee21fd6a4a" category="doc">Détails de l'alerte</block>
   <block id="98948b727c85548add2cbc9deee42e44" category="paragraph">Cliquez sur le synopsis d'une alerte pour ouvrir la page contenant des informations détaillées pour l'utilisateur et l'alerte qu'il a émise.</block>
@@ -11858,4 +11823,65 @@
   <block id="a59ed6c78eadc966927de4b65adc1801" category="cell">Adresse IP ou FQDN du système de stockage</block>
   <block id="9f329f951728d9fd2dc3c86d970b2e7f" category="cell">Nom d'utilisateur du VASTE stockage</block>
   <block id="50f8e432f3a17936f4fd1dee864d7ff1" category="cell">Mot de passe de VASTE espace de stockage</block>
+  <block id="73b3856e20fbea83dc1573f8203ad6a4" category="section-title">Décembre 2024</block>
+  <block id="250ed06d5f29637379abd3edd8ccb4fe" category="section-title">Présentation de SAN Analyzer : meilleure visibilité pour les charges de travail en mode bloc</block>
+  <block id="49191bde032b0a06cb7d8c4dbf4e0c2b" category="paragraph">LE SAN joue un rôle crucial dans la gestion des charges de travail stratégiques, mais sa complexité peut entraîner des pannes importantes et des perturbations pour les clients. Grâce à *SAN Analyzer* de DII, la gestion du SAN devient plus simple et plus efficace. Cet outil puissant offre une visibilité de bout en bout, en mappant les dépendances entre les ordinateurs virtuels/l'hôte et le réseau vers les LUN et le stockage. Grâce à une carte topologique interactive, SAN Analyzer vous permet de repérer les problèmes, de comprendre les modifications et d'améliorer la compréhension du flux de données. Rationalisez la gestion SAN dans des environnements IT complexes avec SAN Analyzer et augmentez votre visibilité sur les charges de travail en mode bloc.</block>
+  <block id="61d4e461f8538411417e8b8c7ff23e5f" category="inline-image-macro">Carte topologique d'un système de stockage avec l'analyseur SAN</block>
+  <block id="88fcd4bccce9d01f199341d0e9984b17" category="paragraph"><block ref="88fcd4bccce9d01f199341d0e9984b17" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c2681c9d6c3db841d3a049c6bbf8d82a" category="section-title">Optimisez les coûts des ordinateurs virtuels grâce à la mise hors service intelligente de l'hôte et à la récupération des ordinateurs virtuels</block>
+  <block id="a58daa9ad322ff0d5d1bea8593ec6261" category="paragraph">Data Infrastructure Insights vous aide à gérer les coûts d'infrastructure et de licences en analysant l'historique du comportement de l'environnement et en établissant des prévisions à court et à long terme, et en générant des recommandations détaillées pour la désaffectation et la récupération des serveurs virtuels hors tension et inactifs. Ces recommandations vous aident à assurer la stabilité des performances, à libérer de la capacité inutilisée et à réduire l'allocation de mémoire et de processeur.</block>
+  <block id="ed0aa60d6c4877c4d0602878ae188670" category="inline-image-macro">Écran de résumé de l'optimisation VM</block>
+  <block id="c50d71fa323ac9b252a5fd01ae4f0fa8" category="paragraph"><block ref="c50d71fa323ac9b252a5fd01ae4f0fa8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a2400ca2503817e25cc3cce30596342c" category="section-title">Découvrez les informations de journalisation avec la prise en charge des graphiques de temps et des widgets de tableau</block>
+  <block id="6c12a3962815cd3e42c1cdf63f2da995" category="paragraph">Vous pouvez désormais utiliser les graphiques de temps (barre, ligne, zone) pour identifier les tendances et les modèles des données de journal, tels que les erreurs récurrentes ou les pics d'activité, ce qui vous permet d'obtenir des informations précieuses sur le comportement du système au fil du temps. De plus, grâce aux tableaux, vous pouvez désormais inclure les messages de journal directement dans le tableau de bord, offrant ainsi une vue plus complète des détails du journal.</block>
+  <block id="8f54ba922e1fc5987015f85316b5754e" category="inline-image-macro">journalisation des informations dans un tableau de bord</block>
+  <block id="809b6f360aa1cdf48739240c3cd4bd18" category="paragraph"><block ref="809b6f360aa1cdf48739240c3cd4bd18" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="465a0839e1a3baa7c16a3570422d8192" category="section-title">Nouvelle API d'alertes de sécurité des workloads</block>
+  <block id="80d907c59267477074ffff0c4bc596d1" category="inline-link-macro">*Cloudsecure_Forensics.Alerts* API</block>
+  <block id="660f68f674a802a6f62dc93554bb9bc7" category="paragraph">Récupérez les détails des alertes d'analyse avec le nouveau Workload Security <block ref="7e52918b1486a19a183009a277dadce1" category="inline-link-macro-rx"></block>.</block>
+  <block id="9e589be99db071a43e160359db57efaa" category="inline-image-macro">API des alertes d'analyse approfondie pour la sécurité des workloads</block>
+  <block id="3208596ca58c1fef6b7222123babb2fc" category="paragraph"><block ref="3208596ca58c1fef6b7222123babb2fc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9c55b8bf6c1b8aab646e91366d10f4c2" category="list-text">Un graphique montrant _Historique des activités_ (basé sur la plage de temps globale sélectionnée)</block>
+  <block id="977eedf5743a236d4137f46ddfcd8dea" category="list-text">Une liste des données _All Activity_.</block>
+  <block id="ce0a4ef9bdcf713141ba5af92b5449a2" category="list-text">Une liste déroulante regrouper par permet de regrouper l'activité par utilisateur, chemin, type d'entité, etc</block>
+  <block id="2f67a7ee2834facb4c2289f3f9f8a7b0" category="list-text">Un bouton de chemin d'accès commun sera disponible au-dessus du tableau en un clic, et nous pouvons obtenir un panneau coulissant avec les détails du chemin d'accès de l'entité.</block>
+  <block id="2b9b3cac1b8e073b6533f3389ac6ad5f" category="list-text">*Utilisateur* qui a accédé à l'entité avec un lien vers le <block ref="62cf04ad66abc0c5964885d5ae0624ca" category="inline-link-macro-rx"></block> sous forme de panneau coulissant.</block>
+  <block id="06bc22bdba9ef782b6246496ad8db1bd" category="list-text">Le *chemin* est _chemin_entité.</block>
+  <block id="2c20ae8e4eac25c0be12e73a9aea15f8" category="list-text">Le dossier *1er niveau (racine)* est le répertoire racine du chemin d'accès de l'entité en minuscules.</block>
+  <block id="d56292c623739eef9a2dbb8219169c5c" category="list-text">Le dossier *2e niveau* est le répertoire de deuxième niveau du chemin d'entité en minuscules.</block>
+  <block id="21a75329f45abb51a3f768e3caaf47c5" category="list-text">Le dossier *3e niveau* est le répertoire de troisième niveau du chemin d'entité en minuscules.</block>
+  <block id="7b8aa77c3f1deb89d25b5f29c9ce9fe7" category="list-text">Le dossier *4e niveau* est le répertoire de quatrième niveau du chemin d'entité en minuscules.</block>
+  <block id="1cfc47a3f4a9a458bac6b849750a7166" category="list-text">Le *Type d'entité*, y compris l'extension d'entité (c.-à-d. fichier) (.doc, .docx, .tmp, etc.).</block>
+  <block id="6b55724425c02fae17e4fff5b3336a9e" category="list-text">*Périphérique* où résident les entités.</block>
+  <block id="08390553f30a685240a7ae2bc8cdd70c" category="paragraph">La sélection d'une ligne de tableau ouvre un panneau coulissant avec le profil utilisateur dans un onglet et la présentation de l'activité et de l'entité dans un autre onglet.</block>
+  <block id="357b8ac20b345bb5aee27a2fb53ee941" category="inline-image-macro">page d'analyse présentant un slideout affichant l'activité de l'utilisateur</block>
+  <block id="e08e6c5ce4260f7b4811b0e35d723120" category="paragraph"><block ref="e08e6c5ce4260f7b4811b0e35d723120" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ef9a972d6440d68fa4034bb513b1a1f1" category="paragraph">La méthode _Group by_ par défaut est _Activity Forensics_. Si vous sélectionnez une méthode _regrouper par_ différente--par exemple, Type d'entité--la table _regrouper par_ de l'entité s'affiche. Si aucune sélection n'est effectuée, _regrouper par_ *tout* s'affiche.</block>
+  <block id="80662c9452da0395efcb752fc6efd791" category="list-text">Le nombre d'activités s'affiche sous forme de lien hypertexte. Si vous sélectionnez cette option, le regroupement sélectionné sera ajouté sous forme de filtre. Le tableau d'activité sera mis à jour en fonction de ce filtre.</block>
+  <block id="f5048103eec701282d4bd47edb30c0dd" category="list-text">Notez que si vous modifiez le filtre, modifiez la plage horaire ou actualisez l'écran, vous ne pourrez pas revenir aux résultats filtrés sans avoir à nouveau défini le filtre.</block>
+  <block id="a7b9ef6a74f521c07a42dfe2b3ba5984" category="list-text">Le filtre peut être ajouté à partir du panneau coulissant. La valeur est ajoutée aux filtres appropriés dans la liste _Filter by_ supérieure.</block>
+  <block id="a6c33488a3d8762852d55cced3c5bf96" category="list-text">*Chemin* de l'entité - filtres de chemin d'accès de répertoire (chaîne de chemin se terminant par /) jusqu'à 4 répertoires profonds sont recommandés pour des résultats plus rapides. Par exemple, _"/home/userX/nested1/nested2/"_. Voir le tableau ci-dessous pour plus de détails.</block>
+  <block id="abc9548bbf938c1b00d7d7943eea69c6" category="list-text">Dossier de 1er niveau (racine) - répertoire racine de l'entité chemin d'accès en tant que filtres. Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, Home OU Home peut être utilisé.</block>
+  <block id="ef05d086fd7703f59da830094683f26b" category="list-text">Dossier de 2ème niveau - répertoire de 2ème niveau de l'entité filtres de chemin. Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, alors userX OU "userX" peut être utilisé.</block>
+  <block id="d09c77be27888e5715284768b4b56a37" category="list-text">Dossier de 3ème niveau – répertoire de 3ème niveau de l'entité filtres de chemin.</block>
+  <block id="af2e930a257c8313695f9a6d5e9c587c" category="list-text">Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, alors nested1 OU “nested1” peut être utilisé.</block>
+  <block id="73563b05b63d5f6abf9aac631e04c7b1" category="list-text">Dossier de 4e niveau - répertoire répertoire de 4e niveau de l'entité filtres de chemin. Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, alors nested2 OU “nested2” peut être utilisé.</block>
+  <block id="4f1f0488f8878a68e5eb50610b690092" category="cell">Chemin = "/home/userX/nested1/nested2/"</block>
+  <block id="bd12893dcbe3201853dc72f0c6467347" category="cell">Chemin = "/home/userX/nested1/"</block>
+  <block id="1d0c26b23985cb45609efc05c13c3294" category="cell">Path = «/home/userX/nested1/test »</block>
+  <block id="735bdb9fe63d4b5dcefb1fab563b1783" category="cell">Chemin = "/home/userX/nested1/nested2/nested3/"</block>
+  <block id="fa9485df6d085377bf71d0ebb0343af0" category="list-text">De même, les mesures de comptage affichées dans le graphique Historique des activités sont arrondies à 30 minutes lorsque la plage horaire sélectionnée s'étend sur plus de 3 jours.</block>
+  <block id="20b023807d41f295e71a0807936532d8" category="paragraph">Vous pouvez trier les données de l'historique des activités par _heure, utilisateur, IP source, activité,_, _Type d'entité_, dossier de 1er niveau (racine), dossier de 2e niveau, dossier de 3e niveau et dossier de 4e niveau. Par défaut, la table est triée par ordre décroissant _time_, ce qui signifie que les dernières données seront affichées en premier. Le tri est désactivé pour les champs _Device_ et _Protocol_.</block>
+  <block id="3ba465c35d8b2ac685818d0b9a9ba4f7" category="cell">Utilisateur, Type d'entité, périphérique, Volume, chemin d'origine, dossier 1stLevel, dossier 2ndLevel, dossier 3rdLevel, dossier 4thLevel</block>
+  <block id="6273bbd8f9632e4d401abdeec82c9a39" category="cell">Renvoie toutes les ressources commençant par « Auto » et se terminant par « 03172022 »</block>
+  <block id="3917b61839732c75ca8202af25ad4257" category="cell">Utilisateur, Type d'entité, périphérique, Volume, dossier 1stLevel, dossier 2ndLevel, dossier 3rdLevel, dossier 4thLevel</block>
+  <block id="18575a59bc1468900953267afdfc5c81" category="cell">Utilisateur, domaine, Type d'entité, chemin d'origine</block>
+  <block id="7c76f178211d14484e376bc483bd1077" category="cell">Utilisateur,domaine, Type d'entité, chemin d'origine, dossier 1stLevel, dossier 2ndLevel, dossier 3rdLevel, dossier 4thLevel</block>
+  <block id="44144cdf07fe03ca4c4d71ecf2ee830c" category="cell">Seule la recherche exacte fonctionne ; renvoie toutes les activités avec le chemin exact /AutoDir1/AutoFile03242022 (cas non sensible)</block>
+  <block id="f7bf447e3a19a294d681133f069ea62c" category="cell">« /AutoDir1/ »</block>
+  <block id="8431be8aa2f333f025452fc93c584143" category="cell">Fonctionne ; renvoie toutes les activités avec un répertoire de premier niveau correspondant à AutoDir1 (cas non sensible)</block>
+  <block id="dac09bc6942369c2d0f8d36f26d2e201" category="cell">"/AutoDir1/AutoFile03242022/"</block>
+  <block id="17411e5191f440928552bd359518e697" category="cell">Fonctionne ; renvoie toutes les activités avec un répertoire de premier niveau correspondant à AutoDir1 et un répertoire de 2e niveau correspondant à AutoFile03242022 (cas non sensible)</block>
+  <block id="a874dae9695be1c2a6ef02373776f7b7" category="cell">Un astérisque (\*) dans la chaîne de recherche recherche recherche tout. Cependant, les chaînes de caractères génériques comme _*&lt;searchTerm&gt;_ ou _*&lt;searchTerm&gt;*_ entraînent une requête lente. Pour obtenir de meilleures performances, utilisez plutôt des chaînes de préfixe, au format _&lt;searchTerm&gt;*_ (en d'autres termes, ajoutez l'astérisque (*) _après_ un terme de recherche). Exemple : utilisez la chaîne _testvolume*_, plutôt que _*testvolume_ ou _*test*volume_. Utilisez une recherche de répertoire pour voir toutes les activités sous un dossier donné de manière récursive (recherche hiérarchique). Par exemple, “/path1/path2/path3/” répertorie toutes les activités récursivement sous /path1/path2/path3. Vous pouvez également utiliser l'option « Ajouter au filtre » sous l'onglet toutes les activités.</block>
+  <block id="980f8b6539b7c131f66cdde66f81a98f" category="cell">Pour obtenir des résultats plus rapides, il est recommandé d'utiliser des filtres de chemin d'accès au répertoire (chaîne se terminant par /) jusqu'à 4 répertoires profonds. Par exemple, si le chemin d'accès au répertoire est /AAA/BBB/CCC/DDD/, essayez de rechercher “/AAA/BBB/CCC/DDD/” pour charger les données plus rapidement.</block>
 </blocks>

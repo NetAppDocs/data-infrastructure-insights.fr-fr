@@ -20,7 +20,43 @@ NetApp améliore et améliore continuellement ses produits et services. Voici qu
 
 
 
+== Décembre 2024
+
+
+
+=== Présentation de SAN Analyzer : meilleure visibilité pour les charges de travail en mode bloc
+
+LE SAN joue un rôle crucial dans la gestion des charges de travail stratégiques, mais sa complexité peut entraîner des pannes importantes et des perturbations pour les clients. Grâce à *SAN Analyzer* de DII, la gestion du SAN devient plus simple et plus efficace. Cet outil puissant offre une visibilité de bout en bout, en mappant les dépendances entre les ordinateurs virtuels/l'hôte et le réseau vers les LUN et le stockage. Grâce à une carte topologique interactive, SAN Analyzer vous permet de repérer les problèmes, de comprendre les modifications et d'améliorer la compréhension du flux de données. Rationalisez la gestion SAN dans des environnements IT complexes avec SAN Analyzer et augmentez votre visibilité sur les charges de travail en mode bloc.
+
+image:san_analyzer_example_with_panel.png["Carte topologique d'un système de stockage avec l'analyseur SAN"]
+
+
+
+=== Optimisez les coûts des ordinateurs virtuels grâce à la mise hors service intelligente de l'hôte et à la récupération des ordinateurs virtuels
+
+Data Infrastructure Insights vous aide à gérer les coûts d'infrastructure et de licences en analysant l'historique du comportement de l'environnement et en établissant des prévisions à court et à long terme, et en générant des recommandations détaillées pour la désaffectation et la récupération des serveurs virtuels hors tension et inactifs. Ces recommandations vous aident à assurer la stabilité des performances, à libérer de la capacité inutilisée et à réduire l'allocation de mémoire et de processeur.
+
+image:vm_optimization_summary.png["Écran de résumé de l'optimisation VM"]
+
+
+
+=== Découvrez les informations de journalisation avec la prise en charge des graphiques de temps et des widgets de tableau
+
+Vous pouvez désormais utiliser les graphiques de temps (barre, ligne, zone) pour identifier les tendances et les modèles des données de journal, tels que les erreurs récurrentes ou les pics d'activité, ce qui vous permet d'obtenir des informations précieuses sur le comportement du système au fil du temps. De plus, grâce aux tableaux, vous pouvez désormais inclure les messages de journal directement dans le tableau de bord, offrant ainsi une vue plus complète des détails du journal.
+
+image:log_insights_dashboard_example.png["journalisation des informations dans un tableau de bord"]
+
+
+
 == Novembre 2024
+
+
+
+=== Nouvelle API d'alertes de sécurité des workloads
+
+Récupérez les détails des alertes d'analyse avec le nouveau Workload Security link:concept_cs_api.html["*Cloudsecure_Forensics.Alerts* API"].
+
+image:ws_forensics_alerts_api.png["API des alertes d'analyse approfondie pour la sécurité des workloads"]
 
 
 
