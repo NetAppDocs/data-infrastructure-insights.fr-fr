@@ -48,6 +48,15 @@ image:log_insights_dashboard_example.png["journalisation des informations dans u
 
 
 
+=== Gérez les risques de manière proactive grâce au regroupement des événements
+
+Découvrez notre dernière fonctionnalité conçue pour améliorer vos capacités de sécurité et de gestion des ressources ! Grâce à la fonctionnalité avancée d'analyse par groupe et à la prise en charge hiérarchique de plusieurs groupes par groupe, vous pouvez désormais identifier facilement les utilisateurs ayant accédé à des dossiers spécifiques, déterminer les utilisateurs et partages les plus actifs et gérer les risques de manière proactive en suivant les adresses IP des clients actifs. Optimisez votre stockage et votre utilisation de la bande passante en localisant les fichiers et dossiers les plus utilisés, et bénéficiez d'un contrôle accru sur l'accès au système en identifiant les utilisateurs réels.
+
+image:forensics-group-by-example-screen.png["exemple d'écran d'analyse de groupe"]
+
+'''
+
+
 == Novembre 2024
 
 

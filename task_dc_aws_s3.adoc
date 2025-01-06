@@ -119,12 +119,6 @@ AWS est sensible à la casse, tandis que Data Infrastructure Insights n'est pas 
 
 
 
-== Inclure régions supplémentaires
-
-Dans la section AWS Data Collector *Advanced Configuration*, vous pouvez définir le champ *inclure les régions supplémentaires* pour inclure des régions supplémentaires, séparées par une virgule ou un point-virgule. Par défaut, ce champ est défini sur *_US-.*_*, qui collecte sur toutes les régions AWS des États-Unis. Pour collecter sur _toutes_ régions, définissez ce champ sur *_.*_*. Si le champ *inclure les régions supplémentaires* est vide, le collecteur de données collecte les ressources spécifiées dans le champ *région AWS* comme spécifié dans la section *Configuration*.
-
-
-
 == Collecte depuis les comptes enfants AWS
 
 Data Infrastructure Insights prend en charge la collecte de comptes enfants pour AWS dans un collecteur de données AWS unique. La configuration de cette collection est effectuée dans l'environnement AWS :
