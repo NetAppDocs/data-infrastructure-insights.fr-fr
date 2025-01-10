@@ -8769,10 +8769,7 @@
   <block id="b5648f15565fb8185bfc83aaabee9577" category="paragraph">Si votre système d'exploitation n'utilise pas le système :</block>
   <block id="936ff88b3ce432ac2624f7f2bb4998a4" category="paragraph">Pour désinstaller l'agent sur Ubuntu/Debian, dans un terminal Bash, exécutez les opérations suivantes :</block>
   <block id="7f3a9bda6122a676154f73d5edf02232" category="list-text"><block ref="760050cb55c606cd7ef0af21f798bf45" category="inline-link-macro-rx"></block>.</block>
-  <block id="99b7973dda927022b1a7232d7b78e926" category="section-title">Vérification des sommes de contrôle</block>
-  <block id="6a9aa39bb342c83778b90096fb82f44f" category="paragraph">Le programme d'installation de l'agent Data Infrastructure Insights effectue des vérifications d'intégrité, mais certains utilisateurs peuvent vouloir effectuer leurs propres vérifications avant d'installer ou d'appliquer des artéfacts téléchargés. Pour ce faire, téléchargez le programme d'installation et générez une somme de contrôle pour le package téléchargé, puis comparez la somme de contrôle à la valeur indiquée dans les instructions d'installation.</block>
   <block id="1078df24543dad61e1b5b51f611f5b0f" category="section-title">Téléchargez le programme d'installation sans l'installer</block>
-  <block id="48feb91430f93bd8ac9740e9cdc40c75" category="paragraph">Pour effectuer une opération de téléchargement uniquement (par opposition au téléchargement et à l'installation par défaut), les utilisateurs peuvent modifier la commande d'installation de l'agent obtenue à partir de l'interface utilisateur et supprimer l'option "installation" de fin.</block>
   <block id="deadee5e2cfce7600cfd5def40a7d618" category="paragraph">Voici la procédure à suivre :</block>
   <block id="8c386e0a7a8cfc20ef9a26dacd925e69" category="list-text">Copiez l'extrait de code Agent installer comme indiqué.</block>
   <block id="225b18b0098145b352b8fbf6c04e8098" category="list-text">Au lieu de coller le fragment dans une fenêtre de commande, collez-le dans un éditeur de texte.</block>
@@ -8786,14 +8783,8 @@
   <block id="37756806bad02e3e8fb3d5413278c336" category="paragraph">La commande de téléchargement uniquement télécharge tous les artefacts requis depuis Data Infrastructure Insights vers le répertoire de travail. Les artefacts incluent, mais ne se limitent pas aux éléments suivants :</block>
   <block id="8d4a361a3f25b78818c569d8f15cf4a6" category="list-text">un script d'installation</block>
   <block id="b015398c226e1e3576258432ece31819" category="list-text">un fichier d'environnement</block>
-  <block id="004cac3ce7d67014b5fadcffaf9b5b70" category="list-text">Fichiers YAML</block>
-  <block id="9f32134bbefffdc9df70a2d73c2df6a6" category="list-text">un fichier de somme de contrôle (se terminant par sha256.signed ou sha256.ps1)</block>
-  <block id="4f1c754cd67cd57cebe0be2f5e8638a4" category="paragraph">Le script d'installation, le fichier d'environnement et les fichiers YAML peuvent être vérifiés à l'aide d'une inspection visuelle.</block>
-  <block id="d8f6d626cfe2a4f97d97ff93d95db51b" category="section-title">Générer une valeur de somme de contrôle</block>
   <block id="d1703bc5bb53c90ffbbae52dfe829603" category="paragraph">Pour générer la valeur de checksum, exécutez la commande suivante pour votre plateforme appropriée :</block>
   <block id="9374ddadb9776b458a2963573b22f63d" category="list-text">RHEL/Ubuntu :</block>
-  <block id="aacd43790bd404cab1a350cb047a9a9d" category="section-title">Vérifier la somme de contrôle</block>
-  <block id="43e3c65a555911ad6d7235d9e9206e4c" category="paragraph">Extraire la somme de contrôle attendue du fichier de somme de contrôle</block>
   <block id="47a6cd89e04d0d805a75aa0fe5822c20" category="list-text">Non Windows :</block>
   <block id="b59ea01f26635c31c3c1df660848f6c8" category="section-title">Installez l'image téléchargée</block>
   <block id="6c32334bfce9f857b0fdbdca68040a0b" category="paragraph">Une fois tous les artefacts vérifiés de manière satisfaisante, l'installation de l'agent peut être lancée en exécutant :</block>
@@ -11888,4 +11879,12 @@
   <block id="d932f771e537d16693bed2e69269a746" category="paragraph"><block ref="d932f771e537d16693bed2e69269a746" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ee0b2f1c8ad7945cf603e8d752a5e7b5" category="inline-link-macro">Éditions Data Infrastructure Insights</block>
   <block id="bbf9080a1bf1fb2f62558ce683d64be0" category="paragraph">Pour une comparaison complète des fonctionnalités disponibles dans Data Infrastructure Insights Basic Edition et Premium Edition, reportez-vous à la <block ref="49bb501f6c401ae5b06c3dbe5fc987bd" category="inline-link-macro-rx"></block> page.</block>
+  <block id="3bbdd1e5a1fbf0d58680e594b8806722" category="section-title">Vérification des sommes de contrôle du package Telegraf</block>
+  <block id="7ff5578ba477d9e2321cffdc188dd439" category="paragraph">Le programme d'installation de l'agent Data Infrastructure Insights effectue des vérifications d'intégrité, mais certains utilisateurs peuvent vouloir effectuer leurs propres vérifications avant d'installer le binaire Telegraf téléchargé. Pour ce faire, téléchargez le programme d'installation et générez une somme de contrôle pour le package téléchargé, puis comparez la somme de contrôle à la valeur indiquée dans les instructions d'installation.</block>
+  <block id="741ebc51b7127a27c632897c49b71ad3" category="paragraph">Pour effectuer une opération de téléchargement uniquement (par opposition à la commande de téléchargement et d'installation par défaut), les utilisateurs peuvent modifier la commande d'installation de l'agent obtenue à partir de l'interface utilisateur et supprimer l'option « installer ».</block>
+  <block id="8b5391cb0617a6870147a0c34743013d" category="list-text">Binaire Telegraf</block>
+  <block id="6b15d8f349fa2e771a92e4131bcae2d2" category="list-text">Une signature pour le binaire Telegraf</block>
+  <block id="b7e85347cdffb5889c57e4b1ad785a2e" category="list-text">un certificat public pour vérifier la signature binaire</block>
+  <block id="bfc63dcde995168de645c7c0b1b67357" category="paragraph">Le snippet d’installation téléchargé et copié depuis DII contrôle automatiquement le script d’installation et la signature du binaire telegraf est vérifiée par le script d’installation.</block>
+  <block id="26f2872f4049fcba9927c1b41d6502d3" category="section-title">Vérifier la valeur de la somme de contrôle</block>
 </blocks>
