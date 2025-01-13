@@ -88,6 +88,8 @@ sidebar:
         url: "/task_query_copy_table_values.html"
       - title: Interrogation des journaux
         url: "/concept_log_explorer.html"
+      - title: Identification des périphériques inactifs
+        url: "/task_identify_inactive_devices.html"
     - title: Visibilité
       entries:
       - title: Présentation

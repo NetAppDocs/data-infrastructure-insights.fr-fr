@@ -1,21 +1,18 @@
 ---
 sidebar: sidebar 
 permalink: task_identify_inactive_devices.html 
-keywords: inactive, device, 
+keywords: inactive, device, remove, removing, identify, identifying 
 summary: 'L"identification des périphériques inactifs vous permet de choisir de les supprimer ou de les attribuer à un rôle actif.' 
 ---
 = Identification des périphériques inactifs
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -24,10 +21,12 @@ L'identification des ressources dont vous disposez et de qui les utilise est ess
 Procédez comme suit pour identifier les ressources inactives.
 
 .Étapes
-* Naviguez jusqu'à *Explorer -> +Nouvelle requête métrique*.
+* Naviguez jusqu'à *observabilité > Explorer -> +Nouvelle requête métrique*.
 * Sélectionnez _Storage_ dans la liste déroulante.
 * Cliquez sur l'engrenage et ajoutez _isActive_ comme colonne.
 +
 Les lignes affichant une vérification sont actives. "X" indique les périphériques inactifs.
 
 
+
+Pour supprimer des périphériques inactifs, sélectionnez simplement les périphériques à supprimer et, dans la liste déroulante *actions groupées*, sélectionnez _Supprimer les périphériques inactifs_.

@@ -679,11 +679,9 @@
   <block id="14af2cecff51d4bd977845145cc871e8" category="list-text">*Supprimé* : un collecteur de données qui a été supprimé et n'est plus disponible.</block>
   <block id="b92e6e167ffd0f1968a046d49559d1cd" category="list-text">Unité d'acquisition : ordinateur dédié à l'hébergement de collecteurs de données, généralement une machine virtuelle. Cet ordinateur se trouve généralement dans le même centre de données/VPC que les éléments surveillés.</block>
   <block id="c5b4625b23c5673b268b9b686102faa0" category="list-text">Source de données : module de communication avec une pile matérielle ou logicielle. Il se compose d'une configuration et d'un code qui s'exécutent sur l'ordinateur au pour communiquer avec le périphérique.</block>
-  <block id="14f8a78e828f1a5ed0a16f4eb166171e" category="summary">L'identification des périphériques inactifs vous permet de choisir de les supprimer ou de les attribuer à un rôle actif.</block>
   <block id="ee5c6c936b3e5e6b3191a941d5161f88" category="doc">Identification des périphériques inactifs</block>
   <block id="dedb4128ca8f8589aeee2da1198fdc45" category="paragraph">L'identification des ressources dont vous disposez et de qui les utilise est essentielle pour « dimensionner correctement » et libérer l'infrastructure inutilisée. Vous pouvez facilement réaffecter ou désaffecter les ressources sous-utilisées et éviter ainsi les achats inutiles.</block>
   <block id="89335488274d94cea3defd958dbbabbe" category="paragraph">Procédez comme suit pour identifier les ressources inactives.</block>
-  <block id="62a2ac40719f6cb31d5e1ad43d9d8a19" category="list-text">Naviguez jusqu'à *Explorer -&gt; +Nouvelle requête métrique*.</block>
   <block id="9ec73c52f582999e7cc8d920ca844c81" category="list-text">Sélectionnez _Storage_ dans la liste déroulante.</block>
   <block id="4c6af067d4990a4c05731f55b8095467" category="list-text">Cliquez sur l'engrenage et ajoutez _isActive_ comme colonne.</block>
   <block id="49eec5d17a233960170b22a7e35d15a7" category="paragraph">Les lignes affichant une vérification sont actives. "X" indique les périphériques inactifs.</block>
@@ -11891,4 +11889,26 @@
   <block id="39dfb1596c6a6cd5efc77677cffa9f47" category="cell">Correspondance exacte où la valeur du chemin correspond à /home/userX/nested1/test</block>
   <block id="67796eee76b434ba7f714f24fce77a4c" category="cell">La recherche exacte sera plus lente que les recherches dans l'annuaire.</block>
   <block id="ee884ab6f8aeb5114dc04fcb169533de" category="section-title">Recherche de chemin</block>
+  <block id="2cc37e7dae91aa6d162030f273b8b089" category="section-title">Création et utilisation de tokens d'accès d'API</block>
+  <block id="f7e5cf33ae8a7c09bd73c6eb95b3e017" category="paragraph">Pour créer un jeton d'accès API pour l'ingestion de données Telegraf, effectuez l'une des opérations suivantes :</block>
+  <block id="8ddcacd36bfaa54f9de9d8d1c6d98ca9" category="section-title">Créer via la page d'installation du Data Collector</block>
+  <block id="394d78dd95d6065caac482adbe22a898" category="list-text">Accédez à la page d'installation du Data Collector correspondant à la plate-forme que vous souhaitez utiliser (Windows, Linux).</block>
+  <block id="7db0aa7259305c6d7d0e72d5ca0ebe3e" category="list-text">Créez un jeton à l'aide du bouton + jeton d'accès API.</block>
+  <block id="eaaf6f42e491bead6370a5960ab7260c" category="list-text">Entrez un nom et cliquez sur Enregistrer.</block>
+  <block id="0972f446b6a6a91283e10881d0cd5cf0" category="list-text">Le nom du jeton doit maintenant être sélectionné dans la liste déroulante et sera utilisé lors de l'installation du collecteur.</block>
+  <block id="4cb3c725652f3200a0496010ad323294" category="section-title">Créez manuellement un jeton d'accès API</block>
+  <block id="cc7ffe0790f9f9e2c594de1ca95da934" category="list-text">Accédez à Admin&gt; API Access.</block>
+  <block id="f567a7e9fa5b6ea07dfbcb1f10ba898f" category="list-text">Cliquez sur + jeton d'accès API.</block>
+  <block id="da2b1a111c6e52a8a048f3f7d02e27f5" category="list-text">Entrez un nom et éventuellement une description.</block>
+  <block id="2a5f374bd17838390e94539cf1c9edc6" category="list-text">Sous « quel type d'API ce token sera-t-il utilisé pour appeler ? », sélectionnez « ingestion des données » uniquement, puis désélectionnez « unité d'acquisition ».</block>
+  <block id="bde31c4af787b8aa67aa8f46d9927e06" category="list-text">Sous autorisations, sélectionnez lecture/écriture.</block>
+  <block id="47513702e119e549693050eff5813577" category="list-text">Désélectionnez « faire pivoter automatiquement les tokens pour Kubernetes ».</block>
+  <block id="e1fda48afafafca9c77b96f3325e10f1" category="paragraph">Pour utiliser votre jeton d'accès à l'API nouvellement créé, sélectionnez-le dans la liste déroulante « Sélectionner un jeton d'accès à l'API existant ou en créer un nouveau » de la page du programme d'installation. Veuillez noter que seuls les jetons possédant les propriétés suivantes peuvent être utilisés :</block>
+  <block id="9533e239d3608e18a0887fa1e16eeb68" category="list-text">Type d'API : uniquement « Data ingestion »</block>
+  <block id="80ca9e629a03eaeba4e8aee7e74f24d0" category="list-text">Autorisations : lecture/écriture</block>
+  <block id="4b6539abc7c077e53508d1262f8b50a0" category="list-text">Rotation automatique Kubernetes : désactivée</block>
+  <block id="dc404ee30c75f557f651d109560394f2" category="summary">L'identification des périphériques inactifs vous permet de choisir de les supprimer ou de les attribuer à un rôle actif.</block>
+  <block id="ca351e1a429ee72dbdb2061c22743ef6" category="list-text">Naviguez jusqu'à *observabilité &gt; Explorer -&gt; +Nouvelle requête métrique*.</block>
+  <block id="5e7f24385025eba3461014d3d964455b" category="paragraph">Pour supprimer des périphériques inactifs, sélectionnez simplement les périphériques à supprimer et, dans la liste déroulante *actions groupées*, sélectionnez _Supprimer les périphériques inactifs_.</block>
+  <block id="72a442c57900f55848aa4acb856a507d" category="sidebar">Identification des périphériques inactifs</block>
 </blocks>

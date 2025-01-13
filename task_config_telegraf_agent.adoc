@@ -442,6 +442,41 @@ Windows :
  .\cloudinsights-windows.ps1 -install
 
 
+== Création et utilisation de tokens d'accès d'API
+
+Pour créer un jeton d'accès API pour l'ingestion de données Telegraf, effectuez l'une des opérations suivantes :
+
+
+
+=== Créer via la page d'installation du Data Collector
+
+. Accédez à la page d'installation du Data Collector correspondant à la plate-forme que vous souhaitez utiliser (Windows, Linux).
+. Créez un jeton à l'aide du bouton + jeton d'accès API.
+. Entrez un nom et cliquez sur Enregistrer.
+. Le nom du jeton doit maintenant être sélectionné dans la liste déroulante et sera utilisé lors de l'installation du collecteur.
+
+
+
+
+=== Créez manuellement un jeton d'accès API
+
+. Accédez à Admin> API Access.
+. Cliquez sur + jeton d'accès API.
+. Entrez un nom et éventuellement une description.
+. Sous « quel type d'API ce token sera-t-il utilisé pour appeler ? », sélectionnez « ingestion des données » uniquement, puis désélectionnez « unité d'acquisition ».
+. Sous autorisations, sélectionnez lecture/écriture.
+. Désélectionnez « faire pivoter automatiquement les tokens pour Kubernetes ».
+
+
+Pour utiliser votre jeton d'accès à l'API nouvellement créé, sélectionnez-le dans la liste déroulante « Sélectionner un jeton d'accès à l'API existant ou en créer un nouveau » de la page du programme d'installation. Veuillez noter que seuls les jetons possédant les propriétés suivantes peuvent être utilisés :
+
+* Type d'API : uniquement « Data ingestion »
+* Autorisations : lecture/écriture
+* Rotation automatique Kubernetes : désactivée
+
+
+
+
 == Dépannage
 
 Certaines choses à essayer si vous rencontrez des problèmes lors de la configuration d'un agent :
