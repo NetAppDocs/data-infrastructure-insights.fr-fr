@@ -20,6 +20,27 @@ NetApp améliore et améliore continuellement ses produits et services. Voici qu
 
 
 
+== Janvier 2025
+
+
+
+=== Gérez les risques de manière proactive grâce au regroupement des événements
+
+Découvrez notre dernière fonctionnalité conçue pour améliorer vos capacités de sécurité et de gestion des ressources ! Grâce à la fonctionnalité avancée de groupe par groupe et à la prise en charge hiérarchique de plusieurs groupes par groupe, vous pouvez désormais identifier facilement les utilisateurs ayant accédé à des dossiers spécifiques, déterminer les utilisateurs et partages les plus actifs et gérer les risques de manière proactive en suivant les adresses IP des clients actifs. Optimisez votre stockage et votre utilisation de la bande passante en localisant les fichiers et dossiers les plus utilisés et en améliorant le contrôle de l'accès au système en identifiant les utilisateurs.
+
+image:forensics_activity_example.png["exemple de suivi d'activité d'analyse"]
+
+
+
+=== Contrôle d'accès au tableau de bord
+
+Data Infrastructure Insights vous permet désormais de mieux contrôler l'accès aux tableaux de bord que vous créez. Vous pouvez choisir qui modifier vos graphiques. Vous contrôlez l'exposition aux informations potentiellement sensibles. Vous travaillez encore sur un tableau de bord qui n'est pas prêt pour une visibilité générale ? Vous pouvez le garder privé jusqu'à ce que vous soyez prêt à le partager.
+
+image:Dashboard_Sharing_Options.png["options de partage du tableau de bord"]
+
+'''
+
+
 == Décembre 2024
 
 
@@ -45,14 +66,6 @@ image:vm_optimization_summary.png["Écran de résumé de l'optimisation VM"]
 Vous pouvez désormais utiliser les graphiques de temps (barre, ligne, zone) pour identifier les tendances et les modèles des données de journal, tels que les erreurs récurrentes ou les pics d'activité, ce qui vous permet d'obtenir des informations précieuses sur le comportement du système au fil du temps. De plus, grâce aux tableaux, vous pouvez désormais inclure les messages de journal directement dans le tableau de bord, offrant ainsi une vue plus complète des détails du journal.
 
 image:log_insights_dashboard_example.png["journalisation des informations dans un tableau de bord"]
-
-
-
-=== Gérez les risques de manière proactive grâce au regroupement des événements
-
-Découvrez notre dernière fonctionnalité conçue pour améliorer vos capacités de sécurité et de gestion des ressources ! Grâce à la fonctionnalité avancée d'analyse par groupe et à la prise en charge hiérarchique de plusieurs groupes par groupe, vous pouvez désormais identifier facilement les utilisateurs ayant accédé à des dossiers spécifiques, déterminer les utilisateurs et partages les plus actifs et gérer les risques de manière proactive en suivant les adresses IP des clients actifs. Optimisez votre stockage et votre utilisation de la bande passante en localisant les fichiers et dossiers les plus utilisés, et bénéficiez d'un contrôle accru sur l'accès au système en identifiant les utilisateurs réels.
-
-image:forensics-group-by-example-screen.png["exemple d'écran d'analyse de groupe"]
 
 '''
 

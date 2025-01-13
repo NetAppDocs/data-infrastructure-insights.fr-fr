@@ -246,8 +246,6 @@ sidebar:
       entries:
       - title: Activités médico-légales - toutes les activités
         url: "/forensic_activity_history.html"
-      - title: Activités médico-légales - entités
-        url: "/forensic_entity_detail.html"
       - title: Utilisateurs
         url: "/forensic_user_overview.html"
     - title: Stratégies de réponse automatisées

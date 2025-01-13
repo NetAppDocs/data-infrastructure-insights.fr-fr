@@ -55,7 +55,7 @@ Le tableau _*toutes les activités*_ indique les informations suivantes. Notez q
 ** *Autre changement* - tout autre événement qui n'est pas décrit ci-dessus. Tous les événements non mappés sont mappés au type d'activité “autre changement”. Applicable aux fichiers et dossiers.
 
 
-* Le *chemin* est _chemin_entité.
+* Le *chemin* est _chemin_entité. Il doit s'agir du chemin exact de l'entité (par exemple, "_/home/userX/nested1/nested2/abc.txt_") OU DE la partie répertoire du chemin d'accès pour la recherche récursive (par exemple, "_/home/userX/nested1/nested2/_"). REMARQUE : les schémas de chemin Regex (par exemple, _userX_) NE sont PAS autorisés ici. Il est également possible de spécifier des filtres de niveau dossier de chemin d'accès individuels, comme indiqué ci-dessous, pour le filtrage de chemin d'accès.
 * Le dossier *1er niveau (racine)* est le répertoire racine du chemin d'accès de l'entité en minuscules.
 * Le dossier *2e niveau* est le répertoire de deuxième niveau du chemin d'entité en minuscules.
 * Le dossier *3e niveau* est le répertoire de troisième niveau du chemin d'entité en minuscules.
@@ -112,7 +112,7 @@ Vous pouvez filtrer les données d'activité Forensic en utilisant les champs su
 Les champs suivants sont soumis à des règles de filtrage spéciales :
 
 * *Type d'entité*, avec l'extension entité (fichier) - il est préférable de spécifier le type d'entité exact entre guillemets. Par exemple _“txt”_.
-* *Chemin* de l'entité - filtres de chemin d'accès de répertoire (chaîne de chemin se terminant par /) jusqu'à 4 répertoires profonds sont recommandés pour des résultats plus rapides. Par exemple, _"/home/userX/nested1/nested2/"_. Voir le tableau ci-dessous pour plus de détails.
+* *Chemin* de l'entité - il doit s'agir du chemin exact de l'entité (par exemple, "_/home/userX/nested1/nested2/abc.txt_") OU DE la partie répertoire du chemin pour la recherche récursive (par exemple, "_/home/userX/nested1/nested2/_"). REMARQUE : les schémas de chemin Regex (par exemple, *userX*) NE sont PAS autorisés ici. Pour des résultats plus rapides, il est recommandé d'utiliser des filtres de chemin d'accès au répertoire (chaîne de chemin se terminant par /) jusqu'à 4 répertoires en profondeur. Par exemple, "_/home/userX/nested1/nested2/_". Voir le tableau ci-dessous pour plus de détails.
 * Dossier de 1er niveau (racine) - répertoire racine de l'entité chemin d'accès en tant que filtres. Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, Home OU Home peut être utilisé.
 * Dossier de 2ème niveau - répertoire de 2ème niveau de l'entité filtres de chemin. Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, alors userX OU "userX" peut être utilisé.
 * Dossier de 3ème niveau – répertoire de 3ème niveau de l'entité filtres de chemin.
@@ -145,7 +145,7 @@ Les champs précédents sont soumis aux éléments suivants lors du filtrage :
 | Chemin = "/home/userX/nested1/" | Recherche récursive de tous les fichiers et dossiers sous le répertoire donné | Rapides | Les recherches de répertoire jusqu'à 4 répertoires seront rapides. 
 
 
-| Path = «/home/userX/nested1/test » | Recherche récursive de tous les fichiers et dossiers sous le chemin regex donné(test* peut signifier fichier OU répertoire OU les deux) | Plus lent | La recherche de Regex répertoire+fichier sera plus lente que les recherches d'annuaire. 
+| Path = «/home/userX/nested1/test » | Correspondance exacte où la valeur du chemin correspond à /home/userX/nested1/test | Plus lent | La recherche exacte sera plus lente que les recherches dans l'annuaire. 
 
 
 | Chemin = "/home/userX/nested1/nested2/nested3/" | Recherche récursive de tous les fichiers et dossiers sous le répertoire donné | Plus lent | La recherche dans plus de 4 répertoires est plus lente. 
@@ -230,7 +230,7 @@ L'historique des activités est conservé pendant 13 mois pour les environnement
 |===
 
 
-== Chemin d'accès / chemin d'origine recherche
+== Recherche de chemin
 
 Les résultats de la recherche avec et sans / seront différents
 
