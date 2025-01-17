@@ -6646,9 +6646,7 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Source ouverte</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Les fichiers de notification fournissent des informations sur les droits d'auteur et les licences de tiers utilisés dans le logiciel NetApp.</block>
   <block id="c7f50a9f133f1f71a9f91fe12f7c7f7e" category="inline-link-macro">Avis concernant les informations concernant l'infrastructure de données (anciennement Cloud Insights)</block>
-  <block id="552bbf7b91025a7ce4d57570549e5d96" category="paragraph"><block ref="552bbf7b91025a7ce4d57570549e5d96" category="inline-link-macro-rx"></block></block>
   <block id="4d8cd5134c1193f4d301c7e6bcaa38a7" category="inline-link-macro">Remarque concernant la sécurité des charges de travail (anciennement Cloud Secure)</block>
-  <block id="536041084bffaf10e48c1cc03ccee7a2" category="paragraph"><block ref="536041084bffaf10e48c1cc03ccee7a2" category="inline-link-macro-rx"></block></block>
   <block id="af943d1d81f743ab6e7c9bcbe3a8c6e9" category="summary">Un exemple de fichier YAML pour NKMO Clusterrole</block>
   <block id="94e0aa0f534273005cdbd647f8f4eab8" category="doc">Exemple YAML de rôle de cluster NKMO</block>
   <block id="38836a8a56831bc3569901f9b16d3eaf" category="paragraph">Le composant _kubectl_ de l'opérateur de surveillance NetApp Kubernetes (NKMO) doit être configuré avec l'accès aux objets kubernetes suivants, au minimum : agents, rôles de cluster, liaisons de clusters, définitions de ressources personnalisées, déploiements, espaces de noms, rôles, liaisons, secrets, comptes de service, et services netapp. Vous trouverez ci-dessous un exemple de rôle de cluster avec ces privilèges minimaux.</block>
@@ -11917,4 +11915,6 @@
   <block id="2f461803a8b3a27284482a32459a1078" category="cell">ee ce <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block>. Le paramètre _Unprotected_ indique à l'opérateur de surveillance Kubernetes d'exécuter Telegraf avec l'<block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block>indicateur.</block>
   <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify</block>
   <block id="3008cd3125cccc003fa13335717e556e" category="cell">Si telegraf ne parvient pas à vérifier le certificat en raison de l'absence de SAN IP, essayez d'activer le saut de vérification</block>
+  <block id="3a6957a9f0cd14c98be3bfcbf85db668" category="paragraph"><block ref="3a6957a9f0cd14c98be3bfcbf85db668" category="inline-link-macro-rx"></block></block>
+  <block id="9e43104f0687bd3a308759c5411641d7" category="paragraph"><block ref="9e43104f0687bd3a308759c5411641d7" category="inline-link-macro-rx"></block></block>
 </blocks>
