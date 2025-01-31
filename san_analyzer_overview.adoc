@@ -25,3 +25,11 @@ image:san_analyzer_example_with_panel.png["Carte topologique d'un système de st
 
 
 == Explorer les connexions entre vos ressources
+
+Sélectionnez *observabilité > analyse > analyseur SAN* pour afficher l'analyseur SAN. Définissez un filtre pour l'application, l'hôte, la structure et/ou le stockage. La carte des objets s'affiche, affichant les objets connectés. Passez le curseur sur un objet pour afficher les mesures de trafic pour ces connexions.
+
+image:san_analyzer_traffic_metrics.png[""]
+
+Cliquer sur un objet ou un groupe ouvre un panneau coulissant fournissant des détails supplémentaires sur l'objet et ses connexions. La diapositive comprend des onglets présentant un résumé, des détails de port et des informations de zone, le cas échéant.
+
+image:san_analyzer_slideout_example.png[""]
