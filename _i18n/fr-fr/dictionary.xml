@@ -11927,4 +11927,16 @@
   <block id="fde6f74861c217b576ec5d769f2467c3" category="paragraph"><block ref="fde6f74861c217b576ec5d769f2467c3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3cfbb427bd17b95ae08e5597561217ef" category="paragraph">Cliquer sur un objet ou un groupe ouvre un panneau coulissant fournissant des détails supplémentaires sur l'objet et ses connexions. La diapositive comprend des onglets présentant un résumé, des détails de port et des informations de zone, le cas échéant.</block>
   <block id="7512260392fef04bf211fab22007addd" category="paragraph"><block ref="7512260392fef04bf211fab22007addd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18082cdb9388e2686e081dd6012e47b8" category="summary">Vous déterminez si un tableau de bord que vous créez est public ou privé.</block>
+  <block id="cc5c681651d638257ae03658c963c7c6" category="doc">Gestion des accès au tableau de bord</block>
+  <block id="571ad98bb1054a211a5d3fa3a3240265" category="paragraph">Data Infrastructure Insights vous permet désormais de mieux contrôler l'accès aux tableaux de bord que vous créez. Vous pouvez choisir qui modifier vos graphiques. Vous contrôlez l'exposition aux informations potentiellement sensibles. Garder un tableau de bord privé vous permet de finaliser vos visualisations jusqu'à ce qu'elles soient prêtes à être utilisées par d'autres personnes de votre organisation.</block>
+  <block id="505e6238dfdc62d1b4bbdf930fa887b8" category="inline-image-macro">options de partage du tableau de bord, largeur=300</block>
+  <block id="43b5d7a5affce9056fb3d7ec4b82fe17" category="paragraph"><block ref="43b5d7a5affce9056fb3d7ec4b82fe17" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="547a803d844f9925f62c57d49f10caf6" category="paragraph">Par défaut, lorsque vous créez un nouveau tableau de bord, celui-ci n'est visible que par vous, son créateur. Aucun autre utilisateur ne peut voir ou modifier le tableau de bord.</block>
+  <block id="78d12ef818f574226b0780765511e2d5" category="paragraph">Lorsque vous avez finalisé votre tableau de bord, vous pouvez choisir d'autoriser d'autres membres de votre organisation à le consulter. Pour partager un tableau de bord, dans la liste du tableau de bord, sélectionnez _Share_ dans le menu de droite.</block>
+  <block id="8e561a2090f27ed80a24e59dff11dcce" category="inline-image-macro">partage d'accès au tableau de bord à partir du menu</block>
+  <block id="5fc6afe4cfc7bc7e58ad6e7119812663" category="paragraph"><block ref="5fc6afe4cfc7bc7e58ad6e7119812663" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16442b20a2319083af65dedb2d7e942e" category="paragraph">Vous pouvez choisir de partager le tableau de bord avec tout le monde ou de sélectionner des utilisateurs, avec les autorisations Modifier ou lecture seule.</block>
+  <block id="1dcba5cd7d6049883623c0653a2031f6" category="inline-image-macro">Listes déroulantes permettant de partager un tableau de bord avec l'autorisation Modifier ou Lire</block>
+  <block id="ac0466f21ebde71eed9f3673b4c7da1b" category="paragraph"><block ref="ac0466f21ebde71eed9f3673b4c7da1b" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

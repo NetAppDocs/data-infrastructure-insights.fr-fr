@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: dashboard_access_management.html 
+summary: Vous déterminez si un tableau de bord que vous créez est public ou privé. 
+keywords: dashboard, public, shared, private 
+---
+= Gestion des accès au tableau de bord
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:toclevels: 1
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights vous permet désormais de mieux contrôler l'accès aux tableaux de bord que vous créez. Vous pouvez choisir qui modifier vos graphiques. Vous contrôlez l'exposition aux informations potentiellement sensibles. Garder un tableau de bord privé vous permet de finaliser vos visualisations jusqu'à ce qu'elles soient prêtes à être utilisées par d'autres personnes de votre organisation.
+
+image:Dashboard_Sharing_Options.png["options de partage du tableau de bord, largeur=300"]
+
+Par défaut, lorsque vous créez un nouveau tableau de bord, celui-ci n'est visible que par vous, son créateur. Aucun autre utilisateur ne peut voir ou modifier le tableau de bord.
+
+Lorsque vous avez finalisé votre tableau de bord, vous pouvez choisir d'autoriser d'autres membres de votre organisation à le consulter. Pour partager un tableau de bord, dans la liste du tableau de bord, sélectionnez _Share_ dans le menu de droite.
+
+image:dashboard_access_share_menu.png["partage d'accès au tableau de bord à partir du menu"]
+
+Vous pouvez choisir de partager le tableau de bord avec tout le monde ou de sélectionner des utilisateurs, avec les autorisations Modifier ou lecture seule.
+
+image:dashboard_access_share_drop-down.png["Listes déroulantes permettant de partager un tableau de bord avec l'autorisation Modifier ou Lire"]
