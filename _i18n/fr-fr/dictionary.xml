@@ -11939,4 +11939,15 @@
   <block id="16442b20a2319083af65dedb2d7e942e" category="paragraph">Vous pouvez choisir de partager le tableau de bord avec tout le monde ou de sélectionner des utilisateurs, avec les autorisations Modifier ou lecture seule.</block>
   <block id="1dcba5cd7d6049883623c0653a2031f6" category="inline-image-macro">Listes déroulantes permettant de partager un tableau de bord avec l'autorisation Modifier ou Lire</block>
   <block id="ac0466f21ebde71eed9f3673b4c7da1b" category="paragraph"><block ref="ac0466f21ebde71eed9f3673b4c7da1b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="98465e4573c2849304e85edaeef13370" category="summary">Optimisation des machines virtuelles</block>
+  <block id="761ab7bf046ac25fda0da8f1af542322" category="paragraph">Pour commencer, accédez à observabilité &gt; analyse &gt; optimisation des machines virtuelles. Vous pouvez afficher un récapitulatif des économies potentielles réparties selon le nombre de cœurs et les économies de stockage. Vous pouvez définir des filtres pour la mise au point par data Center, Virtual Center IP ou cluster, ou définir vos propres filtres pour affiner davantage votre mise au point.</block>
+  <block id="045386d087f10e1f0ae1e3bf75624afe" category="inline-image-macro">présentation de l'optimisation des vm</block>
+  <block id="7110454d98ba958eec64260bbc5dec80" category="paragraph"><block ref="7110454d98ba958eec64260bbc5dec80" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="03f6f40a2cf552119978ffce0238086f" category="paragraph">L'onglet désaffectation de l'hyperviseur affiche les économies potentielles que vous pouvez réaliser en fonction de la stratégie d'optimisation que vous sélectionnez. Chaque stratégie utilise des seuils différents pour déterminer les économies potentielles.</block>
+  <block id="6e3975fe060cfaed5d52ef53dce4935b" category="paragraph">Sélectionnez un cluster dans la liste pour ouvrir un panneau coulissant avec des détails sur l'utilisation du CPU et de la mémoire pour le cluster.</block>
+  <block id="f76142da98b557ade1c2d52abf0a207b" category="inline-image-macro">onglet d'optimisation de l'hyperviseur</block>
+  <block id="bfea8ae8feffd62a3b499ac0dc5015ac" category="paragraph"><block ref="bfea8ae8feffd62a3b499ac0dc5015ac" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0dc236d363c2d7f668f1ee1391ffab69" category="paragraph">L'onglet récupération de machines virtuelles fournit des informations détaillées sur les machines virtuelles inactives ou désactivées pendant plus de 30, 60 ou 90 jours, ainsi que sur les économies potentielles en termes de capacité, de mémoire et de CPU virtuels. La sélection d'une machine virtuelle dans la liste ouvre la page de détails de cette machine virtuelle.</block>
+  <block id="5edbd52aee44c2dfb6c01abc4128600a" category="inline-image-macro">onglet récupération de vm</block>
+  <block id="e2e66b001cd3f2f1481c4b23049ca899" category="paragraph"><block ref="e2e66b001cd3f2f1481c4b23049ca899" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
