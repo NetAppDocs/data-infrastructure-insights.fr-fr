@@ -34,7 +34,7 @@ Vous pouvez zoomer sur le graphique en faisant glisser un rectangle dans le grap
 * Un bouton de chemin d'accès commun sera disponible au-dessus du tableau en un clic, et nous pouvons obtenir un panneau coulissant avec les détails du chemin d'accès de l'entité.
 
 
-Le tableau _*toutes les activités*_ indique les informations suivantes. Notez que toutes ces colonnes ne sont pas affichées par défaut. Vous pouvez sélectionner les colonnes à afficher en cliquant sur l'icône « engrenage ».
+Le tableau *All Activity* affiche les informations suivantes. Notez que toutes ces colonnes ne sont pas affichées par défaut. Vous pouvez sélectionner les colonnes à afficher en cliquant sur l'icône « engrenage ».
 
 * Le *temps* où une entité a été consultée, y compris l'année, le mois, le jour et l'heure du dernier accès.
 * *Utilisateur* qui a accédé à l'entité avec un lien vers le link:forensic_user_overview.html["Informations utilisateur"] sous forme de panneau coulissant.
@@ -52,10 +52,10 @@ Le tableau _*toutes les activités*_ indique les informations suivantes. Notez q
 ** *Renommer* - Renommer le fichier ou le dossier.
 ** *Ecrire* - les données sont écrites dans un fichier.
 ** *Write Metadata* - les métadonnées de fichier sont écrites, par exemple, les autorisations modifiées.
-** *Autre changement* - tout autre événement qui n'est pas décrit ci-dessus. Tous les événements non mappés sont mappés au type d'activité “autre changement”. Applicable aux fichiers et dossiers.
+** *Autre changement* - tout autre événement qui n'est pas décrit ci-dessus. Tous les événements non mappés sont mappés sur le type d'activité « autre modification ». Applicable aux fichiers et dossiers.
 
 
-* Le *chemin* est _chemin_entité. Il doit s'agir du chemin exact de l'entité (par exemple, "_/home/userX/nested1/nested2/abc.txt_") OU DE la partie répertoire du chemin d'accès pour la recherche récursive (par exemple, "_/home/userX/nested1/nested2/_"). REMARQUE : les schémas de chemin Regex (par exemple, _userX_) NE sont PAS autorisés ici. Il est également possible de spécifier des filtres de niveau dossier de chemin d'accès individuels, comme indiqué ci-dessous, pour le filtrage de chemin d'accès.
+* Le *chemin* est _chemin_entité. Il doit s'agir soit du chemin exact de l'entité (par exemple, "_/home/userX/nested1/nested2/abc.txt_"), SOIT de la partie répertoire du chemin pour la recherche récursive (par exemple, "_/home/userX/nested1/nested2/_"). REMARQUE : les motifs de chemin de regex (par exemple, \*imbriqué*) NE sont PAS autorisés ici. Il est également possible de spécifier des filtres de niveau dossier de chemin d'accès individuels, comme indiqué ci-dessous, pour le filtrage de chemin d'accès.
 * Le dossier *1er niveau (racine)* est le répertoire racine du chemin d'accès de l'entité en minuscules.
 * Le dossier *2e niveau* est le répertoire de deuxième niveau du chemin d'entité en minuscules.
 * Le dossier *3e niveau* est le répertoire de troisième niveau du chemin d'entité en minuscules.
@@ -65,6 +65,7 @@ Le tableau _*toutes les activités*_ indique les informations suivantes. Notez q
 * Le *Protocole* utilisé pour récupérer des événements.
 * Le *chemin d'origine* utilisé pour renommer les événements lorsque le fichier d'origine a été renommé. Par défaut, cette colonne n'est pas visible dans le tableau. Utilisez le sélecteur de colonne pour ajouter cette colonne à la table.
 * Le *Volume* où résident les entités. Par défaut, cette colonne n'est pas visible dans le tableau. Utilisez le sélecteur de colonne pour ajouter cette colonne à la table.
+* Le *Nom de l'entité* est le dernier composant du chemin d'accès de l'entité ; pour le Type d'entité en tant que fichier, il s'agit du nom du fichier.
 
 
 La sélection d'une ligne de tableau ouvre un panneau coulissant avec le profil utilisateur dans un onglet et la présentation de l'activité et de l'entité dans un autre onglet.
@@ -75,6 +76,7 @@ La méthode _Group by_ par défaut est _Activity Forensics_. Si vous sélectionn
 
 * Le nombre d'activités s'affiche sous forme de lien hypertexte. Si vous sélectionnez cette option, le regroupement sélectionné sera ajouté sous forme de filtre. Le tableau d'activité sera mis à jour en fonction de ce filtre.
 * Notez que si vous modifiez le filtre, modifiez la plage horaire ou actualisez l'écran, vous ne pourrez pas revenir aux résultats filtrés sans avoir à nouveau défini le filtre.
+* Veuillez noter que lorsque Nom de l'entité est sélectionné comme filtre, la liste déroulante Grouper par est désactivée. De même, lorsque l'utilisateur est déjà sur l'écran regrouper par, le filtre Nom de l'entité en tant que est désactivé.
 
 
 
@@ -86,7 +88,7 @@ Vous pouvez utiliser deux méthodes pour filtrer les données.
 * Le filtre peut être ajouté à partir du panneau coulissant. La valeur est ajoutée aux filtres appropriés dans la liste _Filter by_ supérieure.
 * Filtrez les données en entrant dans le champ _Filter by_ :
 +
-Sélectionnez le filtre approprié dans le widget filtre par en haut en cliquant sur le bouton *[+]* :
+Sélectionnez le filtre approprié dans le widget « Filtrer par » supérieur en cliquant sur le bouton *[+]* :
 
 +
 image:Forensic_Activity_Filter.png["Filer entité, largeur=500"]
@@ -102,34 +104,42 @@ Appuyez sur entrée ou cliquez en dehors de la zone de filtre pour appliquer le 
 Vous pouvez filtrer les données d'activité Forensic en utilisant les champs suivants :
 
 * Le type *activité*.
-* *Source IP* à partir de laquelle l'entité a été accédée. Vous devez fournir une adresse IP source valide en guillemets doubles, par exemple “10.1.1.1.” Les adresses IP incomplètes telles que “10.1.1.*”, “10.1.*.*”, etc. Ne fonctionneront pas.
 * *Protocole* pour extraire des activités spécifiques au protocole.
-* *Nom d'utilisateur* de l'utilisateur effectuant l'activité. Vous devez fournir le nom d'utilisateur exact pour filtrer. La recherche avec un nom d'utilisateur partiel ou un nom d'utilisateur partiel préfixé ou suffixé par '*' ne fonctionnera pas.
+* *Nom d'utilisateur* de l'utilisateur effectuant l'activité. Vous devez fournir le nom d'utilisateur exact pour filtrer. La recherche avec un nom d'utilisateur partiel ou un nom d'utilisateur partiel précédé ou suffixé de '*' ne fonctionnera pas.
 * *Réduction du bruit* pour filtrer les fichiers créés par l'utilisateur au cours des 2 dernières heures. Il est également utilisé pour filtrer les fichiers temporaires (par exemple, les fichiers .tmp) auxquels l'utilisateur a accès.
 * *Domaine* de l'utilisateur exécutant l'activité. Vous devez fournir le *domaine exact* à filtrer. La recherche d'un domaine partiel, ou d'un domaine partiel préfixé ou suffixé avec le caractère générique ('*'), ne fonctionnera pas. _None_ peut être spécifié pour rechercher un domaine manquant.
 
 
 Les champs suivants sont soumis à des règles de filtrage spéciales :
 
-* *Type d'entité*, avec l'extension entité (fichier) - il est préférable de spécifier le type d'entité exact entre guillemets. Par exemple _“txt”_.
-* *Chemin* de l'entité - il doit s'agir du chemin exact de l'entité (par exemple, "_/home/userX/nested1/nested2/abc.txt_") OU DE la partie répertoire du chemin pour la recherche récursive (par exemple, "_/home/userX/nested1/nested2/_"). REMARQUE : les schémas de chemin Regex (par exemple, *userX*) NE sont PAS autorisés ici. Pour des résultats plus rapides, il est recommandé d'utiliser des filtres de chemin d'accès au répertoire (chaîne de chemin se terminant par /) jusqu'à 4 répertoires en profondeur. Par exemple, "_/home/userX/nested1/nested2/_". Voir le tableau ci-dessous pour plus de détails.
+* *Type d'entité*, avec l'extension entité (fichier) - il est préférable de spécifier le type d'entité exact entre guillemets. Par exemple _« txt »_.
+* *Chemin* de l'entité - il doit s'agir du chemin exact de l'entité (par exemple, "_/home/userX/nested1/nested2/abc.txt_") OU DE la partie répertoire du chemin pour la recherche récursive (par exemple, "_/home/userX/nested1/nested2/_"). REMARQUE : les motifs de chemin de regex (par exemple, \*imbriqué*) NE sont PAS autorisés ici. Pour des résultats plus rapides, il est recommandé d'utiliser des filtres de chemin d'accès au répertoire (chaîne de chemin se terminant par /) jusqu'à 4 répertoires en profondeur. Par exemple, "_/home/userX/nested1/nested2/_". Voir le tableau ci-dessous pour plus de détails.
 * Dossier de 1er niveau (racine) - répertoire racine de l'entité chemin d'accès en tant que filtres. Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, Home OU Home peut être utilisé.
 * Dossier de 2ème niveau - répertoire de 2ème niveau de l'entité filtres de chemin. Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, alors userX OU "userX" peut être utilisé.
 * Dossier de 3ème niveau – répertoire de 3ème niveau de l'entité filtres de chemin.
-* Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, alors nested1 OU “nested1” peut être utilisé.
-* Dossier de 4e niveau - répertoire répertoire de 4e niveau de l'entité filtres de chemin. Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, alors nested2 OU “nested2” peut être utilisé.
+* Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, alors nested1 OU « nested1 » peut être utilisé.
+* Dossier de 4e niveau - répertoire répertoire de 4e niveau de l'entité filtres de chemin. Par exemple, si le chemin de l'entité est /home/userX/nested1/nested2/, alors nested2 OU "nested2" peut être utilisé.
 * *Utilisateur* exécutant l'activité - il est préférable de spécifier l'utilisateur exact entre guillemets. Par exemple, _« Administrateur »_.
 * *Périphérique* (SVM) où résident les entités
 * *Volume* où résident les entités
 * Le *chemin d'origine* utilisé pour renommer les événements lorsque le fichier d'origine a été renommé.
+* *Source IP* à partir de laquelle l'entité a été accédée.
++
+** Vous pouvez utiliser des caractères génériques * et ?. Par exemple : 10.0.0.*, 10.0?.0.10, 10.10*
+** Si une correspondance exacte est requise, vous devez fournir une adresse IP source valide entre guillemets, par exemple "10.1.1.1". Les adresses IP incomplètes avec guillemets doubles tels que "10.1.1.", "10.1..*", etc. Ne fonctionneront pas.
+
+
+* *Nom de l'entité* - le nom de fichier du chemin de l'entité en tant que filtres. Par exemple, si le chemin d'accès de l'entité est /home/userX/nested1/testfile.txt, le nom de l'entité est testfile.txt. Veuillez noter qu'il est recommandé de spécifier le nom de fichier exact entre guillemets ; essayez d'éviter les recherches avec caractères génériques. Par exemple, « testfile.txt ». Notez également que ce filtre de nom d'entité est recommandé pour des plages de temps plus courtes (jusqu'à 3 jours).
 
 
 Les champs précédents sont soumis aux éléments suivants lors du filtrage :
 
 * La valeur exacte doit se trouver dans les guillemets : exemple : « searchtext »
-* Les chaînes de caractères génériques ne doivent pas contenir de guillemets : par exemple : searchtext, \*searchtext*, filtrera les chaînes contenant ‘contour d’oreille’.
-* Chaîne avec un préfixe, par exemple : searchtext* , recherchera toutes les chaînes commençant par ‘contour d’oreille’.
+* Les chaînes de caractères génériques ne doivent pas contenir de guillemets : exemple : searchtext, \*searchtext*, filtre les chaînes contenant 'searchtext'.
+* Chaîne avec un préfixe, par exemple : searchtext* , recherche toutes les chaînes commençant par 'searchtext'.
 
+
+Veuillez noter que tous les champs de filtre sont des recherches sensibles à la casse. Par exemple : si le filtre appliqué est Type d'entité avec la valeur 'texte', il renvoie les résultats avec Type d'entité comme 'texte', 'texte de référence', 'texte de référence', 'EARCHTEXT'
 
 
 
@@ -145,13 +155,28 @@ Les champs précédents sont soumis aux éléments suivants lors du filtrage :
 | Chemin = "/home/userX/nested1/" | Recherche récursive de tous les fichiers et dossiers sous le répertoire donné | Rapides | Les recherches de répertoire jusqu'à 4 répertoires seront rapides. 
 
 
-| Path = «/home/userX/nested1/test » | Correspondance exacte où la valeur du chemin correspond à /home/userX/nested1/test | Plus lent | La recherche exacte sera plus lente que les recherches dans l'annuaire. 
+| Chemin = "/home/userX/nested1/test" | Correspondance exacte où la valeur du chemin correspond à /home/userX/nested1/test | Plus lent | La recherche exacte sera plus lente que les recherches dans l'annuaire. 
 
 
 | Chemin = "/home/userX/nested1/nested2/nested3/" | Recherche récursive de tous les fichiers et dossiers sous le répertoire donné | Plus lent | La recherche dans plus de 4 répertoires est plus lente. 
 
 
 | Tout autre filtre sans chemin d'accès. Il est recommandé de placer les filtres utilisateur et Type d'entité entre guillemets, par exemple, utilisateur=« Administrateur » Type d'entité=« txt » |  | Rapides |  
+
+
+| Nom de l'entité = « test.log » | Correspondance exacte où le nom du fichier est test.log | Rapides | Car il s'agit de la correspondance exacte 
+
+
+| Nom de l'entité = *test.log | Noms de fichier se terminant par test.log | Lentes | En raison de caractères génériques, il peut être lent. 
+
+
+| Nom de l'entité = test*.log | Les noms de fichiers commençant par test et se terminant par .log | Lentes | En raison de caractères génériques, il peut être lent. 
+
+
+| Nom de l'entité = test.lo | Les noms de fichiers commençant par test.lo par exemple : ils correspondent à test.log, test.log.1, test.log1 | Plus lent | En raison du caractère générique à la fin, il peut être lent. 
+
+
+| Nom de l'entité = test | Noms de fichiers commençant par test | Plus lente | En raison du caractère générique à la fin et d'une valeur générique plus utilisée, il peut être plus lent. 
 |===
 REMARQUE :
 
@@ -184,8 +209,8 @@ La fonction d'exportation asynchrone de Storage Workload Security est conçue po
 . *Télécharger*: Cliquez sur le bouton "Télécharger le dernier fichier d'exportation créé" pour obtenir les données exportées au format .zip. Ces données seront disponibles au téléchargement jusqu'à ce que l'utilisateur lance une autre exportation asynchrone ou que 3 jours se soient écoulés, selon la première éventualité. Le bouton reste activé jusqu'à ce qu'une autre exportation asynchrone soit lancée.
 . *Limitations* :
 +
-** Le nombre de téléchargements asynchrones est actuellement limité à 1 par utilisateur et à 3 par locataire.
-** Les données exportées sont limitées à un maximum de 1 million d'enregistrements.
+** Le nombre de téléchargements asynchrones est actuellement limité à 1 par utilisateur pour chaque table d'analyse des activités et des activités et à 3 par locataire.
+** Les données exportées sont limitées à un maximum de 1 million d'enregistrements pour le tableau des activités, tandis que pour le groupe par, la limite est de 50 millions d'enregistrements.
 
 
 
@@ -214,16 +239,16 @@ L'historique des activités est conservé pendant 13 mois pour les environnement
 | Filtre | Ce qu'il fait | Exemple | Applicable à ces filtres | Ne s'applique pas à ces filtres | Résultat 
 
 
-| * (Astérisque) | permet de rechercher tout | Auto*03172022 si le texte de recherche contient un tiret ou un trait de soulignement, donner une expression entre parenthèses, par exemple (svm*) pour la recherche de svm-123 | Utilisateur, Type d'entité, périphérique, Volume, chemin d'origine, dossier 1stLevel, dossier 2ndLevel, dossier 3rdLevel, dossier 4thLevel |  | Renvoie toutes les ressources commençant par « Auto » et se terminant par « 03172022 » 
+| * (Astérisque) | permet de rechercher tout | Auto*03172022 si le texte de recherche contient un tiret ou un trait de soulignement, donner une expression entre parenthèses, par exemple (svm*) pour la recherche de svm-123 | Utilisateur, Type d'entité, périphérique, Volume, chemin d'origine, dossier 1stLevel, dossier 2ndLevel, dossier 3rdLevel, dossier 4thLevel, Nom de l'entité, adresse IP source |  | Renvoie toutes les ressources commençant par « Auto » et se terminant par « 03172022 » 
 
 
-| ? (point d'interrogation) | permet de rechercher un nombre spécifique de caractères | AutoSabotageUser1_03172022 ? | Utilisateur, Type d'entité, périphérique, Volume, dossier 1stLevel, dossier 2ndLevel, dossier 3rdLevel, dossier 4thLevel |  | Renvoie AutoSabotageUser1_03172022A, AutoSabotageUser1_03172022B, AutoSabotageUser1_031720225, etc 
+| ? (point d'interrogation) | permet de rechercher un nombre spécifique de caractères | AutoSabotageUser1_03172022 ? | Utilisateur, Type d'entité, périphérique, Volume, dossier 1stLevel, dossier 2ndLevel, dossier 3rdLevel, dossier 4thLevel, Nom de l'entité, adresse IP source |  | Renvoie AutoSabotageUser1_03172022A, AutoSabotageUser1_03172022B, AutoSabotageUser1_031720225, etc 
 
 
-| OU | vous permet de spécifier plusieurs entités | AutoSalotageUser1_03172022 OU AutoRansomUser4_03162022 | Utilisateur, domaine, Type d'entité, chemin d'origine |  | Renvoie AutoSalotageUser1_03172022 OU AutoRansomUser4_03162022 
+| OU | vous permet de spécifier plusieurs entités | AutoSalotageUser1_03172022 OU AutoRansomUser4_03162022 | Utilisateur, domaine, Type d'entité, chemin d'origine, Nom de l'entité, adresse IP source |  | Renvoie AutoSalotageUser1_03172022 OU AutoRansomUser4_03162022 
 
 
-| PAS | permet d'exclure du texte des résultats de la recherche | NOT AutoRansomUser4_03162022 | Utilisateur,domaine, Type d'entité, chemin d'origine, dossier 1stLevel, dossier 2ndLevel, dossier 3rdLevel, dossier 4thLevel | Périphérique | Renvoie tout ce qui ne commence pas par "AutoRansomUser4_03162022" 
+| PAS | permet d'exclure du texte des résultats de la recherche | NOT AutoRansomUser4_03162022 | Utilisateur,domaine, Type d'entité, chemin d'origine, dossier 1stLevel, dossier 2ndLevel, dossier 3rdLevel, dossier 4thLevel, Nom de l'entité, adresse IP source | Périphérique | Renvoie tout ce qui ne démarre pas avec « AutoRansomiUser4_03162022 » 
 
 
 | Aucune | Recherche les valeurs NULL dans tous les champs | Aucune | Domaine |  | renvoie les résultats où le champ cible est vide 
@@ -284,17 +309,20 @@ Par exemple :
 | Problème | Essayez 
 
 
-| Dans la table “toutes les activités”, sous la colonne ‘utilisateur’, le nom d’utilisateur est indiqué comme suit : “ldap:HQ.COMPANYNAME.COM:S-1-5-21-3577637-1906459482-1437260136-1831817” ou “ldap:Default:80038003” | Raisons possibles : 1. Aucun collectionneur de répertoires d'utilisateurs n'a encore été configuré. Pour en ajouter un, accédez à *Workload Security > Collectors > User Directory Collectors* et cliquez sur *+User Directory Collector*. Choisissez _Active Directory_ ou _LDAP Directory Server_. 2. Un collecteur d'annuaire d'utilisateurs a été configuré, mais il s'est arrêté ou est en état d'erreur. Accédez à *collecteurs > collecteurs d'annuaire d'utilisateurs* et vérifiez l'état. Reportez-vous à la link:http://docs.netapp.com/us-en/cloudinsights/task_config_user_dir_connect.html#troubleshooting-user-directory-collector-configuration-errors["Dépannage de l'utilisateur Directory Collector"] section de la documentation pour obtenir des conseils de dépannage. Après la configuration correcte, le nom sera automatiquement résolu dans les 24 heures. Si elle n'est toujours pas résolue, vérifiez si vous avez ajouté le collecteur de données utilisateur approprié. Assurez-vous que l'utilisateur fait bien partie du serveur Active Directory/LDAP d'annuaire ajouté. 
+| Dans le tableau « toutes les activités », sous la colonne « utilisateur », le nom d'utilisateur est affiché comme suit : « ldap:HQ.COMPANYNAME.COM:S-1-5-21-3577637-1906459482-1437260136-1831817" ou « ldap:default:80038003 ». | Raisons possibles : 1. Aucun collectionneur de répertoires d'utilisateurs n'a encore été configuré. Pour en ajouter un, accédez à *Workload Security > Collectors > User Directory Collectors* et cliquez sur *+User Directory Collector*. Choisissez _Active Directory_ ou _LDAP Directory Server_. 2. Un collecteur d'annuaire d'utilisateurs a été configuré, mais il s'est arrêté ou est en état d'erreur. Accédez à *collecteurs > collecteurs d'annuaire d'utilisateurs* et vérifiez l'état. Reportez-vous à la link:http://docs.netapp.com/us-en/cloudinsights/task_config_user_dir_connect.html#troubleshooting-user-directory-collector-configuration-errors["Dépannage de l'utilisateur Directory Collector"] section de la documentation pour obtenir des conseils de dépannage. Après la configuration correcte, le nom sera automatiquement résolu dans les 24 heures. Si elle n'est toujours pas résolue, vérifiez si vous avez ajouté le collecteur de données utilisateur approprié. Assurez-vous que l'utilisateur fait bien partie du serveur Active Directory/LDAP d'annuaire ajouté. 
 
 
 | Certains événements NFS n'apparaissent pas dans l'interface utilisateur. | Vérifier ce qui suit : 1. Un collecteur d'annuaire utilisateur pour serveur AD avec un jeu d'attributs POSIX doit être exécuté avec l'attribut unixid activé à partir de l'interface utilisateur. 2. Tout utilisateur ayant accès au NFS doit être visible lors d'une recherche dans la page utilisateur de l'interface utilisateur 3. Les événements bruts (événements pour lesquels l'utilisateur n'est pas encore découvert) ne sont pas pris en charge par NFS 4. L'accès anonyme à l'exportation NFS ne sera pas surveillé. 5. Assurez-vous que la version NFS utilisée est inférieure à NFS4.1. 
 
 
-| Après avoir saisi des lettres contenant un caractère générique comme l'astérisque (*) dans les filtres des pages Forensics _All Activity_ ou _Entities_, les pages se chargent très lentement. | Un astérisque (\*) dans la chaîne de recherche recherche recherche tout. Cependant, les chaînes de caractères génériques comme _*<searchTerm>_ ou _*<searchTerm>*_ entraînent une requête lente. Pour obtenir de meilleures performances, utilisez plutôt des chaînes de préfixe, au format _<searchTerm>*_ (en d'autres termes, ajoutez l'astérisque (*) _après_ un terme de recherche). Exemple : utilisez la chaîne _testvolume*_, plutôt que _*testvolume_ ou _*test*volume_. Utilisez une recherche de répertoire pour voir toutes les activités sous un dossier donné de manière récursive (recherche hiérarchique). Par exemple, “/path1/path2/path3/” répertorie toutes les activités récursivement sous /path1/path2/path3. Vous pouvez également utiliser l'option « Ajouter au filtre » sous l'onglet toutes les activités. 
+| Après avoir saisi des lettres contenant un caractère générique comme l'astérisque (*) dans les filtres des pages Forensics _All Activity_ ou _Entities_, les pages se chargent très lentement. | Un astérisque (\*) dans la chaîne de recherche recherche recherche tout. Cependant, les chaînes de caractères génériques comme _*<searchTerm>_ ou _*<searchTerm>*_ entraînent une requête lente. Pour obtenir de meilleures performances, utilisez plutôt des chaînes de préfixe, au format _<searchTerm>*_ (en d'autres termes, ajoutez l'astérisque (*) _après_ un terme de recherche). Exemple : utilisez la chaîne _testvolume*_, plutôt que _*testvolume_ ou _*test*volume_. Utilisez une recherche de répertoire pour voir toutes les activités sous un dossier donné de manière récursive (recherche hiérarchique). Par exemple, "/path1/path2/path3/" répertoriera toutes les activités récursivement sous /path1/path2/path3. Vous pouvez également utiliser l'option « Ajouter au filtre » sous l'onglet toutes les activités. » 
 
 
 | J'ai rencontré une erreur « Echec de la demande avec le code d'état 500/503 » lors de l'utilisation d'un filtre de chemin. | Essayez d'utiliser une plage de dates plus petite pour filtrer les enregistrements. 
 
 
-| L'interface utilisateur d'analyse effectue un chargement lent des données lors de l'utilisation du filtre _PATH_. | Pour obtenir des résultats plus rapides, il est recommandé d'utiliser des filtres de chemin d'accès au répertoire (chaîne se terminant par /) jusqu'à 4 répertoires profonds. Par exemple, si le chemin d'accès au répertoire est /AAA/BBB/CCC/DDD/, essayez de rechercher “/AAA/BBB/CCC/DDD/” pour charger les données plus rapidement. 
+| L'interface utilisateur d'analyse effectue un chargement lent des données lors de l'utilisation du filtre _PATH_. | Pour obtenir des 4 résultats plus rapides, il est recommandé d'utiliser des filtres de chemin d'accès au répertoire (chaîne se terminant par /). Par exemple, si le chemin d'accès au répertoire est /AAA/BBB/CCC/DDD, essayez de rechercher "/AAA/BBB/CCC/DDD/" pour charger les données plus rapidement. 
+
+
+| L'interface utilisateur d'analyse charge les données lentement et rencontre des défaillances lors de l'utilisation du filtre de nom d'entité. | Essayez avec des plages de temps plus petites et avec une recherche de valeur exacte avec des guillemets doubles. Par exemple, si entityPath est "/home/userX/nested1/nested2/nested3/testfile.txt", essayez avec "testfile.txt" comme filtre de nom d'entité. 
 |===
