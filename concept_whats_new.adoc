@@ -20,27 +20,6 @@ NetApp améliore et améliore continuellement ses produits et services. Voici qu
 
 
 
-== Février 2025
-
-
-
-=== Suivi de l'utilisation de l'API DII : améliorer la sécurité et l'efficacité
-
-Renforcez votre stratégie de sécurité et rationalisez la gestion des ressources avec un meilleur suivi de l'utilisation de l'API REST. Le suivi de l'utilisation de l'API vous permet de voir quels tokens API sont utilisés, à partir de quelles adresses IP et le volume de trafic qu'ils génèrent. Accessibles aux utilisateurs administrateurs, ces informations vous permettent de détecter rapidement les modèles d'activité inhabituels, d'identifier les menaces potentielles et d'optimiser les performances en éliminant les demandes inutiles. En reliant les jetons à des adresses IP et des niveaux d'utilisation spécifiques, vous obtenez de puissantes informations sur l'accès au système et les tendances d'utilisation, ce qui vous donne le contrôle dont vous avez besoin pour maintenir un environnement sûr et efficace et assurer le bon fonctionnement des opérations.
-
-Pour afficher l'utilisation de l'API, accédez à *observabilité > Admin > API Access* et sélectionnez _View API usage_. Notez que cette API est disponible uniquement pour les API d'observabilité DII ; elle ne s'applique pas aux API de sécurité de la charge de travail ou de reporting.
-
-image:api_usage_analytics_screenshot.png["Exemple d'analytique de l'utilisation des API"]
-
-
-
-=== API de sécurité des charges de travail pour limiter les utilisateurs
-
-Une nouvelle API a été ajoutée pour gérer les restrictions utilisateur dans Workload Security. L'API vous permet de bloquer ou de débloquer un utilisateur ou de modifier la durée de son accès restreint. Voir la page Admin > API Access > API Documentation pour l'API _cloudsecure_actions.block_.
-
-'''
-
-
 == Janvier 2025
 
 
