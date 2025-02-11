@@ -8533,14 +8533,12 @@
   <block id="9be58f2fc8b11ec837406376ca6b3e2a" category="doc">Intégration de données exploitables de l'infrastructure de données</block>
   <block id="c9c452240be4db82e89f010124f3c4a2" category="paragraph">Avant de commencer à travailler avec Data Infrastructure Insights, vous devez vous inscrire sur le portail *NetApp BlueXP *. Si vous disposez déjà d'un identifiant NetApp BlueXP , vous pouvez essayer gratuitement Data Infrastructure Insights en quelques étapes simples.</block>
   <block id="5bff30d13ce98c505187872963af1f25" category="section-title">Création de votre compte NetApp BlueXP</block>
-  <block id="b73a83fb453d4638343c31abb0f03dfc" category="paragraph">Pour commencer à utiliser les services cloud de NetApp, rendez-vous sur <block ref="b4c824fcd8d5915314065a3371563411" category="inline-link-macro-rx"></block> et cliquez sur *commencer*.</block>
   <block id="1e26781b207fa848ce81c7268cf016a7" category="list-text">Si vous n'êtes pas encore inscrit, sélectionnez *s'inscrire*</block>
   <block id="05d2a837df7692f0d65e4466b2fb05bd" category="list-text">Saisissez une adresse e-mail professionnelle valide et choisissez un mot de passe.</block>
   <block id="ad66d403ef43ddd58a7b527874c51878" category="list-text">Entrez le nom de votre entreprise, ainsi que votre nom complet.</block>
   <block id="895a961645c5f6456e2cc43102e1de8a" category="list-text">Acceptez les conditions générales et sélectionnez *Continuer*.</block>
   <block id="027e58ebcf59f73bde476a8af6584584" category="list-text">BlueXP vous guidera tout au long de la mise en route.</block>
   <block id="6670eac4232d1c66e6c936fe67e52aff" category="section-title">Que se passe-t-il si je dispose déjà d'un identifiant de connexion NetApp BlueXP ?</block>
-  <block id="71292a4043ee880f4b2810b42954372c" category="paragraph">Une fois que vous avez un compte NetApp BlueXP , il vous suffit de choisir *se connecter* sur la <block ref="b4c824fcd8d5915314065a3371563411" category="inline-link-macro-rx"></block>page du portail.</block>
   <block id="a46b8a484704b65f978247cb9b3901aa" category="paragraph">Entrez votre adresse e-mail et votre mot de passe. Vous serez ensuite redirigé vers la page d'offres clouds de NetApp.</block>
   <block id="a255e7df64ed3494ccf094bd8b25822f" category="paragraph">Sélectionnez Data Infrastructure Insights.</block>
   <block id="ce69050591300865b670a02cda814df2" category="inline-image-macro">Essai gratuit des informations d'infrastructure de données sur BlueXP</block>
@@ -11985,4 +11983,6 @@
   <block id="1677cd7abeaa8f0a0514a964c0c2bda6" category="paragraph"><block ref="1677cd7abeaa8f0a0514a964c0c2bda6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0b7788a77d5d76748437f02599d4ffbf" category="paragraph"><block ref="0b7788a77d5d76748437f02599d4ffbf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="paragraph"><block ref="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1158d69294406edc67b8de2b5ed02647" category="paragraph">Pour commencer à utiliser les services cloud de NetApp, rendez-vous sur <block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block> et cliquez sur *commencer*.</block>
+  <block id="90aa9e4cd4632612b7635f2c366a8948" category="paragraph">Une fois que vous avez un compte NetApp BlueXP , il vous suffit de choisir *se connecter* sur la <block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block>page du portail.</block>
 </blocks>

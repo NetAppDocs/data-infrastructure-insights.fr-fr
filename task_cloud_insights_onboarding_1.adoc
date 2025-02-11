@@ -24,7 +24,7 @@ toc::[]
 
 == Création de votre compte NetApp BlueXP
 
-Pour commencer à utiliser les services cloud de NetApp, rendez-vous sur link:https://cloud.netapp.com["*NetApp BlueXP*"^] et cliquez sur *commencer*.
+Pour commencer à utiliser les services cloud de NetApp, rendez-vous sur link:https://bluexp.netapp.com/["*NetApp BlueXP*"^] et cliquez sur *commencer*.
 
 * Si vous n'êtes pas encore inscrit, sélectionnez *s'inscrire*
 * Saisissez une adresse e-mail professionnelle valide et choisissez un mot de passe.
@@ -37,7 +37,7 @@ Pour commencer à utiliser les services cloud de NetApp, rendez-vous sur link:ht
 
 === Que se passe-t-il si je dispose déjà d'un identifiant de connexion NetApp BlueXP ?
 
-Une fois que vous avez un compte NetApp BlueXP , il vous suffit de choisir *se connecter* sur la link:https://cloud.netapp.com["*NetApp BlueXP*"^]page du portail.
+Une fois que vous avez un compte NetApp BlueXP , il vous suffit de choisir *se connecter* sur la link:https://bluexp.netapp.com/["*NetApp BlueXP*"^]page du portail.
 
 Entrez votre adresse e-mail et votre mot de passe. Vous serez ensuite redirigé vers la page d'offres clouds de NetApp.
 
