@@ -28,8 +28,17 @@ image:san_analyzer_example_with_panel.png["Carte topologique d'un système de st
 
 Sélectionnez *observabilité > analyse > analyseur SAN* pour afficher l'analyseur SAN. Définissez un filtre pour l'application, l'hôte, la structure et/ou le stockage. La carte des objets s'affiche, affichant les objets connectés. Passez le curseur sur un objet pour afficher les mesures de trafic pour ces connexions.
 
+
+NOTE: La plupart des filtres SAN Analyzer (y compris ceux que vous pouvez ajouter) sont contextuels ; lorsque vous sélectionnez un objet dans l'un de ces filtres, les choix présentés dans les autres listes déroulantes de filtre sont actualisés en contexte avec le ou les objets sélectionnés. Les seules exceptions à cette règle sont application, Port et Switch ; ces filtres ne sont pas contextuels.
+
 image:san_analyzer_traffic_metrics.png[""]
 
-Cliquer sur un objet ou un groupe ouvre un panneau coulissant fournissant des détails supplémentaires sur l'objet et ses connexions. La diapositive comprend des onglets présentant un résumé, des détails de port et des informations de zone, le cas échéant.
+Cliquer sur un objet ou un groupe ouvre un panneau coulissant fournissant des détails supplémentaires sur l'objet et ses connexions. Le panneau coulissant affiche un récapitulatif qui fournit des détails sur l'objet sélectionné (par exemple, IP, hyperviseur, structures connectées, etc., en fonction du type d'objet), ainsi que des graphiques affichant les mesures pour l'objet, telles que la latence ou les IOPS, et les modifications et alertes, le cas échéant. Vous pouvez également choisir d'afficher les mesures des objets Top Correlation sur les graphiques, si vous le souhaitez.
+
+En plus de l'onglet Résumé, le panneau coulissant affiche des onglets pour des éléments tels que les détails de port ou les informations de zone, s'il s'applique à l'objet choisi.
 
 image:san_analyzer_slideout_example.png[""]
+
+Si votre environnement inclut des périphériques iSCSI, passez la souris sur l'objet _iSCSI_ pour mettre en évidence les connexions associées aux périphériques iSCSI concernés.
+
+image:san_analyzer_iscsi_traffic.png["Trafic iSCSI mis en surbrillance"]
