@@ -70,17 +70,6 @@ Si votre essai gratuit a expiré et que vous n'avez pas encore souscrit à Data 
 
 
 
-== Que se passe-t-il si mon abonnement a expiré ?
-
-Si vous avez souscrit un abonnement à Data Infrastructure Insights, mais que cet abonnement a expiré, vous disposez d'un délai de grâce de cinq jours pour renouveler votre abonnement. Toutes les fonctionnalités Data Infrastructure Insights restent actives pendant ce délai de grâce.
-
-Une fois le délai de grâce écoulé, la fonctionnalité Data Infrastructure Insights est suspendue jusqu'au renouvellement. Pour renouveler votre abonnement, consultez la page *Admin > abonnement* ou contactez le service commercial de NetApp.
-
-
-NOTE: Les données Data Infrastructure Insights collectées à la fin du délai de grâce restent intactes pendant les 30 jours suivant le délai de grâce. Si vous renouvelez votre abonnement dans ce délai, toutes vos données jusqu'au moment où le délai de grâce s'est écoulé seront disponibles.
-
-
-
 == Que se passe-t-il si mon *abonnement* a expiré ?
 
 Si vous avez souscrit un abonnement à Data Infrastructure Insights, mais que cet abonnement a expiré, vous disposez d'un délai de grâce de cinq jours pour renouveler votre abonnement. Toutes les fonctionnalités Data Infrastructure Insights restent actives pendant ce délai de grâce.

@@ -40,7 +40,7 @@ Lorsque vous ouvrez le portail de rapports, le dossier _Team Content_ vous perme
 . Sélectionnez *Rapports* pour accéder aux rapports prédéfinis.
 
 
-image:Reporting_Menu.png["Menu Rapports"] image:Reporting_Team_Content.png["Contenu de l'équipe affichant les rapports mis en surbrillance"]
+image:Reporting_Menu.png["Menu Rapports"] image:Reporting_Team_Content.png["Contenu de l'équipe affichant les rapports mis en surbrillance, largeur=800"]
 
 
 
