@@ -69,6 +69,34 @@ image:KubernetesModifyDeploymentScreen.png["Modifier les options de déploiement
 
 == Mise à niveau vers le dernier opérateur de surveillance Kubernetes
 
+
+
+=== Mises à niveau DII à bouton-poussoir
+
+Vous pouvez mettre à niveau l'opérateur de surveillance Kubernetes à partir de la page collecteurs Kubernetes DII. Cliquez sur le menu en regard du cluster que vous souhaitez mettre à niveau et sélectionnez _Upgrade_. L'opérateur vérifie les signatures d'image, effectue un instantané de votre installation actuelle et effectue la mise à niveau. Dans quelques minutes, vous devriez voir l'état de l'opérateur progression de la mise à niveau en cours vers la dernière. Si vous rencontrez une erreur, vous pouvez sélectionner l'état d'erreur pour plus de détails et vous reporter au tableau Dépannage des mises à niveau par bouton-poussoir ci-dessous.
+
+
+
+==== Mises à niveau à l'aide de référentiels privés par simple pression
+
+Si votre opérateur est configuré pour utiliser un référentiel privé, assurez-vous que toutes les images requises pour exécuter l'opérateur et leurs signatures sont disponibles dans votre référentiel. Si vous rencontrez une erreur pendant le processus de mise à niveau pour les images manquantes, ajoutez-les simplement à votre référentiel et réessayez la mise à niveau. Pour télécharger les signatures d'images dans votre référentiel, utilisez l'outil de cosignature comme suit, en vous assurant de télécharger les signatures pour toutes les images spécifiées sous 3 Facultatif : chargez les images de l'opérateur dans votre référentiel privé > extrait d'image
+
+[listing]
+----
+cosign copy example.com/src:v1 example.com/dest:v1
+#Example
+cosign copy <DII container registry>/netapp-monitoring:<image version> <private repository>/netapp-monitoring:<image version>
+----
+
+
+==== Retour à une version précédente
+
+Si vous avez effectué une mise à niveau à l'aide de la fonction de mise à niveau par bouton-poussoir et que vous rencontrez des difficultés avec la version actuelle de l'opérateur dans les sept jours suivant la mise à niveau, vous pouvez revenir à la version précédente en utilisant l'instantané créé pendant le processus de mise à niveau. Cliquez sur le menu en regard du cluster que vous souhaitez restaurer et sélectionnez _Retour arrière_.
+
+
+
+=== Mises à niveau manuelles
+
 Déterminez si une configuration d'agentConfiguration existe avec l'opérateur existant (si votre espace de noms n'est pas le _netapp-monitoring_ par défaut, remplacez l'espace de noms approprié) :
 
  kubectl -n netapp-monitoring get agentconfiguration netapp-monitoring-configuration
