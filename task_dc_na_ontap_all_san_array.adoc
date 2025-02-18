@@ -34,6 +34,11 @@ Les conditions suivantes sont requises pour configurer et utiliser ce collecteur
 
 
 
+NOTE: ASA R2 indique les modèles de la dernière génération de plateforme de stockage ONTAP ASA. Ceci inclut les modèles ASA A1K, A90, A70, A50, A30 et A20.
+
+Pour tous les systèmes ASA de génération précédente, veuillez utiliser le link:task_dc_na_ontap_rest.html["ONTAP REST"] collecteur.
+
+
 
 == Remarque sur les autorisations
 
