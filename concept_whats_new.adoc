@@ -36,7 +36,7 @@ image:ontap_essentials_asa_views.png["La liste déroulante ONTAP Essentials pré
 
 Renforcez votre stratégie de sécurité et rationalisez la gestion des ressources avec un meilleur suivi de l'utilisation de l'API REST, disponible pour les utilisateurs Admin. Le suivi de l'utilisation de l'API vous permet de voir quels tokens API sont utilisés, à partir de quelles adresses IP et le volume de trafic qu'ils génèrent. En reliant les jetons à des adresses IP et des niveaux d'utilisation spécifiques, vous obtenez de puissantes informations sur l'accès au système et les tendances d'utilisation, ce qui vous donne le contrôle dont vous avez besoin pour maintenir un environnement sûr et efficace et assurer le bon fonctionnement des opérations.
 
-Pour afficher l'utilisation de l'API, accédez à *observabilité > Admin > API Access* et sélectionnez _View API usage_. Notez que cette API est disponible uniquement pour les API d'observabilité DII ; elle ne s'applique pas aux API de sécurité de la charge de travail ou de reporting.
+Pour afficher l'utilisation de l'API, accédez à *observabilité > Admin > API Access* et sélectionnez _View API usage_. Notez que cette API est disponible uniquement pour les API d'observabilité DII ; elle ne s'applique pas à Workload Security.
 
 image:api_usage_analytics_screenshot.png["Exemple d'analytique de l'utilisation des API"]
 
