@@ -19,22 +19,13 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 [role="lead"]
-Les fonctionnalités utiles de Data Infrastructure Insights vous permettent de trouver rapidement et facilement des données, de résoudre des problèmes et d'obtenir des informations sur votre environnement d'entreprise. Trouvez facilement des données grâce à des requêtes puissantes, visualisez des données dans des tableaux de bord et envoyez des alertes par e-mail pour les seuils de données que vous définissez.
+Les fonctionnalités utiles de Data Infrastructure Insights vous permettent de résoudre rapidement et facilement les problèmes et d'obtenir des informations sur votre environnement d'entreprise. Trouvez facilement des données grâce à des requêtes puissantes, visualisez des données dans des tableaux de bord et envoyez des alertes par e-mail pour les seuils de données que vous définissez.
 
-Data Infrastructure Insights inclut un certain nombre de didacticiels vidéo qui vous aideront à comprendre ces fonctionnalités et à mieux implémenter vos stratégies d'analyse de l'entreprise.
-
-
-
-== Introduction
-
-Regardez un bref tutoriel expliquant le fonctionnement des informations exploitables de l'infrastructure de données.
-
-video::howTo.mp4[]
 
 
 == Liste de contrôle et didacticiels vidéo
 
-La *liste de contrôle de démarrage* affichée sur votre site Data Infrastructure Insights contient une liste de plusieurs tâches et concepts utiles. La sélection d'un élément de la checklist permet d'accéder à la page Data Infrastructure Insights appropriée pour ce concept. Par exemple, cliquer sur l'élément _Créer un tableau de bord_ ouvre la page informations sur l'infrastructure de données *tableaux de bord*.
+La *liste de contrôle de démarrage* affichée sur votre locataire Data Infrastructure Insights contient une liste de plusieurs tâches et concepts utiles. La sélection d'un élément de la checklist permet d'accéder à la page Data Infrastructure Insights appropriée pour ce concept. Par exemple, cliquer sur l'élément _Créer un tableau de bord_ ouvre la page informations sur l'infrastructure de données *tableaux de bord*.
 
 image:OnboardingChecklist.png["Progression de la liste de contrôle du tutoriel"]
 
@@ -51,29 +42,4 @@ NOTE: Vous pouvez afficher les didacticiels dans l'ordre de votre choix, autant 
 
 === Rejet de la liste de contrôle
 
-La liste de contrôle de démarrage s'affiche sur votre site jusqu'à ce que vous cliquiez sur le lien _ne plus afficher ce lien_ au bas de la liste de contrôle. Même après avoir rejeté la liste de contrôle, les didacticiels sont toujours disponibles sur chaque page Data Infrastructure Insights appropriée jusqu'à ce que vous les rejetez de la barre d'en-tête des messages.
-
-
-
-== Voir les tutoriels
-
-
-
-=== Interrogation des données
-
-video::Queries.mp4[]
-
-
-=== Création d'un tableau de bord
-
-video::Dashboards.mp4[]
-
-
-=== Dépannage
-
-video::Troubleshooting.mp4[]
-
-
-=== Résoudre les périphériques
-
-video::AHR_small.mp4[]
+La liste de contrôle de démarrage s'affiche jusqu'à ce que vous cliquiez sur le lien _ne plus l'afficher_ au bas de la liste de contrôle. Même après avoir rejeté la liste de contrôle, les didacticiels sont toujours disponibles sur chaque page Data Infrastructure Insights appropriée jusqu'à ce que vous les rejetez de la barre d'en-tête des messages.

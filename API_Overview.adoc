@@ -273,7 +273,7 @@ Remarque : si la dernière version de NetApp Kubernetes Monitoring Operator est 
 
 * Modifiez l'opérateur de surveillance NetApp Kubernetes.
 +
- kubectl -n netapp-monitoring edit agent agent-monitoring-netapp
+ kubectl -n netapp-monitoring edit agent netapp-ci-agent-monitoring-netapp
 * Modifiez la valeur _spec.output-sink.api-key_ en remplaçant l'ancien jeton API par le nouveau jeton API.
 +
 ....
