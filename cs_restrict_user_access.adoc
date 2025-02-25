@@ -10,7 +10,7 @@ summary: 'Avec la sécurité des charges de travail, vous pouvez restreindre l"a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

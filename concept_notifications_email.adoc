@@ -48,13 +48,13 @@ Voici des exemples de types de notifications pouvant être envoyées et d'action
 | La version d'essai ou l'abonnement a été mis à jour | Consultez les détails de l'abonnement sur la link:concept_subscribing_to_cloud_insights.html["Abonnement"]page 
 
 
-| L'abonnement expirera dans 90 jours. L'abonnement expirera dans 30 jours | Aucune action requise si le renouvellement automatique est activé Contact link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Ventes NetApp"] pour renouveler l'abonnement 
+| L'abonnement expirera dans 90 jours. L'abonnement expirera dans 30 jours | Aucune action requise si le renouvellement automatique est activé. Contactez le service commercial NetApp pour renouveler l'abonnement 
 
 
-| L'essai se termine dans 2 jours | Renouveler l'essai à partir de la link:concept_subscribing_to_cloud_insights.html["Abonnement"]page. Vous pouvez renouveler une version d'évaluation une seule fois. Contactez link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Ventes NetApp"] pour acheter un abonnement 
+| L'essai se termine dans 2 jours | Renouveler l'essai à partir de la link:concept_subscribing_to_cloud_insights.html["Abonnement"]page. Vous pouvez renouveler une version d'évaluation une seule fois. Contactez le service commercial de NetApp pour souscrire un abonnement 
 
 
-| La période d'essai ou l'abonnement a expiré le compte cessera de collecter les données dans 48 heures. Le compte sera supprimé après 48 heures | Contactez link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Ventes NetApp"] pour acheter un abonnement 
+| La période d'essai ou l'abonnement a expiré le compte cessera de collecter les données dans 48 heures. Le compte sera supprimé après 48 heures | Contactez le service commercial de NetApp pour souscrire un abonnement 
 |===
 [NOTE]
 ====

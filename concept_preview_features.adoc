@@ -21,7 +21,7 @@ keywords: coming soon, preview,
 [role="lead"]
 Data Infrastructure Insights met en avant les nouvelles fonctionnalités de manière _Preview_. Des fonctionnalités d'aperçu sont disponibles dans des environnements limités ou à une capacité limitée.
 
-Si vous souhaitez afficher un aperçu d'une ou de plusieurs de ces fonctionnalités, contactez votre link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Équipe commerciale NetApp"] pour plus d'informations.
+Si vous souhaitez afficher un aperçu d'une ou de plusieurs de ces fonctionnalités, contactez votre link:https://bluexp.netapp.com/contact-cds["Équipe commerciale NetApp"] pour plus d'informations.
 
 |===
 

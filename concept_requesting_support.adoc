@@ -122,7 +122,7 @@ Vous pouvez demander de l'aide par l'une des méthodes suivantes. Vous devez dis
 * *Chat* - vous serez mis en relation avec le personnel d'assistance NetApp pour obtenir de l'aide (en semaine seulement). Le chat est disponible dans l'option de menu *aide > Live Chat* en haut à droite de tout écran Data Infrastructure Insights.
 
 
-Vous pouvez également demander un support commercial en cliquant sur le link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["*Contactez-nous*"] lien.
+Vous pouvez également demander un support commercial en cliquant sur le link:https://bluexp.netapp.com/contact-cds["*Contactez-nous*"] lien.
 
 Votre numéro de série Data Infrastructure Insights est visible dans le service à partir du menu *aide > support*. Si vous rencontrez des problèmes pour accéder au service et avez précédemment enregistré un numéro de série avec NetApp, vous pouvez également consulter la liste des numéros de série Data Infrastructure Insights sur le site de support NetApp, en procédant comme suit :
 

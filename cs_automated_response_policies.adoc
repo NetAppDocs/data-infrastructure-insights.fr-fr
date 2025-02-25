@@ -10,7 +10,7 @@ summary: 'Vous pouvez définir des règles de réponse automatisées pour des at
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

@@ -5,13 +5,16 @@ keywords: applications, asset, cost
 summary: 'Connaître les applications utilisées dans l"environnement de votre entreprise vous aide à surveiller l"utilisation des ressources et les coûts.' 
 ---
 = Suivi de l'utilisation des ressources par application
+:hardbreaks:
 :allow-uri-read: 
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
-:revdate: Understanding the applications used in your company's environment helps you to keep track of asset usage and cost.
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
+
+[role="lead"]
+Connaître les applications utilisées dans l'environnement de votre entreprise vous aide à surveiller l'utilisation des ressources et les coûts.
 
 Avant de pouvoir suivre les données associées aux applications s'exécutant sur votre locataire, vous devez d'abord définir ces applications et les associer aux ressources appropriées. Vous pouvez associer des applications aux ressources suivantes : hôtes, machines virtuelles, volumes, volumes internes, qtrees, les partages et les hyperviseurs.
 

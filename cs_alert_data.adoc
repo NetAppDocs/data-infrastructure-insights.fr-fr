@@ -10,7 +10,7 @@ summary: 'La sécurité des charges de travail génère des alertes en cas d"act
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

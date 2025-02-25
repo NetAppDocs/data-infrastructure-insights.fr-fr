@@ -27,7 +27,7 @@ La mise en route de Data Infrastructure Insights se fait en trois étapes simple
 ** Planifiez une réunion ou attendez qu'un représentant vous contacte au sujet de votre version d'évaluation.
 
 
-* *Abonnez-vous* à Data Infrastructure Insights pour un accès continu et ininterrompu à vos données via link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Ventes NetApp"] direct ou link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["Marketplace AWS"].
+* *Abonnez-vous* à Data Infrastructure Insights pour un accès continu et ininterrompu à vos données via link:https://bluexp.netapp.com/contact-cds["Ventes NetApp"] direct ou link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["Marketplace AWS"].
 
 
 Lors du processus d'enregistrement, vous pouvez choisir la région globale dans laquelle héberger votre environnement Data Infrastructure Insights. Pour en savoir plus, consultez la rubrique informations sur l'infrastructure de données link:security_information_and_region.html["Information et région"].
@@ -185,7 +185,7 @@ Si votre nombre d'unités gérées est inférieur à 1,000, vous pouvez vous abo
 
 === Abonnez-vous via NetApp Sales Direct
 
-Si le nombre d'unités gérées que vous prévoyez d'utiliser est supérieur ou égal à 1,000, cliquez sur le link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["*Contactez-nous*"] bouton pour vous abonner à l'équipe de vente NetApp.
+Si le nombre d'unités gérées que vous prévoyez d'utiliser est supérieur ou égal à 1,000, cliquez sur le link:https://bluexp.netapp.com/contact-cds["*Contactez-nous*"] bouton pour vous abonner à l'équipe de vente NetApp.
 
 Vous devez fournir vos informations de l'infrastructure de données *Numéro de série* à votre ingénieur commercial NetApp pour que votre abonnement payant puisse être appliqué à votre environnement Data Infrastructure Insights. Le numéro de série identifie de manière unique votre environnement d'essai Data Infrastructure Insights et se trouve sur la page *Admin > abonnement*.
 
