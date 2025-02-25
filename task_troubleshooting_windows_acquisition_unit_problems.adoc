@@ -83,6 +83,6 @@ image:ProxyEndpoints_NewTable.png["Table des noeuds finaux du proxy"]
 
 == Ressources
 
-Vous trouverez d'autres conseils de dépannage dans le link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights["Base de connaissances NetApp"] (connexion à l'assistance requise).
+Vous trouverez d'autres conseils de dépannage dans le link:https://kb.netapp.com/Cloud/BlueXP/DII["Base de connaissances NetApp"] (connexion à l'assistance requise).
 
 Des informations de support supplémentaires sont disponibles sur la page Data Infrastructure Insightslink:concept_requesting_support.html["Assistance"].

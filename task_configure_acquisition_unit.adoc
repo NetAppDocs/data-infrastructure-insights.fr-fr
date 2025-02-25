@@ -95,7 +95,7 @@ La façon la plus simple de procéder est de spécifier une configuration géné
 
 NOTE: L'utilisation d'un astérisque (*) pour le caractère générique est courante, mais votre configuration proxy/pare-feu peut utiliser un format différent. Consultez la documentation de votre proxy pour vous assurer que les spécifications des caractères génériques sont correctes dans votre environnement.
 
-Pour plus d'informations sur la configuration du proxylink:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Base de connaissances"], consultez le NetApp .
+Pour plus d'informations sur la configuration du proxylink:https://kb.netapp.com/Cloud/BlueXP/DII/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Base de connaissances"], consultez le NetApp .
 
 
 
@@ -151,7 +151,7 @@ La façon la plus simple de procéder est de spécifier une configuration géné
 
 NOTE: L'utilisation d'un astérisque (*) pour le caractère générique est courante, mais votre configuration proxy/pare-feu peut utiliser un format différent. Consultez la documentation de votre proxy pour vous assurer que les spécifications des caractères génériques sont correctes dans votre environnement.
 
-Pour plus d'informations sur la configuration du proxylink:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Base de connaissances"], consultez le NetApp .
+Pour plus d'informations sur la configuration du proxylink:https://kb.netapp.com/Cloud/BlueXP/DII/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Base de connaissances"], consultez le NetApp .
 
 
 
