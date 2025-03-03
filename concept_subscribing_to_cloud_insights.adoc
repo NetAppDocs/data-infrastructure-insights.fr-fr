@@ -58,8 +58,6 @@ NOTE: Si vous avez besoin de plus de temps pour évaluer les informations strat�
 
 Vous pouvez également vous inscrire pour essayer gratuitement sur AWS Marketplace. L'essai gratuit d'AWS Marketplace vous donne accès aux informations stratégiques de votre infrastructure de données pendant une période d'essai de 33 jours, avec <<observability-metering,Unités gérées>>une capacité allant jusqu'à 499 MU.
 
-Remarque : si vous configurez plus de 499 UM, vous entrez l'état « brèche ». Pendant que votre version d'essai est enfreinte, vous perdez l'accès à certaines fonctionnalités Data Infrastructure Insights jusqu'à ce que la faille soit résolue, soit en réduisant le nombre de MU configurées, soit en vous abonnant à Data Infrastructure Insights.
-
 La version d'essai gratuite d'AWS Marketplace ne peut pas être étendue. À tout moment pendant votre période d'essai, vous pouvez revenir à un abonnement Data Infrastructure Insights Basic Edition ou passer à un abonnement payant Data Infrastructure Insights en visitant la page *Admin -> abonnement*.
 
 
@@ -142,7 +140,7 @@ Chaque niveau est mesuré à un taux différent, l'ensemble étant calculé ense
 
  Effective usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
 
-NOTE: La somme des unités gérées peut différer légèrement du nombre de collecteurs de données dans la section Résumé. C'est parce que les nombres d'unités gérées sont arrondis à l'unité gérée la plus proche. La somme de ces nombres dans la liste collecteurs de données peut être légèrement supérieure au total des unités gérées dans la section d'état. La section Synthèse indique le nombre réel d'unités gérées pour votre abonnement. Pour faciliter cette tâche, DII calcule un seul numéro *effectif de droit* basé sur les quantités _souscrites_. Il calcule ensuite ce même nombre en fonction du stockage _découvert_ et déclare la violation uniquement si la capacité effective découverte est supérieure au droit effectif. Vous avez ainsi la possibilité de surveiller les quantités qui varient en fonction des montants souscrits pour chaque niveau, ce que DII autorise dans la mesure où le stockage total découvert est compris dans le droit d'accès effectif souscrit.
+NOTE: La somme des unités gérées peut différer légèrement du nombre de collecteurs de données dans la section Résumé. C'est parce que les nombres d'unités gérées sont arrondis à l'unité gérée la plus proche. La somme de ces nombres dans la liste collecteurs de données peut être légèrement supérieure au total des unités gérées dans la section d'état. La section Synthèse indique le nombre réel d'unités gérées pour votre abonnement. Pour faciliter cette tâche, DII calcule un seul nombre *effectif de droits* basé sur les quantités _souscrites_, puis calcule ce même nombre en fonction du stockage _découvert_. Vous avez ainsi la possibilité de surveiller les quantités qui varient en fonction des montants souscrits pour chaque niveau, ce que DII autorise dans la mesure où le stockage total découvert est compris dans le droit d'accès effectif souscrit.
 
 
 
