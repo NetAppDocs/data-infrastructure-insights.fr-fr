@@ -158,8 +158,6 @@ Informations sur l'infrastructure de données observabilité de l'infrastructure
 
 
 
-Si votre environnement inclut ou prévoit d'inclure au moins 1,000 unités gérées, vous pouvez bénéficier de *Volume Pricing* et vous devrez contacter les équipes commerciales NetApp pour vous abonner. Voir <<how-do-i-subscribe,ci-dessous>> pour plus de détails.
-
 
 
 === Mesure de la sécurité des charges de travail
@@ -183,7 +181,7 @@ Si votre nombre d'unités gérées est inférieur à 1,000, vous pouvez vous abo
 
 === Abonnez-vous via NetApp Sales Direct
 
-Si le nombre d'unités gérées que vous prévoyez d'utiliser est supérieur ou égal à 1,000, cliquez sur le link:https://bluexp.netapp.com/contact-cds["*Contactez-nous*"] bouton pour vous abonner à l'équipe de vente NetApp.
+Si le nombre d'unités gérées que vous prévoyez d'utiliser est supérieur ou égal à 1,000, cliquez sur le link:https://www.netapp.com/forms/cloud-insights-contact-us["*Contactez-nous*"] bouton pour vous abonner à l'équipe de vente NetApp.
 
 Vous devez fournir vos informations de l'infrastructure de données *Numéro de série* à votre ingénieur commercial NetApp pour que votre abonnement payant puisse être appliqué à votre environnement Data Infrastructure Insights. Le numéro de série identifie de manière unique votre environnement d'essai Data Infrastructure Insights et se trouve sur la page *Admin > abonnement*.
 
