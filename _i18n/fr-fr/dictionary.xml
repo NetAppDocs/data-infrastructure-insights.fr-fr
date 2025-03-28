@@ -218,51 +218,6 @@
   <block id="5b02fb8f86f33e62862c6886dbbe655e" category="list-text">Nom d'utilisateur et mot de passe en lecture seule, sauf si des groupes_volumes sont utilisés, auquel cas, le nom d'utilisateur et le mot de passe administrateur sont requis</block>
   <block id="bf61ff29d8ff867a7727b034a7efa26f" category="list-text">Port requis : HTTPS 443</block>
   <block id="b8b0b769d3e3395123e9c6b52b36b840" category="cell">Port TCP utilisé pour la connexion à la baie Nutanix. La valeur par défaut est 9440.</block>
-  <block id="6e831c008aae70e3aac84aff192fcea2" category="summary">Collecteur de données OpenStack.</block>
-  <block id="2f186f5eedfe86b735c206f6be34f9a7" category="doc">Collecteur de données OpenStack</block>
-  <block id="1affaa3c0d19c2e084afa700debb8740" category="paragraph">Le collecteur de données OpenStack (API REST/KVM) acquiert les données d'inventaire pour toutes les instances OpenStack et, éventuellement, les données de performance des VM.</block>
-  <block id="ee627d472fc6df1e0c1367deb7ee0063" category="list-text">Adresse IP du contrôleur OpenStack</block>
-  <block id="280f91bd66acb7cf04ec960fca75f64a" category="list-text">Informations d'identification du rôle d'administrateur OpenStack et accès à l'hyperviseur Linux KVM. Si vous n'utilisez pas le compte admin ou les privilèges équivalents admin, vous devez utiliser le test et l'erreur pour identifier les stratégies par défaut pour vous détendre pour votre ID utilisateur de collecteur de données.</block>
-  <block id="c0ea429a2fadacc206fdc8f17cfa492c" category="list-text">Le module OpenStack gnocchi doit être installé et configuré pour la collecte des performances. La configuration de gnocchi se fait en éditant le fichier nova.conf pour chaque hyperviseur, puis en redémarrant le service Nova Compute sur chaque hyperviseur. Modifications du nom de l'option dans les différentes versions d'OpenStack :</block>
-  <block id="8beeeec38dbc6258291f2e47130835d8" category="list-text">Icehouse</block>
-  <block id="291b02b25fbb9789119d2383e9f08e29" category="list-text">Juno</block>
-  <block id="3afe87a2a8c61f8023e56883b9baccb8" category="list-text">Kilo</block>
-  <block id="84e1da9e55480128662cfdfe79cb8923" category="list-text">La liberté</block>
-  <block id="89042bafc0f1c8153060574c3895f44b" category="list-text">Mitaka</block>
-  <block id="1c8b97c83b0726216cd5dbc88a64b0ed" category="list-text">Newton</block>
-  <block id="baba8cba1a3c4596919404471ad4d0d8" category="list-text">Ocata</block>
-  <block id="43ec0ba7025c8d3dfc798f09c6fb36d2" category="list-text">Pour les statistiques CPU, “Compute_Moniks=ComputeDriverCPUMonitor” doit être activé dans /etc/nova/nova.conf sur les nœuds de calcul.</block>
-  <block id="30d248ff55e04656a0bc13e82c28ca89" category="list-text">Configuration requise pour les ports :</block>
-  <block id="4931562219172e126d11a20bd2ee6af3" category="list-text">5000 pour http et 13000 pour https, pour le service Keystone</block>
-  <block id="5829ef3d89411d46f0a05f6867ff2efd" category="list-text">22 pour KVM SSH</block>
-  <block id="a58963a7c2c9eafce2ab09ca28270ee0" category="list-text">8774 pour le service de calcul Nova</block>
-  <block id="745b1ee1989bc6dd0ac838e4dcb448e5" category="list-text">8776 pour le service de blocs Cinder</block>
-  <block id="dfe1b74026ff6682b451240881e76be4" category="list-text">8777 pour le service de performance de gnocchi</block>
-  <block id="ca3d2d05f916b41d8f53f506ace2e80e" category="list-text">9292 pour le service d'image Glance *Remarque* le port se lie au service spécifique et le service peut s'exécuter sur le contrôleur ou un autre hôte dans des environnements plus grands.</block>
-  <block id="9be07620e581c90b777b5fef1296cc28" category="cell">Adresse IP du contrôleur OpenStack</block>
-  <block id="c5e968faf75175530ec61fb1846cfdce" category="cell">Adresse IP ou nom de domaine complet du contrôleur OpenStack</block>
-  <block id="60f987e0e1dafdb918779f7224cd3aaf" category="cell">Administrateur OpenStack</block>
-  <block id="963b85b5fea0fb25d7f739d70b488f08" category="cell">Nom d'utilisateur d'un administrateur OpenStack</block>
-  <block id="702c22fcd705ed77553d755f22f3966a" category="cell">Mot de passe OpenStack</block>
-  <block id="79db7b7c9e06d7a21d6a84e5efacf631" category="cell">Mot de passe utilisé pour l'administrateur OpenStack</block>
-  <block id="97564e1a26ba1c694feebd9a3f2d9f38" category="cell">Locataire Administrateur OpenStack</block>
-  <block id="5d24fef3e48bfdbcdc47e96414966a56" category="cell">Nom du locataire de l'administrateur OpenStack</block>
-  <block id="80fd569cda415ce2714eede8209d7eb3" category="cell">Utilisateur KVM sudo</block>
-  <block id="7014ddc89480575c89e23a7982c7c0ac" category="cell">Nom d'utilisateur de sudo KVM</block>
-  <block id="aab8d1693141a32bece39aa945271b85" category="cell">Choisissez « Mot de passe » ou « fichier de clé OpenSSH » pour spécifier le type d'informations d'identification</block>
-  <block id="31deddc69cd96113632a3ab17e5cd93e" category="cell">Type d'informations d'identification utilisé pour la connexion au périphérique via SSH</block>
-  <block id="b6593f79d3306be8166f8e92e7cb4a65" category="cell">Chemin complet vers la clé privée d'inventaire</block>
-  <block id="dba54b8be33cd375b2f9f38a66dd55b4" category="cell">Mot de passe KVM sudo</block>
-  <block id="dfe35b8b294b35971918582bb405c7a8" category="cell">Activer la découverte d'inventaire des hyperviseurs via SSH</block>
-  <block id="8bc6def4f9968da03c00d5a791ff25b3" category="cell">Cochez cette case pour activer la détection d'inventaire des hyperviseurs via SSH</block>
-  <block id="724bdc3d08a628510ac4b35391f971e9" category="cell">Port d'URL d'administration OpenStack</block>
-  <block id="93dc129787d356e23553d69cfe40511e" category="cell">Utiliser HTTPS</block>
-  <block id="1e435f995c73427ccb198051f1f58881" category="cell">Vérifiez que vous utilisez le protocole HTTP sécurisé</block>
-  <block id="6b9dc11d780e38196cc7f712ba7d8f5c" category="cell">Port utilisé pour SSH</block>
-  <block id="19f99c5f7ed3601984d9068bcacd7fa8" category="cell">Nouvelles tentatives de traitement SSH</block>
-  <block id="b65a95e1edb457db54d2696cdde74458" category="cell">Intervalle entre les sondages d'inventaire. La valeur par défaut est 20 minutes.</block>
-  <block id="ebe11f389d67e77cfd3d461ac635ac57" category="cell">« Erreur de configuration » avec les messages d'erreur commençant par « la stratégie n'autorise pas » ou « vous n'êtes pas autorisé »</block>
-  <block id="98a8b66b2a474494c50e1594ce9331b1" category="cell">* Vérifiez l'adresse ip * Vérifiez le nom d'utilisateur et le mot de passe</block>
   <block id="298831ffa37c3339463b0927313f5324" category="summary">Configuration du collecteur de données Oracle ZFS.</block>
   <block id="12aa4229d08c65b7528cfd8184ed0f2b" category="doc">Collecteur de données Oracle ZFS Storage Appliance</block>
   <block id="19a548e7f1d623a2cebfcbb03e92f222" category="paragraph">Data Infrastructure Insights utilise le collecteur de données Oracle ZFS Storage Appliance pour collecter les données d'inventaire et de performances.</block>
@@ -2186,7 +2141,6 @@
   <block id="8f4063b3e2653e9f3c560f79c771819b" category="sidebar">REST E-Series</block>
   <block id="c106fc8dee70ab4a9453d7ed9a891bd7" category="sidebar">Serveur de gestion NetApp HCI</block>
   <block id="bb88c75c573c51be16c7d85804e7a9fe" category="sidebar">Nutanix</block>
-  <block id="7ff6cc997b141399bcdf2c338fb4031c" category="sidebar">OpenStack</block>
   <block id="30162ed78b6c10f731411f2fc440c24f" category="sidebar">Oracle</block>
   <block id="d30973809f2e4238b7eb2bac9241674c" category="sidebar">Pure</block>
   <block id="1d9fc183665bd1e195391190be506894" category="sidebar">Red Hat</block>
@@ -6098,8 +6052,6 @@
   <block id="d4df4178129288e74d306d474f41121d" category="cell"><block ref="d4df4178129288e74d306d474f41121d" category="inline-link-macro-rx"></block></block>
   <block id="c7a56e9ede426bcb6ef8adebfa167f5b" category="inline-link-macro">Gamme Nutanix NX</block>
   <block id="9935d13e4384b8045cffd7789defe14c" category="cell"><block ref="9935d13e4384b8045cffd7789defe14c" category="inline-link-macro-rx"></block></block>
-  <block id="f2cf54cfab756c7cdb0f16c0ed5cda12" category="inline-link-macro">OpenStack</block>
-  <block id="d2c9f580641c4ac421cd1184c444c1e6" category="cell"><block ref="d2c9f580641c4ac421cd1184c444c1e6" category="inline-link-macro-rx"></block></block>
   <block id="a1b8b82e2c6dab4ba2762641402e6184" category="inline-link-macro">OpenZFS</block>
   <block id="f5a800ee25a815f4c8c0d66efcf7438d" category="cell"><block ref="f5a800ee25a815f4c8c0d66efcf7438d" category="inline-link-macro-rx"></block></block>
   <block id="a2c92312bc8a9e692141bc61305782f3" category="inline-link-macro">Oracle ZFS Storage Appliance</block>
@@ -11646,7 +11598,6 @@
   <block id="2f461803a8b3a27284482a32459a1078" category="cell">ee ce <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block>. Le paramètre _Unprotected_ indique à l'opérateur de surveillance Kubernetes d'exécuter Telegraf avec l'<block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block>indicateur.</block>
   <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify</block>
   <block id="3008cd3125cccc003fa13335717e556e" category="cell">Si telegraf ne parvient pas à vérifier le certificat en raison de l'absence de SAN IP, essayez d'activer le saut de vérification</block>
-  <block id="3a6957a9f0cd14c98be3bfcbf85db668" category="paragraph"><block ref="3a6957a9f0cd14c98be3bfcbf85db668" category="inline-link-macro-rx"></block></block>
   <block id="9e43104f0687bd3a308759c5411641d7" category="paragraph"><block ref="9e43104f0687bd3a308759c5411641d7" category="inline-link-macro-rx"></block></block>
   <block id="348fd8f652c33b1be14b9b2f000cff0d" category="cell">Cela est probablement dû à un problème de réseau côté ONTAP. Veuillez suivre les étapes suivantes : 1. S'assurer qu'il n'y a aucun pare-feu sur la lif de données du SVM ou la lif de gestion qui bloquent la connexion de la SVM. 2. Lors de l'ajout d'un SVM via une IP de gestion de cluster, veillez à ce que la lif de données et la lif de gestion du SVM soient pingables depuis la VM Agent. En cas de problème, vérifier la passerelle, le masque de réseau et les routes de la lif. Vous pouvez également essayer de vous connecter au cluster via ssh à l'aide de l'IP de gestion de cluster et envoyer une requête ping à l'IP de l'agent. Vérifier que l'IP de l'agent est pingable : _network ping -vserver &lt;nom du vserver&gt; -destination &lt;adresse IP de l'agent&gt; -lif &lt;nom de la LIF&gt; -show-detail_ si ne peut pas être pingable, s'assurer que les paramètres réseau dans ONTAP sont corrects, et que la machine de l'agent soit pingable. 3. Si vous avez essayé de vous connecter via Cluster IP et qu'il ne fonctionne pas, essayez de vous connecter directement via SVM IP. Voir ci-dessus pour les étapes de connexion via SVM IP. 4. Lors de l'ajout du collecteur via les identifiants SVM IP et vsadmin, vérifier si le rôle Data plus Mgmt est activé dans la LIF du SVM. Dans ce cas, le ping vers la LIF du SVM va fonctionner, mais SSH vers la LIF du SVM ne fonctionnera pas. Si oui, créer une LIF SVM Mgmt uniquement et tenter de se connecter via cette LIF de management SVM uniquement. 5. Si cela ne fonctionne toujours pas, créer une nouvelle LIF du SVM et essayer de se connecter via cette LIF. Vérifiez que le masque de sous-réseau est correctement défini. 6. Débogage avancé : a) Démarrer une trace de paquet dans ONTAP. b) essayer de connecter un collecteur de données au SVM depuis l'interface utilisateur CloudSecure. c) attendre l'apparition de l'erreur. Arrêtez la trace de paquet dans ONTAP. d) Ouvrez la trace de paquet à partir de ONTAP. Il est disponible à cet emplacement _\https://&lt;cluster_mgmt_ip&gt;/spi/&lt;clustername&gt;/etc/log/Packet_traces/_ e) Assurez-vous qu'il y a un SYN de ONTAP à la boîte agent. f) s'il n'y a pas de SYN de ONTAP, il s'agit d'un problème avec le pare-feu dans ONTAP. g) Ouvrez le pare-feu dans ONTAP, afin que ONTAP puisse connecter la boîte agent. 7. S'il ne fonctionne toujours pas, veuillez consulter l'équipe réseau pour vous assurer qu'aucun pare-feu externe ne bloque la connexion entre ONTAP et le boîtier Agent. 9. Si aucune des solutions ci-dessus ne résout le problème, ouvrez un dossier auprès de <block ref="d0162286c59c67bf86d01f060ee7cd04" category="inline-link-macro-rx"></block> pour obtenir de l'aide.</block>
   <block id="2b8272217b69f1c5b5ad5968f0bc0945" category="list-text">Inscrivez-vous pour essayer gratuitement Data Infrastructure Insights et découvrir les fonctionnalités disponibles. Pour vous inscrire à un essai gratuit :</block>
@@ -11786,7 +11737,6 @@
   <block id="8af8d6d7603eec1cb34086e9cf6e2055" category="inline-image-macro">La liste déroulante ONTAP Essentials présente ASA comme étant distinct du stockage unifié</block>
   <block id="5fe97e7e7c561aa4a8199e55d380aadb" category="paragraph"><block ref="5fe97e7e7c561aa4a8199e55d380aadb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bd255743216cfae20f87e84a9cd8e7e1" category="section-title">Suivi de l'utilisation de l'API DII : améliorer la sécurité et l'efficacité</block>
-  <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">Renforcez votre stratégie de sécurité et rationalisez la gestion des ressources avec un meilleur suivi de l'utilisation de l'API REST, disponible pour les utilisateurs Admin. Le suivi de l'utilisation de l'API vous permet de voir quels tokens API sont utilisés, à partir de quelles adresses IP et le volume de trafic qu'ils génèrent. En reliant les jetons à des adresses IP et des niveaux d'utilisation spécifiques, vous obtenez de puissantes informations sur l'accès au système et les tendances d'utilisation, ce qui vous donne le contrôle dont vous avez besoin pour maintenir un environnement sûr et efficace et assurer le bon fonctionnement des opérations.</block>
   <block id="320be4cb0a9128705d37286f8afff816" category="inline-image-macro">Exemple d'analytique de l'utilisation des API</block>
   <block id="d7f696b40402f5f6c5dc60d881af09a0" category="paragraph"><block ref="d7f696b40402f5f6c5dc60d881af09a0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="811a069713a14c7b8c3b0333afcedfff" category="section-title">API de sécurité des charges de travail pour limiter les utilisateurs</block>
@@ -11810,7 +11760,6 @@
   <block id="8429b607073457ee8f7513c9b33f2b47" category="inline-link-macro">ONTAP REST</block>
   <block id="9813cb21933d9e535322d83efc9b8d25" category="paragraph">Pour tous les systèmes ASA de génération précédente, veuillez utiliser le <block ref="75bdda54644cc13465ab7acc10710396" category="inline-link-macro-rx"></block> collecteur.</block>
   <block id="6cc5c9e930ea3d3b8bff4367c60ceea4" category="section-title">Février 2025</block>
-  <block id="8261d0e1521d30da1b36761d508cb245" category="paragraph">Pour afficher l'utilisation de l'API, accédez à *observabilité &gt; Admin &gt; API Access* et sélectionnez _View API usage_. Notez que cette API est disponible uniquement pour les API d'observabilité DII ; elle ne s'applique pas à Workload Security.</block>
   <block id="bcaea0fa3a691efcd767e69c0bf6c611" category="paragraph">Pour vous assurer que vos destinataires reçoivent des notifications de Data Infrastructure Insights, ajoutez les adresses e-mail suivantes à n'importe quelle liste « Autoriser » :</block>
   <block id="920ab4b11a04d50637a16a5c9699b3ba" category="list-text">\accounts@service.cloudinsights.netapp.com</block>
   <block id="b68146f7d3be586c34e5b6d021541f50" category="list-text">\DoNotReply@cloudinsights.netapp.com</block>
@@ -12049,4 +11998,7 @@
   <block id="bc23aa0997542e15a65a21a96991960a" category="paragraph">The user can go to the add/edit collector page, enter the cluster level details (in Cluster Mode) or SVM level details (in SVM Mode), and click on the *Test Connection* button. Workload Security will then process the request and display an appropriate success or failure message.</block>
   <block id="e8f41baace36619af4a7292787a17936" category="inline-image-macro">Workload Security 'Test Connection' success message</block>
   <block id="e6ea93198fd78cbc89b93053e0d0b573" category="paragraph"><block ref="e6ea93198fd78cbc89b93053e0d0b573" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ca873110efddef67beadcfe5f8a4ca84" category="paragraph">Renforcez votre stratégie de sécurité et rationalisez la gestion des ressources avec un meilleur suivi de l'utilisation de l'API REST, disponible pour les utilisateurs Admin. Le suivi de l'utilisation de l'API vous permet de voir quels tokens API sont utilisés, à partir de quelles adresses IP et le volume de trafic qu'ils génèrent. En reliant les jetons à des adresses IP et des niveaux d'utilisation spécifiques, vous obtenez de puissantes informations sur l'accès au système et les tendances d'utilisation, ce qui vous donne le contrôle dont vous avez besoin pour maintenir un environnement sûr et efficace et assurer le bon fonctionnement des opérations. Renforcez votre stratégie de sécurité et rationalisez la gestion des ressources avec un meilleur suivi de l'utilisation de l'API REST, disponible pour les utilisateurs Admin. Le suivi de l'utilisation de l'API vous permet de voir quels tokens API sont utilisés, à partir de quelles adresses IP et le volume de trafic qu'ils génèrent. En reliant les jetons à des adresses IP et des niveaux d'utilisation spécifiques, vous obtenez de puissantes informations sur l'accès au système et les tendances d'utilisation, ce qui vous donne le contrôle dont vous avez besoin pour maintenir un environnement sûr et efficace et assurer le bon fonctionnement des opérations.</block>
+  <block id="24f17d3ee72bb2738ceb12180ec2fa71" category="paragraph">Pour afficher l'utilisation de l'API, accédez à *observabilité &gt; Admin &gt; API Access* et sélectionnez _View API usage_. Notez que cette API est disponible uniquement pour les API d'observabilité DII ; elle ne s'applique pas à Workload Security. Pour afficher l'utilisation de l'API, accédez à *observabilité &gt; Admin &gt; API Access* et sélectionnez _View API usage_. Notez que cette API est disponible uniquement pour les API d'observabilité DII ; elle ne s'applique pas à Workload Security.</block>
+  <block id="c033c9dce9a48cc67d3409bab6aab6ba" category="paragraph"><block ref="c033c9dce9a48cc67d3409bab6aab6ba" category="inline-link-macro-rx"></block></block>
 </blocks>
