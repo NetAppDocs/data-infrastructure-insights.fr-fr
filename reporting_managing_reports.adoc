@@ -19,7 +19,7 @@ keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying
 
 
 [role="lead"]
-Vous pouvez personnaliser le format de sortie et la diffusion d'un rapport, définir les propriétés ou les horaires des rapports et les rapports par e-mail.
+Vous pouvez personnaliser le format de sortie et la distribution d'un rapport, définir les propriétés ou les plannings de rapport et envoyer des rapports par e-mail.
 
 
 NOTE: La fonction de génération de rapports est disponible dans Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Édition Premium"].
@@ -39,8 +39,6 @@ Vous pouvez personnaliser le format et la méthode de diffusion des rapports.
 image:Reporting_Output_and_Delivery.png["Sortie et livraison du rapport"]
 
 . Cliquez sur *Propriétés > Programme*
-
-
 . Vous pouvez définir les options suivantes :
 +
 ** *Planifier* lorsque vous souhaitez que les rapports s'exécutent.
