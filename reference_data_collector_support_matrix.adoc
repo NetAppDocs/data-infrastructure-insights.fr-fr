@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference_data_collector_support_matrix.html 
 summary: La matrice de prise en charge du Data Collector contient des informations détaillées sur les collecteurs de données pris en charge. 
-keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, Huawei, OpenStack 
+keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, Huawei 
 ---
 = Matrice de prise en charge du Data Collector Data Infrastructure Insights
 :hardbreaks:
@@ -26,7 +26,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| HPE ALLETRA 9080 7200 8400 HPE_3PAR 20450 7400 8440 HPE_3PAR 20800 20800 8200 HPE_3PAR 20850 HPE_3PAR 7200 HPE_3PAR 7200C HPE_3PAR 7400 HPE_3PAR 7400C HPE_3PAR 7440C HPE_3PAR 7450C HPE_3PAR 8200 HPE_3PAR 8400 HPE_3PAR 8440 HPE_3PAR 8450 HPE_3PAR 9450 HPE_3PAR | 3.1.1 4.5.24 9.5.15 (MU1) 3.1.2 9.5.8 (MU3) 3.1.3 4.6.1 (MU1) 3.3.1 (MU2) 3.2.1 (MU2) 4.3.1 4.3.3 4.4.1 (MU3) 3.2.1 (MU5) 3.3.2 (MU4) 3.2.2 (MU6) 3.3.1 3.3.1 (MU1) 3.3.1 (MU2) 3.3.1 (MU3) 3.1.3 (MU5) 3.2.2 (MU1) 3.2.1 Type de support standard Type de version 4.5.15 : version 4.5.18 support étendu : version 4.5.21 : version 4.5.7 
+| HPE ALLETRA 9080 7200 8400 HPE_3PAR 20450 7400 8440 HPE_3PAR 20800 20800 8200 HPE_3PAR 20850 HPE_3PAR 7200 HPE_3PAR 7200C HPE_3PAR 7400 HPE_3PAR 7400C HPE_3PAR 7440C HPE_3PAR 7450C HPE_3PAR 8200 HPE_3PAR 8400 HPE_3PAR 8440 HPE_3PAR 8450 HPE_3PAR 9450 HPE_3PAR | 3.1.1 4.5.24 9.5.15 (MU1) 3.1.2 4.5.7 9.5.8 (MU3) 3.1.3 4.5.21 4.6.1 9.6.1 (MU1) 3.3.1 (MU2) 3.3.2 (MU2) 3.2.1 (MU3) 3.2.1 (MU5) 3.2.2 (MU4) 3.2.2 (MU6) 3.3.1 3.3.1 (MU1) 3.3.1 (MU2) 3.3.1 (MU3) 3.1.3 (MU5) 3.2.1 (MU1) 4.3.1 4.3.3 4.4.1 Type de support standard Type de version 4.5.15 : version de support étendu : version 4.5.18 : version de support étendu 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -34,7 +34,7 @@ Produits pris en charge par ce collecteur de données :
 | Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
 
 
-.118+| bases .3+| Groupe de périphériques | Nom | Mise en œuvre | SSH |  
+.119+| bases .3+| Groupe de périphériques | Nom | Mise en œuvre | SSH |  
 
 
 | ID de gestion du stockage | Mise en œuvre | SSH |  
@@ -154,7 +154,7 @@ Produits pris en charge par ce collecteur de données :
 | ID émetteur | Mise en œuvre | SSH |  
 
 
-.12+| Stockage | IP de l'affichage | Mise en œuvre | SSH |  
+.13+| Stockage | IP de l'affichage | Mise en œuvre | SSH |  
 
 
 | Échec de la capacité brute | Mise en œuvre | SSH | Capacité brute des disques défaillants (somme de tous les disques en panne) 
@@ -164,6 +164,9 @@ Produits pris en charge par ce collecteur de données :
 
 
 | IP | Mise en œuvre | SSH |  
+
+
+| Gérer URL | Mise en œuvre | SSH |  
 
 
 | Fabricant | Mise en œuvre | SSH |  
@@ -388,7 +391,7 @@ Produits pris en charge par ce collecteur de données :
 | WWN | Mise en œuvre | SSH |  
 
 
-.118+| performances .6+| Disque | Lecture IOPS | Mise en œuvre | SMI-S | Nombre d'IOPS de lecture sur le disque 
+.120+| performances .6+| Disque | Lecture IOPS | Mise en œuvre | SMI-S | Nombre d'IOPS de lecture sur le disque 
 
 
 | Total d'IOPS | Mise en œuvre | SMI-S |  
@@ -520,7 +523,7 @@ Produits pris en charge par ce collecteur de données :
 | Total d'utilisation | Mise en œuvre | SMI-S |  
 
 
-.13+| Pool de stockage | Capacité provisionnée | Mise en œuvre | SMI-S |  
+.15+| Pool de stockage | Capacité provisionnée | Mise en œuvre | SMI-S |  
 
 
 | Capacité brute | Mise en œuvre | SMI-S |  
@@ -538,6 +541,9 @@ Produits pris en charge par ce collecteur de données :
 | Rapport de capacité utilisé | Mise en œuvre | SMI-S |  
 
 
+| Capacité totale des données | Mise en œuvre | SMI-S |  
+
+
 | Capacité utile des données | Mise en œuvre | SMI-S |  
 
 
@@ -551,6 +557,9 @@ Produits pris en charge par ce collecteur de données :
 
 
 | ID du serveur | Mise en œuvre | SMI-S |  
+
+
+| Capacité réservée des snapshots | Mise en œuvre | SMI-S |  
 
 
 | Capacité utilisée du snapshot | Mise en œuvre | SMI-S |  
@@ -756,9 +765,7 @@ API de gestion utilisées par ce collecteur de données :
 
 == Amazon AWS EC2
 
-Modèles et versions pris en charge par ce collecteur de données :
-
-Versions API :
+Modèles et versions pris en charge par ce collecteur de données : versions API :
 
 * 1 octobre 2014
 
@@ -1209,7 +1216,7 @@ Produits pris en charge par ce collecteur de données :
 | Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
 
 
-.72+| bases .5+| Partage de fichiers | Est InternalVolume | Mise en œuvre | HTTPS | que le partage de fichiers représente un volume interne (volume netapp) ou s'agit-il d'un qtree/dossier au sein du volume interne 
+.76+| bases .5+| Partage de fichiers | Est InternalVolume | Mise en œuvre | HTTPS | que le partage de fichiers représente un volume interne (volume netapp) ou s'agit-il d'un qtree/dossier au sein du volume interne 
 
 
 | Est partagé | Mise en œuvre | HTTPS | Si ce fichier est associé à des partages 
@@ -1236,7 +1243,7 @@ Produits pris en charge par ce collecteur de données :
 | ID émetteur | Mise en œuvre | HTTPS |  
 
 
-.18+| Volume interne | Capacité allouée aux données | Écart | HTTPS | capacité allouée aux données 
+.21+| Volume interne | Capacité allouée aux données | Écart | HTTPS | capacité allouée aux données 
 
 
 | Capacité utile des données | Mise en œuvre | HTTPS |  
@@ -1288,6 +1295,15 @@ Produits pris en charge par ce collecteur de données :
 
 
 | UUID | Mise en œuvre | HTTPS |  
+
+
+| Commentaire | Écart | HTTPS | état : commentaire libre décrivant le svm 
+
+
+|  | Mise en œuvre | HTTPS |  
+
+
+| QoS - règle | Mise en œuvre | HTTPS |  
 
 
 .3+| Synchronisation du stockage | Volume interne source | Mise en œuvre | HTTPS |  
@@ -1383,7 +1399,7 @@ Produits pris en charge par ce collecteur de données :
 | Virtualisation | Mise en œuvre | HTTPS | S'agit-il d'un dispositif de virtualisation du stockage ? 
 
 
-.14+| Pool de stockage | Capacité allouée aux données | Écart | HTTPS | capacité allouée aux données 
+.15+| Pool de stockage | Capacité allouée aux données | Écart | HTTPS | capacité allouée aux données 
 
 
 | Capacité utile des données | Mise en œuvre | HTTPS |  
@@ -1423,6 +1439,9 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Virtualisation | Mise en œuvre | HTTPS | S'agit-il d'un dispositif de virtualisation du stockage ? 
+
+
+| Commentaire | Écart | HTTPS | état : commentaire libre décrivant le svm 
 
 
 .23+| performances .17+| Volume interne | Capacité totale | Mise en œuvre |  |  
@@ -1511,7 +1530,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| Brocade Brocade Brocade 200E Brocade Brocade Brocade Brocade 300E Brocade Brocade Brocade 4024 8 intégré Brocade 5000 4 Brocade 5100 7840 4 8 Brocade 5300 Brocade 5480 intégré Brocade 6505 Brocade 6547 Brocade 6548 Brocade 6546 Brocade 6510 intégré Brocade 6520 Brocade 6558 Brocade 7800 Brocade 7810 commutateur d'extension Brocade 175.53 176.51 183.0 Brocade DCX Brocade-4S Backbone Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade | v6.2.2b v6.2.2f v6.2.2f9 v6.2.2g v6.4.1a v6.4.1b v6.4.2a v6.4.3 v6.4.3d v6.4.3f3 v7.0d 824494 01 3 855776 01 861742 01 857687 01 
+| Brocade Brocade Brocade 200E Brocade Brocade Brocade Brocade 300E Brocade Brocade Brocade 4024 8 intégré Brocade 5000 4 Brocade 5100 7840 4 8 Brocade 5300 Brocade 5480 intégré Brocade 6505 Brocade 6547 Brocade 6548 Brocade 6546 Brocade 6510 intégré Brocade 6520 Brocade 6558 Brocade 7800 Brocade 7810 commutateur d'extension Brocade 176.51 183.0 Brocade DCX Brocade-4S Backbone Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade | v6.2.2b v6.2.2f v6.2.2g v6.4.1b v6.4.2a v6.4.3 v6.4.3d v6.4.3f3 v7.0.1 v7.0.1b v7.0.2 v7.0.2b1 v7.0.0a v7.0.2f v7.4.v7.4 824494 01 3 855776 01 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -2197,7 +2216,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| 183.0 184.0 190.0 191.0 Brocade 6505 Brocade 6510 Brocade 6520 Brocade 7810 commutateur d'extension Brocade 7840 Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G720 Brocade G730 Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 | v8.2.2a v8.2.2d v8.2.2d4 v8.2.3 861742 857687 v8.2.3a v8.2.3b v8.2.3c v8.2.3c1 v8.2.3d v8.2.3e v8.2 01.3e1 v9.0 01.0b v9.0.1b v9.0 
+| 183.0 184.0 190.0 Brocade 6505 Brocade 6510 Brocade 6520 Brocade 7810 commutateur d'extension Brocade 7840 Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G720 Brocade G730 Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 | v8.2.2a v8.2.2d v8.2.2d4 v8.2.3 861742 857687 v8.2.3a v8.2.3b v8.2.3c v8.2.3c1 v8.2.3d v8.2.3e v8.2 01.3e1 v9.0 01.0b v9.0.1b v9.0 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -2615,7 +2634,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| DS-C9124-2-K9 DS-C9124-K9 DS-C9132T-K9 DS-C9148-16P-K9 DS-C9148 6332-32P-K9 DS-C915K 6332 64108 6454 | 3 5.0 3 5.0 5.2 5.2 5.2 5.2 6.2 13 15 6.2 21 6.2 27 6.2 33 7 6.2(1c) 5.0 3 5.0 8 8 5.2 5.2 6.2 6.2 6.2 6.2 19 6.2 25 6.2 31 6.2 6.2 6.2(3a) 4.2 5.0 3 5.2 5.2 5.2 5.2 11 6.2 6.2 17 6.2 23 6.2 29 6.2 6.2 9 7.0(1a) 5.0(1a) 3(5.0)N2(3.11e) 5.0(3)N2(4.01d) 3(3)N2(4.13i) 5.0(5.0)N2(4.21e) 5.0(5.0)N2(4.21j) 3(3.3)N2(4.3)4.1 3 7.0 3 7.0 3 7.3 7.3 13 7.3 8 8.1 8.1 8.2 8.2 8.3 8.3 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 5 8.5 9.2 9.2 9.3 9.3 9.3 9.3 5 9.3 5 9.3 5 9.3 5 9.3 5 9.3 5 9.4 9.4 9.4 9.4 
+| DS-C9124-2-K9 DS-C9124-K9 DS-C9132T-K9 DS-C9148-16P-K9 DS-C9148-32P-K9 DS-C9148-48P-K9 DS-C9148S-K9 DS 6332 6332 64108 6454 | 3 5.0 3 5.0 5.2 5.2 5.2 5.2 6.2 13 15 6.2 21 6.2 27 6.2 33 7 6.2(1c) 5.0 3 5.0 8 8 5.2 5.2 6.2 6.2 6.2 6.2 19 6.2 25 6.2 31 6.2 6.2 6.2(3a) 4.2 5.0 3 5.2 5.2 5.2 5.2 11 6.2 6.2 17 6.2 23 6.2 29 6.2 6.2 9 7.0(1a) 5.0(1a) 3(5.0)N2(3.11e) 5.0(3)N2(4.01d) 3(3)N2(4.13i) 5.0(5.0)N2(4.21e) 5.0(5.0)N2(4.21j) 3(3.3)N2(4.3)4.1 3 7.0 3 7.0 3 7.3 7.3 7.3 13 7.3 8 8.1 8.1 8.2 8.2 8.3 8.3 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.4 8.5 9.2 9.2 9.3 9.3 9.3 9.3 5 9.3 5 9.3 5 9.3 5 9.3 5 9.3 5 9.4 9.4 9.4 9.4 9.4 3 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -3009,7 +3028,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| NŒUD DE CALCUL C4000 C4600 C5036 C5066 C6025 C6035 C6055 PXG1 UCS-C240M5H10 ROBO VIRTUELS | 6.8.1_u1_release-20221022_6f58ed2a 6.8.1_u7_release-20231213_41094bba 6.8.2_release-20240317_97f56d9a 6.8.2_u1_release-20240509_a5da4644 7.1.2_u2_release-20240925_66722648 7.1.2_febbu3_release-20241231_f4777 
+| NŒUD DE CALCUL C4000 C4600 C5036 C5066 C6025 C6035 C6055 CX8405 PXG1 UCS-C240M5H10 ROBO VIRTUELS | 6.8.1_u1_release-20221022_6f58ed2a 6.8.2_u1_release-20240509_a5da4644 7.1.2_u2_release-20240925_66722648 7.1.2_u3_release-20241231_bb47fe77 7.2.1_release-20241114_794eae46 7.2.2_release-20250228_63eccf 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -3288,7 +3307,7 @@ Produits pris en charge par ce collecteur de données :
 | Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
 
 
-.84+| bases .6+| Partage de fichiers | Est InternalVolume | Mise en œuvre | SSH | que le partage de fichiers représente un volume interne (volume netapp) ou s'agit-il d'un qtree/dossier au sein du volume interne 
+.85+| bases .6+| Partage de fichiers | Est InternalVolume | Mise en œuvre | SSH | que le partage de fichiers représente un volume interne (volume netapp) ou s'agit-il d'un qtree/dossier au sein du volume interne 
 
 
 | Est partagé | Mise en œuvre | SSH | Si ce fichier est associé à des partages 
@@ -3495,7 +3514,7 @@ Produits pris en charge par ce collecteur de données :
 | Virtualisation | Mise en œuvre | SSH | S'agit-il d'un dispositif de virtualisation du stockage ? 
 
 
-.15+| Pool de stockage | Capacité allouée aux données | Écart | SSH | capacité allouée aux données 
+.16+| Pool de stockage | Capacité allouée aux données | Écart | SSH | capacité allouée aux données 
 
 
 | Capacité utile des données | Mise en œuvre | SSH |  
@@ -3508,6 +3527,9 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Nom | Mise en œuvre | SSH |  
+
+
+| Capacité sur disque physique (Mo) | Mise en œuvre | SSH | utilisé comme capacité brute pour le pool de stockage 
 
 
 | Groupe RAID | Mise en œuvre | SSH | Indique si StoragePool est un groupe raid 
@@ -3557,7 +3579,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Versions API | Modèles | Versions du micrologiciel 
 
 
-| 6.26 6.28 7.32 7.33 | CX3-40F CX4-480 VNX5100 VNX5200 VNX5300 VNX5400 VNX5500 VNX5600 VNX5700 VNX5800 VNX7600 | 04.28.000.5.710 05.32.000.5.206 05.32.000.5.218 05.32.000.5.219 05.32.000.5.221 05.32.000.5.225 05.32.000.5.249 05.33.000.5.074 05.33.008.5.119 05.33.009.5.155 05.33.009.5.184 05.33.009.5.186 05.33.009.5.231 05.33.021.5.256 05.33.021.5.266 05.33.021.5.322 3.26.40.5.029 
+| 6.26 6.28 7.32 7.33 | CX3-40F CX4-480 VNX5100 VNX5200 VNX5300 VNX5400 VNX5500 VNX5600 VNX5700 VNX5800 VNX7600 | 04.28.000.5.710 05.32.000.5.206 05.32.000.5.218 05.32.000.5.219 05.32.000.5.221 05.32.000.5.225 05.32.000.5.249 05.33.000.5.074 05.33.008.5.119 05.33.009.5.155 05.33.009.5.184 05.33.009.5.186 05.33.009.5.231 05.33.009.5.238 05.33.021.5.256 05.33.021.5.266 05.33.021.5.322 3.26.40.5.029 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -4131,7 +4153,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| DD VE DD2500 DD3300 DD4200 DD6300 DD6400 DD6800 DD6900 DD6200 DD6300 DD9400 DD9500 DD6800 DD9900 DD69910 | ...1.30-663869 6.2.1.40-671977 6.2.1.60-686365 7.10.0.6.1.0-1042928 7.10.1.1-1049892 7.10.1.4.0-1017976 7.7.0.70-686759 7.2.0.90-692270 7.7.0.60-682124 7.2.20-1082704 7.2.0.20-658029 7.2.0-1035502 7.13.0.40-1126469 7.10.1.50-1146826 7.11.0.30-1105324 7.10.1.15-1078832 7.10.1.20-1090468 7.10.1.10-1068159 7.10.1.5.1-1040473 7.7.5.11-1046187 7.7.20-1023227 7.10.1.5.30-1091295 8.0.0.10-1097914 8.1.0.10-1127744.2.051-633576 6.1.2.20-606786 6.2.5.25-1078970 7.7 
+| DD VE DD2500 DD3300 DD4200 DD6300 DD6400 DD6800 DD6900 DD6200 DD6300 DD9400 DD69400 DD9410 DD6800 DD690 DD69900 DD69910 | ...2.20-606786 6.2.1.30-663869 6.2.1.40-671977 6.2.1.60-686365 7.10.0.2.30-606339 6.1.0-1042928 7.10.1.0.90-692270 7.7.4.0-1017976 7.7.0.70-686759 7.2.0.20-658029 7.2.0.60-682124 7.2.20-1082704 7.2.50-1146826 7.11.0.0-1035502 7.13.0.40-1126469 7.10.1.20-1090468 7.10.1.30-1105324 7.10.1.15-1078832 7.10.1.1-1049892 7.10.1.10-1068159 7.10.1.5.1-1040473 7.7.5.11-1046187 7.7.20-1023227 7.10.1.5.30-1091295 8.0.0.10-1097914 8.1.0.10-1127744.2.051-633576 6.1.6.0.5.25-1078970 7.7 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -4139,7 +4161,7 @@ Produits pris en charge par ce collecteur de données :
 | Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
 
 
-.92+| bases .14+| Disque | Capacité (Go) | Mise en œuvre | SSH | Capacité utilisée 
+.93+| bases .14+| Disque | Capacité (Go) | Mise en œuvre | SSH | Capacité utilisée 
 
 
 | ID du disque | Mise en œuvre | SSH | Identifie de manière unique ce disque dans la matrice 
@@ -4304,7 +4326,7 @@ Produits pris en charge par ce collecteur de données :
 | Autorisations | Mise en œuvre | SSH | Autorisations pour ce partage particulier 
 
 
-.13+| Stockage | Nombre de processeurs | Mise en œuvre | SSH | Nombre de processeurs du stockage 
+.14+| Stockage | Nombre de processeurs | Mise en œuvre | SSH | Nombre de processeurs du stockage 
 
 
 | IP de l'affichage | Mise en œuvre | SSH |  
@@ -4317,6 +4339,9 @@ Produits pris en charge par ce collecteur de données :
 
 
 | IP | Mise en œuvre | SSH |  
+
+
+| Gérer URL | Mise en œuvre | SSH |  
 
 
 | Fabricant | Mise en œuvre | SSH |  
@@ -4432,7 +4457,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| ECS | 3.6.1.3 3.6.2.1 3.7.0.0 3.7.0.3 3.7.0.4 3.7.0.6 3.8.0.1 3.8.0.2 3.8.0.3 3.8.0.4 3.8.0.5 3.8.0.6 3.8.1.1 3.8.1.3 
+| ECS | 3.6.1.3 3.6.2.1 3.7.0.0 3.7.0.3 3.7.0.4 3.7.0.6 3.8.0.1 3.8.0.2 3.8.0.3 3.8.0.4 3.8.0.5 3.8.0.6 3.8.1.1 3.8.1.2 3.8.1.3 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -4626,7 +4651,7 @@ Produits pris en charge par ce collecteur de données :
 | Virtualisation | Mise en œuvre | HTTPS | S'agit-il d'un dispositif de virtualisation du stockage ? 
 
 
-.46+| performances .4+| Volume interne | Capacité totale | Mise en œuvre | HTTPS |  
+.40+| performances .4+| Volume interne | Capacité totale | Mise en œuvre | HTTPS |  
 
 
 | Capacité utilisée | Mise en œuvre | HTTPS |  
@@ -4656,31 +4681,7 @@ Produits pris en charge par ce collecteur de données :
 | ID du serveur | Mise en œuvre | HTTPS |  
 
 
-| Qtree.8+ | Stockage | Échec de la capacité brute | Mise en œuvre | HTTPS 
-
-
-|  | Capacité brute | Mise en œuvre | HTTPS |  
-
-
-| Capacité brute disponible | Mise en œuvre | HTTPS | Capacité brute des disques de spare (somme de tous les disques de spare) | Capacité des stockagePools 
-
-
-| Mise en œuvre | HTTPS |  | Total d'IOPS | Mise en œuvre 
-
-
-| HTTPS |  | Débit de lecture | Mise en œuvre | HTTPS 
-
-
-|  | Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
-
-
-| Débit d'écriture | Mise en œuvre | HTTPS |  .6+| Stockage 
-
-
-| Clé | Mise en œuvre | HTTPS |  
-
-
-| ID du serveur | Mise en œuvre | HTTPS |  
+.8+| Stockage | Échec de la capacité brute | Mise en œuvre | HTTPS |  
 
 
 | Capacité brute | Mise en œuvre | HTTPS |  
@@ -4689,13 +4690,22 @@ Produits pris en charge par ce collecteur de données :
 | Capacité brute disponible | Mise en œuvre | HTTPS | Capacité brute des disques de spare (somme de tous les disques de spare) 
 
 
-| Échec de la capacité brute | Mise en œuvre | HTTPS |  
-
-
-| Capacité des stockagePools | Mise en œuvre | HTTPS |  .7+| Nœud de stockage 
+| Capacité des stockagePools | Mise en œuvre | HTTPS |  
 
 
 | Total d'IOPS | Mise en œuvre | HTTPS |  
+
+
+| Débit de lecture | Mise en œuvre | HTTPS |  
+
+
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
+
+
+| Débit d'écriture | Mise en œuvre | HTTPS |  
+
+
+.7+| Nœud de stockage | Total d'IOPS | Mise en œuvre | HTTPS |  
 
 
 | Utilisation totale de la capacité des nœuds | Mise en œuvre | HTTPS |  
@@ -4713,10 +4723,10 @@ Produits pris en charge par ce collecteur de données :
 | Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
 
 
-| Débit d'écriture | Mise en œuvre | HTTPS |  .9+| Données du nœud de stockage 
+| Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
-| Total d'IOPS | Mise en œuvre | HTTPS |  
+.9+| Données du nœud de stockage | Total d'IOPS | Mise en œuvre | HTTPS |  
 
 
 | Clé | Mise en œuvre | HTTPS |  
@@ -4740,10 +4750,10 @@ Produits pris en charge par ce collecteur de données :
 | Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
 
 
-| Débit d'écriture | Mise en œuvre | HTTPS |  .6+| StoragePool 
+| Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
-| Capacité provisionnée | Mise en œuvre | HTTPS |  
+.6+| StoragePool | Capacité provisionnée | Mise en œuvre | HTTPS |  
 
 
 | Capacité brute | Mise en œuvre | HTTPS |  
@@ -4756,6 +4766,9 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Rapport de capacité de surengagement | Mise en œuvre | HTTPS | Signalé comme une série chronologique 
+
+
+| Rapport de capacité utilisé | Mise en œuvre | HTTPS |  
 |===
 API de gestion utilisées par ce collecteur de données :
 
@@ -4775,7 +4788,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| A100 A200 A2000 A300 A3000 F200 F600 F800 F900 H400 H500 H5600 H600 H700 NL410 S210 X210 X410 | 9.1.0.10 9.1.0.6 9.1.0.9 9.2.1.10 9.2.1.11 9.2.1.12 9.2.1.13 9.2.1.19 9.2.1.4 9.2.1.6 9.2.1.9 9.4.0.11 9.4.0.13 9.4.0.14 9.4.0.15 9.4.0.16 9.4.0.17 9.4.0.18 9.5.0.3 9.5.0.6 9.5.0.7 9.5.0.8 9.5.1.0 9.5.1.1 9.5.1.2 9.7.1.0 9.7.1.2 9.7.1.3 9.7.1.4 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.1.0.4 v8.1.2.0 v9.0.0.0 
+| A100 A200 A2000 A300 A3000 F200 F600 F800 F900 H400 H500 H5600 H600 H700 NL410 S210 X210 X410 | 9.1.0.10 9.1.0.6 9.1.0.9 9.2.1.10 9.2.1.11 9.2.1.12 9.2.1.13 9.2.1.19 9.2.1.4 9.2.1.9 9.4.0.11 9.4.0.13 9.4.0.14 9.4.0.15 9.4.0.16 9.4.0.17 9.4.0.18 9.5.0.3 9.5.0.5 9.5.0.6 9.5.0.7 9.5.0.8 9.5.1.0 9.5.1.1 9.5.1.2 9.7.1.0 9.7.1.2 9.7.1.3 9.7.1.4 9.7.1.5 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.1.0.4 v8.1.2.0 v9.0.0.0 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -5239,10 +5252,7 @@ Produits pris en charge par ce collecteur de données :
 | Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
-.14+| Stockage | Clé | Mise en œuvre | HTTPS |  
-
-
-| ID du serveur | Mise en œuvre | HTTPS |  
+.14+| Stockage | Échec de la capacité brute | Mise en œuvre | HTTPS |  
 
 
 | Capacité brute | Mise en œuvre | HTTPS |  
@@ -5251,34 +5261,37 @@ Produits pris en charge par ce collecteur de données :
 | Capacité brute disponible | Mise en œuvre | HTTPS | Capacité brute des disques de spare (somme de tous les disques de spare) 
 
 
-| Échec de la capacité brute | Mise en œuvre | HTTPS |  
-
-
 | Capacité des stockagePools | Mise en œuvre | HTTPS |  
 
 
-| Latence Total | Mise en œuvre | HTTPS |  
-
-
-| Débit de lecture | Mise en œuvre | HTTPS |  
-
-
-| Débit d'écriture | Mise en œuvre | HTTPS |  
-
-
-| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
+| Disques défectueux | Mise en œuvre | HTTPS |  
 
 
 | Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
 
 
-| Écriture d'IOPS | Mise en œuvre | HTTPS |  
-
-
 | Total d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| Disques défectueux | Mise en œuvre | HTTPS |  
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
+
+
+| Clé | Mise en œuvre | HTTPS |  
+
+
+| Latence Total | Mise en œuvre | HTTPS |  
+
+
+| ID du serveur | Mise en œuvre | HTTPS |  
+
+
+| Débit de lecture | Mise en œuvre | HTTPS |  
+
+
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
+
+
+| Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
 .13+| Nœud de stockage | Disques défectueux | Mise en œuvre | HTTPS |  
@@ -5439,7 +5452,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| A100 A200 H400 H500 NL400 NL410 S210 Traceback (dernier appel) : X200 X400 X410 sudo python | 9.1.0.18 9.1.0.19 9.2.1.12 9.2.1.13 9.2.1.15 9.4.0.17 9.5.0.3 9.5.0.6 9.5.0.8 9.7.1.2 9.8.0.2 v7.2.0.5 v7.2.1.3 v7.2.1.6 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.0.1.1 v8.1.2.0 
+| A200 H400 H500 NL400 NL410 S210 Traceback (dernier appel) : X200 X400 X410 | 9.1.0.18 9.1.0.19 9.2.1.12 9.2.1.13 9.2.1.15 9.4.0.17 9.5.0.3 9.5.0.6 9.5.0.8 9.7.1.2 9.8.0.2 v7.2.0.5 v7.2.1.3 v7.2.1.6 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.0.1.1 v8.1.2.0 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -5974,7 +5987,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| PowerStore 1000T PowerStore 1200T PowerStore 3000T PowerStore 3200T PowerStore 5000T PowerStore 5200T PowerStore 9000T PowerStore 9200T | 2.1.0.1 2.1.1.0 3.2.0.1 3.2.1.0 3.2.1.1 3.5.0.1 3.5.0.2 3.6.0.0 3.6.1.0 3.6.1.1 3.6.1.2 3.6.1.3 3.6.1.4 4.0.0.1 4.0.0.2 
+| PowerStore 1000T PowerStore 1200T PowerStore 3000T PowerStore 3200T PowerStore 5000T PowerStore 5200T PowerStore 9000T PowerStore 9200T | 2.1.0.1 2.1.1.0 3.2.0.1 3.2.1.0 3.2.1.1 3.5.0.1 3.5.0.2 3.6.0.0 3.6.1.0 3.6.1.1 3.6.1.2 3.6.1.3 3.6.1.4 4.0.0.1 4.0.0.2 4.0.1.0 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -6315,7 +6328,7 @@ Produits pris en charge par ce collecteur de données :
 | WWN | Mise en œuvre |  |  
 
 
-.66+| performances .14+| Stockage | Échec de la capacité brute | Mise en œuvre |  |  
+.83+| performances .14+| Stockage | Échec de la capacité brute | Mise en œuvre |  |  
 
 
 | Capacité brute | Mise en œuvre |  |  
@@ -6435,6 +6448,12 @@ Produits pris en charge par ce collecteur de données :
 | Total d'utilisation | Mise en œuvre |  |  
 
 
+.2+| Pool de stockage | Clé | Mise en œuvre |  |  
+
+
+| ID du serveur | Mise en œuvre |  |  
+
+
 .13+| StoragePool | Capacité provisionnée | Mise en œuvre |  |  
 
 
@@ -6511,6 +6530,51 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Débit d'écriture | Mise en œuvre |  |  
+
+
+.15+| Volumétrie | Capacité brute | Mise en œuvre |  |  
+
+
+| Capacité totale | Mise en œuvre |  |  
+
+
+| Capacité utilisée | Mise en œuvre |  |  
+
+
+| Rapport de capacité utilisé | Mise en œuvre |  |  
+
+
+| Lecture IOPS | Mise en œuvre |  | Nombre d'IOPS de lecture sur le disque 
+
+
+| Total d'IOPS | Mise en œuvre |  |  
+
+
+| Écriture d'IOPS | Mise en œuvre |  |  
+
+
+| Clé | Mise en œuvre |  |  
+
+
+| Latence lecture | Mise en œuvre |  |  
+
+
+| Latence Total | Mise en œuvre |  |  
+
+
+| Écriture de latence | Mise en œuvre |  |  
+
+
+| ID du serveur | Mise en œuvre |  |  
+
+
+| Débit de lecture | Mise en œuvre |  |  
+
+
+| Débit total | Mise en œuvre |  | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
+
+
+| Débit d'écriture | Mise en œuvre |  |  
 |===
 API de gestion utilisées par ce collecteur de données :
 
@@ -6530,7 +6594,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| RecoverPoint | 5.1.SP4.P1(h. 89) 5.1.SP4.P2(h.77) 5.1.SP4.P3(h.77) 5.1.SP4.P4(h.97) 
+| RecoverPoint | 5.1.SP4.P1(h. 89) 5.1.SP4.P2(h.138) 5.1.SP4.P3(h.77) 5.1.SP4.P4(h.97) 5.1.SP4.P5(h.138) 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -6657,7 +6721,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| ScaleIO | R3_5.1201.101 R3_6.1000.134 R3_6.400.107 
+| ScaleIO | R3_5.1201.101 R3_6.1000.134 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -6871,7 +6935,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Versions API | Modèles | Versions du micrologiciel 
 
 
-| V10.0.0.0 4.1 4.6 V10.0.1.1 4.2 4.7 V10.1.0.0 4.3 V10.1.1.0 V10.1.2.0 V10.1.3.0 V10.2.0.0 V8.3.0.6 V8.4.0.7 V8.4.0.9 V9.1.0.5 V9.1.0.6 V9.2.0.1 V9.2.0.3 V9.2.0.5 V9.2.3.1 V9.2.3.4 V9.2.3.6 | PMAX8000 POWERMAX_2000 POWERMAX_8000 VMAX-1 VMAX100K VMAX10K VMAX200K VMAX250F VMAX400K VMAX40K VMAX450F VMAX850F VMAX950F | 5876.286.194 484 5978.711.711 5978.714.714 117 5978.714.714 34 5978.714.714 79(16F40000) Build 115 5876.309.196 438 5978.711.711 542 5978.711.711 101 5978.714.714 137 5978.714.714 49 5978.714.714(16F40000) Build 153 5876.309.196 448 5978.711.711 581 5978.714.714 108 5978.714.714 145 5978.714.714 53 5978.714.714(16F40000) Build 335 5978.711.711(16F40000) Build 94 5977.1151.1151(17590000) Build 17590000(17590000) Build 60 5977.1151.1151(45 5977.1151.1151) Build 9 5978.711.711(175A0000) Build 320 5978.711.711(175A0000) Build 162 5876.309.196(175A0000) Build 365 5978.711.711(416 5978.711.711)(436 5978.711.711 
+| V10.0.0.0 4.1 4.6 V10.0.1.1 4.2 4.7 V10.1.0.0 4.3 4.8 V10.1.1.0 V10.1.2.0 V10.1.3.0 V10.2.0.0 V8.3.0.6 V8.4.0.7 V8.4.0.9 V9.1.0.5 V9.1.0.6 V9.2.0.1 V9.2.0.3 V9.2.0.5 V9.2.3.1 V9.2.3.4 V9.2.3.6 | PMAX8000 POWERMAX_2000 POWERMAX_8000 VMAX-1 VMAX100K VMAX10K VMAX200K VMAX250F VMAX400K VMAX40K VMAX450F VMAX850F VMAX950F | 5876.286.194 484 5978.711.711 5978.714.714 117 5978.714.714 34 5978.714.714 79(16F40000) Build 115 5876.309.196 438 5978.711.711 542 5978.711.711 101 5978.714.714 137 5978.714.714 49 5978.714.714(16F40000) Build 153 5876.309.196 448 5978.711.711 581 5978.714.714 108 5978.714.714 145 5978.714.714 53 5978.714.714(16F40000) Build 335 5978.711.711(16F40000) Build 94 5977.1151.1151(17590000) Build 17590000(17590000) Build 60 5977.1151.1151(45 5977.1151.1151) Build 9 5978.711.711(175A0000) Build 320 5978.711.711(175A0000) Build 162 5876.309.196(175A0000) Build 365 5978.711.711(416 5978.711.711)(436 5978.711.711 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -7332,7 +7396,7 @@ Produits pris en charge par ce collecteur de données :
 | WWN | Mise en œuvre |  |  
 
 
-.105+| performances .6+| Disque | Lecture IOPS | Mise en œuvre |  | Nombre d'IOPS de lecture sur le disque 
+.104+| performances .6+| Disque | Lecture IOPS | Mise en œuvre |  | Nombre d'IOPS de lecture sur le disque 
 
 
 | Total d'IOPS | Mise en œuvre |  |  
@@ -7398,7 +7462,7 @@ Produits pris en charge par ce collecteur de données :
 | Écriture en attente | Mise en œuvre |  | nombre total d'écritures en attente 
 
 
-.18+| Stockage | Taux de réussite du cache lecture | Mise en œuvre |  |  
+.17+| Stockage | Taux de réussite du cache lecture | Mise en œuvre |  |  
 
 
 | Taux de réussite total du cache | Mise en œuvre |  |  
@@ -7420,9 +7484,6 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Capacité des stockagePools | Mise en œuvre |  |  
-
-
-| Autres IOPS | Mise en œuvre |  |  
 
 
 | Lecture IOPS | Mise en œuvre |  | Nombre d'IOPS de lecture sur le disque 
@@ -7667,7 +7728,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Versions API | Modèles | Versions du micrologiciel 
 
 
-| V10.0.V10.0.V10.1.V10.1.0.5 V10.1.V10.1.0.8 V10.2.4.3 V10.2.0.2 V9.2.3.15 V9.2.3.22 V9.2.3.4 V9.2.4.1 V9.2.4.10 V9.2.4.11 V9.2.4.12 V9.2.0.1 V9.2.4.6 V9.2.4.7 V9.2.4.9 V9.2.0.6 V9.2.0.1 V9.2.1.5 V9.2.0.5 | PowerMax_2000 PowerMax_2500 PowerMax_8000 PowerMax_8500 VMAX200K VMAX250F VMAX400K VMAX450F VMAX950F | 5977.1131.1131 34 5978.714.714 49 5978.714.714 79 6079.175.0 259 127 6079.225.0 216 218 6079.225.0 86 build 615 5977.1151.1151 49 5978.714.714 79 5978.714.714 161 259 6079.225.0 146 216 6079.225.0 291 86 build 60 49 79 161 6079.175.0 127 146 6079.225.0 218 291 6079.225.0 build 137 5978.714.714 build 137 build 137 5978.714.714 build 117 5978.714.714 build 131 build 131 5978.714.714 build 108 5978.714.714 build 117 5978.714.714 build 117 build 5978.714.714 build 101 build 101 5978.714.714 build 8 build 8 5978.714.711 build 49 5978.714.714 build 542 5978.711.711 build 581 5978.711.711 build 75 5978.711.711 build 484 5978.711.711 build 542 5978.711.711 build 542 build 1 build 1 471 5978.711.711 build 484 5978.711.711 build 484 build 436 5978.711.711 build 438 5978.711.711 build 448 5978.711.711 build 335 5978.711.711 build 365 5978.711.711 build 436 build 60 5978.711.711 build 205 5978.711.711 build 335 build 145 5978.714.714 build 149 build 149 5978.714.714 build 
+| V10.0.V10.0.V10.1.V10.1.0.5 V10.1.V10.1.0.8 V10.2.4.12 V10.2.V9.2.3.15 V9.2.3.20 V9.2.4.9 V9.2.3.4 V9.2.4.1 V9.2.4.3 V9.2.4.11 V9.2.0.1 V9.2.4.10 V9.2.4.6 V9.2.4.7 V9.2.3.22 V9.2.0.2 V9.2.0.1 V9.2.0.6 V9.2.1.5 V9.2.0.5 | PowerMax_2000 PowerMax_2500 PowerMax_8000 PowerMax_8500 VMAX200K VMAX250F VMAX400K VMAX450F VMAX950F | 5977.1131.1131 149 5978.714.714 49 79 161 6079.175.0 127 216 6079.225.0 291 331 6079.225.0 221 build 615 5977.1151.1151 34 5978.714.714 49 5978.714.714 79 6079.175.0 259 127 6079.225.0 218 291 6079.225.0 86 221 build 60 49 5978.714.714 79 5978.714.714 161 259 6079.225.0 216 218 6079.225.0 331 86 6079.275.0 build 131 5978.714.714 build 137 5978.714.714 build 137 build 117 build 117 5978.714.714 build 131 build 101 5978.714.714 build 108 5978.714.714 build 117 5978.714.714 build 49 5978.714.714 build 5978.714.714 build 101 build 75 5978.711.711 build 8 build 8 5978.714.711 build 542 build 542 5978.711.711 build 581 5978.711.711 build 484 build 484 5978.711.711 build 542 5978.711.711 build 448 5978.711.711 build 1 build 1 471 5978.711.711 build 484 5978.711.711 build 436 build 436 5978.711.711 build 438 5978.711.711 build 335 5978.711.711 build 365 5978.711.711 build 416 5978.711.711 build 60 5978.711.711 build 205 5978.711.711 build 335 build 137 5978.714.714 build 145 5978.714.714 build 149 build 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -7675,7 +7736,7 @@ Produits pris en charge par ce collecteur de données :
 | Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
 
 
-.84+| bases .9+| Disque | Capacité (Go) | Mise en œuvre | HTTPS | Capacité utilisée 
+.86+| bases .9+| Disque | Capacité (Go) | Mise en œuvre | HTTPS | Capacité utilisée 
 
 
 | ID du disque | Mise en œuvre | HTTPS | Identifie de manière unique ce disque dans la matrice 
@@ -7732,7 +7793,7 @@ Produits pris en charge par ce collecteur de données :
 | Clé d'émetteur | Mise en œuvre | HTTPS |  
 
 
-.12+| Stockage | IP de l'affichage | Mise en œuvre | HTTPS |  
+.13+| Stockage | IP de l'affichage | Mise en œuvre | HTTPS |  
 
 
 | Échec de la capacité brute | Mise en œuvre | HTTPS | Capacité brute des disques défaillants (somme de tous les disques en panne) 
@@ -7742,6 +7803,9 @@ Produits pris en charge par ce collecteur de données :
 
 
 | IP | Mise en œuvre | HTTPS |  
+
+
+| Gérer URL | Mise en œuvre | HTTPS |  
 
 
 | Fabricant | Mise en œuvre | HTTPS |  
@@ -7840,7 +7904,7 @@ Produits pris en charge par ce collecteur de données :
 | De déduplication | Mise en œuvre | HTTPS | technologie qui entraîne l'évolution de l'efficacité du stockage 
 
 
-.17+| Volumétrie | Identifiant de stratégie AutoTier | Mise en œuvre | HTTPS | Identifiant de règle de niveau dynamique 
+.18+| Volumétrie | Identifiant de stratégie AutoTier | Mise en œuvre | HTTPS | Identifiant de règle de niveau dynamique 
 
 
 | Hiérarchisation automatique | Mise en œuvre | HTTPS | indique si ce pool de stockage participe à la hiérarchisation automatique avec d'autres pools 
@@ -7850,6 +7914,9 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Type de disque | Non disponible | HTTPS |  
+
+
+| Chemin de jonction | Mise en œuvre | HTTPS |  
 
 
 | Nom | Mise en œuvre | HTTPS |  
@@ -8080,10 +8147,10 @@ Produits pris en charge par ce collecteur de données :
 | Total d'utilisation | Mise en œuvre | HTTPS |  
 
 
-.21+| Pool de stockage | Clé | Mise en œuvre | HTTPS |  
+.21+| Pool de stockage | Capacité provisionnée | Mise en œuvre | HTTPS |  
 
 
-| ID du serveur | Mise en œuvre | HTTPS |  
+| Capacité brute | Mise en œuvre | HTTPS |  
 
 
 | Capacité totale | Mise en œuvre | HTTPS |  
@@ -8092,55 +8159,55 @@ Produits pris en charge par ce collecteur de données :
 | Capacité utilisée | Mise en œuvre | HTTPS |  
 
 
-| Capacité brute | Mise en œuvre | HTTPS |  
+| Rapport de capacité de surengagement | Mise en œuvre | HTTPS | Signalé comme une série chronologique 
 
 
 | Rapport de capacité utilisé | Mise en œuvre | HTTPS |  
 
 
-| Capacité provisionnée | Mise en œuvre | HTTPS |  
-
-
-| Rapport de capacité de surengagement | Mise en œuvre | HTTPS | Signalé comme une série chronologique 
-
-
-| Total d'utilisation | Mise en œuvre | HTTPS |  
-
-
-| Débit de lecture | Mise en œuvre | HTTPS |  
-
-
-| Débit d'écriture | Mise en œuvre | HTTPS |  
-
-
-| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
-
-
-| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
-
-
-| Écriture d'IOPS | Mise en œuvre | HTTPS |  
-
-
-| Total d'IOPS | Mise en œuvre | HTTPS |  
+| Total des économies en termes de compression | Mise en œuvre | HTTPS |  
 
 
 | Gain d'espace grâce à la compression | Mise en œuvre | HTTPS |  
 
 
-| Total des économies en termes de compression | Mise en œuvre | HTTPS |  
+| Capacité totale des données | Mise en œuvre | HTTPS |  
 
 
 | Capacité utile des données | Mise en œuvre | HTTPS |  
 
 
-| Capacité totale des données | Mise en œuvre | HTTPS |  
+| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
+
+
+| Total d'IOPS | Mise en œuvre | HTTPS |  
+
+
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
+
+
+| Clé | Mise en œuvre | HTTPS |  
+
+
+| ID du serveur | Mise en œuvre | HTTPS |  
 
 
 | Capacité réservée des snapshots | Mise en œuvre | HTTPS |  
 
 
 | Rapport de capacité utilisé des snapshots | Mise en œuvre | HTTPS | Signalé comme une série chronologique 
+
+
+| Débit de lecture | Mise en œuvre | HTTPS |  
+
+
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
+
+
+| Débit d'écriture | Mise en œuvre | HTTPS |  
+
+
+| Total d'utilisation | Mise en œuvre | HTTPS |  
 
 
 .19+| StoragePool | Capacité provisionnée | Mise en œuvre | HTTPS |  
@@ -9438,97 +9505,100 @@ Produits pris en charge par ce collecteur de données :
 | Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
-| Qtree.4+ | Stockage | Échec de la capacité brute | Mise en œuvre | HTTPS 
+.4+| Stockage | Échec de la capacité brute | Mise en œuvre | HTTPS |  
 
 
-|  | Capacité brute | Mise en œuvre | HTTPS |  
+| Capacité brute | Mise en œuvre | HTTPS |  
 
 
-| Capacité brute disponible | Mise en œuvre | HTTPS | Capacité brute des disques de spare (somme de tous les disques de spare) | Capacité des stockagePools 
+| Capacité brute disponible | Mise en œuvre | HTTPS | Capacité brute des disques de spare (somme de tous les disques de spare) 
 
 
-| Mise en œuvre | HTTPS |  .4+| Nœud de stockage | Lecture IOPS 
+| Capacité des stockagePools | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque | Total d'IOPS 
+.4+| Nœud de stockage | Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
 
 
-| Mise en œuvre | HTTPS |  | Écriture d'IOPS 
+| Total d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Total d'utilisation 
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  .13+| StoragePool | Capacité provisionnée 
+| Total d'utilisation | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Capacité brute 
+.13+| StoragePool | Capacité provisionnée | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Limite souple de capacité 
+| Capacité brute | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Capacité totale 
+| Limite souple de capacité | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Capacité utilisée 
+| Capacité totale | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Rapport de capacité de surengagement 
+| Capacité utilisée | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS | Signalé comme une série chronologique | Rapport de capacité utilisé 
+| Rapport de capacité de surengagement | Mise en œuvre | HTTPS | Signalé comme une série chronologique 
 
 
-| Mise en œuvre | HTTPS |  | Lecture IOPS 
+| Rapport de capacité utilisé | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque | Total d'IOPS 
+| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
 
 
-| Mise en œuvre | HTTPS |  | Écriture d'IOPS 
+| Total d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Débit de lecture 
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Débit total 
+| Débit de lecture | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. | Débit d'écriture 
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
 
 
-| Mise en œuvre | HTTPS |  .11+| Volumétrie | Capacité brute 
+| Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Capacité totale 
+.11+| Volumétrie | Capacité brute | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Capacité utilisée 
+| Capacité totale | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Rapport de capacité utilisé 
+| Capacité utilisée | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Lecture IOPS 
+| Rapport de capacité utilisé | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque | Total d'IOPS 
+| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
 
 
-| Mise en œuvre | HTTPS |  | Écriture d'IOPS 
+| Total d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Latence Total 
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Débit de lecture 
+| Latence Total | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Débit total 
+| Débit de lecture | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. | Débit d'écriture 
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
+
+
+| Débit d'écriture | Mise en œuvre | HTTPS |  
 |===
 API de gestion utilisées par ce collecteur de données :
 
@@ -9906,7 +9976,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Versions API | Modèles | Versions du micrologiciel 
 
 
-| 6.2.1 6.3.2 6.3.3 6.4.0 6.4.1 6.4.2 | 1 briques et 125 To 1 briques et 24 To 1 briques et 31 To 1 briques et 8 To 1X10 To 1X20 To 1X40 To 2 briques et 188 To 2 briques et 83 To 3 briques et 146 To 3 briques et 251 To 4 Bricks 20 To et 628 To 4 Bricks & 754 To 6X40 To | 4.0.27-1 4.0.31-11 6.3.3-8_X2 6.4.0-36_hotfix_2_X2 
+| 6.2.1 6.3.2 6.3.3 6.4.0 6.4.1 6.4.2 | 1 briques et 125 To 1 briques et 24 To 1 briques et 31 To 1 briques et 8 To 1X10 To 1X20 To 1X40 To 2 briques et 83 To 3 briques et 146 To 3 briques et 251 To 3 briques et 283 To 4 Bricks 20 To et 628 To 4 Bricks & 754 To 4X40 To 6X40 To | 4.0.27-1 4.0.31-11 6.3.3-8_X2 6.4.0-36_hotfix_2_X2 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -10432,7 +10502,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| 2660 2680 2702 2704 2800B 2804 2806 3000 4000 5486 5488 5504 5564 5600 5700 5700B 6000 | 08.40.60.01 08.80.00.00 8.20.16.0 8.20.27.0 8.20.30.0 8.20.8.0 8.25.14.0 8.25.6.0 8.30.20.0 8.40.0.1 8.40.10.1 8.40.20.0 8.40.30.3 8.40.30.4 8.40.40.0 8.40.50.0 8.40.60.1 8.40.60.2 8.40.60.3 8.42.30.5 8.50.0.4 8.51.0.0 8.52.0.0 8.52.0.1 8.53.0.1 8.53.0.4 8.62.0.0 8.62.0.2 8.63.0.2 8.70.0.2 8.70.0.3 8.71.2.0 8.71.3.0 8.72.0.0 8.73.0.0 8.74.0.0 8.74.1.0 8.74.2.0 8.74.3.0 8.75.0.0 8.75.0.1 8.75.1.0 8.80.0.0 8.81.0.3 8.81.1.0 8.81.2.0 8.81.3.0 8.90.0.0 
+| 2660 2680 2702 2704 2800B 2804 2806 3000 4000 5486 5488 5504 5564 5600 5700 5700B 6000 7999 | 08.40.60.01 08.80.00.00 7.84.46.0 8.20.16.0 8.20.27.0 8.20.30.0 8.20.8.0 8.25.14.0 8.25.6.0 8.40.0.1 8.40.20.0 8.40.30.4 8.40.40.0 8.40.50.0 8.40.60.1 8.40.60.2 8.40.60.3 8.42.30.5 8.50.0.4 8.51.0.0 8.52.0.0 8.52.0.1 8.53.0.1 8.53.0.4 8.62.0.0 8.62.0.2 8.63.0.2 8.70.0.2 8.70.0.3 8.71.2.0 8.71.3.0 8.72.0.0 8.73.0.0 8.74.0.0 8.74.1.0 8.74.2.0 8.74.3.0 8.75.0.0 8.75.0.1 8.75.1.0 8.80.0.0 8.80.1.0 8.81.0.3 8.81.1.0 8.81.2.0 8.81.3.0 8.90.0.0 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -11009,7 +11079,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| FlashBlade FlashBlade//S200 | Pureté//FB 4.1.5 pureté//FB 4.3.0 pureté//FB 4.3.6 pureté//FB 4.4.3 
+| FlashBlade FlashBlade//S200 | Pureté//FB 4.1.5 pureté//FB 4.3.0 pureté//FB 4.3.11 pureté//FB 4.3.6 pureté//FB 4.4.3 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -11376,9 +11446,7 @@ API de gestion utilisées par ce collecteur de données :
 
 == Google Cloud Compute
 
-Modèles et versions pris en charge par ce collecteur de données :
-
-Versions API :
+Modèles et versions pris en charge par ce collecteur de données : versions API :
 
 * v1
 
@@ -11533,7 +11601,7 @@ Produits pris en charge par ce collecteur de données :
 | Clé d'émetteur | Mise en œuvre | HTTPS |  
 
 
-.21+| performances .18+| vm | Capacité totale | Mise en œuvre | HTTPS |  
+.22+| performances .18+| vm | Capacité totale | Mise en œuvre | HTTPS |  
 
 
 | Rapport de capacité utilisé | Mise en œuvre | HTTPS |  
@@ -11587,7 +11655,10 @@ Produits pris en charge par ce collecteur de données :
 | Planifier le temps d'attente | Mise en œuvre | HTTPS | Temps d'attente prévu en pourcentage 
 
 
-.3+| VM | Capacité totale | Mise en œuvre | HTTPS |  
+.4+| VM | Capacité totale | Mise en œuvre | HTTPS |  
+
+
+| Rapport de capacité utilisé | Mise en œuvre | HTTPS |  
 
 
 | Clé | Mise en œuvre | HTTPS |  
@@ -11613,7 +11684,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| Plate-forme de contenu Hitachi | 9.6.2.37 9.6.3.33 9.7.2.27 
+| Plate-forme de contenu Hitachi | 9.6.2.37 9.6.3.33 9.7.2.27 9.7.3.14 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -11744,7 +11815,25 @@ Produits pris en charge par ce collecteur de données :
 | Virtualisation | Mise en œuvre | HTTPS | S'agit-il d'un dispositif de virtualisation du stockage ? 
 
 
-.6+| performances .6+| Données du nœud de stockage | Clé | Mise en œuvre |  |  
+.12+| performances .6+| Stockage | Échec de la capacité brute | Mise en œuvre |  |  
+
+
+| Capacité brute | Mise en œuvre |  |  
+
+
+| Capacité brute disponible | Mise en œuvre |  | Capacité brute des disques de spare (somme de tous les disques de spare) 
+
+
+| Capacité des stockagePools | Mise en œuvre |  |  
+
+
+| Clé | Mise en œuvre |  |  
+
+
+| ID du serveur | Mise en œuvre |  |  
+
+
+.6+| Données du nœud de stockage | Clé | Mise en œuvre |  |  
 
 
 | ID du serveur | Mise en œuvre |  |  
@@ -11779,7 +11868,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Versions API | Modèles | Versions du micrologiciel 
 
 
-| 7.6.1 8.0 8.7.1 8.7.3 8.7.6 8.8.3 | DF850MH DF850S HM800 HM850 P9500 RAID800 VSP5000 XP24000 XP8 | 80 00/00 96 05 83 60/00 08 08 88 60/00 13 08 90 00/00 21 09 90 00/00 24 09-25 21/00 54/00 30/00 76/02 86/00 91/00 50/A-H 80 06 80 00/00 46 05 88 60/00 10 08 88 60/00 13 08 90 00/00 23 09 90 00/01 60 60 70 80 80 80 83 60/00/B-H 80 00/02 91 06 83 60/00 50 08 88 60/00 12 08 88 60/01 81 09 90 00/00 24 09 90 08 08 06 06 06 06 05 83/B-S 06/A-H 0988/H-S DKC:60-08-22 DKC:60-08-65 DKC:70-06-43 DKC:0986-0984 DKC:0985-0983 05 54 60/00 88 08 10 60/00 88 08 12 60/00 88 08 14 60/00 88 08 15 60/00 90 08 81/00 90 09 21/00 90 09 23/00 90 09 24/00 90 09 25/00 
+| 7.6.1 8.0 8.7.1 8.7.3 8.7.6 8.8.3 | DF850MH DF850S HM800 HM850 P9500 RAID800 VSP5000 XP24000 XP8 | 0983 80 00/00 96 05 83 60/00 53 08 88 60/00 12 08 88 60/01 81 09 90 00/00 24 09 90 08 08 06 06 06 06/A-H 80 06 80 00/00 46 05 83 60/00 08 08 88 60/00 13 08 90 00/00 21 09 90 00/00 24 09-25 21/00 54/00 30/00 76/02 86/00 91/00/B-H 80 00/02 91 06 83 60/00 50 05 88 60/00 10 08 88 60/00 13 08 90 00/00 23 09 90 00/01 60 60 70 80 80 80 83/B-S 70/A-H 0988/H-S DKC:60-08-22 DKC:60-08-65 DKC:0986-06-43 DKC SVP SVP DKC:0985-06-0984 05 50 60/00 83 05 54 60/00 83 05 57 60/00 88 08 10 60/00 88 08 12 60/00 88 08 14 60/00 88 08 15 60/00 90 08 81/00 90 09 21/00 90 09 23/00 90 09 24/00 90 09 25/00 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -12389,7 +12478,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| VSP 5100 VSP 5500 VSP 5600 VSP 5600H VSP E1090 VSP E590 VSP E790H VSP F1500 VSP F400 VSP F900 VSP G1000 VSP G1500 VSP G600 VSP G800 VSP G900 XP8 | 80 96 01 06 00 03/03 83 40 69 49 01 05 01 03/02 83 40 70 51 01 05 00 03/03 88 60 65 08 01 08 00 03/05 88 60 70 13 01 08 01 03/05 88-00 03/04 80 00 71 96 01 05 01 03/02 83 60 65 49 01 05 00 03/04 83 40 71 51 01 08 00 03/05 88 60 70 11 01 08 00 03/04 88 60 65 13 01-01 06 00 03/02 80 00 76 49 01 05 01 03/05 83 60 69 51 01 05 00 03/02 83 40 76 08 01 08 00 03/04 88 60 65 11 01 08 00 03/05 88 60 65-00/00:01-03/05 80-01-65-00-95/00:06-70-03/04 80-01-00-00/94:03/02 80-06-71-06-96-00/06-91-70 08 13 60 01 01 70 03/04 88 08 13 60 01 01 76 03/03 90 08 82 00 00 01 65 03/05 90 08 82 01.72.00 90 09 01 00 01 01 65 03/05 90 09 22 00 00 01 65 03/05 90 09 22 00 00 01 70 03/04 90 09 22 00 00 01 71 03/02 90 09 23 00 00 01 65 03/05 90 09 24 00 01 01 65 03/05 90 09 24 00 01 01 71 03/02 90 09 24 00 01 01 76 03/03 90 09 25 00 00 01 70 03/04 90 09 25 00 00 01 76 03/03 90 09 25 01.72.00 90 09 26 00 00 01 65 03/05 90 09 26 00 00 01 71 03/02 93 07 01 80 00 01 70 03/04 93 07 22 40 00 01 65 03/05 93 07 22 40 00 01 69 03/02 93 07 22 80 00 01 70 03/04 93 07 22 80 00 01 71 03/02 93 07 23 80 01 01 71 03/02 93 07 24 40 00 01 76 03/03 93 07 24 80 00 01 70 03/04 
+| VSP 5100 VSP 5500 VSP 5600 VSP 5600H VSP E1090 VSP E590 VSP E790H VSP F1500 VSP F400 VSP F900 VSP G1000 VSP G1500 VSP G600 VSP G800 VSP G900 XP8 | 80 49 01 05 01 03/05 83 60 69 51 01 05 00 03/02 83 40 76 08 01 08 00 03/04 88 60 65 11 01 08 00 03/05 88 60 65 13 01 08 01 03/02 88-00 03/03 83 40 69 49 01 05 01 03/02 83 40 70 51 01 05 00 03/03 88 60 65 08 01 08 00 03/05 88 60 70 13 01 08 01 03/05 88 60 70 13 01-01 05 01 03/02 83 60 65 49 01 05 00 03/04 83 40 71 51 01 08 00 03/05 88 60 70 11 01 08 00 03/04 88 60 65 13 01 08 01 03/04 88 60 71-00/00:01-03/02 80-01-71-00-96/00:06-70-03/04 80-01-00-00/94:03/02 80-06-71-06-96-00/06-91-76 08 13 60 01 01 76 03/03 90 08 82 00 00 01 65 03/05 90 08 82 01.70.04 90 09 01 00 01 01 65 03/05 90 09 22 00 00 01 65 03/05 90 09 22 00 00 01 70 03/04 90 09 22 00 00 01 71 03/02 90 09 24 00 01 01 65 03/05 90 09 24 00 01 01 71 03/02 90 09 24 00 01 01 76 03/03 90 09 24 01.65.05 90 09 25 00 00 01 76 03/03 90 09 25 01.70.04 90 09 26 00 00 01 65 03/05 90 09 26 00 00 01 71 03/02 90 09 26 00 00 01 76 03/03 93 07 01 80 00 01 70 03/04 93 07 22 40 00 01 65 03/05 93 07 22 40 00 01 69 03/02 93 07 22 80 00 01 70 03/04 93 07 22 80 00 01 71 03/02 93 07 23 80 00 01 71 03/02 93 07 23 80 01 01 71 03/02 93 07 24 40 00 01 76 03/03 93 07 24 80 00 01 70 03/04 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -13297,7 +13386,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Versions API | Modèles | Versions du micrologiciel 
 
 
-| v1 | 5050 AF1000 AF20Q AF40 AF60 AF80 CS1000 CS300 CS3000 CS500 HF20 HF20C HF20H HF40 HF40C HF60 | .-677726-opt 6.1.-1057650-opt 5.2.1.800-1053701-opt 6.1.2.502-1048557-opt 6.1.2.500-1042680-opt 6.1.2.400-1028597-opt 6.1.2.300-1020304-opt 6.1.1.300-1013503-opt 6.1.1.200-1005932-opt 6.0.1.100-991061-opt 6.0.0.500-930936-opt 6.1.0.400-1027043-opt 5.2.2.600-1.1100-1064273-opt 5.0.8.0 
+| v1 | 5050 6070 AF1000 AF20Q AF40 AF60 AF80 CS1000 CS300 CS3000 CS500 HF20 HF20C HF20H HF40 HF60 | 5.0 6.1 6.1.8.0 2.502 2.600-677726 1053701 1057650 1064273-opt 6.1.2.400-1042680-opt 6.1.2.300-1028597-opt 6.1.1.300-1020304-opt 6.1.1.200-1005932-opt 6.0.0.500-991061-opt 6.0.0.400-930936-opt 5.2.1.800-882343-opt 5.2.1.700-796142-opt 5.2.1.400-1027043-opt 5.2.1.1100-1048557-opt 6.1.2.500 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -14573,9 +14662,6 @@ Produits pris en charge par ce collecteur de données :
 | Déduplication activée | Mise en œuvre | HTTPS | Déduplication activée sur le pool de stockage 
 
 
-| État | Mise en œuvre | HTTPS |  
-
-
 | Type de protection | Mise en œuvre | HTTPS |  
 
 
@@ -14592,6 +14678,9 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Commentaire | Écart | HTTPS | état : commentaire libre décrivant le svm 
+
+
+| État | Mise en œuvre | HTTPS |  
 
 
 .3+| Qtree | ID de qtree | Mise en œuvre | HTTPS | id unique du qtree 
@@ -14701,7 +14790,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| 2107-951 2107-961 2107-993 2107-994 2107-996 2107-A05 | - 7.10.1.8 7.6.31.4250 7.7.51.1400 7.9.32.101 7.9.33.95 7.9.40.251 7.9.41.65 
+| 2107-951 2107-961 2107-993 2107-994 2107-996 2107-A05 | - 7.10.1.8 7.6.31.4250 7.7.51.1400 7.9.32.101 7.9.33.132 7.9.33.95 7.9.40.251 7.9.41.65 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -15381,7 +15470,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| 2076-124 2076 2076-524 2076-624 2076-724 2076-824 2076 AFF 2077 2078 2078 2078 4662 4666 4680 9843 9848-12F 2072 2076-224 2076 2076 2077-424 2077 2078-224 2078 2078-324 2078-424 2078 4657 4662 4680 4983 9846 9848-12G 2072-224 2072 2077 2078 2078 2078 4657-924 4662 4666 4680 9843 9848 9848-24C 2072-24F 2072-24G 2072-2N4 2072-324 2072-3H4 2072-3N2 2072-3N4 2072-92F 2072-92G 2072-12F 2072-24F 2076-24G | 1.5.2.7 1.6.1.2 1.6.1.4 1.6.1.5 7.7.1.8 7.8.1.11 7.8.1.12 7.8.1.13 7.8.1.14 7.8.1.16 7.8.1.5 7.8.1.6 7.8.1.7 7.8.1.8 8.2.1.10 8.2.1.11 8.2.1.8 8.2.1.9 8.3.1.10 8.3.1.2 8.3.1.5 8.3.1.6 8.3.1.7 8.3.1.8 8.3.1.9 8.4.0.10 8.4.0.11 8.4.0.13 8.4.0.15 8.4.0.3 8.4.0.5 8.4.0.6 8.4.0.9 8.4.2.0 8.5.0.10 8.5.0.11 8.5.0.12 8.5.0.13 8.5.0.5 8.5.0.6 8.5.0.7 8.5.0.8 8.5.0.9 8.6.0.0 8.6.0.2 8.6.0.3 8.6.0.4 8.6.0.5 8.7.0.0 8.7.0.1 8.7.0.2 8.7.2.1 
+| -12F-12G-AFF 24C-24F-24G-2N4-3H4-3N2-3N4-92F-92G-12F-24F-24G-AFH4-AFP4--AGH4--------------------9848-9848--9848-9843-9848-9843-4680-9846-4680-4680-4983-4666-4680-4662-4662-4666-4657-2078-2078-324 2078-424 2078-4657-924 4662-2078-2078-224 2078-2078-2078-2077-424 2077-2078-2077-2076-2078-2077-2076-524 2076-624 2076-724 2076-824 2076-F-2076-124 2076-2076-224 2076-2076-2072-2072-2072-2072-2072-324 2072-2072-2072-2072-2072-2072-2072-224 2072-2072-F | 1.5.2.7 1.6.1.2 1.6.1.4 1.6.1.5 7.7.1.8 7.8.1.11 7.8.1.12 7.8.1.13 7.8.1.14 7.8.1.16 7.8.1.5 7.8.1.6 7.8.1.7 7.8.1.8 8.2.1.10 8.2.1.8 8.2.1.9 8.3.1.10 8.3.1.2 8.3.1.5 8.3.1.6 8.3.1.7 8.3.1.8 8.3.1.9 8.4.0.10 8.4.0.11 8.4.0.13 8.4.0.15 8.4.0.2 8.4.0.5 8.4.0.6 8.4.0.9 8.4.2.0 8.5.0.10 8.5.0.11 8.5.0.12 8.5.0.13 8.5.0.14 8.5.0.5 8.5.0.6 8.5.0.7 8.5.0.8 8.5.0.9 8.6.0.0 8.6.0.2 8.6.0.3 8.6.0.4 8.6.0.5 8.7.0.0 8.7.0.1 8.7.0.2 8.7.0.3 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -16244,7 +16333,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| F4303 F6240 | 6.0.20.40 6.0.31.0 7.1.14.0 7.3.20.90 
+| F4303 F6230 F6240 | 6.0.20.40 6.0.31.0 7.1.14.0 7.1.15.0 7.3.20.90 8.1.0.280 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -16285,19 +16374,19 @@ Produits pris en charge par ce collecteur de données :
 | Fournisseur | Mise en œuvre | HTTPS |  
 
 
-.5+| Partage de fichiers | Nom | Mise en œuvre | HTTPS |  
+.5+| Partage de fichiers | Est InternalVolume | Mise en œuvre | HTTPS | que le partage de fichiers représente un volume interne (volume netapp) ou s'agit-il d'un qtree/dossier au sein du volume interne 
+
+
+| Est partagé | Mise en œuvre | HTTPS | Si ce fichier est associé à des partages 
+
+
+| Nom | Mise en œuvre | HTTPS |  
 
 
 | Chemin | Mise en œuvre | HTTPS | Chemin du maillage de fichiers 
 
 
 | ID de qtree | Mise en œuvre | HTTPS | id unique du qtree 
-
-
-| Est InternalVolume | Mise en œuvre | HTTPS | que le partage de fichiers représente un volume interne (volume netapp) ou s'agit-il d'un qtree/dossier au sein du volume interne 
-
-
-| Est partagé | Mise en œuvre | HTTPS | Si ce fichier est associé à des partages 
 
 
 .4+| Info | Nom de la source de données | Mise en œuvre | HTTPS | Info 
@@ -16312,31 +16401,13 @@ Produits pris en charge par ce collecteur de données :
 | Clé d'émetteur | Mise en œuvre | HTTPS |  
 
 
-.11+| Volume interne | ID du volume interne | Mise en œuvre | HTTPS |  
+.11+| Volume interne | Déduplication activée | Mise en œuvre | HTTPS | Déduplication activée sur le pool de stockage 
+
+
+| ID du volume interne | Mise en œuvre | HTTPS |  
 
 
 | Nom | Mise en œuvre | HTTPS |  
-
-
-| ID du pool de stockage | Mise en œuvre | HTTPS |  
-
-
-| Type | Écart | HTTPS |  
-
-
-| Provisionnement fin | Mise en œuvre | HTTPS |  
-
-
-| Provisionnement fin pris en charge | Mise en œuvre | HTTPS | Si ce volume interne prend en charge le provisionnement fin pour la couche de volume en haut de celui-ci 
-
-
-| Déduplication activée | Mise en œuvre | HTTPS | Déduplication activée sur le pool de stockage 
-
-
-| Capacité totale utilisée | Mise en œuvre | HTTPS | Capacité totale en Mo 
-
-
-| Capacité totale allouée | Mise en œuvre | HTTPS |  
 
 
 | Autre capacité allouée | Écart | HTTPS | Capacité allouée à d'autres (et non des données) 
@@ -16345,22 +16416,40 @@ Produits pris en charge par ce collecteur de données :
 | Rapport brut/utilisable | Mise en œuvre | HTTPS | ratio pour la conversion de la capacité utilisable en capacité brute 
 
 
-.3+| Qtree | ID de qtree | Mise en œuvre | HTTPS | id unique du qtree 
+| ID du pool de stockage | Mise en œuvre | HTTPS |  
 
 
-| Nom | Mise en œuvre | HTTPS |  
+| Provisionnement fin | Mise en œuvre | HTTPS |  
+
+
+| Provisionnement fin pris en charge | Mise en œuvre | HTTPS | Si ce volume interne prend en charge le provisionnement fin pour la couche de volume en haut de celui-ci 
+
+
+| Capacité totale allouée | Mise en œuvre | HTTPS |  
+
+
+| Capacité totale utilisée | Mise en œuvre | HTTPS | Capacité totale en Mo 
 
 
 | Type | Écart | HTTPS |  
 
 
-.3+| Partagez | Nom | Mise en œuvre | HTTPS |  
+.3+| Qtree | Nom | Mise en œuvre | HTTPS |  
+
+
+| ID de qtree | Mise en œuvre | HTTPS | id unique du qtree 
+
+
+| Type | Écart | HTTPS |  
+
+
+.3+| Partagez | Interfaces IP | Mise en œuvre | HTTPS | Liste des adresses IP séparées par des virgules sur lesquelles ce partage est exposé 
+
+
+| Nom | Mise en œuvre | HTTPS |  
 
 
 | Protocole | Mise en œuvre | HTTPS | enumération pour le protocole de partage 
-
-
-| Interfaces IP | Mise en œuvre | HTTPS | Liste des adresses IP séparées par des virgules sur lesquelles ce partage est exposé 
 
 
 .2+| Partager l'initiateur | Initiateur | Mise en œuvre | HTTPS |  
@@ -16474,16 +16563,16 @@ Produits pris en charge par ce collecteur de données :
 | Virtualisation | Mise en œuvre | HTTPS | S'agit-il d'un dispositif de virtualisation du stockage ? 
 
 
-.9+| Synchronisation du stockage | Volume source | Mise en œuvre | HTTPS |  
-
-
-| Volume cible | Mise en œuvre | HTTPS |  
-
-
-| Mode | Mise en œuvre | HTTPS |  
+.9+| Synchronisation du stockage | Mode | Mise en œuvre | HTTPS |  
 
 
 | Enum. Mode | Mise en œuvre | HTTPS |  
+
+
+| Stockage source | Mise en œuvre | HTTPS |  
+
+
+| Volume source | Mise en œuvre | HTTPS |  
 
 
 | État | Mise en œuvre | HTTPS | texte libre décrivant l'état du périphérique 
@@ -16492,10 +16581,10 @@ Produits pris en charge par ce collecteur de données :
 | Enum. État | Mise en œuvre | HTTPS |  
 
 
-| Stockage source | Mise en œuvre | HTTPS |  
-
-
 | Stockage cible | Mise en œuvre | HTTPS |  
+
+
+| Volume cible | Mise en œuvre | HTTPS |  
 
 
 | De déduplication | Mise en œuvre | HTTPS | technologie qui entraîne l'évolution de l'efficacité du stockage 
@@ -16587,9 +16676,7 @@ API de gestion utilisées par ce collecteur de données :
 
 == Ressources de calcul Microsoft Azure
 
-Modèles et versions pris en charge par ce collecteur de données :
-
-Versions API :
+Modèles et versions pris en charge par ce collecteur de données : versions API :
 
 * 1 juin 2018
 
@@ -17332,7 +17419,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Versions API | Modèles | Versions du micrologiciel 
 
 
-| 1.12 1.17 1.19 1.20 1.21 | FAS2040 FAS2220 FAS2240-4 FAS2520 FAS2554 FAS3140 FAS3160 FAS3250 FAS3270 FAS6240 FAS6250 FAS8020 FAS8040 FAS8060 N6070 N6240 N6270 | 8.1.1 7 7 Data ONTAP 8.2-mode 8.1 7 7.3.3 Data ONTAP 7.4P9D18 7 7 8.2.5 7-mode 7-mode 8.2.3 7-mode 8.2.3P2 7-mode 7.3P3 7-mode 8.2.4 7-mode 8.2.4P4 7-mode 8.2.4P5 8.2-mode 8.2.4P6 7-mode 8.2.5 7-mode 8.2.5P3 8.2.2 7-mode 8.2.5P4 7-mode 8.2 Data ONTAP 
+| 1.12 1.17 1.19 1.20 1.21 | FAS2040 FAS2220 FAS2240-4 FAS2520 FAS2552 FAS2554 FAS3140 FAS3160 FAS3250 FAS3270 FAS6240 FAS6250 FAS8020 FAS8040 FAS8060 N6070 N6240 N6270 | 8.1.1 7 7 Data ONTAP 8.2-mode 8.1 7 7.3.3 Data ONTAP 7.4P9D18 7 7 8.2.5 7-mode 7-mode 8.2.3 7-mode 8.2.3P2 7-mode 7.3P3 7-mode 8.2.4 7-mode 8.2.4P4 7-mode 8.2.4P5 8.2-mode 8.2.4P6 7-mode 8.2.5 7-mode 8.2.5P3 8.2.2 7-mode 8.2.5P4 7-mode 8.2 Data ONTAP 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -17877,7 +17964,7 @@ Produits pris en charge par ce collecteur de données :
 | Type | Écart |  |  
 
 
-.129+| performances .9+| Disque | Lecture IOPS | Mise en œuvre |  | Nombre d'IOPS de lecture sur le disque 
+.140+| performances .9+| Disque | Lecture IOPS | Mise en œuvre |  | Nombre d'IOPS de lecture sur le disque 
 
 
 | Total d'IOPS | Mise en œuvre |  |  
@@ -17902,6 +17989,39 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Utilisation, écriture | Mise en œuvre |  |  
+
+
+.11+| Disque | Clé | Mise en œuvre |  |  
+
+
+| ID du serveur | Mise en œuvre |  |  
+
+
+| Débit de lecture | Mise en œuvre |  |  
+
+
+| Débit d'écriture | Mise en œuvre |  |  
+
+
+| Débit total | Mise en œuvre |  | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
+
+
+| Lecture IOPS | Mise en œuvre |  | Nombre d'IOPS de lecture sur le disque 
+
+
+| Écriture d'IOPS | Mise en œuvre |  |  
+
+
+| Total d'IOPS | Mise en œuvre |  |  
+
+
+| Utilisation de la lecture | Mise en œuvre |  |  
+
+
+| Utilisation, écriture | Mise en œuvre |  |  
+
+
+| Total d'utilisation | Mise en œuvre |  |  
 
 
 .21+| Volume interne | Capacité totale | Mise en œuvre |  |  
@@ -18281,7 +18401,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| 2800B 2806 5700 6000 | 08.62.00.02 08.71.03.00 08.73.00.00 08.74.01.00 08.74.02.00 08.75.00.00 08.75.00.01 08.80.00.00 08.81.00.03 08.81.02.00 08.81.03.00 08.90.00.00 68.80.49.74 
+| 2800B 2806 5700 | 08.71.03.00 08.73.00.00 08.74.02.00 08.75.00.00 08.75.00.01 08.80.00.00 08.81.00.03 08.81.02.00 08.81.03.00 08.90.00.00 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -18659,7 +18779,7 @@ Produits pris en charge par ce collecteur de données :
 | Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
 
 
-.221+| bases .4+| Fonctionnalité | Actif | Mise en œuvre | HTTPS |  
+.220+| bases .4+| Fonctionnalité | Actif | Mise en œuvre | HTTPS |  
 
 
 | Sous licence | Mise en œuvre | HTTPS |  
@@ -19121,7 +19241,7 @@ Produits pris en charge par ce collecteur de données :
 | Adresses de gestion | Mise en œuvre | HTTPS |  
 
 
-.30+| Pool de stockage | Compression activée | Mise en œuvre | HTTPS | Est activé pour la compression sur le pool de stockage 
+.29+| Pool de stockage | Compression activée | Mise en œuvre | HTTPS | Est activé pour la compression sur le pool de stockage 
 
 
 | Économies de compression | Mise en œuvre | HTTPS | rapport entre les économies réalisées grâce à la compression en pourcentage 
@@ -19188,9 +19308,6 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Virtualisation | Mise en œuvre | HTTPS | S'agit-il d'un dispositif de virtualisation du stockage ? 
-
-
-|  | Mise en œuvre | HTTPS |  
 
 
 |  | Mise en œuvre | HTTPS |  
@@ -19322,7 +19439,7 @@ Produits pris en charge par ce collecteur de données :
 | Type | Écart | HTTPS |  
 
 
-.100+| performances .33+| Volume interne | Capacité totale | Mise en œuvre | HTTPS |  
+.80+| performances .33+| Volume interne | Capacité totale | Mise en œuvre | HTTPS |  
 
 
 | Capacité utilisée | Mise en œuvre | HTTPS |  
@@ -19442,9 +19559,6 @@ Produits pris en charge par ce collecteur de données :
 | ID du serveur | Mise en œuvre | HTTPS |  
 
 
-| Disques défectueux | Mise en œuvre | HTTPS |  
-
-
 | Capacité brute | Mise en œuvre | HTTPS |  
 
 
@@ -19455,6 +19569,9 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Capacité des stockagePools | Mise en œuvre | HTTPS |  
+
+
+| Disques défectueux | Mise en œuvre | HTTPS |  
 
 
 .13+| Nœud de stockage | Taux de réussite total du cache | Mise en œuvre | HTTPS |  
@@ -19494,66 +19611,6 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Total d'utilisation | Mise en œuvre | HTTPS |  
-
-
-.20+| Pool de stockage | Clé | Mise en œuvre | HTTPS |  
-
-
-| ID du serveur | Mise en œuvre | HTTPS |  
-
-
-| Débit de lecture | Mise en œuvre | HTTPS |  
-
-
-| Débit d'écriture | Mise en œuvre | HTTPS |  
-
-
-| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
-
-
-| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
-
-
-| Écriture d'IOPS | Mise en œuvre | HTTPS |  
-
-
-| Total d'IOPS | Mise en œuvre | HTTPS |  
-
-
-| Capacité réservée | Mise en œuvre | HTTPS | Fraction réservée (incluse dans la capacité de données allouée) 
-
-
-| Capacité totale | Mise en œuvre | HTTPS |  
-
-
-| Capacité utilisée | Mise en œuvre | HTTPS |  
-
-
-| Capacité utile des données | Mise en œuvre | HTTPS |  
-
-
-| Capacité totale des données | Mise en œuvre | HTTPS |  
-
-
-| Capacité brute | Mise en œuvre | HTTPS |  
-
-
-| Rapport de capacité utilisé | Mise en œuvre | HTTPS |  
-
-
-| Capacité utilisée du snapshot | Mise en œuvre | HTTPS |  
-
-
-| Capacité réservée des snapshots | Mise en œuvre | HTTPS |  
-
-
-| Rapport de capacité utilisé des snapshots | Mise en œuvre | HTTPS | Signalé comme une série chronologique 
-
-
-| Capacité provisionnée | Mise en œuvre | HTTPS |  
-
-
-| Rapport de capacité de surengagement | Mise en œuvre | HTTPS | Signalé comme une série chronologique 
 
 
 .18+| StoragePool | Capacité totale | Mise en œuvre | HTTPS |  
@@ -19639,7 +19696,243 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| -A150-A1K-A200-A220-A250-A300 AFF-A320-A400-A70 AFF-A700-A700s-A800 ASA-A90-A900-C190 AFF-C250-C400 FAS9000 FAS9500-C60 AFF-C800 AFF8020 AFF8040 FAS8200 FAS8300 FAS8700-AFF8060 ASA-AFF8060 FAS2620 FAS2650 FAS2720 FAS2750 FAS2820-AFF8080 FAS500f-ASA ASA-ASA ASA-C100 ASA FAS6200 AFF AFF AFF AFF-C100 AFF 8080 AFF AFF-C100 AFF 80200 FAS6100 AFF AFF-C100 AFF 80200 FAS6200 AFF AFF 8080 FAS 100 AFF AFF v800 | 8.2 9.11.1.3P4 8.2.3P5 8.3 9.1 9.10.0 9.10.1.1P2 9.1.2P12 8.3.2P5 9.0.0 9.1.0 9.1.0P1 9.1.0P11 9.1.0P15 9.1.0P17 9.1.0P19 9.1.0P2 9.1.0P20 8.3.2 8.3.0P3 9.1.0P7 9.1.0P8 9.1.0P9 9.12.1 9.13.0 9.13.1 9.14.0 9.14.1 9.15.1 9.16.1 9.17.1 9.18.0 9.2 9.2 9.3 9.3 9.3 9.3 9.3 9.3 9.3 9.3 9.4.0 9.4 9.4 9.5.0 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.6.0 9.6 9.6 9.6 9.6 9.6 9.7.0 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.8.0 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.9.0 9.9.1 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 
+| AFF ASA ASA ASA FAS8200 FAS8300 FAS8700-A150 AFF ASA ASA FAS2620 FAS2650 FAS2720 FAS2750 FAS2820 FAS9000 FAS9500-A1K AFF ASA ASA FAS500f-A20 AFF-A200 AFF-A220 AFF-A250 AFF-A300 AFF-A320 AFF-A400 AFF-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C190 AFF-C250 AFF-C400 AFF-C60 AFF-C80 AFF-C800  a| 
+* 8.2.3P4
+* 8.2.3P5
+* 8.3.1P2
+* 8.3.2
+* 8.3.2P12
+* 8.3.2P5
+* 9.0.0
+* 9.1.0
+* 9.1.0P1
+* 9.1.0P11
+* 9.1.0P15
+* 9.1.0P17
+* 9.1.0P19
+* 9.1.0P2
+* 9.1.0P20
+* 9.1.0P3
+* 9.1.0P6
+* 9.1.0P7
+* 9.1.0P8
+* 9.1.0P9
+* 9.10.0
+* 9.10.1
+* 9.10.1P1
+* 9.10.1P10
+* 9.10.1P11
+* 9.10.1P12
+* 9.10.1P13
+* 9.10.1P14
+* 9.10.1P15
+* 9.10.1P16
+* 9.10.1P17
+* 9.10.1P18
+* 9.10.1P19
+* 9.10.1P2
+* 9.10.1P20
+* 9.10.1P3
+* 9.10.1P4
+* 9.10.1P5
+* 9.10.1P6
+* 9.10.1P7
+* 9.10.1P8
+* 9.10.1P9
+* 9.11.0P1
+* 9.11.1
+* 9.11.1P1
+* 9.11.1P10
+* 9.11.1P11
+* 9.11.1P12
+* 9.11.1P13
+* 9.11.1P14
+* 9.11.1P15
+* 9.11.1P16
+* 9.11.1P17
+* 9.11.1P18
+* 9.11.1P2
+* 9.11.1P3
+* 9.11.1P4
+* 9.11.1P5
+* 9.11.1P6
+* 9.11.1P7
+* 9.11.1P8
+* 9.11.1P9
+* 9.11.1X12
+* 9.12.1
+* 9.12.1P1
+* 9.12.1P10
+* 9.12.1P11
+* 9.12.1P12
+* 9.12.1P13
+* 9.12.1P14
+* 9.12.1P15
+* 9.12.1P16
+* 9.12.1P17
+* 9.12.1P2
+* 9.12.1P3
+* 9.12.1P4
+* 9.12.1P5
+* 9.12.1P6
+* 9.12.1P7
+* 9.12.1P8
+* 9.12.1P9
+* 9.13.0
+* 9.13.0P1
+* 9.13.0P3
+* 9.13.1
+* 9.13.1D1
+* 9.13.1P1
+* 9.13.1P10
+* 9.13.1P11
+* 9.13.1P12
+* 9.13.1P13
+* 9.13.1P14
+* 9.13.1P2
+* 9.13.1P3
+* 9.13.1P4
+* 9.13.1P5
+* 9.13.1P6
+* 9.13.1P7
+* 9.13.1P8
+* 9.13.1P9
+* 9.14.0
+* 9.14.0P1
+* 9.14.0P2
+* 9.14.1
+* 9.14.1P1
+* 9.14.1P10
+* 9.14.1P11
+* 9.14.1P2
+* 9.14.1P4
+* 9.14.1P5
+* 9.14.1P6
+* 9.14.1P7
+* 9.14.1P8
+* 9.14.1P8D5
+* 9.14.1P9
+* 9.14.1X14
+* 9.14.1X20
+* 9.14.1X24
+* 9.15.0P1
+* 9.15.0P2
+* 9.15.1
+* 9.15.1P1
+* 9.15.1P2
+* 9.15.1P2D2
+* 9.15.1P3
+* 9.15.1P4
+* 9.15.1P5
+* 9.15.1P6
+* 9.15.1P7
+* 9.15.1P7D4
+* 9.15.1P8
+* 9.15.1X19
+* 9.15.1X27
+* 9.16.1
+* 9.16.1P1
+* 9.16.1X16
+* 9.16.1X26
+* 9.16.1X29
+* 9.17.1
+* 9.17.1X7
+* 9.2.0P3
+* 9.2.0P4
+* 9.3.0P15
+* 9.3.0P18
+* 9.3.0P20
+* 9.3.0P21
+* 9.3.0P6
+* 9.3.0P7
+* 9.3.0P8
+* 9.4.0
+* 9.4.0P2
+* 9.4.0P5
+* 9.5.0
+* 9.5.0P1
+* 9.5.0P10
+* 9.5.0P14
+* 9.5.0P16
+* 9.5.0P17
+* 9.5.0P18
+* 9.5.0P19
+* 9.5.0P2
+* 9.5.0P3
+* 9.5.0P6
+* 9.5.0P7
+* 9.5.0P9
+* 9.6.0
+* 9.6.0P11
+* 9.6.0P18
+* 9.6.0P2
+* 9.6.0P3
+* 9.6.0P5
+* 9.7.0
+* 9.7.0P10
+* 9.7.0P11
+* 9.7.0P12
+* 9.7.0P13
+* 9.7.0P14
+* 9.7.0P15
+* 9.7.0P16
+* 9.7.0P17
+* 9.7.0P18
+* 9.7.0P19
+* 9.7.0P20
+* 9.7.0P21
+* 9.7.0P22
+* 9.7.0P23
+* 9.7.0P4
+* 9.7.0P5
+* 9.7.0P6
+* 9.7.0P7
+* 9.7.0P8
+* 9.7.0P9
+* 9.7.0X17
+* 9.8.0
+* 9.8.0P1
+* 9.8.0P10
+* 9.8.0P11
+* 9.8.0P12
+* 9.8.0P13
+* 9.8.0P14
+* 9.8.0P14X5
+* 9.8.0P15
+* 9.8.0P16
+* 9.8.0P17
+* 9.8.0P18
+* 9.8.0P19
+* 9.8.0P2
+* 9.8.0P20
+* 9.8.0P21
+* 9.8.0P3
+* 9.8.0P4
+* 9.8.0P6
+* 9.8.0P7
+* 9.8.0P8
+* 9.8.0P9
+* 9.9.0
+* 9.9.1
+* 9.9.1P10
+* 9.9.1P11
+* 9.9.1P12
+* 9.9.1P13
+* 9.9.1P14
+* 9.9.1P15
+* 9.9.1P16
+* 9.9.1P17
+* 9.9.1P18
+* 9.9.1P19
+* 9.9.1P2
+* 9.9.1P20
+* 9.9.1P3
+* 9.9.1P5X2
+* 9.9.1P6
+* 9.9.1P7
+* 9.9.1P9
+
+
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -20424,7 +20717,7 @@ Produits pris en charge par ce collecteur de données :
 | Type | Écart | HTTPS |  
 
 
-.234+| performances .9+| Disque | Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
+.222+| performances .9+| Disque | Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
 
 
 | Total d'IOPS | Mise en œuvre | HTTPS |  
@@ -21027,52 +21320,16 @@ Produits pris en charge par ce collecteur de données :
 | Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
-.16+| Virtualmachine | Capacité totale | Mise en œuvre | HTTPS |  
+.4+| Virtualmachine | Capacité totale | Mise en œuvre | HTTPS |  
 
 
 | Capacité utilisée | Mise en œuvre | HTTPS |  
 
 
-| Lecture de densité d'E/S. | Mise en œuvre | HTTPS |  
-
-
-| Densité d'E/S totale | Mise en œuvre | HTTPS |  
-
-
-| Densité des E/S d'écriture | Mise en œuvre | HTTPS |  
-
-
-| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
-
-
-| Total d'IOPS | Mise en œuvre | HTTPS |  
-
-
-| Écriture d'IOPS | Mise en œuvre | HTTPS |  
-
-
 | Clé | Mise en œuvre | HTTPS |  
 
 
-| Latence lecture | Mise en œuvre | HTTPS |  
-
-
-| Latence Total | Mise en œuvre | HTTPS |  
-
-
-| Écriture de latence | Mise en œuvre | HTTPS |  
-
-
 | ID du serveur | Mise en œuvre | HTTPS |  
-
-
-| Débit de lecture | Mise en œuvre | HTTPS |  
-
-
-| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
-
-
-| Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
 .17+| Volumétrie | Capacité brute | Mise en œuvre | HTTPS |  
@@ -21143,7 +21400,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| ASA-A1K | NetApp version 9.16.1: Sam 18 19:31:15 UTC 2025 NetApp version 9.16.1RC1: Lundi 04 10 novembre 39:46 UTC 2024 
+| ASA-A1K ASA-A20 ASA-A90 | NetApp version 9.16.1: Sam 18 19:31:15 UTC 2025 NetApp version 9.16.1RC1: Lundi 04 10 novembre 39:46 UTC 2024 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -21151,7 +21408,7 @@ Produits pris en charge par ce collecteur de données :
 | Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
 
 
-.131+| bases .4+| Fonctionnalité | Actif | Mise en œuvre | HTTPS |  
+.190+| bases .4+| Fonctionnalité | Actif | Mise en œuvre | HTTPS |  
 
 
 | Sous licence | Mise en œuvre | HTTPS |  
@@ -21208,16 +21465,40 @@ Produits pris en charge par ce collecteur de données :
 | Fournisseur | Mise en œuvre | HTTPS |  
 
 
-.4+| Portail réseau ISCSI | OID | Mise en œuvre | HTTPS |  
+.8+| Partage de fichiers | Nom | Mise en œuvre | HTTPS |  
 
 
-| IP | Mise en œuvre | HTTPS |  
+| Chemin | Mise en œuvre | HTTPS | Chemin du maillage de fichiers 
+
+
+| ID de qtree | Mise en œuvre | HTTPS | id unique du qtree 
+
+
+| Est InternalVolume | Mise en œuvre | HTTPS | que le partage de fichiers représente un volume interne (volume netapp) ou s'agit-il d'un qtree/dossier au sein du volume interne 
+
+
+| Est partagé | Mise en œuvre | HTTPS | Si ce fichier est associé à des partages 
+
+
+| État | Mise en œuvre | HTTPS |  
+
+
+| Type de sécurité | Mise en œuvre | HTTPS |  
+
+
+| Les robinets sont-ils activés | Mise en œuvre | HTTPS | Si les verrous opportunistes sont activés sur FileShare 
+
+
+.4+| Portail réseau ISCSI | IP | Mise en œuvre | HTTPS |  
+
+
+| Port d'écoute | Mise en œuvre | HTTPS |  
 
 
 | NIC | Mise en œuvre | HTTPS |  
 
 
-| Port d'écoute | Mise en œuvre | HTTPS |  
+| OID | Mise en œuvre | HTTPS |  
 
 
 .3+| Groupe de portail réseau ISCSI | OID | Mise en œuvre | HTTPS |  
@@ -21265,31 +21546,31 @@ Produits pris en charge par ce collecteur de données :
 | Nom de nœud cible | Mise en œuvre | HTTPS |  
 
 
-.9+| Session ISCSI | OID | Mise en œuvre | HTTPS |  
+.9+| Session ISCSI | IPS d'initiateur | Mise en œuvre | HTTPS |  
 
 
 | OID initiateur | Mise en œuvre | HTTPS |  
 
 
-| OID de groupe de portail | Mise en œuvre | HTTPS |  
-
-
-| ID de session cible | Mise en œuvre | HTTPS |  
-
-
 | ID de session d'initiateur | Mise en œuvre | HTTPS |  
-
-
-| Nombre de connexions | Mise en œuvre | HTTPS |  
 
 
 | Connexions maximales | Mise en œuvre | HTTPS |  
 
 
-| IPS d'initiateur | Mise en œuvre | HTTPS |  
+| Nombre de connexions | Mise en œuvre | HTTPS |  
+
+
+| OID | Mise en œuvre | HTTPS |  
+
+
+| OID de groupe de portail | Mise en œuvre | HTTPS |  
 
 
 | Sécurité | Mise en œuvre | HTTPS |  
+
+
+| ID de session cible | Mise en œuvre | HTTPS |  
 
 
 .6+| Info | Nom de l'API | Mise en œuvre | HTTPS |  
@@ -21310,6 +21591,90 @@ Produits pris en charge par ce collecteur de données :
 | Clé d'émetteur | Mise en œuvre | HTTPS |  
 
 
+.28+| Volume interne | ID du volume interne | Mise en œuvre | HTTPS |  
+
+
+| Nom | Mise en œuvre | HTTPS |  
+
+
+| ID du pool de stockage | Mise en œuvre | HTTPS |  
+
+
+| Type | Écart | HTTPS |  
+
+
+| Garantie d'espace | Mise en œuvre | HTTPS | Stratégie Guatantee d'espace (fichier, volume ou aucun) 
+
+
+| Provisionnement fin | Mise en œuvre | HTTPS |  
+
+
+| Provisionnement fin pris en charge | Mise en œuvre | HTTPS | Si ce volume interne prend en charge le provisionnement fin pour la couche de volume en haut de celui-ci 
+
+
+| Déduplication activée | Mise en œuvre | HTTPS | Déduplication activée sur le pool de stockage 
+
+
+| Compression activée | Mise en œuvre | HTTPS | Est activé pour la compression sur le pool de stockage 
+
+
+| Économies de déduplication | Mise en œuvre | HTTPS | rapport entre les économies de déduplication et par pourcentage 
+
+
+| Économies de compression | Mise en œuvre | HTTPS | rapport entre les économies réalisées grâce à la compression en pourcentage 
+
+
+| Nombre de snapshots | Mise en œuvre | HTTPS | Nombre de snapshots sur les volumes internes 
+
+
+| État | Mise en œuvre | HTTPS |  
+
+
+| Stockage virtuel | Mise en œuvre | HTTPS | Stockage virtuel propriétaire (vfiler) 
+
+
+| Type de protection | Mise en œuvre | HTTPS |  
+
+
+| UUID | Mise en œuvre | HTTPS |  
+
+
+| Capacité utilisée du snapshot | Mise en œuvre | HTTPS |  
+
+
+| Capacité allouée des snapshots | Écart | HTTPS | Capacité allouée des snapshots en Mo 
+
+
+| Capacité utile des données | Mise en œuvre | HTTPS |  
+
+
+| Capacité allouée aux données | Écart | HTTPS | capacité allouée aux données 
+
+
+| Capacité totale utilisée | Mise en œuvre | HTTPS | Capacité totale en Mo 
+
+
+| Capacité totale utilisée (Mo) | Mise en œuvre | HTTPS | placez le support pour la capacité utilisée comme lu à partir de l'appareil 
+
+
+| Capacité totale allouée | Mise en œuvre | HTTPS |  
+
+
+| Autre capacité allouée | Écart | HTTPS | Capacité allouée à d'autres (et non des données) 
+
+
+| Rapport brut/utilisable | Mise en œuvre | HTTPS | ratio pour la conversion de la capacité utilisable en capacité brute 
+
+
+|  | Mise en œuvre | HTTPS |  
+
+
+|  | Mise en œuvre | HTTPS |  
+
+
+| Chiffrées | Mise en œuvre | HTTPS |  
+
+
 .3+| Synchronisation du stockage | Volume interne source | Mise en œuvre | HTTPS |  
 
 
@@ -21317,6 +21682,24 @@ Produits pris en charge par ce collecteur de données :
 
 
 | De déduplication | Mise en œuvre | HTTPS | technologie qui entraîne l'évolution de l'efficacité du stockage 
+
+
+.6+| Qtree | ID de qtree | Mise en œuvre | HTTPS | id unique du qtree 
+
+
+| Nom | Mise en œuvre | HTTPS |  
+
+
+| Style de sécurité | Mise en œuvre | HTTPS | Style de sécurité du répertoire : unix, ntfs ou mixte 
+
+
+| Type | Écart | HTTPS |  
+
+
+| État | Mise en œuvre | HTTPS |  
+
+
+| Oplocks | Mise en œuvre | HTTPS | Indique si les verrous opportunistes sont activés sur le qtree 
 
 
 .18+| Stockage | Cluster | Non disponible | HTTPS | Indique si ce stockage est un cluster 
@@ -21409,7 +21792,25 @@ Produits pris en charge par ce collecteur de données :
 | Adresses de gestion | Mise en œuvre | HTTPS |  
 
 
-.13+| Pool de stockage | Inclure dans la capacité DWH | Mise en œuvre | HTTPS | Une façon de contrôler les pools de stockage intéressants dans DWH Capacity 
+.25+| Pool de stockage | Compression activée | Mise en œuvre | HTTPS | Est activé pour la compression sur le pool de stockage 
+
+
+| Économies de compression | Mise en œuvre | HTTPS | rapport entre les économies réalisées grâce à la compression en pourcentage 
+
+
+| Capacité allouée aux données | Écart | HTTPS | capacité allouée aux données 
+
+
+| Capacité utile des données | Mise en œuvre | HTTPS |  
+
+
+| Déduplication activée | Mise en œuvre | HTTPS | Déduplication activée sur le pool de stockage 
+
+
+| Économies de déduplication | Mise en œuvre | HTTPS | rapport entre les économies de déduplication et par pourcentage 
+
+
+| Inclure dans la capacité DWH | Mise en œuvre | HTTPS | Une façon de contrôler les pools de stockage intéressants dans DWH Capacity 
 
 
 | Nom | Mise en œuvre | HTTPS |  
@@ -21422,6 +21823,15 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Rapport brut/utilisable | Mise en œuvre | HTTPS | ratio pour la conversion de la capacité utilisable en capacité brute 
+
+
+| Redondance | Mise en œuvre | HTTPS | Niveau de redondance 
+
+
+| Capacité allouée des snapshots | Écart | HTTPS | Capacité allouée des snapshots en Mo 
+
+
+| Capacité utilisée du snapshot | Mise en œuvre | HTTPS |  
 
 
 | État | Mise en œuvre | HTTPS |  
@@ -21442,13 +21852,28 @@ Produits pris en charge par ce collecteur de données :
 | Type | Écart | HTTPS |  
 
 
+| Utilise FlashPools | Mise en œuvre | HTTPS | Indiquez si ce pool de stockage utilise des pools Flash(spécifique à NetApp) 
+
+
 | Virtualisation | Mise en œuvre | HTTPS | S'agit-il d'un dispositif de virtualisation du stockage ? 
+
+
+| Économies de comptionactivées | Mise en œuvre | HTTPS |  
+
+
+| Chiffrées | Mise en œuvre | HTTPS |  
 
 
 | UUID | Mise en œuvre | HTTPS |  
 
 
-.9+| Storage Virtualmachine | Capacité allouée (Mo) | Mise en œuvre | HTTPS | Capacité allouée des snapshots 
+.11+| Storage Virtualmachine | Capacité allouée (Mo) | Mise en œuvre | HTTPS | Capacité allouée des snapshots 
+
+
+| Économies de compression | Mise en œuvre | HTTPS | rapport entre les économies réalisées grâce à la compression en pourcentage 
+
+
+| Économies de déduplication | Mise en œuvre | HTTPS | rapport entre les économies de déduplication et par pourcentage 
 
 
 | Clé GUID | Mise en œuvre | HTTPS | Clé globale unique du serveur virtuel de stockage 
@@ -21475,46 +21900,55 @@ Produits pris en charge par ce collecteur de données :
 | Capacité utilisée | Mise en œuvre | HTTPS |  
 
 
+| Réf. Volume interne de Virtualmachine | ID du volume interne | Mise en œuvre | HTTPS |  
+
+
+| Virtualmachine StoragePool lRef | ID du pool de stockage | Mise en œuvre | HTTPS |  
+
+
 | Réf. Volume Virtualmachine | Nom du volume | Mise en œuvre | HTTPS |  
 
 
-.14+| Volumétrie | Nom | Mise en œuvre | HTTPS |  
-
-
-| Chemin de jonction | Mise en œuvre | HTTPS |  
-
-
-| ID du pool de stockage | Mise en œuvre | HTTPS |  
-
-
-| UUID | Mise en œuvre | HTTPS |  
-
-
-| Type | Écart | HTTPS |  
-
-
-| Provisionnement fin | Mise en œuvre | HTTPS |  
-
-
-| Capacité | Mise en œuvre | HTTPS | Capacité utilisée de la copie Snapshot en Mo 
-
-
-| Capacité brute totale | Mise en œuvre | HTTPS | Capacité brute totale (somme de tous les disques de la baie) 
-
-
-| Capacité utilisée | Mise en œuvre | HTTPS |  
-
-
-| Type de disque | Non disponible | HTTPS |  
+.15+| Volumétrie | Capacité | Mise en œuvre | HTTPS | Capacité utilisée de la copie Snapshot en Mo 
 
 
 | Groupe de disques | Mise en œuvre | HTTPS | Type de groupe de disques 
 
 
+| Taille de disque | Mise en œuvre | HTTPS | Liste séparée par des virgules des tailles de disque (Go) 
+
+
 | Vitesse du disque | Mise en œuvre | HTTPS | liste séparée par des virgules des vitesses de disque (tr/min) 
 
 
-| Taille de disque | Mise en œuvre | HTTPS | Liste séparée par des virgules des tailles de disque (Go) 
+| Type de disque | Non disponible | HTTPS |  
+
+
+| Chemin de jonction | Mise en œuvre | HTTPS |  
+
+
+| Nom | Mise en œuvre | HTTPS |  
+
+
+| ID de qtree | Mise en œuvre | HTTPS | id unique du qtree 
+
+
+| Capacité brute totale | Mise en œuvre | HTTPS | Capacité brute totale (somme de tous les disques de la baie) 
+
+
+| ID du pool de stockage | Mise en œuvre | HTTPS |  
+
+
+| Provisionnement fin | Mise en œuvre | HTTPS |  
+
+
+| Type | Écart | HTTPS |  
+
+
+| UUID | Mise en œuvre | HTTPS |  
+
+
+| Capacité utilisée | Mise en œuvre | HTTPS |  
 
 
 | Chiffrées | Mise en œuvre | HTTPS |  
@@ -21523,28 +21957,28 @@ Produits pris en charge par ce collecteur de données :
 .4+| Carte de volume | LUN | Mise en œuvre | HTTPS | Nom de la lun backend 
 
 
+| Contrôleur de protocole | Mise en œuvre | HTTPS |  
+
+
 | Port de stockage | Mise en œuvre | HTTPS |  
 
 
-| Contrôleur de protocole | Mise en œuvre | HTTPS |  
-
-
 | Type | Écart | HTTPS |  
 
 
-.4+| Masque de volume | Port de stockage | Mise en œuvre | HTTPS |  
-
-
-| Initiateur | Mise en œuvre | HTTPS |  
+.4+| Masque de volume | Initiateur | Mise en œuvre | HTTPS |  
 
 
 | Contrôleur de protocole | Mise en œuvre | HTTPS |  
 
 
+| Port de stockage | Mise en œuvre | HTTPS |  
+
+
 | Type | Écart | HTTPS |  
 
 
-.47+| performances .11+| Disque | Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
+.11+| performances .11+| Disque | Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
 
 
 | Total d'IOPS | Mise en œuvre | HTTPS |  
@@ -21575,114 +22009,6 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Utilisation, écriture | Mise en œuvre | HTTPS |  
-
-
-.20+| Stockage | Échec de la capacité brute | Mise en œuvre | HTTPS |  
-
-
-| Capacité brute | Mise en œuvre | HTTPS |  
-
-
-| Capacité brute disponible | Mise en œuvre | HTTPS | Capacité brute des disques de spare (somme de tous les disques de spare) 
-
-
-| Capacité des stockagePools | Mise en œuvre | HTTPS |  
-
-
-| Disques défectueux | Mise en œuvre | HTTPS |  
-
-
-| Lecture de densité d'E/S. | Mise en œuvre | HTTPS |  
-
-
-| Densité d'E/S totale | Mise en œuvre | HTTPS |  
-
-
-| Densité des E/S d'écriture | Mise en œuvre | HTTPS |  
-
-
-| Autres IOPS | Mise en œuvre | HTTPS |  
-
-
-| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
-
-
-| Total d'IOPS | Mise en œuvre | HTTPS |  
-
-
-| Écriture d'IOPS | Mise en œuvre | HTTPS |  
-
-
-| Clé | Mise en œuvre | HTTPS |  
-
-
-| Latence lecture | Mise en œuvre | HTTPS |  
-
-
-| Latence Total | Mise en œuvre | HTTPS |  
-
-
-| Écriture de latence | Mise en œuvre | HTTPS |  
-
-
-| ID du serveur | Mise en œuvre | HTTPS |  
-
-
-| Débit de lecture | Mise en œuvre | HTTPS |  
-
-
-| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
-
-
-| Débit d'écriture | Mise en œuvre | HTTPS |  
-
-
-.9+| Pool de stockage | Capacité totale | Mise en œuvre | HTTPS |  
-
-
-| Capacité utilisée | Mise en œuvre | HTTPS |  
-
-
-| Rapport de capacité utilisé | Mise en œuvre | HTTPS |  
-
-
-| Compression SavingsPercent.total | Mise en œuvre | HTTPS |  
-
-
-| Total des économies en termes de compression | Mise en œuvre | HTTPS |  
-
-
-| Déduplication SavingsPercent.total | Mise en œuvre | HTTPS |  
-
-
-| Disques défectueux | Mise en œuvre | HTTPS |  
-
-
-| Clé | Mise en œuvre | HTTPS |  
-
-
-| ID du serveur | Mise en œuvre | HTTPS |  
-
-
-.7+| Virtualmachine | Clé | Mise en œuvre | HTTPS |  
-
-
-| ID du serveur | Mise en œuvre | HTTPS |  
-
-
-| Latence lecture | Mise en œuvre | HTTPS |  
-
-
-| Écriture de latence | Mise en œuvre | HTTPS |  
-
-
-| Latence Total | Mise en œuvre | HTTPS |  
-
-
-| Capacité totale | Mise en œuvre | HTTPS |  
-
-
-| Capacité utilisée | Mise en œuvre | HTTPS |  
 |===
 API de gestion utilisées par ce collecteur de données :
 
@@ -21702,7 +22028,51 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| AFF-A150 AFF-A220 AFF-A250 AFF-A300 AFF-A400 AFF-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C250 AFF-C400 AFF-C800 ASA-A250 ASA-A400 ASA-C800 CDvM200 FAS2720 FAS2750 FAS2820 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX | NetApp NetApp NetApp NetApp NetApp version : Mar::UTC NetApp NetApp NetApp NetApp NetApp version 9.14.1P10 : jeu novembre:UTC NetApp NetApp NetApp version 9.14.1P1 : jeu::UTC NetApp version 9.14.1P4 : jeu::UTC version:UTC version::UTC version::39 UTC version 2024::24 16 UTC jeudi 2024:04 01 UTC version 31::42:15 UTC version 44:53:37:2024 UTC NetApp:2024:25 22:27 20:2024:35:33 UTC version 49:16:27 16:15:2024:07 UTC version 04 12:2024:9.15.1 UTC version 05:30 05:21:04 UTC version 2024:2024:27:13 07:2024 UTC version 9.5mar 07:21 18:12:01 03 UTC version 44:44:11:16 UTC version 2024:2024:2024 UTC version 18 19:18 16:59:18 15 UTC version 21:42:45 UTC NetApp:10:2024:2024:15 00:28 12:32:01:16:2024:48:9.14.1:23 21 UTC : jeu NetApp 18 21 34 02 2025 NetApp 24 04 49 55 2024 NetApp 9.16.1 18 19 31 15 2025 NetApp 04 10 39 46 2024 NetApp 09 10 27 42 2024 NetApp 12 11 18 25 2025 NetApp 9.15.1 24 05 03 10 2024 NetApp 9.15.1 18 11 39 42 2025 NetApp 9.15.1 14 04 56 38 2024 
+| AFF-A150 AFF-A220 AFF-A250 ASA-A300 ASA-A400 ASA-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C190 AFF-C250 AFF-C400 AFF-C800 AFF-A250 AFF-A400 AFF-A800 ASA-C250 ASA-C800 CDvM200 FAS2720 FAS2750 FAS2820 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX  a| 
+* NetappRelease 9.14.1P10: Jeu nov 28 12:32:16 UTC 2024
+* NetappRelease 9.14.1P11: Mercredi 22 11:55:28 UTC 2025
+* NetappRelease 9.14.1P1 : jeu fév 15 00:45:21 UTC 2024
+* NetappRelease 9.14.1P4: Jeu Avr 18 15:59:10 UTC 2024
+* NetappRelease 9.14.1P5: Sam 18 19:42:16 UTC 2024
+* NetappRelease 9.14.1P6: Mar juin 18 16:11:44 UTC 2024
+* NetappRelease 9.14.1P7: Jeu août 01 03:07:44 UTC 2024
+* NetappRelease 9.14.1P8: Ven Sep 13 07:12:27 UTC 2024
+* NetappRelease 9.14.1P9: LUN Oct 21 18:04:05 UTC 2024
+* NetappRelease 9.15.1: Jeu Jul 04 12:21:07 UTC 2024
+* NetappRelease 9.15.1P1: Mar Jul 30 05:15:49 UTC 2024
+* NetappRelease 9.15.1P2: Mar août 27 16:35:16 UTC 2024
+* NetappRelease 9.15.1P3: Mer Sep 25 22:33:44 UTC 2024
+* NetappRelease 9.15.1P4: Sun Oct 27 20:15:53 UTC 2024
+* NetappRelease 9.15.1P5: Sun Nov 24 16:31:37 UTC 2024
+* NetappRelease 9.15.1P6: Mer Déc 04 01:42:39 UTC 2024
+* NetappRelease 9.15.1P7: Sam 18 21:34:02 UTC 2025
+* NetappRelease 9.15.1RC2: Lundi 24 04 juin 49:55 UTC 2024
+* NetappRelease 9.16.1: Sam 18 19:31:15 UTC 2025
+* NetappRelease 9.16.1P1 : vendredi 14 03 février 53:50 UTC 2025
+* NetappRelease 9.16.1RC1 : lundi 04 10 novembre 39:46 UTC 2024
+* NetappRelease 9.16.1X26: Lundi 09 10 décembre 27:42 UTC 2024
+* NetappRelease 9.16.1X29: DIM Jan 12 11:18:25 UTC 2025
+* NetappRelease 9.17.1X7 : vendredi 14 11 février 21:52 UTC 2025
+* NetappRelease Clawhammer__9.14.1: Sam Mai 18 09:23:49 UTC 2024
+* NetappRelease Cloudstream__9.16.1: LUN 04 05:51:46 UTC 2024
+* NetappRelease Cloudstream__9.16.1: Jeu Mar 13 20:55:54 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Lundi 03 05 mars 57:49 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Sun Mar 09 05:56:14 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Sun Mar 16 04:54:53 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Mar 28 11:48:14 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Mar Mar 18 04:59:54 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Mer Mar 12 04:42:03 UTC 2025
+* NetappRelease Mightysquirrel__9.15.1: Vendredi 24 05 mai 03:10 UTC 2024
+* NetappRelease Mightysquirrel__9.15.1: Sam 18 11:39:42 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Vendredi 21 14:02:58 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: LUN 17 08:18:14 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Jeu fév 20 08:11:55 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Jeu fév 27 04:15:40 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Mar Fév 18 14:00:54 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Mer Fév 26 08:19:21 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Mercredi 29 08:34:06 UTC 2025
+
+
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -22486,7 +22856,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| H410S-2 H610S-2 H610S-4 SF19210 SF4805 SF9605 SF9608 H300S H410S-0 H410S-1 H410S-2 H500S H610S-1 H610S-2 H610S-4 SF19210 SF38410 SF4805 SF9605 SF9608 | 11.1.0.72 11.7.0.76 11.8.0.23 12.0.0.333 12.2.0.777 12.3.0.958 12.3.1.103 12.3.1.165 12.3.2.3 12.5.0.897 12.7.0.380 
+| H410S-2 H610S-2 H610S-4 SF19210 SF2405 SF9605 SF9608 H410S-0 H410S-1 H410S-2 H500S H610S-1 H610S-2 H610S-4 SF19210 SF38410 SF4805 SF9608 | 11.1.0.72 11.7.0.76 12.0.0.333 12.2.0.777 12.3.0.958 12.3.1.103 12.3.1.165 12.3.2.3 12.5.0.897 12.7.0.380 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -23204,7 +23574,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Versions API | Modèles | Versions du micrologiciel 
 
 
-| 3,2 3,3 3,4 3,5 4,0 4,1 | Webscale | 11.4.0 11.5.0.11 11.5.0.6 11.5.0.7 11.5.0.9 11.6.0 11.6.0.10 11.6.0.11 11.6.0.12 11.6.0.13 11.6.0.14 11.6.0.15 11.6.0.16 11.6.0.4 11.6.0.5 11.6.0.7 11.6.0.8 11.6.0.9 11.7.0 11.7.0.11 11.7.0.12 11.7.0.13 11.7.0.3 11.7.0.4 11.7.0.5 11.7.0.6 11.7.0.8 11.7.0.9 11.8.0 11.8.0.1 11.8.0.2 11.8.0.3 11.8.0.5 11.8.0.6 11.8.0.7 11.8.0.8 11.9.0 11.9.0.1 11.9.0.2 
+| 3,2 3,3 3,4 3,5 4,0 4,1 | Webscale | 11.4.0 11.5.0.11 11.5.0.6 11.5.0.7 11.5.0.9 11.6.0 11.6.0.10 11.6.0.11 11.6.0.12 11.6.0.13 11.6.0.14 11.6.0.15 11.6.0.16 11.6.0.4 11.6.0.5 11.6.0.7 11.6.0.8 11.6.0.9 11.7.0 11.7.0.11 11.7.0.12 11.7.0.13 11.7.0.3 11.7.0.4 11.7.0.5 11.7.0.6 11.7.0.8 11.7.0.9 11.8.0 11.8.0.1 11.8.0.2 11.8.0.3 11.8.0.5 11.8.0.6 11.8.0.7 11.8.0.8 11.8.0.9 11.9.0 11.9.0.1 11.9.0.2 11.9.0.3 11.9.0.4 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -23413,103 +23783,106 @@ Produits pris en charge par ce collecteur de données :
 | Nombre total d'objets | Mise en œuvre |  |  
 
 
-| Qtree.4+ | Stockage | Échec de la capacité brute | Mise en œuvre |  
+.4+| Stockage | Échec de la capacité brute | Mise en œuvre |  |  
 
 
-|  | Capacité brute | Mise en œuvre |  |  
+| Capacité brute | Mise en œuvre |  |  
 
 
-| Capacité brute disponible | Mise en œuvre |  | Capacité brute des disques de spare (somme de tous les disques de spare) | Capacité des stockagePools 
+| Capacité brute disponible | Mise en œuvre |  | Capacité brute des disques de spare (somme de tous les disques de spare) 
 
 
-| Mise en œuvre |  |  .6+| Stockage | Échec de la capacité brute 
+| Capacité des stockagePools | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Capacité brute 
+.6+| Stockage | Échec de la capacité brute | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Capacité brute disponible 
+| Capacité brute | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  | Capacité brute des disques de spare (somme de tous les disques de spare) | Capacité des stockagePools 
+| Capacité brute disponible | Mise en œuvre |  | Capacité brute des disques de spare (somme de tous les disques de spare) 
 
 
-| Mise en œuvre |  |  | Clé 
+| Capacité des stockagePools | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | ID du serveur 
+| Clé | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  .8+| Nœud de stockage | Métadonnées autorisées d'utilisation de la capacité des nœuds 
+| ID du serveur | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Utilisation totale de la capacité des nœuds 
+.8+| Nœud de stockage | Métadonnées autorisées d'utilisation de la capacité des nœuds | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Utilisation de la capacité des nœuds utilisable 
+| Utilisation totale de la capacité des nœuds | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Utilisation de la capacité des nœuds 
+| Utilisation de la capacité des nœuds utilisable | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Métadonnées utilisées dans l'utilisation de la capacité des nœuds 
+| Utilisation de la capacité des nœuds | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Débit de lecture 
+| Métadonnées utilisées dans l'utilisation de la capacité des nœuds | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Débit total 
+| Débit de lecture | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. | Débit d'écriture 
+| Débit total | Mise en œuvre |  | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
 
 
-| Mise en œuvre |  |  .10+| Données du nœud de stockage | Clé 
+| Débit d'écriture | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Métadonnées autorisées d'utilisation de la capacité des nœuds 
+.10+| Données du nœud de stockage | Clé | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Utilisation totale de la capacité des nœuds 
+| Métadonnées autorisées d'utilisation de la capacité des nœuds | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Utilisation de la capacité des nœuds utilisable 
+| Utilisation totale de la capacité des nœuds | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Utilisation de la capacité des nœuds 
+| Utilisation de la capacité des nœuds utilisable | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Métadonnées utilisées dans l'utilisation de la capacité des nœuds 
+| Utilisation de la capacité des nœuds | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | ID du serveur 
+| Métadonnées utilisées dans l'utilisation de la capacité des nœuds | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Débit de lecture 
+| ID du serveur | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Débit total 
+| Débit de lecture | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. | Débit d'écriture 
+| Débit total | Mise en œuvre |  | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
 
 
-| Mise en œuvre |  |  .6+| StoragePool | Capacité provisionnée 
+| Débit d'écriture | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Capacité brute 
+.6+| StoragePool | Capacité provisionnée | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Capacité totale 
+| Capacité brute | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Capacité utilisée 
+| Capacité totale | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  |  | Rapport de capacité de surengagement 
+| Capacité utilisée | Mise en œuvre |  |  
 
 
-| Mise en œuvre |  | Signalé comme une série chronologique | Rapport de capacité utilisé 
+| Rapport de capacité de surengagement | Mise en œuvre |  | Signalé comme une série chronologique 
+
+
+| Rapport de capacité utilisé | Mise en œuvre |  |  
 |===
 API de gestion utilisées par ce collecteur de données :
 
@@ -23529,7 +23902,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| NX-3170 8155-G7 NX-8155 8170-G7 HPE DX360-10 G10 HPE DX380 12LFF G11 HPE DX385-12 GEN10 PLUS NX-3060-G6 NX-3060-G7 NX-3060-G8 NX-3155G-G7 NX-3155G-G8 NX-8150-G6 NX-8150-G7 NX-8035-G8 NX-8035-3170 | 5.20.1.1 6.10 6.5.3.7 6.5.4 6.5.5.1 6.5.5.7 6.5.6 6.5.6.5 6.5.6.6 6.7.1.6 6.8.1.5 7.0 
+| NX--G7 NX--G7 HPE DX380 12LFF G11 HPE DX380-G10 HPE DX385-12 GEN10 PLUS NX--G6 NX--G7 NX-3170-G8 NX-3155G-G7 NX-3155G-G8 NX-8150-G6 NX--G8 NX-8150-G7 NX-8155-3170-G8 NX-8035-3060-G8 NX-X8070-3060-NX-3060-G8-NX-24-G8-X8070-NX-G80-G8 NX-8155 | 5.20.1.1 6.10 6.10.1 6.5.3.7 6.5.4 6.5.5.1 6.5.5.7 6.5.6 6.5.6.5 6.5.6.6 6.5.6.7 6.7.1.6 7.0 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -23900,121 +24273,127 @@ Produits pris en charge par ce collecteur de données :
 | Type | Écart | HTTPS |  
 
 
-.41+| performances | Qtree.10+ | Stockage | Latence Total | Mise en œuvre | HTTPS 
+.41+| performances .10+| Stockage | Latence Total | Mise en œuvre | HTTPS |  
 
 
-|  | Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
+| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
 
 
-| Latence lecture | Mise en œuvre | HTTPS |  | Autres IOPS 
+| Latence lecture | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Écriture d'IOPS | Mise en œuvre 
+| Autres IOPS | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Débit de lecture | Mise en œuvre | HTTPS 
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
 
 
-|  | Débit d'écriture | Mise en œuvre | HTTPS |  
+| Débit de lecture | Mise en œuvre | HTTPS |  
 
 
-| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. | Total d'IOPS 
+| Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
-| Mise en œuvre | HTTPS |  | Écriture de latence | Mise en œuvre 
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
 
 
-| HTTPS |  .16+| Stockage | Échec de la capacité brute | Mise en œuvre 
+| Total d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Capacité brute | Mise en œuvre 
+| Écriture de latence | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Capacité brute disponible | Mise en œuvre 
+.16+| Stockage | Échec de la capacité brute | Mise en œuvre | HTTPS |  
 
 
-| HTTPS | Capacité brute des disques de spare (somme de tous les disques de spare) | Capacité des stockagePools | Mise en œuvre 
+| Capacité brute | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Autres IOPS | Mise en œuvre 
+| Capacité brute disponible | Mise en œuvre | HTTPS | Capacité brute des disques de spare (somme de tous les disques de spare) 
 
 
-| HTTPS |  | Lecture IOPS | Mise en œuvre 
+| Capacité des stockagePools | Mise en œuvre | HTTPS |  
 
 
-| HTTPS | Nombre d'IOPS de lecture sur le disque | Total d'IOPS | Mise en œuvre 
+| Autres IOPS | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Écriture d'IOPS | Mise en œuvre 
+| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
 
 
-| HTTPS |  | Clé | Mise en œuvre 
+| Total d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Latence lecture | Mise en œuvre 
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Latence Total | Mise en œuvre 
+| Clé | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Écriture de latence | Mise en œuvre 
+| Latence lecture | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | ID du serveur | Mise en œuvre 
+| Latence Total | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Débit de lecture | Mise en œuvre 
+| Écriture de latence | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Débit total | Mise en œuvre 
+| ID du serveur | Mise en œuvre | HTTPS |  
 
 
-| HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. | Débit d'écriture | Mise en œuvre 
+| Débit de lecture | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  .6+| StoragePool | Lecture IOPS | Mise en œuvre 
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
 
 
-| HTTPS | Nombre d'IOPS de lecture sur le disque | Total d'IOPS | Mise en œuvre 
+| Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Écriture d'IOPS | Mise en œuvre 
+.6+| StoragePool | Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
 
 
-| HTTPS |  | Débit de lecture | Mise en œuvre 
+| Total d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Débit total | Mise en œuvre 
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. | Débit d'écriture | Mise en œuvre 
+| Débit de lecture | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  .9+| Volumétrie | Latence Total | Mise en œuvre 
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
 
 
-| HTTPS |  | Lecture IOPS | Mise en œuvre 
+| Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
-| HTTPS | Nombre d'IOPS de lecture sur le disque | Latence lecture | Mise en œuvre 
+.9+| Volumétrie | Latence Total | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Écriture d'IOPS | Mise en œuvre 
+| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
 
 
-| HTTPS |  | Débit de lecture | Mise en œuvre 
+| Latence lecture | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Débit d'écriture | Mise en œuvre 
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Débit total | Mise en œuvre 
+| Débit de lecture | Mise en œuvre | HTTPS |  
 
 
-| HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. | Total d'IOPS | Mise en œuvre 
+| Débit d'écriture | Mise en œuvre | HTTPS |  
 
 
-| HTTPS |  | Écriture de latence | Mise en œuvre 
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
+
+
+| Total d'IOPS | Mise en œuvre | HTTPS |  
+
+
+| Écriture de latence | Mise en œuvre | HTTPS |  
 |===
 API de gestion utilisées par ce collecteur de données :
 
@@ -24026,268 +24405,6 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
-== OPENSTACK (API REST/SSH)
-
-|===
-|===
-Produits pris en charge par ce collecteur de données :
-
-|===
-| Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
-
-
-.76+| bases .7+| Datastore | Capacité | Mise en œuvre | HTTPS | Capacité utilisée de la copie Snapshot en Mo 
-
-
-| MOID | Mise en œuvre | HTTPS |  
-
-
-| Nom | Mise en œuvre | HTTPS |  
-
-
-| OID | Mise en œuvre | HTTPS |  
-
-
-| Capacité provisionnée | Mise en œuvre | HTTPS |  
-
-
-| Capacité utilisée | Mise en œuvre | HTTPS |  
-
-
-| IP de Virtual Center | Mise en œuvre | HTTPS |  
-
-
-.3+| Datastore NASShare | OID du datastore | Mise en œuvre | HTTPS |  
-
-
-| OID de partage NAS | Mise en œuvre | HTTPS |  
-
-
-| OID | Mise en œuvre | HTTPS |  
-
-
-.4+| Hôte NASShare | OID de partage NAS | Mise en œuvre | HTTPS |  
-
-
-| OID de l'hôte | Mise en œuvre | HTTPS |  
-
-
-| OID | Mise en œuvre | HTTPS |  
-
-
-| Lecture seule | Mise en œuvre | HTTPS |  
-
-
-.6+| LUN | OID | Mise en œuvre | HTTPS |  
-
-
-| Numéro | Mise en œuvre | HTTPS |  
-
-
-| OID du datastore | Mise en œuvre | HTTPS |  
-
-
-| OID de l'hôte | Mise en œuvre | HTTPS |  
-
-
-| Nom du disque | Mise en œuvre | HTTPS |  
-
-
-| TID | Mise en œuvre | HTTPS |  
-
-
-.6+| Partage NAS | Capacité | Mise en œuvre | HTTPS | Capacité allouée en Mo 
-
-
-| IP de fichier | Mise en œuvre | HTTPS |  
-
-
-| Nom de fichier | Mise en œuvre | HTTPS |  
-
-
-| OID | Mise en œuvre | HTTPS |  
-
-
-| Chemin du partage | Mise en œuvre | HTTPS | Pour qu'un HvNasShare soit associé à une part 
-
-
-| Type | Écart | HTTPS |  
-
-
-.6+| Chemin | OID | Mise en œuvre | HTTPS |  
-
-
-| OID de LUN | Mise en œuvre | HTTPS |  
-
-
-| WWPN du port hôte | Mise en œuvre | HTTPS |  
-
-
-| WWPN du port de stockage | Mise en œuvre | HTTPS |  
-
-
-| Actif | Mise en œuvre | HTTPS |  
-
-
-| Type | Écart | HTTPS |  
-
-
-.6+| Serveur | Cluster | Mise en œuvre | HTTPS | Nom du cluster 
-
-
-| Nom du Data Center | Mise en œuvre | HTTPS |  
-
-
-| OID de l'hôte | Mise en œuvre | HTTPS |  
-
-
-| MOID | Mise en œuvre | HTTPS |  
-
-
-| OID | Mise en œuvre | HTTPS |  
-
-
-| IP de Virtual Center | Mise en œuvre | HTTPS |  
-
-
-.7+| Disque virtuel | Capacité | Mise en œuvre | HTTPS | Capacité utilisée de la copie Snapshot en Mo 
-
-
-| OID du datastore | Mise en œuvre | HTTPS |  
-
-
-| OID de LUN | Mise en œuvre | HTTPS |  
-
-
-| Nom | Mise en œuvre | HTTPS |  
-
-
-| OID | Mise en œuvre | HTTPS |  
-
-
-| Type | Écart | HTTPS |  
-
-
-| Capacité utilisée | Mise en œuvre | HTTPS |  
-
-
-.13+| Virtualmachine | État du client | Mise en œuvre | HTTPS |  
-
-
-| OID du datastore | Mise en œuvre | HTTPS |  
-
-
-| OID de l'hôte | Mise en œuvre | HTTPS |  
-
-
-| IPS | Mise en œuvre | HTTPS |  
-
-
-| MOID | Mise en œuvre | HTTPS |  
-
-
-| Mémoire | Mise en œuvre | HTTPS |  
-
-
-| Nom | Mise en œuvre | HTTPS |  
-
-
-| OID | Mise en œuvre | HTTPS |  
-
-
-| État de l'alimentation | Mise en œuvre | HTTPS |  
-
-
-| Heure de changement d'état | Mise en œuvre | HTTPS |  
-
-
-| Processeurs | Mise en œuvre | HTTPS |  
-
-
-| Capacité provisionnée | Mise en œuvre | HTTPS |  
-
-
-| Capacité utilisée | Mise en œuvre | HTTPS |  
-
-
-.3+| Disque de Virtualmachine | OID | Mise en œuvre | HTTPS |  
-
-
-| ID objet virtualDisk | Mise en œuvre | HTTPS |  
-
-
-| OID de Virtualmachine | Mise en œuvre | HTTPS |  
-
-
-.7+| Hôte | Nombre de processeurs hôtes | Mise en œuvre | HTTPS |  
-
-
-| Domaine hôte | Mise en œuvre | HTTPS |  
-
-
-| Mémoire installée sur l'hôte | Mise en œuvre | HTTPS |  
-
-
-| Système d'exploitation hôte | Mise en œuvre | HTTPS |  
-
-
-| IPS | Mise en œuvre | HTTPS |  
-
-
-| Nom | Mise en œuvre | HTTPS |  
-
-
-| OID | Mise en œuvre | HTTPS |  
-
-
-.4+| Nœud ISCSI | Alias de l'hôte | Mise en œuvre | HTTPS |  
-
-
-| Nom du nœud | Mise en œuvre | HTTPS |  
-
-
-| OID | Mise en œuvre | HTTPS |  
-
-
-| Type | Écart | HTTPS |  
-
-
-.4+| Info | Nom de la source de données | Mise en œuvre | HTTPS | Info 
-
-
-| Date | Mise en œuvre | HTTPS |  
-
-
-| ID émetteur | Mise en œuvre | HTTPS |  
-
-
-| Clé d'émetteur | Mise en œuvre | HTTPS |  
-
-
-.4+| performances .4+| Hôte | Utilisation totale du processeur | Mise en œuvre |  |  
-
-
-| Clé | Mise en œuvre |  |  
-
-
-| Utilisation totale de la mémoire | Mise en œuvre |  |  
-
-
-| ID du serveur | Mise en œuvre |  |  
-|===
-API de gestion utilisées par ce collecteur de données :
-
-|===
-| API | Protocole utilisé | Protocole de la couche de transport utilisé | Ports entrants utilisés | Ports sortants utilisés | Prend en charge l'authentification | Nécessite uniquement des informations d'identification en lecture seule | Prend en charge le cryptage | Compatible pare-feu (ports statiques) 
-
-
-| L'API REST d'OpenStack | HTTPS | HTTPS | 443 |  | vrai | faux | vrai | vrai 
-
-
-| OpenStack SSH | SSH | SSH | 22 |  | vrai | faux | vrai | vrai 
-|===
-
-
 == Oracle ZFS (HTTPS)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -24296,7 +24413,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| Sun ZFS Storage 7120 Sun ZFS Storage 7330 Sun ZFS Storage 7335 Sun ZFS Storage 7350 Sun ZFS Storage 7370 Sun ZFS Storage 7390 Sun ZFS Storage 7420 | 1-1.1 1-1.2 1-1.3 1-1.34 1-1.4 2013.06.05.6.12 2013.06.05.6.15 2013.06.05.7.21 2013.06.05.7.24 2013.06.05.7.25 2013.06.05.7.26 2013.06.05.7.29 2013.06.05.8.0 2013.06.05.8.26 2013.06.05.8.29 2013.06.05.8.37 2013.06.05.8.44 2013.06.05.8.50 2013.06.05.8.53 2013.06.05.8.56 2013.06.05.8.6 2013.06.05.8.61 2013.06.05.8.65 2013.06.05.8.7 2013.06.05.8.72 2013.06.05.8.76 
+| Sun ZFS Storage 7120 Sun ZFS Storage 7320 Sun ZFS Storage 7330 Sun ZFS Storage 7335 Sun ZFS Storage 7350 Sun ZFS Storage 7370 Sun ZFS Storage 7390 Sun ZFS Storage 7420 | 1-1.1 1-1.2 1-1.3 1-1.34 1-1.4 2013.06.05.6.12 2013.06.05.6.15 2013.06.05.7.21 2013.06.05.7.24 2013.06.05.7.25 2013.06.05.7.26 2013.06.05.7.29 2013.06.05.8.0 2013.06.05.8.26 2013.06.05.8.29 2013.06.05.8.37 2013.06.05.8.44 2013.06.05.8.50 2013.06.05.8.53 2013.06.05.8.56 2013.06.05.8.6 2013.06.05.8.61 2013.06.05.8.65 2013.06.05.8.7 2013.06.05.8.72 2013.06.05.8.74 2013.06.05.8.76 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -24574,55 +24691,52 @@ Produits pris en charge par ce collecteur de données :
 | Virtualisation | Mise en œuvre | HTTP/S | S'agit-il d'un dispositif de virtualisation du stockage ? 
 
 
-.15+| Volumétrie | Nom | Mise en œuvre | HTTP/S |  
-
-
-| Chemin de jonction | Mise en œuvre | HTTP/S |  
-
-
-| ID du pool de stockage | Mise en œuvre | HTTP/S |  
-
-
-| Hiérarchisation automatique | Mise en œuvre | HTTP/S | indique si ce pool de stockage participe à la hiérarchisation automatique avec d'autres pools 
-
-
-| UUID | Mise en œuvre | HTTP/S |  
-
-
-| Type | Écart | HTTP/S |  
-
-
-| Type de disque | Non disponible | HTTP/S |  
-
-
-| Virtualisation | Mise en œuvre | HTTP/S | S'agit-il d'un dispositif de virtualisation du stockage ? 
-
-
-| Provisionnement fin | Mise en œuvre | HTTP/S |  
-
-
-| Vitesse du disque | Mise en œuvre | HTTP/S | liste séparée par des virgules des vitesses de disque (tr/min) 
-
-
-| Taille de disque | Mise en œuvre | HTTP/S | Liste séparée par des virgules des tailles de disque (Go) 
+.15+| Volumétrie | Hiérarchisation automatique | Mise en œuvre | HTTP/S | indique si ce pool de stockage participe à la hiérarchisation automatique avec d'autres pools 
 
 
 | Capacité | Mise en œuvre | HTTP/S | Capacité utilisée de la copie Snapshot en Mo 
 
 
+| Taille de disque | Mise en œuvre | HTTP/S | Liste séparée par des virgules des tailles de disque (Go) 
+
+
+| Vitesse du disque | Mise en œuvre | HTTP/S | liste séparée par des virgules des vitesses de disque (tr/min) 
+
+
+| Type de disque | Non disponible | HTTP/S |  
+
+
+| Chemin de jonction | Mise en œuvre | HTTP/S |  
+
+
+| Nom | Mise en œuvre | HTTP/S |  
+
+
 | Capacité brute totale | Mise en œuvre | HTTP/S | Capacité brute totale (somme de tous les disques de la baie) 
-
-
-| Capacité utilisée | Mise en œuvre | HTTP/S |  
 
 
 | Redondance | Mise en œuvre | HTTP/S | Niveau de redondance 
 
 
+| ID du pool de stockage | Mise en œuvre | HTTP/S |  
+
+
+| Provisionnement fin | Mise en œuvre | HTTP/S |  
+
+
+| Type | Écart | HTTP/S |  
+
+
+| UUID | Mise en œuvre | HTTP/S |  
+
+
+| Capacité utilisée | Mise en œuvre | HTTP/S |  
+
+
+| Virtualisation | Mise en œuvre | HTTP/S | S'agit-il d'un dispositif de virtualisation du stockage ? 
+
+
 .5+| Carte de volume | LUN | Mise en œuvre | HTTP/S | Nom de la lun backend 
-
-
-| Port de stockage | Mise en œuvre | HTTP/S |  
 
 
 | Masquage requis | Mise en œuvre | HTTP/S |  
@@ -24631,16 +24745,19 @@ Produits pris en charge par ce collecteur de données :
 | Contrôleur de protocole | Mise en œuvre | HTTP/S |  
 
 
+| Port de stockage | Mise en œuvre | HTTP/S |  
+
+
 | Type | Écart | HTTP/S |  
 
 
-.4+| Masque de volume | Port de stockage | Mise en œuvre | HTTP/S |  
-
-
-| Initiateur | Mise en œuvre | HTTP/S |  
+.4+| Masque de volume | Initiateur | Mise en œuvre | HTTP/S |  
 
 
 | Contrôleur de protocole | Mise en œuvre | HTTP/S |  
+
+
+| Port de stockage | Mise en œuvre | HTTP/S |  
 
 
 | Type | Écart | HTTP/S |  
@@ -24807,7 +24924,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| DFSC1 FA-450 FA-C40R3 FA-C50R4 FA-C60 FA-C60R3 FA-C70R4 FA-C90R4 FA-X10R2 FA-X10R3 FA-X20R2 FA-X20R3 FA-X20R4 FA-X50R2 FA-X50R3 FA-X50R4 FA-X70FA-XFA-X70FA-X70 FA-XFA-X70 FA-XFA-X70FA-X70 FA-X70 FA-X70 FA-X70 FA-X70 FA-X70 FA-X70 FA-X50R3 | 5.3.14 5.3.20 6.1.10 6.1.14 6.1.18 6.1.19 6.1.21 6.1.22 6.1.23 6.2.10 6.3.10 6.3.11 6.3.12 6.3.13 6.3.14 6.3.15 6.3.16 6.3.17 6.3.18 6.3.3 6.3.6 6.3.7 6.3.9 6.4.10 6.4.2 6.4.3 6.4.7 6.4.9 6.5.0 6.5.1 6.5.2 6.5.3 6.5.4 6.5.5 6.5.6 6.5.7 6.5.8 6.5.9 6.6.10 6.6.11 6.6.5 6.6.6 6.6.7 6.7.0 6.7.1 6.8.2 6.8.3 
+| DFSC1 FA-450 FA-C40R3 FA-C50R4 FA-C60 FA-C60R3 FA-C70R4 FA-C90R4 FA-X10R2 FA-X10R3 FA-X20R2 FA-X20R3 FA-X20R4 FA-X50R2 FA-X50R3 FA-X50R4 FA-X70FA-XFA-X70FA-X70 FA-XFA-X70 FA-XFA-X70FA-X70 FA-X70 FA-X70 FA-X70 FA-X70 FA-X70 FA-X70 FA-X50R3 | 5.3.14 5.3.20 6.1.10 6.1.14 6.1.18 6.1.19 6.1.21 6.1.22 6.1.23 6.2.10 6.3.10 6.3.11 6.3.12 6.3.13 6.3.14 6.3.15 6.3.16 6.3.17 6.3.18 6.3.3 6.3.6 6.3.7 6.3.9 6.4.10 6.4.2 6.4.3 6.4.7 6.4.8 6.4.9 6.5.0 6.5.1 6.5.2 6.5.3 6.5.4 6.5.5 6.5.6 6.5.7 6.5.8 6.5.9 6.6.10 6.6.11 6.6.5 6.6.6 6.6.7 6.7.0 6.7.1 6.8.1 6.8.2 6.8.3 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -25335,25 +25452,25 @@ Produits pris en charge par ce collecteur de données :
 | Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
 
 
-.73+| bases .7+| Datastore | OID | Mise en œuvre | HTTP/S |  
+.75+| bases .7+| Datastore | Capacité | Mise en œuvre | HTTP/S | Capacité utilisée de la copie Snapshot en Mo 
+
+
+| MOID | Mise en œuvre | HTTP/S |  
 
 
 | Nom | Mise en œuvre | HTTP/S |  
 
 
-| Capacité | Mise en œuvre | HTTP/S | Capacité utilisée de la copie Snapshot en Mo 
-
-
-| Capacité utilisée | Mise en œuvre | HTTP/S |  
+| OID | Mise en œuvre | HTTP/S |  
 
 
 | Capacité provisionnée | Mise en œuvre | HTTP/S |  
 
 
+| Capacité utilisée | Mise en œuvre | HTTP/S |  
+
+
 | IP de Virtual Center | Mise en œuvre | HTTP/S |  
-
-
-| MOID | Mise en œuvre | HTTP/S |  
 
 
 .3+| Datastore NASShare | OID du datastore | Mise en œuvre | HTTP/S |  
@@ -25377,16 +25494,16 @@ Produits pris en charge par ce collecteur de données :
 | OID | Mise en œuvre | HTTP/S |  
 
 
-.4+| LUN | OID | Mise en œuvre | HTTP/S |  
+.4+| LUN | OID du datastore | Mise en œuvre | HTTP/S |  
+
+
+| OID de l'hôte | Mise en œuvre | HTTP/S |  
 
 
 | Numéro | Mise en œuvre | HTTP/S |  
 
 
-| OID du datastore | Mise en œuvre | HTTP/S |  
-
-
-| OID de l'hôte | Mise en œuvre | HTTP/S |  
+| OID | Mise en œuvre | HTTP/S |  
 
 
 .6+| Partage NAS | Nom de fichier | Mise en œuvre | HTTP/S |  
@@ -25407,25 +25524,25 @@ Produits pris en charge par ce collecteur de données :
 | OID | Mise en œuvre | HTTP/S |  
 
 
-.4+| Chemin | OID | Mise en œuvre | HTTP/S |  
+.6+| Chemin | Actif | Mise en œuvre | HTTP/S |  
 
 
 | OID de LUN | Mise en œuvre | HTTP/S |  
 
 
-| Actif | Mise en œuvre | HTTP/S |  
+| WWPN du port hôte | Mise en œuvre | HTTP/S |  
+
+
+| OID | Mise en œuvre | HTTP/S |  
+
+
+| WWPN du port de stockage | Mise en œuvre | HTTP/S |  
 
 
 | Type | Écart | HTTP/S |  
 
 
-.6+| Serveur | OID | Mise en œuvre | HTTP/S |  
-
-
-| IP de Virtual Center | Mise en œuvre | HTTP/S |  
-
-
-| Cluster | Mise en œuvre | HTTP/S | Nom du cluster 
+.6+| Serveur | Cluster | Mise en œuvre | HTTP/S | Nom du cluster 
 
 
 | Nom du Data Center | Mise en œuvre | HTTP/S |  
@@ -25437,7 +25554,13 @@ Produits pris en charge par ce collecteur de données :
 | MOID | Mise en œuvre | HTTP/S |  
 
 
-.6+| Disque virtuel | OID | Mise en œuvre | HTTP/S |  
+| OID | Mise en œuvre | HTTP/S |  
+
+
+| IP de Virtual Center | Mise en œuvre | HTTP/S |  
+
+
+.6+| Disque virtuel | Capacité | Mise en œuvre | HTTP/S | Capacité utilisée de la copie Snapshot en Mo 
 
 
 | OID du datastore | Mise en œuvre | HTTP/S |  
@@ -25446,31 +25569,37 @@ Produits pris en charge par ce collecteur de données :
 | Nom | Mise en œuvre | HTTP/S |  
 
 
-| Capacité | Mise en œuvre | HTTP/S | Capacité utilisée de la copie Snapshot en Mo 
-
-
-| Capacité utilisée | Mise en œuvre | HTTP/S |  
+| OID | Mise en œuvre | HTTP/S |  
 
 
 | Type | Écart | HTTP/S |  
 
 
-.13+| Virtualmachine | OID | Mise en œuvre | HTTP/S |  
+| Capacité utilisée | Mise en œuvre | HTTP/S |  
 
 
-| Nom | Mise en œuvre | HTTP/S |  
+.13+| Virtualmachine | État du client | Mise en œuvre | HTTP/S |  
 
 
-| OS | Mise en œuvre | HTTP/S |  
+| OID du datastore | Mise en œuvre | HTTP/S |  
 
 
-| Processeurs | Mise en œuvre | HTTP/S |  
+| OID de l'hôte | Mise en œuvre | HTTP/S |  
+
+
+| MOID | Mise en œuvre | HTTP/S |  
 
 
 | Mémoire | Mise en œuvre | HTTP/S |  
 
 
-| OID du datastore | Mise en œuvre | HTTP/S |  
+| Nom | Mise en œuvre | HTTP/S |  
+
+
+| OID | Mise en œuvre | HTTP/S |  
+
+
+| OS | Mise en œuvre | HTTP/S |  
 
 
 | État de l'alimentation | Mise en œuvre | HTTP/S |  
@@ -25479,55 +25608,34 @@ Produits pris en charge par ce collecteur de données :
 | Heure de changement d'état | Mise en œuvre | HTTP/S |  
 
 
-| OID de l'hôte | Mise en œuvre | HTTP/S |  
-
-
-| État du client | Mise en œuvre | HTTP/S |  
-
-
-| Capacité utilisée | Mise en œuvre | HTTP/S |  
+| Processeurs | Mise en œuvre | HTTP/S |  
 
 
 | Capacité provisionnée | Mise en œuvre | HTTP/S |  
 
 
-| MOID | Mise en œuvre | HTTP/S |  
+| Capacité utilisée | Mise en œuvre | HTTP/S |  
 
 
 .3+| Disque de Virtualmachine | OID | Mise en œuvre | HTTP/S |  
 
 
-| OID de Virtualmachine | Mise en œuvre | HTTP/S |  
-
-
 | ID objet virtualDisk | Mise en œuvre | HTTP/S |  
 
 
-.11+| Hôte | OID | Mise en œuvre | HTTP/S |  
+| OID de Virtualmachine | Mise en œuvre | HTTP/S |  
 
 
-| Nom | Mise en œuvre | HTTP/S |  
+.11+| Hôte | Nombre de processeurs hôtes | Mise en œuvre | HTTP/S |  
 
 
-| IPS | Mise en œuvre | HTTP/S |  
-
-
-| Type de plate-forme | Mise en œuvre | HTTP/S |  
+| Vitesse du processeur de l'hôte | Mise en œuvre | HTTP/S |  
 
 
 | Mémoire installée sur l'hôte | Mise en œuvre | HTTP/S |  
 
 
-| Fabricant | Mise en œuvre | HTTP/S |  
-
-
 | Modèle hôte | Mise en œuvre | HTTP/S |  
-
-
-| Nombre de processeurs hôtes | Mise en œuvre | HTTP/S |  
-
-
-| Vitesse du processeur de l'hôte | Mise en œuvre | HTTP/S |  
 
 
 | Nombre de NIC | Mise en œuvre | HTTP/S |  
@@ -25536,10 +25644,25 @@ Produits pris en charge par ce collecteur de données :
 | Vitesse de la carte réseau | Mise en œuvre | HTTP/S |  
 
 
-.3+| Nœud ISCSI | OID | Mise en œuvre | HTTP/S |  
+| IPS | Mise en œuvre | HTTP/S |  
 
 
-| Nom du nœud | Mise en œuvre | HTTP/S |  
+| Fabricant | Mise en œuvre | HTTP/S |  
+
+
+| Nom | Mise en œuvre | HTTP/S |  
+
+
+| OID | Mise en œuvre | HTTP/S |  
+
+
+| Type de plate-forme | Mise en œuvre | HTTP/S |  
+
+
+.3+| Nœud ISCSI | Nom du nœud | Mise en œuvre | HTTP/S |  
+
+
+| OID | Mise en œuvre | HTTP/S |  
 
 
 | Type | Écart | HTTP/S |  
@@ -25548,10 +25671,10 @@ Produits pris en charge par ce collecteur de données :
 .3+| Info | Nom de la source de données | Mise en œuvre | HTTP/S | Info 
 
 
-| ID émetteur | Mise en œuvre | HTTP/S |  
-
-
 | Date | Mise en œuvre | HTTP/S |  
+
+
+| ID émetteur | Mise en œuvre | HTTP/S |  
 |===
 API de gestion utilisées par ce collecteur de données :
 
@@ -25565,9 +25688,7 @@ API de gestion utilisées par ce collecteur de données :
 
 == Stockage Rubrik
 
-Modèles et versions pris en charge par ce collecteur de données :
-
-Versions du micrologiciel :
+Modèles et versions pris en charge par ce collecteur de données : versions du micrologiciel :
 
 * 8.1.3-p12-25506
 * 8.1.3-p13-25544
@@ -25580,8 +25701,10 @@ Versions du micrologiciel :
 * 9.1.2-p1-27870
 * 9.1.2-p1-27870_HP1473894
 * 9.1.3-p1-28075
+* 9.1.3-p8-28434
 * 9.2.2-p1-29213
 * 9.2.3-29313
+* 9.2.3-p1-29368
 
 
 Produits pris en charge par ce collecteur de données :
@@ -25913,7 +26036,7 @@ Modèles et versions pris en charge par ce collecteur de données :
 | Modèles | Versions du micrologiciel 
 
 
-| VA2437096 VAST Data | Version de build :Release-5.0.0-sp24-1389206 version de build : Release-5.0.0-sp24-1389206 version de build : Release-5.0.0-sp70-1532643 version de build : Release-5.1.0-sp50-1578267 version du système :5.0.0.94 version du système : 5.0.0.133 version du système : 5.0.0.94 version du système : 5.1.0.210 
+| VA2437096 VAST Data | Version de build :Release-5.0 1700467 5.0.0.94.0-sp24-1389206 1682647 5.0.0.94 5.1.0.210 version de build : Release-5.0 5.1 5.0.0.133 5.1.0.231.0-sp24-1389206 version de build : Release-5.0.0-sp70-1532643 version de build : Release-5.1.0-sp50-1578267 version de build : Release-5.1.0-sp51-hf3-1643358 version de build : Release-5.1.1630237-5.1 version de système 
 |===
 Produits pris en charge par ce collecteur de données :
 
@@ -25921,7 +26044,7 @@ Produits pris en charge par ce collecteur de données :
 | Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
 
 
-.108+| bases .14+| Disque | Capacité (Go) | Mise en œuvre | HTTPS | Capacité utilisée 
+.110+| bases .14+| Disque | Capacité (Go) | Mise en œuvre | HTTPS | Capacité utilisée 
 
 
 | ID du disque | Mise en œuvre | HTTPS | Identifie de manière unique ce disque dans la matrice 
@@ -26053,7 +26176,7 @@ Produits pris en charge par ce collecteur de données :
 | Type | Écart | HTTPS |  
 
 
-.7+| Quota | Limite de capacité matérielle (Mo) | Mise en œuvre | HTTPS | Quantité max d'espace disque autorisée pour la cible de quota (limite Hard) 
+.9+| Quota | Limite de capacité matérielle (Mo) | Mise en œuvre | HTTPS | Quantité max d'espace disque autorisée pour la cible de quota (limite Hard) 
 
 
 | ID du volume interne | Mise en œuvre | HTTPS |  
@@ -26065,6 +26188,9 @@ Produits pris en charge par ce collecteur de données :
 | Limite de capacité souple (Mo) | Mise en œuvre | HTTPS | Quantité maximale d'espace disque autorisée pour la cible de quota 
 
 
+| Limite de fichier logiciel | Mise en œuvre | HTTPS | Nombre max. De fichiers autorisés pour la cible du quota 
+
+
 | Type | Écart | HTTPS |  
 
 
@@ -26072,6 +26198,9 @@ Produits pris en charge par ce collecteur de données :
 
 
 | Fichiers utilisés | Mise en œuvre | HTTPS | Nombre de fichiers actuellement utilisés 
+
+
+| Cible utilisateur/groupe | Mise en œuvre | HTTPS | cible utilisateur/groupe ce quota fait référence à 
 
 
 .3+| Partagez | Interfaces IP | Mise en œuvre | HTTPS | Liste des adresses IP séparées par des virgules sur lesquelles ce partage est exposé 
@@ -26221,10 +26350,13 @@ Produits pris en charge par ce collecteur de données :
 | Chiffrées | Mise en œuvre | HTTPS |  
 
 
-.7+| Storage Virtualmachine | Clé GUID | Mise en œuvre | HTTPS | Clé globale unique du serveur virtuel de stockage 
+.7+| Storage Virtualmachine | Capacité allouée (Mo) | Mise en œuvre | HTTPS | Capacité allouée des snapshots 
 
 
-| UUID | Mise en œuvre | HTTPS |  
+| Commentaire | Mise en œuvre | HTTPS |  
+
+
+| Clé GUID | Mise en œuvre | HTTPS | Clé globale unique du serveur virtuel de stockage 
 
 
 | Nom | Mise en œuvre | HTTPS |  
@@ -26233,10 +26365,7 @@ Produits pris en charge par ce collecteur de données :
 | Type | Écart | HTTPS |  
 
 
-| Commentaire | Mise en œuvre | HTTPS |  
-
-
-| Capacité allouée (Mo) | Mise en œuvre | HTTPS | Capacité allouée des snapshots 
+| UUID | Mise en œuvre | HTTPS |  
 
 
 | Capacité utilisée | Mise en œuvre | HTTPS |  
@@ -26313,9 +26442,7 @@ API de gestion utilisées par ce collecteur de données :
 
 == Centre virtuel NetApp HCI
 
-Modèles et versions pris en charge par ce collecteur de données :
-
-Versions API :
+Modèles et versions pris en charge par ce collecteur de données : versions API :
 
 * VMware vCenter Server 6.7.0 build-10244857
 * VMware vCenter Server 7.0.3 build-20395099
@@ -26863,15 +26990,14 @@ API de gestion utilisées par ce collecteur de données :
 
 == VMware Cloud sur AWS
 
-Modèles et versions pris en charge par ce collecteur de données :
-
-Versions API :
+Modèles et versions pris en charge par ce collecteur de données : versions API :
 
 * VMware vCenter Server 7.0.3 build-21477706
 * VMware vCenter Server 7.0.3 build-24322018
 * VMware vCenter Server 8.0.0 build-22877852
 * VMware vCenter Server 8.0.1 build-22161730
 * VMware vCenter Server 8.0.1 build-23525738
+* VMware vCenter Server 8.0.3 build-24322831
 
 
 Produits pris en charge par ce collecteur de données :
@@ -27206,15 +27332,21 @@ API de gestion utilisées par ce collecteur de données :
 
 == VMware vSphere (services Web)
 
-Modèles et versions pris en charge par ce collecteur de données :
+Modèles et versions pris en charge par ce collecteur de données : versions API :
 
-Versions API :
-
+* VMware ESXi 6.0.0 build-10474991
+* VMware ESXi 6.0.0 build-10719132
+* VMware ESXi 6.0.0 build-13635687
 * VMware ESXi 6.0.0 build-2494585
-* VMware ESXi 6.7.0 build-20497097
+* VMware ESXi 6.0.0 build-3620759
+* VMware ESXi 6.0.0 build-5050593
+* VMware ESXi 6.0.0 build-5224934
+* VMware ESXi 6.0.0 build-9239799
+* VMware ESXi 6.5.0 build-5310538
 * VMware ESXi 7.0.3 build-20036589
 * VMware ESXi 7.0.3 build-20328353
 * VMware ESXi 8.0.0 build-21203435
+* VMware ESXi 8.0.1 build-21495797
 * VMware vCenter Server 5.0.0 build-623373
 * VMware vCenter Server 5.5.0 build-1750787
 * VMware vCenter Server 5.5.0 build-2442329
@@ -27280,6 +27412,7 @@ Versions API :
 * VMware vCenter Server 8.0.0 build-20519528
 * VMware vCenter Server 8.0.0 build-20920323
 * VMware vCenter Server 8.0.0 build-21216066
+* VMware vCenter Server 8.0.0 build-21457384
 * VMware vCenter Server 8.0.1 build-21560480
 * VMware vCenter Server 8.0.1 build-21815093
 * VMware vCenter Server 8.0.1 build-21860503

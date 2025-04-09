@@ -78,5 +78,8 @@ image:CS_Data_Collector_Error.png["Erreur du collecteur de sécurité de la char
 
 
 | Le Data Collector est en cours d'erroring lorsque le mode SVM est sélectionné. | Lors de la connexion en mode SVM, si l'IP de gestion du cluster est utilisée pour se connecter à la place de l'IP de gestion du SVM, alors la connexion sera error out. S'assurer que l'IP de SVM correct est utilisé. 
+
+
+| Le collecteur de données affiche un message d'erreur lorsque la fonction accès refusé est activée : « le connecteur est en état d'erreur. Nom du service : audit. Motif de l'échec : la configuration de fpolicy sur le svm test_svm a échoué. Raison : l'utilisateur n'est pas autorisé. » | Il se peut que l'utilisateur ne dispose pas des autorisations de REPOS requises pour la fonction accès refusé. Veuillez suivre les instructions de la section link:concept_ws_integration_with_ontap_access_denied.html["cette page"] pour définir les autorisations. Redémarrez le collecteur une fois les autorisations définies. 
 |===
 Si vous rencontrez toujours des problèmes, accédez aux liens d'assistance mentionnés dans la page *aide > support*.
