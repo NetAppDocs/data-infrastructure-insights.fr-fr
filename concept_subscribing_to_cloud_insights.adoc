@@ -6,13 +6,7 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 ---
 = Abonnement à Data Infrastructure Insights
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
@@ -136,11 +130,10 @@ Informations sur l'infrastructure de données : l'observabilité mesure l'utilis
 * Cloud consommé
 
 
-Chaque niveau est mesuré à un taux différent, l'ensemble étant calculé ensemble pour vous donner un _droit effectif_. La formule de calcul de l'utilisation effective est la suivante :
+Chaque niveau est mesuré à un taux différent, l'ensemble étant calculé ensemble pour vous donner un droit pondéré. La formule de calcul de l'utilisation pondérée est la suivante :
 
- Effective usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
-
-NOTE: La somme des unités gérées peut différer légèrement du nombre de collecteurs de données dans la section Résumé. C'est parce que les nombres d'unités gérées sont arrondis à l'unité gérée la plus proche. La somme de ces nombres dans la liste collecteurs de données peut être légèrement supérieure au total des unités gérées dans la section d'état. La section Synthèse indique le nombre réel d'unités gérées pour votre abonnement. Pour faciliter cette tâche, DII calcule un seul nombre *effectif de droits* basé sur les quantités _souscrites_, puis calcule ce même nombre en fonction du stockage _découvert_. Vous avez ainsi la possibilité de surveiller les quantités qui varient en fonction des montants souscrits pour chaque niveau, ce que DII autorise dans la mesure où le stockage total découvert est compris dans le droit d'accès effectif souscrit.
+ Weighted usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
+Pour faciliter cette tâche, DII calcule un seul numéro *pondéré de droit* basé sur les quantités _souscrites_. Il calcule ensuite ce même nombre en fonction du stockage _découvert_ et déclare la violation uniquement si la capacité découverte est supérieure au droit pondéré. Vous avez ainsi la possibilité de surveiller les quantités qui varient en fonction des montants souscrits pour chaque niveau, ce que DII autorise tant que le stockage total découvert est compris dans le droit pondéré souscrit.
 
 
 
