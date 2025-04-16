@@ -5,24 +5,16 @@ summary: Concepts et fonctionnalités du tableau de bord.
 keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll up, grouping, aggregate, aggregation, filter, axis, group by, expressions, timeseries, exact match, theme, visibility, formatting, conditional, hide, collapse, expand 
 ---
 = Fonctionnalités du tableau de bord
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 1
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
 Les tableaux de bord et les widgets offrent une grande flexibilité dans le mode d'affichage des données. Voici quelques concepts qui vous aideront à tirer le meilleur parti de vos tableaux de bord personnalisés.
 
+sommaire :[]
 
-toc::[]
 
 
 == Dénomination des widgets
@@ -66,13 +58,17 @@ Lorsque des légendes sont affichées, si la page d'accueil de la ressource indi
 
 Data Infrastructure Insights fournit différentes options de *transformation* pour certaines mesures dans des widgets (en particulier, les metrics appelés « personnalisés » ou les metrics d'intégration, telles que Kubernetes, les données avancées ONTAP, les plug-ins Telegraf, etc.), ce qui vous permet d'afficher les données de différentes manières. Lorsque vous ajoutez des mesures transformables à un widget, une liste déroulante vous propose les options de transformation suivantes :
 
-Aucune:: Les données sont affichées en l'état, sans manipulation.
-Taux:: Valeur actuelle divisée par la plage de temps depuis l'observation précédente.
-Cumulatifs:: Accumulation de la somme des valeurs précédentes et de la valeur actuelle.
-Delta:: Différence entre la valeur d'observation précédente et la valeur actuelle.
-Taux delta:: Valeur Delta divisée par l'intervalle de temps depuis l'observation précédente.
-Taux cumulé:: Valeur cumulée divisée par l'intervalle de temps depuis l'observation précédente.
+Aucune : les données sont affichées telles qu'elles sont, sans manipulation.
 
+Taux : valeur actuelle divisée par la plage horaire depuis l'observation précédente.
+
+Cumulatif : accumulation de la somme des valeurs précédentes et de la valeur actuelle.
+
+Delta : différence entre la valeur d'observation précédente et la valeur actuelle.
+
+Delta rate : valeur Delta divisée par la plage de temps depuis l'observation précédente.
+
+Taux cumulatif : valeur cumulée divisée par la plage horaire depuis l'observation précédente.
 
 Notez que la transformation des mesures ne modifie pas les données sous-jacentes, mais uniquement la façon dont elles sont affichées.
 
@@ -401,7 +397,7 @@ La ligne latence est maintenant tracée à sa propre échelle, qui est affichée
 
 
 
-image::SecondaryAxisExplained.png[Exemple d'axe secondaire]
+image:SecondaryAxisExplained.png["Exemple d'axe secondaire"]
 
 
 

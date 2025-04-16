@@ -5,17 +5,8 @@ keywords: IBM, XIV, SAN, A9000
 summary: Configuration du collecteur de données IBM XIV/A9000. 
 ---
 = Configuration du collecteur de données IBM XIV/A9000
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

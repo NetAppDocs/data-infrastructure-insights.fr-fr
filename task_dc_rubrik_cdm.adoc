@@ -5,17 +5,8 @@ keywords: data collector, Rubrik,
 summary: Configuration du collecteur de données Rubrik CDM. 
 ---
 = Data Collector Rubrik CDM
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

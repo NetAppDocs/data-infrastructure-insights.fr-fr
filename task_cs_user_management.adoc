@@ -6,13 +6,7 @@ summary: Sécurité des workloads les comptes utilisateur sont gérés via la ge
 ---
 = Gestion des utilisateurs
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

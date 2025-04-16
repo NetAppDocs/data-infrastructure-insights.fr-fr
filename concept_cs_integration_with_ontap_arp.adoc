@@ -5,17 +5,8 @@ summary: 'La sécurité des charges de travail s"intègre avec ONTAP la protecti
 keywords: ransomware, ARP, Protection, Security 
 ---
 = Intégration avec la protection ONTAP autonome contre les ransomwares
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

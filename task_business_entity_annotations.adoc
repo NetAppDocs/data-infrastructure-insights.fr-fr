@@ -5,17 +5,8 @@ keywords: annotations, business entity
 summary: 'Les annotations d"entité métier peuvent être utilisées pour surveiller et créer des rapports sur les ressources de votre hiérarchie business' 
 ---
 = Annotations d'entité métier
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

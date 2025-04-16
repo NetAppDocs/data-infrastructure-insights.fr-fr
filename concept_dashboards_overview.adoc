@@ -6,13 +6,7 @@ keywords: dashboard, widget, custom, view, data
 ---
 = Présentation des tableaux de bord
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
@@ -21,8 +15,8 @@ Data Infrastructure Insights offre aux utilisateurs la flexibilité de créer de
 
 IMPORTANT: Les exemples présentés dans ces sections sont fournis à des fins d'explication uniquement et ne couvrent pas tous les scénarios possibles. Les concepts et étapes dans ce document peuvent être utilisés pour créer vos propres tableaux de bord afin de mettre en évidence les données spécifiques à vos besoins spécifiques.
 
+sommaire :[]
 
-toc::[]
 
 
 == Création d'un tableau de bord

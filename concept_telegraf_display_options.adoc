@@ -5,28 +5,23 @@ keywords: telegraf, data, display,
 summary: 'Options d"affichage des données Telegraf' 
 ---
 = Transformation des mesures
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
 Data Infrastructure Insights fournit différentes options de *transformation* pour certaines mesures dans des widgets (en particulier, les metrics appelés « personnalisés » ou les metrics d'intégration, telles que Kubernetes, les données avancées ONTAP, les plug-ins Telegraf, etc.), ce qui vous permet d'afficher les données de différentes manières. Lorsque vous ajoutez des mesures transformables à un widget, une liste déroulante vous propose les options de transformation suivantes :
 
-Aucune:: Les données sont affichées en l'état, sans manipulation.
-Taux:: Valeur actuelle divisée par la plage de temps depuis l'observation précédente.
-Cumulatifs:: Accumulation de la somme des valeurs précédentes et de la valeur actuelle.
-Delta:: Différence entre la valeur d'observation précédente et la valeur actuelle.
-Taux delta:: Valeur Delta divisée par l'intervalle de temps depuis l'observation précédente.
-Taux cumulé:: Valeur cumulée divisée par l'intervalle de temps depuis l'observation précédente.
+Aucune : les données sont affichées telles qu'elles sont, sans manipulation.
 
+Taux : valeur actuelle divisée par la plage horaire depuis l'observation précédente.
+
+Cumulatif : accumulation de la somme des valeurs précédentes et de la valeur actuelle.
+
+Delta : différence entre la valeur d'observation précédente et la valeur actuelle.
+
+Delta rate : valeur Delta divisée par la plage de temps depuis l'observation précédente.
+
+Taux cumulatif : valeur cumulée divisée par la plage horaire depuis l'observation précédente.
 
 Notez que la transformation des mesures ne modifie pas les données sous-jacentes, mais uniquement la façon dont elles sont affichées.

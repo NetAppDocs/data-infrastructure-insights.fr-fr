@@ -5,7 +5,12 @@ summary: 'Référence des icônes d"objet informations sur l"infrastructure de d
 keywords: icons, assets, objects, reference, map 
 ---
 = Référence de l'icône d'objet
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

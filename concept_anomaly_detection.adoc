@@ -5,17 +5,9 @@ keywords: Anomalies, anomaly, patterns, monitor, alert
 summary: 'Surveillez les indicateurs d"anomalie' 
 ---
 = Moniteurs de détection d'anomalies
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 1
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

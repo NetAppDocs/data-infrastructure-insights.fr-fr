@@ -5,17 +5,8 @@ keywords: annotations, monitor, notes, tags
 summary: 'Suivi des données à l"aide d"annotations.' 
 ---
 = Définition des annotations
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -109,25 +100,15 @@ Ces champs peuvent comporter jusqu'à 255 caractères.
 
 
 .Types d'annotation
-Booléen:: Crée une liste déroulante avec les choix de oui et de non. Par exemple, l'annotation « Direct attached » est booléenne.
-Date:: Ceci crée un champ contenant une date. Par exemple, si l'annotation est une date, sélectionnez cette option.
-Liste:: Crée l'une des options suivantes :
-+
---
-* Liste déroulante fixe
-+
-Lorsque d'autres personnes sont affectées à ce type d'annotation sur un périphérique, elles ne peuvent pas ajouter de valeurs supplémentaires à la liste.
+Booléen : crée une liste déroulante avec les choix de oui et de non. Par exemple, l'annotation « Direct attached » est booléenne. Date : crée un champ contenant une date. Par exemple, si l'annotation est une date, sélectionnez cette option. Liste : crée l'une des options suivantes : * Une liste déroulante fixe
 
-* Liste déroulante flexible
-+
-Si vous sélectionnez l'option Ajouter de nouvelles valeurs à la volée lorsque vous créez cette liste, lorsque d'autres personnes assignent ce type d'annotation à un périphérique, elles peuvent ajouter d'autres valeurs à la liste.
++ lorsque d'autres attribuent ce type d'annotation à un périphérique, ils ne peuvent pas ajouter d'autres valeurs à la liste. * Une liste déroulante flexible
 
++ si vous sélectionnez l'option Ajouter de nouvelles valeurs à la volée lorsque vous créez cette liste, lorsque d'autres personnes attribuent ce type d'annotation à un périphérique, elles peuvent ajouter d'autres valeurs à la liste.
 
+Nombre : crée un champ dans lequel l'utilisateur qui affecte l'annotation peut entrer un nombre. Par exemple, si le type d'annotation est « sol », l'utilisateur peut sélectionner le type de valeur « nombre » et saisir le numéro d'étage.
 
---
-Numéro:: Crée un champ dans lequel l'utilisateur qui affecte l'annotation peut entrer un nombre. Par exemple, si le type d'annotation est « sol », l'utilisateur peut sélectionner le type de valeur « nombre » et saisir le numéro d'étage.
-Texte:: Crée un champ permettant un texte libre. Par exemple, vous pouvez saisir "langue" comme type d'annotation, sélectionner "texte" comme type de valeur et entrer une langue comme valeur.
-
+Texte : crée un champ permettant le texte libre. Par exemple, vous pouvez saisir "langue" comme type d'annotation, sélectionner "texte" comme type de valeur et entrer une langue comme valeur.
 
 
 NOTE: Après avoir défini le type et enregistré vos modifications, vous ne pouvez pas modifier le type de l'annotation. Si vous devez modifier le type, vous devez supprimer l'annotation et en créer une nouvelle.

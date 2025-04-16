@@ -5,17 +5,8 @@ summary: 'Comment exporter les résultats d"une requête dans un fichier .csv'
 keywords: query, queries, export, csv 
 ---
 = Exportation des résultats de la requête dans un fichier .CSV
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

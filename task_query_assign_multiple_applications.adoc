@@ -5,17 +5,8 @@ summary: Utilisez une requête pour attribuer plusieurs applications ou annotati
 keywords: query, queries, application, annotation, multiple 
 ---
 = Attribution ou suppression de plusieurs applications à des ressources ou à des applications multiples
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

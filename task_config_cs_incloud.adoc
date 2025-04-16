@@ -5,17 +5,8 @@ keywords: Cloud, Storage, AWS, Cloud Volumes, Cloud ONTAP, firewall, VPC, Subnet
 summary: 'La sécurité de la charge de travail utilise des collecteurs de données pour collecter les données d"accès des fichiers et des utilisateurs à partir de terminaux.' 
 ---
 = Configuration de Cloud Volumes ONTAP et d'Amazon FSX pour NetApp ONTAP Collector
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

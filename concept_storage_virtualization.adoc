@@ -5,17 +5,8 @@ summary: 'Les informations concernant l"infrastructure de données peuvent fourn
 keywords: storage, virtual, virtualized, virtualization, 
 ---
 = Virtualisation du stockage
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

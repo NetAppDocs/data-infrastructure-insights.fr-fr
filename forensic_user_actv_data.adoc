@@ -5,17 +5,12 @@ keywords: Forensic, user activity, user activity data,
 summary: 'données d"activité des utilisateurs médico-légales' 
 ---
 = Données d'activité judiciaire de l'utilisateur
-:toc: macro
 :hardbreaks:
-:toclevels: 
 :allow-uri-read: 
-:toc: 
-:toclevels: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

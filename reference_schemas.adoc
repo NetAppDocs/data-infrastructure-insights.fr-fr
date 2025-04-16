@@ -6,13 +6,7 @@ keywords: dwh, data warehouse, schema, reporting
 ---
 = Schémas d'informations d'infrastructure de données pour le reporting
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

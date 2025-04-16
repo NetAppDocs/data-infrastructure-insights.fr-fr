@@ -5,17 +5,8 @@ summary: 'Utilisation des outils de création de rapports pour créer des rappor
 keywords: reporting, cognos, data warehouse, dwh, ad-hoc, custom 
 ---
 = Création de rapports personnalisés
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

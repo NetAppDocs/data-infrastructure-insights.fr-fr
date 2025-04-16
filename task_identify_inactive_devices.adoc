@@ -6,13 +6,7 @@ summary: 'L"identification des périphériques inactifs vous permet de choisir d
 ---
 = Identification des périphériques inactifs
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

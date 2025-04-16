@@ -5,17 +5,8 @@ summary: 'Vous pouvez importer les tableaux de bord recommandés pour répondre 
 keywords: dashboard, gallery, import 
 ---
 = Importation à partir de la galerie de tableaux de bord
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

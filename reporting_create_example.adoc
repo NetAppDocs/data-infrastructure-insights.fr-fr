@@ -5,17 +5,8 @@ summary: 'Utilisez cette procédure pour créer un rapport à l"aide des rapport
 keywords: reporting, cognos, data warehouse, dwh, create, report 
 ---
 = Création d'un rapport (exemple)
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

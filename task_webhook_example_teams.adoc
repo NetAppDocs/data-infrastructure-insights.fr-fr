@@ -5,17 +5,8 @@ keywords: webhook, notification, Microsoft, Teams, integration
 summary: 'Créez un crochet Web pour signaler les seuils de performances ou d"inventaire pour Microsoft Teams' 
 ---
 = Exemple Webhook pour Microsoft Teams
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

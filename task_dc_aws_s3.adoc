@@ -5,17 +5,8 @@ keywords: data collector, S3, Storage
 summary: 'Configuration d"AWS S3 en tant que collecteur de données de stockage.' 
 ---
 = Configuration d'AWS S3 en tant que collecteur de données de stockage
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

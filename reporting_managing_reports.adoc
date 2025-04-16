@@ -5,17 +5,8 @@ summary: 'Personnalisation de la sortie et de la livraison du rapport, copie des
 keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying 
 ---
 = Gestion des rapports
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

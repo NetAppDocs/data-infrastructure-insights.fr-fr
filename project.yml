@@ -268,6 +268,8 @@ sidebar:
       url: "/cs_notifications_email.html"
     - title: API de sécurité du workload
       url: "/concept_cs_api.html"
+    - title: Dépannage du collecteur SVM
+      url: "/troubleshooting_collector_svm.html"
   - title: Dépannage
     entries:
     - title: Dépannage général

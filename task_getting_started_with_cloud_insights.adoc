@@ -5,17 +5,8 @@ summary: Mise en route avec Data Infrastructure Insights.
 keywords: invite, roles, data collector, acquisition unit, AU 
 ---
 = Début de la collecte des données
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

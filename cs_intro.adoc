@@ -5,17 +5,8 @@ keywords: CloudSecure, Cloud Secure
 summary: Présentation 
 ---
 = À propos de la sécurité des charges de travail du stockage
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

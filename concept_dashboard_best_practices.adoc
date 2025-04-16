@@ -5,17 +5,8 @@ summary: Meilleures pratiques pour exploiter au mieux vos tableaux de bord
 keywords: dashboard, hints, tips, best practice, widgets, metrics, 
 ---
 = Meilleures pratiques pour les tableaux de bord et les widgets
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: Configuration du collecteur de données NetApp SolidFire
 keywords: data collector, queries, create 
 ---
 = Collecteur de données des baies 100 % Flash NetApp SolidFire
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

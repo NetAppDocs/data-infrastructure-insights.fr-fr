@@ -5,17 +5,8 @@ summary: 'Ajout d"adresses e-mail pour les notifications des alertes de sécurit
 keywords: email, notifications, alerts, warnings, attacks 
 ---
 = Configuration des notifications par e-mail pour les alertes, les avertissements et l'état de santé du collecteur d'agents/de sources de données
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: 'Lorsque vous recherchez une densité d"E/S élevée, vous voulez exclu
 keywords: NetApp, root volume, high I/O, 
 ---
 = Les rapports de densité d'E/S décrivent uniquement les volumes de données internes
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: 'Les fonctionnalités d"aperçu sont disponibles dans une capacité lim
 keywords: coming soon, preview, 
 ---
 = Aperçu des fonctions et des fonctionnalités
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: insight, pv, persistent volume, backend
 summary: 'Les informations exploitables permettent de prédire à quel moment les espaces Kubernetes sont susceptibles d"être pleins.' 
 ---
 = Indications : espaces de noms Kubernetes manque d'espace
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

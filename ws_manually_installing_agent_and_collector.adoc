@@ -6,13 +6,7 @@ summary: Les agents de sécurité des charges de travail peuvent être installé
 ---
 = Installation manuelle de Workload Security Agent et Collector
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

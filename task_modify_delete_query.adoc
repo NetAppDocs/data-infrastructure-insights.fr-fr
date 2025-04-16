@@ -5,17 +5,8 @@ summary: 'Modification ou suppression d"une requête'
 keywords: query, queries, modify, edit, delete, remove 
 ---
 = Modification ou suppression d'une requête
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

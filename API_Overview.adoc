@@ -5,17 +5,8 @@ keywords: API, customer API, premium, JSON, Swagger, Access Token, token, rotate
 summary: 'L"API Data Infrastructure Insights permet l"intégration à d"autres applications, telles que les systèmes de surveillance et de reporting.' 
 ---
 = API Data Infrastructure Insights
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -230,8 +221,7 @@ Les objets avec attributs de capacité utilisent des types de données de base e
 
 CapacityItem est une unité logique unique de capacité. Il a “valeur” et “seuil” dans les unités définies par son objet parent. Il prend également en charge une carte de répartition facultative qui explique la construction de la valeur de capacité. Par exemple, la capacité totale d'un StoragePool de 100 To serait un CapacitéItem avec une valeur de 100. La répartition peut indiquer 60 To affectés aux « données » et 40 To pour les « instantanés ».
 
-Remarque:: “HighThreshold” représente les seuils définis par le système pour les mesures correspondantes, qu’un client peut utiliser pour générer des alertes ou des repères visuels sur des valeurs en dehors des plages configurées acceptables.
-
+Remarque : « High Threshold » représente les seuils définis par le système pour les mesures correspondantes, qu'un client peut utiliser pour générer des alertes ou des signaux visuels sur des valeurs qui ne sont pas dans les plages configurées acceptables.
 
 Voici la capacité du StoragePools avec plusieurs compteurs de capacité :
 

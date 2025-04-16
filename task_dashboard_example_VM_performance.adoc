@@ -5,17 +5,8 @@ summary: Exemple de tableau de bord soulignant les performances des machines vir
 keywords: dashboard, widget, custom, example, virtual machine, vm, performance 
 ---
 = Exemple de tableau de bord : performances des ordinateurs virtuels
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

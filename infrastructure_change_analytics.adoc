@@ -6,13 +6,7 @@ summary: 'Cloud Insights effectue le suivi des modifications de l"infrastructure
 ---
 = Analyse des modifications de l'infrastructure
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

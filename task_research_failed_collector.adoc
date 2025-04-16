@@ -5,17 +5,8 @@ keywords: data collector, changes, failures
 summary: Erreurs du collecteur de données 
 ---
 = Recherche d'un collecteur de données défectueux
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

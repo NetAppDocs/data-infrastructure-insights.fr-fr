@@ -107,7 +107,7 @@ Procédez comme suit pour restaurer manuellement des adresses IP à partir de ON
 . Lister toutes les export policy sur un SVM.
 +
 ....
-contrail-qa-fas8020::> export-policy rule show -vserver <svm name>
+contrail-qa-fas8020:> export-policy rule show -vserver <svm name>
              Policy          Rule    Access   Client                RO
 Vserver      Name            Index   Protocol Match                 Rule
 ------------ --------------- ------  -------- --------------------- ---------
@@ -126,11 +126,11 @@ svm3        test            3       cifs,    0.0.0.0/0             any
 ....
 . Supprimez les règles de toutes les règles de la SVM qui ont "cloudSecure_rule" comme client Match en spécifiant son RuleIndex respectif. La règle de sécurité de la charge de travail est généralement de 1.
 +
- contrail-qa-fas8020::*> export-policy rule delete -vserver <svm name> -policyname * -ruleindex 1
+ contrail-qa-fas8020:*> export-policy rule delete -vserver <svm name> -policyname * -ruleindex 1
 . Assurez-vous que la règle de sécurité de la charge de travail est supprimée (étape facultative pour confirmer).
 +
 ....
-contrail-qa-fas8020::*> export-policy rule show -vserver <svm name>
+contrail-qa-fas8020:*> export-policy rule show -vserver <svm name>
              Policy          Rule    Access   Client                RO
 Vserver      Name            Index   Protocol Match                 Rule
 ------------ --------------- ------  -------- --------------------- ---------

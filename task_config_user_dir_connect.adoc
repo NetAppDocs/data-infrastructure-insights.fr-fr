@@ -5,17 +5,8 @@ keywords: collector, configure, LDAP, Active Directory, cloud secure
 summary: Configuration de Workload Security Active Directory User Directory Collector 
 ---
 = Configuration d'un collecteur d'annuaire d'utilisateurs Active Directory (AD)
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

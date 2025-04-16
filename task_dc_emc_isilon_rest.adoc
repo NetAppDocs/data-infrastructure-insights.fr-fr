@@ -5,17 +5,8 @@ keywords: data collector, isilon, EMC, DELL, PowerScale
 summary: Configuration du collecteur de données REST Dell EMC Isilon / PowerScale. 
 ---
 = Collecteur de données DE REPOS Dell EMC Isilon / PowerScale
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

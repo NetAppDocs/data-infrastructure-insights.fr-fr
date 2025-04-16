@@ -5,17 +5,8 @@ keywords: telegraf, installation, install, haproxy
 summary: Configuration du collecteur de données HABProxy 
 ---
 = Collecteur de données HAProxy
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

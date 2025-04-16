@@ -5,17 +5,8 @@ summary: 'Vous pouvez filtrer les objets qui sont directement liés à l"actif a
 keywords: Assets, landing page, filtering, context, related 
 ---
 = Filtrage des objets dans le contexte
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

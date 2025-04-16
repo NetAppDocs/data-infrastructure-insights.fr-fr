@@ -5,17 +5,8 @@ keywords: telegraf, installation, install, redis
 summary: Redis de configuration de collecteur de données 
 ---
 = Collecteur de données RethinkDB
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: 'Le serveur ou la machine virtuelle que vous utilisez en tant qu"agent 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
 = Exigences de l'agent de sécurité de la charge de travail
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

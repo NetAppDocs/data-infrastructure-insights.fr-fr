@@ -5,17 +5,8 @@ summary: 'Conservation des données des informations exploitables de l"infrastru
 keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying, retention 
 ---
 = Conservation des données historiques pour les rapports
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

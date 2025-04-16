@@ -6,13 +6,7 @@ summary: 'Les informations d"infrastructure de données peuvent être configuré
 ---
 = Installation manuelle du logiciel de l'unité d'acquisition
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

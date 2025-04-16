@@ -5,17 +5,8 @@ summary: Affichage des alertes déclenchées par les moniteurs
 keywords: monitor, alert, viewing 
 ---
 = Affichage et gestion des alertes à partir des moniteurs
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

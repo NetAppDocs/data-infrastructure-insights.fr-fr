@@ -5,17 +5,9 @@ summary: Vous déterminez si un tableau de bord que vous créez est public ou pr
 keywords: dashboard, public, shared, private 
 ---
 = Gestion des accès au tableau de bord
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 1
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

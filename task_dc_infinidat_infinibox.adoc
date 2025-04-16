@@ -5,17 +5,8 @@ keywords: data collector, infinidat, InfiniBox
 summary: 'Configuration du collecteur de données Infinidat Box d"Infinidat' 
 ---
 = Collecteur de données Infinidat Box d'Infinidat
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

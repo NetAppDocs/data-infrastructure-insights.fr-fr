@@ -5,17 +5,8 @@ summary: 'Ajout d"adresses e-mail pour les notifications.'
 keywords: email, notifications, signature, recipient, list, subscription 
 ---
 = Configuration des notifications par e-mail
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

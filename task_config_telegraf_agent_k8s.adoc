@@ -6,13 +6,8 @@ summary: 'L"opérateur de surveillance Kubernetes collecte les données Kubernet
 ---
 = Installation et configuration de l'opérateur de contrôle Kubernetes
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
 :nofooter: 
-:toclevels: 2
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

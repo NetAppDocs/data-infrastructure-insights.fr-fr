@@ -5,17 +5,8 @@ keywords: logs, monitors, alerts, EMS,
 summary: 'L"explorateur de journaux est un outil puissant pour rechercher des problèmes dans différents journaux système.' 
 ---
 = Explorateur de journaux
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

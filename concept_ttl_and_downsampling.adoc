@@ -5,17 +5,8 @@ summary: Temps de conservation des données et temps de sous-échantillonnage ex
 keywords: time-to-live, TTL, downsampling, downsample, retention 
 ---
 = Conservation des données et données sous-échantillonnées
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

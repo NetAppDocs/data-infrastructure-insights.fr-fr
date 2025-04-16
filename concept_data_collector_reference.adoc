@@ -5,17 +5,8 @@ summary: Informations de référence du collecteur de données spécifique au fo
 keywords: data collector, vendor, AWS, BROADCOM, Cisco, Dell, EMC, Hitachi, IBM, NetApp, OceanStor, OpenStack, Oracle, Pure Storage, Red Hat, redhat, VMware 
 ---
 = Référence spécifique au fournisseur
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

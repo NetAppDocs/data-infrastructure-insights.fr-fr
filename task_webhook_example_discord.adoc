@@ -5,17 +5,8 @@ keywords: webhook, notification, Discord, integration
 summary: 'Créez un crochet pour alerter les seuils de performances ou d"inventaire pour le discorde' 
 ---
 = Exemple de cordon de discorde avec Webhook
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

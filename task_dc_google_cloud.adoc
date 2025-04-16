@@ -5,17 +5,8 @@ summary: Configurez le collecteur de données Google Compute
 keywords: data collector, queries, create 
 ---
 = Collecteur de données NetApp Google Compute
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

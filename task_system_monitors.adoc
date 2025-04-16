@@ -5,17 +5,8 @@ keywords: monitors, alerts, log, metric
 summary: 'Créez des moniteurs pour alerter les seuils de performances ou d"inventaire, ainsi que les conditions de mesure ou de journal.' 
 ---
 = Moniteurs système
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -24,8 +15,8 @@ Les informations d'infrastructure de données comprennent un certain nombre de c
 
 NOTE: Par défaut, de nombreux moniteurs système sont en état _pause_. Vous pouvez activer un moniteur système en sélectionnant l'option _Resume_ pour le moniteur. Assurez-vous que _la collecte avancée de données de compteur_ et _l'activation de la collecte de journaux EMS ONTAP_ sont activées dans le collecteur de données. Ces options se trouvent dans le Data Collector ONTAP sous _Configuration avancée_: image:Enable_Log_Monitor_Collection.png["Activation du compteur avancé et de la collecte des journaux EMS pour ONTAP"]
 
+sommaire :[]
 
-toc::[]
 
 
 == Description du moniteur

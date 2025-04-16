@@ -5,17 +5,8 @@ keywords: data collector, Celerra, EMC, DELL, VNX File
 summary: Configuration du collecteur de données DELL EMC Celerra. 
 ---
 = Collecteur de données DELL EMC VNX File (anciennement Celerra Unified Storage System)
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

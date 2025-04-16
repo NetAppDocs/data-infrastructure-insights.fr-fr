@@ -5,17 +5,8 @@ keywords: data collector, ONTAP, SVM
 summary: Ajout de collecteurs de données 
 ---
 = Configuration du collecteur de données NetApp ONTAP
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,15 +5,12 @@ keywords: Forensic, activity history, activity data, history
 summary: 'données d"historique des activités médico-légales' 
 ---
 = Analyse - toute l'activité
-:toc: macro
 :hardbreaks:
 :allow-uri-read: 
-:toc: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

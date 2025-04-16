@@ -5,17 +5,8 @@ summary: 'Workload Security s"intègre à ONTAP pour recevoir les événements d
 keywords: ransomware, ARP, Protection, Security, access 
 ---
 = Intégration avec l'accès ONTAP refusée
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
