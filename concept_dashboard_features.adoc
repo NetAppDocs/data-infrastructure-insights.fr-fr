@@ -8,6 +8,9 @@ keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -359,6 +362,12 @@ La plage de temps personnalisée vous permet de sélectionner jusqu'à 31 jours 
 
 
 
+=== Zoom avant sur une plage de temps
+
+Lors de l'affichage d'un widget de séries chronologiques (ligne, spline, zone, zone empilée)--ou d'un graphique sur une page d'accueil--vous pouvez faire glisser la souris sur le graphique pour effectuer un zoom avant. Dans le coin supérieur droit de l'écran, vous pouvez verrouiller cette plage de temps pour que les graphiques des autres pages reflètent les données de cette plage de temps verrouillée. Pour déverrouiller, sélectionnez une plage horaire différente dans la liste.
+
+
+
 == Remplacement de l'heure du tableau de bord dans des widgets individuels
 
 Vous pouvez remplacer le paramètre de plage horaire principal du tableau de bord dans des widgets individuels. Ces widgets affichent des données en fonction de leur période définie, et non pas de l'heure du tableau de bord.
@@ -506,8 +515,6 @@ image:ExpressionExample.png["Expression dans un widget de tableau"]
 == Variables
 
 Les variables vous permettent de modifier simultanément les données affichées dans certains ou tous les widgets d'un tableau de bord. En définissant un ou plusieurs widgets pour utiliser une variable commune, les modifications effectuées à un endroit provoquent la mise à jour automatique des données affichées dans chaque widget.
-
-Les variables de tableau de bord peuvent être utilisées entre différents champs et doivent respecter les règles de nommage. Ces concepts sont expliqués ici.
 
 
 
@@ -886,3 +893,25 @@ image:Interpolation_Stair.png["Ligne droite simple montrant l'interpolation d'es
 
 
 image:Interpolation_Linear.png["Ligne droite simple montrant l'interpolation linéaire avec des points de données supplémentaires entre chaque point d'origine"]
+
+
+
+=== Limites d'anomalies dans les widgets en ligne
+
+Lors de l'inclusion d'un widget de graphique ligne ou Spline sur un tableau de bord ou une page d'accueil, vous pouvez choisir d'afficher le graphique dans le contexte des *limites attendues* pour les données. Vous pouvez penser à rechercher des anomalies dans les modèles de vos données.
+
+DII utilise les données saisonnières (horaire ou quotidien) pour définir les limites supérieures et inférieures là où il attend que les données tombent à un moment donné. Si les données dépassent ou tombent en dessous des limites attendues, le graphique les met en évidence comme une anomalie.
+
+image:expected_bounds_example_showing_spike.png["exemple de limites d'anomalie - affiche un pic où les données réelles dépassent la limite attendue, largeur=600"]
+
+Pour afficher les limites d'anomalie, modifiez le widget et choisissez _Afficher les limites d'anomalie_. Vous pouvez choisir parmi deux algorithmes de détection :
+
+* *Adaptive Detector* s'adapte rapidement aux changements, ce qui le rend utile pour les examens détaillés.
+* *Smooth Detector* minimise le bruit et les faux positifs, filtrant les fluctuations à court terme tout en détectant toujours des décalages importants.
+
+
+En outre, vous pouvez choisir d'afficher la saisonnalité _horaire_ ou _quotidienne_, ainsi que de définir la sensibilité de la détection. _Haute_ sensibilité détecte plus de franchissement de limite, _faible_ sensibilité détecte moins.
+
+image:expected_bounds_settings.png["Paramètres des limites d'anomalie, y compris l'algorithme de détection, la saisonnalité et la sensibilité"]
+
+N'oubliez pas que vous ne pouvez afficher que les limites attendues lorsque le graphique est configuré pour afficher une seule ligne. Si vos paramètres ou filtres regrouper par affichent plusieurs lignes ou si vous avez défini plusieurs requêtes pour le widget, l'option d'affichage des limites attendues sera désactivée.
