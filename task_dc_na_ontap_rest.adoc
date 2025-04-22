@@ -48,13 +48,13 @@ Pour créer un compte local pour les données d'infrastructure de données au ni
 security login rest-role create -role {role name} -api /api -access readonly
 security login rest-role create -role {role name} -api /api/cluster/agents -access all
 vserver services web access create -name spi -role {role name} -vserver {vserver name as retrieved above}
-security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}
 ....
+
+
 . Créez l'utilisateur en lecture seule à l'aide de la commande suivante. Une fois la commande create exécutée, vous êtes invité à saisir un mot de passe pour cet utilisateur.
-+
- security login create -username ci_user -application http -authentication-method password -role ci_readonly
 
 
+ security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}
 Si le compte AD/LDAP est utilisé, la commande doit être
 
  security login create -user-or-group-name DOMAIN\aduser/adgroup -application http -authentication-method domain -role ci_readonly

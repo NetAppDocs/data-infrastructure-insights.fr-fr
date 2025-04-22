@@ -22,6 +22,8 @@ Cela créera un utilisateur « NetAppCIUser » avec le mot de passe « Qwerty! �
 
 Par défaut, ce collecteur tentera de découvrir tous les périphériques FOS faisant partie de toutes les structures dont le commutateur fait partie.
 
+Remarque : l'utilisateur en lecture seule par défaut de FOS, « utilisateur », NE dispose PAS d'autorisations d'affichage sur toutes les structures virtuelles et ne dispose PAS d'autorisations de « rôle châssis ». Cela signifie que vous aurez peu de chances de réussir à utiliser l'option « utilisateur » avec Data Infrastructure Insights, qui doit comprendre à la fois la configuration physique et logique du périphérique FOS.
+
 
 
 == Terminologie

@@ -131,6 +131,13 @@ Valider le compte utilisateur et le mot de passe ZFS
 
 
  a| 
+« Échec de la demande avec l'état 404 \https://.....:215/api/access/v1"
+ a| 
+Votre baie ZFS est peut-être trop ancienne pour prendre en charge l'API REST. AK 2013.1.3.0 a été la première version de ZFS compatible avec l'API REST, et toutes les appliances ZFS ne peuvent pas être mises à niveau vers celle-ci.
+
+
+
+ a| 
 "Erreur de configuration" avec le message d'erreur "le service REST est désactivé"
  a| 
 Vérifiez que le service REST est activé sur ce périphérique.
