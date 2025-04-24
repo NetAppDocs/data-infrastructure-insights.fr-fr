@@ -57,49 +57,6 @@ Si vous avez configuré des notifications sur des collecteurs de données, à pa
 '''
 
 
-== Avril 2025
-
-
-
-=== Widgets en ligne d'anomaly alimentés par ML pour une résolution proactive des problèmes
-
-Pour résoudre les problèmes de performances avec les widgets de graphique de ligne ou de spline, vous pouvez désormais afficher les limites de comportement prévues avec les mesures réelles, ce qui vous permet de distinguer les tendances métriques normales et anormales.
-
-Le machine learning DII avec analyse saisonnière des données établit des seuils intelligents basés sur des modèles historiques. Lorsque les mesures diffèrent des plages prévues, le système les met en évidence comme des anomalies, ce qui permet d'identifier rapidement les problèmes, de réduire le temps moyen de résolution et de résoudre les problèmes avant qu'ils n'affectent les opérations.
-
-image:expected_bounds_example_showing_spike.png["limites attendues indiquant la pointe au-dessus, largeur=400"]
-
-
-
-=== Optimisez les coûts VMware avec la prise en charge du stockage VSAN
-
-Notre fonctionnalité d'optimisation des machines virtuelles inclut désormais la prise en charge des environnements VMware avec stockage VSAN. Outre l'utilisation du processeur et de la mémoire, l'analyse prend désormais en compte le stockage VSAN local pour récupérer des recommandations et ainsi réduire encore les coûts de licence.
-
-image:vm_optimization_with_vsan.png["Exemple d'optimisation de VM avec VSAN"]
-
-
-
-=== Des détails d'alerte à portée de main
-
-Les enquêtes sur les alertes sont plus simples que jamais grâce au nouveau panneau coulissant. Sélectionnez une alerte pour afficher les détails de cette alerte, et passez facilement d'une alerte à l'autre sans perdre votre place lors de l'analyse des problèmes.
-
-image:alert_slideout_example.png["Volet d'alerte pour une navigation plus facile"]
-
-
-
-=== Exportation asynchrone pour l'analyse de la sécurité des charges de travail
-
-L'exportation des données d'analyse peut prendre de quelques secondes à plusieurs heures, selon la quantité de données à exporter. La sécurité des charges de travail exporte ces données de manière asynchrone, ce qui vous permet de continuer à travailler pendant la compilation du fichier .CSV.
-
-
-
-=== Notifications du Data Collector regroupées en règles
-
-Si vous avez configuré des notifications sur des collecteurs de données, à partir d'avril 15, ces notifications seront traitées dans les règles de notification, avec une seule règle pour les collecteurs qui ont des destinataires identiques. Les collecteurs avec différents destinataires auront des règles distinctes. Les notifications de collecteur existantes sont migrées vers des règles de notification.
-
-'''
-
-
 == Mars 2025
 
 
@@ -144,14 +101,6 @@ image:ws_test_connection_button.png["workload security test connection button"] 
 
 
 
-=== Tester la connectivité pour les collecteurs de données Storage Workload Security
-
-La fonctionnalité de test de connectivité a pour but d'aider les utilisateurs finaux à identifier les causes spécifiques de défaillances lors de la configuration de collecteurs de données dans Data Infrastructure Insights (DII) Workload Security. Cela permet aux utilisateurs de corriger eux-mêmes les problèmes liés à la communication réseau ou aux rôles manquants.
-
-image:ws_test_connection_button.png["workload security test connection button"] image:ws_test_connection_success_example.png["Workload Security 'Test Connection' success message"]
-
-
-
 === Systèmes d'exploitation pris en charge
 
 Les systèmes d'exploitation suivants sont désormais pris en charge avec les unités d'acquisition Data Infrastructure Insights, en plus de ceuxlink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["déjà pris en charge"]-ci :
@@ -171,18 +120,6 @@ Les systèmes d'exploitation suivants sont désormais pris en charge avec les un
 
 == Février 2025
 
-
-
-=== ONTAP Essentials pour la dernière génération de systèmes ASA
-
-ONTAP Essentials inclut désormais une fonctionnalité de gestion prête à l'emploi pour la dernière génération d'link:task_dc_na_ontap_all_san_array.html["ASA"]appareils. Cela inclut SAN Analyzer pour les topologies VM-LUN des charges de travail exécutées sur ONTAP, désormais également disponible avec la prise en charge de NetApp dans le cadre de Data Infrastructure Insights Basic Edition.
-
-image:ontap_essentials_asa_views.png["La liste déroulante ONTAP Essentials présente ASA comme étant distinct du stockage unifié"]
-
-
-
-=== ONTAP Essentials pour la dernière génération de systèmes ASA
-
 ONTAP Essentials inclut désormais une fonctionnalité de gestion prête à l'emploi pour la dernière génération d'link:task_dc_na_ontap_all_san_array.html["ASA"]appareils. Cela inclut SAN Analyzer pour les topologies VM-LUN des charges de travail exécutées sur ONTAP, désormais également disponible avec la prise en charge de NetApp dans le cadre de Data Infrastructure Insights Basic Edition.
 
 image:ontap_essentials_asa_views.png["La liste déroulante ONTAP Essentials présente ASA comme étant distinct du stockage unifié"]
@@ -191,15 +128,11 @@ image:ontap_essentials_asa_views.png["La liste déroulante ONTAP Essentials pré
 
 === Suivi de l'utilisation de l'API DII : améliorer la sécurité et l'efficacité
 
-Renforcez votre stratégie de sécurité et rationalisez la gestion des ressources avec un meilleur suivi de l'utilisation de l'API REST, disponible pour les utilisateurs Admin. Le suivi de l'utilisation de l'API vous permet de voir quels tokens API sont utilisés, à partir de quelles adresses IP et le volume de trafic qu'ils génèrent. En reliant les jetons à des adresses IP et des niveaux d'utilisation spécifiques, vous obtenez de puissantes informations sur l'accès au système et les tendances d'utilisation, ce qui vous donne le contrôle dont vous avez besoin pour maintenir un environnement sûr et efficace et assurer le bon fonctionnement des opérations. Renforcez votre stratégie de sécurité et rationalisez la gestion des ressources avec un meilleur suivi de l'utilisation de l'API REST, disponible pour les utilisateurs Admin. Le suivi de l'utilisation de l'API vous permet de voir quels tokens API sont utilisés, à partir de quelles adresses IP et le volume de trafic qu'ils génèrent. En reliant les jetons à des adresses IP et des niveaux d'utilisation spécifiques, vous obtenez de puissantes informations sur l'accès au système et les tendances d'utilisation, ce qui vous donne le contrôle dont vous avez besoin pour maintenir un environnement sûr et efficace et assurer le bon fonctionnement des opérations.
+Renforcez votre stratégie de sécurité et rationalisez la gestion des ressources avec un meilleur suivi de l'utilisation de l'API REST, disponible pour les utilisateurs Admin. Le suivi de l'utilisation de l'API vous permet de voir quels tokens API sont utilisés, à partir de quelles adresses IP et le volume de trafic qu'ils génèrent. En reliant les jetons à des adresses IP et des niveaux d'utilisation spécifiques, vous obtenez de puissantes informations sur l'accès au système et les tendances d'utilisation, ce qui vous donne le contrôle dont vous avez besoin pour maintenir un environnement sûr et efficace et assurer le bon fonctionnement des opérations.
 
-Pour afficher l'utilisation de l'API, accédez à *observabilité > Admin > API Access* et sélectionnez _View API usage_. Notez que cette API est disponible uniquement pour les API d'observabilité DII ; elle ne s'applique pas à Workload Security. Pour afficher l'utilisation de l'API, accédez à *observabilité > Admin > API Access* et sélectionnez _View API usage_. Notez que cette API est disponible uniquement pour les API d'observabilité DII ; elle ne s'applique pas à Workload Security.
+Pour afficher l'utilisation de l'API, accédez à *observabilité > Admin > API Access* et sélectionnez _View API usage_. Notez que cette API est disponible uniquement pour les API d'observabilité DII ; elle ne s'applique pas à Workload Security.
 
 image:api_usage_analytics_screenshot.png["Exemple d'analytique de l'utilisation des API"]
-
-
-
-=== API de sécurité des charges de travail pour limiter les utilisateurs
 
 
 
