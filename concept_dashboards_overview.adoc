@@ -7,6 +7,10 @@ keywords: dashboard, widget, custom, view, data
 = Présentation des tableaux de bord
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -14,8 +18,6 @@ Data Infrastructure Insights offre aux utilisateurs la flexibilité de créer de
 
 
 IMPORTANT: Les exemples présentés dans ces sections sont fournis à des fins d'explication uniquement et ne couvrent pas tous les scénarios possibles. Les concepts et étapes dans ce document peuvent être utilisés pour créer vos propres tableaux de bord afin de mettre en évidence les données spécifiques à vos besoins spécifiques.
-
-sommaire :[]
 
 
 
@@ -34,17 +36,15 @@ Vous créez un nouveau tableau de bord à deux endroits :
 L'écran Tableau de bord comporte plusieurs commandes :
 
 * *Time Selector* : permet d'afficher les données du tableau de bord pendant une période allant des 15 dernières minutes aux 30 derniers jours, ou une plage de temps personnalisée allant jusqu'à 31 jours. Vous pouvez choisir de remplacer cette plage de temps globale dans des widgets individuels.
-* Bouton *Edit* : cette option active le mode Edit, qui vous permet d'apporter des modifications au tableau de bord. Les nouveaux tableaux de bord s'ouvrent par défaut en mode d'édition.
 * *Bouton Enregistrer* : permet d'enregistrer ou de supprimer le tableau de bord.
 +
-Vous pouvez renommer le tableau de bord actuel en saisissant un nouveau nom avant de cliquer sur *Enregistrer*.
+Vous pouvez renommer le tableau de bord actuel en cliquant sur *Renommer* dans le menu Enregistrer.
 
-
-
-* *Bouton Ajouter un widget*, qui vous permet d'ajouter un nombre quelconque de tableaux, de graphiques ou d'autres widgets au tableau de bord.
+* *+ bouton Ajouter un widget*, qui vous permet d'ajouter n'importe quel nombre de tableaux, de graphiques ou d'autres widgets au tableau de bord.
 +
 Les widgets peuvent être redimensionnés et déplacés vers différentes positions dans le tableau de bord pour vous fournir une vue optimale de vos données selon vos besoins actuels.
 
+* *+ bouton Ajouter une variable*, qui vous permet d'utiliser des variables pour filtrer activement les données du tableau de bord.
 
 
 
@@ -88,6 +88,11 @@ image:PieChart.png["Graphique à secteurs"]
 * *Note widget* : jusqu'à 1000 caractères de texte libre.
 +
 image:NoteWidget.png["Widget de note"]
+
+* *Graphique à barres temporelles* : affiche les données de log ou de métrique dans le temps.
+
+
+image:time_bar_chart.png["exemple de graphique à barres temporelles montrant les données du journal, largeur=200"]
 
 * *Tableau des alertes* : affiche jusqu'aux 1,000 dernières alertes.
 

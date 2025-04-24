@@ -52,8 +52,7 @@ Redémarrez le collecteur à partir de l'interface utilisateur après le redimen
 Vous pouvez également essayer de vous connecter au cluster via ssh à l'aide de l'IP de gestion de cluster et envoyer une requête ping à l'IP de l'agent. Assurez-vous que l'adresse IP de l'agent peut faire l'objet d'un ping :
 
 +
-_Network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail_
-
+ network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail
 +
 Si vous ne pouvez pas effectuer de ping, assurez-vous que les paramètres réseau dans ONTAP sont corrects, de sorte que l'ordinateur de l'agent puisse effectuer des requêtes ping.
 
@@ -67,7 +66,7 @@ Si vous ne pouvez pas effectuer de ping, assurez-vous que les paramètres résea
 .. Attendez que l'erreur s'affiche. Arrêtez la trace de paquet dans ONTAP.
 .. Ouvrez la trace de paquet à partir de ONTAP. Il est disponible à cet endroit
 +
- \https://<cluster_mgmt_ip>/spi/<clustername>/etc/log/packet_traces/
+ https://<cluster_mgmt_ip>/spi/<clustername>/etc/log/packet_traces/
 .. Assurez-vous qu'il y a un SYN de ONTAP dans la zone Agent.
 .. S'il n'y a pas de SYN dans ONTAP, il s'agit d'un problème avec le pare-feu dans ONTAP.
 .. Ouvrez le pare-feu dans ONTAP, afin que ONTAP puisse connecter le boîtier de l'agent.
@@ -92,7 +91,7 @@ Si vous ne pouvez pas effectuer de ping, assurez-vous que les paramètres résea
 . Il est très probable qu'un pare-feu bloque les ports nécessaires sur la machine agent. Vérifier que la plage de ports 35000-55000/tcp est ouverte pour que l'ordinateur agent se connecte à partir du SVM. Assurez-vous également qu'aucun pare-feu n'est activé à partir du blocage de la communication côté ONTAP vers l'agent.
 . Entrez la commande suivante dans la zone Agent et assurez-vous que la plage de ports est ouverte.
 +
- sudo iptables-save \| grep 3500*
+ sudo iptables-save | grep 3500*
 +
 La sortie de l'échantillon doit ressembler à :
 
@@ -109,7 +108,7 @@ link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nm
 
 . Connectez-vous au SVM/Cluster que vous souhaitez surveiller en SSH. Envoyer un ping au boîtier Agent depuis la lif de données du SVM (avec prise en charge des protocoles CIFS, NFS) et vérifier que le ping fonctionne :
 +
- _network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail_
+ network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail
 +
 Si vous ne pouvez pas effectuer de ping, assurez-vous que les paramètres réseau dans ONTAP sont corrects, de sorte que l'ordinateur de l'agent puisse effectuer des requêtes ping.
 
@@ -126,7 +125,12 @@ En réalité, dans un locataire, 1 SVM ne doit être ajouté qu'une seule fois, 
 *Problème:* aucun événement vu dans la page d'activité. *Essayez ceci:*
 
 . Vérifiez si le collecteur ONTAP est à l'état « EN COURS D'EXÉCUTION ». Si oui, assurez-vous alors que certains événements cifs sont générés sur les machines virtuelles client cifs en ouvrant certains fichiers.
-. Si aucune activité n'est visible, veuillez vous connecter au SVM et saisir la commande suivante. _<SVM<event log show -source fpolicy_ Vérifiez qu'il n'y a aucune erreur liée à fpolicy.
+. Si aucune activité n'est visible, veuillez vous connecter au SVM et saisir la commande suivante.
++
+ <SVM>event log show -source fpolicy
++
+Assurez-vous qu'il n'y a pas d'erreur liée à fpolicy.
+
 . Si aucune activité n'est constatée, veuillez vous connecter au SVM. Saisissez la commande suivante :
 +
  <SVM>fpolicy show
@@ -161,7 +165,7 @@ link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nm
 
 ****
 ****
-*Problème:* le collecteur de données passe à l'état d'erreur et passe ensuite à l'état D'EXÉCUTION après un certain temps, puis revient à l'état d'erreur. Ce cycle se répète. *Essayez ceci :* *cela se produit généralement dans le scénario suivant :
+*Problème:* le collecteur de données passe à l'état d'erreur et passe ensuite à l'état D'EXÉCUTION après un certain temps, puis revient à l'état d'erreur. Ce cycle se répète. *Essayez ceci:* cela se produit généralement dans le scénario suivant:
 
 . Plusieurs collecteurs de données sont ajoutés.
 . Les collecteurs de données qui montrent ce type de comportement auront 1 SVM ajouté à ces collecteurs de données. Signification : 2 collecteurs de données ou plus sont connectés à 1 SVM.
@@ -206,7 +210,7 @@ fpolicy policy external-engine delete -vserver <svmname> -engine-name <engine_na
 
 ****
 ****
-*Problème :* Data Collector affiche le message d'erreur : “erreur : échec de la détermination de l'intégrité du collecteur dans les 2 tentatives, essayez de redémarrer le collecteur (Code d'erreur : AGENT008)”. *Essayez ce:*
+*Problème :* Data Collector affiche le message d'erreur : “erreur : échec de la détermination de l'intégrité du collecteur dans les 2 tentatives, essayez de redémarrer le collecteur (Code d'erreur : AGENT008)”. *Essayez ceci:*
 
 . Sur la page collecteurs de données, faites défiler l'écran vers la droite du collecteur de données donnant l'erreur et cliquez sur le menu 3 points. Sélectionnez _Modifier_. Saisissez à nouveau le mot de passe du collecteur de données. Enregistrez le collecteur de données en appuyant sur le bouton _Save_. Data Collector redémarre et l'erreur doit être résolue.
 . La machine Agent peut ne pas disposer de suffisamment de ressources CPU ou RAM, c'est pourquoi les DSC sont défaillants. Veuillez vérifier le nombre de collecteurs de données ajoutés à l'agent de la machine. Si elle est supérieure à 20, augmentez la capacité CPU et RAM de l'ordinateur Agent. Une fois l'UC et la RAM augmentées, les DSC sont en cours d'initialisation, puis s'exécutent automatiquement. Consultez le guide de dimensionnement sur link:concept_cs_event_rate_checker.html["cette page"].
