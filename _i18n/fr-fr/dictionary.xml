@@ -8483,7 +8483,6 @@
   <block id="12deeaac5f633c54b730f8c247dbf7e0" category="paragraph">Les nouvelles versions de l'opérateur de surveillance peuvent être désinstallées à l'aide des commandes suivantes :</block>
   <block id="aee5f180cc531b30ec6cf8dcf509d9b8" category="paragraph">Si l'opérateur de surveillance a été déployé dans son propre espace de noms dédié, supprimer l'espace de noms :</block>
   <block id="97e76f0c81cc1c26b3d8ffe0d972c5af" category="paragraph">Si la première commande renvoie “aucune ressource trouvée”, suivez les instructions ci-dessous pour désinstaller les anciennes versions de l’opérateur de surveillance.</block>
-  <block id="0b14d0fbc4256c7ec7c3bb39b2c28854" category="paragraph">Exécutez chacune des commandes suivantes dans l'ordre indiqué. Selon votre installation actuelle, certaines de ces commandes peuvent renvoyer des messages "objet non trouvé". Ces messages peuvent être ignorés en toute sécurité.</block>
   <block id="82a8cca794947463478c2f08445a8ff4" category="paragraph">Si une contrainte de contexte de sécurité a été créée précédemment :</block>
   <block id="a945216a5c61e628c867b8948c797454" category="section-title">À propos des indicateurs Kube-State</block>
   <block id="951a50d1b55837ddb5ff4cb5af4ebc8a" category="paragraph">L'opérateur de surveillance NetApp Kubernetes installe ses propres metrics kube-State pour éviter les conflits avec d'autres instances.</block>
@@ -9360,7 +9359,6 @@
   <block id="9931bdf1120e743a2d938e061f7df898" category="paragraph">Un message de confirmation s'affiche, vous invitant à supprimer la règle.</block>
   <block id="b101d3b5c8c4309f4cffa3adfd387b6b" category="list-text">Cliquez sur *OK*</block>
   <block id="e42dae64f8e80d611352315992a2460d" category="doc">Création d'applications</block>
-  <block id="598c4639acaf0f3c5a419f9cf865ef56" category="paragraph">Si vous souhaitez associer l'application à une entité métier, vous devez créer l'entité métier avant de définir l'application.</block>
   <block id="ba52eab802a385ced7d6e9782614bf0b" category="paragraph">Les informations sur l'infrastructure de données vous permettent de suivre les données des ressources associées aux applications, par exemple pour l'utilisation ou le reporting des coûts.</block>
   <block id="91ee28fc3faa982ecdc71598fe7ce8b9" category="list-text">Dans le menu informations sur l'infrastructure de données, cliquez sur *observabilité &gt; enrichir &gt; applications*. Sélectionnez</block>
   <block id="8358341ae527ee11b5b1dc8e8f22edea" category="paragraph">La boîte de dialogue Ajouter une application s'affiche.</block>
@@ -12379,4 +12377,5 @@
   <block id="839fd302fc2dc5dee66803e94e9f95dc" category="paragraph">Assurez-vous qu'il n'y a pas d'erreur liée à fpolicy.</block>
   <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">*Problème:* le collecteur de données passe à l'état d'erreur et passe ensuite à l'état D'EXÉCUTION après un certain temps, puis revient à l'état d'erreur. Ce cycle se répète. *Essayez ceci:* cela se produit généralement dans le scénario suivant:</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">*Problème :* Data Collector affiche le message d'erreur : “erreur : échec de la détermination de l'intégrité du collecteur dans les 2 tentatives, essayez de redémarrer le collecteur (Code d'erreur : AGENT008)”. *Essayez ceci:*</block>
+  <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">Exécutez chacune des commandes suivantes dans l'ordre indiqué. Selon votre installation actuelle, certaines de ces commandes peuvent renvoyer des messages « objet introuvable ». Ces messages peuvent être ignorés en toute sécurité.</block>
 </blocks>

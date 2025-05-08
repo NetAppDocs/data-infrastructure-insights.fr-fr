@@ -12,9 +12,6 @@ keywords: application, create application,
 [role="lead"]
 Pour suivre les données associées à des applications spécifiques s'exécutant sur votre locataire, vous pouvez définir les applications dans Data Infrastructure Insights.
 
-.Avant de commencer
-Si vous souhaitez associer l'application à une entité métier, vous devez créer l'entité métier avant de définir l'application.
-
 .Description de la tâche
 Les informations sur l'infrastructure de données vous permettent de suivre les données des ressources associées aux applications, par exemple pour l'utilisation ou le reporting des coûts.
 
