@@ -159,7 +159,7 @@ La mesure de la sécurité des workloads est effectuée par Cluster selon la mê
 
 Vous pouvez afficher votre utilisation de Workload Security dans la page *Admin > Subscription* de l'onglet *Workload Security*.
 
-image:ws_metering_example_page.png["'Admin > Subscription > onglet Workload Security affichant le nombre de nœuds haut de gamme, milieu de gamme et entrée de gamme'"]
+image:ws_metering_example_page.png["Admin , Subscription , onglet Workload Security affichant le nombre de nœuds haut de gamme, milieu de gamme et entrée de gamme"]
 
 
 NOTE: L'utilisation des UM des abonnements Workload Security existants est ajustée de sorte que l'utilisation des nœuds ne consomme pas les unités gérées. Data Infrastructure Insights mesure l'utilisation pour garantir la conformité avec l'utilisation sous licence.

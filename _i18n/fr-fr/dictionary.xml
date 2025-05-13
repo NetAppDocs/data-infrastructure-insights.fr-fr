@@ -4084,8 +4084,6 @@
   <block id="f057d707b9d5c17f0fad56f8204f6bff" category="section-title">Mesure de la sécurité des charges de travail</block>
   <block id="c3ef097c271469a3ca9718d35396087c" category="paragraph">La mesure de la sécurité des workloads est effectuée par Cluster selon la même approche que la mesure de l'observabilité.</block>
   <block id="3943920606f23b23925f15408e26cae2" category="paragraph">Vous pouvez afficher votre utilisation de Workload Security dans la page *Admin &gt; Subscription* de l'onglet *Workload Security*.</block>
-  <block id="36e75837cd661882faf4ce93d35cafea" category="inline-image-macro">'Admin &amp;gt; Subscription &amp;gt; onglet Workload Security affichant le nombre de nœuds haut de gamme, milieu de gamme et entrée de gamme'</block>
-  <block id="78770d4128ce656a56bd8e8ecd580a0e" category="paragraph"><block ref="9d3e296bb7e7c4cf7ec09d1ec6e96740" category="inline-image-macro-rx" type="image"></block></block>
   <block id="daba1c6ff8590913bcb10d43d3bfcf13" category="admonition">L'utilisation des UM des abonnements Workload Security existants est ajustée de sorte que l'utilisation des nœuds ne consomme pas les unités gérées. Data Infrastructure Insights mesure l'utilisation pour garantir la conformité avec l'utilisation sous licence.</block>
   <block id="c015ba02347af3d8c00ede570637622a" category="section-title">Comment s'inscrire ?</block>
   <block id="99d34ca2583ae7363bd4e07f9b2d98cc" category="inline-xref">s'abonner vous-même</block>
@@ -12378,4 +12376,6 @@
   <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">*Problème:* le collecteur de données passe à l'état d'erreur et passe ensuite à l'état D'EXÉCUTION après un certain temps, puis revient à l'état d'erreur. Ce cycle se répète. *Essayez ceci:* cela se produit généralement dans le scénario suivant:</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">*Problème :* Data Collector affiche le message d'erreur : “erreur : échec de la détermination de l'intégrité du collecteur dans les 2 tentatives, essayez de redémarrer le collecteur (Code d'erreur : AGENT008)”. *Essayez ceci:*</block>
   <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">Exécutez chacune des commandes suivantes dans l'ordre indiqué. Selon votre installation actuelle, certaines de ces commandes peuvent renvoyer des messages « objet introuvable ». Ces messages peuvent être ignorés en toute sécurité.</block>
+  <block id="d873c97dd6dca1c7bd30ed50b82bee0f" category="inline-image-macro">Admin &amp;gt, Subscription &amp;gt, onglet Workload Security affichant le nombre de nœuds haut de gamme, milieu de gamme et entrée de gamme</block>
+  <block id="a2efde4371837d491f7f2d093cb687a2" category="paragraph"><block ref="6239b49ee0db956af965dd1ce0c92bfa" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
