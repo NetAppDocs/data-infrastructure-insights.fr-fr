@@ -106,12 +106,22 @@ sidebar:
         url: "/task_create_monitor.html"
       - title: Affichage et gestion des alertes
         url: "/task_view_and_manage_alerts.html"
-      - title: Configuration des destinataires de notification
-        url: "/concept_notifications_email.html"
       - title: Moniteurs définis par le système
         url: "/task_system_monitors.html"
-      - title: Notification Webhook
-        url: "/task_create_webhook.html"
+      - title: Configuration des destinataires de notification
+        url: "/concept_notifications_email.html"
+      - title: Notifications de Webhook
+        entries:
+        - title: Configuration de Webhooks
+          url: "/task_create_webhook.html"
+        - title: Exemple Webhook - discorde
+          url: "/task_webhook_example_discord.html"
+        - title: Exemple de Webhook - PagerDuty
+          url: "/task_webhook_example_pagerduty.html"
+        - title: Exemple de Webhook - Slack
+          url: "/task_webhook_example_slack.html"
+        - title: Exemple de Webhook - équipes
+          url: "/task_webhook_example_teams.html"
     - title: Utilisation des annotations
       entries:
       - title: Définition d'annotations
@@ -264,8 +274,20 @@ sidebar:
       url: "/cs_restrict_user_access.html"
     - title: Simulation d'une attaque par ransomware
       url: "/concept_cs_attack_simulator.html"
-    - title: Notifications
+    - title: Notifications par email
       url: "/cs_notifications_email.html"
+    - title: Notifications de Webhook
+      entries:
+      - title: Création de Webhooks
+        url: "/ws_notifications_using_webhooks.html"
+      - title: Exemple de dérouleur Webhook
+        url: "/ws_webhook_example_discord.html"
+      - title: Exemple de Webhook PagerDuty
+        url: "/ws_webhook_example_pagerduty.html"
+      - title: Exemple de Slack Webhook
+        url: "/ws_webhook_example_slack.html"
+      - title: Exemple de Team Webhook
+        url: "/ws_webhook_example_teams.html"
     - title: API de sécurité du workload
       url: "/concept_cs_api.html"
     - title: Dépannage du collecteur SVM

@@ -97,4 +97,10 @@ Vous trouverez ici des suggestions pour résoudre les problèmes liés à la cr�
 
 
 | Lorsque vous planifiez l'envoi d'un rapport par e-mail, le nom de l'utilisateur connecté est pré-renseigné dans le champ « à » de l'e-mail. Toutefois, le nom est sous la forme de "prénom nom lastname" (prénom, espace, nom de famille). Étant donné que cette adresse e-mail n'est pas valide, l'e-mail ne peut pas être envoyé lorsque le rapport programmé est exécuté. | Lorsque vous planifiez l'envoi du rapport par e-mail, effacez le nom pré-rempli et saisissez une adresse e-mail valide et correctement formatée dans le champ « à ». 
+
+
+| Mon rapport planifié est envoyé par e-mail, mais il n'est pas possible d'y accéder si l'origine provient du dossier « mon contenu ». | Pour éviter cela, le rapport ou la vue de rapport doit être enregistré dans le dossier « contenu de l'équipe > Rapports personnalisés - xxxxxx » et le programme créé à partir de cette version enregistrée. Le dossier « Rapports personnalisés - xxxxxx » est visible par tous les utilisateurs du locataire. 
+
+
+| Lors de l'enregistrement d'un travail, le dossier peut afficher "contenu de l'équipe" avec la liste de contenu de "Rapports personnalisés - xxxxxx", mais vous ne pouvez pas enregistrer le travail ici car Cognos pense qu'il s'agit du dossier "contenu de l'équipe" où vous n'avez pas accès à l'écriture. | La solution consiste à créer un nouveau dossier portant un nom unique (c.-à-d. “NewFolder”) et à l'enregistrer, ou à enregistrer dans “mon contenu”, puis à copier/déplacer vers “Rapports personnalisés - xxxxxx”. 
 |===

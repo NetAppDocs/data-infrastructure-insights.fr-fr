@@ -18,7 +18,7 @@ Les stratégies de réponse déclenchent des actions telles que la prise d'un in
 
 Vous pouvez définir des stratégies sur des périphériques spécifiques ou sur tous les périphériques. Pour définir une stratégie de réponse, sélectionnez *Admin > Automated Response Policies* et cliquez sur le bouton *+Policy* approprié. Vous pouvez créer des stratégies pour les attaques ou les avertissements.
 
-image:Automated_Response_Screenshot.png["Créer une stratégie d'attaque"]
+image:ws_add_attack_policy.png["Ajoutez une boîte de dialogue Stratégie d'attaque affichant le menu déroulant du crochet Web"]
 
 Vous devez enregistrer la police avec un nom unique.
 
@@ -27,6 +27,8 @@ Pour désactiver une action de réponse automatisée (par exemple, prendre un in
 Lorsqu'une alerte est déclenchée par rapport aux périphériques spécifiés (ou à tous les périphériques, si elle est sélectionnée), la stratégie de réponse automatique prend un instantané de vos données. Vous pouvez voir l'état de l'instantané sur le link:cs_alert_data.html#the-alert-details-page["Page de détails de l'alerte"].
 
 Reportez-vous link:cs_restrict_user_access.html["Limiter l'accès des utilisateurs"]à la page pour plus de détails sur la restriction de l'accès utilisateur par IP.
+
+Vous pouvez joindre un ou plusieurs webhooks à une stratégie pour être averti lorsqu'une alerte est créée et que des mesures sont prises. Il est recommandé d'ajouter au plus 10 webhooks à une stratégie.n'oubliez pas que si une stratégie est suspendue, les notifications webhook ne seront pas déclenchées.
 
 Vous pouvez modifier ou interrompre une stratégie de réponse automatique en sélectionnant l'option dans le menu déroulant de la stratégie.
 

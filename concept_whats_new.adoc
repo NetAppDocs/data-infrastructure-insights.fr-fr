@@ -57,49 +57,6 @@ Si vous avez configuré des notifications sur des collecteurs de données, à pa
 '''
 
 
-== Avril 2025
-
-
-
-=== Widgets en ligne d'anomaly alimentés par ML pour une résolution proactive des problèmes
-
-Pour résoudre les problèmes de performances avec les widgets de graphique de ligne ou de spline, vous pouvez désormais afficher les limites de comportement prévues avec les mesures réelles, ce qui vous permet de distinguer les tendances métriques normales et anormales.
-
-Le machine learning DII avec analyse saisonnière des données établit des seuils intelligents basés sur des modèles historiques. Lorsque les mesures diffèrent des plages prévues, le système les met en évidence comme des anomalies, ce qui permet d'identifier rapidement les problèmes, de réduire le temps moyen de résolution et de résoudre les problèmes avant qu'ils n'affectent les opérations.
-
-image:expected_bounds_example_showing_spike.png["limites attendues indiquant la pointe au-dessus, largeur=300"]
-
-
-
-=== Optimisez les coûts VMware avec la prise en charge du stockage VSAN
-
-Notre fonctionnalité d'optimisation des machines virtuelles inclut désormais la prise en charge des environnements VMware avec stockage VSAN. Outre l'utilisation du processeur et de la mémoire, l'analyse prend désormais en compte le stockage VSAN local pour récupérer des recommandations et ainsi réduire encore les coûts de licence.
-
-image:vm_optimization_with_vsan.png["Exemple d'optimisation de VM avec VSAN"]
-
-
-
-=== Des détails d'alerte à portée de main
-
-Les enquêtes sur les alertes sont plus simples que jamais grâce au nouveau panneau coulissant. Sélectionnez une alerte pour afficher les détails de cette alerte, et passez facilement d'une alerte à l'autre sans perdre votre place lors de l'analyse des problèmes.
-
-image:alert_slideout_example.png["Volet d'alerte pour une navigation plus facile"]
-
-
-
-=== Exportation asynchrone pour l'analyse de la sécurité des charges de travail
-
-L'exportation des données d'analyse peut prendre de quelques secondes à plusieurs heures, selon la quantité de données à exporter. La sécurité des charges de travail exporte ces données de manière asynchrone, ce qui vous permet de continuer à travailler pendant la compilation du fichier .CSV.
-
-
-
-=== Notifications du Data Collector regroupées en règles
-
-Si vous avez configuré des notifications sur des collecteurs de données, à partir d'avril 15, ces notifications seront traitées dans les règles de notification, avec une seule règle pour les collecteurs qui ont des destinataires identiques. Les collecteurs avec différents destinataires auront des règles distinctes. Les notifications de collecteur existantes sont migrées vers des règles de notification.
-
-'''
-
-
 == Mars 2025
 
 

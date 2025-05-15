@@ -28,7 +28,7 @@ NOTE: Cette page se réfère aux instructions de tiers, qui sont sujettes à mod
 +
 image:Webhooks_PagerDutyScreen1.png["Écran PagerDuty"]
 
-. Sélectionnez l'onglet _Integrations_ pour afficher la *clé d'intégration*. Vous aurez besoin de cette clé lorsque vous créez le mousqueton Data Infrastructure Insights ci-dessous.
+. Sélectionnez l'onglet _Integrations_ pour afficher la *clé d'intégration*. Vous aurez besoin de cette clé lorsque vous créez le webhook Workload Security ci-dessous.
 
 
 . Accédez à *incidents* ou *Services* pour afficher les alertes.
