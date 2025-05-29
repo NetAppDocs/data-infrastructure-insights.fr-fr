@@ -7,6 +7,10 @@ summary: 'Créez des moniteurs pour alerter les seuils de performances ou d"inve
 = Alertes avec les moniteurs
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -14,8 +18,6 @@ Vous créez des moniteurs pour définir des seuils qui déclenchent des alertes 
 
 
 TIP: Les moniteurs et alertes sont disponibles dans toutes les éditions Data Infrastructure Insights. Cependant, l'édition Basic est soumise aux conditions suivantes : * vous ne pouvez avoir jusqu'à cinq moniteurs personnalisés actifs à la fois. Tous les moniteurs au-delà de cinq seront créés ou déplacés à l'état _Pause_. * Les moniteurs de metrics VMDK, Virtual machine, Host et DataStore ne sont pas pris en charge. Si des moniteurs ont été créés pour ces mesures, ils seront mis en pause et ne peuvent pas être repris lors de la rétrogradation vers l'édition de base.
-
-sommaire :[]
 
 Les moniteurs vous permettent de définir des seuils sur les metrics générés par des objets d'infrastructure tels que le stockage, les serveurs virtuels, EC2 et les ports, ainsi que pour les données « intégration », telles que celles collectées pour Kubernetes, les metrics avancés ONTAP et les plug-ins Telegraf. Ces _mesures_ permettent de vous alerter lorsque les seuils de niveau d'avertissement ou de niveau critique sont croisés.
 
@@ -187,6 +189,8 @@ NOTE: Les notifications ONTAP Data Collector prévalent sur toute notification M
 Vous pouvez ajouter une description facultative ainsi que des informations supplémentaires et/ou des actions correctives en remplissant la section *Ajouter une description d'alerte*. La description peut comporter jusqu'à 1024 caractères et sera envoyée avec l'alerte. Le champ d'action corrective peut contenir jusqu'à 67,000 caractères et sera affiché dans la section récapitulative de la page d'accueil de l'alerte.
 
 Dans ces champs, vous pouvez fournir des notes, des liens ou des étapes à suivre pour corriger ou résoudre l'alerte.
+
+Vous pouvez ajouter n'importe quel attribut d'objet (par exemple, nom du stockage) comme paramètre à une description d'alerte. Par exemple, vous pouvez définir des paramètres pour le nom du volume et le nom du stockage dans une description comme : « latence élevée pour le volume : _%%relatedObject.volume.name%%_, stockage : _%%relatedObject.storage.name%%_".
 
 image:Monitors_Alert_Description.png["Actions correctives et description de l'alerte"]
 

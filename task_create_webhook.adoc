@@ -7,6 +7,10 @@ summary: 'Créez des moniteurs pour alerter les seuils de performances ou d"inve
 = Notification à l'aide de Webpatères
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -64,6 +68,8 @@ image:Webhook_Default_Parameters.png["Paramètres Webhook par défaut de Data In
 === Paramètres : quels sont-ils et comment les utiliser ?
 
 Les paramètres d'alerte sont des valeurs dynamiques remplies par alerte. Par exemple, le paramètre _%%TriggeredOn%%_ sera remplacé par l'objet sur lequel l'alerte a été déclenchée.
+
+Vous pouvez ajouter n'importe quel attribut d'objet (par exemple, nom de stockage) comme paramètre à un webhook. Par exemple, vous pouvez définir des paramètres pour le nom du volume et le nom du stockage dans une description de webhook comme : « High Latency for Volume: _%%relatedObject.volume.name%%_, Storage: _%%relatedObject.storage.name%%_".
 
 Notez que dans cette section, les substitutions sont _non_ effectuées lorsque vous cliquez sur le bouton « Tester le Webhook » ; le bouton envoie une charge utile indiquant les substitutions de _ %_ mais ne les remplace pas par des données.
 
