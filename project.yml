@@ -158,14 +158,6 @@ sidebar:
         url: "/concept_asset_page_overview.html"
       - title: Filtrage dans le contexte pour les objets
         url: "/concept_in_context_filters.html"
-      - title: Sections Résumé et topologie
-        url: "/concept_asset_summary_section.html"
-      - title: Section vue expert
-        url: "/concept_asset_expert_view_section.html"
-      - title: Section données utilisateur
-        url: "/concept_asset_user_data_section.html"
-      - title: Section alertes associées
-        url: "/concept_asset_alerts_section.html"
       - title: Virtualisation du stockage
         url: "/concept_storage_virtualization.html"
       - title: Conseils et astuces pour rechercher des ressources
