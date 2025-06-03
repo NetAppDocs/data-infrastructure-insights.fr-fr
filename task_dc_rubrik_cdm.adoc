@@ -59,10 +59,13 @@ Les éléments suivants sont nécessaires pour configurer ce collecteur de donn�
 | IP | Adresse IP du cluster Rubrik 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du cluster 
+| Nom d'utilisateur / Compte de service | Nom d'utilisateur du cluster 
 
 
-| Mot de passe | Mot de passe pour le cluster 
+| Mot de passe / Secret | Mot de passe pour le cluster 
+
+
+| ID d'organisation pour le compte de service | Il doit s'agir de la chaîne complète comme « Organisation:::nnnnnn-nnnn..... ». 
 |===
 
 
@@ -93,6 +96,6 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 | J'ai reçu un message indiquant que plusieurs stockages sont créés. | Vérifiez que le cluster est correctement configuré et que le collecteur pointe vers un seul cluster. 
 
 
-| J'ai reçu un avertissement indiquant que l'API du disque a renvoyé plus de données | Contactez le support pour obtenir des données supplémentaires. 
+| Le sondage échoue avec 400 [Bad Request]...ManagedId non valide.... | Vous avez renseigné le champ ID d'organisation avec une valeur, mais le cluster Rubrik ne considère PAS qu'il s'agit d'un ID d'organisation valide, malgré le message d'erreur de Rubrik le désignant comme un « ManagedId ». 
 |===
 Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].

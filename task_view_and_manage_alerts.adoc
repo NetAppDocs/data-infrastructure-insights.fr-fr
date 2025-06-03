@@ -52,11 +52,11 @@ Cliquez sur un ID d'alerte pour ouvrir la page Détails de l'alerte.
 
 
 
-== Page de détails de l'alerte
+== Panneau de détails des alertes
 
-La page Détails de l'alerte fournit des détails supplémentaires sur l'alerte, y compris un _Summary_, une _Expert View_ affichant des graphiques liés aux données de l'objet, des _Related Assets_ et _Comments_ saisis par les enquêteurs de l'alerte.
+Sélectionnez une ligne d'alerte pour ouvrir son panneau de détails. Ce panneau fournit des informations supplémentaires sur l'alerte, notamment un résumé, une vue expert affichant des graphiques relatifs aux données de l'objet, les actifs associés et les commentaires saisis par les enquêteurs.
 
-image:alert_detail_page.png["Page de détails de l'alerte"]
+image:metric_alert_detail_pane.png["panneau de détails des alertes métriques"]
 
 
 

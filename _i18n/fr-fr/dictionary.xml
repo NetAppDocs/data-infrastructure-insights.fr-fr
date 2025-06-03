@@ -303,8 +303,6 @@
   <block id="e41f6efeb9a8c29ac8077a1348b68078" category="cell">Mot de passe pour le cluster</block>
   <block id="444301801d58f01b1fb488fe224bb8c5" category="cell">J'ai reçu un message indiquant que plusieurs stockages sont créés.</block>
   <block id="7de7475f4bb973126434d7c3f9801f08" category="cell">Vérifiez que le cluster est correctement configuré et que le collecteur pointe vers un seul cluster.</block>
-  <block id="fc971fc699329bc531b4d65ff180a629" category="cell">J'ai reçu un avertissement indiquant que l'API du disque a renvoyé plus de données</block>
-  <block id="3cd62817285774be5e17bfa3b11a6309" category="cell">Contactez le support pour obtenir des données supplémentaires.</block>
   <block id="aa7bcff87c480aa90d0e5d1001e89590" category="summary">Configuration du collecteur de données VMware.</block>
   <block id="3642158841a114e36a8c869b919b1091" category="doc">Configuration du collecteur de données VMware vSphere</block>
   <block id="2c2ae7694a57522d5f3200005b67fffd" category="paragraph">Le collecteur de données pour VMware vSphere collecte des informations sur les performances et la configuration de l'hôte VMware ESXi et de l'hôte VM invité, et requiert une Privileges en lecture seule sur tous les objets de vSphere. Depuis août 2024, le collecteur vSphere intègre en outre des messages de journalisation provenant des environnements vSphere et des mesures spécifiques à VMware. Notez que Data Infrastructure Insights ne peut récupérer les informations des journaux VMware que dans les environnements vSphere 8.0.1 ou supérieur. De même, les mesures propres au fournisseur ne sont prises en charge que pour les environnements vSphere 7+. Par conséquent, vous pouvez désactiver la case journaux et/ou mesures propres au fournisseur sur un collecteur donné s'il est pointé vers une ancienne instance vSphere.</block>
@@ -1500,9 +1498,6 @@
   <block id="29e29650476f773b7c44149e72a13e69" category="list-text">*Rejeter* pour supprimer l'alerte de la liste des alertes actives.</block>
   <block id="e8638926499f5e7bec918a2f4d6dc36a" category="paragraph">Vous pouvez gérer plusieurs alertes en cochant la case à gauche de chaque alerte et en cliquant sur _Modifier le statut des alertes sélectionnées_.</block>
   <block id="70a18f3fbffa69fc35378e4b2e87f766" category="paragraph">Cliquez sur un ID d'alerte pour ouvrir la page Détails de l'alerte.</block>
-  <block id="f7e83685d25e3038170e83ca19c3cbf0" category="section-title">Page de détails de l'alerte</block>
-  <block id="b254b175b71c2c7dca19ba0dcbc5da07" category="paragraph">La page Détails de l'alerte fournit des détails supplémentaires sur l'alerte, y compris un _Summary_, une _Expert View_ affichant des graphiques liés aux données de l'objet, des _Related Assets_ et _Comments_ saisis par les enquêteurs de l'alerte.</block>
-  <block id="1b489429111564ed0ac0109b22575d28" category="paragraph"><block ref="1b489429111564ed0ac0109b22575d28" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0dc88092036f29d0c951123c9b9f932e" category="section-title">Alertes lorsque des données sont manquantes</block>
   <block id="ffbb059fbd1b72fd858ad1db288acd16" category="paragraph">Dans un système en temps réel tel que Data Infrastructure Insights, pour déclencher l'analyse d'un moniteur afin de décider si une alerte doit être générée, nous nous appuyons sur l'une des deux choses suivantes :</block>
   <block id="9f76cab36d38af05dce74499497c7b3b" category="list-text">la prochaine donnée à arriver</block>
@@ -12579,4 +12574,17 @@
   <block id="25663750e3a92ca79621844d9a055d8a" category="paragraph"><block ref="25663750e3a92ca79621844d9a055d8a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="44c7c3a77a122ce29cb93ab53513f83f" category="section-title">Virgules dans les noms d'actifs</block>
   <block id="4d53c0239522855d4d60019758390f70" category="section-title">Format de l'heure ou pas format de l'heure ?</block>
+  <block id="3756ac460c094adc890ad7f26460010b" category="cell">35000-55000</block>
+  <block id="0e948943e8277507eeeec08bbb91d3b4" category="cell">IP de gestion de cluster</block>
+  <block id="8ad596bfbf4c5161efe95c1bf071f052" category="cell">Communication entre l'adresse IP de gestion du cluster ONTAP et l'agent Workload Security Agent pour les événements EMS. Ces ports doivent être ouverts vers l'agent Workload Security Agent pour qu'ONTAP puisse lui envoyer des événements EMS, y compris tout pare-feu de l'agent Workload Security Agent (le cas échéant). NOTEZ que vous n'avez pas besoin de réserver *tous* de ces ports, mais que les ports que vous réservez pour ce port doivent être compris dans cette plage. Il est recommandé de commencer par réserver ~100 ports et d'augmenter si nécessaire.</block>
+  <block id="ab1259588b3e1ad3b770e413f8408667" category="cell">Nom d'utilisateur / Compte de service</block>
+  <block id="2fde62a7ecea2efe8b301312f6a6b292" category="cell">Mot de passe / Secret</block>
+  <block id="8ec2e527e4b860bd5119c6e2816e5f0e" category="cell">ID d'organisation pour le compte de service</block>
+  <block id="30993e7595c12ab5f7aa162f78a59c3b" category="cell">Il doit s'agir de la chaîne complète comme « Organisation:::nnnnnn-nnnn..... ».</block>
+  <block id="2ce06c7c6b7a3d5ec1168fa41dc94826" category="cell">Le sondage échoue avec 400 [Bad Request]...ManagedId non valide....</block>
+  <block id="59e8601d861464a8b5978359c99a89b2" category="cell">Vous avez renseigné le champ ID d'organisation avec une valeur, mais le cluster Rubrik ne considère PAS qu'il s'agit d'un ID d'organisation valide, malgré le message d'erreur de Rubrik le désignant comme un « ManagedId ».</block>
+  <block id="a6d988d681ec5a2ac741001e80c67bbc" category="section-title">Panneau de détails des alertes</block>
+  <block id="bb9284d1e6e1080190597d2d9826cc87" category="paragraph">Sélectionnez une ligne d'alerte pour ouvrir son panneau de détails. Ce panneau fournit des informations supplémentaires sur l'alerte, notamment un résumé, une vue expert affichant des graphiques relatifs aux données de l'objet, les actifs associés et les commentaires saisis par les enquêteurs.</block>
+  <block id="ce2f8058fa83417353b52945b6bfd42f" category="inline-image-macro">panneau de détails des alertes métriques</block>
+  <block id="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="paragraph"><block ref="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
