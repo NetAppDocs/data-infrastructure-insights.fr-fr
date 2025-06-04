@@ -8509,21 +8509,8 @@
   <block id="bc781ab763b71df7b975bbfe7c860bba" category="paragraph">Vous trouverez des informations dans le <block ref="3147fac008aa304c440ef0d367c93828" category="inline-link-macro-rx"></block>.</block>
   <block id="dea8b0c01ac3c8f22d85423d187ec3d2" category="cell">CouchDB</block>
   <block id="64f2993184c14c565d6ba3100a20ca05" category="cell">Cache d'authentification Hits cache d'authentification Miss base de données lit base de données écrit bases Open fichiers système d'exploitation Max temps de demande min temps de demande httpd méthodes de demande httpd Copier méthodes de demande httpd suivre méthodes de demande httpd méthodes de requête post méthodes de requête httpd mettre les codes d'état 200 codes d'état 201 codes d'état 202 codes d'état 301 codes d'état 304 codes d'état 400 codes d'état 401 codes d'état 403 codes d'état 404 codes d'état 405 codes d'état 409 codes d'état 412 codes d'état 500</block>
-  <block id="d1f2d0eb68a6b45c8dc6a6dba792539e" category="summary">configuration dco</block>
-  <block id="072a17ceb11d2f7027c8a1539261d0b0" category="doc">Data Collector DC/OS</block>
-  <block id="bba9e01ebd689f9c44999482a5a64c33" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des metrics à partir du DC/OS.</block>
-  <block id="ada6106f548a6369154652d4ea69d9a1" category="list-text">Dans *observabilité &gt; Collectors*, cliquez sur *+Data Collector*. Choisissez *DC/OS*.</block>
-  <block id="906f9dd57fb2872473e89e09bf5bf50e" category="list-text">Suivez les instructions de l'écran Configuration du DC/OS pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.</block>
-  <block id="169d74d7790e089aeca58cb836db2fcc" category="inline-link">Documentation DC/OS</block>
-  <block id="b0f77e8918eef13e0142c8675b792231" category="paragraph">Les informations de configuration se trouvent dans le<block ref="bcf6b27a44ba394f1a86a682cd050dc1" category="inline-link-rx"></block>.</block>
   <block id="497031794414a552435f90151ac3b54b" category="cell">Objet</block>
   <block id="e2da36de4fe1aaf514aaef4ecca2c8ec" category="cell">Identifiants</block>
-  <block id="90fd43f146814c9c0cb1e9040b914fa0" category="cell">Points de données</block>
-  <block id="c43575a6656a31d36fd3cee9520b5838" category="cell">dco_node</block>
-  <block id="a675bd36bf3917644534c43b4ba2e55f" category="cell">dco_conteneur dco_app</block>
-  <block id="022435a7e2f917aa3bce64222061f83d" category="cell">chemin du nom d'hôte du cluster (champs de système de fichiers uniquement) interface (champs réseau uniquement) nom_tâche_conteneur</block>
-  <block id="2cf0eab79c0db36a5df9e2deeba2b2c2" category="cell">system_uptime (float) cpu_infrastructure (float) cpu_total (float) cpu_user (float) cpu_inactive (float) cpu_wait (float) load_1min (float) load_5min (float) load_15min (fload_capacity_total_bytes (int_file_free_inting) (inode_innetapp_netoctets_read_read_total_ind_ind_ind_ind_ind_ind_ind_innetapp (int_ind_ind_ind_ind_ind_ind_ind_innetapp_ind_innetapp) (int_ind_ind_innetapp_ind_ind_ind_ind_octets_ind_ind_ind_ind_ind_ind_ind_ind_ind_ network_in_packets (float) network_out_packets (float) network_in_funed (float) network_in_errors (float) network_out_errors (float) process_count (float)</block>
-  <block id="bc9c01f26c422a397298e3d733c43cb5" category="paragraph">Des informations supplémentaires sont disponibles sur la <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> page.</block>
   <block id="0982f7ddf38c72531e91321d3b4e198e" category="summary">Configuration du collecteur de données Docker</block>
   <block id="d80788e8d22d139775039533ead6bae8" category="doc">Collecteur de données Docker</block>
   <block id="7ab1583e1a436a4f564958859dce5c00" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des metrics à partir de Docker.</block>
@@ -11381,7 +11368,6 @@
   <block id="7070fd1d7b5d144bd3131c3c2b7ee1ca" category="list-text">Sélectionnez *demander un essai*. Si vous n'êtes pas encore inscrit à BlueXP , saisissez vos coordonnées et inscrivez-vous. Sinon, connectez-vous.</block>
   <block id="e461fd437885ee63b7f00e77ade6b3cb" category="list-text">Planifiez une réunion ou attendez qu'un représentant vous contacte au sujet de votre version d'évaluation.</block>
   <block id="44d2017272b4664ce749afa3c1fc2785" category="summary">SAN Analyzer fournit la topologie des ressources de votre locataire</block>
-  <block id="916cfef6f81652d81c744e0537c656b2" category="doc">Présentation de l'analyseur SAN</block>
   <block id="a720fce5b3da4c111f19c80487c269cf" category="paragraph">LE SAN joue un rôle crucial dans la gestion des charges de travail stratégiques, mais sa complexité peut entraîner des pannes importantes et des perturbations pour les clients. Grâce à *SAN Analyzer* de DII, la gestion du SAN devient plus simple et plus efficace. Cet outil puissant offre une visibilité de bout en bout, en mappant les dépendances entre les ordinateurs virtuels/l'hôte et le réseau vers les LUN et le stockage.</block>
   <block id="b03a68ce04fd31de1bf167d4c6537d2f" category="paragraph">Grâce à une carte topologique interactive, SAN Analyzer vous permet de repérer les problèmes, de comprendre les modifications et d'améliorer la compréhension du flux de données. Rationalisez la gestion SAN dans des environnements IT complexes avec SAN Analyzer et augmentez votre visibilité sur les charges de travail en mode bloc.</block>
   <block id="9c6601cca8cd67405c34e4897bb272f1" category="section-title">Explorer les connexions entre vos ressources</block>
@@ -12587,4 +12573,10 @@
   <block id="bb9284d1e6e1080190597d2d9826cc87" category="paragraph">Sélectionnez une ligne d'alerte pour ouvrir son panneau de détails. Ce panneau fournit des informations supplémentaires sur l'alerte, notamment un résumé, une vue expert affichant des graphiques relatifs aux données de l'objet, les actifs associés et les commentaires saisis par les enquêteurs.</block>
   <block id="ce2f8058fa83417353b52945b6bfd42f" category="inline-image-macro">panneau de détails des alertes métriques</block>
   <block id="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="paragraph"><block ref="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5a71b3e73a269322067fedef6352832a" category="doc">Présentation de SAN Analyzer</block>
+  <block id="308d93e3f78b9236fe8462a038df9e71" category="paragraph">Si votre environnement possède des protocoles différents, vous pouvez filtrer par iSCSI ou FC :</block>
+  <block id="d0cb407e54552661d276105ea643b822" category="inline-image-macro">Protocoles SAN Analyzer</block>
+  <block id="1ba02fc2bd769c9cff9ca39f38c94497" category="paragraph"><block ref="1ba02fc2bd769c9cff9ca39f38c94497" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="69903a755173d1c4699b4fdd2f6091ea" category="paragraph">Plusieurs modèles ONTAP fournissent des metrics de puissance pour les informations exploitables de l'infrastructure de données, qui peuvent être utilisés à des fins de surveillance ou d'alerte.</block>
+  <block id="dad21edfb3c02cb57e392a9d9a2e3eed" category="admonition">Ces listes ne sont pas exhaustives et sont susceptibles d'être modifiées. En général, si un modèle appartient à la même famille qu'un modèle de la liste, la prise en charge devrait être identique, mais ce n'est pas garanti. Si vous n'êtes pas sûr que votre modèle prenne en charge les mesures de puissance, contactez le support ONTAP.</block>
 </blocks>

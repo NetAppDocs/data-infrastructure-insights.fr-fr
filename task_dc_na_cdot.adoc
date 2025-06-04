@@ -187,7 +187,10 @@ Les informations d'infrastructure de données peuvent collecter en option les do
 
 == Mesures de puissance ONTAP
 
-Plusieurs modèles ONTAP fournissent des metrics de puissance pour les informations exploitables de l'infrastructure de données, qui peuvent être utilisés à des fins de surveillance ou d'alerte. Les listes des modèles pris en charge et non pris en charge ci-dessous ne sont pas exhaustives, mais doivent fournir des conseils ; en général, si un modèle se trouve dans la même famille qu'un modèle de la liste, le support doit être le même.
+Plusieurs modèles ONTAP fournissent des metrics de puissance pour les informations exploitables de l'infrastructure de données, qui peuvent être utilisés à des fins de surveillance ou d'alerte.
+
+
+NOTE: Ces listes ne sont pas exhaustives et sont susceptibles d'être modifiées. En général, si un modèle appartient à la même famille qu'un modèle de la liste, la prise en charge devrait être identique, mais ce n'est pas garanti. Si vous n'êtes pas sûr que votre modèle prenne en charge les mesures de puissance, contactez le support ONTAP.
 
 Modèles pris en charge :
 
