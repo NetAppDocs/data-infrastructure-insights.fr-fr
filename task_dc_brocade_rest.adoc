@@ -10,7 +10,7 @@ summary: Configuration du collecteur de données REST Brocade FOS.
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur REST Brocade FOS pour détecter l'inventaire et les performances des commutateurs Brocade exécutant le firmware FabricOS (FOS) version 8.2 et ultérieure.
+Data Infrastructure Insights utilise le collecteur REST Brocade FOS pour détecter l'inventaire et les performances des commutateurs Brocade exécutant le firmware FabricOS (FOS) version 8.2 et ultérieure. Veuillez noter que les premières versions de FOS 8.2 peuvent contenir des bugs d'API REST ; il est fortement recommandé d'exécuter la dernière version possible de FOS prise en charge par votre plateforme.
 
 Remarque : le niveau « utilisateur » par défaut de FOS n'est pas suffisamment puissant pour que Data Infrastructure Insights affiche tous les aspects logiques d'un périphérique. Nous avons besoin d'un compte utilisateur avec le rôle « châssis » activé, ainsi que des autorisations sur toutes les structures virtuelles configurées sur un commutateur.
 
@@ -124,6 +124,9 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 
 | La fonction de test m'avertit qu'un protocole est inaccessible | Un périphérique Brocade FOS 8.2+ donné ne veut parler que sur HTTP ou HTTPS. Si un commutateur est équipé d'un certificat numérique, le commutateur affichera des erreurs HTTP si l'on tente de communiquer avec lui avec HTTP ou HTTPS non chiffré. La fonction de test tente de communiquer avec HTTP et HTTPS. Si le test vous indique qu'un protocole réussit, vous pouvez enregistrer le collecteur en toute sécurité et ne vous inquiétez pas que l'autre protocole a échoué. Le collecteur tentera les deux protocoles pendant la collecte et n'échouera que si aucun des deux protocoles ne fonctionne. 
+
+
+| Erreur : l'inventaire échoue avec l'erreur 401 Non autorisé... Clé de session non valide... | Il s'agit d'un bug spécifique présent dans certaines versions 8.2 FOS très anciennes, comme la 8.2.1c, qui ne prennent pas correctement en charge l'authentification HTTP de base. Effectuez une mise à niveau vers une version 8.2 ou 9.* ultérieure. 
 
 
 | Erreur : « les informations de l'infrastructure de données ont reçu un rôle de châssis non valide » | Vérifiez que l'utilisateur configuré dans cette source de données a reçu l'autorisation de rôle de châssis. 
