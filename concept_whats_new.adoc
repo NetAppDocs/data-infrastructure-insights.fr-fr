@@ -7,11 +7,39 @@ keywords: features
 = Nouveautés de Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 NetApp améliore et améliore continuellement ses produits et services. Voici quelques-unes des fonctionnalités les plus récentes disponibles dans Data Infrastructure Insights (anciennement Cloud Insights).
 
+
+
+== Juin 2025
+
+
+
+=== VM Analyzer : visibilité et dépannage holistiques des machines virtuelles vers le stockage
+
+La fonctionnalité *VM Analyzer* de DII offre une vue complète et complète de vos environnements virtualisés. VM Analyzer simplifie le dépannage en cartographiant l'intégralité du chemin, des machines virtuelles au stockage, permettant ainsi aux utilisateurs d'identifier rapidement les problèmes de performances sur les disques virtuels, les machines virtuelles, les hôtes, les banques de données, les volumes et le stockage. Grâce à une vue topologique intuitive, au filtrage et à des indicateurs de performance détaillés, les administrateurs peuvent facilement identifier les goulots d'étranglement, analyser les déséquilibres de trafic et optimiser les performances globales du stockage.
+
+image:vm_analyzer_example_with_panel.png["Carte topologique d'un système de stockage avec l'analyseur VM"]
+
+
+
+=== Systèmes d'exploitation pris en charge
+
+Les systèmes d'exploitation suivants sont désormais pris en charge avec les unités d'acquisition Data Infrastructure Insights, en plus de ceuxlink:concept_acquisition_unit_requirements.html["déjà pris en charge"]-ci :
+
+* Debian (64 bits) 12
+* Oracle Enterprise Linux (64 bits) 9.6
+* Red Hat (64 bits) 9.6
+
+
+'''
 
 
 == Mai 2025
