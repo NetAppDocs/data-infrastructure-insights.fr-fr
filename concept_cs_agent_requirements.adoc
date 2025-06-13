@@ -62,7 +62,7 @@ Pour les environnements de sécurité de la charge de travail *basés aux États
 | TCP | 443 | Agent de sécurité des charges de travail | <site_name> .cs01.cloudinsights.netapp.com <site_name> .c01.cloudinsights.netapp.com <site_name> .c02.cloudinsights.netapp.com | Accès aux informations exploitables de l'infrastructure de données 
 
 
-| TCP | 443 | Agent de sécurité des charges de travail | gateway.c01.cloudinsights.netapp.com agentlogin.cs01.cloudinsights.netapp.com | Accès aux services d'authentification 
+| TCP | 443 | Agent de sécurité des charges de travail | agentlogin.cs01.cloudinsights.netapp.com | Accès aux services d'authentification 
 |===
 Pour les environnements de sécurité des charges de travail * basés en Europe :
 
@@ -74,7 +74,7 @@ Pour les environnements de sécurité des charges de travail * basés en Europe 
 | TCP | 443 | Agent de sécurité des charges de travail | <site_name> .cs01-eu-1.cloudinsights.netapp.com <site_name> .c01-eu-1.cloudinsights.netapp.com <site_name> .c02-eu-1.cloudinsights.netapp.com | Accès aux informations exploitables de l'infrastructure de données 
 
 
-| TCP | 443 | Agent de sécurité des charges de travail | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-eu-1.cloudinsights.netapp.com | Accès aux services d'authentification 
+| TCP | 443 | Agent de sécurité des charges de travail | agentlogin.cs01-eu-1.cloudinsights.netapp.com | Accès aux services d'authentification 
 |===
 Pour les environnements de sécurité de la charge de travail *APAC* :
 
@@ -86,7 +86,7 @@ Pour les environnements de sécurité de la charge de travail *APAC* :
 | TCP | 443 | Agent de sécurité des charges de travail | <site_name> .cs01-ap-1.cloudinsights.netapp.com <site_name> .c01-ap-1.cloudinsights.netapp.com <site_name> .c02-ap-1.cloudinsights.netapp.com | Accès aux informations exploitables de l'infrastructure de données 
 
 
-| TCP | 443 | Agent de sécurité des charges de travail | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-ap-1.cloudinsights.netapp.com | Accès aux services d'authentification 
+| TCP | 443 | Agent de sécurité des charges de travail | agentlogin.cs01-ap-1.cloudinsights.netapp.com | Accès aux services d'authentification 
 |===
 
 

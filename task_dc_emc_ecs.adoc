@@ -87,7 +87,7 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 
 
-==== Inventaire
+=== Inventaire
 
 [cols="2*"]
 |===
@@ -98,14 +98,14 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 |===
 
 
-==== Performances
+=== Performances
 
 [cols="2*"]
 |===
 | Problème : | Essayer : 
 
 
-| Erreur : données collectées insuffisantes. | • Vérifiez l'horodatage de collecte dans le fichier journal et modifiez l'intervalle de vote en conséquence • attendez plus longtemps 
+| Erreur : données collectées insuffisantes. | * Vérifiez l'horodatage de la collecte dans le fichier journal et modifiez l'intervalle d'interrogation en conséquence * Attendez plus longtemps 
 
 
 | Erreur : l'intervalle d'interrogation des performances est trop important. | Vérifiez l'horodatage de collecte dans le fichier journal ${logfile} et modifiez l'intervalle d'interrogation en conséquence 
