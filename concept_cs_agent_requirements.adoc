@@ -17,7 +17,7 @@ Vous devez pour link:task_cs_add_agent.html["Installez un agent"]obtenir des inf
 | Composant | Configuration Linux requise 
 
 
-| Système d'exploitation | Un ordinateur exécutant une version sous licence de l'un des éléments suivants : * CentOS 9.4 15 20.04 64 64 64 Stream (64 9.5 15 22.04 10 9.4 bits) * openSUSE Leap 15.3 64 64 24.04 11 9.5 à 15.5 (64 bits) * Oracle Linux 8.10 (64 bits), 9.1 à 9.4 (64 bits), SELinux * Red Hat Enterprise Linux 8.10 (64 bits), 9.1 à 9.5 (64 bits), SELinux * AlmaS 9 bits Un serveur dédié est recommandé. 
+| Système d'exploitation | Un ordinateur exécutant une version sous licence de l'un des systèmes d'exploitation suivants : * AlmaLinux 9.4 et 9.5 (64 bits), y compris SELinux * CentOS 9 Stream (64 bits) * Debian 11 (64 bits) et 12 (64 bits), y compris SELinux * OpenSUSE Leap 15.3 (64 bits) à 15.6 (64 bits) * Oracle Linux 8.10 (64 bits) et 9.1 (64 bits) à 9.6 (64 bits), y compris SELinux * Red Hat Enterprise Linux 8.10 (64 bits) et 9.1 (64 bits) à 9.6 (64 bits), y compris SELinux * Rocky 9.4 (64 bits) et 9.5 (64 bits), y compris SELinux * SUSE Linux Enterprise Server 15 SP4 (64 bits) à 15 SP6 (64 bits), y compris SELinux * Ubuntu 20.04 LTS (64 bits), 22.04 LTS (64 bits) et 24.04 LTS (64 bits) Cet ordinateur ne doit exécuter aucun autre logiciel de niveau application. Un serveur dédié est recommandé. 
 
 
 | Commandes | le dézipper est requis pour l'installation. En outre, la commande « udo su – » est requise pour l'installation, l'exécution de scripts et la désinstallation. 

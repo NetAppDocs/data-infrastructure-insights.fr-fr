@@ -59,7 +59,7 @@ Ne montez pas NFS version 4.1 ; il n'est pas pris en charge par Fpolicy.
 
 
 
-==== Pour monter CIFS sous Linux :
+==== Pour monter CIFS sous Linux :
 
 [listing]
 ----
