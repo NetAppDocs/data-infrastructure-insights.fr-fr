@@ -154,7 +154,9 @@ Si vous avez mis le collecteur en pause avant de suivre ces étapes, assurez-vou
 
 
 
-== Exécutez le script du simulateur de ransomware
+== Générez les fichiers d'exemple par programmation :
+
+Avant de créer les fichiers, vous devez d’abord arrêter ou link:task_add_collector_svm.html#play-pause-data-collector["mettre en pause le collecteur de données"] traitement.
 
 Pour générer une alerte Ransomware, vous pouvez exécuter le script inclus qui simulera une alerte ransomware dans Workload Security.
 

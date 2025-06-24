@@ -162,6 +162,12 @@ sidebar:
         url: "/concept_storage_virtualization.html"
       - title: Conseils et astuces pour rechercher des ressources
         url: "/concept_searching_assets.html"
+    - title: Analyse des données
+      entries:
+      - title: Analyseur SAN
+        url: "/san_analyzer_overview.html"
+      - title: Analyseur de machines virtuelles
+        url: "/vm_analyzer_overview.html"
     - title: Création de rapports
       entries:
       - title: Présentation des rapports
