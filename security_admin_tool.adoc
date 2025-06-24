@@ -39,7 +39,7 @@ L'outil SecurityAdmin vous permet de gérer les options de sécurité de Data In
 Après l'installation de au, l'outil SecurityAdmin se trouve sur le système d'unités d'acquisition à l'un des emplacements suivants :
 
 ....
-Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat
+Windows - <install_path>\Cloud Insights\Acquisition Unit\acq\securityadmin\bin\securityadmin.bat
 Linux - /bin/oci-securityadmin.sh
 ....
 
@@ -61,7 +61,7 @@ Crée un fichier zip de sauvegarde du coffre-fort contenant tous les mots de pas
 
 +
 ....
-Windows - C:\Program Files\SANscreen\backup\vault
+Windows - <install_path>\Cloud Insights\Acquisition Unit\acq\securityadmin\backup\vault
 Linux - /var/log/netapp/oci/backup/vault
 ....
 +
