@@ -12,8 +12,8 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 [role="lead"]
 La mise en route de Data Infrastructure Insights se fait en trois étapes simples :
 
-* Créez un compte sur link:https://bluexp.netapp.com//["*NetApp BlueXP*"] pour accéder à toutes les offres cloud de NetApp.
-* Inscrivez-vous pour essayer gratuitement Data Infrastructure Insights et découvrir les fonctionnalités disponibles. Pour vous inscrire à un essai gratuit :
+. Créez un compte sur link:https://bluexp.netapp.com//["*NetApp BlueXP*"] pour accéder à toutes les offres cloud de NetApp.
+. Inscrivez-vous pour essayer gratuitement Data Infrastructure Insights et découvrir les fonctionnalités disponibles. Pour vous inscrire à un essai gratuit :
 +
 ** Accédez à https://netapp.com[]
 ** Sélectionnez *choisir un partenaire* en haut de la page.
@@ -21,7 +21,19 @@ La mise en route de Data Infrastructure Insights se fait en trois étapes simple
 ** Planifiez une réunion ou attendez qu'un représentant vous contacte au sujet de votre version d'évaluation.
 
 
-* *Abonnez-vous* à Data Infrastructure Insights pour un accès continu et ininterrompu à vos données via link:https://bluexp.netapp.com/contact-cds["Ventes NetApp"] direct ou link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["Marketplace AWS"].
+. *Abonnez-vous* à Data Infrastructure Insights pour un accès continu et ininterrompu à vos données grâce à une variété d'options d'abonnement flexibles :
++
+** link:https://bluexp.netapp.com/contact-cds["Ventes directes NetApp"]
+** Place de marché AWS :
++
+*** link:https://aws.amazon.com/marketplace/pp/prodview-axhuy7muvzfx2["Abonnement à durée déterminée"]
+*** link:https://aws.amazon.com/marketplace/pp/prodview-rn4qwencpjpge["Abonnement avec paiement à l'utilisation"]
+*** link:https://aws.amazon.com/marketplace/pp/prodview-nku57vjsqdwzu["Abonnement base fixe + dépassements à la carte"]
+
+
+** link:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.dii_premium["Azure Marketplace"] (toutes les options d'abonnement)
+
+
 
 
 Lors du processus d'enregistrement, vous pouvez choisir la région globale dans laquelle héberger votre environnement Data Infrastructure Insights. Pour en savoir plus, consultez la rubrique informations sur l'infrastructure de données link:security_information_and_region.html["Information et région"].
@@ -50,7 +62,7 @@ NOTE: Si vous avez besoin de plus de temps pour évaluer les informations strat�
 
 === Essai via AWS Marketplace
 
-Vous pouvez également vous inscrire pour essayer gratuitement sur AWS Marketplace. L'essai gratuit d'AWS Marketplace vous donne accès aux informations stratégiques de votre infrastructure de données pendant une période d'essai de 33 jours, avec <<observability-metering,Unités gérées>>une capacité allant jusqu'à 499 MU.
+Vous pouvez également vous inscrire pour essayer gratuitement sur AWS Marketplace. L'essai gratuit d'AWS Marketplace vous donne accès à Data Infrastructure Insights pour une période d'essai de 33 jours.
 
 La version d'essai gratuite d'AWS Marketplace ne peut pas être étendue. À tout moment pendant votre période d'essai, vous pouvez revenir à un abonnement Data Infrastructure Insights Basic Edition ou passer à un abonnement payant Data Infrastructure Insights en visitant la page *Admin -> abonnement*.
 
