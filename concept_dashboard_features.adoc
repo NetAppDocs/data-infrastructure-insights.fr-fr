@@ -915,3 +915,6 @@ En outre, vous pouvez choisir d'afficher la saisonnalité _horaire_ ou _quotidie
 image:expected_bounds_settings.png["Paramètres des limites d'anomalie, y compris l'algorithme de détection, la saisonnalité et la sensibilité"]
 
 N'oubliez pas que vous ne pouvez afficher que les limites attendues lorsque le graphique est configuré pour afficher une seule ligne. Si vos paramètres ou filtres regrouper par affichent plusieurs lignes ou si vous avez défini plusieurs requêtes pour le widget, l'option d'affichage des limites attendues sera désactivée.
+
+
+NOTE: Le DII examine les données existantes de la semaine précédant la création du suivi et détecte les pics ou les baisses de données significatifs de plus de 30 minutes ; ces anomalies sont considérées comme telles. Au cours de la deuxième semaine (phase d'apprentissage), à mesure que davantage de données sont collectées et analysées, le risque d'augmentation du bruit dans les alertes est élevé. Ce bruit diminue généralement à mesure que davantage de données sont analysées au cours des semaines suivantes.
