@@ -75,6 +75,9 @@ Enregistrez le moniteur avec un nom significatif, et vous avez terminé.
 Lors de sa création, le moniteur analyse les données de la semaine précédente afin d'établir une base initiale. La détection des anomalies est plus précise au fil du temps et l'historique s'en trouve accru.
 
 
+NOTE: Lors de la création d'un moniteur, DII analyse les données de la semaine précédente pour détecter les pics ou les baisses significatifs ; ces données sont considérées comme des anomalies. Durant la première semaine suivant la création du moniteur (phase d'apprentissage), il est possible que les alertes présentent un risque de bruit accru. Pour atténuer ce bruit, seules les pics ou les baisses de plus de 30 minutes sont considérées comme des anomalies et génèrent des alertes. Au cours de la semaine suivante, à mesure que davantage de données sont analysées, le bruit diminue généralement et un pic ou une baisse significative durant une certaine période sera considéré comme une anomalie.
+
+
 
 == Affichage des anomalies
 
