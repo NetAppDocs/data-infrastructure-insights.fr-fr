@@ -11,7 +11,7 @@ summary: 'Les informations sur l"infrastructure de données collectent des donn�
 
 
 [role="lead"]
-NetApp link:https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["Conseiller digital Active IQ"](également connu sous le nom de conseiller digital) propose aux clients NetApp une série de visualisations, d'analyses et d'autres services de support pour leurs systèmes matériels et logiciels. Les données rapportées par Digital Advisor peuvent améliorer le dépannage des problèmes système et fournir des informations sur l'optimisation et l'analyse prédictive liées à vos appareils.
+NetApp link:https://docs.netapp.com/us-en/active-iq/["Conseiller digital Active IQ"](également connu sous le nom de conseiller digital) propose aux clients NetApp une série de visualisations, d'analyses et d'autres services de support pour leurs systèmes matériels et logiciels. Les données rapportées par Digital Advisor peuvent améliorer le dépannage des problèmes système et fournir des informations sur l'optimisation et l'analyse prédictive liées à vos appareils.
 
 Data Infrastructure Insights collecte les *risques* pour tout système de stockage NetApp clustered Data ONTAP qui est surveillé et signalé par Digital Advisor. Les risques signalés pour les systèmes de stockage sont automatiquement collectés par Data Infrastructure Insights dans le cadre de leur collecte de données sur ces périphériques. Vous devez ajouter le collecteur de données approprié à Data Infrastructure Insights pour collecter les informations sur les risques de Digital Advisor.
 

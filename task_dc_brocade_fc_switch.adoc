@@ -153,12 +153,38 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 | Erreur : « les informations de l'infrastructure de données ont reçu un rôle de châssis non valide » | Vérifiez que l'utilisateur configuré dans cette source de données a reçu l'autorisation de rôle de châssis. 
 
 
-| Erreur : « adresse IP du châssis non concordante » | Modifiez la configuration de la source de données pour utiliser l'adresse IP du châssis. 
+| Erreur : « adresse IP du châssis non concordante » | En règle générale, DII ne prend pas en charge la traduction d'adresses réseau ni la traduction d'adresses de port entre l'unité d'acquisition et les appareils. DII peut détecter que le nom d'hôte ou l'adresse IP dans la configuration du collecteur ne correspond à aucune des adresses que l'appareil pense détenir. 
 
 
 | Recevez un message indiquant que plus d'un nœud est connecté au port Access Gateway | Vérifiez que le périphérique NPV fonctionne correctement et que tous les WWN connectés sont attendus. N'obtenez pas directement le périphérique NPV. L'acquisition du commutateur principal de la structure collecte plutôt les données du dispositif NPV. 
 
 
+| Erreur : ....Nombre maximal de sessions à distance pour la connexion... | FOS impose différentes limites quant au nombre de sessions SSH simultanées prises en charge par rôle utilisateur. La session SSH de DII sur cet appareil est rejetée à la connexion pour non-respect de ces limites. Cela peut indiquer que des collecteurs en double découvrent la même ressource, ce qui est à éviter. 
+|===
+
+
+=== Performances
+
+[cols="2*"]
+|===
+| Problème : | Essayer : 
+
+
 | Échec de la collecte des performances avec « délai dépassé lors de l'envoi de la requête SNMP ». | Selon les variables de requête et la configuration du commutateur, certaines requêtes peuvent dépasser le délai par défaut. link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["En savoir plus"]. 
+
+
+| La collecte des performances échoue avec... Des doublons de lignes ont été trouvés dans la table SNMP... | DII a détecté des réponses SNMP incorrectes. Vous utilisez probablement FOS 8.2.3e. Effectuez la mise à niveau vers la version 8.2.3e2 ou supérieure. 
+
+
+| Les collectes de performances échouent avec... Nom d'utilisateur inconnu... | Vous avez configuré votre collecteur DII avec un « Nom d'utilisateur SNMP » qui n'est pas attribué à l'un des emplacements utilisateur SNMPv3. La simple création d'un utilisateur sur Brocade FOS ne l'active pas nécessairement comme utilisateur SNMPv3 ; vous devez le placer dans l'un des emplacements utilisateur v3. 
+
+
+| Les collections de performances échouent avec... Niveau de sécurité non pris en charge... | Vous avez configuré votre collecteur DII pour utiliser SNMPv3, mais avec des paramètres de cryptage (alias confidentialité) et/ou d'autorisation qui ne sont pas activés sur l'appareil en question. 
+
+
+| La collecte des performances échoue avec… Le mot de passe de confidentialité vide n'est autorisé que pour le protocole de confidentialité AUCUN | Vous avez configuré votre collecteur DII pour utiliser SNMPv3, avec un protocole de cryptage, également appelé protocole de confidentialité (AES, etc.), mais vous avez une valeur « Mot de passe de confidentialité SNMP » vide, donc DII ne peut pas négocier les flux de données SNMPv3 chiffrés avec cet appareil 
+
+
+| La collecte des performances échoue avec .....VF:nn, erreur : aucun accès... | Vous avez configuré votre collecteur DII pour utiliser SNMPv3 sur un appareil avec plusieurs Virtual Fabrics activés, mais l'utilisateur SNMPv3 ne dispose pas des droits pour le NN VF. DII ne prend pas en charge la découverte partielle d'une ressource physique ; vous devez toujours lui accorder l'accès aux 128 VF possibles de manière proactive, car il tentera toujours de récupérer les données de performances de toute VF existante sur un appareil physique donné. 
 |===
 Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
