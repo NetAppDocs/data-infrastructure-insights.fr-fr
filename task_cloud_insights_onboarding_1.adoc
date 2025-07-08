@@ -7,12 +7,14 @@ keywords: onboarding, new user
 = Intégration de données exploitables de l'infrastructure de données
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Avant de commencer à travailler avec Data Infrastructure Insights, vous devez vous inscrire sur le portail *NetApp BlueXP *. Si vous disposez déjà d'un identifiant NetApp BlueXP , vous pouvez essayer gratuitement Data Infrastructure Insights en quelques étapes simples.
-
-sommaire :[]
 
 
 
