@@ -2,16 +2,19 @@
 sidebar: sidebar 
 permalink: telegraf_agent_k8s_config_options.html 
 keywords: telegraf, installation, install, agent, telegraf agent, kubernetes, eks, operator, k8s, options, configuration 
-summary: 'L"opérateur de surveillance NetApp Kubernetes dispose d"un certain nombre d"options configurables.' 
+summary: Configurez l’opérateur de surveillance NetApp Kubernetes à l’aide des options AgentConfiguration. 
 ---
 = Options de configuration de l'opérateur de surveillance Kubernetes
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-La link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Opérateur de surveillance Kubernetes"] configuration peut être personnalisée.
+Le link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Opérateur de surveillance Kubernetes"] Offre des options de personnalisation étendues via le fichier AgentConfiguration. Configurez les limites de ressources, les intervalles de collecte, les paramètres de proxy, les tolérances et les paramètres spécifiques aux composants pour Telegraf, Kube-State-Metrics, la collecte de journaux, le mappage de la charge de travail, la gestion des modifications, etc. afin d'optimiser la surveillance de votre environnement Kubernetes.
 
 Le tableau ci-dessous répertorie les options possibles pour le fichier _AgentConfiguration_ :
 
@@ -131,7 +134,7 @@ Le tableau ci-dessous répertorie les options possibles pour le fichier _AgentCo
 |  | tolérances | tolérances supplémentaires des indicateurs d'état kube. 
 
 
-|  | étiquettes | une liste de ressources séparées par des virgules que les indicateurs d'état kube doivent capturer +++ exemple : cronjobs=[*],demonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*],resenteclaims=[*],despotstatsets[*][*]*][*],despodeslotstatedespods=*[*]*[*]*[*] 
+|  | étiquettes | une liste séparée par des virgules de ressources pour lesquelles kube-state-metrics doit capturer les étiquettes +++ exemple : cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++ 
 
 
 | journaux |  | Options de configuration permettant de personnaliser la collecte des journaux et l'installation de l'opérateur 
@@ -200,7 +203,7 @@ Le tableau ci-dessous répertorie les options possibles pour le fichier _AgentCo
 |  | MemRequest | demande mem pour changement-observateur-watch-rs 
 
 
-|  | FailureDeclationIntervalMins | Intervalle en minutes après lequel un déploiement non réussi d'une charge de travail sera marqué comme ayant échoué 
+|  | workloadFailureDeclarationIntervalSeconds | Intervalle après lequel un déploiement infructueux d'une charge de travail sera marqué comme ayant échoué, en secondes 
 
 
 |  | DeployAggrIntervalSeconds | Fréquence à laquelle les événements de déploiement de charge de travail en cours sont envoyés 
@@ -454,8 +457,8 @@ spec:
     # cpuRequest: '500m'
     # memRequest: '500Mi'
 
-    # # Interval in minutes after which a non-successful deployment of a workload will be marked as failed
-    # failureDeclarationIntervalMins: '30'
+    # # Interval after which a non-successful deployment of a workload will be marked as failed, in seconds
+    # workloadFailureDeclarationIntervalSeconds: '30'
 
     # # Frequency at which workload deployment in-progress events are sent
     # deployAggrIntervalSeconds: '300'

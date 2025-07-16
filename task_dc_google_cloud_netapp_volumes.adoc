@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_google_cloud_netapp_volumes.html 
-summary: Configurez le collecteur de données Google Cloud NetApp volumes 
+summary: Configurer le collecteur de données Google Cloud NetApp Volumes . 
 keywords: data collector, queries, create, google, cloud, volumes, 
 ---
-= Collecteur de données NetApp Google Cloud NetApp volumes
+= Collecteur de données Google Cloud NetApp Volumes
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ keywords: data collector, queries, create, google, cloud, volumes,
 
 
 [role="lead"]
-Ce collecteur de données prend en charge la collecte d'inventaire et de performances à partir des configurations de plateforme cloud Google NetApp Cloud volumes. Ce collecteur cherchera à découvrir toutes les ressources de calcul au sein de tous les projets au sein d'une organisation Google. Si vous souhaitez découvrir plusieurs entreprises Google à l'aide de Data Infrastructure Insights, vous pouvez déployer un collecteur Data Infrastructure Insights par entreprise.
+Ce collecteur de données prend en charge l'inventaire et la collecte des performances à partir des configurations Google Cloud NetApp Volumes . Il détecte les volumes NetApp et les ressources de stockage de tous les projets d'une organisation Google. Si vous souhaitez surveiller plusieurs organisations Google avec Data Infrastructure Insights, déployez un collecteur par organisation.
 
 
 
 == Exigences de compte de service
 
-* Vous devez créer un compte de service en suivant les instructions de la section link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Création/gestion de comptes de service"]. Ce compte de service est identifié par un ID unique, appelé _ClientID_, qui sera utilisé comme nom d'utilisateur.
+* Vous devez créer un compte de service en suivant les instructions de la section link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Création/gestion de comptes de service"]. Ce compte de service est identifié par un identifiant unique, appelé _clientId_, qui sera utilisé comme nom d'utilisateur.
 * En outre, créez une clé de compte de service en suivant les instructions de la section link:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["Création/gestion des clés de compte de service"]. Cette clé peut être téléchargée en tant que fichier json dont le contenu sera utilisé comme mot de passe.
 * Le compte de service doit être étendu pour _Compute.readonly_, _monitoring.read_ et _cloud-Platform_.
 
@@ -29,7 +29,7 @@ Ce collecteur de données prend en charge la collecte d'inventaire et de perform
 
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -40,7 +40,7 @@ Ce collecteur de données prend en charge la collecte d'inventaire et de perform
 | Choisissez « exclure » ou « inclure » pour filtrer les ressources GCNV par emplacement | Cette valeur par défaut est exclure, car ce collecteur a par défaut l'intention de découvrir tous les volumes GCNV dans le monde entier au sein de votre organisation. 
 
 
-| Emplacements d'exclusion/d'inclusion GCNV | Par défaut, ce champ est vide et est utilisé en conjonction avec l'option « choisir l'exclusion » ou « inclure ». Si l'on veut seulement découvrir des actifs dans certaines régions du monde, ces 2 options peuvent être manipulées pour limiter la portée de ce collecteur 
+| Emplacements d'exclusion/d'inclusion GCNV | Cette option est vide par défaut et est utilisée conjointement avec l'option « Choisir entre Exclure et Inclure ». Si vous souhaitez découvrir des ressources uniquement dans certaines régions, utilisez ces deux options pour limiter la portée de ce collecteur. 
 
 
 | ID de projet | La liste des ID de projet que vous souhaitez filtrer ou retirer de la découverte, en fonction de la valeur de la valeur choisir « exclure ».... La liste par défaut est vide 
@@ -55,7 +55,7 @@ Ce collecteur de données prend en charge la collecte d'inventaire et de perform
 
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -63,7 +63,7 @@ Ce collecteur de données prend en charge la collecte d'inventaire et de perform
 | Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 minutes 
 
 
-| Utilisez le proxy au pour les appels API REST | Cette case à cocher permet au collecteur d'utiliser le même proxy que l'au sur lequel le collecteur vit. Cette option n'est pas activée par défaut, ce qui signifie que le collecteur tentera d'envoyer des appels API HTTPS directement à Google. 
+| Utilisez le proxy au pour les appels API REST | Sélectionnez cette option pour que le collecteur utilise le même proxy que l'unité d'acquisition sur laquelle il réside. Par défaut, cette option est désactivée, ce qui signifie que le collecteur tente d'envoyer des appels API HTTPS directement à Google. 
 
 
 | Étiqueter les clés et les valeurs sur lesquelles filtrer les VM | Cliquez sur *+ Filter Label* pour choisir les VM (et les disques associés) à inclure/exclure en filtrant les clés et les valeurs correspondant aux clés et aux valeurs des étiquettes de la VM. La clé d'étiquette est requise, la valeur d'étiquette est facultative. Lorsque la valeur d'étiquette est vide, la machine virtuelle est filtrée tant qu'elle correspond à la clé d'étiquette. 
