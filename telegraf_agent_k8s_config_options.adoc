@@ -158,6 +158,9 @@ Le tableau ci-dessous répertorie les options possibles pour le fichier _AgentCo
 |  | Event-exportateur-maxEventAgeSeconds | âge max. de l'événement de l'exportateur d'événement. Voir https://github.com/jkroepke/resmoio-kubernetes-event-exporter[] 
 
 
+|  | chemin du journal du conteneur de bits fluides | Par défaut, le DaemonSet Fluentbit monte les chemins d'accès /var/log et /var/lib/docker/containers pour accéder aux journaux des conteneurs Kubernetes et les lire. Si Kubernetes a été configuré pour placer les journaux des conteneurs dans un emplacement autre que celui par défaut, utilisez cette option pour modifier le DaemonSet Fluentbit afin de monter ce chemin. 
+
+
 | mappe des charges de travail |  | Options de configuration permettant de personnaliser la collection de cartes de charge de travail et l'installation de l'opérateur. 
 
 
@@ -421,6 +424,11 @@ spec:
     # fluent-bit-memLimit: '1Gi'
     # fluent-bit-cpuRequest: '50m'
     # fluent-bit-memRequest: '100Mi'
+
+    # By default, the Fluentbit DaemonSet will mount the /var/log and /var/lib/docker/containers host paths to access/read the
+    # Kubernetes container logs.  If Kubernetes has been configured to place container logs in a non-default location, use
+    # this option to modify the Fluentbit DaemonSet to mount the non-default path.
+    # fluent-bit-containerLogPath
 
   # # Settings for the Network Performance and Map feature.
   # workload-map:

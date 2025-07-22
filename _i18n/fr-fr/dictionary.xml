@@ -12667,4 +12667,6 @@
   <block id="c84711fe6ad5fa23070462b2086412e2" category="cell">une liste séparée par des virgules de ressources pour lesquelles kube-state-metrics doit capturer les étiquettes +++ exemple : cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++</block>
   <block id="f7b8b6cbce2f95ef7109d41adce08b69" category="cell">workloadFailureDeclarationIntervalSeconds</block>
   <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">Intervalle après lequel un déploiement infructueux d'une charge de travail sera marqué comme ayant échoué, en secondes</block>
+  <block id="8edfed76354af11279c58c2d91948eda" category="cell">chemin du journal du conteneur de bits fluides</block>
+  <block id="3150c73f1d1522f3b831f0d591077194" category="cell">Par défaut, le DaemonSet Fluentbit monte les chemins d'accès /var/log et /var/lib/docker/containers pour accéder aux journaux des conteneurs Kubernetes et les lire. Si Kubernetes a été configuré pour placer les journaux des conteneurs dans un emplacement autre que celui par défaut, utilisez cette option pour modifier le DaemonSet Fluentbit afin de monter ce chemin.</block>
 </blocks>
