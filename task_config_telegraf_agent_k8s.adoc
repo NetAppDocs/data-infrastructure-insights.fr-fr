@@ -8,6 +8,9 @@ summary: 'L"opérateur de surveillance Kubernetes collecte les données Kubernet
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -92,7 +95,7 @@ Si vous avez effectué une mise à niveau à l'aide de la fonction de mise à ni
 
 Déterminez si une configuration d'agentConfiguration existe avec l'opérateur existant (si votre espace de noms n'est pas le _netapp-monitoring_ par défaut, remplacez l'espace de noms approprié) :
 
- kubectl -n netapp-monitoring get agentconfiguration netapp-monitoring-configuration
+ kubectl -n netapp-monitoring get agentconfiguration netapp-ci-monitoring-configuration
 Si une configuration d'agentConfiguration existe :
 
 * <<installing-the-kubernetes-monitoring-operator,Installez>> Dernier opérateur par rapport à l'opérateur existant.
@@ -325,8 +328,8 @@ Pour supprimer l'autorisation pour l'opérateur de surveillance Kubernetes d'aff
 
 [listing]
 ----
- ClusterRole/netapp-ci-<namespace>-agent-secret-clusterrole
- ClusterRoleBinding/netapp-ci-<namespace>-agent-secret-clusterrolebinding
+ ClusterRole/netapp-ci<namespace>-agent-secret
+ ClusterRoleBinding/netapp-ci<namespace>-agent-secret
 ----
 S'il s'agit d'une mise à niveau, supprimez également les ressources de votre cluster :
 
@@ -334,11 +337,12 @@ S'il s'agit d'une mise à niveau, supprimez également les ressources de votre c
 ----
  kubectl delete ClusterRole/netapp-ci-<namespace>-agent-secret-clusterrole
  kubectl delete ClusterRoleBinding/netapp-ci-<namespace>-agent-secret-clusterrolebinding
+
 ----
 Si l'option analyse des modifications est activée, modifiez _AgentConfiguration_ ou _Operator-config.yaml_ pour annuler le commentaire de la section de gestion des modifications et incluez _kindsToIgnoreFromWatch: '"secrets"'_ dans la section de gestion des modifications. Notez la présence et la position des guillemets simples et doubles dans cette ligne.
 
 ....
-# change-management:
+change-management:
   ...
   # # A comma separated list of kinds to ignore from watching from the default set of kinds watched by the collector
   # # Each kind will have to be prefixed by its apigroup

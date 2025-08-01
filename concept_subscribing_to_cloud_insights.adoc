@@ -64,7 +64,7 @@ NOTE: Si vous avez besoin de plus de temps pour évaluer les informations strat�
 
 Vous pouvez également vous inscrire pour essayer gratuitement sur AWS Marketplace. L'essai gratuit d'AWS Marketplace vous donne accès à Data Infrastructure Insights pour une période d'essai de 33 jours.
 
-La version d'essai gratuite d'AWS Marketplace ne peut pas être étendue. À tout moment pendant votre période d'essai, vous pouvez revenir à un abonnement Data Infrastructure Insights Basic Edition ou passer à un abonnement payant Data Infrastructure Insights en visitant la page *Admin -> abonnement*.
+L'essai gratuit d'AWS Marketplace ne peut pas être prolongé.
 
 
 
