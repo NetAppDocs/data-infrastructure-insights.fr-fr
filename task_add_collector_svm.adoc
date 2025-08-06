@@ -278,12 +278,12 @@ Les recommandations suivantes sont recommandées pour MetroCluster :
 
 . Connectez deux collecteurs de données, un sur le SVM source et un autre sur le SVM de destination.
 . Les collecteurs de données doivent être connectés par _Cluster IP_.
-. À tout moment, un collecteur de données doit être en cours d'exécution, un autre sera en erreur.
+. À tout moment, un collecteur de données doit être en cours d'exécution, un autre sera affiché comme _Arrêté_.
 +
-Le collecteur de données du SVM actuel « en cours d'exécution » s'affichera sous la forme _running_. Le collecteur de données du SVM « suré » actuel s'affichera sous la forme _Error_.
+Le collecteur de données du SVM « en cours d'exécution » s'affichera comme _Running_.  Le collecteur de données du SVM « arrêté » actuel s'affichera comme _Arrêté_.
 
-. En cas de basculement, l'état du collecteur de données passe de « en cours » à « erreur » et vice versa.
-. Le collecteur de données passe de l'état erreur à l'état en cours d'exécution pendant deux minutes.
+. À chaque basculement, l'état du collecteur de données passe de « en cours d'exécution » à « arrêté » et vice versa.
+. Il faudra jusqu'à deux minutes au collecteur de données pour passer de l'état _Arrêté_ à l'état _En cours d'exécution_.
 
 
 
