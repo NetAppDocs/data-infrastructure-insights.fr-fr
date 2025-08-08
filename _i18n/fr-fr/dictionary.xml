@@ -12655,8 +12655,6 @@
   <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">Intervalle après lequel un déploiement infructueux d'une charge de travail sera marqué comme ayant échoué, en secondes</block>
   <block id="8edfed76354af11279c58c2d91948eda" category="cell">chemin du journal du conteneur de bits fluides</block>
   <block id="3150c73f1d1522f3b831f0d591077194" category="cell">Par défaut, le DaemonSet Fluentbit monte les chemins d'accès /var/log et /var/lib/docker/containers pour accéder aux journaux des conteneurs Kubernetes et les lire. Si Kubernetes a été configuré pour placer les journaux des conteneurs dans un emplacement autre que celui par défaut, utilisez cette option pour modifier le DaemonSet Fluentbit afin de monter ce chemin.</block>
-  <block id="7e5bd63d855501c5e08449ea5b593ee7" category="summary">surveiller la santé des infrastructures</block>
-  <block id="48f51aa9a5737857bbd298bfb874281e" category="doc">Surveiller la santé de l'infrastructure</block>
   <block id="a2c6fd0b23854404c386430346919db8" category="paragraph">Le <block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> Offre de nombreuses options de personnalisation via le fichier AgentConfiguration. Vous pouvez configurer les limites de ressources, les intervalles de collecte, les paramètres de proxy, les tolérances et les paramètres spécifiques aux composants afin d'optimiser la surveillance de votre environnement Kubernetes. Utilisez ces options pour personnaliser Telegraf, Kube-State-Metrics, la collecte des journaux, le mappage des charges de travail, la gestion des modifications et d'autres composants de surveillance.</block>
   <block id="ea55ba51f0b69383ec5bb89cabada638" category="cell">Une substitution DockerRepo permet d'extraire les images des référentiels Docker privés du client plutôt que du référentiel Docker Data Infrastructure Insights . Le référentiel Docker Data Infrastructure Insights est utilisé par défaut.</block>
   <block id="8e8bb119221ff93e3f93bea9ae89444f" category="cell">Facultatif : un secret pour le référentiel privé du client.</block>
@@ -12667,8 +12665,9 @@
   <block id="fb937d63289578595fb05fc626554661" category="cell">nonWorkloadDeployAggrIntervalSeconds</block>
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">Fréquence à laquelle les déploiements hors charge de travail sont combinés et envoyés, en secondes</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">L'essai gratuit d'AWS Marketplace ne peut pas être prolongé.</block>
-  <block id="f9140e559462604832a886e4eb558360" category="list-text">À tout moment, un collecteur de données doit être en cours d'exécution, un autre sera affiché comme _Arrêté_.</block>
-  <block id="a2c39bece4ce05e23c13d7dc078d390f" category="paragraph">Le collecteur de données du SVM « en cours d'exécution » s'affichera comme _Running_.  Le collecteur de données du SVM « arrêté » actuel s'affichera comme _Arrêté_.</block>
-  <block id="e02fc5a08fc17a2cc71f90cc044645af" category="list-text">À chaque basculement, l'état du collecteur de données passe de « en cours d'exécution » à « arrêté » et vice versa.</block>
   <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">Il faudra jusqu'à deux minutes au collecteur de données pour passer de l'état _Arrêté_ à l'état _En cours d'exécution_.</block>
+  <block id="da3fe25b9ad7a2bbb8f75a52d2d39828" category="summary">Surveiller la santé de l'infrastructure</block>
+  <block id="0513a990ff8b7eb9d4d9e530e812b450" category="paragraph">Le collecteur de données ONTAP SVM permet à Workload Security de surveiller les activités d'accès aux fichiers et aux utilisateurs sur les machines virtuelles de stockage NetApp ONTAP (SVM).  Ce guide vous guide à travers les prérequis, la configuration et la gestion du collecteur de données SVM pour fournir une surveillance de sécurité complète de votre environnement ONTAP .</block>
+  <block id="57da797adb74a055edb3de9c7e734b65" category="list-text">À tout moment, le collecteur de données du SVM « en cours d'exécution » s'affichera comme _Running_. Le collecteur de données du SVM « arrêté » actuel s'affichera comme _Arrêté_.</block>
+  <block id="61dcd000a72340c1c72d4c7a96c2ec90" category="list-text">À chaque basculement, l'état du collecteur de données passe de _Running_ à _Stopped_ et vice versa.</block>
 </blocks>

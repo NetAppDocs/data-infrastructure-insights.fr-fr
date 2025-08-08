@@ -14,7 +14,7 @@ summary: Ajout de collecteurs de données de sécurité de la charge de travail
 
 
 [role="lead"]
-La sécurité de la charge de travail utilise des collecteurs de données pour collecter les données d'accès des fichiers et des utilisateurs à partir de terminaux.
+Le collecteur de données ONTAP SVM permet à Workload Security de surveiller les activités d'accès aux fichiers et aux utilisateurs sur les machines virtuelles de stockage NetApp ONTAP (SVM).  Ce guide vous guide à travers les prérequis, la configuration et la gestion du collecteur de données SVM pour fournir une surveillance de sécurité complète de votre environnement ONTAP .
 
 
 
@@ -278,11 +278,8 @@ Les recommandations suivantes sont recommandées pour MetroCluster :
 
 . Connectez deux collecteurs de données, un sur le SVM source et un autre sur le SVM de destination.
 . Les collecteurs de données doivent être connectés par _Cluster IP_.
-. À tout moment, un collecteur de données doit être en cours d'exécution, un autre sera affiché comme _Arrêté_.
-+
-Le collecteur de données du SVM « en cours d'exécution » s'affichera comme _Running_.  Le collecteur de données du SVM « arrêté » actuel s'affichera comme _Arrêté_.
-
-. À chaque basculement, l'état du collecteur de données passe de « en cours d'exécution » à « arrêté » et vice versa.
+. À tout moment, le collecteur de données du SVM « en cours d'exécution » s'affichera comme _Running_. Le collecteur de données du SVM « arrêté » actuel s'affichera comme _Arrêté_.
+. À chaque basculement, l'état du collecteur de données passe de _Running_ à _Stopped_ et vice versa.
 . Il faudra jusqu'à deux minutes au collecteur de données pour passer de l'état _Arrêté_ à l'état _En cours d'exécution_.
 
 
