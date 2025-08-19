@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: infrastructure_change_analytics.html 
 keywords: changes, management, analysis, infra, infrastructure 
-summary: 'Cloud Insights effectue le suivi des modifications de l"infrastructure pour faciliter l"analyse et la résolution de problèmes.' 
+summary: 'Data Infrastructure Insights suit les changements dans l"infrastructure pour faciliter l"analyse et le dépannage.' 
 ---
 = Analyse des modifications de l'infrastructure
 :hardbreaks:

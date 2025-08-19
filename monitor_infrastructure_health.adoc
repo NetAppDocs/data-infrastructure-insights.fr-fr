@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: monitor_infrastructure_health.html 
-keywords: health, monitor, infrastructure 
-summary: 'Surveiller la santé de l"infrastructure' 
+keywords: infra, infrastructure, health, monitor 
+summary: Surveillez l’état de l’infrastructure avec une notation unifiée basée sur les performances, la capacité, la configuration et les alertes de composants pour une résolution proactive des problèmes. 
 ---
 = Surveiller la santé de l'infrastructure
 :hardbreaks:
@@ -14,4 +14,55 @@ summary: 'Surveiller la santé de l"infrastructure'
 
 
 [role="lead"]
-Surveiller la santé de l'infrastructure
+Data Infrastructure Insights fournit une surveillance complète de l'état de l'infrastructure qui suit les performances, la capacité, la configuration et l'état des composants de votre environnement de stockage.  Les scores de santé sont calculés en fonction des alertes de surveillance dans ces catégories, vous offrant une vue unifiée de la santé du système et permettant une résolution proactive des problèmes.
+
+
+
+== Le tableau de bord de l'état de santé des infrastructures
+
+
+NOTE: La surveillance de la santé des infrastructures est unelink:concept_preview_features.html["Aperçu"] fonctionnalité et est sujette à changement.
+
+Accédez à *Observabilité > Analyser* et sélectionnez *Santé de l'infrastructure*.  Le tableau de bord fournit un aperçu de l'état de votre système, en fonction des catégories d'alertes et des scores du moniteur, comme expliqué ci-dessous.  Définissez des filtres en haut pour affiner le champ de votre enquête.
+
+image:infra_health_main_screen.png["aperçu de la santé des infrastructures"]
+
+Par défaut, les scores de santé sont regroupés par centre de données ; vous pouvez sélectionner le regroupement qui convient le mieux à votre session.
+
+
+
+== Configurer les moniteurs à utiliser pour la santé de l'infrastructure
+
+Les scores de santé sont déterminés par des alertes configurées pour être incluses dans les calculs de santé du système.
+
+Lors de la création d'un moniteur pour un objet d'infrastructure, vous pouvez choisir d'inclure ou non les alertes du moniteur dans les calculs.  Au bas de l’écran, développez la Configuration avancée et sélectionnez _Inclure dans le calcul de l’état de l’infrastructure_.  Sélectionnez une catégorie à laquelle appliquer le calcul pour le moniteur :
+
+* *Santé des composants* - panne de ventilateur, processeur de service hors ligne, etc.
+* *Santé des performances* - utilisation élevée des nœuds de stockage, pic anormal de latence des nœuds, etc.
+* *Capacité Santé* - La capacité du pool de stockage approche de sa pleine capacité, espace insuffisant pour l'instantané LUN, etc.
+* *Santé de la configuration* - niveau cloud inaccessible, relation SnapMirror désynchronisée, etc.
+
+
+image:infra_health_monitor_advanced_config.png["surveiller la configuration avancée à ajouter aux calculs de santé, largeur = 400"]
+
+
+
+== Les scores de santé expliqués
+
+Les scores sont présentés sur une échelle de 0 à 100, 100 correspondant à une santé complète.  Les objets d'infrastructure surveillés qui rencontrent actuellement ou récemment des problèmes réduiront ce score en fonction des moyennes pondérées suivantes :
+
+* Composants, performances ou capacité : 30 % chacun
+* Configuration : 10%
+
+
+Les scores de santé sont affectés par les alertes générées par les moniteurs que vous avez configurés pour être inclus dans les calculs de santé de l'infrastructure des manières suivantes :
+
+* Les alertes critiques réduisent le score de santé du poids de la catégorie _complète_
+* Les alertes d'avertissement réduisent le score de _la moitié_ du poids de la catégorie.
+
+
+Si certaines catégories ne sont pas déclarées, la moyenne pondérée sera ajustée en conséquence.
+
+Par exemple : 1 alerte critique sur les composants (-30) et 1 alerte d’avertissement sur les performances (50 % de 30 = -15) donnent un score de santé de 55 (100 moins 45).
+
+Lorsque les alertes sont résolues, ces réductions de score de santé s'estompent progressivement et le score se rétablit complètement dans les 2 heures.

@@ -83,7 +83,7 @@ sidebar:
       - title: Modification ou suppression d'une requête
         url: "/task_modify_delete_query.html"
       - title: Affectation de plusieurs applications/annotations à des objets
-        url: "/task_query_assign_multiple_applicationss.html"
+        url: "/task_query_assign_multiple_applications.html"
       - title: Copie des valeurs de table dans le presse-papiers
         url: "/task_query_copy_table_values.html"
       - title: Interrogation des journaux
@@ -172,6 +172,8 @@ sidebar:
         url: "/san_analyzer_overview.html"
       - title: Analyseur de machines virtuelles
         url: "/vm_analyzer_overview.html"
+      - title: Surveiller la santé de l'infrastructure
+        url: "/monitor_infrastructure_health.html"
     - title: Création de rapports
       entries:
       - title: Présentation des rapports
