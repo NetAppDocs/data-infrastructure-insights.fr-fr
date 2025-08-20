@@ -27,7 +27,7 @@ Cliquez sur *Forensics > activité Forensics* et cliquez sur l'onglet *toutes le
 Vous pouvez zoomer sur le graphique en faisant glisser un rectangle dans le graphique. La page entière sera chargée pour afficher la plage de temps agrandie. Lorsque vous effectuez un zoom avant, un bouton s'affiche pour permettre à l'utilisateur d'effectuer un zoom arrière.
 
 * Une liste des données _All Activity_.
-* Une liste déroulante regrouper par permet de regrouper l'activité par utilisateur, chemin, type d'entité, etc
+* Un groupe par liste déroulante offrira la possibilité de regrouper l'activité par utilisateurs, type d'entité, etc.
 * Un bouton de chemin d'accès commun sera disponible au-dessus du tableau en un clic, et nous pouvons obtenir un panneau coulissant avec les détails du chemin d'accès de l'entité.
 
 
