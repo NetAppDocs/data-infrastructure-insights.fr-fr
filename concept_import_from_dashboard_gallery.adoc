@@ -1,27 +1,47 @@
 ---
 sidebar: sidebar 
 permalink: concept_import_from_dashboard_gallery.html 
-summary: 'Vous pouvez importer les tableaux de bord recommandés pour répondre aux questions d"analyse de l"activité.' 
-keywords: dashboard, gallery, import 
+summary: 'Vous pouvez importer des tableaux de bord recommandés pour vous aider à répondre aux questions d"analyse commerciale.  Vous pouvez également importer des tableaux de bord personnalisés que vous avez précédemment exportés.' 
+keywords: dashboard, gallery, import, export 
 ---
-= Importation à partir de la galerie de tableaux de bord
+= Importation de tableaux de bord
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights fournit un certain nombre de tableaux de bord recommandés pour fournir des informations stratégiques sur vos données. Chaque tableau de bord contient des widgets conçus pour vous aider à répondre à une question particulière ou à résoudre un problème particulier concernant les données actuellement collectées sur votre locataire.
+Data Infrastructure Insights fournit un certain nombre de tableaux de bord recommandés pour fournir des informations commerciales sur vos données.  Chaque tableau de bord contient des widgets conçus pour aider à répondre à une question particulière ou à résoudre un problème particulier lié aux données actuellement collectées sur votre locataire.  DII vous permet également d'exporter un tableau de bord utile et de l'importer vers un autre locataire.
+
+
+
+== Importation à partir de la galerie de tableaux de bord
 
 Pour importer un tableau de bord à partir de la galerie, procédez comme suit :
 
-. Sélectionnez *tableaux de bord > tableaux de bord*
-. Cliquez sur *+dans Galerie*
+. Sélectionnez *Observabilité > Explorer > Tous les tableaux de bord*
+. Cliquez sur *+Importer le tableau de bord* et choisissez _Importer depuis la galerie_.
 +
-Une liste de *tableaux de bord recommandés* s'affiche. Chaque tableau de bord est nommé avec une question spécifique que le tableau de bord peut vous aider à résoudre. Des tableaux de bord permettent de répondre aux questions concernant différents types d'objets, notamment AWS, NetApp, le stockage, VMware, et autres
+Une liste de *tableaux de bord recommandés* s'affiche, en fonction des collecteurs de données de votre environnement.  Des tableaux de bord sont disponibles pour aider à répondre aux questions sur différents types d'objets, notamment AWS, NetApp, Storage, VMware et autres.
 
-. Sélectionnez un ou plusieurs tableaux de bord dans la liste et cliquez sur *Ajouter tableaux de bord*. Ces tableaux de bord s'affichent à présent dans votre liste de bord.
+. Sélectionnez un ou plusieurs tableaux de bord dans la liste et cliquez sur *Ajouter des tableaux de bord*.  Ces tableaux de bord s'afficheront dans votre liste de tableaux de bord.
 
 
 En plus des tableaux de bord recommandés, vous pouvez également choisir d'importer *tableaux de bord supplémentaires* qui ne sont pas pertinents pour vos données actuelles. Par exemple, si aucun collecteur de données de stockage n'est actuellement installé mais que vous prévoyez de le configurer ultérieurement, vous pouvez toujours choisir d'importer les tableaux de bord pertinents pour le stockage. Ces tableaux de bord seront disponibles à l'affichage mais ne peuvent pas afficher les données pertinentes tant qu'au moins un collecteur de données de stockage n'est pas configuré.
 
 L'importation à partir de la galerie du tableau de bord est accessible aux utilisateurs ayant le rôle Administrateur ou propriétaire du compte.
+
+
+
+== Importer un tableau de bord exporté
+
+Pour *exporter* un tableau de bord, sur la page *Observabilité > Explorer > Tous les tableaux de bord*, cliquez sur le menu à droite du tableau de bord et choisissez _Exporter_.  Vous pouvez également sélectionner plusieurs tableaux de bord et choisir _Exporter_ dans la liste déroulante _Actions en masse_.  Les tableaux de bord sont enregistrés dans un fichier .ZIP sur votre système local.
+
+Pour *importer* le tableau de bord, accédez au locataire souhaité et procédez comme suit :
+
+. Sélectionnez *Observabilité > Explorer > Tous les tableaux de bord*
+. Cliquez sur *+Importer le tableau de bord* et choisissez _Importer à partir d'un fichier_.  Sélectionnez le .ZIP du fichier que vous avez précédemment exporté.  Le(s) tableau(x) de bord seront importés et s'afficheront dans votre liste de tableaux de bord.  Notez que si vous importez un tableau de bord portant le même nom qu'un tableau de bord existant, un « (2) » sera ajouté au nom du tableau de bord.
+

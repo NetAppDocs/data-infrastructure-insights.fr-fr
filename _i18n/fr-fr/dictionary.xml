@@ -3480,13 +3480,8 @@
   <block id="de611c8e9567515efd9824b262d8d9e1" category="paragraph">L'implémentation d'une politique de QoS par charge de travail pour garantir qu'un nombre suffisant de ressources disponibles permettra de réduire la saturation sur le pool de stockage. Il s'agit d'une solution à long terme.</block>
   <block id="5d43336b0046b068224b4a4c606863ba" category="list-text">Ajoutez des ressources supplémentaires</block>
   <block id="31fa4ab3e19080703e914efb949bbced" category="paragraph">Si la ressource partagée (par exemple, Storage Pool) a atteint le point de saturation IOPS, l'ajout de disques plus ou plus rapides au pool garantit que suffisamment de ressources disponibles pour réduire la saturation.</block>
-  <block id="4e2217a1fba6817d301befaa05659074" category="summary">Vous pouvez importer les tableaux de bord recommandés pour répondre aux questions d'analyse de l'activité.</block>
   <block id="cfa4bbfe8fe25421b55d6bc77170da89" category="doc">Importation à partir de la galerie de tableaux de bord</block>
   <block id="62a23650084673f5c844edf6588b4cbc" category="paragraph">Pour importer un tableau de bord à partir de la galerie, procédez comme suit :</block>
-  <block id="5c42bfffed923b7136ae5aee981826dd" category="list-text">Sélectionnez *tableaux de bord &gt; tableaux de bord*</block>
-  <block id="bb6ec7619f5b7d24eeed488d054902d5" category="list-text">Cliquez sur *+dans Galerie*</block>
-  <block id="58e1b019dfb18a656bddd772932b2be5" category="paragraph">Une liste de *tableaux de bord recommandés* s'affiche. Chaque tableau de bord est nommé avec une question spécifique que le tableau de bord peut vous aider à résoudre. Des tableaux de bord permettent de répondre aux questions concernant différents types d'objets, notamment AWS, NetApp, le stockage, VMware, et autres</block>
-  <block id="4915483ae3205b553b3e977503ffdcc5" category="list-text">Sélectionnez un ou plusieurs tableaux de bord dans la liste et cliquez sur *Ajouter tableaux de bord*. Ces tableaux de bord s'affichent à présent dans votre liste de bord.</block>
   <block id="09339c347014dcb0ab0269c229d7014b" category="paragraph">En plus des tableaux de bord recommandés, vous pouvez également choisir d'importer *tableaux de bord supplémentaires* qui ne sont pas pertinents pour vos données actuelles. Par exemple, si aucun collecteur de données de stockage n'est actuellement installé mais que vous prévoyez de le configurer ultérieurement, vous pouvez toujours choisir d'importer les tableaux de bord pertinents pour le stockage. Ces tableaux de bord seront disponibles à l'affichage mais ne peuvent pas afficher les données pertinentes tant qu'au moins un collecteur de données de stockage n'est pas configuré.</block>
   <block id="486f30ea223e9ebeeba1fe336355cc78" category="paragraph">L'importation à partir de la galerie du tableau de bord est accessible aux utilisateurs ayant le rôle Administrateur ou propriétaire du compte.</block>
   <block id="5976a9e9a3634f5fad61b59fc6e5f3b1" category="summary">Vous pouvez filtrer les objets qui sont directement liés à l'actif actuel.</block>
@@ -8650,9 +8645,6 @@
   <block id="551df464e5bd2444d259057c7eacc9f7" category="list-text">Métriques de volume persistant</block>
   <block id="7e75de4210a4f75b62291d2c27cdf70b" category="list-text">Metrics de demande de volume persistant</block>
   <block id="7fc93683f45a50f207241b90641f402b" category="list-text">Metrics de pod</block>
-  <block id="0017245fe792a61975ebc02c48b109c5" category="list-text">Metrics de réplicaet</block>
-  <block id="de3e236a6c33c06117bf9ae35e2b9bb0" category="list-text">Metrics de services</block>
-  <block id="e0c0cc3c69b0271b0179dc71d1e9bfa7" category="list-text">Metrics StatefulSet</block>
   <block id="d500a402a0f4d5ab2dedb2c5a7ec2eaf" category="summary">Configuration du collecteur de données Memcached</block>
   <block id="0f5c57f0abc7ee69be3379cf9f5ede78" category="doc">Collecteur de données Memcached</block>
   <block id="0bcc6251db330c98836511cffac20f00" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des mesures à partir de Memcached.</block>
@@ -11081,7 +11073,6 @@
   <block id="555fd4883eff42c3c7a47a8af5c0d4c2" category="summary">Ces informations vous permettent d'examiner l'impact des ressources sur les autres ressources de votre locataire.</block>
   <block id="e59c6b6bc918194e22abd3fa59a5ca7d" category="paragraph">Les charges de travail à fort impact peuvent réduire les performances d'autres workloads d'une ressource partagée. Les informations sur l'infrastructure de données fournissent des outils qui vous aident à étudier la saturation des ressources et l'impact sur votre locataire.</block>
   <block id="509083e073a2e0f15ee1570b73d69d00" category="paragraph">Vous pouvez prendre plusieurs mesures pour réduire ou éliminer le risque de saturation de votre locataire. Voici quelques choses que vous pouvez essayer.</block>
-  <block id="1f2b15694262ada8f944efcce4011d38" category="paragraph">Data Infrastructure Insights fournit un certain nombre de tableaux de bord recommandés pour fournir des informations stratégiques sur vos données. Chaque tableau de bord contient des widgets conçus pour vous aider à répondre à une question particulière ou à résoudre un problème particulier concernant les données actuellement collectées sur votre locataire.</block>
   <block id="4bbf5764e6c6a35690454c3eba30942e" category="paragraph">Lors de la configuration d'un widget sur la page d'accueil d'une ressource, vous pouvez définir des filtres _dans-contexte_ pour afficher uniquement les objets directement liés à l'actif actuel. Par défaut, lorsque vous ajoutez un widget, les objets _all_ du type sélectionné sur votre locataire s'affichent. Les filtres dans le contexte vous permettent d'afficher uniquement les données pertinentes pour votre ressource actuelle.</block>
   <block id="a810d449fa071ebf1cdba77afdf17361" category="paragraph">Par exemple, sur une page Storage Asset, vous pouvez ajouter un widget Bar Chart pour afficher les IOPS les plus élevées sur les volumes internes uniquement sur ce stockage. Par défaut, lorsque vous ajoutez un widget, _all_ volumes internes sur votre tenant s'affichent.</block>
   <block id="d8f350e48dd09b31c8d65dc6fc5985f8" category="paragraph">Pour dissocier les données de l'objet, modifiez le widget et cliquez sur l'icône de lien en regard du type d'objet. Le lien devient désactivé et le graphique affiche les données de _tous_ objets sur votre locataire.</block>
@@ -11902,8 +11893,6 @@
   <block id="9f4478aaba51d401f2aa6f72291db2c4" category="list-text">9.8.0P7</block>
   <block id="0040df68d204b4266db9420b2bd9165c" category="list-text">9.8.0P8</block>
   <block id="5ccc1d7c927ab6348c87a26b1d4df138" category="list-text">9.8.0P9</block>
-  <block id="214f5cb6ee4c43e9856f8c8c4a4497fa" category="list-text">9.9.0</block>
-  <block id="67c6ecbcd91c613e8659b3f0c4b01510" category="list-text">9.9.1</block>
   <block id="3a4b029b3c2e71cb6764a2c18e652488" category="list-text">9.9.1P10</block>
   <block id="46e5a6ca96917b5474029bbaac860801" category="list-text">9.9.1P11</block>
   <block id="203468c884044389db8d0082e97d7fdb" category="list-text">9.9.1P12</block>
@@ -11923,26 +11912,6 @@
   <block id="f6d334c5abfc986211c0472ba79714a7" category="list-text">9.9.1P9</block>
   <block id="265835728543cddb55a9e9c7cc79f48b" category="cell">ASA-A1K ASA-A20 ASA-A90</block>
   <block id="b186a55ab6e895af5dbbc598dba3d2c9" category="cell">AFF-A150 AFF-A220 AFF-A250 ASA-A300 ASA-A400 ASA-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C190 AFF-C250 AFF-C400 AFF-C800 AFF-A250 AFF-A400 AFF-A800 ASA-C250 ASA-C800 CDvM200 FAS2720 FAS2750 FAS2820 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX</block>
-  <block id="4c0a8dc21a8419b47120aceea8e1125d" category="list-text">NetappRelease 9.14.1P10: Jeu nov 28 12:32:16 UTC 2024</block>
-  <block id="bd8781e094b04996c9da26acdb31835b" category="list-text">NetappRelease 9.14.1P11: Mercredi 22 11:55:28 UTC 2025</block>
-  <block id="9681072c1ea9c013348ab66f6e07671c" category="list-text">NetappRelease 9.14.1P1 : jeu fév 15 00:45:21 UTC 2024</block>
-  <block id="bf8eab24cb02461594da1045e213930e" category="list-text">NetappRelease 9.14.1P4: Jeu Avr 18 15:59:10 UTC 2024</block>
-  <block id="eb0703ee609d4fa35d49740db94c46ff" category="list-text">NetappRelease 9.14.1P5: Sam 18 19:42:16 UTC 2024</block>
-  <block id="675a5dc32854b0e9a37ab836ff3d2ff5" category="list-text">NetappRelease 9.14.1P6: Mar juin 18 16:11:44 UTC 2024</block>
-  <block id="1edaa5e1ef58d0b172ae73aed3f0ce7d" category="list-text">NetappRelease 9.14.1P7: Jeu août 01 03:07:44 UTC 2024</block>
-  <block id="7dd8a7b0082420d42d35a2ef42b26403" category="list-text">NetappRelease 9.14.1P8: Ven Sep 13 07:12:27 UTC 2024</block>
-  <block id="50170e8f644d8478279324b20d68697b" category="list-text">NetappRelease 9.14.1P9: LUN Oct 21 18:04:05 UTC 2024</block>
-  <block id="08925be9345315a2b43d75f76557ffc3" category="list-text">NetappRelease 9.15.1: Jeu Jul 04 12:21:07 UTC 2024</block>
-  <block id="1b03996435ea4659e34dbc3be7e4faf5" category="list-text">NetappRelease 9.15.1P1: Mar Jul 30 05:15:49 UTC 2024</block>
-  <block id="1b45216cf6f4f6afea44d1e8e3050ec2" category="list-text">NetappRelease 9.15.1P2: Mar août 27 16:35:16 UTC 2024</block>
-  <block id="6d7a324e9dd2dee885a0fe392e254a93" category="list-text">NetappRelease 9.15.1P3: Mer Sep 25 22:33:44 UTC 2024</block>
-  <block id="eba11b6b68d1d4168edfb3c7cfe6d025" category="list-text">NetappRelease 9.15.1P4: Sun Oct 27 20:15:53 UTC 2024</block>
-  <block id="40957df94a29d3dc26d13e7fd2ea5600" category="list-text">NetappRelease 9.15.1P5: Sun Nov 24 16:31:37 UTC 2024</block>
-  <block id="bfdf678e3fa003fe7446d7e1eaedd107" category="list-text">NetappRelease 9.15.1P6: Mer Déc 04 01:42:39 UTC 2024</block>
-  <block id="5a091f5e936dc49d848c9c443a8c6ac2" category="list-text">NetappRelease 9.15.1P7: Sam 18 21:34:02 UTC 2025</block>
-  <block id="f4a2db329e641047bab00d72f457a0f3" category="list-text">NetappRelease 9.15.1RC2: Lundi 24 04 juin 49:55 UTC 2024</block>
-  <block id="5fe3118f15f475a13fd3a59f91a58a73" category="list-text">NetappRelease 9.16.1: Sam 18 19:31:15 UTC 2025</block>
-  <block id="4563b8f0209cbd3757ef3f8f3d6c367f" category="list-text">NetappRelease 9.16.1P1 : vendredi 14 03 février 53:50 UTC 2025</block>
   <block id="12017dd49435719b25983ccf8856826d" category="cell">H410S-2 H610S-2 H610S-4 SF19210 SF2405 SF9605 SF9608 H410S-0 H410S-1 H410S-2 H500S H610S-1 H610S-2 H610S-4 SF19210 SF38410 SF4805 SF9608</block>
   <block id="b8fe9bf283a2aa8fb31a26d93fefe962" category="cell">11.1.0.72 11.7.0.76 12.0.0.333 12.2.0.777 12.3.0.958 12.3.1.103 12.3.1.165 12.3.2.3 12.5.0.897 12.7.0.380</block>
   <block id="fc8e016a41c4109eeb75bb9795abff5c" category="cell">11.4.0 11.5.0.11 11.5.0.6 11.5.0.7 11.5.0.9 11.6.0 11.6.0.10 11.6.0.11 11.6.0.12 11.6.0.13 11.6.0.14 11.6.0.15 11.6.0.16 11.6.0.4 11.6.0.5 11.6.0.7 11.6.0.8 11.6.0.9 11.7.0 11.7.0.11 11.7.0.12 11.7.0.13 11.7.0.3 11.7.0.4 11.7.0.5 11.7.0.6 11.7.0.8 11.7.0.9 11.8.0 11.8.0.1 11.8.0.2 11.8.0.3 11.8.0.5 11.8.0.6 11.8.0.7 11.8.0.8 11.8.0.9 11.9.0 11.9.0.1 11.9.0.2 11.9.0.3 11.9.0.4</block>
@@ -12697,4 +12666,88 @@
   <block id="3ad17df8e0c21cd3fba4fa89d748a88e" category="paragraph">Ce collecteur de données acquiert l'inventaire, les journaux EMS et les données de performances des systèmes de stockage exécutant ONTAP 9.14.1 et versions ultérieures à l'aide d'appels d'API REST.  Pour les systèmes ONTAP sur les versions antérieures, utilisez le type de collecteur « NetApp ONTAP Data Management Software » basé sur ZAPI.</block>
   <block id="93c13f56f33b4026f411d3de7b0577a5" category="paragraph">Vous pouvez vérifier l'accès spi si nécessaire :</block>
   <block id="1895704ffbc6e56720172ab7d145f8ae" category="list-text">Un groupe par liste déroulante offrira la possibilité de regrouper l'activité par utilisateurs, type d'entité, etc.</block>
+  <block id="661407737232b02ed42fdcaccc52a989" category="summary">Vous pouvez importer des tableaux de bord recommandés pour vous aider à répondre aux questions d'analyse commerciale.  Vous pouvez également importer des tableaux de bord personnalisés que vous avez précédemment exportés.</block>
+  <block id="814e9312d5012962801c92801ada715a" category="doc">Importation de tableaux de bord</block>
+  <block id="35642875ab84f7c01f7b4f8c5b7370eb" category="paragraph">Data Infrastructure Insights fournit un certain nombre de tableaux de bord recommandés pour fournir des informations commerciales sur vos données.  Chaque tableau de bord contient des widgets conçus pour aider à répondre à une question particulière ou à résoudre un problème particulier lié aux données actuellement collectées sur votre locataire.  DII vous permet également d'exporter un tableau de bord utile et de l'importer vers un autre locataire.</block>
+  <block id="9eef967a7122bf9630405305617e4e10" category="list-text">Sélectionnez *Observabilité &gt; Explorer &gt; Tous les tableaux de bord*</block>
+  <block id="e2b9567d5ed9826f5b33cc82b6b48c9a" category="list-text">Cliquez sur *+Importer le tableau de bord* et choisissez _Importer depuis la galerie_.</block>
+  <block id="442611d1e65fccedfb24d9e93fc8d022" category="paragraph">Une liste de *tableaux de bord recommandés* s'affiche, en fonction des collecteurs de données de votre environnement.  Des tableaux de bord sont disponibles pour aider à répondre aux questions sur différents types d'objets, notamment AWS, NetApp, Storage, VMware et autres.</block>
+  <block id="c278748c03ac7c63e78a8a6b0f1df607" category="list-text">Sélectionnez un ou plusieurs tableaux de bord dans la liste et cliquez sur *Ajouter des tableaux de bord*.  Ces tableaux de bord s'afficheront dans votre liste de tableaux de bord.</block>
+  <block id="463aff751b84859089090b16df134a54" category="section-title">Importer un tableau de bord exporté</block>
+  <block id="f1960283271313cca6f2ee751bb839a4" category="paragraph">Pour *exporter* un tableau de bord, sur la page *Observabilité &gt; Explorer &gt; Tous les tableaux de bord*, cliquez sur le menu à droite du tableau de bord et choisissez _Exporter_.  Vous pouvez également sélectionner plusieurs tableaux de bord et choisir _Exporter_ dans la liste déroulante _Actions en masse_.  Les tableaux de bord sont enregistrés dans un fichier .ZIP sur votre système local.</block>
+  <block id="e904d613acedfd47857c01a3e83288d5" category="paragraph">Pour *importer* le tableau de bord, accédez au locataire souhaité et procédez comme suit :</block>
+  <block id="85115996868406c3be7d22031546ea8b" category="list-text">Cliquez sur *+Importer le tableau de bord* et choisissez _Importer à partir d'un fichier_.  Sélectionnez le .ZIP du fichier que vous avez précédemment exporté.  Le(s) tableau(x) de bord seront importés et s'afficheront dans votre liste de tableaux de bord.  Notez que si vous importez un tableau de bord portant le même nom qu'un tableau de bord existant, un « (2) » sera ajouté au nom du tableau de bord.</block>
+  <block id="f2b8b6f430b7f576184932457a175ac1" category="section-title">Août 2025</block>
+  <block id="167709a15fc0d6657761385112f15f73" category="section-title">Des données de widgets ciblées à portée de main</block>
+  <block id="db7189d1904b9f82df7ba474de3b5d0d" category="paragraph">La nouvelle fonctionnalité *Analyser* présente dans la plupart des widgets vous permet d'examiner de plus près les données d'un widget à la fois.  Cliquez simplement sur le bouton « Analyser » d'un widget pour ouvrir une vue détaillée, dans laquelle vous pouvez explorer de manière interactive les données sous-jacentes et zoomer pour obtenir des informations plus approfondies, sans quitter le contexte de votre tableau de bord.</block>
+  <block id="864b1bff1874e25af8024845e3fbeb99" category="inline-image-macro">Panneau d'analyse pour un widget de ligne, largeur = 900</block>
+  <block id="a9a44d8e75f0b85161593898087378ac" category="paragraph"><block ref="a9a44d8e75f0b85161593898087378ac" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2640cf729f998c5a4772d0d262b634bc" category="section-title">Exporter et importer des tableaux de bord</block>
+  <block id="b969de8ef716c961d11e0e3ab0669b4d" category="paragraph">Si vous gérez plusieurs locataires et avez développé un tableau de bord utile, vous pouvez exporter le tableau de bord et l'importer vers un autre locataire.</block>
+  <block id="8ac2d419ae9640f919d87ed9aab07913" category="inline-image-macro">image montrant l'importation</block>
+  <block id="e6756ef648d9fdab32540f840d7d467d" category="inline-image-macro">image montrant l'exportation</block>
+  <block id="fc08aca1b74b0619d3bc578bcce17902" category="paragraph"><block ref="3c0f316e0f8c7b9ef139fe5a122cb32e" category="inline-image-macro-rx" type="image"></block> <block ref="73ab4d5e4caf622ddb726a40d9a6158c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5334ca7adcf8bd049e2327925d078254" category="section-title">Intégration cloud améliorée : prise en charge de Google Cloud NetApp Volumes (GCNV)</block>
+  <block id="3b8439a1124a026046363bbb284b907d" category="paragraph">* Google Cloud NetApp Volumes* (GCNV) est désormais entièrement pris en charge en tant que collecteur de données dans DII, complétant ainsi notre écosystème de surveillance du cloud hybride.  Bénéficiez d'une visibilité sur les objets de stockage critiques tels que les organisations, les pools et les volumes dans l'ensemble de l'infrastructure.  Vous pouvez désormais suivre tous vos environnements de stockage, sur site ou dans le cloud, à partir d'une seule plateforme.</block>
+  <block id="4fe3ddf6311dd69b488dd9c0a917e13e" category="section-title">Surveillance améliorée de StorageGRID</block>
+  <block id="fb1fc788165334c2063c95600a42e2c0" category="paragraph">La collecte des journaux StorageGRID est désormais activée par défaut, fournissant des données de suivi des événements à DII, et nous avons étendu la surveillance StorageGrid avec plus de 50 alertes par défaut, un suivi des événements en temps réel et de nouveaux tableaux de bord pour simplifier les opérations complexes de la grille de stockage.  Gardez une longueur d'avance sur les problèmes grâce à des informations plus approfondies sur les politiques de circulation et les performances des compartiments.</block>
+  <block id="78299f1e45872d79191e476c74e9733f" category="list-text">AlmaLinux (64 bits) 10</block>
+  <block id="8669ac0b688ff62234404a6b559ccf6b" category="list-text">Red Hat (64 bits) 10</block>
+  <block id="cfec6f20c0cbe89f3573def53b207a87" category="list-text">Rocky (64 bits) 9.6</block>
+  <block id="c822c1b63853ed273b89687ac505f9fa" category="cell">Google</block>
+  <block id="6755455d4b017941c77ac47ecc006c5f" category="section-title">Volumes Netapp de Google Cloud</block>
+  <block id="cf5f238fca8b6e155078aa41c175743a" category="list-text">9,0</block>
+  <block id="796d3a90e43ce105cbf37298c5065f7e" category="list-text">9,1</block>
+  <block id="851951ec8aafc5b6103bcc711e5b146d" category="list-text">NetApp Release 9.14.1P10 : jeu. 28 nov. 2024, 12:32:16 UTC</block>
+  <block id="b6e4769ffc3c304cb0e244469eb5a2a3" category="list-text">NetApp Release 9.14.1P11 : mer. 22 janv. 2025, 11:55:28 UTC</block>
+  <block id="c4b1caf1883df9f205cef4582c354690" category="list-text">NetApp Release 9.14.1P1 : jeu. 15 févr. 2024, 00:45:21 UTC</block>
+  <block id="776528ac98cb7680e7ad50ee0cfe7b3c" category="list-text">NetApp Release 9.14.1P4 : jeu. 18 avr. 2024, 15:59:10 UTC</block>
+  <block id="f98496224c2e3f881aba9e784ec93e22" category="list-text">NetApp Release 9.14.1P5 : sam. 18 mai 2024, 19:42:16 UTC</block>
+  <block id="763ea5732f2f3933c4fb2ecd5d146ae7" category="list-text">NetApp Release 9.14.1P6 : mar. 18 juin 2024, 16:11:44 UTC</block>
+  <block id="3eaa6f80b6d0804ddefd4125cd2825d6" category="list-text">NetApp Release 9.14.1P7 : jeu. 1er août 2024, 03:07:44 UTC</block>
+  <block id="377d5f61d729ced11a315b13fa897455" category="list-text">Version NetApp 9.14.1P8 : ven. 13 sept. 2024, 07:12:27 UTC</block>
+  <block id="a39dd43c7329f4340f59157d94da2516" category="list-text">NetApp Release 9.14.1P9 : lun. 21 oct. 2024, 18:04:05 UTC</block>
+  <block id="afc220589f135ac08cedcf65638e5820" category="list-text">NetApp Release 9.15.1 : jeu. 4 juil. 2024, 12:21:07 UTC</block>
+  <block id="a948f953d8b242da07f3e59617090fdf" category="list-text">NetApp Release 9.15.1P1 : mar. 30 juil. 2024, 05:15:49 UTC</block>
+  <block id="da2c51e4e518f609f11b96ca8d15b54d" category="list-text">NetApp Release 9.15.1P2 : mar. 27 août 2024, 16:35:16 UTC</block>
+  <block id="890e63edd85c4a38218c6efface6cbb6" category="list-text">NetApp Release 9.15.1P3 : mer. 25 sept. 2024, 22:33:44 UTC</block>
+  <block id="64729e2b7300c61fefdb70e2e1c1cdd0" category="list-text">NetApp Release 9.15.1P4 : dim. 27 oct. 2024, 20:15:53 ​​UTC</block>
+  <block id="7534587ed2c26661ec12d78d5d0af8dd" category="list-text">Version NetApp 9.15.1P5 : dim. 24 nov. 2024, 16:31:37 UTC</block>
+  <block id="044b7433a1228a752cbd499d365c6aaa" category="list-text">NetApp Release 9.15.1P6 : mer. 4 déc. 01:42:39 UTC 2024</block>
+  <block id="0edc31b0fa1e5b1f2ec2ccba0ca2e97e" category="list-text">Version NetApp 9.15.1P7 : sam. 18 janv. 2025, 21:34:02 UTC</block>
+  <block id="b8a5209ab0ce5dbd35ca2c148a02e755" category="list-text">NetApp Release 9.15.1RC2 : lun. 24 juin 2024, 04:49:55 UTC</block>
+  <block id="7fdbd16e1ff751fad04600d723d8011d" category="list-text">NetApp Release 9.16.1 : sam. 18 janv. 2025, 19:31:15 UTC</block>
+  <block id="88021ecf50f7541d3d24492a191e471b" category="list-text">NetApp Release 9.16.1P1 : ven. 14 févr. 03:53:50 UTC 2025</block>
+  <block id="652755e90249a76ef63d7204d6ab39ec" category="list-text">NetApp Release 9.16.1RC1 : lun. 4 nov. 2024, 10:39:46 UTC</block>
+  <block id="e47d8be37475d6721d2595b43299102a" category="list-text">NetApp Release 9.16.1X26 : lun. 9 déc. 2024, 10:27:42 UTC</block>
+  <block id="7faf1c14f22abc4af287a0938e0e11d4" category="list-text">NetApp Release 9.16.1X29 : dim. 12 janv. 2025, 11:18:25 UTC</block>
+  <block id="047366cbe3a752b392b76ee3de5a0693" category="list-text">NetApp Release 9.17.1X7 : ven. 14 févr. 2025, 11:21:52 UTC</block>
+  <block id="7012035b5539239acce1eeb19262a908" category="list-text">NetApp Release Clawhammer__9.14.1 : sam. 18 mai 2024 09:23:49 UTC</block>
+  <block id="85d028d27872290fedf829049ad47f51" category="list-text">Version NetApp Cloudstream__9.16.1 : lun. 4 nov. 05:51:46 UTC 2024</block>
+  <block id="efb74c609c847e1c896c8b72027c2404" category="list-text">NetApp Release Cloudstream__9.16.1 : jeu. 13 mars 2025 20:55:54 UTC</block>
+  <block id="7f2742995919db50df5f00598e5f09a0" category="list-text">NetApp Release Electricjellyfish__9.17.1 : lun. 3 mars 2025 05:57:49 UTC</block>
+  <block id="2edf70c8ccc51de9879a7a5608bf4b02" category="list-text">NetApp Release Electricjellyfish__9.17.1 : dim. 9 mars 2025 05:56:14 UTC</block>
+  <block id="123d606b614e23ec31fff77492881c8e" category="list-text">NetApp Release Electricjellyfish__9.17.1 : dim. 16 mars 2025 04:54:53 UTC</block>
+  <block id="f4598e00f7ffd88870d0e3e74f03ca67" category="list-text">NetApp Release Electricjellyfish__9.17.1 : mar. 28 janv. 2025 11:48:14 UTC</block>
+  <block id="3da7c7d0ad098d0403439c55c28b881b" category="list-text">NetApp Release Electricjellyfish__9.17.1 : mar. 18 mars 2025 04:59:54 UTC</block>
+  <block id="a6dcc912d114a251ae84dd2cab790bad" category="list-text">NetApp Release Electricjellyfish__9.17.1 : mer. 12 mars 2025 04:42:03 UTC</block>
+  <block id="dee458b98d2c954aa5710d5ff5ec6f76" category="list-text">NetApp Release Mightysquirrel__9.15.1 : ven. 24 mai 2024 05:03:10 UTC</block>
+  <block id="bcb2cfdb78a14353f1d5af70b02bc8d2" category="list-text">NetApp Release Mightysquirrel__9.15.1 : sam. 18 janv. 2025 11:39:42 UTC</block>
+  <block id="ce49fece61e12f5a3412955bf11d0a64" category="list-text">NetApp publie Tropicallightning__9.18.0 : ven. 21 févr. 2025, 14:02:58 UTC</block>
+  <block id="7be80b0ed106d01981b4e8b0c0464b69" category="list-text">NetApp Release Tropicallightning__9.18.0 : lun. 17 févr. 08:18:14 UTC 2025</block>
+  <block id="029b913c65804a2c418b0b53a4d82ad3" category="list-text">NetApp Release Tropicallightning__9.18.0 : jeu. 20 févr. 08:11:55 UTC 2025</block>
+  <block id="863f3b3b2bce28a4155cac6677b8d39c" category="list-text">NetApp publie Tropicallightning__9.18.0 : jeu. 27 févr. 04:15:40 UTC 2025</block>
+  <block id="b7dbdc5d1260f2529401e6a89c57599d" category="list-text">NetApp publie Tropicallightning__9.18.0 : mar. 18 févr. 2025, 14:00:54 UTC</block>
+  <block id="535e3c92d1c92a88e2982c4f8fc0dd3f" category="list-text">NetApp Release Tropicallightning__9.18.0 : mer. 26 févr. 08:19:21 UTC 2025</block>
+  <block id="df6f3a88081da957cb9d0f6ea6b6a978" category="list-text">NetApp Release Tropicallightning__9.18.0 : mer. 29 janv. 08:34:06 UTC 2025</block>
+  <block id="5ae0ae5f7d8a52fd8d8b0c9920771343" category="section-title">OpenStack (API REST / SSH)</block>
+  <block id="9a49bf4f2da6cbfd867175d49a9d97e1" category="cell">API REST OpenStack</block>
+  <block id="bf17d59a145a73aabf6bd6a5b8e6fdc7" category="cell">OpenStack SSH</block>
+  <block id="77a6c9dd6788598b4a9539c66fbe684d" category="list-text">Métriques de ReplicaSet</block>
+  <block id="c804187aad1ac0e05bfe9734492a853f" category="list-text">Mesures de service</block>
+  <block id="55f5ef8301af792ead511b71dc5d9729" category="list-text">Métriques StatefulSet</block>
+  <block id="a5c62c37e9763bdfccc0b8bdd293e8a9" category="list-text">Mesures de l'autoscaler horizontal des pods</block>
+  <block id="8a971d74114c901e6e49ec38adf35b17" category="list-text">Mesures des tâches cron</block>
+  <block id="9184717578be39d9d8ce4dc4caf1561d" category="list-text">Indicateurs d'emploi</block>
+  <block id="e68008fca3fcb96a93c82b9cf703aee3" category="list-text">Mesures des quotas de ressources</block>
 </blocks>

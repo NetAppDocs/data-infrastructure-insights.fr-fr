@@ -41,7 +41,11 @@ L'opérateur de surveillance NetApp Kubernetes extrait les compteurs de métriqu
 . Métriques de volume persistant
 . Metrics de demande de volume persistant
 . Metrics de pod
-. Metrics de réplicaet
-. Metrics de services
-. Metrics StatefulSet
+. Métriques de ReplicaSet
+. Mesures de service
+. Métriques StatefulSet
+. Mesures de l'autoscaler horizontal des pods
+. Mesures des tâches cron
+. Indicateurs d'emploi
+. Mesures des quotas de ressources
 

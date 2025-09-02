@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference_data_collector_support_matrix.html 
 summary: La matrice de prise en charge du Data Collector contient des informations détaillées sur les collecteurs de données pris en charge. 
-keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, Huawei 
+keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, Huawei, OpenStack 
 ---
 = Matrice de prise en charge du Data Collector Data Infrastructure Insights
 :hardbreaks:
@@ -142,7 +142,7 @@ Produits pris en charge par ce collecteur de données :
 .5+| Info | Nom de l'API | Mise en œuvre | SSH |  
 
 
-| Version de l'API | Mise en œuvre | SSH |  
+| Version de l'API | Mise en œuvre | SSH | Google 
 
 
 | Nom de la source de données | Mise en œuvre | SSH | Info 
@@ -11676,6 +11676,392 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+== Volumes Netapp de Google Cloud
+
+Produits pris en charge par ce collecteur de données :
+
+|===
+| Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
+
+
+.71+| bases .7+| Partage de fichiers | Nom | Mise en œuvre | HTTPS |  
+
+
+| Chemin | Mise en œuvre | HTTPS | Chemin du maillage de fichiers 
+
+
+| ID de qtree | Mise en œuvre | HTTPS | id unique du qtree 
+
+
+| Est InternalVolume | Mise en œuvre | HTTPS | que le partage de fichiers représente un volume interne (volume netapp) ou s'agit-il d'un qtree/dossier au sein du volume interne 
+
+
+| Est partagé | Mise en œuvre | HTTPS | Si ce fichier est associé à des partages 
+
+
+| État | Mise en œuvre | HTTPS |  
+
+
+| Type de sécurité | Mise en œuvre | HTTPS |  
+
+
+.3+| Info | Nom de la source de données | Mise en œuvre | HTTPS | Info 
+
+
+| ID émetteur | Mise en œuvre | HTTPS |  
+
+
+| Date | Mise en œuvre | HTTPS |  
+
+
+.24+| Volume interne | ID du volume interne | Mise en œuvre | HTTPS |  
+
+
+| Nom | Mise en œuvre | HTTPS |  
+
+
+| ID du pool de stockage | Mise en œuvre | HTTPS |  
+
+
+| Type | Écart | HTTPS |  
+
+
+| Provisionnement fin | Mise en œuvre | HTTPS |  
+
+
+| Provisionnement fin pris en charge | Mise en œuvre | HTTPS | Si ce volume interne prend en charge le provisionnement fin pour la couche de volume en haut de celui-ci 
+
+
+| Déduplication activée | Mise en œuvre | HTTPS | Déduplication activée sur le pool de stockage 
+
+
+| Compression activée | Mise en œuvre | HTTPS | Est activé pour la compression sur le pool de stockage 
+
+
+| Heure de la dernière copie Snapshot | Mise en œuvre | HTTPS | heure du dernier snapshot 
+
+
+| Nombre de snapshots | Mise en œuvre | HTTPS | Nombre de snapshots sur les volumes internes 
+
+
+| État | Mise en œuvre | HTTPS |  
+
+
+| Type de protection | Mise en œuvre | HTTPS |  
+
+
+| Capacité utilisée du snapshot | Mise en œuvre | HTTPS |  
+
+
+| Capacité allouée des snapshots | Écart | HTTPS | Capacité allouée des snapshots en Mo 
+
+
+| Capacité utile des données | Mise en œuvre | HTTPS |  
+
+
+| Capacité allouée aux données | Écart | HTTPS | capacité allouée aux données 
+
+
+| Capacité totale utilisée | Mise en œuvre | HTTPS | Capacité totale en Mo 
+
+
+| Capacité totale allouée | Mise en œuvre | HTTPS |  
+
+
+| Rapport brut/utilisable | Mise en œuvre | HTTPS | ratio pour la conversion de la capacité utilisable en capacité brute 
+
+
+| Tiering sur les jours de refroidissement minimum | Mise en œuvre | HTTPS |  
+
+
+| QoS - règle | Mise en œuvre | HTTPS |  
+
+
+|  | Mise en œuvre | HTTPS |  
+
+
+| Commentaire | Écart | HTTPS | état : commentaire libre décrivant le svm 
+
+
+| Limite QoS brute | Mise en œuvre | HTTPS |  
+
+
+.5+| Qtree | ID de qtree | Mise en œuvre | HTTPS | id unique du qtree 
+
+
+| Nom | Mise en œuvre | HTTPS |  
+
+
+| Style de sécurité | Mise en œuvre | HTTPS | Style de sécurité du répertoire : unix, ntfs ou mixte 
+
+
+| État | Mise en œuvre | HTTPS |  
+
+
+| Type | Écart | HTTPS |  
+
+
+.3+| Partagez | Nom | Mise en œuvre | HTTPS |  
+
+
+| Protocole | Mise en œuvre | HTTPS | enumération pour le protocole de partage 
+
+
+| Interfaces IP | Mise en œuvre | HTTPS | Liste des adresses IP séparées par des virgules sur lesquelles ce partage est exposé 
+
+
+.2+| Partager l'initiateur | Initiateur | Mise en œuvre | HTTPS |  
+
+
+| Autorisations | Mise en œuvre | HTTPS | Autorisations pour ce partage particulier 
+
+
+.10+| Stockage | IP | Mise en œuvre | HTTPS |  
+
+
+| IP de l'affichage | Mise en œuvre | HTTPS |  
+
+
+| Nom | Mise en œuvre | HTTPS |  
+
+
+| Fabricant | Mise en œuvre | HTTPS |  
+
+
+| Famille | Mise en œuvre | HTTPS | La famille de stockage peut être CLARiiON, Symmetrix, et al 
+
+
+| Virtualisation | Mise en œuvre | HTTPS | S'agit-il d'un dispositif de virtualisation du stockage ? 
+
+
+| Gérer URL | Mise en œuvre | HTTPS |  
+
+
+| Capacité brute totale | Mise en œuvre | HTTPS | Capacité brute totale (somme de tous les disques de la baie) 
+
+
+| Capacité brute disponible | Mise en œuvre | HTTPS | Capacité brute des disques de spare (somme de tous les disques de spare) 
+
+
+| Échec de la capacité brute | Mise en œuvre | HTTPS | Capacité brute des disques défaillants (somme de tous les disques en panne) 
+
+
+.17+| Pool de stockage | ID du pool de stockage | Mise en œuvre | HTTPS |  
+
+
+| Nom | Mise en œuvre | HTTPS |  
+
+
+| Type | Écart | HTTPS |  
+
+
+| État | Mise en œuvre | HTTPS |  
+
+
+| Provisionnement fin pris en charge | Mise en œuvre | HTTPS | Si ce volume interne prend en charge le provisionnement fin pour la couche de volume en haut de celui-ci 
+
+
+| Inclure dans la capacité DWH | Mise en œuvre | HTTPS | Une façon de contrôler les pools de stockage intéressants dans DWH Capacity 
+
+
+| Niveau du fournisseur | Mise en œuvre | HTTPS | Nom des niveaux propre au fournisseur 
+
+
+| Déduplication activée | Mise en œuvre | HTTPS | Déduplication activée sur le pool de stockage 
+
+
+| Compression activée | Mise en œuvre | HTTPS | Est activé pour la compression sur le pool de stockage 
+
+
+| Virtualisation | Mise en œuvre | HTTPS | S'agit-il d'un dispositif de virtualisation du stockage ? 
+
+
+| Groupe RAID | Mise en œuvre | HTTPS | Indique si StoragePool est un groupe raid 
+
+
+| Capacité utile des données | Mise en œuvre | HTTPS |  
+
+
+| Capacité allouée aux données | Écart | HTTPS | capacité allouée aux données 
+
+
+| Capacité totale allouée | Mise en œuvre | HTTPS |  
+
+
+| Capacité sur disque physique (Mo) | Mise en œuvre | HTTPS | utilisé comme capacité brute pour le pool de stockage 
+
+
+| Rapport brut/utilisable | Mise en œuvre | HTTPS | ratio pour la conversion de la capacité utilisable en capacité brute 
+
+
+|  | Mise en œuvre | HTTPS |  
+
+
+.52+| performances .21+| Volume interne | Latence Total | Mise en œuvre | HTTPS |  
+
+
+| Espace de stockage d'objets utilisé | Mise en œuvre | HTTPS |  
+
+
+| Capacité totale | Mise en œuvre | HTTPS |  
+
+
+| Latence lecture | Mise en œuvre | HTTPS |  
+
+
+| Autres IOPS | Mise en œuvre | HTTPS |  
+
+
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
+
+
+| Capacité utilisée | Mise en œuvre | HTTPS |  
+
+
+| Débit de lecture | Mise en œuvre | HTTPS |  
+
+
+| ID du serveur | Mise en œuvre | HTTPS |  
+
+
+| Total d'IOPS | Mise en œuvre | HTTPS |  
+
+
+| Rapport de capacité utilisé des snapshots | Mise en œuvre | HTTPS | Signalé comme une série chronologique 
+
+
+| Écriture de latence | Mise en œuvre | HTTPS |  
+
+
+| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
+
+
+| Rapport de capacité utilisé | Mise en œuvre | HTTPS |  
+
+
+| Capacité totale des données | Mise en œuvre | HTTPS |  
+
+
+| Capacité utile des données | Mise en œuvre | HTTPS |  
+
+
+| Débit d'écriture | Mise en œuvre | HTTPS |  
+
+
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
+
+
+| Capacité utilisée du snapshot | Mise en œuvre | HTTPS |  
+
+
+| Clé | Mise en œuvre | HTTPS |  
+
+
+| Capacité réservée des snapshots | Mise en œuvre | HTTPS |  
+
+
+.16+| Stockage | Latence Total | Mise en œuvre | HTTPS |  
+
+
+| Échec de la capacité brute | Mise en œuvre | HTTPS |  
+
+
+| Capacité brute disponible | Mise en œuvre | HTTPS | Capacité brute des disques de spare (somme de tous les disques de spare) 
+
+
+| Latence lecture | Mise en œuvre | HTTPS |  
+
+
+| Autres IOPS | Mise en œuvre | HTTPS |  
+
+
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
+
+
+| Capacité brute | Mise en œuvre | HTTPS |  
+
+
+| Débit de lecture | Mise en œuvre | HTTPS |  
+
+
+| ID du serveur | Mise en œuvre | HTTPS |  
+
+
+| Total d'IOPS | Mise en œuvre | HTTPS |  
+
+
+| Écriture de latence | Mise en œuvre | HTTPS |  
+
+
+| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
+
+
+| Capacité des stockagePools | Mise en œuvre | HTTPS |  
+
+
+| Débit d'écriture | Mise en œuvre | HTTPS |  
+
+
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
+
+
+| Clé | Mise en œuvre | HTTPS |  
+
+
+.15+| StoragePool | Espace de stockage d'objets utilisé | Mise en œuvre | HTTPS |  
+
+
+| Capacité totale | Mise en œuvre | HTTPS |  
+
+
+| Écriture d'IOPS | Mise en œuvre | HTTPS |  
+
+
+| Capacité utilisée | Mise en œuvre | HTTPS |  
+
+
+| Capacité brute | Mise en œuvre | HTTPS |  
+
+
+| Débit de lecture | Mise en œuvre | HTTPS |  
+
+
+| Total d'IOPS | Mise en œuvre | HTTPS |  
+
+
+| Lecture IOPS | Mise en œuvre | HTTPS | Nombre d'IOPS de lecture sur le disque 
+
+
+| Rapport de capacité utilisé | Mise en œuvre | HTTPS |  
+
+
+| Capacité totale des données | Mise en œuvre | HTTPS |  
+
+
+| Capacité provisionnée | Mise en œuvre | HTTPS |  
+
+
+| Capacité utile des données | Mise en œuvre | HTTPS |  
+
+
+| Débit d'écriture | Mise en œuvre | HTTPS |  
+
+
+| Débit total | Mise en œuvre | HTTPS | Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s. 
+
+
+| Rapport de capacité de surengagement | Mise en œuvre | HTTPS | Signalé comme une série chronologique 
+|===
+API de gestion utilisées par ce collecteur de données :
+
+|===
+| API | Protocole utilisé | Protocole de la couche de transport utilisé | Ports entrants utilisés | Ports sortants utilisés | Prend en charge l'authentification | Nécessite uniquement des informations d'identification en lecture seule | Prend en charge le cryptage | Compatible pare-feu (ports statiques) 
+
+
+| API REST de Google Compute Platform | HTTPS |  | 443 |  | vrai | vrai | vrai | vrai 
+|===
+
+
 == HDS HCP (HTTPS)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -19912,8 +20298,8 @@ Modèles et versions pris en charge par ce collecteur de données :
 * 9.8.0P7
 * 9.8.0P8
 * 9.8.0P9
-* 9.9.0
-* 9.9.1
+* 9,0
+* 9,1
 * 9.9.1P10
 * 9.9.1P11
 * 9.9.1P12
@@ -22029,26 +22415,48 @@ Modèles et versions pris en charge par ce collecteur de données :
 
 
 | AFF-A150 AFF-A220 AFF-A250 ASA-A300 ASA-A400 ASA-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C190 AFF-C250 AFF-C400 AFF-C800 AFF-A250 AFF-A400 AFF-A800 ASA-C250 ASA-C800 CDvM200 FAS2720 FAS2750 FAS2820 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX  a| 
-* NetappRelease 9.14.1P10: Jeu nov 28 12:32:16 UTC 2024
-* NetappRelease 9.14.1P11: Mercredi 22 11:55:28 UTC 2025
-* NetappRelease 9.14.1P1 : jeu fév 15 00:45:21 UTC 2024
-* NetappRelease 9.14.1P4: Jeu Avr 18 15:59:10 UTC 2024
-* NetappRelease 9.14.1P5: Sam 18 19:42:16 UTC 2024
-* NetappRelease 9.14.1P6: Mar juin 18 16:11:44 UTC 2024
-* NetappRelease 9.14.1P7: Jeu août 01 03:07:44 UTC 2024
-* NetappRelease 9.14.1P8: Ven Sep 13 07:12:27 UTC 2024
-* NetappRelease 9.14.1P9: LUN Oct 21 18:04:05 UTC 2024
-* NetappRelease 9.15.1: Jeu Jul 04 12:21:07 UTC 2024
-* NetappRelease 9.15.1P1: Mar Jul 30 05:15:49 UTC 2024
-* NetappRelease 9.15.1P2: Mar août 27 16:35:16 UTC 2024
-* NetappRelease 9.15.1P3: Mer Sep 25 22:33:44 UTC 2024
-* NetappRelease 9.15.1P4: Sun Oct 27 20:15:53 UTC 2024
-* NetappRelease 9.15.1P5: Sun Nov 24 16:31:37 UTC 2024
-* NetappRelease 9.15.1P6: Mer Déc 04 01:42:39 UTC 2024
-* NetappRelease 9.15.1P7: Sam 18 21:34:02 UTC 2025
-* NetappRelease 9.15.1RC2: Lundi 24 04 juin 49:55 UTC 2024
-* NetappRelease 9.16.1: Sam 18 19:31:15 UTC 2025
-* NetappRelease 9.16.1P1 : vendredi 14 03 février 53:50 UTC 2025
+* NetApp Release 9.14.1P10 : jeu. 28 nov. 2024, 12:32:16 UTC
+* NetApp Release 9.14.1P11 : mer. 22 janv. 2025, 11:55:28 UTC
+* NetApp Release 9.14.1P1 : jeu. 15 févr. 2024, 00:45:21 UTC
+* NetApp Release 9.14.1P4 : jeu. 18 avr. 2024, 15:59:10 UTC
+* NetApp Release 9.14.1P5 : sam. 18 mai 2024, 19:42:16 UTC
+* NetApp Release 9.14.1P6 : mar. 18 juin 2024, 16:11:44 UTC
+* NetApp Release 9.14.1P7 : jeu. 1er août 2024, 03:07:44 UTC
+* Version NetApp 9.14.1P8 : ven. 13 sept. 2024, 07:12:27 UTC
+* NetApp Release 9.14.1P9 : lun. 21 oct. 2024, 18:04:05 UTC
+* NetApp Release 9.15.1 : jeu. 4 juil. 2024, 12:21:07 UTC
+* NetApp Release 9.15.1P1 : mar. 30 juil. 2024, 05:15:49 UTC
+* NetApp Release 9.15.1P2 : mar. 27 août 2024, 16:35:16 UTC
+* NetApp Release 9.15.1P3 : mer. 25 sept. 2024, 22:33:44 UTC
+* NetApp Release 9.15.1P4 : dim. 27 oct. 2024, 20:15:53 ​​UTC
+* Version NetApp 9.15.1P5 : dim. 24 nov. 2024, 16:31:37 UTC
+* NetApp Release 9.15.1P6 : mer. 4 déc. 01:42:39 UTC 2024
+* Version NetApp 9.15.1P7 : sam. 18 janv. 2025, 21:34:02 UTC
+* NetApp Release 9.15.1RC2 : lun. 24 juin 2024, 04:49:55 UTC
+* NetApp Release 9.16.1 : sam. 18 janv. 2025, 19:31:15 UTC
+* NetApp Release 9.16.1P1 : ven. 14 févr. 03:53:50 UTC 2025
+* NetApp Release 9.16.1RC1 : lun. 4 nov. 2024, 10:39:46 UTC
+* NetApp Release 9.16.1X26 : lun. 9 déc. 2024, 10:27:42 UTC
+* NetApp Release 9.16.1X29 : dim. 12 janv. 2025, 11:18:25 UTC
+* NetApp Release 9.17.1X7 : ven. 14 févr. 2025, 11:21:52 UTC
+* NetApp Release Clawhammer__9.14.1 : sam. 18 mai 2024 09:23:49 UTC
+* Version NetApp Cloudstream__9.16.1 : lun. 4 nov. 05:51:46 UTC 2024
+* NetApp Release Cloudstream__9.16.1 : jeu. 13 mars 2025 20:55:54 UTC
+* NetApp Release Electricjellyfish__9.17.1 : lun. 3 mars 2025 05:57:49 UTC
+* NetApp Release Electricjellyfish__9.17.1 : dim. 9 mars 2025 05:56:14 UTC
+* NetApp Release Electricjellyfish__9.17.1 : dim. 16 mars 2025 04:54:53 UTC
+* NetApp Release Electricjellyfish__9.17.1 : mar. 28 janv. 2025 11:48:14 UTC
+* NetApp Release Electricjellyfish__9.17.1 : mar. 18 mars 2025 04:59:54 UTC
+* NetApp Release Electricjellyfish__9.17.1 : mer. 12 mars 2025 04:42:03 UTC
+* NetApp Release Mightysquirrel__9.15.1 : ven. 24 mai 2024 05:03:10 UTC
+* NetApp Release Mightysquirrel__9.15.1 : sam. 18 janv. 2025 11:39:42 UTC
+* NetApp publie Tropicallightning__9.18.0 : ven. 21 févr. 2025, 14:02:58 UTC
+* NetApp Release Tropicallightning__9.18.0 : lun. 17 févr. 08:18:14 UTC 2025
+* NetApp Release Tropicallightning__9.18.0 : jeu. 20 févr. 08:11:55 UTC 2025
+* NetApp publie Tropicallightning__9.18.0 : jeu. 27 févr. 04:15:40 UTC 2025
+* NetApp publie Tropicallightning__9.18.0 : mar. 18 févr. 2025, 14:00:54 UTC
+* NetApp Release Tropicallightning__9.18.0 : mer. 26 févr. 08:19:21 UTC 2025
+* NetApp Release Tropicallightning__9.18.0 : mer. 29 janv. 08:34:06 UTC 2025
 
 
 |===
@@ -24380,6 +24788,268 @@ API de gestion utilisées par ce collecteur de données :
 
 
 | API REST de Nutanix | HTTPS | HTTPS | 443 |  | vrai | vrai | vrai | vrai 
+|===
+
+
+== OpenStack (API REST / SSH)
+
+|===
+|===
+Produits pris en charge par ce collecteur de données :
+
+|===
+| Solution NetApp | Catégorie | Fonction/attribut | État | Protocole utilisé | Informations supplémentaires 
+
+
+.76+| bases .7+| Datastore | Capacité | Mise en œuvre | HTTPS | Capacité utilisée de la copie Snapshot en Mo 
+
+
+| MOID | Mise en œuvre | HTTPS |  
+
+
+| Nom | Mise en œuvre | HTTPS |  
+
+
+| OID | Mise en œuvre | HTTPS |  
+
+
+| Capacité provisionnée | Mise en œuvre | HTTPS |  
+
+
+| Capacité utilisée | Mise en œuvre | HTTPS |  
+
+
+| IP de Virtual Center | Mise en œuvre | HTTPS |  
+
+
+.3+| Datastore NASShare | OID du datastore | Mise en œuvre | HTTPS |  
+
+
+| OID de partage NAS | Mise en œuvre | HTTPS |  
+
+
+| OID | Mise en œuvre | HTTPS |  
+
+
+.4+| Hôte NASShare | OID de partage NAS | Mise en œuvre | HTTPS |  
+
+
+| OID de l'hôte | Mise en œuvre | HTTPS |  
+
+
+| OID | Mise en œuvre | HTTPS |  
+
+
+| Lecture seule | Mise en œuvre | HTTPS |  
+
+
+.6+| LUN | OID | Mise en œuvre | HTTPS |  
+
+
+| Numéro | Mise en œuvre | HTTPS |  
+
+
+| OID du datastore | Mise en œuvre | HTTPS |  
+
+
+| OID de l'hôte | Mise en œuvre | HTTPS |  
+
+
+| Nom du disque | Mise en œuvre | HTTPS |  
+
+
+| TID | Mise en œuvre | HTTPS |  
+
+
+.6+| Partage NAS | Capacité | Mise en œuvre | HTTPS | Capacité allouée en Mo 
+
+
+| IP de fichier | Mise en œuvre | HTTPS |  
+
+
+| Nom de fichier | Mise en œuvre | HTTPS |  
+
+
+| OID | Mise en œuvre | HTTPS |  
+
+
+| Chemin du partage | Mise en œuvre | HTTPS | Pour qu'un HvNasShare soit associé à une part 
+
+
+| Type | Écart | HTTPS |  
+
+
+.6+| Chemin | OID | Mise en œuvre | HTTPS |  
+
+
+| OID de LUN | Mise en œuvre | HTTPS |  
+
+
+| WWPN du port hôte | Mise en œuvre | HTTPS |  
+
+
+| WWPN du port de stockage | Mise en œuvre | HTTPS |  
+
+
+| Actif | Mise en œuvre | HTTPS |  
+
+
+| Type | Écart | HTTPS |  
+
+
+.6+| Serveur | Cluster | Mise en œuvre | HTTPS | Nom du cluster 
+
+
+| Nom du Data Center | Mise en œuvre | HTTPS |  
+
+
+| OID de l'hôte | Mise en œuvre | HTTPS |  
+
+
+| MOID | Mise en œuvre | HTTPS |  
+
+
+| OID | Mise en œuvre | HTTPS |  
+
+
+| IP de Virtual Center | Mise en œuvre | HTTPS |  
+
+
+.7+| Disque virtuel | Capacité | Mise en œuvre | HTTPS | Capacité utilisée de la copie Snapshot en Mo 
+
+
+| OID du datastore | Mise en œuvre | HTTPS |  
+
+
+| OID de LUN | Mise en œuvre | HTTPS |  
+
+
+| Nom | Mise en œuvre | HTTPS |  
+
+
+| OID | Mise en œuvre | HTTPS |  
+
+
+| Type | Écart | HTTPS |  
+
+
+| Capacité utilisée | Mise en œuvre | HTTPS |  
+
+
+.13+| Virtualmachine | État du client | Mise en œuvre | HTTPS |  
+
+
+| OID du datastore | Mise en œuvre | HTTPS |  
+
+
+| OID de l'hôte | Mise en œuvre | HTTPS |  
+
+
+| IPS | Mise en œuvre | HTTPS |  
+
+
+| MOID | Mise en œuvre | HTTPS |  
+
+
+| Mémoire | Mise en œuvre | HTTPS |  
+
+
+| Nom | Mise en œuvre | HTTPS |  
+
+
+| OID | Mise en œuvre | HTTPS |  
+
+
+| État de l'alimentation | Mise en œuvre | HTTPS |  
+
+
+| Heure de changement d'état | Mise en œuvre | HTTPS |  
+
+
+| Processeurs | Mise en œuvre | HTTPS |  
+
+
+| Capacité provisionnée | Mise en œuvre | HTTPS |  
+
+
+| Capacité utilisée | Mise en œuvre | HTTPS |  
+
+
+.3+| Disque de Virtualmachine | OID | Mise en œuvre | HTTPS |  
+
+
+| ID objet virtualDisk | Mise en œuvre | HTTPS |  
+
+
+| OID de Virtualmachine | Mise en œuvre | HTTPS |  
+
+
+.7+| Hôte | Nombre de processeurs hôtes | Mise en œuvre | HTTPS |  
+
+
+| Domaine hôte | Mise en œuvre | HTTPS |  
+
+
+| Mémoire installée sur l'hôte | Mise en œuvre | HTTPS |  
+
+
+| Système d'exploitation hôte | Mise en œuvre | HTTPS |  
+
+
+| IPS | Mise en œuvre | HTTPS |  
+
+
+| Nom | Mise en œuvre | HTTPS |  
+
+
+| OID | Mise en œuvre | HTTPS |  
+
+
+.4+| Nœud ISCSI | Alias de l'hôte | Mise en œuvre | HTTPS |  
+
+
+| Nom du nœud | Mise en œuvre | HTTPS |  
+
+
+| OID | Mise en œuvre | HTTPS |  
+
+
+| Type | Écart | HTTPS |  
+
+
+.4+| Info | Nom de la source de données | Mise en œuvre | HTTPS | Info 
+
+
+| Date | Mise en œuvre | HTTPS |  
+
+
+| ID émetteur | Mise en œuvre | HTTPS |  
+
+
+| Clé d'émetteur | Mise en œuvre | HTTPS |  
+
+
+.4+| performances .4+| Hôte | Utilisation totale du processeur | Mise en œuvre |  |  
+
+
+| Clé | Mise en œuvre |  |  
+
+
+| Utilisation totale de la mémoire | Mise en œuvre |  |  
+
+
+| ID du serveur | Mise en œuvre |  |  
+|===
+API de gestion utilisées par ce collecteur de données :
+
+|===
+| API | Protocole utilisé | Protocole de la couche de transport utilisé | Ports entrants utilisés | Ports sortants utilisés | Prend en charge l'authentification | Nécessite uniquement des informations d'identification en lecture seule | Prend en charge le cryptage | Compatible pare-feu (ports statiques) 
+
+
+| API REST OpenStack | HTTPS | HTTPS | 443 |  | vrai | faux | vrai | vrai 
+
+
+| OpenStack SSH | SSH | SSH | 22 |  | vrai | faux | vrai | vrai 
 |===
 
 
