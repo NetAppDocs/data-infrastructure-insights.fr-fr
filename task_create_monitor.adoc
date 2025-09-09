@@ -14,10 +14,7 @@ summary: 'Créez des moniteurs pour alerter les seuils de performances ou d"inve
 
 
 [role="lead"]
-Vous créez des moniteurs pour définir des seuils qui déclenchent des alertes pour vous informer des problèmes liés aux ressources de votre réseau. Par exemple, vous pouvez créer un moniteur pour signaler la latence d'écriture _node_ pour n'importe lequel d'une multitude de protocoles.
-
-
-TIP: Les moniteurs et alertes sont disponibles dans toutes les éditions Data Infrastructure Insights. Cependant, l'édition Basic est soumise aux conditions suivantes : * vous ne pouvez avoir jusqu'à cinq moniteurs personnalisés actifs à la fois. Tous les moniteurs au-delà de cinq seront créés ou déplacés à l'état _Pause_. * Les moniteurs de metrics VMDK, Virtual machine, Host et DataStore ne sont pas pris en charge. Si des moniteurs ont été créés pour ces mesures, ils seront mis en pause et ne peuvent pas être repris lors de la rétrogradation vers l'édition de base.
+Configurez des moniteurs pour suivre les seuils de performances, consigner les événements et les anomalies sur l’ensemble de vos ressources d’infrastructure.  Créez des alertes personnalisées pour des mesures telles que la latence d'écriture des nœuds, la capacité de stockage ou les performances des applications, et recevez des notifications lorsque ces conditions sont remplies.
 
 Les moniteurs vous permettent de définir des seuils sur les metrics générés par des objets d'infrastructure tels que le stockage, les serveurs virtuels, EC2 et les ports, ainsi que pour les données « intégration », telles que celles collectées pour Kubernetes, les metrics avancés ONTAP et les plug-ins Telegraf. Ces _mesures_ permettent de vous alerter lorsque les seuils de niveau d'avertissement ou de niveau critique sont croisés.
 

@@ -10,9 +10,7 @@ keywords: support, knowledgebase, documentation, community, chat, videos, help, 
 
 
 [role="lead"]
-sommaire :[]
-
-Vous pouvez accéder aux options de support dans Data Infrastructure Insights en cliquant sur *aide > support*. Les options de support disponibles dépendent de votre édition Data Infrastructure Insights.
+Vous pouvez accéder aux options d'assistance disponibles dans Data Infrastructure Insights en sélectionnant *Aide > Assistance*.
 
 image:SupportPageWithLearningCenter.png["Page de support"]
 
@@ -70,11 +68,7 @@ image:SupportPage_SN_Section-NA.png["SN_Screen"]
 
 == Obtention d'informations de support
 
-NetApp prend en charge les informations d'infrastructure de données de différentes manières. De nombreuses options de support en libre-service sont disponibles 24 h/24, 7 j/7, comme des articles de la base de connaissances (KB) ou la communauté NetApp. Pour les utilisateurs abonnés* à Data Infrastructure Insights, le support technique est disponible par téléphone ou via la billetterie Web. Un compte SSO du site de support NetApp (NSS) est nécessaire pour la gestion des dossiers en ligne.
-
-*Le support est disponible avec Basic Edition tant que tous vos systèmes de stockage NetApp sont couverts au moins par le niveau Premium support.
-
-De nombreuses offres NetApp incluent Data Infrastructure Insights Basic Edition dans le package. Si vous souhaitez effectuer une mise à niveau vers Premium Edition, contactez votre représentant commercial.
+NetApp fournit un support pour Data Infrastructure Insights de différentes manières.  De nombreuses options d'auto-assistance gratuites sont disponibles 24h/24 et 7j/7, telles que des articles de la base de connaissances (KB) ou la communauté NetApp .  Pour les utilisateurs abonnés à Data Infrastructure Insights, le support technique est disponible par téléphone ou par ticket Web.  Un compte SSO NetApp Support Site (NSS) est requis pour les tickets Web ainsi que pour la gestion des cas.
 
 
 
