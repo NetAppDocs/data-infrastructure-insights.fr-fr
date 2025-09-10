@@ -37,4 +37,4 @@ Cliquer sur un objet ou un groupe ouvre un panneau coulissant fournissant des d�
 
 == Voyez-le en action
 
-link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["Dépannage simplifié avec VM Analyzer (vidéo)"]
+link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["Dépannage simplifié avec VM Analyzer (vidéo), window=read-later"]

@@ -7,6 +7,10 @@ summary: 'Suivi des données à l"aide d"annotations.'
 = Définition des annotations
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -24,6 +28,12 @@ Par exemple, si un bien est loué et que le bail expire dans un délai de deux m
 * Création de règles pour appliquer automatiquement des annotations à plusieurs ressources du même type.
 * Filtrer les ressources par leurs annotations.
 
+
+
+
+== Voyez-le en action
+
+link:https://media.netapp.com/video-detail/248621bd-6619-5dc8-9718-5d78d0fd21da["Annotations et règles d'annotation (vidéo), window=read-later"]
 
 
 

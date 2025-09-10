@@ -28,8 +28,6 @@ sidebar:
       url: "/security_admin_tool.html"
   - title: Mise en route
     entries:
-    - title: Tutoriels de fonctionnalités
-      url: "/concept_feature_tutorials.html"
     - title: Collecte des données
       entries:
       - title: Présentation

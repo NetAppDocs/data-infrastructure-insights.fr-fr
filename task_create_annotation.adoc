@@ -7,6 +7,10 @@ summary: Comment créer une annotation.
 = Utilisation d'annotations
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

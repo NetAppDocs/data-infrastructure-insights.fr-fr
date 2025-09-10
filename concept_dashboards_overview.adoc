@@ -31,6 +31,12 @@ Vous créez un nouveau tableau de bord à deux endroits :
 
 
 
+== Voyez-le en action
+
+link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8["Créez des tableaux de bord puissants avec NetApp (vidéo),window=read-later"]
+
+
+
 == Commandes du tableau de bord
 
 L'écran Tableau de bord comporte plusieurs commandes :

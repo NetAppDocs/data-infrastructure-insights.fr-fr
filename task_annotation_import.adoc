@@ -7,6 +7,10 @@ summary: 'Vous pouvez importer des annotations et des applications à l"aide de 
 = Importation d'annotations
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

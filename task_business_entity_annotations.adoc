@@ -7,6 +7,10 @@ summary: 'Les annotations d"entité métier peuvent être utilisées pour survei
 = Annotations d'entité métier
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
