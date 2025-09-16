@@ -247,7 +247,7 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 | link:task_dc_na_ontap_rest.html["Collecteur de REPOS NetApp ONTAP"] | Infrastructures 
 
 
-| link:task_dc_na_ontap_all_san_array.html["Collecteur de baies SAN 100 % Flash (ASA) NetApp ONTAP"] | Infrastructures 
+| link:task_dc_na_ontap_all_san_array.html["Collecteur NetApp ONTAP ASA r2 (All-SAN Array)"] | Infrastructures 
 
 
 | link:task_dc_na_cdot.html["NetApp ONTAP Select"] | Infrastructures 
