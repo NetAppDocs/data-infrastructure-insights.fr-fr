@@ -29,6 +29,8 @@ NOTE: Les changements globaux peuvent avoir un impact potentiel sur vos système
 ** Protocole SMB version 3.1 et antérieure.
 ** Versions NFS jusqu'à NFS 4.1 inclus (notez que NFS 4.1 est pris en charge avec ONTAP 9.15 ou version ultérieure).
 ** FlexGroup est pris en charge à partir de ONTAP 9.4 et versions ultérieures
+** FlexCache est pris en charge pour NFS avec ONTAP 9.7 et les versions ultérieures.
+** FlexCache est pris en charge pour SMB avec ONTAP 9.14.1 et les versions ultérieures.
 ** ONTAP Select est pris en charge
 
 
