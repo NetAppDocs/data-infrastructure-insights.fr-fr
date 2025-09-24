@@ -145,7 +145,7 @@ Informations sur l'infrastructure de données : l'observabilité mesure l'utilis
 
 Chaque niveau est mesuré à un taux différent, l'ensemble étant calculé ensemble pour vous donner un droit pondéré. La formule de calcul de l'utilisation pondérée est la suivante :
 
- Weighted usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
+ Weighted Capacity = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioned TiB)
 Pour faciliter cette tâche, DII calcule un seul numéro *pondéré de droit* basé sur les quantités _souscrites_. Il calcule ensuite ce même nombre en fonction du stockage _découvert_ et déclare la violation uniquement si la capacité découverte est supérieure au droit pondéré. Vous avez ainsi la possibilité de surveiller les quantités qui varient en fonction des montants souscrits pour chaque niveau, ce que DII autorise tant que le stockage total découvert est compris dans le droit pondéré souscrit.
 
 
