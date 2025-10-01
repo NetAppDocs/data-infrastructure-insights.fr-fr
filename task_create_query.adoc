@@ -142,6 +142,18 @@ Si vous placez une chaîne de filtre entre deux guillemets, Insight traite tout 
 
 
 
+=== Filtrage des valeurs booléennes
+
+Lorsque vous filtrez une valeur booléenne, les choix suivants peuvent vous être proposés pour filtrer :
+
+* *Tout* : cela renverra _tous_ les résultats, y compris les résultats définis sur « Oui », « Non » ou pas définis du tout.
+* *Oui* : renvoie uniquement les résultats « Oui ».  Notez que DII affiche « Oui » comme coche dans la plupart des tableaux.  Les valeurs peuvent être définies sur « Vrai », « Activé », etc. DII traite toutes ces valeurs comme « Oui ».
+* *Non* : renvoie uniquement les résultats « Non ».  Notez que DII affiche « Non » sous la forme d’un « X » dans la plupart des tableaux.  Les valeurs peuvent être définies sur « Faux », « Désactivé », etc. DII traite toutes ces valeurs comme « Non ».
+* *Aucun* : renvoie uniquement les résultats pour lesquels la valeur n'a pas été définie du tout.  Également appelées valeurs « nulles ».
+
+
+
+
 == Que dois-je faire maintenant que j'ai des résultats de requête ?
 
 L'interrogation permet d'ajouter des annotations ou d'affecter des applications aux ressources en toute simplicité. Notez que vous pouvez uniquement attribuer des applications ou des annotations à vos ressources d'inventaire (disque, stockage, etc.). Les metrics d'intégration ne peuvent pas prendre en charge les affectations d'annotations ou d'applications.

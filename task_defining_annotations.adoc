@@ -31,12 +31,6 @@ Par exemple, si un bien est loué et que le bail expire dans un délai de deux m
 
 
 
-== Voyez-le en action
-
-link:https://media.netapp.com/video-detail/248621bd-6619-5dc8-9718-5d78d0fd21da["Annotations et règles d'annotation (vidéo), window=read-later"]
-
-
-
 == Types d'annotation par défaut
 
 Data Infrastructure Insights propose certains types d'annotations par défaut. Ces annotations peuvent être utilisées pour filtrer ou regrouper des données.
@@ -88,7 +82,7 @@ Le tableau suivant répertorie les types d'annotations fournies par Data Infrast
 | Gravité de la violation | Classer (par exemple, majeur) d'une violation (par exemple, ports hôtes manquants ou redondance manquante), dans une hiérarchie de la plus haute à la plus faible importance. | Liste 
 |===
 
-NOTE: Alias, data Center, données actives, niveau de service, coucher de soleil, Niveau de commutation, niveau et gravité de violation sont des annotations au niveau du système, que vous ne pouvez pas supprimer ou renommer ; vous pouvez uniquement modifier les valeurs qui leur sont attribuées.
+NOTE: Alias, Centre de données, Chaud, Niveau de service, Coucher de soleil, Niveau de commutateur, Niveau et Gravité de la violation sont des annotations au niveau du système, que vous ne pouvez pas supprimer ou renommer ; vous ne pouvez modifier que leurs valeurs attribuées.
 
 
 
@@ -110,15 +104,23 @@ Ces champs peuvent comporter jusqu'à 255 caractères.
 
 
 .Types d'annotation
-Booléen : crée une liste déroulante avec les choix de oui et de non. Par exemple, l'annotation « Direct attached » est booléenne. Date : crée un champ contenant une date. Par exemple, si l'annotation est une date, sélectionnez cette option. Liste : crée l'une des options suivantes : * Une liste déroulante fixe
+* Booléen : Crée une liste déroulante avec les options « oui » et « non ». Par exemple, l'annotation « Rattaché directement » est booléenne.
+* Date : cela crée un champ qui contient une date.  Par exemple, si l’annotation est une date, sélectionnez cette option.
+* Liste : crée l’un des éléments suivants :
++
+** Une liste déroulante fixe
++
+Lorsque d’autres attribuent ce type d’annotation sur un appareil, ils ne peuvent pas ajouter plus de valeurs à la liste.
 
-+ lorsque d'autres attribuent ce type d'annotation à un périphérique, ils ne peuvent pas ajouter d'autres valeurs à la liste. * Une liste déroulante flexible
+** Une liste déroulante flexible
++
+Si vous sélectionnez l'option Ajouter de nouvelles valeurs à la volée lorsque vous créez cette liste, lorsque d'autres personnes attribuent ce type d'annotation sur un appareil, elles peuvent ajouter davantage de valeurs à la liste.
 
-+ si vous sélectionnez l'option Ajouter de nouvelles valeurs à la volée lorsque vous créez cette liste, lorsque d'autres personnes attribuent ce type d'annotation à un périphérique, elles peuvent ajouter d'autres valeurs à la liste.
 
-Nombre : crée un champ dans lequel l'utilisateur qui affecte l'annotation peut entrer un nombre. Par exemple, si le type d'annotation est « sol », l'utilisateur peut sélectionner le type de valeur « nombre » et saisir le numéro d'étage.
 
-Texte : crée un champ permettant le texte libre. Par exemple, vous pouvez saisir "langue" comme type d'annotation, sélectionner "texte" comme type de valeur et entrer une langue comme valeur.
+* Nombre : crée un champ dans lequel l'utilisateur qui affecte l'annotation peut entrer un nombre. Par exemple, si le type d'annotation est « sol », l'utilisateur peut sélectionner le type de valeur « nombre » et saisir le numéro d'étage.
+* Texte : crée un champ permettant le texte libre. Par exemple, vous pouvez saisir "langue" comme type d'annotation, sélectionner "texte" comme type de valeur et entrer une langue comme valeur.
+
 
 
 NOTE: Après avoir défini le type et enregistré vos modifications, vous ne pouvez pas modifier le type de l'annotation. Si vous devez modifier le type, vous devez supprimer l'annotation et en créer une nouvelle.
@@ -138,6 +140,15 @@ Par exemple, supposons que vous vous trouvez sur une page d'actifs et que l'acti
 +
 Vos annotations apparaissent dans la liste de la page Annotations.
 
+
+
+.Remarque sur les annotations booléennes
+Lors du filtrage sur une annotation booléenne, les valeurs suivantes peuvent vous être présentées sur lesquelles filtrer :
+
+* *Tout* : cela renverra _tous_ les résultats, y compris les résultats définis sur « Oui », « Non » ou pas définis du tout.
+* *Oui* : renvoie uniquement les résultats « Oui ».  Notez que DII affiche « Oui » comme coche dans la plupart des tableaux.  Les valeurs peuvent être définies sur « Vrai », « Activé », etc. DII traite toutes ces valeurs comme « Oui ».
+* *Non* : renvoie uniquement les résultats « Non ».  Notez que DII affiche « Non » sous la forme d’un « X » dans la plupart des tableaux.  Les valeurs peuvent être définies sur « Faux », « Désactivé », etc. DII traite toutes ces valeurs comme « Non ».
+* *Aucun* : renvoie uniquement les résultats pour lesquels l'annotation n'a pas été définie du tout.  Également appelées valeurs « nulles ».
 
 
 .Une fois que vous avez terminé
