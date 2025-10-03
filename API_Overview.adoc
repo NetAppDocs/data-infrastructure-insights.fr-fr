@@ -261,18 +261,11 @@ Notez que ces commandes utilisent le namespace par défaut « surveillance netap
 
 Remarque : si la dernière version de NetApp Kubernetes Monitoring Operator est installée et que vous utilisez un jeton d'accès API renouvelable, les jetons arrivant à expiration seront automatiquement remplacés par des jetons d'accès à l'API nouveaux ou actualisés. Il n'est pas nécessaire d'effectuer les étapes manuelles indiquées ci-dessous.
 
-* Modifiez l'opérateur de surveillance NetApp Kubernetes.
-+
- kubectl -n netapp-monitoring edit agent netapp-ci-agent-monitoring-netapp
-* Modifiez la valeur _spec.output-sink.api-key_ en remplaçant l'ancien jeton API par le nouveau jeton API.
-+
-....
-spec:
-…
-  output-sink:
-  - api-key:<NEW_API_TOKEN>
-....
+* Créez un nouveau jeton API.
+* Suivez les étapes pourlink:task_config_telegraf_agent_k8s.html#manual-upgrades["Mise à niveau manuelle"] , en sélectionnant le nouveau jeton API.
 
+
+Remarque : les clients qui gèrent leur NetApp Kubernetes Monitoring Operator avec un outil de gestion de configuration, tel que Kustomize, peuvent suivre les mêmes étapes pour générer et télécharger un ensemble mis à jour de fichiers YAML à envoyer vers leur référentiel.
 
 
 
