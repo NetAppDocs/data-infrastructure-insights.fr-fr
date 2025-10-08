@@ -7,6 +7,10 @@ keywords: data collector, NetApp, Cloud, AWS
 = Collecteur de données NetApp Cloud volumes Services pour AWS
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -51,6 +55,6 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 | Problème : | Essayer : 
 
 
-| J'ai reçu une erreur similaire à celle-ci : « échec de l'exécution de la demande : connexion à <point de terminaison de la région AWS>:8080 [<point de terminaison de la région AWS>/IP du point de terminaison de la région AWS] échec : connexion expirée : OBTENTION DU nom de domaine complet du point de terminaison de la région \https://<AWS>:8080/v1/stockage/IPRanges HTTP/1.1 » | Le système link:task_configure_acquisition_unit.html#proxy-configuration-2["proxy"] utilisé par Data Infrastructure Insights pour communiquer avec l'unité d'acquisition ne communique pas entre Data Infrastructure Insights et le Data Collector lui-même. Voici quelques éléments que vous pouvez essayer : assurez-vous que l'unité d'acquisition est capable de résoudre le fqdn et d'atteindre le port requis. Confirmez qu'un proxy n'est pas nécessaire pour atteindre le noeud final spécifié dans le message d'erreur. Curl peut être utilisé pour tester la communication entre l'unité d'acquisition et le noeud final. Assurez-vous que vous utilisez *pas* un proxy pour ce test. Exemple : root@acquisition Unit# curl -s -H Accept:application/json -H « Content-type: Application/json » -H api-key:<clé api utilisée dans les informations d'identification du collecteur de données -H secret-key:<clé secrète utilisée dans les informations d'identification du collecteur de données> -X GET \https://<AWS Regional Endpoint>:8080/v1/Storage/IPRanges Voir ce link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_fails_discovery_for_Cloud_Volumes_Service_for_AWS["Article de la base de connaissances NetApp"]. 
+| J'ai reçu une erreur similaire à celle-ci : « échec de l'exécution de la demande : connexion à <point de terminaison de la région AWS>:8080 [<point de terminaison de la région AWS>/IP du point de terminaison de la région AWS] échec : connexion expirée : OBTENTION DU nom de domaine complet du point de terminaison de la région \https://<AWS>:8080/v1/stockage/IPRanges HTTP/1.1 » | Lelink:task_configure_acquisition_unit.html#proxy-configuration-2["proxy"] utilisé par Data Infrastructure Insights pour communiquer avec l'unité d'acquisition ne communique pas entre Data Infrastructure Insights et le collecteur de données lui-même.  Voici quelques éléments que vous pouvez essayer : assurez-vous que l’unité d’acquisition est capable de résoudre le nom de domaine complet et d’atteindre le port requis.  Confirmez qu’un proxy n’est pas requis pour atteindre le point de terminaison spécifié dans le message d’erreur.  Curl peut être utilisé pour tester la communication entre l'unité d'acquisition et le point de terminaison.  Assurez-vous que vous n'utilisez *pas* de proxy pour ce test.  Exemple : root@acquisitionunit# curl -s -H accept:application/json -H "Content-type: application/json" -H api-key:<clé API utilisée dans les informations d'identification du collecteur de données -H secret-key:<clé secrète utilisée dans les informations d'identification du collecteur de données> -X GET \https://<AWS Regional Endpoint>:8080/v1/Storage/IPRanges 
 |===
 Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].

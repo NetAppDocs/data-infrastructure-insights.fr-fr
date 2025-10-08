@@ -14,32 +14,30 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Avant de commencer à travailler avec Data Infrastructure Insights, vous devez vous inscrire sur le portail *NetApp BlueXP *. Si vous disposez déjà d'un identifiant NetApp BlueXP , vous pouvez essayer gratuitement Data Infrastructure Insights en quelques étapes simples.
+Avant de pouvoir commencer à travailler avec Data Infrastructure Insights, vous devez vous inscrire sur le portail * NetApp Console*.  Si vous disposez déjà d'une connexion à la console NetApp , vous pouvez démarrer un essai gratuit de Data Infrastructure Insights en quelques étapes rapides.
 
 
 
-== Création de votre compte NetApp BlueXP
+== Création de votre compte NetApp Console
 
-Pour commencer à utiliser les services cloud de NetApp, rendez-vous sur link:https://bluexp.netapp.com/["*NetApp BlueXP*"^] et cliquez sur *commencer*.
+Pour démarrer avec les services cloud de NetApp, accédez àlink:https://console.netapp.com/["* Console NetApp *"^] et cliquez sur *Commencer*.
 
 * Si vous n'êtes pas encore inscrit, sélectionnez *s'inscrire*
 * Saisissez une adresse e-mail professionnelle valide et choisissez un mot de passe.
 * Entrez le nom de votre entreprise, ainsi que votre nom complet.
 * Acceptez les conditions générales et sélectionnez *Continuer*.
-* BlueXP vous guidera tout au long de la mise en route.
+* La console vous guidera tout au long du processus de démarrage.
 
 
 
 
-=== Que se passe-t-il si je dispose déjà d'un identifiant de connexion NetApp BlueXP ?
+=== Que faire si j’ai déjà une connexion à la console NetApp ?
 
-Une fois que vous avez un compte NetApp BlueXP , il vous suffit de choisir *se connecter* sur la link:https://bluexp.netapp.com/["*NetApp BlueXP*"^]page du portail.
+Une fois que vous avez un compte NetApp Console, choisissez simplement *Connexion* sur lelink:https://console.netapp.com/["* Console NetApp *"^] page du portail.
 
 Entrez votre adresse e-mail et votre mot de passe. Vous serez ensuite redirigé vers la page d'offres clouds de NetApp.
 
-Sélectionnez Data Infrastructure Insights.
-
-image:BlueXP_CloudInsights.png["Essai gratuit des informations d'infrastructure de données sur BlueXP"]
+Accédez à *Analyse et contrôle > Observabilité* pour en savoir plus sur Data Infrastructure Insights et/ou demander une démonstration.
 
 
 
@@ -49,7 +47,7 @@ Si vous vous connectez pour la première fois à Data Infrastructure Insights, s
 
 image:trial_region_selector.png["Sélectionnez la région dans laquelle héberger votre locataire Data Infrastructure Insights"]
 
-Une fois votre locataire créé, vous pouvez utiliser vos identifiants BlueXP  pour vous connecter et commencer votre essai gratuit de 30 jours des informations exploitables sur l'infrastructure de données. Pendant la période d'essai, vous pouvez explorer les fonctionnalités offertes par Data Infrastructure Insights.
+Une fois la création de votre locataire terminée, utilisez vos informations d'identification de console pour vous connecter et démarrer votre essai gratuit de 30 jours de Data Infrastructure Insights.  Au cours de cet essai, vous pouvez découvrir les fonctionnalités offertes par Data Infrastructure Insights .
 
 Pendant l'essai gratuit, vous pouvez link:concept_subscribing_to_cloud_insights.html["commencez votre abonnement"] à tout moment accéder à la vue sur l'infrastructure de données. Lorsque vous êtes abonné, vous pouvez utiliser les fonctionnalités Data Infrastructure Insights basées sur votre abonnement actuel.
 
@@ -57,15 +55,15 @@ Pendant l'essai gratuit, vous pouvez link:concept_subscribing_to_cloud_insights.
 
 == Connectez-vous et allez
 
-Une fois votre locataire créé, il vous suffit à tout moment de vous connecter au portail NetApp BlueXP  et de cliquer sur *aller à informations sur l'infrastructure de données*. Vous serez directement dirigé vers votre locataire Data Infrastructure Insights.
+Une fois votre locataire créé, vous pouvez à tout moment vous connecter simplement au portail de la console NetApp et accéder aulink:https://services.cloud.netapp.com["Services cloud"] page et sélectionnez *Accéder à Data Infrastructure Insights*.
 
 Vous pouvez également ouvrir un navigateur directement vers l'URL du locataire Data Infrastructure Insights, par exemple :
 
  \https://<tenant-prefix>.c01.cloudinsights.netapp.com/
-L'URL sera également incluse dans l'e-mail d'invitation de chaque utilisateur pour faciliter l'accès et le signet. Si l'utilisateur n'est pas déjà connecté à BlueXP, il est invité à se connecter.
+L'URL sera également incluse dans l'e-mail d'invitation de chaque utilisateur pour un accès et une mise en favoris simples.  Si l'utilisateur n'est pas déjà connecté à la console, il sera invité à se connecter.
 
 
-NOTE: Les nouveaux utilisateurs doivent quand même s'inscrire pour accéder à BlueXP  avant de pouvoir accéder à l'URL de leur locataire.
+NOTE: Les nouveaux utilisateurs doivent toujours s'inscrire pour accéder à la console avant de pouvoir accéder à l'URL de leur locataire.
 
 La première fois que vous vous connectez à un nouveau locataire, vous serez guidé lors de la configuration de link:task_getting_started_with_cloud_insights.html["*commencer la collecte de données*"].
 
@@ -73,13 +71,13 @@ La première fois que vous vous connectez à un nouveau locataire, vous serez gu
 
 == Déconnexion
 
-Pour vous déconnecter de Data Infrastructure Insights, cliquez sur votre *Nom d'utilisateur* et sélectionnez *Fermer la session*. Vous revenez à l'écran de connexion BlueXP.
+Pour vous déconnecter de Data Infrastructure Insights, cliquez sur votre *Nom d'utilisateur* et sélectionnez *Déconnexion*.  Vous serez redirigé vers l’écran de connexion de la console.
 
 
-NOTE: La déconnexion des informations d'infrastructure de données vous déconnecte de BlueXP . Vous serez également déconnecté des autres services cloud NetApp qui utilisent la connexion BlueXP.
+NOTE: La déconnexion de Data Infrastructure Insights vous déconnecte de la console.  Vous serez également déconnecté des autres services NetApp Cloud qui utilisent la connexion à la console.
 
 
 
 === Délai d'inactivité
 
-Par défaut, BlueXP déconnecte un utilisateur s'il n'y a pas d'activité pendant six heures (360 minutes). Quelle que soit l'activité, les utilisateurs seront déconnectés après sept jours.
+Par défaut, la console déconnecte un utilisateur s'il n'y a aucune activité pendant six heures (360 minutes).  Quelle que soit l’activité, les utilisateurs seront déconnectés après sept jours.

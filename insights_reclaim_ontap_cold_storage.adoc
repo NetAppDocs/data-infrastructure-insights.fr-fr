@@ -7,6 +7,10 @@ summary: 'Ces informations vous permettent d"examiner l"impact des ressources su
 = Informations : récupération du stockage à froid ONTAP
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

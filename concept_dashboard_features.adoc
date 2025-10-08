@@ -797,7 +797,7 @@ L'actualisation automatique n'est pas disponible pour la plage de temps du table
 Combiné au *mode TV*, l'actualisation automatique permet d'afficher les données en temps quasi réel sur un tableau de bord ou une page de ressources. Le mode TV offre un affichage sans encombré ; le menu de navigation est masqué, offrant davantage d'espace pour l'affichage de vos données, tout comme le bouton Modifier. Le mode TV ignore les délais d'expiration habituels de Data Infrastructure Insights, laissant l'affichage en direct jusqu'à ce que la session soit fermée manuellement ou automatiquement par les protocoles de sécurité d'autorisation.
 
 
-NOTE: Comme NetApp BlueXP  a son propre délai de connexion utilisateur de 7 jours, les informations de l'infrastructure de données doivent également se déconnecter avec cet événement. Il vous suffit de vous connecter à nouveau pour que votre tableau de bord continue à s'afficher.
+NOTE: Étant donné que la console NetApp dispose de son propre délai d’expiration de connexion utilisateur de 7 jours, Data Infrastructure Insights doit également se déconnecter avec cet événement.  Vous pouvez simplement vous reconnecter et votre tableau de bord continuera à s'afficher.
 
 * Pour activer le mode TV, cliquez sur le bouton mode TV.
 * Pour désactiver le mode TV, cliquez sur le bouton *Quitter* dans le coin supérieur gauche de l'écran.

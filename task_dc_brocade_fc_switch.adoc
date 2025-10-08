@@ -170,7 +170,7 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 | Problème : | Essayer : 
 
 
-| Échec de la collecte des performances avec « délai dépassé lors de l'envoi de la requête SNMP ». | Selon les variables de requête et la configuration du commutateur, certaines requêtes peuvent dépasser le délai par défaut. link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["En savoir plus"]. 
+| Échec de la collecte des performances avec « délai dépassé lors de l'envoi de la requête SNMP ». | Selon les variables de requête et la configuration du commutateur, certaines requêtes peuvent dépasser le délai d'expiration par défaut. link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["En savoir plus"] . 
 
 
 | La collecte des performances échoue avec... Des doublons de lignes ont été trouvés dans la table SNMP... | DII a détecté des réponses SNMP incorrectes. Vous utilisez probablement FOS 8.2.3e. Effectuez la mise à niveau vers la version 8.2.3e2 ou supérieure. 

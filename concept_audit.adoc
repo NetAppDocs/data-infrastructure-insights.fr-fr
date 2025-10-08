@@ -89,9 +89,6 @@ Si vous placez une chaîne de filtre entre deux guillemets, Insight traite tout 
 Les événements et les actions audités par Data Infrastructure Insights peuvent être classés dans les domaines suivants :
 
 * *Compte utilisateur* : connexion, déconnexion, changement de rôle, etc
-+
-Exemple : _User *Tony Lavoie* connecté à partir de *10.1.120.15*, agent utilisateur *Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, comme Gecko) Chrome/85.0.4183.121 Safari/537.36*, méthode(s) de connexion *BlueXP Portal Login_*
-
 * *Unité d'acquisition* : créer, supprimer, etc
 +
 Exemple : _unité d'acquisition *au-Boston-1* supprimé_.
