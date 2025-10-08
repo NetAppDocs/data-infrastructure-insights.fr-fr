@@ -14,9 +14,7 @@ keywords: topology, analyze, analysis, map
 
 
 [role="lead"]
-LE SAN joue un rôle crucial dans la gestion des charges de travail stratégiques, mais sa complexité peut entraîner des pannes importantes et des perturbations pour les clients. Grâce à *SAN Analyzer* de DII, la gestion du SAN devient plus simple et plus efficace. Cet outil puissant offre une visibilité de bout en bout, en mappant les dépendances entre les ordinateurs virtuels/l'hôte et le réseau vers les LUN et le stockage.
-
-Grâce à une carte topologique interactive, SAN Analyzer vous permet de repérer les problèmes, de comprendre les modifications et d'améliorer la compréhension du flux de données. Rationalisez la gestion SAN dans des environnements IT complexes avec SAN Analyzer et augmentez votre visibilité sur les charges de travail en mode bloc.
+Le SAN joue un rôle crucial dans la gestion des charges de travail vitales, mais sa complexité peut entraîner des pannes importantes et des perturbations pour les clients.  Avec *SAN Analyzer* de DII, la gestion du SAN devient plus simple et plus efficace.  Cet outil puissant offre une visibilité de bout en bout, mappant les dépendances de la VM/hôte au réseau, au LUN et au stockage.  En fournissant une carte topologique interactive, SAN Analyzer vous permet d'identifier les problèmes, de comprendre les changements et d'améliorer la compréhension du flux de données.  Optimisez la gestion SAN dans les environnements informatiques complexes avec SAN Analyzer et augmentez votre visibilité sur les charges de travail en bloc.
 
 image:san_analyzer_example_with_panel.png["Carte topologique d'un système de stockage avec l'analyseur SAN"]
 
@@ -44,3 +42,17 @@ image:san_analyzer_protocols.png["Protocoles SAN Analyzer"]
 Si votre environnement inclut des périphériques iSCSI, passez la souris sur l'objet _iSCSI_ pour mettre en évidence les connexions associées aux périphériques iSCSI concernés.
 
 image:san_analyzer_iscsi_traffic.png["Trafic iSCSI mis en surbrillance"]
+
+
+
+== Conseils de dépannage
+
+Quelques solutions à essayer si vous rencontrez des problèmes :
+
+[cols="2*"]
+|===
+| *Problème:* | *Essayez ceci:* 
+
+
+| Je vois <0, =0 ou >0 dans la légende pour des métriques telles que _trafficUtilization_ ou _trafficRate_. | Cela peut se produire dans de très rares cas où les valeurs métriques sont inférieures à deux décimales, comme 0,000123.  L’élargissement de la fenêtre temporelle pourrait aider à analyser la métrique plus efficacement. 
+|===
