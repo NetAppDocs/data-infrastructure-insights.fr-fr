@@ -10,42 +10,42 @@ summary: Configuration du collecteur de données IBM Cleversafe.
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour détecter les données d'inventaire et de performance des systèmes de stockage IBM Cleversafe.
+Data Infrastructure Insights utilise ce collecteur de données pour découvrir les données d'inventaire et de performances des systèmes de stockage IBM Cleversafe.
 
 
-NOTE: IBM Cleversafe est mesuré à un taux de TB brut différent de celui de l'unité gérée. Chaque 40 To de capacité non formatée IBM Cleversafe est chargée comme 1 link:concept_subscribing_to_cloud_insights.html#pricing["Unité gérée (UM)"].
+NOTE: IBM Cleversafe est mesuré à un taux différent entre les To bruts et les unités gérées.  Chaque 40 To de capacité IBM Cleversafe non formatée est facturé 1link:concept_subscribing_to_cloud_insights.html#pricing["Unité gérée (UG)"] .
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données IBM Cleversafe. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données IBM Cleversafe.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Pool de stockage | Pool de stockage 
+| Piscine de stockage | Piscine de stockage 
 
 
-| Conteneur | Volume interne 
+| Récipient | Volume interne 
 
 
-| Conteneur | Partage de fichiers 
+| Récipient | Partage de fichiers 
 
 
-| Partage NFS | Partagez 
+| Partage NFS | Partager 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
 * L'adresse IP des services de données externes pour le cluster
-* Nom d'utilisateur et mot de passe administrateur
-* Orifice 9440
+* Nom d'utilisateur et mot de passe de l'administrateur
+* Port 9440
 
 
 
@@ -57,13 +57,13 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| IP Manager ou nom d'hôte | Adresse IP ou nom d'hôte du nœud de gestion 
+| IP du gestionnaire ou nom d'hôte | Adresse IP ou nom d'hôte du nœud de gestion 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du compte utilisateur avec le rôle super utilisateur ou administrateur système 
+| Nom d'utilisateur | Nom d'utilisateur pour le compte utilisateur avec le rôle de superutilisateur ou d'administrateur système 
 
 
-| Mot de passe | Mot de passe du compte utilisateur avec le rôle super utilisateur ou administrateur système 
+| Mot de passe | Mot de passe pour le compte utilisateur avec le rôle de super utilisateur ou d'administrateur système 
 |===
 
 
@@ -74,13 +74,13 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. 
+| Intervalle d'interrogation de l'inventaire (min) | Intervalle entre les sondages d'inventaire. 
 
 
-| Délai d'expiration de la connexion HTTP (sec) | Délai d'attente HTTP en secondes. 
+| Délai d'expiration de la connexion HTTP (sec) | Délai d'expiration HTTP en secondes. 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

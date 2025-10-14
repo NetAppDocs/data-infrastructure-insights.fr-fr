@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_event_rate_checker.html 
-summary: 'Ce script peut être exécuté pour vérifier le taux d"évènement dans le SVM avant d"installer un SVM DSC de ONTAP' 
+summary: 'Ce script peut être exécuté pour vérifier le taux d"événements dans le SVM avant d"installer un DSC ONTAP SVM' 
 keywords: event, checker, rate, sizing, cloud secure 
 ---
 = Vérificateur de taux d'événements SVM (Guide de dimensionnement des agents)
@@ -10,54 +10,54 @@ keywords: event, checker, rate, sizing, cloud secure
 
 
 [role="lead"]
-Le vérificateur de taux d'événement est utilisé pour vérifier le taux d'événement combiné NFS/SMB au sein du SVM avant d'installer un collecteur de données SVM ONTAP, afin de voir le nombre de SVM qu'un ordinateur Agent peut surveiller. Utilisez le vérificateur de taux d'événements comme guide de dimensionnement pour vous aider à planifier votre environnement de sécurité.
+Le vérificateur de taux d'événements est utilisé pour vérifier le taux d'événements combiné NFS/SMB dans le SVM avant d'installer un collecteur de données ONTAP SVM, pour voir combien de SVM une machine agent pourra surveiller.  Utilisez le vérificateur de taux d’événements comme guide de dimensionnement pour vous aider à planifier votre environnement de sécurité.
 
-Un agent peut prendre en charge jusqu'à 50 collecteurs de données.
+Un agent peut prendre en charge jusqu'à un maximum de 50 collecteurs de données.
 
 
 
-== Besoins :
+== Exigences:
 
 * IP de cluster
 * Nom d'utilisateur et mot de passe de l'administrateur du cluster
 
 
 
-NOTE: Lors de l'exécution de ce script, aucun SVM Data Collector de ONTAP ne doit s'exécuter pour le SVM pour lequel le taux d'événement est déterminé.
+NOTE: Lors de l'exécution de ce script, aucun collecteur de données ONTAP SVM ne doit être en cours d'exécution pour le SVM pour lequel le taux d'événements est déterminé.
 
-Étapes :
+Mesures:
 
 . Installez l'agent en suivant les instructions de CloudSecure.
-. Une fois l'agent installé, exécutez le script _Server_Data_rate_Checker.sh_ en tant qu'utilisateur sudo :
+. Une fois l'agent installé, exécutez le script _server_data_rate_checker.sh_ en tant qu'utilisateur sudo :
 +
  /opt/netapp/cloudsecure/agent/install/svm_event_rate_checker.sh
-. Ce script nécessite l'installation de _sshpass_ sur la machine linux. Il existe deux façons de l'installer :
+. Ce script nécessite que _sshpass_ soit installé sur la machine Linux.  Il existe deux façons de l'installer :
 +
-.. Exécutez la commande suivante :
+.. Exécutez la commande suivante :
 +
  linux_prompt> yum install sshpass
-.. Si cela ne fonctionne pas, téléchargez _sshpass_ sur la machine linux à partir du Web et exécutez la commande suivante :
+.. Si cela ne fonctionne pas, téléchargez _sshpass_ sur la machine Linux à partir du Web et exécutez la commande suivante :
 +
  linux_prompt> rpm -i sshpass
 
 
-. Indiquez les valeurs correctes lorsque vous y êtes invité. Voir un exemple ci-dessous.
-. L'exécution du script prend environ 5 minutes.
-. Une fois l'exécution terminée, le script imprime le taux d'évènement à partir du SVM. Vous pouvez vérifier le taux d'événement par SVM dans la sortie de la console :
+. Fournissez les valeurs correctes lorsque vous y êtes invité.  Voir ci-dessous pour un exemple.
+. L'exécution du script prendra environ 5 minutes.
+. Une fois l'exécution terminée, le script imprimera le taux d'événements à partir du SVM.  Vous pouvez vérifier le taux d'événements par SVM dans la sortie de la console :
 +
  “Svm svm_rate is generating 100 events/sec”.
 
 
-Chaque SVM Data Collector de ONTAP peut être associé à un seul SVM, ce qui signifie que chaque collecteur de données sera en mesure de recevoir le nombre d'événements qu'un seul SVM génère.
+Chaque collecteur de données Ontap SVM peut être associé à un seul SVM, ce qui signifie que chaque collecteur de données pourra recevoir le nombre d'événements générés par un seul SVM.
 
-Gardez à l'esprit les éléments suivants :
+Gardez à l’esprit les points suivants :
 
-A) utilisez ce tableau comme guide de dimensionnement général. Vous pouvez augmenter le nombre de cœurs et/ou de mémoire pour augmenter le nombre de collecteurs de données pris en charge, jusqu'à un maximum de 50 collecteurs de données :
+A) Utilisez ce tableau comme guide général de dimensionnement.  Vous pouvez augmenter le nombre de cœurs et/ou de mémoire pour augmenter le nombre de collecteurs de données pris en charge, jusqu'à un maximum de 50 collecteurs de données :
 
 |===
 
 
-| Configuration de l'ordinateur agent | Nombre de collecteurs de données SVM | Taux d'événement maximal que l'Agent machine peut traiter 
+| Configuration de la machine agent | Nombre de collecteurs de données SVM | Taux maximal d'événements que la machine agent peut gérer 
 
 
 | 4 cœurs, 16 Go | 10 collecteurs de données | 20 000 événements/sec 
@@ -65,22 +65,22 @@ A) utilisez ce tableau comme guide de dimensionnement général. Vous pouvez aug
 
 | 4 cœurs, 32 Go | 20 collecteurs de données | 20 000 événements/sec 
 |===
-B) pour calculer le total de vos événements, ajoutez les événements générés pour tous les SVM pour cet agent.
+B) Pour calculer le nombre total d'événements, additionnez les événements générés pour tous les SVM de cet agent.
 
-C) si le script n'est pas exécuté pendant les heures de pointe ou si le trafic de pointe est difficile à prévoir, conservez un tampon de taux d'événement de 30 %.
+C) Si le script n'est pas exécuté pendant les heures de pointe ou si le trafic de pointe est difficile à prévoir, conservez une marge de taux d'événements de 30 %.
 
-B + C doit être inférieur À A, sinon la machine Agent ne sera pas en mesure de surveiller.
+B + C doit être inférieur à A, sinon la machine Agent ne parviendra pas à surveiller.
 
-En d'autres termes, le nombre de collecteurs de données pouvant être ajoutés à une seule machine agent doit être conforme à la formule ci-dessous :
+En d’autres termes, le nombre de collecteurs de données qui peuvent être ajoutés à une seule machine agent doit être conforme à la formule ci-dessous :
 
  Sum of all Event rate of all Data Source Collectors + Buffer Event rate of 30% < 20000 events/second
-Reportez-vous link:concept_cs_agent_requirements.html["Exigences de l'agent"]à la page pour connaître les conditions requises et les conditions requises supplémentaires.
+Voir lelink:concept_cs_agent_requirements.html["Exigences relatives aux agents"] page pour les prérequis et exigences supplémentaires.
 
 
 
 == Exemple
 
-Disons que nous avons trois SVM générant des taux d'événements de 100, 200 et 300 par seconde, respectivement.
+Disons que nous avons trois SVMS générant des taux d’événements de 100, 200 et 300 événements par seconde, respectivement.
 
 Nous appliquons la formule :
 
@@ -88,16 +88,16 @@ Nous appliquons la formule :
  (100+200+300) + [(100+200+300)*30%] = 600+180 = 780events/sec
 780 events/second is < 20000 events/second, so the 3 SVMs can be monitored via one agent box.
 ....
-La sortie de la console est disponible sur la machine agent, dans le nom de fichier __fpolicy_stat_<nom du SVM>.log__ dans le répertoire de travail actuel.
+La sortie de la console est disponible sur la machine Agent dans le nom de fichier __fpolicy_stat_<SVM Name>.log__ dans le répertoire de travail actuel.
 
-Le script peut donner des résultats erronés dans les cas suivants :
+Le script peut donner des résultats erronés dans les cas suivants :
 
-* Des identifiants, IP ou nom de SVM incorrects sont fournis.
-* un serveur fpolicy existant avec le même nom, numéro de séquence, etc. Fournit une erreur.
-* Le script s'arrête brusquement en cours d'exécution.
+* Des informations d'identification, une adresse IP ou un nom SVM incorrects sont fournis.
+* Une fpolicy déjà existante avec le même nom, le même numéro de séquence, etc. donnera une erreur.
+* Le script s'arrête brusquement pendant son exécution.
 
 
-Un exemple d'exécution de script est présenté ci-dessous :
+Un exemple d’exécution de script est présenté ci-dessous :
 
  [root@ci-cs-data agent]# /opt/netapp/cloudsecure/agent/install/svm_event_rate_checker.sh
 ....
@@ -144,23 +144,23 @@ Overall svm audit_svm is generating 300 events/sec
 |===
 
 
-| Question | Réponse 
+| Question | Répondre 
 
 
-| Si je exécute ce script sur un SVM déjà configuré pour Workload Security, utilise-t-il simplement la configuration fpolicy existante sur le SVM ou configure-t-il une configuration temporaire et exécute-t-il le processus ? | L'Event Rate Checker peut s'exécuter correctement, même pour un SVM déjà configuré pour Workload Security. Il ne devrait y avoir aucun impact. 
+| Si j'exécute ce script sur un SVM déjà configuré pour Workload Security, utilise-t-il simplement la configuration fpolicy existante sur le SVM ou en configure-t-il un temporaire et exécute-t-il le processus ? | Le vérificateur de taux d'événements peut fonctionner correctement même pour un SVM déjà configuré pour la sécurité de la charge de travail.  Il ne devrait y avoir aucun impact. 
 
 
-| Puis-je augmenter le nombre de SVM sur lesquels le script peut être exécuté ? | Oui. Il vous suffit de modifier le script et de changer le nombre max de SVM de 5 à n'importe quel nombre souhaitable. 
+| Puis-je augmenter le nombre de SVM sur lesquels le script peut être exécuté ? | Oui. Modifiez simplement le script et modifiez le nombre maximal de SVM de 5 à n'importe quel nombre souhaité. 
 
 
-| Si j'augmente le nombre de SVM, augmente-t-il le temps d'exécution du script ? | Non. Le script s'exécutera pendant 5 minutes maximum, même si le nombre de SVM sera augmenté. 
+| Si j'augmente le nombre de SVM, cela augmentera-t-il le temps d'exécution du script ? | Non. Le script s'exécutera pendant 5 minutes maximum, même si le nombre de SVM est augmenté. 
 
 
-| Puis-je augmenter le nombre de SVM sur lesquels le script peut être exécuté ? | Oui. Vous devez modifier le script et changer le nombre max de SVM de 5 à n'importe quel nombre souhaitable. 
+| Puis-je augmenter le nombre de SVM sur lesquels le script peut être exécuté ? | Oui. Vous devez modifier le script et modifier le nombre maximal de SVM de 5 à n'importe quel nombre souhaité. 
 
 
-| Si j'augmente le nombre de SVM, augmente-t-il le temps d'exécution du script ? | Non. Le script s'exécutera pendant 5 min maximum, même si le nombre de SVM sera augmenté. 
+| Si j'augmente le nombre de SVM, cela augmentera-t-il le temps d'exécution du script ? | Non. Le script s'exécutera pendant 5 minutes maximum, même si le nombre de SVM augmente. 
 
 
-| Que se passe-t-il si j'exécute Event Rate Checker avec un agent existant ? | L'exécution d'Event Rate Checker sur un agent existant peut entraîner une augmentation de la latence sur le SVM. Cette augmentation sera temporaire pendant l'exécution du vérificateur de taux d'événement. 
+| Que se passe-t-il si j’exécute le vérificateur de taux d’événements avec un agent existant ? | L'exécution du vérificateur de taux d'événements sur un agent déjà existant peut entraîner une augmentation de la latence sur le SVM.  Cette augmentation sera de nature temporaire pendant l'exécution du vérificateur de taux d'événements. 
 |===

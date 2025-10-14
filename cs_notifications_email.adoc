@@ -1,49 +1,49 @@
 ---
 sidebar: sidebar 
 permalink: cs_notifications_email.html 
-summary: 'Ajout d"adresses e-mail pour les notifications des alertes de sécurité de la charge de travail.' 
+summary: 'Ajout d"adresses e-mail pour les notifications d"alertes de sécurité de charge de travail.' 
 keywords: email, notifications, alerts, warnings, attacks 
 ---
-= Configuration des notifications par e-mail pour les alertes, les avertissements et l'état de santé du collecteur d'agents/de sources de données
+= Configuration des notifications par e-mail pour les alertes, les avertissements et l'état de santé de l'agent/collecteur de sources de données
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Pour configurer les destinataires d'alertes de sécurité de la charge de travail, cliquez sur *Admin > Notifications* et entrez une ou plusieurs adresses électroniques dans les sections appropriées pour chaque destinataire.
+Pour configurer les destinataires des alertes de sécurité de la charge de travail, cliquez sur *Admin > Notifications* et saisissez une adresse e-mail dans la ou les sections appropriées pour chaque destinataire.
 
 
 
 == Alertes et avertissements d'attaque potentielle
 
-Pour envoyer des notifications _attaque potentielle_ alerte, entrez les adresses e-mail des destinataires dans la section _Envoyer alertes d'attaque potentielles_. Les notifications par e-mail sont envoyées à la liste des destinataires des alertes pour chaque action de l'alerte.
+Pour envoyer des notifications d'alerte d'attaque potentielle, saisissez les adresses e-mail des destinataires dans la section _Envoyer des alertes d'attaque potentielle_.  Des notifications par courrier électronique sont envoyées à la liste des destinataires de l'alerte pour chaque action sur l'alerte.
 
-Pour envoyer des notifications _Warning_, entrez les adresses e-mail des destinataires dans la section _Send Warning Alerts_.
-
-
-
-== Surveillance de l'état de santé des agents et des Data Collector
-
-Vous pouvez surveiller l'état des agents et des sources de données grâce aux notifications.
-
-Afin de recevoir des notifications si un agent ou un collecteur de source de données ne fonctionne pas, entrez les adresses électroniques des destinataires dans la section _Data Collection Health Alerts_.
-
-Gardez à l'esprit les éléments suivants :
-
-* Les alertes d'intégrité ne seront envoyées qu'une fois que l'agent/le collecteur cesse de générer des rapports pendant au moins une heure.
-* Une seule notification par e-mail est envoyée aux destinataires prévus dans une période donnée de 24 heures, même si l'agent ou le collecteur de données est déconnecté pendant une période plus longue.
-* En cas de défaillance d'un agent, une alerte est envoyée (pas une par collecteur). Cet e-mail inclura une liste de tous les SVM affectés.
-* L'échec de la collecte de répertoire actif est signalé comme un avertissement ; elle n'a aucun impact sur la détection de ransomware.
-* La liste mise en route comprend maintenant une nouvelle phase _configurer les notifications par e-mail_.
+Pour envoyer des notifications d'avertissement, saisissez les adresses e-mail des destinataires dans la section Envoyer des alertes d'avertissement.
 
 
 
+== Surveillance de la santé des agents et des collecteurs de données
 
-== Réception de notifications de mise à niveau d'agent et de Data Collector
+Vous pouvez surveiller la santé des agents et des sources de données via des notifications.
 
-* Entrez les ID d'e-mail dans le champ « Data Collection Health Alerts » (alertes d'état de la collecte de données).
-* La case à cocher « Activer les notifications de mise à niveau » devient activée.
-* Les notifications par e-mail de mise à niveau de l'agent et du Data Collector sont envoyées aux ID d'e-mail un jour avant la mise à niveau prévue.
+Afin de recevoir des notifications dans le cas où un agent ou un collecteur de sources de données ne fonctionne pas, saisissez les adresses e-mail des destinataires dans la section _Alertes de santé de la collecte de données_.
+
+Gardez à l’esprit les points suivants :
+
+* Les alertes de santé ne seront envoyées qu'après que l'agent/collecteur aura cessé de signaler pendant au moins une heure.
+* Une seule notification par e-mail est envoyée aux destinataires prévus au cours d'une période donnée de 24 heures, même si l'agent ou le collecteur de données est déconnecté pendant une durée plus longue.
+* En cas de défaillance d'un Agent, une seule alerte sera envoyée (pas une par collecteur).  L'e-mail comprendra une liste de tous les SVM concernés.
+* L'échec de la collecte d'Active Directory est signalé comme un avertissement ; il n'a aucun impact sur la détection des ransomwares.
+* La liste de configuration de mise en route inclut désormais une nouvelle phase _Configurer les notifications par e-mail_.
+
+
+
+
+== Notifications de mise à niveau de l'agent récepteur et du collecteur de données
+
+* Saisissez les identifiants de messagerie dans les « Alertes de santé de collecte de données ».
+* La case à cocher « Activer les notifications de mise à niveau » devient activée.
+* Les notifications par e-mail de mise à niveau de l'agent et du collecteur de données sont envoyées aux identifiants de messagerie un jour avant la mise à niveau prévue.
 
 
 
@@ -51,8 +51,8 @@ Gardez à l'esprit les éléments suivants :
 == Dépannage
 
 |===
-| *Problème:* | *Essayez ceci:* 
+| *Problème:* | *Essayez ceci :* 
 
 
-| Les ID d'e-mail sont présents dans les « alertes d'intégrité du Data Collector », mais je ne reçois pas de notifications. | Des e-mails de notification sont envoyés à partir du domaine NetApp Data Infrastructure Insights, c'est-à-dire à partir de_NetApp.com_. Certaines entreprises bloquent les e-mails entrants s'ils proviennent d'un domaine externe. Assurez-vous que les notifications externes provenant des domaines NetApp Data Infrastructure Insights sont placées sur liste blanche. 
+| Les identifiants de messagerie sont présents dans les « Alertes de santé du collecteur de données », mais je ne reçois pas de notifications. | Les e-mails de notification sont envoyés depuis le domaine NetApp Data Infrastructure Insights , c'est-à-dire depuis _accounts@service.cloudinsights.netapp.com_.  Certaines entreprises bloquent les e-mails entrants s'ils proviennent d'un domaine externe.  Assurez-vous que les notifications externes des domaines NetApp Data Infrastructure Insights sont sur liste blanche. 
 |===

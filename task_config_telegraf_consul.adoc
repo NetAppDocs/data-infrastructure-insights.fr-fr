@@ -2,51 +2,51 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_consul.html 
 keywords: telegraf, installation, install, consul 
-summary: Configuration du collecteur de données consul 
+summary: Configuration du collecteur de données Consul 
 ---
-= Collecteur de données consul
+= Collecteur de données consulaires
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour recueillir des mesures auprès de Consul.
+Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques auprès de Consul.
 
 
 
 == Installation
 
-. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez Consul.
+. Depuis *Observabilité > Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Consul.
 +
-Si vous n'avez pas configuré un agent pour la collecte, vous êtes invité à link:task_config_telegraf_agent.html["installez un agent"]le faire sur votre locataire.
+Si vous n'avez pas configuré d'agent pour la collecte, vous êtes invité àlink:task_config_telegraf_agent.html["installer un agent"] sur votre locataire.
 
 +
-Si un agent est déjà configuré, sélectionnez le système d'exploitation ou la plate-forme approprié et cliquez sur *Continuer*.
+Si vous avez déjà configuré un agent, sélectionnez le système d'exploitation ou la plateforme approprié et cliquez sur *Continuer*.
 
-. Suivez les instructions de l'écran Configuration consul pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
-
-
+. Suivez les instructions de l’écran de configuration du Consul pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.
 
 
-== Configuration
 
-Vous trouverez des informations dans le link:https://www.consul.io/docs/index.html["Documentation consul"].
+
+== Installation
+
+Des informations peuvent être trouvées dans lelink:https://www.consul.io/docs/index.html["Documentation du consul"] .
 
 
 
 == Objets et compteurs pour consul
 
-Les objets suivants et leurs compteurs sont collectés :
+Les objets suivants et leurs compteurs sont collectés :
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| Objet : | Identifiants : | Attributs : | Points de données : 
+| Objet: | Identifiants : | Attributs: | Points de données : 
 
 
-| Consul | Numéro de contrôle d'espace de noms nœud de service | Nœud IP nœud OS UUID Nom du nœud Nom du service Vérification Nom ID de service État | Avertissement de réussite critique 
+| Consul | Nœud de service d'identification de vérification d'espace de noms | IP du nœud OS du nœud UUID du nœud Nom du nœud Nom du service Nom de vérification ID du service Statut | Avertissement de dépassement critique 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur la link:concept_requesting_support.html["Assistance"] page.
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page.

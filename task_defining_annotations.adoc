@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_defining_annotations.html 
 keywords: annotations, monitor, notes, tags 
-summary: 'Suivi des données à l"aide d"annotations.' 
+summary: 'Suivez les données à l"aide d"annotations.' 
 ---
 = Définition des annotations
 :hardbreaks:
@@ -14,16 +14,16 @@ summary: 'Suivi des données à l"aide d"annotations.'
 
 
 [role="lead"]
-Lorsque vous personnalisez des informations de l'infrastructure de données pour effectuer le suivi des données en fonction des besoins de votre entreprise, vous pouvez définir des notes spécialisées, appelées annotations, et les affecter à vos ressources.
+Lors de la personnalisation de Data Infrastructure Insights pour suivre les données en fonction des besoins de votre entreprise, vous pouvez définir des notes spécialisées, appelées annotations, et les attribuer à vos ressources.
 
-Vous pouvez attribuer des annotations à des ressources avec des informations telles que la fin de vie des ressources, le data Center, l'emplacement de construction, le Tier de stockage ou le niveau de service du volume.
+Vous pouvez attribuer des annotations aux actifs avec des informations telles que la fin de vie de l'actif, le centre de données, l'emplacement du bâtiment, le niveau de stockage ou le niveau de service du volume.
 
-L'utilisation d'annotations pour vous aider à contrôler votre environnement comprend les tâches de haut niveau suivantes :
+L’utilisation d’annotations pour vous aider à surveiller votre environnement comprend les tâches de haut niveau suivantes :
 
-* Création ou modification de définitions pour tous les types d'annotation.
-* Affichage des pages ASSET et association de chaque ressource à une ou plusieurs annotations.
+* Création ou modification de définitions pour tous les types d'annotations.
+* Affichage des pages d'actifs et association de chaque actif à une ou plusieurs annotations.
 +
-Par exemple, si un bien est loué et que le bail expire dans un délai de deux mois, vous pouvez appliquer une annotation de fin de vie à l'actif. Cela permet d'éviter que d'autres personnes n'utilisent cette ressource pendant une période prolongée.
+Par exemple, si un actif est loué et que le bail expire dans les deux mois, vous souhaiterez peut-être appliquer une annotation de fin de vie à l'actif.  Cela permet d’empêcher d’autres personnes d’utiliser cet actif pendant une période prolongée.
 
 * Création de règles pour appliquer automatiquement des annotations à plusieurs ressources du même type.
 * Filtrer les ressources par leurs annotations.
@@ -31,81 +31,81 @@ Par exemple, si un bien est loué et que le bail expire dans un délai de deux m
 
 
 
-== Types d'annotation par défaut
+== Types d'annotations par défaut
 
-Data Infrastructure Insights propose certains types d'annotations par défaut. Ces annotations peuvent être utilisées pour filtrer ou regrouper des données.
+Data Infrastructure Insights fournit certains types d’annotations par défaut.  Ces annotations peuvent être utilisées pour filtrer ou regrouper des données.
 
-Vous pouvez associer des ressources à des types d'annotation par défaut tels que :
+Vous pouvez associer des ressources à des types d’annotation par défaut tels que les suivants :
 
-* Le cycle de vie des actifs, comme l'anniversaire, le coucher du soleil ou la fin de vie
-* Informations de localisation sur un appareil, comme un centre de données, un bâtiment ou un sol
-* Classification des actifs, par exemple par qualité (niveaux), par périphériques connectés (niveau du commutateur) ou par niveau de service
-* État, comme les données fortement sollicitées (utilisation élevée)
+* Cycle de vie des actifs, comme l'anniversaire, le coucher du soleil ou la fin de vie
+* Informations de localisation sur un appareil, telles qu'un centre de données, un bâtiment ou un étage
+* Classification des actifs, par exemple par qualité (niveaux), par appareils connectés (niveau de commutation) ou par niveau de service
+* Statut, tel que chaud (utilisation élevée)
 
 
-Le tableau suivant répertorie les types d'annotations fournies par Data Infrastructure Insights.
+Le tableau suivant répertorie les types d’annotations fournis par Data Infrastructure Insights.
 
 [cols="30,53, 16"]
 |===
 
 
-| Types d'annotation | Description | Type 
+| Types d'annotations | Description | Type 
 
 
 | Alias | Nom convivial pour une ressource | Texte 
 
 
-| Calculer le groupe de ressources | Affectation de groupe utilisée par le collecteur de données systèmes de fichiers hôte et VM | Liste 
+| Groupe de ressources informatiques | Affectation de groupe utilisée par le collecteur de données des systèmes de fichiers hôte et VM | Liste 
 
 
-| Data Center | Emplacement physique | Liste 
+| Centre de données | Localisation physique | Liste 
 
 
-| Chaud | Dispositifs en utilisation intensive sur une base régulière ou au seuil de capacité | Booléen 
+| Chaud | Appareils soumis à une utilisation intensive de manière régulière ou au seuil de capacité | Booléen 
 
 
-| Remarque | Commentaires associés à une ressource | Testez 
+| Remarque | Commentaires associés à une ressource | Test 
 
 
-| Niveau de service | Un ensemble de niveaux de service pris en charge que vous pouvez attribuer aux ressources. Le fournit une liste d'options ordonnée pour les volumes internes, qtree et volumes. Modifiez les niveaux de service pour définir des règles de performances adaptées à différents niveaux. | Liste 
+| Niveau de service | Un ensemble de niveaux de service pris en charge que vous pouvez attribuer aux ressources.  Fournit une liste d'options ordonnées pour les volumes internes, qtree et les volumes.  Modifiez les niveaux de service pour définir des politiques de performances pour différents niveaux. | Liste 
 
 
-| Coucher de soleil | Seuil défini après lequel aucune nouvelle attribution ne peut être effectuée à ce périphérique. Utile pour les migrations planifiées et autres modifications réseau en attente. | Date 
+| Coucher de soleil | Seuil défini après lequel aucune nouvelle allocation ne peut être effectuée sur ce périphérique.  Utile pour les migrations planifiées et autres modifications de réseau en attente. | Date 
 
 
-| Niveau du commutateur | Options prédéfinies pour la configuration des catégories de commutateurs. Généralement, ces désignations restent pour la durée de vie du périphérique, bien que vous puissiez les modifier. Disponible uniquement pour les commutateurs. | Liste 
+| Niveau de commutation | Options prédéfinies pour la configuration des catégories pour les commutateurs.  En règle générale, ces désignations restent valables pendant toute la durée de vie de l'appareil, même si vous pouvez les modifier.  Disponible uniquement pour les commutateurs. | Liste 
 
 
-| Niveau | Peut être utilisé pour définir différents niveaux de service au sein de votre environnement. Les niveaux peuvent définir le type de niveau, comme la vitesse nécessaire (par exemple, Gold ou Silver). Cette fonctionnalité est disponible uniquement sur les volumes internes, les qtrees, les baies de stockage, les pools de stockage et les volumes. | Liste 
+| Étage | Peut être utilisé pour définir différents niveaux de service au sein de votre environnement.  Les niveaux peuvent définir le type de niveau, comme la vitesse nécessaire (par exemple, or ou argent).  Cette fonctionnalité est disponible uniquement sur les volumes internes, les qtrees, les baies de stockage, les pools de stockage et les volumes. | Liste 
 
 
-| Gravité de la violation | Classer (par exemple, majeur) d'une violation (par exemple, ports hôtes manquants ou redondance manquante), dans une hiérarchie de la plus haute à la plus faible importance. | Liste 
+| Gravité de la violation | Rang (par exemple, majeur) d'une violation (par exemple, ports hôtes manquants ou redondance manquante), dans une hiérarchie de l'importance la plus élevée à la plus faible. | Liste 
 |===
 
 NOTE: Alias, Centre de données, Chaud, Niveau de service, Coucher de soleil, Niveau de commutateur, Niveau et Gravité de la violation sont des annotations au niveau du système, que vous ne pouvez pas supprimer ou renommer ; vous ne pouvez modifier que leurs valeurs attribuées.
 
 
 
-== Création d'annotations personnalisées
+== Créer des annotations personnalisées
 
-Ces annotations vous permettent d'ajouter des données personnalisées spécifiques à l'entreprise qui correspondent aux ressources de votre entreprise. Même si les informations sur l'infrastructure de données proposent un ensemble d'annotations par défaut, vous pouvez souhaiter afficher les données de différentes manières. Les données contenues dans des annotations personnalisées complètent les données déjà collectées, telles que le fabricant du stockage, le nombre de volumes et les statistiques de performance. Les données que vous ajoutez à l'aide d'annotations ne sont pas découvertes par Data Infrastructure Insights.
+À l’aide d’annotations, vous pouvez ajouter des données personnalisées spécifiques à votre entreprise qui correspondent aux besoins de votre entreprise aux actifs.  Bien que Data Infrastructure Insights fournisse un ensemble d'annotations par défaut, vous souhaiterez peut-être afficher les données d'autres manières.  Les données des annotations personnalisées complètent les données de l'appareil déjà collectées, telles que le fabricant de stockage, les volumes numériques et les statistiques de performances.  Les données que vous ajoutez à l’aide d’annotations ne sont pas découvertes par Data Infrastructure Insights.
 
 .Étapes
-. Dans le menu informations sur l'infrastructure de données, cliquez sur *gérer > Annotations*.
+. Dans le menu Data Infrastructure Insights , cliquez sur *Gérer > Annotations*.
 +
 La page Annotations affiche la liste des annotations.
 
 . Cliquez sur *+Ajouter*
-. Saisissez un *Nom* et *Description* de l'annotation.
+. Saisissez un *Nom* et une *Description* de l'annotation.
 +
-Ces champs peuvent comporter jusqu'à 255 caractères.
+Vous pouvez saisir jusqu'à 255 caractères dans ces champs.
 
-. Cliquez sur *Type*, puis sélectionnez l'une des options suivantes qui représente le type de données autorisé dans cette annotation :
+. Cliquez sur *Type*, puis sélectionnez l’une des options suivantes qui représente le type de données autorisées dans cette annotation :
 
 
-.Types d'annotation
+.Types d'annotations
 * Booléen : Crée une liste déroulante avec les options « oui » et « non ». Par exemple, l'annotation « Rattaché directement » est booléenne.
-* Date : cela crée un champ qui contient une date.  Par exemple, si l’annotation est une date, sélectionnez cette option.
+* Date : cela crée un champ qui contient une date. Par exemple, si l’annotation est une date, sélectionnez cette option.
 * Liste : crée l’un des éléments suivants :
 +
 ** Une liste déroulante fixe
@@ -118,27 +118,27 @@ Si vous sélectionnez l'option Ajouter de nouvelles valeurs à la volée lorsque
 
 
 
-* Nombre : crée un champ dans lequel l'utilisateur qui affecte l'annotation peut entrer un nombre. Par exemple, si le type d'annotation est « sol », l'utilisateur peut sélectionner le type de valeur « nombre » et saisir le numéro d'étage.
-* Texte : crée un champ permettant le texte libre. Par exemple, vous pouvez saisir "langue" comme type d'annotation, sélectionner "texte" comme type de valeur et entrer une langue comme valeur.
+* Numéro : crée un champ dans lequel l’utilisateur attribuant l’annotation peut saisir un numéro.  Par exemple, si le type d’annotation est « Étage », l’utilisateur peut sélectionner le type de valeur « numéro » et saisir le numéro de l’étage.
+* Texte : crée un champ qui autorise le texte libre.  Par exemple, vous pouvez saisir « Langue » comme type d’annotation, sélectionner « Texte » comme type de valeur et saisir une langue comme valeur.
 
 
 
-NOTE: Après avoir défini le type et enregistré vos modifications, vous ne pouvez pas modifier le type de l'annotation. Si vous devez modifier le type, vous devez supprimer l'annotation et en créer une nouvelle.
+NOTE: Après avoir défini le type et enregistré vos modifications, vous ne pouvez pas modifier le type de l'annotation.  Si vous devez modifier le type, vous devez supprimer l'annotation et en créer une nouvelle.
 
-. Si vous sélectionnez liste comme type d'annotation, procédez comme suit :
+. Si vous sélectionnez Liste comme type d’annotation, procédez comme suit :
 +
-.. Sélectionnez *Ajouter de nouvelles valeurs à la volée* si vous souhaitez pouvoir ajouter des valeurs supplémentaires à l'annotation sur une page de ressources, ce qui crée une liste flexible.
+.. Sélectionnez *Ajouter de nouvelles valeurs à la volée* si vous souhaitez pouvoir ajouter davantage de valeurs à l'annotation lorsque vous êtes sur une page d'actif, ce qui crée une liste flexible.
 +
-Par exemple, supposons que vous vous trouvez sur une page d'actifs et que l'actif comporte l'annotation City avec les valeurs Detroit, Tampa et Boston. Si vous avez sélectionné l'option *Ajouter de nouvelles valeurs à la volée*, vous pouvez ajouter des valeurs supplémentaires à la ville comme San Francisco et Chicago directement sur la page de la ressource au lieu de devoir aller à la page Annotations pour les ajouter. Si vous ne choisissez pas cette option, vous ne pouvez pas ajouter de nouvelles valeurs d'annotation lors de l'application de l'annotation. Cela crée une liste fixe.
+Par exemple, supposons que vous êtes sur une page d’actif et que l’actif comporte l’annotation Ville avec les valeurs Détroit, Tampa et Boston.  Si vous avez sélectionné l'option *Ajouter de nouvelles valeurs à la volée*, vous pouvez ajouter des valeurs supplémentaires à la ville comme San Francisco et Chicago directement sur la page de l'actif au lieu de devoir accéder à la page Annotations pour les ajouter.  Si vous ne choisissez pas cette option, vous ne pouvez pas ajouter de nouvelles valeurs d’annotation lors de l’application de l’annotation ; cela crée une liste fixe.
 
-.. Entrez une valeur et une description dans les champs *valeur* et *Description*.
+.. Saisissez une valeur et une description dans les champs *Valeur* et *Description*.
 .. Cliquez sur *+Ajouter+* pour ajouter des valeurs supplémentaires.
-.. Cliquez sur l'icône Corbeille pour supprimer une valeur.
+.. Cliquez sur l’icône Corbeille pour supprimer une valeur.
 
 
 . Cliquez sur *Enregistrer*
 +
-Vos annotations apparaissent dans la liste de la page Annotations.
+Vos annotations apparaissent dans la liste sur la page Annotations.
 
 
 
@@ -146,10 +146,10 @@ Vos annotations apparaissent dans la liste de la page Annotations.
 Lors du filtrage sur une annotation booléenne, les valeurs suivantes peuvent vous être présentées sur lesquelles filtrer :
 
 * *Tout* : cela renverra _tous_ les résultats, y compris les résultats définis sur « Oui », « Non » ou pas définis du tout.
-* *Oui* : renvoie uniquement les résultats « Oui ».  Notez que DII affiche « Oui » comme coche dans la plupart des tableaux.  Les valeurs peuvent être définies sur « Vrai », « Activé », etc. DII traite toutes ces valeurs comme « Oui ».
-* *Non* : renvoie uniquement les résultats « Non ».  Notez que DII affiche « Non » sous la forme d’un « X » dans la plupart des tableaux.  Les valeurs peuvent être définies sur « Faux », « Désactivé », etc. DII traite toutes ces valeurs comme « Non ».
-* *Aucun* : renvoie uniquement les résultats pour lesquels l'annotation n'a pas été définie du tout.  Également appelées valeurs « nulles ».
+* *Oui* : renvoie uniquement les résultats « Oui ». Notez que DII affiche « Oui » comme coche dans la plupart des tableaux. Les valeurs peuvent être définies sur « Vrai », « Activé », etc. DII traite toutes ces valeurs comme « Oui ».
+* *Non* : renvoie uniquement les résultats « Non ». Notez que DII affiche « Non » sous la forme d’un « X » dans la plupart des tableaux. Les valeurs peuvent être définies sur « Faux », « Désactivé », etc. DII traite toutes ces valeurs comme « Non ».
+* *Aucun* : renvoie uniquement les résultats pour lesquels l'annotation n'a pas été définie du tout. Également appelées valeurs « nulles ».
 
 
-.Une fois que vous avez terminé
-L'annotation est immédiatement disponible dans l'interface utilisateur.
+.Après avoir terminé
+Dans l'interface utilisateur, l'annotation est immédiatement disponible pour utilisation.

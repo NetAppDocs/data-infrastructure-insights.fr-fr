@@ -10,64 +10,64 @@ summary: Configuration du collecteur de données Apache
 
 
 [role="lead"]
-Ce collecteur de données permet la collecte de données à partir des serveurs Apache de votre locataire.
+Ce collecteur de données permet la collecte de données à partir des serveurs Apache sur votre locataire.
 
-.Conditions préalables
-* Votre serveur HTTP Apache doit être configuré et en cours d'exécution
-* Vous devez disposer d'autorisations sudo ou administrateur sur votre hôte agent/machine virtuelle
-* En général, le module Apache _mod_status_ est configuré pour exposer une page à l'emplacement '/Server-status?auto' du serveur Apache. L'option _ExtendedStatus_ doit être activée pour collecter tous les champs disponibles. Pour plus d'informations sur la configuration de votre serveur, reportez-vous à la documentation du module Apache : https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable[]
+.Prérequis
+* Votre serveur HTTP Apache doit être configuré et fonctionner correctement.
+* Vous devez disposer des autorisations sudo ou administrateur sur votre hôte/VM d'agent
+* En règle générale, le module Apache _mod_status_ est configuré pour exposer une page à l'emplacement '/server-status?auto' du serveur Apache.  L'option _ExtendedStatus_ doit être activée pour collecter tous les champs disponibles.  Pour plus d'informations sur la configuration de votre serveur, consultez la documentation du module Apache : https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable[]
 
 
 
 
 == Installation
 
-. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez Apache.
+. Depuis *Observabilité > Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Apache.
 +
-Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+Sélectionnez le système d’exploitation ou la plate-forme sur laquelle l’agent Telegraf est installé.
 
-. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer les link:task_config_telegraf_agent.html["Installation de l'agent"]instructions.
-. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
-. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
-
-
-image:ApacheDCConfigLinux.png["Configuration Apache"]
+. Si vous n'avez pas encore installé d'agent pour la collecte, ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer lelink:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d’accès de l’agent à utiliser avec ce collecteur de données.  Vous pouvez ajouter une nouvelle clé d'accès d'agent en cliquant sur le bouton *+ Clé d'accès d'agent*.  Meilleure pratique : utilisez une clé d’accès d’agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple par système d’exploitation/plateforme.
+. Suivez les étapes de configuration pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.
 
 
-
-== Configuration
-
-Le plug-in Telegraf pour le serveur HTTP Apache dépend du module 'mod_status' pour être activé. Lorsque cette option est activée, le serveur HTTP d'Apache expose un noeud final HTML qui peut être affiché sur votre navigateur ou gratté pour l'extraction de l'état de toute la configuration du serveur HTTP d'Apache.
+image:ApacheDCConfigLinux.png["Configuration d'Apache"]
 
 
 
-=== Compatibilité :
+== Installation
 
-La configuration a été développée par le serveur HTTP Apache version 2.4.38.
-
-
-
-=== Activation de mod_status :
-
-L'activation et l'exposition des modules « od_status » implique deux étapes :
-
-* Activation du module
-* Exposition des stats à partir du module
+Le plugin de Telegraf pour le serveur HTTP d'Apache s'appuie sur le module « mod_status » pour être activé.  Lorsque cette option est activée, le serveur HTTP d'Apache exposera un point de terminaison HTML qui peut être visualisé sur votre navigateur ou récupéré pour l'extraction de l'état de toute la configuration du serveur HTTP d'Apache.
 
 
 
+=== Compatibilité:
 
-=== Module d'activation :
+La configuration a été développée sur la version 2.4.38 du serveur HTTP d'Apache.
 
-Le chargement des modules est contrôlé par le fichier de configuration sous '/usr/local/apache/conf/httpd.conf'. Modifiez le fichier de configuration et annulez le commentaire des lignes suivantes :
+
+
+=== Activation de mod_status :
+
+L'activation et l'exposition des modules « mod_status » impliquent deux étapes :
+
+* Module d'activation
+* Exposer les statistiques du module
+
+
+
+
+=== Module d'activation :
+
+Le chargement des modules est contrôlé par le fichier de configuration sous '/usr/local/apache/conf/httpd.conf'.  Modifiez le fichier de configuration et décommentez les lignes suivantes :
 
  LoadModule status_module modules/mod_status.so
  Include conf/extra/httpd-info.conf
 
 
-=== Exposition des statistiques à partir du module :
+=== Exposer les statistiques du module :
 
-L'exposition de 'mod_status' est contrôlée par le fichier de configuration sous '/usr/local/apache2/conf/extra/httpd-info.conf'. Assurez-vous que vous disposez des éléments suivants dans ce fichier de configuration (au moins, d'autres directives seront disponibles) :
+L'exposition de « mod_status » est contrôlée par le fichier de configuration sous « /usr/local/apache2/conf/extra/httpd-info.conf ».  Assurez-vous d’avoir les éléments suivants dans ce fichier de configuration (au moins, d’autres directives seront présentes) :
 
 [listing]
 ----
@@ -84,23 +84,23 @@ L'exposition de 'mod_status' est contrôlée par le fichier de configuration sou
 #
 ExtendedStatus On
 ----
-Pour obtenir des instructions détaillées sur le module 'mod_status', reportez-vous au link:https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable["Documentation Apache"]
+Pour des instructions détaillées sur le module « mod_status », consultez lelink:https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable["Documentation Apache"]
 
 
 
 == Objets et compteurs
 
-Les objets suivants et leurs compteurs sont collectés :
+Les objets suivants et leurs compteurs sont collectés :
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| Objet : | Identifiants : | Attributs : | Points de données : 
+| Objet: | Identifiants : | Attributs: | Points de données : 
 
 
-| Apache | Serveur d'espace de noms | Nœud Nom de nœud IP Port de configuration du serveur parent génération du serveur parent la continuité du serveur de génération MPM est en cours d'arrêt | Nombre de travailleurs occupés octets par requête par seconde UC enfants système processeur enfants charge UC utilisateur CPU système CPU utilisateurs connexions asynchrones fermeture connexions asynchrones connexion asynchrones maintien actif connexions asynchrones écriture connexions durée totale par demande travailleurs inactifs moyenne de charge (1 m dernier) moyenne de charge (15 m dernier) moyenne de charge (5 m dernier) Traitement des demandes par seconde Total des accès durée totale des Ko Tableau de bord fermeture Tableau de bord des recherches DNS Tableau de bord finition Tableau de bord nettoyage automatique Tableau de bord Tableau de bord garder actif Tableau de bord Tableau de bord Ouvrir Tableau de bord lecture Tableau de bord envoi Tableau de bord démarrage Tableau de bord en attente 
+| Apache | Serveur d'espace de noms | Nœud IP Nom du nœud Port Génération de configuration du serveur parent Génération MPM du serveur parent La disponibilité du serveur s'arrête | Travailleurs occupés Octets par requête Octets par seconde CPU Enfants CPU système Enfants Charge CPU utilisateur CPU système CPU utilisateur Connexions asynchrones Fermeture des connexions asynchrones Maintien en activité des connexions asynchrones Écriture des connexions Durée totale par requête Travailleurs inactifs Charge moyenne (dernier 1 min) Charge moyenne (derniers 15 min) Charge moyenne (derniers 5 min) Processus Requêtes par seconde Accès totaux Durée totale Total Ko Tableau de bord Fermeture Tableau de bord Recherches DNS Tableau de bord Fin Tableau de bord Nettoyage d'inactivité Tableau de bord Maintien en activité Tableau de bord Journalisation Tableau de bord Ouverture Tableau de bord Lecture Tableau de bord Envoi Tableau de bord Démarrage Tableau de bord Attente 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur la link:concept_requesting_support.html["Assistance"] page.
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page.

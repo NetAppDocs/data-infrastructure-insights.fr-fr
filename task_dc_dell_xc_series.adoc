@@ -2,15 +2,15 @@
 sidebar: sidebar 
 permalink: task_dc_dell_xc_series.html 
 keywords: data collector, Dell, EMC, xc 
-summary: Configuration du collecteur de données de la série Dell EMC XC. 
+summary: Configuration du collecteur de données Dell EMC série XC. 
 ---
-= Collecteur de données de la série Dell EMC XC
+= Collecteur de données Dell EMC série XC
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour découvrir les informations d'inventaire et de performances des baies de stockage Dell EMC XC Series.
+Data Infrastructure Insights utilise ce collecteur de données pour découvrir les informations d’inventaire et de performances des baies de stockage Dell EMC série XC.
 
 
 
@@ -21,10 +21,10 @@ Data Infrastructure Insights utilise ce collecteur de données pour découvrir l
 | Champ | Description 
 
 
-| Adresse IP externe prismes | Adresse IP du serveur XC 
+| Adresse IP externe de Prism | Adresse IP du serveur XC 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du serveur XC 
+| Nom d'utilisateur | Nom d'utilisateur pour le serveur XC 
 
 
 | Mot de passe | Mot de passe utilisé pour le serveur XC 
@@ -41,13 +41,13 @@ Data Infrastructure Insights utilise ce collecteur de données pour découvrir l
 | Port TCP | Port utilisé pour la communication TCP avec le serveur XC 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 60 minutes. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 60 minutes. 
 
 
-| Intervalle d'interrogation des performances (min) | Intervalle entre les sondages de performances. La valeur par défaut est 300 secondes. 
+| Intervalle de sondage des performances (min) | Intervalle entre les sondages de performance. La valeur par défaut est de 300 secondes. 
 |===
 
 
 == Dépannage
 
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

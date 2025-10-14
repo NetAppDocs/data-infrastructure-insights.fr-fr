@@ -4,23 +4,23 @@ permalink: task_dc_redhat_virtualization.html
 keywords: data collector, Red Hat Virtualization 
 summary: Configuration du collecteur de données Red Hat Virtualization. 
 ---
-= Collecteur de données Red Hat Virtualization
+= Collecteur de données de virtualisation Red Hat
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur de données Red Hat Virtualization pour collecter les données d'inventaire des charges de travail Linux et Microsoft Windows virtualisées.
+Data Infrastructure Insights utilise le collecteur de données Red Hat Virtualization pour collecter des données d'inventaire à partir de charges de travail Linux et Microsoft Windows virtualisées.
 
 
 
 == Terminologie
 
-Pour chaque type de ressource acquise par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour l’actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
 | Disque | Disque virtuel 
@@ -29,23 +29,23 @@ Pour chaque type de ressource acquise par Data Infrastructure Insights, la termi
 | Hôte | Hôte 
 
 
-| Ordinateur virtuel | Ordinateur virtuel 
+| Machine virtuelle | Machine virtuelle 
 
 
-| Domaine de stockage | Datastore 
+| Domaine de stockage | Magasin de données 
 
 
 | Unité logique | LUN 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
 * Adresse IP du serveur RHEV sur le port 443 via l'API REST
 * Nom d'utilisateur et mot de passe en lecture seule
-* RHEV version 3.0+
+* RHEV Version 3.0+
 
 
 
@@ -63,7 +63,7 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Nom d'utilisateur | Nom d'utilisateur avec privilèges d'administrateur 
 
 
-| Mot de passe du compte admin privilégié | Mot de passe 
+| Mot de passe pour le compte privilégié administrateur | Mot de passe 
 |===
 
 
@@ -77,10 +77,10 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Port de communication HTTPS | Port utilisé pour la communication HTTPS vers RHEV 
 
 
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 20 minutes. 
+| Intervalle d'interrogation de l'inventaire (min) | La valeur par défaut est de 20 minutes. 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

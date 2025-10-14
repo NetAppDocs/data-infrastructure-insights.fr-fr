@@ -2,62 +2,62 @@
 sidebar: sidebar 
 permalink: task_device_resolution_rules.html 
 keywords: Automatic, AR, AHR, Host, automatic device resolution 
-summary: 'La résolution des périphériques vous permet de suivre avec précision les performances et l"inventaire de votre environnement.' 
+summary: 'Device Resolution vous aide à suivre avec précision les performances et l"inventaire de votre environnement.' 
 ---
-= Règles de résolution du périphérique
+= Règles de résolution des appareils
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Vous créez des règles de résolution des périphériques pour identifier les hôtes, le stockage et les bandes qui ne sont pas automatiquement identifiés actuellement par Data Infrastructure Insights. Les règles que vous créez identifient les périphériques actuellement dans votre environnement et identifient également les périphériques similaires ajoutés à votre environnement.
+Vous créez des règles de résolution de périphérique pour identifier les hôtes, le stockage et les bandes qui ne sont pas automatiquement identifiés actuellement par Data Infrastructure Insights.  Les règles que vous créez identifient les périphériques actuellement présents dans votre environnement et identifient également les périphériques similaires lorsqu'ils sont ajoutés à votre environnement.
 
 
 
 == Création de règles de résolution de périphérique
 
-Lorsque vous créez des règles, vous commencez par identifier la source des informations sur lesquelles la règle s'exécute, la méthode utilisée pour extraire des informations et si la recherche DNS est appliquée aux résultats de la règle.
+Lorsque vous créez des règles, vous commencez par identifier la source d'informations sur laquelle la règle s'exécute, la méthode utilisée pour extraire les informations et si la recherche DNS est appliquée aux résultats de la règle.
 
 [cols="2*"]
 |===
 
 
-| Source utilisée pour identifier le périphérique | * Alias SRM pour les hôtes * alias de stockage contenant un nom d'hôte ou de bande intégré * alias de commutateur contenant un nom d'hôte ou de bande intégré * noms de zone contenant un nom d'hôte intégré 
+| Source utilisée pour identifier l'appareil | * Alias SRM pour les hôtes * Alias de stockage contenant un nom d'hôte ou de bande intégré * Alias de commutateur contenant un nom d'hôte ou de bande intégré * Noms de zone contenant un nom d'hôte intégré 
 
 
-| Méthode utilisée pour extraire le nom du périphérique de la source | * Tel qu'il est (extrait un nom d'un SRM) * Delimters * expressions régulières 
+| Méthode utilisée pour extraire le nom du périphérique de la source | * Tel quel (extraire un nom d'un SRM) * Délimiteurs * Expressions régulières 
 
 
-| Recherche DNS | Indique si vous utilisez DNS pour vérifier le nom d'hôte 
+| Recherche DNS | Spécifie si vous utilisez DNS pour vérifier le nom d'hôte 
 |===
-Vous créez des règles dans l'onglet règles de résolution automatique. Les étapes suivantes décrivent le processus de création de règles.
+Vous créez des règles dans l’onglet Règles de résolution automatique.  Les étapes suivantes décrivent le processus de création de règles.
 
 .Procédure
-. Cliquez sur *gérer > résolution du périphérique*
-. Dans l'onglet *règles de résolution automatique*, cliquez sur *+ règle hôte* ou *+ règle bande*.
+. Cliquez sur *Gérer > Résolution du périphérique*
+. Dans l'onglet *Règles de résolution automatique*, cliquez sur *+ Règle d'hôte* ou *+ Règle de bande*.
 +
-L'écran *règle de résolution* s'affiche.
+L'écran *Règle de résolution* s'affiche.
 
 +
 
-NOTE: Cliquez sur le lien _Afficher les critères de correspondance_ pour obtenir de l'aide et des exemples pour créer des expressions régulières.
+NOTE: Cliquez sur le lien _Afficher les critères de correspondance_ pour obtenir de l'aide et des exemples de création d'expressions régulières.
 
-. Dans la liste *Type*, sélectionnez le périphérique à identifier.
+. Dans la liste *Type*, sélectionnez l'appareil que vous souhaitez identifier.
 +
-Vous pouvez sélectionner _Host_ ou _Tape_.
+Vous pouvez sélectionner _Hôte_ ou _Bande_.
 
-. Dans la liste *Source*, sélectionnez la source à utiliser pour identifier l'hôte.
+. Dans la liste *Source*, sélectionnez la source que vous souhaitez utiliser pour identifier l'hôte.
 +
-Selon la source que vous avez choisie, Data Infrastructure Insights affiche la réponse suivante :
+Selon la source choisie, Data Infrastructure Insights affiche la réponse suivante :
 
 +
-.. *Zones* répertorie les zones et le WWN devant être identifiés par Data Infrastructure Insights.
+.. *Zones* répertorie les zones et WWN qui doivent être identifiés par Data Infrastructure Insights.
 .. *SRM* répertorie les alias non identifiés qui doivent être identifiés par Data Infrastructure Insights
-.. *Alias de stockage* répertorie les alias de stockage et le WWN qui doivent être identifiés par Data Infrastructure Insights
-.. *Alias de commutateur* répertorie les alias de commutateur qui doivent être identifiés par Data Infrastructure Insights
+.. *Alias ​​de stockage* répertorie les alias de stockage et les WWN qui doivent être identifiés par Data Infrastructure Insights
+.. *Alias ​​de commutateur* répertorie les alias de commutateur qui doivent être identifiés par Data Infrastructure Insights
 
 
-. Dans la liste *méthode*, sélectionnez la méthode à utiliser pour identifier l'hôte.
+. Dans la liste *Méthode*, sélectionnez la méthode que vous souhaitez utiliser pour identifier l'hôte.
 +
 |===
 
@@ -65,7 +65,7 @@ Selon la source que vous avez choisie, Data Infrastructure Insights affiche la r
 | Source | Méthode 
 
 
-| SRM | Tout comme les délimiteurs, expressions régulières 
+| SRM | Tel quel, délimiteurs, expressions régulières 
 
 
 | Alias de stockage | Délimiteurs, expressions régulières 
@@ -77,9 +77,9 @@ Selon la source que vous avez choisie, Data Infrastructure Insights affiche la r
 | Zones | Délimiteurs, expressions régulières 
 |===
 +
-** Les règles utilisant des délimiteurs nécessitent les délimiteurs et la longueur minimale du nom d'hôte. La longueur minimale du nom d'hôte est le nombre de caractères que Data Infrastructure Insights doit utiliser pour identifier un hôte. Data Infrastructure Insights effectue des recherches DNS uniquement pour les noms d'hôte longs ou plus.
+** Les règles utilisant des délimiteurs nécessitent les délimiteurs et la longueur minimale du nom d'hôte.  La longueur minimale du nom d'hôte est le nombre de caractères que Data Infrastructure Insights doit utiliser pour identifier un hôte.  Data Infrastructure Insights effectue des recherches DNS uniquement pour les noms d'hôtes d'une longueur égale ou supérieure.
 +
-Pour les règles utilisant des délimitateurs, la chaîne d'entrée est tokenisée par le délimiteur et une liste de candidats de noms d'hôte est créée en faisant plusieurs combinaisons du jeton adjacent. La liste est ensuite triée, la plus grande à la plus petite. Par exemple, pour un sring d'entrée de _vipsnq03_hba3_emc3_12ep0_, la liste se traduit par ce qui suit :
+Pour les règles utilisant des délimiteurs, la chaîne d'entrée est tokenisée par le délimiteur et une liste de candidats au nom d'hôte est créée en effectuant plusieurs combinaisons du jeton adjacent.  La liste est ensuite triée, du plus grand au plus petit.  Par exemple, pour une entrée sring de _vipsnq03_hba3_emc3_12ep0_, la liste donnerait le résultat suivant :
 
 +
 *** vipsnq03_hba3_emc3_12ep0
@@ -94,61 +94,61 @@ Pour les règles utilisant des délimitateurs, la chaîne d'entrée est tokenis�
 *** hba3
 
 
-** Les règles utilisant des expressions régulières nécessitent une expression régulière, le format et la sélection de sensibilité des cas.
+** Les règles utilisant des expressions régulières nécessitent une expression régulière, le format et la sélection de la sensibilité à la casse.
 
 
-. Cliquez sur *Exécuter AR* pour exécuter toutes les règles ou cliquez sur la flèche vers le bas du bouton pour exécuter la règle que vous avez créée (et toutes les autres règles créées depuis la dernière exécution complète d'AR).
+. Cliquez sur *Exécuter AR* pour exécuter toutes les règles, ou cliquez sur la flèche vers le bas du bouton pour exécuter la règle que vous avez créée (et toutes les autres règles créées depuis la dernière exécution complète d'AR).
 +
-Les résultats de l'exécution de la règle sont affichés dans l'onglet *FC Identify*.
+Les résultats de l'exécution de la règle sont affichés dans l'onglet *FC identify*.
 
 
 
 
 
-== Démarrage d'une mise à jour automatique de la résolution des périphériques
+== Démarrage d'une mise à jour automatique de la résolution de l'appareil
 
-Une mise à jour de la résolution du périphérique valide les modifications manuelles qui ont été ajoutées depuis la dernière exécution de la résolution automatique complète du périphérique. L'exécution d'une mise à jour peut être utilisée pour valider et exécuter uniquement les nouvelles entrées manuelles apportées à la configuration de résolution de périphérique. Aucune résolution complète du périphérique n'est exécutée.
+Une mise à jour de résolution de périphérique valide les modifications manuelles qui ont été ajoutées depuis la dernière exécution de résolution automatique complète du périphérique.  L'exécution d'une mise à jour peut être utilisée pour valider et exécuter uniquement les nouvelles entrées manuelles apportées à la configuration de résolution du périphérique.  Aucune exécution de résolution complète de l'appareil n'est effectuée.
 
 .Procédure
-. Connectez-vous à l'interface utilisateur Web Data Infrastructure Insights.
-. Cliquez sur *gérer > résolution du périphérique*
-. Dans l'écran *Device Resolution*, cliquez sur la flèche vers le bas du bouton *Run AR*.
-. Cliquez sur *Update* pour lancer la mise à jour.
+. Connectez-vous à l'interface Web de Data Infrastructure Insights .
+. Cliquez sur *Gérer > Résolution du périphérique*
+. Dans l'écran *Résolution de l'appareil*, cliquez sur la flèche vers le bas du bouton *Exécuter AR*.
+. Cliquez sur *Mettre à jour* pour démarrer la mise à jour.
 
 
 
 
 == Identification manuelle assistée par des règles
 
-Cette fonction est utilisée dans des cas particuliers où vous souhaitez exécuter une règle spécifique ou une liste de règles (avec ou sans réorganisation unique) pour résoudre des hôtes inconnus, des périphériques de stockage et de bande.
+Cette fonctionnalité est utilisée pour les cas particuliers où vous souhaitez exécuter une règle spécifique ou une liste de règles (avec ou sans réorganisation unique) pour résoudre les hôtes, les périphériques de stockage et les périphériques de bande inconnus.
 
 .Avant de commencer
-Vous avez un certain nombre de périphériques qui n'ont pas été identifiés et vous disposez également de plusieurs règles qui ont identifié d'autres périphériques avec succès.
+Vous disposez d'un certain nombre d'appareils qui n'ont pas été identifiés et vous disposez également de plusieurs règles qui ont identifié avec succès d'autres appareils.
 
 
 NOTE: Si votre source ne contient qu'une partie d'un nom d'hôte ou de périphérique, utilisez une règle d'expression régulière et formatez-la pour ajouter le texte manquant.
 
 .Procédure
-. Connectez-vous à l'interface utilisateur Web Data Infrastructure Insights.
-. Cliquez sur *gérer > résolution du périphérique*
-. Cliquez sur l'onglet *Fibre Channel Identify*.
+. Connectez-vous à l'interface Web de Data Infrastructure Insights .
+. Cliquez sur *Gérer > Résolution du périphérique*
+. Cliquez sur l'onglet *Identification Fibre Channel*.
 +
-Le système affiche les périphériques avec leur état de résolution.
+Le système affiche les périphériques ainsi que leur état de résolution.
 
-. Sélectionnez plusieurs périphériques non identifiés.
-. Cliquez sur *actions groupées* et sélectionnez *définir la résolution de l'hôte* ou *définir la résolution de la bande*.
+. Sélectionnez plusieurs appareils non identifiés.
+. Cliquez sur *Actions en masse* et sélectionnez *Définir la résolution de l'hôte* ou *Définir la résolution de la bande*.
 +
-Le système affiche l'écran identifier qui contient une liste de toutes les règles qui ont identifié les périphériques avec succès.
+Le système affiche l'écran Identifier qui contient une liste de toutes les règles qui ont identifié avec succès les périphériques.
 
-. Modifiez l'ordre des règles en un ordre qui répond à vos besoins.
+. Modifiez l’ordre des règles pour un ordre qui répond à vos besoins.
 +
-L'ordre des règles est modifié dans l'écran identifier, mais ne sont pas modifiés globalement.
+L'ordre des règles est modifié dans l'écran Identifier, mais n'est pas modifié globalement.
 
 . Sélectionnez la méthode qui répond à vos besoins.
 
 
-Data Infrastructure Insights exécute le processus de résolution des hôtes dans l'ordre dans lequel les méthodes apparaissent, en commençant par celles situées en haut.
+Data Infrastructure Insights exécute le processus de résolution de l’hôte dans l’ordre dans lequel les méthodes apparaissent, en commençant par celles du haut.
 
-Lorsque des règles s'appliquent, les noms de règles s'affichent dans la colonne règles et sont identifiés comme étant manuels.
+Lorsque des règles applicables sont rencontrées, les noms des règles sont affichés dans la colonne Règles et identifiés comme manuels.
 
-Relié : link:task_device_resolution_fibre_channel.html["Résolution de périphérique Fibre Channel"] link:task_device_resolution_ip.html["Résolution de périphérique IP"] link:task_device_resolution_preferences.html["Définition des préférences de résolution du périphérique"]
+En rapport:link:task_device_resolution_fibre_channel.html["Résolution du périphérique Fibre Channel"] link:task_device_resolution_ip.html["Résolution du périphérique IP"] link:task_device_resolution_preferences.html["Définition des préférences de résolution de l'appareil"]

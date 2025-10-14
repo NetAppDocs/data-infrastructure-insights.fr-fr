@@ -10,44 +10,44 @@ summary: Configuration du collecteur de données JVM
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour collecter des mesures à partir de JVM.
+Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de JVM.
 
 
 
 == Installation
 
-. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez JVM.
+. Depuis *Observabilité > Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez JVM.
 +
-Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+Sélectionnez le système d’exploitation ou la plate-forme sur laquelle l’agent Telegraf est installé.
 
-. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer les link:task_config_telegraf_agent.html["Installation de l'agent"]instructions.
-. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
-. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
-
-
-image:JVMDCConfigLinux.png["Configuration DE L'INFRASTRUCTURE JVM"]
+. Si vous n'avez pas encore installé d'agent pour la collecte, ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer lelink:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d’accès de l’agent à utiliser avec ce collecteur de données.  Vous pouvez ajouter une nouvelle clé d'accès d'agent en cliquant sur le bouton *+ Clé d'accès d'agent*.  Meilleure pratique : utilisez une clé d’accès d’agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple par système d’exploitation/plateforme.
+. Suivez les étapes de configuration pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.
 
 
+image:JVMDCConfigLinux.png["Configuration JVM"]
 
-== Configuration
 
-Vous trouverez des informations dans link:https://docs.oracle.com/javase/specs/jvms/se12/html/index.html["Documentation de l'JVM"].
+
+== Installation
+
+Des informations peuvent être trouvées danslink:https://docs.oracle.com/javase/specs/jvms/se12/html/index.html["Documentation JVM"] .
 
 
 
 == Objets et compteurs
 
-Les objets suivants et leurs compteurs sont collectés :
+Les objets suivants et leurs compteurs sont collectés :
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| Objet : | Identifiants : | Attributs : | Points de données : 
+| Objet: | Identifiants : | Attributs: | Points de données : 
 
 
-| JVM | JVM d'espace de noms | Architecture OS Nom OS version OS spécification d'exécution spécification d'exécution version spécification d'exécution Vendor version Uptime Runtime Nom VM Runtime VM Runtime version vendeur Nom du nœud IP | Classe chargée Total de la mémoire non chargée de la classe chargée mémoire vive mémoire vive mémoire vive mémoire vive mémoire vive utilisée mémoire maximale mémoire vive mémoire vive mémoire non mémoire non résolue mémoire non Heap mémoire non mémoire non mémoire vive objets de mémoire non utilisée en attente Finalisation processeurs OS disponibles taille de mémoire virtuelle OS non résolue Taille de la mémoire physique espace libre du système d'exploitation taille de l'espace libre du système d'exploitation nombre de descripteurs de fichier ouverts du système d'exploitation nombre de descripteurs de fichier du processeur du système d'exploitation charge du système d'exploitation CPU du système d'exploitation charge système d'exploitation taille moyenne de la mémoire physique totale du système d'exploitation nombre total de threads nombre de pics de threads Thread Count Thread Total Started Count Garbage Collector Copy Count Garbage Collector Copy collecte Time Garbage Collector Mark-balayage Collection Count Garbage Collector Mark-balayage collecte temps collecteur d'ordures G1 Old Generation Collection temps collecteur d'ordures ancien génération G1 Young Generation Collection Count Garbage Collector G1 Collecte de données de jeunes générations collecte de données de collecte de collecte de récupération de récupération de récupération de récupération de récupération de récupération de récupération de récupération parallèle collecte de collecte de déchets collecte de collecte de collecte parallèle récupération de récupération de récupération de récupération de récupération de récupération de récupération de récupération de récupération de récupération parallèle collecteur de récupération de récupération de récupération de récupération parallèle collecte de récupération de récupération de récupération de récupération parallèle Heure de collecte 
+| JVM | Espace de noms JVM | Architecture du système d'exploitation Nom du système d'exploitation Version du système d'exploitation Spécification d'exécution Fournisseur de spécifications d'exécution Version de spécification d'exécution Temps de disponibilité Nom de la machine virtuelle d'exécution Fournisseur de la machine virtuelle d'exécution Version de la machine virtuelle d'exécution Nom du nœud IP du nœud | Classe chargée Classe chargée Classe totale déchargée Tas de mémoire Mémoire engagée Tas de mémoire d'initialisation Mémoire utilisée maximale du tas de mémoire utilisée Mémoire non engagée Mémoire non engagée Mémoire non utilisée du tas Mémoire maximale non utilisée du tas Objets en attente de finalisation Processeurs du système d'exploitation disponibles Taille de la mémoire virtuelle engagée du système d'exploitation Taille de la mémoire physique libre du système d'exploitation Taille de l'espace d'échange libre du système d'exploitation Nombre maximal de descripteurs de fichiers du système d'exploitation Nombre de descripteurs de fichiers ouverts du système d'exploitation Charge CPU du processeur du système d'exploitation Temps CPU du processeur du système d'exploitation Charge CPU système du système d'exploitation Charge moyenne du système d'exploitation Taille totale de la mémoire physique du système d'exploitation Taille totale de l'espace d'échange du système d'exploitation Nombre de démons de threads Nombre de pics de threads Nombre de threads Nombre total de threads démarrés Nombre de copies de collecte du ramasse-miettes Heure de collecte des copies du ramasse-miettes Nombre de collectes de marquage-balayage du ramasse-miettes Heure de collecte du marquage-balayage du ramasse-miettes Nombre de collectes de l'ancienne génération G1 du ramasse-miettes Heure de collecte de l'ancienne génération G1 du ramasse-miettes Nombre de collectes de la jeune génération G1 du ramasse-miettes Heure de collecte du marquage-balayage du ramasse-miettes Collecteur de miettes simultané Nombre de collectes de marquage-balayage du ramasse-miettes Collecteur de miettes simultané Temps de collecte par balayage et marquage Nombre de collectes parallèles par le garbage collector Temps de collecte par balayage et marquage Nombre de collectes parallèles par le garbage collector Temps de collecte par balayage et marquage Nombre de collectes parallèles par le garbage collector Temps de collecte par balayage et marquage 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur la link:concept_requesting_support.html["Assistance"] page.
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page.

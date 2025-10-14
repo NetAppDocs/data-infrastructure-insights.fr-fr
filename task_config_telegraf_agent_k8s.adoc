@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_agent_k8s.html 
 keywords: kubernetes, Kubernetes, k8s, telegraf, installation, install, agent, telegraf agent, eks, operator 
-summary: 'L"opérateur de surveillance Kubernetes collecte les données Kubernetes pour les utiliser dans les informations exploitables de l"infrastructure de données.' 
+summary: 'L"opérateur de surveillance Kubernetes collecte les données Kubernetes à utiliser dans Data Infrastructure Insights.' 
 ---
-= Installation et configuration de l'opérateur de contrôle Kubernetes
+= Installation et configuration de l'opérateur de surveillance Kubernetes
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: 'L"opérateur de surveillance Kubernetes collecte les données Kubernet
 
 
 [role="lead"]
-Data Infrastructure Insights propose l'opérateur *Kubernetes Monitoring Operator* pour la collecte Kubernetes. Accédez à *Kubernetes > Collectors > +Kubernetes Collector* pour déployer un nouvel opérateur.
+Data Infrastructure Insights propose l'opérateur de surveillance Kubernetes pour la collection Kubernetes.  Accédez à *Kubernetes > Collecteurs > +Kubernetes Collector* pour déployer un nouvel opérateur.
 
 
 
-== Avant d'installer l'opérateur de surveillance Kubernetes
+== Avant d'installer Kubernetes Monitoring Operator
 
-Consultez link:pre-requisites_for_k8s_operator.html["Conditions préalables"]la documentation avant d'installer ou de mettre à niveau l'opérateur de surveillance Kubernetes.
+Voir lelink:pre-requisites_for_k8s_operator.html["Prérequis"] documentation avant d'installer ou de mettre à niveau Kubernetes Monitoring Operator.
 
 
 
@@ -28,54 +28,54 @@ Consultez link:pre-requisites_for_k8s_operator.html["Conditions préalables"]la 
 
 image:NKMO-Instructions-1.png["Instructions de l'opérateur de surveillance"] image:NKMO-Instructions-2.png["Instructions de l'opérateur de surveillance"]
 
-.Étapes d'installation de l'agent opérateur de surveillance Kubernetes sur Kubernetes :
-. Entrez un nom de cluster et un espace de noms uniques. Si vous <<mise à niveau,mise à niveau>>utilisez un opérateur Kubernetes précédent, utilisez le même nom de cluster et le même espace de noms.
-. Une fois ces données saisies, vous pouvez copier le fragment de commande de téléchargement dans le presse-papiers.
-. Collez le fragment dans une fenêtre _bash_ et exécutez-le. Les fichiers d'installation de l'opérateur seront téléchargés. Notez que l'extrait de code possède une clé unique et est valide pendant 24 heures.
-. Si vous disposez d'un référentiel personnalisé ou privé, copiez le fragment facultatif image Pull, collez-le dans un shell _bash_ et exécutez-le. Une fois les images extraites, copiez-les dans votre référentiel privé. Assurez-vous de conserver les mêmes balises et la même structure de dossiers. Mettez à jour les chemins dans _operator-deployment.yaml_ ainsi que les paramètres du référentiel docker dans _operator-config.yaml_.
-. Si vous le souhaitez, passez en revue les options de configuration disponibles, telles que les paramètres de proxy ou de référentiel privé. Vous pouvez en savoir plus sur link:telegraf_agent_k8s_config_options.html["options de configuration"].
-. Lorsque vous êtes prêt, déployez l'opérateur en copiant le fragment kubectl Apply, en le téléchargeant et en l'exécutant.
-. L'installation se poursuit automatiquement. Une fois terminé, cliquez sur le bouton _Suivant_.
-. Une fois l'installation terminée, cliquez sur le bouton _Suivant_. Assurez-vous également de supprimer ou de stocker en toute sécurité le fichier _operator-secrets.yaml_.
+.Étapes pour installer l'agent Kubernetes Monitoring Operator sur Kubernetes :
+. Saisissez un nom de cluster et un espace de noms uniques.  Si vous êtes<<mise à niveau,mise à niveau>> à partir d'un opérateur Kubernetes précédent, utilisez le même nom de cluster et le même espace de noms.
+. Une fois ces informations saisies, vous pouvez copier l'extrait de commande de téléchargement dans le presse-papiers.
+. Collez l'extrait dans une fenêtre _bash_ et exécutez-le.  Les fichiers d’installation de l’opérateur seront téléchargés.  Notez que l'extrait possède une clé unique et est valable 24 heures.
+. Si vous disposez d'un référentiel personnalisé ou privé, copiez l'extrait d'image facultatif, collez-le dans un shell _bash_ et exécutez-le.  Une fois les images extraites, copiez-les dans votre référentiel privé.  Assurez-vous de conserver les mêmes balises et la même structure de dossiers.  Mettez à jour les chemins dans _operator-deployment.yaml_ ainsi que les paramètres du référentiel Docker dans _operator-config.yaml_.
+. Si vous le souhaitez, examinez les options de configuration disponibles telles que les paramètres de proxy ou de référentiel privé.  Vous pouvez en savoir plus surlink:telegraf_agent_k8s_config_options.html["options de configuration"] .
+. Lorsque vous êtes prêt, déployez l'opérateur en copiant l'extrait kubectl Apply, en le téléchargeant et en l'exécutant.
+. L'installation se déroule automatiquement.  Une fois terminé, cliquez sur le bouton _Suivant_.
+. Une fois l’installation terminée, cliquez sur le bouton _Suivant_.  Assurez-vous également de supprimer ou de stocker en toute sécurité le fichier _operator-secrets.yaml_.
 
 
-Si vous disposez d'un référentiel personnalisé, lisez à propos de <<using-a-custom-or-private-docker-repository,à l'aide d'un référentiel docker personnalisé/privé>>.
+Si vous disposez d'un référentiel personnalisé, lisez à propos<<using-a-custom-or-private-docker-repository,en utilisant un référentiel Docker personnalisé/privé>> .
 
 
 
 == Composants de surveillance Kubernetes
 
-La surveillance Kubernetes de Data Infrastructure Insights comprend quatre composants de surveillance :
+Data Infrastructure Insights Kubernetes Monitoring comprend quatre composants de surveillance :
 
-* Metrics du cluster
-* Carte et performances réseau (en option)
+* Mesures de cluster
+* Performances et carte du réseau (facultatif)
 * Journaux d'événements (facultatif)
-* Analyse des modifications (facultatif)
+* Analyse des changements (facultatif)
 
 
-Les composants facultatifs ci-dessus sont activés par défaut pour chaque collecteur Kubernetes. Si vous décidez que vous n'avez pas besoin d'un composant pour un collecteur particulier, vous pouvez le désactiver en accédant à *Kubernetes > Collectors* et en sélectionnant _Modify Deployment_ dans le menu « trois points » du collecteur à droite de l'écran.
+Les composants facultatifs ci-dessus sont activés par défaut pour chaque collecteur Kubernetes ; si vous décidez que vous n'avez pas besoin d'un composant pour un collecteur particulier, vous pouvez le désactiver en accédant à *Kubernetes > Collecteurs* et en sélectionnant _Modifier le déploiement_ dans le menu « trois points » du collecteur à droite de l'écran.
 
-image:KubernetesModifyDeploymentMenu.png["Modifier le menu de déploiement sur la page de liste du collecteur Kubernetes"]
+image:KubernetesModifyDeploymentMenu.png["Modifier le menu de déploiement sur la page de liste des collecteurs Kubernetes"]
 
-L'écran affiche l'état actuel de chaque composant et vous permet de désactiver ou d'activer les composants pour ce collecteur selon vos besoins.
+L'écran affiche l'état actuel de chaque composant et vous permet de désactiver ou d'activer les composants de ce collecteur selon vos besoins.
 
-image:KubernetesModifyDeploymentScreen.png["Modifier les options de déploiement, largeur=700"]
-
-
-
-== Mise à niveau vers le dernier opérateur de surveillance Kubernetes
+image:KubernetesModifyDeploymentScreen.png["Modifier les options de déploiement, largeur = 700"]
 
 
 
-=== Mises à niveau DII à bouton-poussoir
-
-Vous pouvez mettre à niveau l'opérateur de surveillance Kubernetes à partir de la page collecteurs Kubernetes DII. Cliquez sur le menu en regard du cluster que vous souhaitez mettre à niveau et sélectionnez _Upgrade_. L'opérateur vérifie les signatures d'image, effectue un instantané de votre installation actuelle et effectue la mise à niveau. Dans quelques minutes, vous devriez voir l'état de l'opérateur progression de la mise à niveau en cours vers la dernière. Si vous rencontrez une erreur, vous pouvez sélectionner l'état d'erreur pour plus de détails et vous reporter au tableau Dépannage des mises à niveau par bouton-poussoir ci-dessous.
+== Mise à niveau vers la dernière version de Kubernetes Monitoring Operator
 
 
 
-==== Mises à niveau à l'aide de référentiels privés par simple pression
+=== Mises à niveau du bouton-poussoir DII
 
-Si votre opérateur est configuré pour utiliser un référentiel privé, assurez-vous que toutes les images requises pour exécuter l'opérateur et leurs signatures sont disponibles dans votre référentiel. Si vous rencontrez une erreur pendant le processus de mise à niveau pour les images manquantes, ajoutez-les simplement à votre référentiel et réessayez la mise à niveau. Pour télécharger les signatures d'images dans votre référentiel, utilisez l'outil de cosignature comme suit, en vous assurant de télécharger les signatures pour toutes les images spécifiées sous 3 Facultatif : chargez les images de l'opérateur dans votre référentiel privé > extrait d'image
+Vous pouvez mettre à niveau l'opérateur de surveillance Kubernetes via la page Collecteurs Kubernetes DII.  Cliquez sur le menu à côté du cluster que vous souhaitez mettre à niveau et sélectionnez _Mettre à niveau_.  L'opérateur vérifiera les signatures d'image, effectuera un instantané de votre installation actuelle et effectuera la mise à niveau.  Dans quelques minutes, vous devriez voir l'état de l'opérateur progresser de « Mise à niveau en cours » à « Dernière mise à jour ».  Si vous rencontrez une erreur, vous pouvez sélectionner le statut d'erreur pour plus de détails et vous référer au tableau de dépannage des mises à niveau par bouton-poussoir ci-dessous.
+
+
+
+==== Mises à niveau par simple pression d'un bouton avec des référentiels privés
+
+Si votre opérateur est configuré pour utiliser un référentiel privé, assurez-vous que toutes les images requises pour exécuter l'opérateur et leurs signatures sont disponibles dans votre référentiel.  Si vous rencontrez une erreur pendant le processus de mise à niveau pour des images manquantes, ajoutez-les simplement à votre référentiel et réessayez la mise à niveau.  Pour télécharger les signatures d'image dans votre référentiel, veuillez utiliser l'outil de cosignature comme suit, en veillant à télécharger les signatures pour toutes les images spécifiées sous 3 Facultatif : Télécharger les images de l'opérateur dans votre référentiel privé > Extrait d'image
 
 [listing]
 ----
@@ -85,40 +85,40 @@ cosign copy <DII container registry>/netapp-monitoring:<image version> <private 
 ----
 
 
-==== Retour à une version précédente
+==== Revenir à une version précédemment exécutée
 
-Si vous avez effectué une mise à niveau à l'aide de la fonction de mise à niveau par bouton-poussoir et que vous rencontrez des difficultés avec la version actuelle de l'opérateur dans les sept jours suivant la mise à niveau, vous pouvez revenir à la version précédente en utilisant l'instantané créé pendant le processus de mise à niveau. Cliquez sur le menu en regard du cluster que vous souhaitez restaurer et sélectionnez _Retour arrière_.
+Si vous avez effectué une mise à niveau à l'aide de la fonction de mise à niveau par simple pression sur un bouton et que vous rencontrez des difficultés avec la version actuelle de l'opérateur dans les sept jours suivant la mise à niveau, vous pouvez rétrograder vers la version précédemment exécutée à l'aide de l'instantané créé pendant le processus de mise à niveau.  Cliquez sur le menu à côté du cluster que vous souhaitez restaurer et sélectionnez _Restaurer_.
 
 
 
 === Mises à niveau manuelles
 
-Déterminez si une configuration d'agentConfiguration existe avec l'opérateur existant (si votre espace de noms n'est pas le _netapp-monitoring_ par défaut, remplacez l'espace de noms approprié) :
+Déterminez si une AgentConfiguration existe avec l'opérateur existant (si votre espace de noms n'est pas le _netapp-monitoring_ par défaut, remplacez-le par l'espace de noms approprié) :
 
  kubectl -n netapp-monitoring get agentconfiguration netapp-ci-monitoring-configuration
-Si une configuration d'agentConfiguration existe :
+Si une AgentConfiguration existe :
 
-* <<installing-the-kubernetes-monitoring-operator,Installez>> Dernier opérateur par rapport à l'opérateur existant.
+* <<installing-the-kubernetes-monitoring-operator,Installation>>le dernier opérateur sur l'opérateur existant.
 +
-** Assurez-vous que vous <<using-a-custom-or-private-docker-repository,extraction des dernières images du conteneur>>utilisez un référentiel personnalisé.
+** Assurez-vous que vous êtes<<using-a-custom-or-private-docker-repository,extraire les dernières images de conteneurs>> si vous utilisez un référentiel personnalisé.
 
 
 
 
-Si AgentConfiguration n'existe pas :
+Si AgentConfiguration n'existe pas :
 
-* Notez le nom de votre cluster tel qu'il a été reconnu par les informations d'infrastructure de données (si votre namespace n'est pas le contrôle NetApp par défaut, remplacez l'espace de noms approprié) :
+* Notez le nom de votre cluster tel qu'il est reconnu par Data Infrastructure Insights (si votre espace de noms n'est pas le netapp-monitoring par défaut, remplacez-le par l'espace de noms approprié) :
 +
  kubectl -n netapp-monitoring get agent -o jsonpath='{.items[0].spec.cluster-name}'
-* Créer une sauvegarde de l'opérateur existant (si votre namespace n'est pas la surveillance netapp par défaut, remplacez le namespace approprié) :
+* Créez une sauvegarde de l'opérateur existant (si votre espace de noms n'est pas le netapp-monitoring par défaut, remplacez-le par l'espace de noms approprié) :
 +
  kubectl -n netapp-monitoring get agent -o yaml > agent_backup.yaml
-* <<to-remove-the-kubernetes-monitoring-operator,Désinstaller>> L'opérateur existant.
-* <<installing-the-kubernetes-monitoring-operator,Installez>> Le dernier opérateur.
+* <<to-remove-the-kubernetes-monitoring-operator,Désinstaller>>l'opérateur existant.
+* <<installing-the-kubernetes-monitoring-operator,Installation>>le dernier opérateur.
 +
 ** Utilisez le même nom de cluster.
-** Après avoir téléchargé les derniers fichiers Operator YAML, porter toutes les personnalisations trouvées dans agent_backup.yaml à l'opérateur-config.yaml téléchargé avant le déploiement.
-** Assurez-vous que vous <<using-a-custom-or-private-docker-repository,extraction des dernières images du conteneur>>utilisez un référentiel personnalisé.
+** Après avoir téléchargé les derniers fichiers Operator YAML, portez toutes les personnalisations trouvées dans agent_backup.yaml vers le fichier operator-config.yaml téléchargé avant le déploiement.
+** Assurez-vous que vous êtes<<using-a-custom-or-private-docker-repository,extraire les dernières images de conteneurs>> si vous utilisez un référentiel personnalisé.
 
 
 
@@ -127,10 +127,10 @@ Si AgentConfiguration n'existe pas :
 
 == Arrêt et démarrage de l'opérateur de surveillance Kubernetes
 
-Pour arrêter l'opérateur de surveillance Kubernetes :
+Pour arrêter l’opérateur de surveillance Kubernetes :
 
  kubectl -n netapp-monitoring scale deploy monitoring-operator --replicas=0
-Pour démarrer l'opérateur de surveillance Kubernetes :
+Pour démarrer l’opérateur de surveillance Kubernetes :
 
  kubectl -n netapp-monitoring scale deploy monitoring-operator --replicas=1
 
@@ -141,20 +141,20 @@ Pour démarrer l'opérateur de surveillance Kubernetes :
 
 === Pour supprimer l'opérateur de surveillance Kubernetes
 
-Notez que l'espace de noms par défaut de l'opérateur de surveillance Kubernetes est « netapp-monitoring ». Si vous avez défini votre propre espace de noms, remplacez-le dans ces commandes et tous les fichiers suivants.
+Notez que l'espace de noms par défaut pour l'opérateur de surveillance Kubernetes est « netapp-monitoring ».  Si vous avez défini votre propre espace de noms, remplacez cet espace de noms dans ces commandes et fichiers et dans tous les suivants.
 
-Les nouvelles versions de l'opérateur de surveillance peuvent être désinstallées à l'aide des commandes suivantes :
+Les versions plus récentes de l'opérateur de surveillance peuvent être désinstallées avec les commandes suivantes :
 
 ....
 kubectl -n <NAMESPACE> delete agent -l installed-by=nkmo-<NAMESPACE>
 kubectl -n <NAMESPACE> delete clusterrole,clusterrolebinding,crd,svc,deploy,role,rolebinding,secret,sa -l installed-by=nkmo-<NAMESPACE>
 ....
-Si l'opérateur de surveillance a été déployé dans son propre espace de noms dédié, supprimer l'espace de noms :
+Si l'opérateur de surveillance a été déployé dans son propre espace de noms dédié, supprimez l'espace de noms :
 
  kubectl delete ns <NAMESPACE>
-Remarque : si la première commande renvoie “aucune ressource trouvée”, suivez les instructions ci-dessous pour désinstaller les anciennes versions de l’opérateur de surveillance.
+Remarque : si la première commande renvoie « Aucune ressource trouvée », utilisez les instructions suivantes pour désinstaller les anciennes versions de l’opérateur de surveillance.
 
-Exécutez chacune des commandes suivantes dans l'ordre indiqué. Selon votre installation actuelle, certaines de ces commandes peuvent renvoyer des messages « objet introuvable ». Ces messages peuvent être ignorés en toute sécurité.
+Exécutez chacune des commandes suivantes dans l’ordre.  Selon votre installation actuelle, certaines de ces commandes peuvent renvoyer des messages « objet non trouvé ».  Ces messages peuvent être ignorés en toute sécurité.
 
 ....
 kubectl -n <NAMESPACE> delete agent agent-monitoring-netapp
@@ -165,68 +165,68 @@ kubectl delete clusterrolebinding agent-manager-rolebinding agent-proxy-rolebind
 kubectl delete <NAMESPACE>-psp-nkmo
 kubectl delete ns <NAMESPACE>
 ....
-Si une contrainte de contexte de sécurité a été créée précédemment :
+Si une contrainte de contexte de sécurité a été créée précédemment :
 
  kubectl delete scc telegraf-hostaccess
 
 
-== À propos des indicateurs Kube-State
+== À propos de Kube-state-metrics
 
-L'opérateur de surveillance NetApp Kubernetes installe ses propres metrics kube-State pour éviter les conflits avec d'autres instances.
+L'opérateur de surveillance NetApp Kubernetes installe ses propres métriques d'état Kube pour éviter tout conflit avec d'autres instances.
 
-Pour plus d'informations sur Kube-State-Metrics, reportez-vous à link:task_config_telegraf_kubernetes.html["cette page"]la section .
+Pour plus d'informations sur Kube-State-Metrics, voirlink:task_config_telegraf_kubernetes.html["cette page"] .
 
 
 
-== Configuration/personnalisation de l'opérateur
+== Configuration/Personnalisation de l'opérateur
 
-Ces sections contiennent des informations sur la personnalisation de la configuration de votre opérateur, l'utilisation du proxy, l'utilisation d'un référentiel docker personnalisé ou privé ou l'utilisation d'OpenShift.
+Ces sections contiennent des informations sur la personnalisation de la configuration de votre opérateur, l'utilisation d'un proxy, l'utilisation d'un référentiel Docker personnalisé ou privé ou l'utilisation d'OpenShift.
 
 
 
 === Options de configuration
 
-Les paramètres les plus fréquemment modifiés peuvent être configurés dans la ressource personnalisée _AgentConfiguration_. Vous pouvez modifier cette ressource avant de déployer l'opérateur en modifiant le fichier _Operator-config.yaml_. Ce fichier contient des exemples de paramètres commentés. Voir la liste des  pour la version la plus récente de link:telegraf_agent_k8s_config_options.html["paramètres disponibles"]l'opérateur.
+Les paramètres les plus fréquemment modifiés peuvent être configurés dans la ressource personnalisée _AgentConfiguration_.  Vous pouvez modifier cette ressource avant de déployer l'opérateur en modifiant le fichier _operator-config.yaml_.  Ce fichier comprend des exemples de paramètres commentés.  Voir la liste deslink:telegraf_agent_k8s_config_options.html["paramètres disponibles"] pour la version la plus récente de l'opérateur.
 
-Vous pouvez également modifier cette ressource après le déploiement de l'opérateur à l'aide de la commande suivante :
+Vous pouvez également modifier cette ressource après le déploiement de l'opérateur à l'aide de la commande suivante :
 
  kubectl -n netapp-monitoring edit AgentConfiguration
-Pour déterminer si votre version déployée de l'opérateur prend en charge AgentConfiguration, exécutez la commande suivante :
+Pour déterminer si votre version déployée de l'opérateur prend en charge AgentConfiguration, exécutez la commande suivante :
 
  kubectl get crd agentconfigurations.monitoring.netapp.com
-Si vous voyez un message “erreur du serveur (NotFound)”, votre opérateur doit être mis à niveau avant de pouvoir utiliser AgentConfiguration.
+Si vous voyez un message « Erreur du serveur (NotFound) », votre opérateur doit être mis à niveau avant de pouvoir utiliser AgentConfiguration.
 
 
 
-=== Configuration du support de proxy
+=== Configuration de la prise en charge du proxy
 
-Vous pouvez utiliser un proxy sur votre locataire à deux endroits pour installer l'opérateur Kubernetes Monitoring. Il peut s'agir de systèmes proxy identiques ou distincts :
+Il existe deux endroits où vous pouvez utiliser un proxy sur votre locataire afin d'installer Kubernetes Monitoring Operator.  Il peut s'agir des mêmes systèmes proxy ou de systèmes proxy distincts :
 
-* Proxy nécessaire lors de l'exécution de l'extrait de code d'installation (à l'aide de « curl ») pour connecter le système sur lequel l'extrait de code est exécuté à votre environnement Data Infrastructure Insights
+* Proxy nécessaire lors de l'exécution de l'extrait de code d'installation (à l'aide de « curl ») pour connecter le système où l'extrait est exécuté à votre environnement Data Infrastructure Insights
 * Proxy requis par le cluster Kubernetes cible pour communiquer avec votre environnement Data Infrastructure Insights
 
 
-Si vous utilisez un proxy pour l'une ou l'autre de ces opérations, ou pour les deux, vous devez d'abord vous assurer que votre proxy est configuré pour permettre une bonne communication avec votre environnement Data Infrastructure Insights. Si vous disposez d'un proxy et que vous pouvez accéder à Data Infrastructure Insights à partir du serveur/de la machine virtuelle à partir duquel vous souhaitez installer l'opérateur, votre proxy est probablement configuré correctement.
+Si vous utilisez un proxy pour l'un ou les deux, afin d'installer Kubernetes Operating Monitor, vous devez d'abord vous assurer que votre proxy est configuré pour permettre une bonne communication avec votre environnement Data Infrastructure Insights .  Si vous disposez d'un proxy et pouvez accéder à Data Infrastructure Insights à partir du serveur/de la machine virtuelle à partir duquel vous souhaitez installer l'opérateur, votre proxy est probablement configuré correctement.
 
-Pour le proxy utilisé pour installer le moniteur d'exploitation Kubernetes, avant d'installer l'opérateur, définissez les variables d'environnement _http_proxy/https_proxy_. Pour certains environnements proxy, il peut être nécessaire de définir la variable _no_proxy Environment_.
+Pour le proxy utilisé pour installer Kubernetes Operating Monitor, avant d'installer l'opérateur, définissez les variables d'environnement _http_proxy/https_proxy_.  Pour certains environnements proxy, vous devrez peut-être également définir la variable d'environnement _no_proxy_.
 
-Pour définir la ou les variable(s), effectuez les opérations suivantes sur votre système *avant* installation de l'opérateur de surveillance Kubernetes :
+Pour définir la ou les variables, effectuez les étapes suivantes sur votre système *avant* d'installer Kubernetes Monitoring Operator :
 
-. Définissez les variables d'environnement _https_proxy_ et/ou _http_proxy_ pour l'utilisateur actuel :
+. Définissez les variables d'environnement _https_proxy_ et/ou _http_proxy_ pour l'utilisateur actuel :
 +
-.. Si le proxy en cours de configuration n'a pas d'authentification (nom d'utilisateur/mot de passe), exécutez la commande suivante :
+.. Si le proxy en cours de configuration ne dispose pas d'authentification (nom d'utilisateur/mot de passe), exécutez la commande suivante :
 +
  export https_proxy=<proxy_server>:<proxy_port>
-.. Si le proxy en cours de configuration dispose d'une authentification (nom d'utilisateur/mot de passe), exécutez la commande suivante :
+.. Si le proxy en cours de configuration dispose d'une authentification (nom d'utilisateur/mot de passe), exécutez cette commande :
 +
  export http_proxy=<proxy_username>:<proxy_password>@<proxy_server>:<proxy_port>
 
 
 
 
-Pour que le proxy utilisé pour votre cluster Kubernetes communique avec votre environnement Data Infrastructure Insights, installez l'opérateur de surveillance Kubernetes après avoir lu toutes ces instructions.
+Pour que le proxy utilisé pour votre cluster Kubernetes communique avec votre environnement Data Infrastructure Insights , installez Kubernetes Monitoring Operator après avoir lu toutes ces instructions.
 
-Configurez la section proxy d'AgentConfiguration dans Operator-config.yaml avant de déployer l'opérateur de surveillance Kubernetes.
+Configurez la section proxy d’AgentConfiguration dans operator-config.yaml avant de déployer l’opérateur de surveillance Kubernetes.
 
 [listing]
 ----
@@ -252,41 +252,41 @@ agent:
 ----
 
 
-=== À l'aide d'un référentiel docker personnalisé ou privé
+=== Utiliser un référentiel Docker personnalisé ou privé
 
-Par défaut, l'opérateur de surveillance Kubernetes extrait les images de conteneur du référentiel Data Infrastructure Insights. Si vous utilisez un cluster Kubernetes comme cible pour la surveillance et que ce cluster est configuré pour extraire uniquement les images de conteneur à partir d'un référentiel Docker personnalisé ou privé ou d'un registre de conteneurs, vous devez configurer l'accès aux conteneurs requis par l'opérateur de surveillance Kubernetes.
+Par défaut, l'opérateur de surveillance Kubernetes extrait les images de conteneur du référentiel Data Infrastructure Insights .  Si vous disposez d'un cluster Kubernetes utilisé comme cible pour la surveillance et que ce cluster est configuré pour extraire uniquement des images de conteneur à partir d'un référentiel Docker personnalisé ou privé ou d'un registre de conteneurs, vous devez configurer l'accès aux conteneurs nécessaires à l'opérateur de surveillance Kubernetes.
 
-Exécutez l'extrait de code image dans la mosaïque d'installation de NetApp Monitoring Operator. Cette commande permet de se connecter au référentiel Data Infrastructure Insights, d'extraire toutes les dépendances d'image pour l'opérateur et de se déconnecter du référentiel Data Infrastructure Insights. Lorsque vous y êtes invité, saisissez le mot de passe temporaire du référentiel fourni. Cette commande permet de télécharger toutes les images utilisées par l'opérateur, y compris pour les fonctions facultatives. Voir ci-dessous pour connaître les caractéristiques auxquelles ces images sont utilisées.
+Exécutez « Image Pull Snippet » à partir de la mosaïque d’installation de NetApp Monitoring Operator.  Cette commande se connectera au référentiel Data Infrastructure Insights , extraira toutes les dépendances d'image pour l'opérateur et se déconnectera du référentiel Data Infrastructure Insights .  Lorsque vous y êtes invité, saisissez le mot de passe temporaire du référentiel fourni.  Cette commande télécharge toutes les images utilisées par l'opérateur, y compris pour les fonctionnalités optionnelles.  Voir ci-dessous pour les fonctionnalités pour lesquelles ces images sont utilisées.
 
-Fonctionnalités centrales de l'opérateur et surveillance Kubernetes
+Fonctionnalités de l'opérateur principal et surveillance de Kubernetes
 
 * surveillance netapp
 * proxy ci-kube-rbac
 * ci-ksm
 * ci-telegraf
-* utilisateur-root-distroless
+* utilisateur root sans distribution
 
 
 Journal des événements
 
-* bit fluide ci
-* ci-kubernetes-exportateur-événements
+* ci-fluent-bit
+* exportateur d'événements ci-kubernetes
 
 
-Performances et carte réseau
+Performances et carte du réseau
 
-* ci-net-observateur
+* ci-net-observer
 
 
-Envoyez l'image de docker de l'opérateur à votre référentiel docker privé, local ou d'entreprise, conformément aux règles de votre entreprise. Assurez-vous que les balises d'image et les chemins de répertoire vers ces images dans votre référentiel sont cohérents avec ceux du référentiel Data Infrastructure Insights.
+Poussez l'image Docker de l'opérateur vers votre référentiel Docker privé/local/d'entreprise conformément à vos politiques d'entreprise.  Assurez-vous que les balises d’image et les chemins d’accès aux répertoires de ces images dans votre référentiel sont cohérents avec ceux du référentiel Data Infrastructure Insights .
 
-Modifiez le déploiement de l'opérateur de surveillance dans Operator-deployment.yaml, et modifiez toutes les références d'image pour utiliser votre référentiel Docker privé.
+Modifiez le déploiement de l'opérateur de surveillance dans operator-deployment.yaml et modifiez toutes les références d'image pour utiliser votre référentiel Docker privé.
 
 ....
 image: <docker repo of the enterprise/corp docker repo>/ci-kube-rbac-proxy:<ci-kube-rbac-proxy version>
 image: <docker repo of the enterprise/corp docker repo>/netapp-monitoring:<version>
 ....
-Modifiez la configuration d'agentConfiguration dans Operator-config.yaml pour refléter le nouvel emplacement docker repo. Créez une nouvelle imagePullSecret pour votre référentiel privé. Pour plus de détails, voir _https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_
+Modifiez AgentConfiguration dans operator-config.yaml pour refléter le nouvel emplacement du référentiel Docker.  Créez un nouveau imagePullSecret pour votre référentiel privé, pour plus de détails, consultez _https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_
 
 [listing]
 ----
@@ -302,36 +302,36 @@ agent:
 
 === Instructions OpenShift
 
-Si vous exécutez sur OpenShift 4.6 ou une version ultérieure, vous devez modifier la configuration d'agentConfiguration dans _operator-config.yaml_ pour activer le paramètre _runPrivileged_ :
+Si vous utilisez OpenShift 4.6 ou une version ultérieure, vous devez modifier AgentConfiguration dans _operator-config.yaml_ pour activer le paramètre _runPrivileged_ :
 
 ....
 # Set runPrivileged to true SELinux is enabled on your kubernetes nodes
 runPrivileged: true
 ....
-OpenShift peut implémenter un niveau de sécurité supplémentaire qui peut bloquer l'accès à certains composants Kubernetes.
+Openshift peut implémenter un niveau de sécurité supplémentaire qui peut bloquer l'accès à certains composants Kubernetes.
 
 
 
-=== Tolérances et tainations
+=== Tolérances et souillures
 
-Les _netapp-ci-telegraf-ds_, _netapp-ci-Fluent-bit-ds_ et _netapp-ci-net-observateur-l4-ds_ Demonsets doivent planifier un pod sur chaque nœud de votre cluster afin de collecter correctement les données sur tous les nœuds. L'opérateur a été configuré pour tolérer certains *taints* bien connus. Si vous avez configuré des fichiers d'accès personnalisés sur vos nœuds, empêchant ainsi les modules de s'exécuter sur chaque nœud, vous pouvez créer une *tolérance* pour ces fichiers d'accès link:telegraf_agent_k8s_config_options.html["Dans _AgentConfiguration_"]. Si vous avez appliqué des rejets personnalisés à tous les nœuds de votre cluster, vous devez également ajouter les tolérances nécessaires au déploiement de l'opérateur pour permettre la planification et l'exécution du pod opérateur.
+Les DaemonSets _netapp-ci-telegraf-ds_, _netapp-ci-fluent-bit-ds_ et _netapp-ci-net-observer-l4-ds_ doivent planifier un pod sur chaque nœud de votre cluster afin de collecter correctement les données sur tous les nœuds.  L'opérateur a été configuré pour tolérer certaines *souillures* bien connues.  Si vous avez configuré des taches personnalisées sur vos nœuds, empêchant ainsi les pods de s'exécuter sur chaque nœud, vous pouvez créer une *tolérance* pour ces tacheslink:telegraf_agent_k8s_config_options.html["dans _AgentConfiguration_"] .  Si vous avez appliqué des taches personnalisées à tous les nœuds de votre cluster, vous devez également ajouter les tolérances nécessaires au déploiement de l'opérateur pour permettre la planification et l'exécution du pod de l'opérateur.
 
-En savoir plus sur Kubernetes link:https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/["Teintes et tolérances"].
+En savoir plus sur Kuberneteslink:https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/["Souillures et tolérances"] .
 
-Revenir au link:task_config_telegraf_agent_k8s.html["*Page installation de l'opérateur de surveillance NetApp Kubernetes*"]
+Retour à lalink:task_config_telegraf_agent_k8s.html["* Page d'installation de l'opérateur de surveillance NetApp Kubernetes*"]
 
 
 
-== Remarque sur les secrets
+== Une note sur les secrets
 
-Pour supprimer l'autorisation pour l'opérateur de surveillance Kubernetes d'afficher les secrets à l'échelle du cluster, supprimez les ressources suivantes du fichier _Operator-setup.yaml_ avant d'installer :
+Pour supprimer l'autorisation permettant à l'opérateur de surveillance Kubernetes d'afficher les secrets à l'échelle du cluster, supprimez les ressources suivantes du fichier _operator-setup.yaml_ avant l'installation :
 
 [listing]
 ----
  ClusterRole/netapp-ci<namespace>-agent-secret
  ClusterRoleBinding/netapp-ci<namespace>-agent-secret
 ----
-S'il s'agit d'une mise à niveau, supprimez également les ressources de votre cluster :
+S'il s'agit d'une mise à niveau, supprimez également les ressources de votre cluster :
 
 [listing]
 ----
@@ -339,7 +339,7 @@ S'il s'agit d'une mise à niveau, supprimez également les ressources de votre c
  kubectl delete ClusterRoleBinding/netapp-ci-<namespace>-agent-secret-clusterrolebinding
 
 ----
-Si l'option analyse des modifications est activée, modifiez _AgentConfiguration_ ou _Operator-config.yaml_ pour annuler le commentaire de la section de gestion des modifications et incluez _kindsToIgnoreFromWatch: '"secrets"'_ dans la section de gestion des modifications. Notez la présence et la position des guillemets simples et doubles dans cette ligne.
+Si l'analyse des changements est activée, modifiez _AgentConfiguration_ ou _operator-config.yaml_ pour supprimer le commentaire de la section de gestion des changements et inclure _kindsToIgnoreFromWatch: '"secrets"'_ sous la section de gestion des changements.  Notez la présence et la position des guillemets simples et doubles dans cette ligne.
 
 ....
 change-management:
@@ -352,18 +352,18 @@ change-management:
 ....
 
 
-== Vérification des signatures d'images de l'opérateur de surveillance Kubernetes
+== Vérification des signatures d'image de l'opérateur de surveillance Kubernetes
 
-L'image de l'opérateur et toutes les images associées qu'il déploie sont signées par NetApp. Vous pouvez vérifier manuellement les images avant l'installation à l'aide de l'outil de co-signer ou configurer un contrôleur d'admission Kubernetes. Pour plus de détails, veuillez consulter le link:https://kubernetes.io/docs/tasks/administer-cluster/verify-signed-artifacts/#verifying-image-signatures["Documentation Kubernetes"].
+L'image de l'opérateur et toutes les images associées qu'il déploie sont signées par NetApp.  Vous pouvez vérifier manuellement les images avant l'installation à l'aide de l'outil de cosignature ou configurer un contrôleur d'admission Kubernetes.  Pour plus de détails, veuillez consulter lelink:https://kubernetes.io/docs/tasks/administer-cluster/verify-signed-artifacts/#verifying-image-signatures["Documentation Kubernetes"] .
 
-La clé publique utilisée pour vérifier les signatures d'image est disponible dans la mosaïque d'installation de l'opérateur de surveillance sous _Facultatif : télécharger les images de l'opérateur dans votre référentiel privé > clé publique de signature d'image_
+La clé publique utilisée pour vérifier les signatures d'image est disponible dans la mosaïque d'installation de l'opérateur de surveillance sous _Facultatif : téléchargez les images de l'opérateur dans votre référentiel privé > Clé publique de signature d'image_
 
-Pour vérifier manuellement une signature d'image, effectuez les opérations suivantes :
+Pour vérifier manuellement une signature d’image, procédez comme suit :
 
 . Copiez et exécutez l'extrait d'image
 . Copiez et saisissez le mot de passe du référentiel lorsque vous y êtes invité
-. Stocker la clé publique de signature d'image (dii-image-Signing.pub dans l'exemple)
-. Vérifiez les images à l'aide du cosigne. Reportez-vous à l'exemple suivant d'utilisation des coenseignes
+. Stocker la clé publique de signature d'image (dii-image-signing.pub dans l'exemple)
+. Vérifiez les images à l'aide de cosign.  Reportez-vous à l'exemple suivant d'utilisation de cosignature
 
 
 [listing]
@@ -379,39 +379,39 @@ The following checks were performed on each of these signatures:
 
 == Dépannage
 
-Voici quelques points à essayer en cas de problème lors de la configuration de l'opérateur de surveillance Kubernetes :
+Quelques éléments à essayer si vous rencontrez des problèmes lors de la configuration de l'opérateur de surveillance Kubernetes :
 
 [cols="stretch"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| Je ne vois pas de lien hypertexte/connexion entre mon volume persistant Kubernetes et le périphérique de stockage back-end correspondant. Mon volume persistant Kubernetes est configuré en utilisant le nom d'hôte du serveur de stockage. | Procédez comme suit pour désinstaller l'agent Telegraf existant, puis réinstaller l'agent Telegraf le plus récent. Vous devez utiliser Telegraf version 2.0 ou ultérieure et le stockage de votre cluster Kubernetes doit être activement surveillé par Data Infrastructure Insights. 
+| Je ne vois pas d'hyperlien/connexion entre mon volume persistant Kubernetes et le périphérique de stockage back-end correspondant.  Mon volume persistant Kubernetes est configuré à l’aide du nom d’hôte du serveur de stockage. | Suivez les étapes pour désinstaller l’agent Telegraf existant, puis réinstaller le dernier agent Telegraf.  Vous devez utiliser Telegraf version 2.0 ou ultérieure et votre stockage de cluster Kubernetes doit être activement surveillé par Data Infrastructure Insights. 
 
 
-| Je vois des messages dans les journaux qui ressemblent à ce qui suit : E0901 15 352:21:39.962145 178 1 Reflector.Go:178] k8s.io/kube-state-metrics/Internal/store/Builder.Go:43.168161 : échec de la liste *v1.MutatingWebhookio Configuration : le serveur n'a pas pu trouver la ressource demandée E0901 15:21/352/Reflector.s.Go.so | Ces messages peuvent se produire si vous exécutez des metrics d'état kube version 2.0.0 ou supérieure avec les versions Kubernetes inférieures à 1.20. Pour obtenir la version Kubernetes : _kubectl version_ pour obtenir la version kube-state-metrics : _kubectl get deployment/kube-state-metrics -o jsonpath='{..image}'_ pour éviter que ces messages se produisent, les utilisateurs peuvent modifier leur déploiement de metrics kube-state-metrics pour désactiver les baux suivants : _hookingwebconfigurations_. Ressources=certificats,demandes persistantes,configmaps,cronjobs,demonets, déploiements,noeuds finaux,horizontalepodpodscalers,ingresources,details,resuts,undats,depositionsstatees,depositigmats,defiees,resottes,depositionssecuts,defiees,dees,depositionunedats,delimantees,delimantees,deficedats,dees,delimantees,delimantees,delimantees,deficedats,delimantees,deficedats,delimantees,deficedats,deficedats,dees,delimantees,delimantees,dees,delimantees,deficedats,dees,delimantees,delimantees,delimantees,delimantees,de vaillewebconfiguration,v' 
+| Je vois des messages dans les journaux ressemblant à ce qui suit : E0901 15:21:39.962145 1 reflector.go:178] k8s.io/kube-state-metrics/internal/store/builder.go:352: Failed to list *v1.MutatingWebhookConfiguration: the server could not find the requested resource E0901 15:21:43.168161 1 reflector.go:178] k8s.io/kube-state-metrics/internal/store/builder.go:352: Failed to list *v1.Lease: the server could not find the requested resource (get leases.coordination.k8s.io) etc. | Ces messages peuvent se produire si vous exécutez kube-state-metrics version 2.0.0 ou supérieure avec des versions de Kubernetes inférieures à 1.20.  Pour obtenir la version de Kubernetes : _kubectl version_ Pour obtenir la version de kube-state-metrics : _kubectl get deploy/kube-state-metrics -o jsonpath='{..image}'_ Pour éviter que ces messages ne se produisent, les utilisateurs peuvent modifier leur déploiement kube-state-metrics pour désactiver les baux suivants : _mutatingwebhookconfigurations_ _validatingwebhookconfigurations_ _volumeattachments resources_ Plus précisément, ils peuvent utiliser l'argument CLI suivant : resources=certificatesigningrequests,configmaps,cronjobs,daemonsets, deployments,endpoints,horizontalpodautoscalers,ingresses,jobs,limitranges, namespaces,networkpolicies,nodes,persistentvolumeclaims,persistentvolumes, poddisruptionbudgets,pods,replicasets,replicationcontrollers,resourcequotas, La liste de ressources par défaut est : « certificatesigningrequests,configmaps,cronjobs,daemonsets,deployments,endpoints,horizontalpodautoscalers,ingresses,jobs,leases,limitranges,mutatingwebhookconfigurations,namespaces,networkpolicies,nodes, persistentvolumeclaims,persistentvolumes,poddisruptionbudgets,pods,replicasets,replicationcontrollers,resourcequotas,secrets,services,statefulsets,storageclasses,validatingwebhookconfigurations,volumeattachments » 
 
 
-| Je vois des messages d'erreur de Telegraf ressemblant aux messages suivants, mais Telegraf démarre et s'exécute : oct 11 14:23:41 ip-172-31-39-47 systemd[1] : lancé l'agent serveur piloté par des plug-ins pour signaler des mesures dans InfluxDB. Oct 11 14:23:41 ip-172-31-39-47 telegraf[1827] : heure="2021-10-11T14:23:41Z" level=erreur msg="Impossible de créer le répertoire de cache. /Etc/telegraf/.cache/flocon de neige, err : mkdir /etc/telegraf/.ca che : permission refusée. Ignored\n » func="nowgosflake.(*defaultLogger).Errorf" file="log.Go:10" Oct 1827 23:2021:39-47 ip-172-31-41 telegraf[11 14] : échec de l'ouverture:23:120. Ignoré. Ouvrir /etc/telegraf/.cache/flocon/ocsp_Response_cache.json : pas de fichier ou répertoire\n" func="gosnowflake.(*defaultLogger).Errorf" file="log.Go:120 10" Oct 23:2021:39-47 ip-1827-31 telegraf[172]: 23-41-11 14:11Z! Démarrage de Telegraf 1.19.3 | Il s'agit d'un problème connu. Voir link:https://github.com/influxdata/telegraf/issues/9407["Article GitHub"]pour plus de détails. Tant que Telegraf est opérationnel, les utilisateurs peuvent ignorer ces messages d'erreur. 
+| Je vois des messages d'erreur de Telegraf ressemblant à ce qui suit, mais Telegraf démarre et s'exécute : 11 oct. 14:23:41 ip-172-31-39-47 systemd[1] : Démarré L'agent serveur piloté par plug-in pour la création de rapports de métriques dans InfluxDB.  11 oct. 14:23:41 ip-172-31-39-47 telegraf[1827]: time="2021-10-11T14:23:41Z" level=error msg="échec de la création du répertoire de cache.  /etc/telegraf/.cache/snowflake, err : mkdir /etc/telegraf/.ca che : permission refusée. ignoré\n" func="gosnowflake.(*defaultLogger).Errorf" file="log.go:120" Oct 11 14:23:41 ip-172-31-39-47 telegraf[1827] : time="2021-10-11T14:23:41Z" level=error msg="échec d'ouverture.  Ignoré. ouvrez /etc/telegraf/.cache/snowflake/ocsp_response_cache.json : aucun fichier ou répertoire de ce type\n" func="gosnowflake.(*defaultLogger).Errorf" file="log.go:120" 11 oct. 14:23:41 ip-172-31-39-47 telegraf[1827] : 2021-10-11T14:23:41Z Je !  Démarrage de Telegraf 1.19.3 | Il s'agit d'un problème connu. Se référer àlink:https://github.com/influxdata/telegraf/issues/9407["Cet article GitHub"] pour plus de détails.  Tant que Telegraf est opérationnel, les utilisateurs peuvent ignorer ces messages d'erreur. 
 
 
-| Sur Kubernetes, mes coffee pad(s) Telegraf ont signalé l'erreur suivante : "erreur lors du traitement des informations de mountstats : échec de l'ouverture du fichier mountstats: /Hostfs/proc/1/mountstats, erreur: Ouvrir /hostfs/proc/1/mountstats: Permission refusée" | Si SELinux est activé et applique, il empêche probablement le ou les pod(s) Telegraf d'accéder au fichier /proc/1/mountstats sur le nœud Kubernetes. Pour contourner cette restriction, modifiez la configuration d'agentconfiguration et activez le paramètre runPrivileged. Pour plus de détails, reportez-vous aux instructions OpenShift. 
+| Sur Kubernetes, mes pods Telegraf signalent l'erreur suivante : « Erreur lors du traitement des informations mountstats : échec d'ouverture du fichier mountstats : /hostfs/proc/1/mountstats, erreur : ouverture de /hostfs/proc/1/mountstats : autorisation refusée » | Si SELinux est activé et appliqué, il empêche probablement les pods Telegraf d'accéder au fichier /proc/1/mountstats sur le nœud Kubernetes.  Pour surmonter cette restriction, modifiez la configuration de l'agent et activez le paramètre runPrivileged.  Pour plus de détails, reportez-vous aux instructions OpenShift. 
 
 
-| Sur Kubernetes, mon pod Telegraf ReplicaSet signale l'erreur suivante : [inputs.prometheus] erreur dans le plug-in : impossible de charger keypair /etc/kubernetes/pki/ETcd/Server.crt:/etc/kubernetes/pki/ETcd/Server.key : ouvrir /etc/kubernetes/pki/ETcd/Server.crt : aucun fichier ni répertoire | Le pod Télégraf ReplicaSet est conçu pour s'exécuter sur un nœud désigné comme maître ou pour ETCD. Si le pod ReplicaSet n'est pas en cours d'exécution sur l'un de ces nœuds, vous obtenez ces erreurs. Vérifiez si vos nœuds maître/ETCD ont des astuces sur eux. S'ils le font, ajoutez les tolérances nécessaires à Telegraf ReplicaSet, telegraf-RS. Par exemple, modifiez le ReplicaSet... kubectl edit RS telegraf-RS ...et ajoutez les tolérances appropriées à la spécification. Redémarrez ensuite le pod ReplicaSet. 
+| Sur Kubernetes, mon pod Telegraf ReplicaSet signale l'erreur suivante : [inputs.prometheus] Erreur dans le plugin : impossible de charger la paire de clés /etc/kubernetes/pki/etcd/server.crt:/etc/kubernetes/pki/etcd/server.key : ouvrir /etc/kubernetes/pki/etcd/server.crt : aucun fichier ou répertoire de ce type | Le pod Telegraf ReplicaSet est destiné à s'exécuter sur un nœud désigné comme maître ou pour etcd.  Si le pod ReplicaSet n’est pas en cours d’exécution sur l’un de ces nœuds, vous obtiendrez ces erreurs.  Vérifiez si vos nœuds maître/etcd sont contaminés.  Si c'est le cas, ajoutez les tolérances nécessaires au Telegraf ReplicaSet, telegraf-rs.  Par exemple, modifiez le ReplicaSet... kubectl edit rs telegraf-rs ...et ajoutez les tolérances appropriées à la spécification.  Ensuite, redémarrez le pod ReplicaSet. 
 
 
-| J'ai un environnement PSP/PSA. Cela affecte-t-il mon opérateur de surveillance ? | Si votre cluster Kubernetes s'exécute avec la règle de sécurité Pod (PSP) ou l'admission de sécurité Pod (PSA) sur place, vous devez effectuer la mise à niveau vers l'opérateur de surveillance Kubernetes le plus récent. Procédez comme suit pour mettre à niveau vers l'opérateur actuel avec la prise en charge de PSP/PSA : 1. <<uninstalling,Désinstaller>> le précédent opérateur de surveillance : kubectl delete agent-monitoring-NetApp -n NetApp-monitoring kubectl delete ns NetApp-monitoring kubectl delete crd agents.monitoring.NetApp.com kubectl delete clusterrole agent-manager-role agent-proxy-role agent-metrics-reader kubectl delete clusterrolebinding agent-manager-rolebinding agent-cluster-agent-roleadmin-binding-cluster-2-agent-binding. <<installing-the-kubernetes-monitoring-operator,Installez>> dernière version de l'opérateur de surveillance. 
+| J'ai un environnement PSP/PSA.  Cela affecte-t-il mon opérateur de surveillance ? | Si votre cluster Kubernetes s'exécute avec la stratégie de sécurité des pods (PSP) ou l'admission de sécurité des pods (PSA) en place, vous devez effectuer une mise à niveau vers la dernière version de Kubernetes Monitoring Operator.  Suivez ces étapes pour mettre à niveau vers l’opérateur actuel avec prise en charge de PSP/PSA : 1. <<uninstalling,Désinstaller>> l'opérateur de surveillance précédent : kubectl delete agent agent-monitoring-netapp -n netapp-monitoring kubectl delete ns netapp-monitoring kubectl delete crd agents.monitoring.netapp.com kubectl delete clusterrole agent-manager-role agent-proxy-role agent-metrics-reader kubectl delete clusterrolebinding agent-manager-rolebinding agent-proxy-rolebinding agent-cluster-admin-rolebinding 2. <<installing-the-kubernetes-monitoring-operator,Installation>> la dernière version de l'opérateur de surveillance. 
 
 
-| J'ai rencontré des problèmes lors de la tentative de déploiement de l'opérateur, et j'ai utilisé PSP/PSA. | 1. Modifiez l'agent à l'aide de la commande suivante : kubectl -n <name-space> edit agent 2. Marquez « Security-policy-enabled » comme « false ». Ceci désactivera les stratégies de sécurité du Pod et l'admission de sécurité du Pod et permettra à l'opérateur de déployer. Confirmez en utilisant les commandes suivantes : kubectl get psp (devrait afficher Pod Security Policy supprimé) kubectl get all -n <namespace> | grep -i psp (doit montrer que rien n'a été trouvé) 
+| J'ai rencontré des problèmes lors du déploiement de l'opérateur et j'utilise PSP/PSA. | 1. Modifiez l'agent à l'aide de la commande suivante : kubectl -n <name-space> edit agent 2.  Marquer « security-policy-enabled » comme « faux ».  Cela désactivera les politiques de sécurité des pods et l'admission de sécurité des pods et permettra à l'opérateur de se déployer.  Confirmez en utilisant les commandes suivantes : kubectl get psp (devrait indiquer que la politique de sécurité du pod a été supprimée) kubectl get all -n <namespace> | grep -i psp (devrait indiquer que rien n'est trouvé) 
 
 
-| Erreurs « ImagePullBackoff » détectées | Ces erreurs peuvent se produire si vous disposez d'un référentiel docker personnalisé ou privé et que vous n'avez pas encore configuré l'opérateur de surveillance Kubernetes pour qu'il le reconnaisse correctement. <<using-a-custom-or-private-docker-repository,En savoir plus>> a propos de la configuration pour référentiel personnalisé/privé. 
+| Erreurs « ImagePullBackoff » observées | Ces erreurs peuvent être observées si vous disposez d’un référentiel Docker personnalisé ou privé et que vous n’avez pas encore configuré l’opérateur de surveillance Kubernetes pour le reconnaître correctement. <<using-a-custom-or-private-docker-repository,En savoir plus>> à propos de la configuration pour un référentiel personnalisé/privé. 
 
 
-| J'ai un problème avec mon déploiement d'opérateur de surveillance, et la documentation actuelle ne m'aide pas à le résoudre.  a| 
-Capturer ou noter le résultat des commandes suivantes et contacter l'équipe de support technique.
+| J'ai un problème avec mon déploiement d'opérateur de surveillance et la documentation actuelle ne m'aide pas à le résoudre.  a| 
+Capturez ou notez autrement la sortie des commandes suivantes et contactez l'équipe de support technique.
 
 [listing]
 ----
@@ -422,38 +422,38 @@ Capturer ou noter le résultat des commandes suivantes et contacter l'équipe de
 ----
 
 
-| Les pods net-observateur (Workload Map) de l'espace de noms de l'opérateur se trouvent dans CrashLoopBackOff | Ces pods correspondent au collecteur de données Workload Map pour l'observabilité réseau. Essayez : • Vérifiez les journaux de l'un des modules pour confirmer la version minimale du noyau. Par exemple : --- {"ci-tenant-ID":"votre-tenant-ID","collectionneur-cluster":"votre-k8s-cluster-name","Environment":"prod","level":"error","msg":"échec de la validation. Raison : la version 3.10.0 du noyau est inférieure à la version minimale du noyau de 4.18.0","Time":"2022-11-09T08:23:08Z"} ---- • les pods Net-observateur requièrent que la version du noyau Linux soit au moins 4.18.0. Vérifiez la version du noyau à l'aide de la commande “uname -r” et assurez-vous qu'ils sont >= 4.18.0 
+| Les pods net-observer (Workload Map) dans l'espace de noms Operator sont dans CrashLoopBackOff | Ces pods correspondent au collecteur de données Workload Map pour l'observabilité du réseau.  Essayez ceci : • Vérifiez les journaux de l’un des pods pour confirmer la version minimale du noyau.  Par exemple : ---- {"ci-tenant-id":"votre-id-de-tenant","collector-cluster":"votre-nom-de-cluster-k8s","environment":"prod","level":"error","msg":"échec de validation.  Raison : la version du noyau 3.10.0 est inférieure à la version minimale du noyau 4.18.0","time":"2022-11-09T08:23:08Z"} ---- • Les pods Net-observer nécessitent que la version du noyau Linux soit au moins 4.18.0.  Vérifiez la version du noyau à l’aide de la commande « uname -r » et assurez-vous qu’elle est >= 4.18.0 
 
 
-| Les pods s'exécutent dans l'espace de noms Operator (par défaut : surveillance netapp), mais aucune donnée n'est affichée dans l'interface pour la carte des workloads ou les metrics Kubernetes dans les requêtes | Vérifiez le réglage de l'heure sur les nœuds du cluster K8S. Pour un audit et un reporting précis des données, il est vivement recommandé de synchroniser l'heure sur l'ordinateur de l'agent à l'aide du protocole NTP (Network Time Protocol) ou SNTP (simple Network Time Protocol). 
+| Les pods s'exécutent dans l'espace de noms de l'opérateur (par défaut : netapp-monitoring), mais aucune donnée n'est affichée dans l'interface utilisateur pour la carte de charge de travail ou les métriques Kubernetes dans les requêtes. | Vérifiez le réglage de l'heure sur les nœuds du cluster K8S.  Pour un audit et des rapports de données précis, il est fortement recommandé de synchroniser l'heure sur la machine Agent à l'aide du protocole Network Time Protocol (NTP) ou du protocole Simple Network Time Protocol (SNTP). 
 
 
-| Certains des pods net-observateur dans l'espace de noms de l'opérateur sont à l'état en attente | Net-observateur est un DemonSet et exécute un pod dans chaque nœud du cluster k8s. • Notez le pod qui est à l'état en attente et vérifiez s'il rencontre un problème de ressource pour le processeur ou la mémoire. Assurez-vous que la mémoire et le processeur requis sont disponibles dans le nœud. 
+| Certains des pods d'observateur réseau dans l'espace de noms Operator sont en état d'attente | Net-observer est un DaemonSet et exécute un pod dans chaque nœud du cluster k8s.  • Notez le pod qui est en état d’attente et vérifiez s’il rencontre un problème de ressources pour le processeur ou la mémoire.  Assurez-vous que la mémoire et le processeur requis sont disponibles dans le nœud. 
 
 
-| Je vois ce qui suit dans mes journaux immédiatement après l'installation de l'opérateur de surveillance Kubernetes : [inputs.prometheus] erreur dans le plug-in : erreur lors de la demande HTTP vers \http://kube-state-metrics.<namespace>.svc.cluster.local:8080/metrics : get \http://kube-state-metrics.<namespace>.svc.cluster.local:8080/metrics : Dial tcp: kube-state-metrics.<namespace>.svc.cluster.local : pas de recherche d'hôte | Ce message n'apparaît généralement que lorsqu'un nouvel opérateur est installé et que le module _telegraf-RS_ est en marche avant que le module _ksm_ ne soit en marche. Ces messages doivent s'arrêter une fois que tous les modules sont en cours d'exécution. 
+| Je vois ce qui suit dans mes journaux immédiatement après l'installation de Kubernetes Monitoring Operator : [inputs.prometheus] Erreur dans le plugin : erreur lors de la requête HTTP vers \http://kube-state-metrics.<namespace>.svc.cluster.local:8080/metrics : obtenir \http://kube-state-metrics.<namespace>.svc.cluster.local:8080/metrics : numérotation TCP : recherche kube-state-metrics.<namespace>.svc.cluster.local : aucun hôte de ce type | Ce message n'apparaît généralement que lorsqu'un nouvel opérateur est installé et que le pod _telegraf-rs_ est opérationnel avant le pod _ksm_.  Ces messages devraient cesser une fois que tous les pods sont en cours d’exécution. 
 
 
-| Je ne vois aucun indicateur collecté pour les cronjobs Kubernetes qui existent dans mon cluster. | Vérifiez votre version de Kubernetes (c'est-à-dire `kubectl version`). S'il est v1.20.x ou inférieur, il s'agit d'une limitation attendue. La version de kube-state-metrics déployée avec l'opérateur de surveillance Kubernetes ne prend en charge que v1.cronjob. Avec Kubernetes 1.20.x et versions antérieures, la ressource cronjob est à v1beta.cronjob. Par conséquent, les indicateurs d'état kube ne peuvent pas trouver la ressource cronjob. 
+| Je ne vois aucune métrique collectée pour les CronJobs Kubernetes qui existent dans mon cluster. | Vérifiez votre version de Kubernetes (c'est-à-dire `kubectl version` ).  S'il s'agit de la version 1.20.x ou d'une version antérieure, il s'agit d'une limitation attendue.  La version kube-state-metrics déployée avec l'opérateur de surveillance Kubernetes prend uniquement en charge la version v1.CronJob.  Avec Kubernetes 1.20.x et versions antérieures, la ressource CronJob se trouve dans v1beta.CronJob.  Par conséquent, kube-state-metrics ne peut pas trouver la ressource CronJob. 
 
 
-| Après l'installation de l'opérateur, les modules telegraf-ds entrent dans CrashLoopBackOff et les journaux du pod indiquent « su: Authentication failure ». | Modifiez la section telegraf dans _AgentConfiguration_ et définissez _dockerMetricCollectionEnabled_ sur FALSE. Pour plus de détails, reportez-vous au link:telegraf_agent_k8s_config_options.html["options de configuration"]manuel de l'opérateur . ... spec: ... telegraf: ...           - Nom: docker       run-mode             : - DemonSet substitutions:        - Key: DOCKER_UNIX_SOCK_PLACEHOLDER         valeur: unix:///run/docker.sock ... ... 
+| Après l'installation de l'opérateur, les pods telegraf-ds entrent dans CrashLoopBackOff et les journaux des pods indiquent « su : échec d'authentification ». | Modifiez la section Telegraf dans _AgentConfiguration_ et définissez _dockerMetricCollectionEnabled_ sur false.  Pour plus de détails, reportez-vous au manuel de l'opérateur.link:telegraf_agent_k8s_config_options.html["options de configuration"] .  ... spec: ... telegraf: ...            - nom : docker mode d'exécution : - substitutions DaemonSet : - clé : DOCKER_UNIX_SOCK_PLACEHOLDER valeur : unix:///run/docker.sock ...  ... 
 
 
-| Je vois des messages d'erreur récurrents ressemblant à ce qui suit dans mes journaux Telegraf: E! [Agent] erreur d'écriture dans outputs.http: Post "\https://<tenant_url>/REST/v1/Lake/iningt/influxdb": Délai de contexte dépassé (client. Dépassement du délai d'attente des en-têtes) | Modifiez la section telegraf dans _AgentConfiguration_ et augmentez _outputTimeout_ à 10 s. Pour plus de détails, reportez-vous au link:telegraf_agent_k8s_config_options.html["options de configuration"]manuel de l'opérateur . 
+| Je vois des messages d'erreur répétés ressemblant à ce qui suit dans mes journaux Telegraf : E!  [agent] Erreur lors de l'écriture dans outputs.http : Post "\https://<tenant_url>/rest/v1/lake/ingest/influxdb" : délai de contexte dépassé (Client.Timeout dépassé lors de l'attente des en-têtes) | Modifiez la section Telegraf dans _AgentConfiguration_ et augmentez _outputTimeout_ à 10 s.  Pour plus de détails, reportez-vous au manuel de l'opérateur.link:telegraf_agent_k8s_config_options.html["options de configuration"] . 
 
 
-| Il me manque des données _involvedobject_ pour certains journaux d'événements. | Assurez-vous d'avoir suivi les étapes de la link:pre-requisites_for_k8s_operator.html["Autorisations"] section ci-dessus. 
+| Il me manque des données _involvedobject_ pour certains journaux d'événements. | Assurez-vous d'avoir suivi les étapes décrites dans lalink:pre-requisites_for_k8s_operator.html["Autorisations"] section ci-dessus. 
 
 
-| Pourquoi deux modules d'opérateurs de surveillance s'exécutent, l'un nommé netapp-ci-monitoring-Operator-<pod> et l'autre Monitoring-Operator-<pod> ? | Depuis le 12 octobre 2023, Data Infrastructure Insights a été décidé de réorganiser l'opérateur pour mieux répondre aux besoins de nos utilisateurs. Pour que ces changements soient entièrement adoptés, vous devez <<uninstalling,retirez l'ancien opérateur>> et <<installing-the-kubernetes-monitoring-operator,installez le nouveau>>. 
+| Pourquoi est-ce que je vois deux pods d’opérateurs de surveillance en cours d’exécution, l’un nommé netapp-ci-monitoring-operator-<pod> et l’autre nommé monitoring-operator-<pod> ? | À compter du 12 octobre 2023, Data Infrastructure Insights a remanié l'opérateur pour mieux servir nos utilisateurs ; pour que ces changements soient pleinement adoptés, vous devez<<uninstalling,supprimer l'ancien opérateur>> et<<installing-the-kubernetes-monitoring-operator,installer le nouveau>> . 
 
 
-| Mes événements kubernetes ont cessé de générer des rapports à Data Infrastructure Insights de manière inattendue.  a| 
-Récupérer le nom du pod Event-exportateur :
+| Mes événements Kubernetes ont cessé de manière inattendue d'être signalés à Data Infrastructure Insights.  a| 
+Récupérer le nom du pod exportateur d'événements :
 
  `kubectl -n netapp-monitoring get pods |grep event-exporter |awk '{print $1}' |sed 's/event-exporter./event-exporter/'`
-Il doit être « netapp-ci-event-exportatrice » ou « event-exportatrice ». Ensuite, modifiez l'agent de surveillance `kubectl -n netapp-monitoring edit agent` et définissez la valeur de LOG_FILE pour qu'elle reflète le nom de pod d'exportation d'événements approprié trouvé à l'étape précédente. Plus précisément, LOG_FILE doit être défini sur «/var/log/containers/netapp-ci-event-exportatrice.log » ou «/var/log/containers/event-exportatrice*.log ».
+Il doit s'agir soit de « netapp-ci-event-exporter » soit de « event-exporter ».  Ensuite, modifiez l’agent de surveillance `kubectl -n netapp-monitoring edit agent` et définissez la valeur de LOG_FILE pour refléter le nom de pod d'exportation d'événements approprié trouvé à l'étape précédente.  Plus précisément, LOG_FILE doit être défini sur « /var/log/containers/netapp-ci-event-exporter.log » ou « /var/log/containers/event-exporter*.log »
 
 ....
 fluent-bit:
@@ -465,30 +465,30 @@ fluent-bit:
     - /var/log/containers/netapp-ci-event-exporter*.log
 ...
 ....
-Sinon, on peut aussi <<uninstalling,désinstaller>> et <<installing-the-kubernetes-monitoring-operator,réinstallez>> l'agent.
+Alternativement, on peut aussi<<uninstalling,désinstaller>> et<<installing-the-kubernetes-monitoring-operator,réinstaller>> l'agent.
 
 
 
-| J'constate que le ou les pods déployés par l'opérateur de surveillance Kubernetes sont en panne en raison de ressources insuffisantes. | Reportez-vous à l'opérateur de surveillance Kubernetes link:telegraf_agent_k8s_config_options.html["options de configuration"]pour augmenter les limites de processeur et/ou de mémoire selon les besoins. 
+| Je vois que des pods déployés par l'opérateur de surveillance Kubernetes se bloquent en raison de ressources insuffisantes. | Consultez l'opérateur de surveillance Kuberneteslink:telegraf_agent_k8s_config_options.html["options de configuration"] pour augmenter les limites du processeur et/ou de la mémoire selon les besoins. 
 
 
-| Si une image manquante ou une configuration non valide a entraîné l'échec du démarrage ou de la préparation des pods de metrics d'état de netapp-ci-kube. L'état StatefulSet est bloqué et les modifications de configuration ne sont pas appliquées aux pods de metrics netapp-ci-kube-state. | StatefulSet est dans un link:https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#forced-rollback["cassé"] état. Après avoir résolu tout problème de configuration, utilisez les pods de metrics netapp-ci-kube-état. 
+| Une image manquante ou une configuration non valide a entraîné l'échec du démarrage ou de la préparation des pods netapp-ci-kube-state-metrics.  Désormais, le StatefulSet est bloqué et les modifications de configuration ne sont pas appliquées aux pods netapp-ci-kube-state-metrics. | Le StatefulSet est dans unlink:https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#forced-rollback["cassé"] État.  Après avoir résolu les problèmes de configuration, faites rebondir les pods netapp-ci-kube-state-metrics. 
 
 
-| les pods de metrics d'état-ci-kube-netapp ne parviennent pas à démarrer après l'exécution d'une mise à niveau d'opérateur Kubernetes, et lancent ErrImagePull (échec de l'extraction de l'image). | Essayez de réinitialiser les modules manuellement. 
+| Les pods netapp-ci-kube-state-metrics ne parviennent pas à démarrer après l'exécution d'une mise à niveau de l'opérateur Kubernetes, générant ErrImagePull (échec de l'extraction de l'image). | Essayez de réinitialiser les pods manuellement. 
 
 
-| Des messages « événement ignoré comme étant plus ancien que maxEventAgeSeconds » sont observés pour mon cluster Kubernetes sous analyse du journal. | Modifiez l'opérateur _agentconfiguration_ et augmentez les valeurs _event-exportatrice-maxEventAgeSeconds_ (c.-à-d. à 60 s), _event-exportatrice-kubeQPS_ (c.-à-d. à 100) et _event-exportatrice-kubeBurst_ (c.-à-d. à 500). Pour plus de détails sur ces options de configuration, reportez-vous à la link:telegraf_agent_k8s_config_options.html["options de configuration"] page. 
+| Les messages « Événement rejeté car plus ancien que maxEventAgeSeconds » sont observés pour mon cluster Kubernetes sous Analyse des journaux. | Modifiez l'opérateur _agentconfiguration_ et augmentez _event-exporter-maxEventAgeSeconds_ (c'est-à-dire à 60 s), _event-exporter-kubeQPS_ (c'est-à-dire à 100) et _event-exporter-kubeBurst_ (c'est-à-dire à 500).  Pour plus de détails sur ces options de configuration, consultez lelink:telegraf_agent_k8s_config_options.html["options de configuration"] page. 
 
 
-| Telegraf avertit ou se bloque en raison d'une mémoire verrouillable insuffisante. | Essayez d'augmenter la limite de mémoire verrouillable pour Telegraf dans le système d'exploitation/nœud sous-jacent. Si l'augmentation de la limite n'est pas une option, modifiez la configuration de l'agentNKMO et définissez _Unprotected_ sur _true_. Cela indique à Telegraf de ne pas tenter de réserver des pages de mémoire verrouillées. Bien que cela puisse présenter un risque de sécurité car les secrets déchiffrés peuvent être échangés sur disque, il permet une exécution dans des environnements où il est impossible de réserver de la mémoire verrouillée. Pour plus de détails sur les options de configuration _Unprotected_, reportez-vous à la link:telegraf_agent_k8s_config_options.html["options de configuration"] page. 
+| Telegraf avertit ou plante à cause d'une mémoire verrouillable insuffisante. | Essayez d'augmenter la limite de mémoire verrouillable pour Telegraf dans le système d'exploitation/nœud sous-jacent.  Si l’augmentation de la limite n’est pas une option, modifiez la configuration de l’agent NKMO et définissez _unprotected_ sur _true_.  Cela indiquera à Telegraf de ne pas tenter de réserver des pages de mémoire verrouillées.  Bien que cela puisse présenter un risque de sécurité, car les secrets déchiffrés peuvent être échangés sur le disque, cela permet l'exécution dans des environnements où la réservation de mémoire verrouillée n'est pas possible.  Pour plus de détails sur les options de configuration _non protégées_, reportez-vous à lalink:telegraf_agent_k8s_config_options.html["options de configuration"] page. 
 
 
-| Je vois des messages d'avertissement de Telegraf ressemblant à ce qui suit: _W! [Inputs.diskio] Impossible de récupérer le nom du disque pour « vdc » : erreur lors de la lecture de /dev/vdc : pas de fichier ou de répertoire | Pour l'opérateur de surveillance Kubernetes, ces messages d'avertissement sont bénins et peuvent être ignorés en toute sécurité.  Vous pouvez également modifier la section telegraf dans AgentConfiguration et définir _runDsPrivileged_ sur TRUE. Pour plus de détails, reportez-vous au link:telegraf_agent_k8s_config_options.html["options de configuration de l'opérateur"]. 
+| Je vois des messages d'avertissement de Telegraf ressemblant à ce qui suit : _W!  [inputs.diskio] Impossible de récupérer le nom du disque pour « vdc » : erreur de lecture de /dev/vdc : aucun fichier ou répertoire de ce type_ | Pour l'opérateur de surveillance Kubernetes, ces messages d'avertissement sont bénins et peuvent être ignorés en toute sécurité.   Vous pouvez également modifier la section Telegraf dans AgentConfiguration et définir _runDsPrivileged_ sur true.  Pour plus de détails, reportez-vous à lalink:telegraf_agent_k8s_config_options.html["options de configuration de l'opérateur"] . 
 
 
-| Mon pod Fluent-bit échoue avec les erreurs suivantes : [2024/10/16 14 23:16:23] [erreur] [/src/fluent-bit/plugins/In_tail/tail_fs_inotify.c:360 errno=10/16 14] trop de fichiers ouverts [2024/10/16 14:16:23] [erreur] échec de l'initialisation de l'entrée tail.0 [2024/24:16] [erreur d'initialisation du moteur]  a| 
-Essayez de modifier vos paramètres _fsnotify_ dans votre cluster :
+| Mon pod Fluent-bit échoue avec les erreurs suivantes : [2024/10/16 14:16:23] [error] [/src/fluent-bit/plugins/in_tail/tail_fs_inotify.c:360 errno=24] Trop de fichiers ouverts [2024/10/16 14:16:23] [error] échec d'initialisation de l'entrée tail.0 [2024/10/16 14:16:23] [error] [engine] échec d'initialisation de l'entrée  a| 
+Essayez de modifier vos paramètres _fsnotify_ dans votre cluster :
 
 [listing]
 ----
@@ -502,7 +502,7 @@ Essayez de modifier vos paramètres _fsnotify_ dans votre cluster :
 ----
 Redémarrez Fluent-bit.
 
-Remarque : pour que ces paramètres soient persistants lors des redémarrages de nœud, vous devez placer les lignes suivantes dans _/etc/sysctl.conf_
+Remarque : pour que ces paramètres soient persistants après chaque redémarrage du nœud, vous devez placer les lignes suivantes dans _/etc/sysctl.conf_
 
 [listing]
 ----
@@ -511,6 +511,6 @@ Remarque : pour que ces paramètres soient persistants lors des redémarrages de
 ----
 
 
-| Les pods telegraf DS signalent des erreurs liées au plug-in d'entrée kubernetes qui ne parviennent pas à faire de requêtes HTTP en raison de l'incapacité à valider le certificat TLS. Par exemple : E! [Inputs.kubernetes] erreur dans le plug-in : erreur lors de la demande HTTP pour "https://<kubelet_IP>:10250/stats/summary":[] obtenir "https://<kubelet_IP>:10250/stats/summary":[] tls : échec de la vérification du certificat : x509 : impossible de valider le certificat pour <kubelet_IP> car il ne contient pas de SAN IP | Cela se produit si le kubelet utilise des certificats auto-signés et/ou si le certificat spécifié n'inclut pas le <kubelet_IP> dans la liste des certificats _Subject alternative Name_. Pour résoudre ce problème, l'utilisateur peut modifier le link:telegraf_agent_k8s_config_options.html["configuration de l'agent"], et définir _telegraf:insecureK8sSkipVerify_ sur _true_. Cela va configurer le plug-in d'entrée telegraf pour ignorer la vérification. Sinon, l'utilisateur peut configurer le kubelet pour link:https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/["ServerTLSBootstrap"], qui déclenchera une demande de certificat à partir de l'API 'certificates.k8s.io'. 
+| Les pods DS de Telegraf signalent des erreurs liées au fait que le plug-in d'entrée Kubernetes ne parvient pas à effectuer des requêtes HTTP en raison de l'impossibilité de valider le certificat TLS.  Par exemple : E!  [inputs.kubernetes] Erreur dans le plugin : erreur lors de la requête HTTP vers"https://<kubelet_IP>:10250/stats/summary":[] Obtenir"https://<kubelet_IP>:10250/stats/summary":[] tls : échec de vérification du certificat : x509 : impossible de valider le certificat pour <kubelet_IP> car il ne contient aucun SAN IP | Cela se produit si le kubelet utilise des certificats auto-signés et/ou si le certificat spécifié n'inclut pas le <kubelet_IP> dans la liste _Subject Alternative Name_ des certificats.  Pour résoudre ce problème, l'utilisateur peut modifier lelink:telegraf_agent_k8s_config_options.html["configuration de l'agent"] , et définissez _telegraf:insecureK8sSkipVerify_ sur _true_.  Cela configurera le plugin d'entrée Telegraf pour ignorer la vérification.  Alternativement, l'utilisateur peut configurer le kubelet pourlink:https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/["serveurTLSBootstrap"] , ce qui déclenchera une demande de certificat à partir de l'API « certificates.k8s.io ». 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

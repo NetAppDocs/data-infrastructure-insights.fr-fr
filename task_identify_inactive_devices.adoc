@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: task_identify_inactive_devices.html 
 keywords: inactive, device, remove, removing, identify, identifying 
-summary: 'L"identification des périphériques inactifs vous permet de choisir de les supprimer ou de les attribuer à un rôle actif.' 
+summary: L’identification des appareils inactifs vous permet de choisir de les supprimer ou de les attribuer à un rôle actif. 
 ---
-= Identification des périphériques inactifs
+= Identifier les appareils inactifs
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-L'identification des ressources dont vous disposez et de qui les utilise est essentielle pour « dimensionner correctement » et libérer l'infrastructure inutilisée. Vous pouvez facilement réaffecter ou désaffecter les ressources sous-utilisées et éviter ainsi les achats inutiles.
+Identifier les actifs dont vous disposez et qui les utilise est essentiel pour « ajuster la taille » et libérer l’infrastructure inutilisée.  Vous pouvez facilement réaffecter ou désactiver les ressources sous-utilisées et éviter les achats inutiles.
 
-Procédez comme suit pour identifier les ressources inactives.
+Utilisez les étapes suivantes pour identifier les actifs inactifs.
 
 .Étapes
-* Naviguez jusqu'à *observabilité > Explorer -> +Nouvelle requête métrique*.
-* Sélectionnez _Storage_ dans la liste déroulante.
-* Cliquez sur l'engrenage et ajoutez _isActive_ comme colonne.
+* Accédez à *Observabilité > Explorer -> +Nouvelle requête de métrique*.
+* Sélectionnez _Stockage_ dans la liste déroulante.
+* Cliquez sur l’engrenage et ajoutez _isActive_ comme colonne.
 +
-Les lignes affichant une vérification sont actives. "X" indique les périphériques inactifs.
+Les lignes affichant une coche sont actives.  « X » indique les appareils inactifs.
 
 
 
-Pour supprimer des périphériques inactifs, sélectionnez simplement les périphériques à supprimer et, dans la liste déroulante *actions groupées*, sélectionnez _Supprimer les périphériques inactifs_.
+Pour supprimer les appareils inactifs, sélectionnez simplement les appareils à supprimer et dans la liste déroulante *Actions en masse*, sélectionnez _Supprimer les appareils inactifs_.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_configure_data_collectors.html 
 keywords: acquisition, AU, data collector, collector, notification, notify, 
-summary: Instructions générales relatives au collecteur de données 
+summary: Instructions générales pour le collecteur de données 
 ---
 = Configuration des collecteurs de données
 :hardbreaks:
@@ -10,34 +10,34 @@ summary: Instructions générales relatives au collecteur de données
 
 
 [role="lead"]
-Vous configurez les collecteurs de données dans votre environnement Data Infrastructure Insights pour collecter les données des terminaux du data Center.
+Vous configurez des collecteurs de données dans votre environnement Data Infrastructure Insights pour collecter des données à partir des appareils du centre de données.
 
 .Avant de commencer
-* Vous devez avoir configuré une unité d'acquisition pour pouvoir commencer à collecter des données.
-* Vous avez besoin d'informations d'identification pour les périphériques à partir desquels vous recueillez des données.
-* Les adresses réseau du périphérique, les informations de compte et les mots de passe sont requis pour tous les périphériques à partir de qui vous recueillez des données.
+* Vous devez avoir configuré une unité d’acquisition avant de pouvoir commencer à collecter des données.
+* Vous avez besoin d’informations d’identification pour les appareils à partir desquels vous collectez des données.
+* Les adresses réseau des appareils, les informations de compte et les mots de passe sont requis pour tous les appareils à partir desquels vous collectez des données.
 
 
 .Étapes
-. Dans le menu Data Infrastructure Insights, cliquez sur *observabilité > Collectors*
+. Dans le menu Data Infrastructure Insights , cliquez sur *Observabilité > Collecteurs*
 +
 Le système affiche les collecteurs de données disponibles classés par fournisseur.
 
-. Cliquez sur *+ Collector* et sélectionnez le collecteur de données à configurer.
+. Cliquez sur *+ Collecteur* et sélectionnez le collecteur de données à configurer.
 +
 Dans la boîte de dialogue, vous pouvez configurer le collecteur de données et ajouter une unité d'acquisition.
 
-. Entrez un nom pour le collecteur de données.
-. Cliquez sur *Configuration avancée* pour ajouter des champs de configuration supplémentaires. (Tous les collecteurs de données ne nécessitent pas une configuration avancée.)
+. Saisissez un nom pour le collecteur de données.
+. Cliquez sur *Configuration avancée* pour ajouter des champs de configuration supplémentaires.  (Tous les collecteurs de données ne nécessitent pas de configuration avancée.)
 . Cliquez sur *Tester la configuration* pour vérifier que le collecteur de données est correctement configuré.
-. Cliquez sur *Ajouter un collecteur* pour enregistrer la configuration et ajouter le collecteur de données à votre locataire Data Infrastructure Insights.
+. Cliquez sur *Ajouter un collecteur* pour enregistrer la configuration et ajouter le collecteur de données à votre locataire Data Infrastructure Insights .
 
 
-Il peut prendre jusqu'à deux périodes d'interrogation avant que les données du service soient affichées dans les tableaux de bord ou disponibles pour les requêtes.
+Il peut falloir jusqu'à deux périodes d'interrogation avant que les données du service soient affichées dans les tableaux de bord ou disponibles pour l'interrogation.
 
 * 1er sondage d'inventaire : immédiatement
-* 1er sondage de données sur les performances pour établir une ligne de base : immédiatement après l'inventaire des stocks
-* 2e sondage de performance : dans les 15 secondes après la fin du 1er sondage de performance
+* 1er sondage sur les données de performance pour établir une base de référence : immédiatement après le sondage d'inventaire
+* 2e sondage de performance : dans les 15 secondes suivant la fin du 1er sondage de performance
 
 
-L'interrogation se poursuit ensuite en fonction des intervalles d'inventaire et d'interrogation des performances configurés.
+L'interrogation se poursuit ensuite en fonction des intervalles d'interrogation d'inventaire et de performances configurés.

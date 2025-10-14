@@ -1,64 +1,64 @@
 ---
 sidebar: sidebar 
 permalink: task_export_query_results.html 
-summary: 'Comment exporter les résultats d"une requête dans un fichier .csv' 
+summary: 'Comment exporter les résultats d"une requête vers un fichier .csv' 
 keywords: query, queries, export, csv 
 ---
-= Exportation des résultats de la requête dans un fichier .CSV
+= Exportation des résultats de la requête vers un fichier .CSV
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Vous pouvez exporter les résultats de n'importe quelle requête dans un fichier .CSV, qui vous permettra d'analyser les données ou de les importer dans une autre application.
+Vous pouvez exporter les résultats de n'importe quelle requête vers un fichier .CSV, ce qui vous permettra d'analyser les données ou de les importer dans une autre application.
 
 .Étapes
 . Connectez-vous à Data Infrastructure Insights.
-. Cliquez sur *requêtes* et sélectionnez *Afficher toutes les requêtes*.
+. Cliquez sur *Requêtes* et sélectionnez *Afficher toutes les requêtes*.
 +
-La page requêtes s'affiche.
+La page Requêtes s'affiche.
 
 . Cliquez sur une requête.
-. Cliquez image:ExportButton.png["Bouton Exporter"] sur pour exporter les résultats de la requête vers un fichier .CSV.
+. Cliquezimage:ExportButton.png["Bouton Exporter"] pour exporter les résultats de la requête vers un fichier .CSV.
 
 
 
-NOTE: L'exportation au format .CSV est également disponible dans le menu « trois points » des widgets de tableau de bord, ainsi que dans la plupart des tables de pages d'accueil.
+NOTE: L'exportation vers .CSV est également disponible dans le menu « trois points » des widgets de tableau de bord ainsi que dans la plupart des tableaux de page de destination.
 
 
 
 == Exportation asynchrone
 
-L'exportation de données au format .CSV peut prendre de quelques secondes à plusieurs heures, selon la quantité de données à exporter. Data Infrastructure Insights exporte ces données de manière asynchrone, vous permettant ainsi de continuer à travailler pendant la compilation du fichier .CSV.
+L'exportation de données au format .CSV peut prendre de quelques secondes à plusieurs heures, selon la quantité de données à exporter.  Data Infrastructure Insights exporte ces données de manière asynchrone, ce qui vous permet de continuer à travailler pendant la compilation du fichier .CSV.
 
 Affichez et téléchargez vos exportations .CSV en sélectionnant l'icône « Cloche » dans la barre d'outils en haut à droite.
 
 image:csv_export_async.png["icône de cloche avec liste d'exportations .csv prêtes à être téléchargées, largeur = 400"]
 
-Les données exportées reflètent le filtrage, les colonnes et les noms de colonne affichés.
+Les données exportées refléteront le filtrage actuel, les colonnes et les noms de colonnes affichés.
 
 
 
 == Virgules dans les noms d'actifs
 
-Remarque : lorsqu'une virgule apparaît dans le nom d'un bien, l'exportation enferme le nom dans les guillemets, en préservant le nom du bien et le format .csv approprié.
+Remarque : lorsqu'une virgule apparaît dans le nom d'un actif, l'exportation place le nom entre guillemets, préservant ainsi le nom de l'actif et le format .csv approprié.
 
 
 
 == Format de l'heure ou pas format de l'heure ?
 
-Lors de l'ouverture d'un fichier .CSV exporté avec Excel, si vous avez un nom d'objet ou un autre champ au format NN:NN (deux chiffres suivis d'un deux-points suivi de deux autres chiffres), Excel interprète parfois ce nom comme un format d'heure, au lieu du format texte. Cela peut entraîner l'affichage dans Excel de valeurs incorrectes dans ces colonnes. Par exemple, un objet nommé "81:45" s'affichera dans Excel comme "81:45:00".
+Lors de l'ouverture d'un fichier .CSV exporté avec Excel, si vous avez un nom d'objet ou un autre champ au format NN:NN (deux chiffres suivis de deux points suivis de deux autres chiffres), Excel interprétera parfois ce nom comme un format d'heure, au lieu d'un format de texte.  Cela peut entraîner l’affichage par Excel de valeurs incorrectes dans ces colonnes.  Par exemple, un objet nommé « 81:45 » s'afficherait dans Excel sous la forme « 81:45:00 ».
 
-Pour contourner ce problème, importez le fichier .CSV dans Excel en procédant comme suit :
+Pour contourner ce problème, importez le fichier .CSV dans Excel en suivant les étapes suivantes :
 
 . Ouvrez une nouvelle feuille dans Excel.
-. Dans l'onglet « données », choisissez « à partir du texte ».
-. Localisez le fichier .CSV souhaité et cliquez sur Importer.
-. Dans l'assistant d'importation, choisissez "délimité" et cliquez sur Suivant.
-. Choisissez « virgule » pour le délimiteur et cliquez sur Suivant.
-. Sélectionnez les colonnes souhaitées et choisissez "texte" pour le format de données de la colonne.
+. Dans l'onglet « Données », choisissez « À partir du texte ».
+. Localisez le fichier .CSV souhaité et cliquez sur « Importer ».
+. Dans l’assistant d’importation, choisissez « Délimité » et cliquez sur Suivant.
+. Choisissez « Virgule » comme délimiteur et cliquez sur Suivant.
+. Sélectionnez les colonnes souhaitées et choisissez « Texte » pour le format des données de la colonne.
 . Cliquez sur Terminer.
 +
-Vos objets doivent s'afficher dans Excel au format approprié.
+Vos objets doivent s’afficher dans Excel au format approprié.
 
 

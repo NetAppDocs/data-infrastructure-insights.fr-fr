@@ -2,66 +2,66 @@
 sidebar: sidebar 
 permalink: concept_high_consuming_workloads.html 
 keywords: insight, greedy, degraded, bully, victim, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: 'Ces informations vous permettent d"examiner l"impact des ressources sur les autres ressources de votre locataire.' 
+summary: Les informations vous donnent un aperçu de l’impact des ressources sur les autres ressources de votre locataire. 
 ---
-= Informations exploitables : workloads consommateurs
+= Aperçu : Charges de travail à forte consommation
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Les charges de travail à fort impact peuvent réduire les performances d'autres workloads d'une ressource partagée. Les informations sur l'infrastructure de données fournissent des outils qui vous aident à étudier la saturation des ressources et l'impact sur votre locataire.
+Les charges de travail à fort impact peuvent réduire les performances d’autres charges de travail dans une ressource partagée.  Data Infrastructure Insights fournit des outils pour vous aider à étudier la saturation des ressources et son impact sur votre locataire.
 
 
 
 === Terminologie
 
-Lorsqu'on parle de l'impact sur la charge de travail ou les ressources, les définitions suivantes sont utiles.
+Lorsqu’on parle de charge de travail ou d’impact sur les ressources, les définitions suivantes sont utiles.
 
-Une ressource *influente* ou _avide_ est une ressource qui cause un impact négatif sur une autre ressource. Par exemple, un volume dont les IOPS sont très élevées peut entraîner une augmentation de la latence dans d'autres volumes (ressources _affectées_ ou _dégradées_). Les ressources impactantes et affectées sont des « pairs » qui utilisent la même ressource partagée, par exemple un pool de stockage ou un volume.
+Une ressource *Impact* ou _Gourmande_ est une ressource qui provoque un impact négatif sur une autre ressource.  Par exemple, un volume connaissant des IOPS très élevées peut entraîner une latence accrue dans d'autres volumes (c'est-à-dire des ressources _impactées_ ou _dégradées_).  Les ressources impactées et impactées sont des « pairs » qui utilisent la même ressource partagée, par exemple, un pool de stockage ou un volume.
 
-Une charge de travail * très coûteuse* est une charge de travail actuellement identifiée comme ayant un impact sur les autres ressources du pool de stockage partagé. Ces charges de travail sont exécutées sur des IOPS plus élevées, ce qui réduit les IOPS dans les charges de travail affectées. Dans les informations sur l'infrastructure de données, elles sont identifiées comme *charges de travail exigeantes*.
+Une *charge de travail à forte consommation* est une charge de travail actuellement identifiée comme ayant un impact sur d'autres ressources du pool de stockage partagé.  Ces charges de travail génèrent des IOPS plus élevées, réduisant ainsi les IOPS dans les charges de travail impactées.  Dans Data Infrastructure Insights, celles-ci sont identifiées comme des *charges de travail exigeantes*.
 
-Une * charge de travail * affectée est une charge de travail affectée par une charge de travail élevée dans le pool de stockage partagé. Ces charges de travail rencontrent un nombre réduit d'IOPS et/ou une latence plus élevée en raison des charges de travail exigeantes.
+Une *charge de travail impactée* est une charge de travail affectée par une charge de travail à forte consommation dans le pool de stockage partagé.  Ces charges de travail connaissent une réduction des IOPS et/ou une latence plus élevée, causées par les charges de travail exigeantes.
 
-*La saturation des ressources partagées* est le rapport entre les IOPS impactantes et _baseline_.
+*La saturation des ressources partagées* est le rapport entre les IOPS impactées et la _ligne de base_.
 
-*Baseline* est défini comme le point de données maximum rapporté pour chaque charge de travail dans l'heure précédant immédiatement la saturation détectée.
+*La ligne de base* est définie comme le point de données maximal signalé pour chaque charge de travail dans l'heure précédant immédiatement la saturation détectée.
 
-Un *conflit* survient lorsque les IOPS sont déterminées à affecter d'autres ressources ou charges de travail dans le pool de stockage partagé.
+Une *Contention* se produit lorsque des IOPS sont considérées comme affectant d'autres ressources ou charges de travail dans le pool de stockage partagé.
 
 
 
-=== Les workloads consommateurs
+=== Charges de travail à forte consommation
 
-Toutes les charges de travail très consommatrices détectées par Data Infrastructure Insights sont indiquées dans le _Shared Resources sous stress_ Insight. Accédez à *observabilité > Infrastructure Insights* pour afficher ces informations.
+Toutes les charges de travail à forte consommation détectées par Data Infrastructure Insights sont affichées dans l'aperçu _Ressources partagées sous stress_.  Accédez à *Observabilité > Informations sur l’infrastructure* pour afficher ces informations.
 
-image:Impacts_Workloads_Menu.png["Partage les ressources"]
+image:Impacts_Workloads_Menu.png["Partage des ressources"]
 
-Cliquez sur une charge de travail pour afficher la page de détails correspondante. Le graphique du haut indique l'activité sur la ressource partagée (par exemple, un pool de stockage) sur laquelle le conflit se produit.
+Cliquez sur une charge de travail pour afficher la page de détails correspondante.  Le graphique supérieur montre l’activité sur la ressource partagée (par exemple, un pool de stockage) sur laquelle la contention se produit.
 
 image:Insights_Shared_Resource_Contention_Chart.png["Graphique montrant l'activité sur la ressource partagée"]
 
-Voici deux graphiques illustrant les charges de travail exigeantes et les charges de travail affectées par ces charges de travail exigeantes.
+Ci-dessous se trouvent deux graphiques montrant les charges de travail exigeantes et les charges de travail qui sont affectées par ces charges de travail exigeantes.
 
-image:Insights_Demanding_Workload_Chart.png["Tableau des charges de travail exigeantes"] image:Insights_Impacted_Workload_Chart.png["Graphique des charges de travail impactées"]
+image:Insights_Demanding_Workload_Chart.png["Tableau de charge de travail exigeant"] image:Insights_Impacted_Workload_Chart.png["Tableau de charge de travail impactée"]
 
 
 
 === Que dois-je faire pour résoudre la saturation ?
 
-Vous pouvez prendre plusieurs mesures pour réduire ou éliminer le risque de saturation de votre locataire. Voici quelques choses que vous pouvez essayer.
+Il existe un certain nombre de mesures que vous pouvez prendre pour réduire ou éliminer le risque de saturation de votre locataire.  Voici quelques choses que vous pouvez essayer.
 
-* Grands consommateurs d'IOPS
+* Déplacer les consommateurs à IOPS élevés
 +
-Déplacez les charges de travail « gourmandes » vers des pools de stockage moins saturés. Il est recommandé d'évaluer le niveau et la capacité de ces pools avant de déplacer les charges de travail, afin d'éviter les coûts inutiles ou les contentions supplémentaires.
+Déplacez les charges de travail « gourmandes » vers des pools de stockage moins saturés.  Il est recommandé d’évaluer le niveau et la capacité de ces pools avant de déplacer les charges de travail, afin d’éviter des coûts inutiles ou des conflits supplémentaires.
 
-* Implémentation d'une règle de qualité de service (QoS
+* Mettre en œuvre une politique de qualité de service (QoS)
 +
-L'implémentation d'une politique de QoS par charge de travail pour garantir qu'un nombre suffisant de ressources disponibles permettra de réduire la saturation sur le pool de stockage. Il s'agit d'une solution à long terme.
+La mise en œuvre d’une politique QoS par charge de travail pour garantir que suffisamment de ressources libres sont disponibles atténuera la saturation du pool de stockage.  C'est une solution à long terme.
 
-* Ajoutez des ressources supplémentaires
+* Ajouter des ressources supplémentaires
 +
-Si la ressource partagée (par exemple, Storage Pool) a atteint le point de saturation IOPS, l'ajout de disques plus ou plus rapides au pool garantit que suffisamment de ressources disponibles pour réduire la saturation.
+Si la ressource partagée (par exemple, le pool de stockage) a atteint le point de saturation IOPS, l'ajout de disques plus nombreux ou plus rapides au pool garantira suffisamment de ressources libres disponibles pour atténuer la saturation.
 
 

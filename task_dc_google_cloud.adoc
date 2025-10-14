@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_google_cloud.html 
-summary: Configurez le collecteur de données Google Compute 
+summary: Configurer le collecteur de données Google Compute 
 keywords: data collector, queries, create 
 ---
 = Collecteur de données NetApp Google Compute
@@ -10,15 +10,15 @@ keywords: data collector, queries, create
 
 
 [role="lead"]
-Ce collecteur de données prend en charge l'inventaire et la collecte de performances à partir des configurations de plateforme cloud Google Compute. Ce collecteur s'efforcera de découvrir toutes les ressources de calcul de tous les projets au sein d'une seule organisation Google. Si vous souhaitez découvrir plusieurs entreprises Google à l'aide de Data Infrastructure Insights, vous pouvez déployer un collecteur Data Infrastructure Insights par entreprise.
+Ce collecteur de données prend en charge la collecte d'inventaire et de performances à partir des configurations de la plate-forme cloud Google Compute.  Ce collecteur cherchera à découvrir toutes les ressources de calcul au sein de tous les projets au sein d'une organisation Google.  Si vous souhaitez découvrir plusieurs organisations Google avec Data Infrastructure Insights, vous devrez déployer un collecteur Data Infrastructure Insights par organisation.
 
 
 
-== Exigences de compte de service
+== Exigences relatives au compte de service
 
-* Vous devez créer un compte de service en suivant les instructions de la section link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Création/gestion de comptes de service"]. Ce compte de service est identifié par un ID unique, appelé _ClientID_, qui sera utilisé comme nom d'utilisateur.
-* En outre, créez une clé de compte de service en suivant les instructions de la section link:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["Création/gestion des clés de compte de service"]. Cette clé peut être téléchargée en tant que fichier json dont le contenu sera utilisé comme mot de passe.
-* Le compte de service doit être étendu pour _Compute.readonly_, _monitoring.read_ et _cloud-Platform_.
+* Vous devez créer un compte de service en suivant les instructions delink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Création/gestion des comptes de service"] .  Ce compte de service est identifié par un identifiant unique, appelé _clientId_, qui sera utilisé comme nom d'utilisateur.
+* De plus, créez une clé de compte de service en suivant les instructions delink:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["Création/gestion des clés de compte de service"] .  Cette clé peut être téléchargée sous forme de fichier json, dont le contenu sera utilisé comme mot de passe.
+* Le compte de service doit être limité à _compute.readonly_, _monitoring.read_ et _cloud-platform_.
 
 
 
@@ -30,16 +30,16 @@ Ce collecteur de données prend en charge l'inventaire et la collecte de perform
 | Champ | Description 
 
 
-| ID d'organisation | ID d'organisation que vous souhaitez découvrir avec ce collecteur. Ce champ est obligatoire si votre compte de service peut afficher plusieurs organisations 
+| ID de l'organisation | L'ID de l'organisation que vous souhaitez découvrir avec ce collecteur.  Ce champ est obligatoire si votre compte de service peut voir plusieurs organisations 
 
 
-| Choisissez exclure ou inclure pour filtrer les projets GCP par ID | Vous souhaitez limiter les ressources des projets qui sont intégrées aux informations Data Infrastructure. 
+| Choisissez « Exclure » ou « Inclure » pour filtrer les projets GCP par identifiants | Si vous souhaitez limiter les ressources des projets importées dans Data Infrastructure Insights. 
 
 
-| ID de projet | La liste des ID de projet que vous souhaitez filtrer ou retirer de la découverte, en fonction de la valeur de la valeur choisir « exclure ».... La liste par défaut est vide 
+| ID de projet | La liste des ID de projet que vous souhaitez filtrer ou exclure de la découverte, en fonction de la valeur « Choisir « Exclure ».... ».  La liste par défaut est vide 
 
 
-| ID client | ID client pour la configuration Google Cloud Platform 
+| ID client | ID client pour la configuration de Google Cloud Platform 
 
 
 | Copiez et collez le contenu de votre fichier d'informations d'identification Google ici | Copiez vos identifiants Google pour le compte Cloud Platform dans ce champ 
@@ -53,19 +53,19 @@ Ce collecteur de données prend en charge l'inventaire et la collecte de perform
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 minutes 
+| Intervalle d'interrogation d'inventaire (min) | La valeur par défaut est de 60 minutes 
 
 
-| Choisissez 'exclure' ou 'inclure' pour appliquer au filtre des VM par étiquettes | Indiquez s'il faut inclure ou exclure les VM par étiquettes lors de la collecte de données. Si 'inclure' est sélectionné, le champ clé d'étiquette ne peut pas être vide. 
+| Choisissez « Exclure » ou « Inclure » pour appliquer le filtre aux machines virtuelles par étiquettes | Spécifiez s'il faut inclure ou exclure les machines virtuelles par étiquettes lors de la collecte de données.  Si « Inclure » est sélectionné, le champ Clé d'étiquette ne peut pas être vide. 
 
 
-| Étiqueter les clés et les valeurs sur lesquelles filtrer les VM | Cliquez sur *+ Filter Label* pour choisir les VM (et les disques associés) à inclure/exclure en filtrant les clés et les valeurs correspondant aux clés et aux valeurs des étiquettes de la VM. La clé d'étiquette est requise, la valeur d'étiquette est facultative. Lorsque la valeur d'étiquette est vide, la machine virtuelle est filtrée tant qu'elle correspond à la clé d'étiquette. 
+| Clés et valeurs d'étiquettes sur lesquelles filtrer les machines virtuelles | Cliquez sur *+ Filtrer l'étiquette* pour choisir les machines virtuelles (et les disques associés) à inclure/exclure en filtrant les clés et les valeurs qui correspondent aux clés et aux valeurs des étiquettes sur la machine virtuelle.  La clé d'étiquette est obligatoire, la valeur d'étiquette est facultative.  Lorsque la valeur de l'étiquette est vide, la machine virtuelle est filtrée tant qu'elle correspond à la clé de l'étiquette. 
 
 
-| Intervalle d'interrogation des performances (s) | La valeur par défaut est 1800 secondes 
+| Intervalle d'interrogation des performances (sec) | La valeur par défaut est de 1800 secondes 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

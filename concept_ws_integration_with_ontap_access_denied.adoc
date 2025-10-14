@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_ws_integration_with_ontap_access_denied.html 
-summary: 'Workload Security s"intègre à ONTAP pour recevoir les événements de refus d"accès et fournir une couche d"analytique et de réponses automatique supplémentaire.' 
+summary: 'Workload Security s"intègre à ONTAP pour recevoir les événements d"accès refusé et fournir une couche d"analyse supplémentaire et de réponses automatiques.' 
 keywords: ransomware, ARP, Protection, Security, access 
 ---
-= Intégration avec l'accès ONTAP refusée
+= Intégration avec ONTAP Accès refusé
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,16 +14,16 @@ keywords: ransomware, ARP, Protection, Security, access
 
 
 [role="lead"]
-La fonction ONTAP de refus d'accès utilise l'analyse de la charge de travail dans les environnements NAS (NFS et SMB) pour détecter de manière proactive les opérations de fichiers qui ont échoué et pour signaler ces échecs (c'est-à-dire qu'un utilisateur tente d'effectuer une opération pour laquelle il n'a pas l'autorisation nécessaire). Ces notifications d'échec d'opération de fichier, en particulier en cas de défaillances liées à la sécurité, aideront encore davantage à bloquer les attaques internes dès les premiers stades.
+La fonctionnalité ONTAP Access Denied utilise l'analyse de la charge de travail dans les environnements NAS (NFS et SMB) pour détecter et avertir de manière proactive des opérations de fichiers ayant échoué (c'est-à-dire un utilisateur essayant d'effectuer une opération pour laquelle il n'a pas l'autorisation).  Ces notifications d'échec d'opération de fichier, en particulier dans les cas de défaillances liées à la sécurité, contribueront davantage à bloquer les attaques internes à un stade précoce.
 
-Informations sur l'infrastructure de données la sécurité des workloads s'intègre à ONTAP pour recevoir des événements de refus d'accès et fournir une couche supplémentaire d'analytique et de réponse automatique.
+Data Infrastructure Insights Workload Security s'intègre à ONTAP pour recevoir les événements d'accès refusé et fournir une couche d'analyse et de réponse automatique supplémentaire.
 
 
 
 == Prérequis
 
-* Version minimale de ONTAP : 9.13.0.
-* Un administrateur de Workload Security doit activer la fonctionnalité accès refusé lors de l'ajout d'un nouveau collecteur ou de la modification d'un collecteur existant, en cochant la case _Monitor Access Denied Events_ sous Advanced Configuration.
+* Version minimale ONTAP : 9.13.0.
+* Un administrateur de sécurité de la charge de travail doit activer la fonctionnalité Accès refusé lors de l'ajout d'un nouveau collecteur ou de la modification d'un collecteur existant, en sélectionnant la case à cocher _Surveiller les événements d'accès refusé_ sous Configuration avancée.
 
 
 image:WS_Access_Denied_Enable_in_Collector.png["Activer l'accès refusé dans la configuration avancée du collecteur ONTAP"]
@@ -32,22 +32,22 @@ image:WS_Access_Denied_Enable_in_Collector.png["Activer l'accès refusé dans la
 
 == Autorisations utilisateur requises
 
-Si le Data Collector est ajouté à l'aide des informations d'identification d'administration du cluster, aucune nouvelle autorisation n'est nécessaire.
+Si le collecteur de données est ajouté à l’aide des informations d’identification d’administration du cluster, aucune nouvelle autorisation n’est nécessaire.
 
-Si le collecteur est ajouté à l'aide d'un utilisateur personnalisé (par exemple, _csuser_) avec les autorisations données à l'utilisateur, suivez les étapes ci-dessous pour donner à Workload Security l'autorisation nécessaire pour s'inscrire aux événements d'accès refusé avec ONTAP.
+Si le collecteur est ajouté à l'aide d'un utilisateur personnalisé (par exemple, _csuser_) avec des autorisations accordées à l'utilisateur, suivez les étapes ci-dessous pour donner à Workload Security l'autorisation nécessaire pour s'inscrire aux événements d'accès refusé avec ONTAP.
 
-Pour les ccsuser avec des informations d'identification _cluster_, exécutez les commandes suivantes à partir de la ligne de commande ONTAP. Notez que cette autorisation existe peut-être déjà.
+Pour csuser avec les informations d’identification _cluster_, exécutez les commandes suivantes à partir de la ligne de commande ONTAP .  Notez que cette autorisation existe peut-être déjà.
 
  security login role create -role csrole -cmddirname "vserver fpolicy" -access all
-Pour les csuser avec _SVM_ credentials, executez les commandes suivantes depuis la ligne de commande ONTAP. Notez que cette autorisation existe peut-être déjà.
+Pour csuser avec les informations d’identification _SVM_, exécutez les commandes suivantes à partir de la ligne de commande ONTAP .  Notez que cette autorisation existe peut-être déjà.
 
  security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
-En savoir plus sur la configuration d'autres link:task_add_collector_svm.html["Autorisations ONTAP"].
+En savoir plus sur la configuration d'autreslink:task_add_collector_svm.html["Autorisations ONTAP"] .
 
 
 
 == Événements d'accès refusé
 
-Une fois les événements acquis à partir du système ONTAP, la page analyse de sécurité de la charge de travail affiche les événements accès refusé. En plus des informations affichées, vous pouvez afficher les autorisations utilisateur manquantes pour une opération particulière en ajoutant la colonne _activité_ souhaitée à la table à partir de l'icône en forme d'engrenage.
+Une fois les événements acquis à partir du système ONTAP , la page Forensics de sécurité de la charge de travail affichera les événements d'accès refusé.  En plus des informations affichées, vous pouvez afficher les autorisations utilisateur manquantes pour une opération particulière en ajoutant la colonne _Activité souhaitée_ au tableau à partir de l'icône d'engrenage.
 
-image:WS_Access_Denied_Example_Event_1.png["Exemple d'événement accès refusé"]
+image:WS_Access_Denied_Example_Event_1.png["Exemple d'événement d'accès refusé"]

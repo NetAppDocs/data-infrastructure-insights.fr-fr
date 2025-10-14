@@ -10,44 +10,44 @@ summary: Configuration du collecteur de données Memcached
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour collecter des mesures à partir de Memcached.
+Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Memcached.
 
 
 
 == Installation
 
-. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Sélectionnez Memcached.
+. Depuis *Observabilité > Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Memcached.
 +
-Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+Sélectionnez le système d’exploitation ou la plate-forme sur laquelle l’agent Telegraf est installé.
 
-. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer les link:task_config_telegraf_agent.html["Installation de l'agent"]instructions.
-. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
-. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
-
-
-image:MemcachedDCConfigWindows.png["Configuration mise en mémoire cache"]
+. Si vous n'avez pas encore installé d'agent pour la collecte, ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer lelink:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d’accès de l’agent à utiliser avec ce collecteur de données.  Vous pouvez ajouter une nouvelle clé d'accès d'agent en cliquant sur le bouton *+ Clé d'accès d'agent*.  Meilleure pratique : utilisez une clé d’accès d’agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple par système d’exploitation/plateforme.
+. Suivez les étapes de configuration pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.
 
 
+image:MemcachedDCConfigWindows.png["Configuration de Memcached"]
 
-== Configuration
 
-Vous trouverez des informations dans le link:https://github.com/memcached/memcached/wiki["Wiki Memcached"].
+
+== Installation
+
+Des informations peuvent être trouvées dans lelink:https://github.com/memcached/memcached/wiki["Wiki Memcached"] .
 
 
 
 == Objets et compteurs
 
-Les objets suivants et leurs compteurs sont collectés :
+Les objets suivants et leurs compteurs sont collectés :
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| Objet : | Identifiants : | Attributs : | Points de données : 
+| Objet: | Identifiants : | Attributs: | Points de données : 
 
 
-| Mise en mémoire cache | Serveur d'espace de noms | Nom du nœud IP du nœud | Acceptation des connexions traitées demandes d'authentification échouées octets utilisés octets lus (par seconde) octets écrits (par seconde) cas Banval cas Hits cas échecs rinçage cas demandes (par seconde) get Reqs (par seconde) set Reqs (par seconde) Touch Reqs (par seconde) rendements de connexion (par seconde) Structures de connexion Open Connections éléments stockés actuels demandes décr Hits (par seconde) demandes décr Hits (par seconde) demandes de suppression Hits (par seconde) demandes de suppression d'échecs (par seconde) éléments expulsés nombre d'expulsions valides nombre d'éléments expirés obtenir Hits (par seconde) échecs (par seconde) Hachage en octets utilisés le hachage est en train d'étendre le Hash Power Level Incr Requests (par seconde) demandes d'incr Hits (par seconde) nombre max octets d'écoute du serveur nombre de threads de travail récupérés Num désactivé nombre total de connexions ouvertes nombre total d'éléments stockés Touch Hits Touch Touch échecs du serveur Uptime 
+| Memcached | Serveur d'espace de noms | IP du nœud Nom du nœud | Acceptation des connexions Requêtes d'authentification traitées Authentifications échouées Octets utilisés Octets lus (par seconde) Octets écrits (par seconde) CAS Badval Succès CAS Échecs CAS Demandes de vidage (par seconde) Demandes d'obtention (par seconde) Demandes de définition (par seconde) Demandes tactiles (par seconde) Rendements de connexion (par seconde) Structures de connexion Connexions ouvertes Éléments stockés actuels Demandes de diminution Succès (par seconde) Demandes de diminution Échecs (par seconde) Demandes de suppression Succès (par seconde) Demandes de suppression Échecs (par seconde) Éléments expulsés Expulsions valides Éléments expirés Obtenir Succès (par seconde) Obtenir Échecs (par seconde) Octets de hachage utilisés Le hachage est en expansion Niveau de puissance de hachage Augmentation des requêtes Succès (par seconde) Augmentation des requêtes Échecs (par seconde) Serveur Nombre max. d'octets Écoute désactivée Nombre de threads de travail récupérés Nombre total de connexions ouvertes Nombre total d'éléments stockés Touch Succès Touch Échecs Temps de disponibilité du serveur 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur la link:concept_requesting_support.html["Assistance"] page.
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page.

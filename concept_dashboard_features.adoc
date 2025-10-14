@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboard_features.html 
-summary: Concepts et fonctionnalités du tableau de bord. 
+summary: Fonctionnalités et concepts du tableau de bord. 
 keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll up, grouping, aggregate, aggregation, filter, axis, group by, expressions, timeseries, exact match, theme, visibility, formatting, conditional, hide, collapse, expand 
 ---
 = Fonctionnalités du tableau de bord
@@ -14,187 +14,187 @@ keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll 
 
 
 [role="lead"]
-Les tableaux de bord et les widgets offrent une grande flexibilité dans le mode d'affichage des données. Voici quelques concepts qui vous aideront à tirer le meilleur parti de vos tableaux de bord personnalisés.
+Les tableaux de bord et les widgets offrent une grande flexibilité dans la façon dont les données sont affichées.  Voici quelques concepts pour vous aider à tirer le meilleur parti de vos tableaux de bord personnalisés.
 
-sommaire :[]
+toc:[]
 
 
 
-== Dénomination des widgets
+== Nommage des widgets
 
-Les widgets sont automatiquement nommés en fonction de l'objet, de la mesure ou de l'attribut sélectionné pour la première requête de widget. Si vous choisissez également un regroupement pour le widget, les attributs « Grouper par » sont inclus dans la dénomination automatique (méthode d'agrégation et métrique).
+Les widgets sont automatiquement nommés en fonction de l'objet, de la métrique ou de l'attribut sélectionné pour la première requête de widget.  Si vous choisissez également un regroupement pour le widget, les attributs « Grouper par » sont inclus dans la dénomination automatique (méthode d'agrégation et métrique).
 
-image:WidgetNamingExample-C.png["Exemple de dénomination des widgets"]
+image:WidgetNamingExample-C.png["Exemple de nommage de widget"]
 
 La sélection d'un nouvel objet ou d'un attribut de regroupement met à jour le nom automatique.
 
-Si vous ne souhaitez pas utiliser le nom automatique du widget, vous pouvez simplement entrer un nouveau nom.
+Si vous ne souhaitez pas utiliser le nom automatique du widget, vous pouvez simplement saisir un nouveau nom.
 
 
 
-== Positionnement et taille des widgets
+== Placement et taille des widgets
 
-Tous les widgets de tableau de bord peuvent être positionnés et dimensionnés en fonction de vos besoins pour chaque tableau de bord spécifique.
-
-
-
-== Duplication d'un widget
-
-En mode Tableau de bord, cliquez sur le menu du widget et sélectionnez *Dupliquer*. L'éditeur de widget est lancé, rempli avec la configuration du widget original et avec un suffixe "copie" dans le nom du widget. Vous pouvez facilement apporter les modifications nécessaires et enregistrer le nouveau widget. Le widget sera placé au bas de votre tableau de bord et vous pouvez le positionner selon les besoins. N'oubliez pas d'enregistrer votre tableau de bord lorsque toutes les modifications sont terminées.
+Tous les widgets du tableau de bord peuvent être positionnés et dimensionnés en fonction de vos besoins pour chaque tableau de bord particulier.
 
 
 
-== Affichage des légendes du widget
+== Dupliquer un widget
 
-La plupart des widgets des tableaux de bord peuvent être affichés avec ou sans légendes. Les légendes des widgets peuvent être activées ou désactivées sur un tableau de bord à l'aide de l'une des méthodes suivantes :
-
-* Lorsque vous affichez le tableau de bord, cliquez sur le bouton *Options* du widget et sélectionnez *Afficher légendes* dans le menu.
-
-
-Au fur et à mesure que les données affichées dans le widget changent, la légende de ce widget est mise à jour dynamiquement.
-
-Lorsque des légendes sont affichées, si la page d'accueil de la ressource indiquée par la légende peut être navigué vers, la légende s'affiche sous forme de lien vers cette page de ressources. Si la légende affiche « tous », cliquer sur le lien pour afficher une page de requête correspondant à la première requête dans le widget.
+En mode Édition du tableau de bord, cliquez sur le menu du widget et sélectionnez *Dupliquer*.  L'éditeur de widgets est lancé, pré-rempli avec la configuration du widget d'origine et avec un suffixe « copie » dans le nom du widget.  Vous pouvez facilement apporter les modifications nécessaires et enregistrer le nouveau widget.  Le widget sera placé en bas de votre tableau de bord et vous pourrez le positionner selon vos besoins.  N'oubliez pas de sauvegarder votre tableau de bord lorsque toutes les modifications sont terminées.
 
 
 
-== Transformation des mesures
+== Affichage des légendes des widgets
 
-Data Infrastructure Insights fournit différentes options de *transformation* pour certaines mesures dans des widgets (en particulier, les metrics appelés « personnalisés » ou les metrics d'intégration, telles que Kubernetes, les données avancées ONTAP, les plug-ins Telegraf, etc.), ce qui vous permet d'afficher les données de différentes manières. Lorsque vous ajoutez des mesures transformables à un widget, une liste déroulante vous propose les options de transformation suivantes :
+La plupart des widgets des tableaux de bord peuvent être affichés avec ou sans légendes.  Les légendes dans les widgets peuvent être activées ou désactivées sur un tableau de bord par l'une des méthodes suivantes :
 
-Aucune : les données sont affichées telles qu'elles sont, sans manipulation.
+* Lors de l'affichage du tableau de bord, cliquez sur le bouton *Options* du widget et sélectionnez *Afficher les légendes* dans le menu.
 
-Taux : valeur actuelle divisée par la plage horaire depuis l'observation précédente.
 
-Cumulatif : accumulation de la somme des valeurs précédentes et de la valeur actuelle.
+À mesure que les données affichées dans le widget changent, la légende de ce widget est mise à jour de manière dynamique.
 
-Delta : différence entre la valeur d'observation précédente et la valeur actuelle.
-
-Delta rate : valeur Delta divisée par la plage de temps depuis l'observation précédente.
-
-Taux cumulatif : valeur cumulée divisée par la plage horaire depuis l'observation précédente.
-
-Notez que la transformation des mesures ne modifie pas les données sous-jacentes, mais uniquement la façon dont elles sont affichées.
+Lorsque les légendes sont affichées, si la page de destination de l'actif indiqué par la légende est accessible, la légende s'affichera sous la forme d'un lien vers cette page d'actif.  Si la légende affiche « tous », cliquer sur le lien affichera une page de requête correspondant à la première requête du widget.
 
 
 
-== Requêtes et filtres du widget du tableau de bord
+== Transformer les métriques
+
+Data Infrastructure Insights fournit différentes options de *transformation* pour certaines métriques dans les widgets (en particulier, les métriques appelées « Personnalisées » ou métriques d'intégration, telles que celles de Kubernetes, ONTAP Advanced Data, des plugins Telegraf, etc.), vous permettant d'afficher les données de plusieurs manières.  Lorsque vous ajoutez des métriques transformables à un widget, une liste déroulante vous propose les choix de transformation suivants :
+
+Aucun : les données sont affichées telles quelles, sans aucune manipulation.
+
+Taux : Valeur actuelle divisée par la plage de temps depuis l'observation précédente.
+
+Cumulatif : L'accumulation de la somme des valeurs précédentes et de la valeur actuelle.
+
+Delta : La différence entre la valeur d'observation précédente et la valeur actuelle.
+
+Taux Delta : Valeur Delta divisée par la plage de temps depuis l'observation précédente.
+
+Taux cumulé : valeur cumulée divisée par la plage de temps depuis l'observation précédente.
+
+Notez que la transformation des métriques ne modifie pas les données sous-jacentes elles-mêmes, mais uniquement la manière dont ces données sont affichées.
+
+
+
+== Requêtes et filtres des widgets du tableau de bord
 
 
 
 === Requêtes
 
-La requête dans un widget de tableau de bord est un outil puissant de gestion de l'affichage de vos données. Voici quelques points à noter sur les requêtes de widget.
+La requête dans un widget de tableau de bord est un outil puissant pour gérer l'affichage de vos données.  Voici quelques éléments à noter sur les requêtes de widgets.
 
-Certains widgets peuvent avoir jusqu'à cinq requêtes. Chaque requête trace son propre ensemble de lignes ou de graphiques dans le widget. La configuration de l'agrégation, du regroupement, des résultats supérieurs/inférieurs, etc. Sur une requête n'affecte pas les autres requêtes du widget.
+Certains widgets peuvent avoir jusqu'à cinq requêtes.  Chaque requête tracera son propre ensemble de lignes ou de graphiques dans le widget.  La définition du cumul, du regroupement, des résultats supérieurs/inférieurs, etc. sur une requête n'affecte aucune autre requête pour le widget.
 
-Vous pouvez cliquer sur l'icône œil pour masquer temporairement une requête. L'affichage du widget est automatiquement mis à jour lorsque vous masquez ou affichez une requête. Cela vous permet de vérifier les données affichées pour les requêtes individuelles au fur et à mesure de la création de votre widget.
+Vous pouvez cliquer sur l’icône en forme d’œil pour masquer temporairement une requête.  L'affichage du widget se met à jour automatiquement lorsque vous masquez ou affichez une requête.  Cela vous permet de vérifier vos données affichées pour des requêtes individuelles lorsque vous créez votre widget.
 
-Les types de widget suivants peuvent avoir plusieurs requêtes :
+Les types de widgets suivants peuvent avoir plusieurs requêtes :
 
-* Graphique de zone
-* Graphique de zone empilée
-* Graphique en courbes
-* Graphique de spline
+* Graphique en aires
+* Graphique à aires empilées
+* Graphique linéaire
+* Graphique spline
 * Widget à valeur unique
 
 
-Les types de widget restants ne peuvent avoir qu'une seule requête :
+Les autres types de widgets ne peuvent avoir qu'une seule requête :
 
 * Tableau
 * Graphique à barres
-* Tracé de zone
-* Tracé de dispersion
+* Boîte à moustaches
+* Nuage de points
 
 
 
 
-=== Filtrage dans les requêtes widget du tableau de bord
+=== Filtrage dans les requêtes des widgets du tableau de bord
 
-Voici quelques choses que vous pouvez faire pour tirer le meilleur parti de vos filtres.
+Voici quelques mesures que vous pouvez prendre pour tirer le meilleur parti de vos filtres.
 
 
 
 ==== Filtrage de correspondance exacte
 
-Si vous placez une chaîne de filtre entre deux guillemets, Insight traite tout entre le premier et le dernier devis comme une correspondance exacte. Tous les caractères spéciaux ou opérateurs situés dans les guillemets seront traités comme des littéraux. Par exemple, le filtrage pour "*" renvoie des résultats qui sont un astérisque littéral ; l'astérisque ne sera pas traité comme un caractère générique dans ce cas. Les opérateurs ET, OU, et NON SERONT également traités comme des chaînes littérales lorsqu'ils sont entourés de guillemets doubles.
+Si vous placez une chaîne de filtre entre guillemets doubles, Insight traite tout ce qui se trouve entre le premier et le dernier guillemet comme une correspondance exacte.  Tous les caractères spéciaux ou opérateurs à l’intérieur des guillemets seront traités comme des littéraux.  Par exemple, le filtrage par « * » renverra des résultats qui sont un astérisque littéral ; l'astérisque ne sera pas traité comme un caractère générique dans ce cas.  Les opérateurs AND, OR et NOT seront également traités comme des chaînes littérales lorsqu'ils sont placés entre guillemets.
 
-Vous pouvez utiliser des filtres de correspondance exacte pour trouver des ressources spécifiques, par exemple nom d'hôte. Si vous voulez trouver uniquement le nom d'hôte « marketing » mais exclure « marketing01 », « marketing-boston », etc., il suffit de placer le nom « marketing » dans des guillemets doubles.
+Vous pouvez utiliser des filtres de correspondance exacte pour trouver des ressources spécifiques, par exemple le nom d'hôte.  Si vous souhaitez rechercher uniquement le nom d'hôte « marketing » mais exclure « marketing01 », « marketing-boston », etc., placez simplement le nom « marketing » entre guillemets.
 
 
 
 ==== Caractères génériques et expressions
 
-Lorsque vous filtrez des valeurs de texte ou de liste dans des requêtes ou des widgets de tableau de bord, lorsque vous commencez à taper, vous avez la possibilité de créer un *filtre générique* basé sur le texte en cours. Si vous sélectionnez cette option, tous les résultats correspondant à l'expression de caractère générique seront résélectionnés. Vous pouvez également créer *expressions* à l'aide DE NOT ou OU, ou sélectionner l'option "aucun" pour filtrer les valeurs nulles dans le champ.
+Lorsque vous filtrez des valeurs de texte ou de liste dans des requêtes ou des widgets de tableau de bord, lorsque vous commencez à saisir, vous avez la possibilité de créer un *filtre générique* basé sur le texte actuel.  La sélection de cette option renverra tous les résultats correspondant à l’expression générique.  Vous pouvez également créer des *expressions* en utilisant NOT ou OR, ou vous pouvez sélectionner l'option « Aucun » pour filtrer les valeurs nulles dans le champ.
 
 image:Type-Ahead-Example-ingest.png["Filtre générique"]
 
-Filtres basés sur des caractères génériques ou des expressions (par exemple NON, OU « aucun », etc.) s'affiche en bleu foncé dans le champ du filtre. Les éléments que vous sélectionnez directement dans la liste s'affichent en bleu clair.
+Les filtres basés sur des caractères génériques ou des expressions (par exemple NOT, OR, « Aucun », etc.) s'affichent en bleu foncé dans le champ de filtre.  Les éléments que vous sélectionnez directement dans la liste sont affichés en bleu clair.
 
 image:Type-Ahead-Example-Wildcard-DirectSelect.png["Résultats du filtre générique"]
 
-Notez que le filtrage des caractères génériques et des expressions fonctionne avec du texte ou des listes, mais pas avec des valeurs numériques, des dates ou des valeurs booléennes.
+Notez que le filtrage par caractères génériques et par expressions fonctionne avec du texte ou des listes, mais pas avec des nombres, des dates ou des booléens.
 
 
 
-==== Filtrage avancé du texte avec des suggestions contextuelles de type avance
+==== Filtrage de texte avancé avec suggestions contextuelles de saisie semi-automatique
 
-Le filtrage dans les requêtes de widget est _Contextual_ ; lorsque vous sélectionnez une valeur de filtre ou des valeurs pour un champ, les autres filtres pour cette requête affichent les valeurs pertinentes pour ce filtre. Par exemple, lors de la définition d'un filtre pour un objet spécifique _Name_, le champ à filtrer pour _Model_ affiche uniquement les valeurs pertinentes pour ce nom d'objet.
+Le filtrage dans les requêtes de widgets est _contextuel_ ; lorsque vous sélectionnez une ou plusieurs valeurs de filtre pour un champ, les autres filtres pour cette requête afficheront les valeurs pertinentes pour ce filtre.  Par exemple, lors de la définition d'un filtre pour un objet spécifique _Nom_, le champ à filtrer pour _Modèle_ affichera uniquement les valeurs pertinentes pour ce nom d'objet.
 
-Le filtrage contextuel s'applique également aux variables de page du tableau de bord (attributs de type texte ou annotations uniquement). Lorsque vous sélectionnez une valeur de fichier pour une variable, toutes les autres variables utilisant des objets associés n'afficheront que les valeurs de filtre possibles en fonction du contexte de ces variables associées.
+Le filtrage contextuel s'applique également aux variables de page du tableau de bord (attributs de type texte ou annotations uniquement).  Lorsque vous sélectionnez une valeur de filtre pour une variable, toutes les autres variables utilisant des objets associés afficheront uniquement les valeurs de filtre possibles en fonction du contexte de ces variables associées.
 
-Notez que seuls les filtres de texte affichent des suggestions contextuelles de type à l'avance. La date, Enum (liste), etc. N'affichera pas de suggestions de type à l'avance. Cela dit, vous pouvez _CAN_ définir un filtre dans un champ Enum (c.-à-d. liste) et avoir d'autres champs de texte à filtrer dans le contexte. Par exemple, la sélection d'une valeur dans un champ Enum comme Data Center, les autres filtres n'affichent que les modèles/noms dans ce centre de données), mais pas l'inverse.
+Notez que seuls les filtres de texte afficheront des suggestions contextuelles de saisie semi-automatique.  La date, l'énumération (liste), etc. n'afficheront pas les suggestions de saisie semi-automatique.  Cela dit, vous _pouvez_ définir un filtre sur un champ Enum (c'est-à-dire une liste) et faire en sorte que d'autres champs de texte soient filtrés dans le contexte.  Par exemple, en sélectionnant une valeur dans un champ Enum comme Centre de données, les autres filtres afficheront uniquement les modèles/noms de ce centre de données, mais pas l'inverse.
 
-La plage de temps sélectionnée fournit également un contexte pour les données affichées dans les filtres.
+La plage horaire sélectionnée fournira également un contexte pour les données affichées dans les filtres.
 
 
 
-==== Choix des unités de filtre
+==== Choix des unités de filtrage
 
-Lorsque vous saisissez une valeur dans un champ de filtre, vous pouvez sélectionner les unités dans lesquelles afficher les valeurs sur le graphique. Par exemple, vous pouvez filtrer la capacité brute et choisir d'afficher dans le Gio par défaut, ou sélectionner un autre format tel que Tio. Ceci est utile si vous disposez d'un certain nombre de graphiques sur votre tableau de bord affichant les valeurs en Tio et que vous souhaitez que tous vos graphiques affichent des valeurs cohérentes.
+Lorsque vous saisissez une valeur dans un champ de filtre, vous pouvez sélectionner les unités dans lesquelles afficher les valeurs sur le graphique.  Par exemple, vous pouvez filtrer sur la capacité brute et choisir d'afficher le Gio par défaut, ou sélectionner un autre format tel que Tio.  Ceci est utile si vous avez un certain nombre de graphiques sur votre tableau de bord affichant des valeurs en Tio et que vous souhaitez que tous vos graphiques affichent des valeurs cohérentes.
 
 image:Filter_Unit_Format.png["sélection d'unités dans un filtre"]
 
 
 
-==== Améliorations supplémentaires du filtrage
+==== Affinements de filtrage supplémentaires
 
 Les éléments suivants peuvent être utilisés pour affiner davantage vos filtres.
 
-* Un astérisque vous permet de rechercher tout. Par exemple :
+* Un astérisque vous permet de rechercher tout. Par exemple,
 +
 [listing]
 ----
 vol*rhel
 ----
 +
-affiche toutes les ressources commençant par "vol" et se terminant par "rhel".
+affiche toutes les ressources qui commencent par « vol » et se terminent par « rhel ».
 
-* Le point d'interrogation permet de rechercher un nombre spécifique de caractères. Par exemple :
+* Le point d'interrogation vous permet de rechercher un nombre spécifique de caractères. Par exemple,
 +
 [listing]
 ----
 BOS-PRD??-S12
 ----
 +
-Affiche _BOS-PRD12-S12_, _BOS-PRD13-S12_, etc.
+affiche _BOS-PRD12-S12_, _BOS-PRD13-S12_, etc.
 
-* L'opérateur OU vous permet de spécifier plusieurs entités. Par exemple :
+* L'opérateur OR vous permet de spécifier plusieurs entités. Par exemple,
 +
 [listing]
 ----
 FAS2240 OR CX600 OR FAS3270
 ----
 +
-identification des nombreux modèles de stockage
+trouve plusieurs modèles de stockage.
 
-* L'opérateur NOT permet d'exclure du texte des résultats de la recherche. Par exemple :
+* L'opérateur NOT vous permet d'exclure du texte des résultats de la recherche. Par exemple,
 +
 [listing]
 ----
 NOT EMC*
 ----
 +
-Trouve tout ce qui ne commence pas par « EMC ». Vous pouvez utiliser
+trouve tout ce qui ne commence pas par « EMC ».  Vous pouvez utiliser
 
 +
 [listing]
@@ -202,17 +202,17 @@ Trouve tout ce qui ne commence pas par « EMC ». Vous pouvez utiliser
 NOT *
 ----
 +
-pour afficher les champs ne contenant aucune valeur.
+pour afficher les champs qui ne contiennent aucune valeur.
 
 
 
 
 
-=== Identification des objets renvoyés par des requêtes et des filtres
+=== Identification des objets renvoyés par les requêtes et les filtres
 
-Les objets renvoyés par des requêtes et des filtres ressemblent à ceux affichés dans l'illustration suivante. Les objets avec des « balises » qui leur sont attribués sont des annotations, tandis que les objets sans balises sont des compteurs de performance ou des attributs d'objet.
+Les objets renvoyés par les requêtes et les filtres ressemblent à ceux présentés dans l’illustration suivante.  Les objets avec des « balises » qui leur sont attribuées sont des annotations tandis que les objets sans balises sont des compteurs de performances ou des attributs d'objet.
 
-image:ObjectsReturnedByFilters.png["Objets renvoyés par des filtres"]
+image:ObjectsReturnedByFilters.png["Objets renvoyés par les filtres"]
 
 
 
@@ -220,58 +220,58 @@ image:ObjectsReturnedByFilters.png["Objets renvoyés par des filtres"]
 
 
 
-=== Regroupement (reprise)
+=== Regroupement (enroulement)
 
-Les données affichées dans un widget sont regroupées (parfois appelées « cumulées ») à partir des points de données sous-jacents collectés lors de l'acquisition. Par exemple, si vous avez un widget graphique en lignes qui affiche les IOPS de stockage au fil du temps, il est possible que vous souhaitiez afficher une ligne distincte pour chacun de vos data centers, afin d'obtenir une comparaison rapide. Vous pouvez choisir de regrouper ces données de différentes manières :
+Les données affichées dans un widget sont regroupées (parfois appelées cumulées) à partir des points de données sous-jacents collectés lors de l'acquisition.  Par exemple, si vous disposez d'un widget de graphique linéaire affichant les IOPS de stockage au fil du temps, vous souhaiterez peut-être voir une ligne distincte pour chacun de vos centres de données, pour une comparaison rapide.  Vous pouvez choisir de regrouper ces données de plusieurs manières :
 
-* *Moyenne* : affiche chaque ligne comme la _moyenne_ des données sous-jacentes.
-* *Maximum* : affiche chaque ligne sous la forme _maximum_ des données sous-jacentes.
+* *Moyenne* : affiche chaque ligne comme la _moyenne_ des données sous-jacentes.
+* *Maximum* : affiche chaque ligne comme le _maximum_ des données sous-jacentes.
 * *Minimum* : affiche chaque ligne comme le _minimum_ des données sous-jacentes.
-* *Somme* : affiche chaque ligne sous la forme _sum_ des données sous-jacentes.
-* *Count* : affiche un _count_ d'objets qui ont des données déclarées dans la période spécifiée. Vous pouvez choisir la _fenêtre de temps entière_ déterminée par la plage de temps du tableau de bord.
+* *Somme* : affiche chaque ligne comme la _somme_ des données sous-jacentes.
+* *Count* : affiche un _compte_ d'objets ayant signalé des données dans le laps de temps spécifié.  Vous pouvez choisir la _fenêtre temporelle entière_ telle que déterminée par la plage horaire du tableau de bord.
 
 
 .Étapes
 Pour définir la méthode de regroupement, procédez comme suit.
 
-. Dans la requête de votre widget, choisissez un type et une mesure de ressource (par exemple _Storage_) et une mesure (par exemple _Performance IOPS Total_).
-. Pour *Groupe*, choisissez une méthode de synthèse (comme _Average_) et sélectionnez les attributs ou les métriques par lesquels vous souhaitez synthétiser les données (par exemple _Data Center_).
+. Dans la requête de votre widget, choisissez un type d'actif et une métrique (par exemple, _Stockage_) et une métrique (telle que _Performance IOPS Total_).
+. Pour *Groupe*, choisissez une méthode de cumul (par exemple, _Moyenne_) et sélectionnez les attributs ou les mesures selon lesquels cumuler les données (par exemple, _Centre de données_).
 +
-Le widget se met automatiquement à jour et affiche les données de chacun de vos data centers.
+Le widget se met à jour automatiquement et affiche les données de chacun de vos centres de données.
 
 
 
-Vous pouvez également choisir de regrouper _tous_ des données sous-jacentes dans le graphique ou la table. Dans ce cas, vous obtenez une ligne unique pour chaque requête dans le widget, qui affiche la moyenne, min, max, somme ou nombre de la ou des mesures choisies pour toutes les ressources sous-jacentes.
+Vous pouvez également choisir de regrouper _toutes_ les données sous-jacentes dans le graphique ou le tableau.  Dans ce cas, vous obtiendrez une seule ligne pour chaque requête dans le widget, qui affichera la moyenne, le minimum, le maximum, la somme ou le nombre de la ou des métriques choisies pour tous les actifs sous-jacents.
 
-Si vous cliquez sur la légende d'un widget dont les données sont regroupées par "All", une page de requête affiche les résultats de la première requête utilisée dans le widget.
+Cliquer sur la légende de n'importe quel widget dont les données sont regroupées par « Tous » ouvre une page de requête affichant les résultats de la première requête utilisée dans le widget.
 
 Si vous avez défini un filtre pour la requête, les données sont regroupées en fonction des données filtrées.
 
-Notez que lorsque vous choisissez de regrouper un widget par n'importe quel champ (par exemple, _Model_), vous devrez toujours filtrer par ce champ pour afficher correctement les données de ce champ sur le graphique ou la table.
+Notez que lorsque vous choisissez de regrouper un widget par n'importe quel champ (par exemple, _Modèle_), vous devrez toujours filtrer par ce champ afin d'afficher correctement les données de ce champ sur le graphique ou le tableau.
 
 
 
-=== Agrégation des données
+=== Agrégation de données
 
-Vous pouvez aligner davantage vos graphiques de séries chronologiques (ligne, zone, etc.) en regroupant les points de données en compartiments minute, heure ou jour avant que ces données ne soient ensuite regroupées par attribut (si vous le souhaitez). Vous pouvez choisir d'agréger des points de données en fonction de leur _moyenne, maximum, minimum, somme_ ou _Count_.
+Vous pouvez aligner davantage vos graphiques de séries chronologiques (lignes, zones, etc.) en regroupant les points de données dans des tranches de minutes, d'heures ou de jours avant que ces données ne soient ensuite regroupées par attribut (si choisi).  Vous pouvez choisir d'agréger des points de données en fonction de leur _Moyenne, Maximum, Minimum, Somme_ ou _Nombre_.
 
-Un petit intervalle combiné à une longue plage de temps peut entraîner un avertissement « l'intervalle d'agrégation a entraîné un nombre trop important de points de données. » Vous pouvez le voir si vous avez un petit intervalle et augmenter la durée du tableau de bord à 7 jours. Dans ce cas, Insight augmente temporairement l'intervalle d'agrégation jusqu'à ce que vous sélectionniez une période plus petite.
+Un petit intervalle combiné à une longue plage de temps peut entraîner un avertissement « L'intervalle d'agrégation a généré trop de points de données ».  Vous pourriez voir cela si vous avez un petit intervalle et augmentez la période du tableau de bord à 7 jours.  Dans ce cas, Insight augmentera temporairement l'intervalle d'agrégation jusqu'à ce que vous sélectionniez une période plus petite.
 
-Vous pouvez également agréger les données dans le widget de graphique à barres et à valeur unique.
+Vous pouvez également agréger des données dans le widget de graphique à barres et le widget à valeur unique.
 
-La plupart des compteurs d'actifs sont agrégés à _moyenne_ par défaut. Certains compteurs sont agrégés par défaut à _Max, min_ ou _sum_. Par exemple, les erreurs de port sont agrégées à _sum_ par défaut, où Storage IOPS Aggregate to _moyenne_.
+La plupart des compteurs d'actifs s'agrègent sur _Moyenne_ par défaut.  Certains compteurs s'agrègent sur _Max, Min_ ou _Sum_ par défaut.  Par exemple, les erreurs de port sont regroupées par défaut sur _Sum_, tandis que les IOPS de stockage sont regroupées sur _Average_.
 
 
 
 == Affichage des résultats supérieurs/inférieurs
 
-Dans un widget graphique, vous pouvez afficher les résultats *Haut* ou *Bas* pour les données cumulées et choisir le nombre de résultats affiché dans la liste déroulante. Dans un widget de tableau, vous pouvez trier par colonne.
+Dans un widget graphique, vous pouvez afficher les résultats *Meilleurs* ou *Inférieurs* pour les données cumulées et choisir le nombre de résultats affichés dans la liste déroulante fournie.  Dans un widget de tableau, vous pouvez trier par n'importe quelle colonne.
 
 
 
-=== Haut/bas du widget graphique
+=== Widget graphique haut/bas
 
-Dans un widget graphique, lorsque vous choisissez de regrouper des données par un attribut spécifique, vous avez la possibilité d'afficher les résultats N du haut ou N du bas. Notez que vous ne pouvez pas choisir les résultats supérieurs ou inférieurs lorsque vous choisissez de faire un cumul par attributs _All_.
+Dans un widget graphique, lorsque vous choisissez de regrouper les données par un attribut spécifique, vous avez la possibilité d'afficher les N premiers ou les N derniers résultats.  Notez que vous ne pouvez pas choisir les résultats supérieurs ou inférieurs lorsque vous choisissez de cumuler par _tous_ les attributs.
 
 Vous pouvez choisir les résultats à afficher en choisissant *Haut* ou *Bas* dans le champ *Afficher* de la requête et en sélectionnant une valeur dans la liste fournie.
 
@@ -279,54 +279,54 @@ Vous pouvez choisir les résultats à afficher en choisissant *Haut* ou *Bas* da
 
 === Le widget de tableau affiche les entrées
 
-Dans un widget tableau, vous pouvez sélectionner le nombre de résultats affichés dans le tableau des résultats. Vous n'avez pas la possibilité de choisir les résultats supérieurs ou inférieurs car le tableau vous permet de trier les résultats par ordre croissant ou décroissant en fonction d'une colonne à la demande.
+Dans un widget de tableau, vous pouvez sélectionner le nombre de résultats affichés dans les résultats du tableau.  Vous n'avez pas la possibilité de choisir les résultats supérieurs ou inférieurs, car le tableau vous permet de trier par ordre croissant ou décroissant selon n'importe quelle colonne à la demande.
 
-Vous pouvez choisir le nombre de résultats à afficher dans la table du tableau de bord en sélectionnant une valeur dans le champ *Afficher les entrées* de la requête.
-
-
-
-== Regroupement dans un widget de tableau
-
-Les données d'un widget de tableau peuvent être regroupées par n'importe quel attribut disponible, ce qui vous permet d'afficher une vue d'ensemble de vos données et d'en explorer les données pour plus de détails. Les mesures de la table sont rassemblées pour faciliter l'affichage dans chaque ligne réduite.
-
-Les widgets de tableau vous permettent de regrouper vos données en fonction des attributs que vous avez définis. Par exemple, votre tableau peut afficher les IOPS de stockage totales regroupées en fonction des data centers dans lesquels ces stockages sont actifs. Vous pouvez également afficher un tableau des machines virtuelles regroupées en fonction de l'hyperviseur qui les héberge. Dans la liste, vous pouvez développer chaque groupe pour afficher les ressources de ce groupe.
-
-Le regroupement n'est disponible que dans le type de widget Table.
+Vous pouvez choisir le nombre de résultats à afficher dans le tableau du tableau de bord en sélectionnant une valeur dans le champ *Afficher les entrées* de la requête.
 
 
 
-=== Exemple de regroupement (avec cumul expliqué)
+== Widget de regroupement dans le tableau
 
-Les widgets de tableau vous permettent de regrouper les données pour faciliter leur affichage.
+Les données d'un widget de tableau peuvent être regroupées par n'importe quel attribut disponible, vous permettant de voir un aperçu de vos données et de les explorer en profondeur pour plus de détails.  Les mesures du tableau sont regroupées pour une visualisation facile dans chaque ligne réduite.
 
-Dans cet exemple, nous allons créer un widget de tableau répertoriant toutes les machines virtuelles regroupées par Data Center.
+Les widgets de tableau vous permettent de regrouper vos données en fonction des attributs que vous définissez.  Par exemple, vous souhaiterez peut-être que votre tableau affiche le nombre total d'IOPS de stockage regroupés par centres de données dans lesquels ces stockages se trouvent.  Ou vous souhaiterez peut-être afficher un tableau de machines virtuelles regroupées en fonction de l’hyperviseur qui les héberge.  À partir de la liste, vous pouvez développer chaque groupe pour afficher les actifs de ce groupe.
+
+Le regroupement n'est disponible que dans le type de widget Tableau.
+
+
+
+=== Exemple de regroupement (avec explication du cumul)
+
+Les widgets de tableau vous permettent de regrouper des données pour un affichage plus facile.
+
+Dans cet exemple, nous allons créer un widget de tableau affichant toutes les machines virtuelles regroupées par centre de données.
 
 .Étapes
-. Créez ou ouvrez un tableau de bord et ajoutez un widget *Table*.
-. Sélectionnez _Virtual machine_ comme type d'actif pour ce widget.
-. Cliquez sur le sélecteur de colonne et choisissez _Hypervisor name_ et _IOPS - Total_.
+. Créez ou ouvrez un tableau de bord et ajoutez un widget *Tableau*.
+. Sélectionnez _Machine virtuelle_ comme type d’actif pour ce widget.
+. Cliquez sur le sélecteur de colonnes et choisissez _Nom de l'hyperviseur_ et _IOPS - Total_.
 +
 Ces colonnes sont maintenant affichées dans le tableau.
 
-. Ignorez toutes les machines virtuelles sans IOPS et incluez uniquement les machines virtuelles pour lesquelles les IOPS totales sont supérieures à 1. Cliquez sur le bouton *Filter by* *[+]* et sélectionnez _IOPS - Total_. Cliquez sur _any_, et dans le champ *de*, saisissez *1*. Laissez le champ *à* vide. Appuyez sur entrer sans cliquer sur le champ de filtre pour appliquer le filtre.
+. Ignorons toutes les machines virtuelles sans IOPS et incluons uniquement les machines virtuelles dont le total des IOPS est supérieur à 1.  Cliquez sur le bouton *Filtrer par* *[+]* et sélectionnez _IOPS - Total_.  Cliquez sur _Any_, et dans le champ *de*, tapez *1*.  Laissez le champ *à* vide.  Appuyez sur Entrée ou cliquez sur le champ de filtre pour appliquer le filtre.
 +
-Le tableau indique désormais toutes les machines virtuelles dont le nombre total d'IOPS est supérieur ou égal à 1. Notez qu'il n'y a pas de regroupement dans la table. Toutes les VM sont affichées.
+Le tableau affiche désormais toutes les machines virtuelles avec un nombre total d’IOPS supérieur ou égal à 1.  Notez qu’il n’y a pas de regroupement dans le tableau.  Toutes les machines virtuelles sont affichées.
 
 . Cliquez sur le bouton *Grouper par [+]*.
 +
-Vous pouvez grouper par n'importe quel attribut ou annotation affiché. Choisissez _All_ pour afficher toutes les machines virtuelles d'un même groupe.
+Vous pouvez regrouper par n’importe quel attribut ou annotation affiché.  Choisissez _Tout_ pour afficher toutes les machines virtuelles dans un seul groupe.
 
 +
-Tout en-tête de colonne pour une mesure de performance affiche un menu "trois points" contenant une option *Roll up*. La méthode par défaut est _Average_. Cela signifie que le nombre indiqué pour le groupe correspond à la moyenne de toutes les IOPS totales indiquées pour chaque machine virtuelle du groupe. Vous pouvez choisir de faire rouler cette colonne vers le haut par _moyenne, somme, minimum_ ou _maximum_. Toutes les colonnes qui contiennent des mesures de performance peuvent être synthétisés individuellement.
+Tout en-tête de colonne pour une mesure de performance affiche un menu « trois points » contenant une option * Récapitulatif *.  La méthode de cumul par défaut est _Average_.  Cela signifie que le nombre affiché pour le groupe est la moyenne de tous les IOPS totaux signalés pour chaque machine virtuelle à l'intérieur du groupe.  Vous pouvez choisir de regrouper cette colonne par _Moyenne, Somme, Minimum_ ou _Maximum_.  Toute colonne que vous affichez et qui contient des mesures de performances peut être regroupée individuellement.
 
 +
-image:TableRollUp.png["Enroulez"]
+image:TableRollUp.png["Retrousser"]
 
-. Cliquez sur _All_ et sélectionnez _Hypervisor name_.
+. Cliquez sur _Tous_ et sélectionnez _Nom de l'hyperviseur_.
 +
-La liste des machines virtuelles est désormais groupée par hyperviseur. Vous pouvez développer chaque hyperviseur pour afficher les VM hébergées par celui-ci.
+La liste des machines virtuelles est désormais regroupée par hyperviseur.  Vous pouvez développer chaque hyperviseur pour afficher les machines virtuelles hébergées par celui-ci.
 
-. Cliquez sur *Enregistrer* pour enregistrer la table dans le tableau de bord. Vous pouvez redimensionner ou déplacer le widget comme vous le souhaitez.
+. Cliquez sur *Enregistrer* pour enregistrer le tableau dans le tableau de bord.  Vous pouvez redimensionner ou déplacer le widget comme vous le souhaitez.
 . Cliquez sur *Enregistrer* pour enregistrer le tableau de bord.
 
 
@@ -334,75 +334,75 @@ La liste des machines virtuelles est désormais groupée par hyperviseur. Vous p
 
 === Synthèse des données de performance
 
-Si vous incluez une colonne pour les données de performances (par exemple, _IOPS - Total_) dans un widget de tableau, lorsque vous choisissez de regrouper les données, vous pouvez alors choisir une méthode de synthèse pour cette colonne. La méthode de défilement par défaut consiste à afficher la moyenne (_avg_) des données sous-jacentes de la ligne du groupe. Vous pouvez également choisir d'afficher la somme, le minimum ou le maximum des données.
+Si vous incluez une colonne pour les données de performances (par exemple, _IOPS - Total_) dans un widget de tableau, lorsque vous choisissez de regrouper les données, vous pouvez alors choisir une méthode de cumul pour cette colonne.  La méthode de cumul par défaut consiste à afficher la moyenne (_avg_) des données sous-jacentes dans la ligne de groupe.  Vous pouvez également choisir d'afficher la somme, le minimum ou le maximum des données.
 
 
 
 == Sélecteur de plage horaire du tableau de bord
 
-Vous pouvez sélectionner la plage horaire des données de votre tableau de bord. Seules les données relatives à la plage horaire sélectionnée s'affichent dans les widgets du tableau de bord. Vous pouvez sélectionner l'une des plages de temps suivantes :
+Vous pouvez sélectionner la plage horaire pour les données de votre tableau de bord.  Seules les données pertinentes pour la plage horaire sélectionnée seront affichées dans les widgets du tableau de bord.  Vous pouvez sélectionner parmi les plages horaires suivantes :
 
-* Dernières 15 minutes
-* Dernières 30 minutes
-* Dernières 60 minutes
-* Dernières 2 heures
-* Les 3 dernières heures (il s'agit de la valeur par défaut)
-* Dernières 6 heures
-* Dernières 12 heures
+* Les 15 dernières minutes
+* Les 30 dernières minutes
+* Les 60 dernières minutes
+* Les 2 dernières heures
+* 3 dernières heures (c'est la valeur par défaut)
+* Les 6 dernières heures
+* Les 12 dernières heures
 * Dernières 24 heures
-* 2 derniers jours
-* 3 derniers jours
-* 7 derniers jours
-* 30 derniers jours
+* Les 2 derniers jours
+* Les 3 derniers jours
+* Les 7 derniers jours
+* Les 30 derniers jours
 * Plage horaire personnalisée
 +
-La plage de temps personnalisée vous permet de sélectionner jusqu'à 31 jours consécutifs. Vous pouvez également définir l'heure de début et l'heure de fin de la journée pour cette plage. L'heure de début par défaut est 12:00 AM le premier jour sélectionné et l'heure de fin par défaut est 11:59 PM le dernier jour sélectionné. Cliquez sur *appliquer* pour appliquer la plage de temps personnalisée au tableau de bord.
+La plage horaire personnalisée vous permet de sélectionner jusqu'à 31 jours consécutifs.  Vous pouvez également définir l’heure de début et l’heure de fin de la journée pour cette plage.  L'heure de début par défaut est 00h00 le premier jour sélectionné et l'heure de fin par défaut est 23h59 le dernier jour sélectionné.  Cliquez sur *Appliquer* pour appliquer la plage horaire personnalisée au tableau de bord.
 
 
 
 
 
-=== Zoom avant sur une plage de temps
+=== Zoom sur une plage horaire
 
-Lors de l'affichage d'un widget de séries chronologiques (ligne, spline, zone, zone empilée)--ou d'un graphique sur une page d'accueil--vous pouvez faire glisser la souris sur le graphique pour effectuer un zoom avant. Dans le coin supérieur droit de l'écran, vous pouvez verrouiller cette plage de temps pour que les graphiques des autres pages reflètent les données de cette plage de temps verrouillée. Pour déverrouiller, sélectionnez une plage horaire différente dans la liste.
-
-
-
-== Remplacement de l'heure du tableau de bord dans des widgets individuels
-
-Vous pouvez remplacer le paramètre de plage horaire principal du tableau de bord dans des widgets individuels. Ces widgets affichent des données en fonction de leur période définie, et non pas de l'heure du tableau de bord.
-
-Pour annuler l'heure du tableau de bord et forcer un widget à utiliser sa propre période, dans le mode d'édition du widget, choisissez la plage horaire dérisée et enregistrez le widget dans le tableau de bord.
-
-Le widget affichera ses données en fonction de la période définie, indépendamment du délai sélectionné sur le tableau de bord lui-même.
-
-La période que vous définissez pour un widget n'affectera pas les autres widgets du tableau de bord.
-
-image:OverrideTimeOnWidget.png["remplacement de la plage horaire du tableau de bord pour un widget"]
+Lorsque vous visualisez un widget de série chronologique (Ligne, Spline, Zone, Zone empilée) ou un graphique sur une page de destination, vous pouvez faire glisser la souris sur le graphique pour effectuer un zoom avant. Dans le coin supérieur droit de l'écran, vous pouvez ensuite verrouiller cette plage de temps afin que les graphiques sur d'autres pages reflètent les données de cette plage de temps verrouillée.  Pour déverrouiller, sélectionnez une plage horaire différente dans la liste.
 
 
 
-== Axes principal et secondaire
+== Remplacement de l'heure du tableau de bord dans les widgets individuels
 
-Les différentes mesures utilisent différentes unités de mesure pour les données qu'elles indiquent dans un graphique. Par exemple, dans le cas des IOPS, l'unité de mesure correspond au nombre d'opérations d'E/S par seconde de temps (E/S), tandis que la latence mesure uniquement le temps (millisecondes, microsecondes, secondes, etc.). Lors de la transcription des deux mesures sur un graphique à ligne unique à l'aide d'un ensemble unique de valeurs a pour l'axe y, les nombres de latence (en général quelques millisecondes) sont transcrits sur la même échelle avec les IOPS (généralement la numérotation des milliers) et la ligne de latence est perdue à cette échelle.
+Vous pouvez remplacer le paramètre de plage horaire du tableau de bord principal dans des widgets individuels.  Ces widgets afficheront les données en fonction de leur période définie, et non de la période du tableau de bord.
 
-Mais il est possible de tracer les deux ensembles de données sur un seul graphique significatif, en définissant une unité de mesure sur l'axe y principal (côté gauche) et l'autre unité de mesure sur l'axe y secondaire (côté droit). Chaque mesure est saisie à sa propre échelle.
+Pour remplacer l'heure du tableau de bord et forcer un widget à utiliser sa propre période, dans le mode d'édition du widget, choisissez la plage horaire souhaitée et enregistrez le widget sur le tableau de bord.
+
+Le widget affichera ses données en fonction de la période définie, quelle que soit la période que vous sélectionnez sur le tableau de bord lui-même.
+
+La période que vous définissez pour un widget n'affectera aucun autre widget du tableau de bord.
+
+image:OverrideTimeOnWidget.png["remplacer la plage horaire du tableau de bord pour un widget"]
+
+
+
+== Axe primaire et secondaire
+
+Différentes mesures utilisent différentes unités de mesure pour les données qu’elles rapportent dans un graphique.  Par exemple, lorsque l'on examine les IOPS, l'unité de mesure est le nombre d'opérations d'E/S par seconde (IO/s), tandis que la latence est purement une mesure du temps (millisecondes, microsecondes, secondes, etc.).  Lors de la représentation graphique des deux métriques sur un graphique à ligne unique à l'aide d'un seul ensemble de valeurs pour l'axe Y, les nombres de latence (généralement une poignée de millisecondes) sont représentés sur la même échelle que les IOPS (généralement numérotés en milliers), et la ligne de latence se perd à cette échelle.
+
+Mais il est possible de représenter graphiquement les deux ensembles de données sur un seul graphique significatif, en plaçant une unité de mesure sur l'axe Y principal (côté gauche) et l'autre unité de mesure sur l'axe Y secondaire (côté droit).  Chaque mesure est représentée à sa propre échelle.
 
 .Étapes
-Cet exemple illustre le concept des axes principal et secondaire dans un widget graphique.
+Cet exemple illustre le concept des axes primaires et secondaires dans un widget de graphique.
 
-. Créez ou ouvrez un tableau de bord. Ajoutez un graphique linéaire, un graphique spline, un graphique de zone ou un widget de graphique à zone empilée au tableau de bord.
-. Sélectionnez un type de ressource (par exemple _Storage_) et choisissez _IOPS - Total_ pour votre première mesure. Définissez les filtres que vous souhaitez et choisissez une méthode de déploiement si vous le souhaitez.
+. Créer ou ouvrir un tableau de bord.  Ajoutez un widget de graphique linéaire, de graphique spline, de graphique à aires ou de graphique à aires empilées au tableau de bord.
+. Sélectionnez un type d’actif (par exemple _Stockage_) et choisissez _IOPS - Total_ pour votre première métrique.  Définissez les filtres de votre choix et choisissez une méthode de regroupement si vous le souhaitez.
 +
-La ligne IOPS s'affiche sur le tableau, avec son échelle affichée à gauche.
+La ligne IOPS est affichée sur le graphique, avec son échelle indiquée sur la gauche.
 
-. Cliquez sur *[+Query]* pour ajouter une seconde ligne au graphique. Pour cette ligne, choisissez _latence - Total_ pour la mesure.
+. Cliquez sur *[+Requête]* pour ajouter une deuxième ligne au graphique.  Pour cette ligne, choisissez _Latence - Total_ pour la métrique.
 +
-Notez que la ligne est affichée à plat en bas du graphique. C'est parce qu'elle est _à la même échelle_ que la ligne IOPS.
+Notez que la ligne est affichée à plat en bas du graphique.  C'est parce qu'il est dessiné à la même échelle que la ligne IOPS.
 
-. Dans la requête latence, sélectionnez *axe y : secondaire*.
+. Dans la requête Latence, sélectionnez *Axe Y : Secondaire*.
 +
-La ligne latence est maintenant tracée à sa propre échelle, qui est affichée à droite du graphique.
+La ligne de latence est désormais dessinée à sa propre échelle, qui est affichée sur le côté droit du graphique.
 
 
 
@@ -412,101 +412,101 @@ image:SecondaryAxisExplained.png["Exemple d'axe secondaire"]
 
 == Expressions dans les widgets
 
-Dans un tableau de bord, n'importe quel widget de séries chronologiques (ligne, spline, zone, zone empilée) graphique à barres, graphique à colonnes, graphique à secteurs ou widget de tableau vous permet de créer des expressions à partir des mesures que vous choisissez et d'afficher le résultat de ces expressions dans un seul graphique (ou colonne dans le cas du <<expressions-in-a-table-widget,widget de tableau>>). Les exemples suivants utilisent des expressions pour résoudre des problèmes spécifiques. Dans le premier exemple, nous souhaitons afficher les IOPS en lecture sous forme de pourcentage des IOPS totales pour toutes les ressources de stockage de votre locataire. Le deuxième exemple offre une visibilité sur les IOPS système ou indirectes qui se produisent sur votre locataire, à savoir les IOPS qui ne sont pas directement lues ou écrites les données.
+Dans un tableau de bord, n'importe quel widget de série chronologique (ligne, spline, zone, zone empilée), graphique à barres, graphique à colonnes, graphique à secteurs ou widget de tableau vous permet de créer des expressions à partir des mesures que vous choisissez et d'afficher le résultat de ces expressions dans un seul graphique (ou colonne dans le cas du<<expressions-in-a-table-widget,widget de tableau>> ).  Les exemples suivants utilisent des expressions pour résoudre des problèmes spécifiques.  Dans le premier exemple, nous souhaitons afficher les IOPS de lecture sous forme de pourcentage du total des IOPS pour tous les actifs de stockage de votre locataire.  Le deuxième exemple donne une visibilité sur les IOPS « système » ou « surcharge » qui se produisent sur votre locataire, c'est-à-dire les IOPS qui ne proviennent pas directement de la lecture ou de l'écriture de données.
 
 Vous pouvez utiliser des variables dans des expressions (par exemple, _$Var1 * 100_)
 
 
 
-=== Expressions exemple : pourcentage d'IOPS en lecture
+=== Exemple d'expressions : Lire le pourcentage d'IOPS
 
-Dans cet exemple, nous allons afficher les IOPS en lecture sous forme de pourcentage du nombre total d'IOPS. Vous pouvez considérer ceci comme la formule suivante :
+Dans cet exemple, nous souhaitons afficher les IOPS de lecture en pourcentage du total des IOPS.  Vous pouvez considérer cela comme la formule suivante :
 
  Read Percentage = (Read IOPS / Total IOPS) x 100
-Ces données peuvent s'afficher dans un graphique en courbes sur votre tableau de bord. Pour ce faire, procédez comme suit :
+Ces données peuvent être affichées sous forme de graphique linéaire sur votre tableau de bord.  Pour ce faire, suivez ces étapes :
 
 .Étapes
 . Créez un nouveau tableau de bord ou ouvrez un tableau de bord existant en mode édition.
-. Ajoutez un widget au tableau de bord. Choisissez *diagramme de zone*.
+. Ajoutez un widget au tableau de bord.  Choisissez *Graphique en aires*.
 +
-Le widget s'ouvre en mode édition. Par défaut, une requête est affichée avec _IOPS - Total_ pour _Storage_ Assets. Si vous le souhaitez, sélectionnez un autre type d'actif.
+Le widget s'ouvre en mode édition.  Par défaut, une requête s'affiche indiquant _IOPS - Total_ pour les actifs _Storage_.  Si vous le souhaitez, sélectionnez un autre type d’actif.
 
-. Cliquez sur le lien *convertir en expression* à droite.
+. Cliquez sur le lien *Convertir en expression* à droite.
 +
-La requête en cours est convertie en mode expression. Vous ne pouvez pas modifier le type de ressource en mode expression. Lorsque vous êtes en mode expression, le lien devient *revenir à requête*. Cliquez sur ce bouton si vous souhaitez revenir au mode requête à tout moment. N'oubliez pas que le passage d'un mode à l'autre réinitialise les champs à leur valeur par défaut.
+La requête actuelle est convertie en mode Expression.  Notez que vous ne pouvez pas modifier le type d’actif en mode Expression.  Lorsque vous êtes en mode Expression, le lien devient *Revenir à la requête*.  Cliquez ici si vous souhaitez revenir au mode Requête à tout moment.  Sachez que le passage d'un mode à l'autre réinitialisera les champs à leurs valeurs par défaut.
 
 +
-Pour l'instant, restez en mode expression.
+Pour l'instant, restez en mode Expression.
 
-. La mesure *IOPS - Total* se trouve maintenant dans le champ de variable alphabétique "*a*". Dans le champ variable "*b*", cliquez sur *Select* et choisissez *IOPS - lecture*.
+. La métrique *IOPS - Total* se trouve désormais dans le champ de variable alphabétique « *a* ».  Dans le champ variable « *b* », cliquez sur *Sélectionner* et choisissez *IOPS - Lecture*.
 +
-Vous pouvez ajouter jusqu'à cinq variables alphabétiques pour votre expression en cliquant sur le bouton + en suivant les champs des variables. Pour notre exemple de pourcentage de lecture, nous n'avons besoin que des IOPS totales ("*a*") et des IOPS de lecture ("*b*").
+Vous pouvez ajouter jusqu'à un total de cinq variables alphabétiques pour votre expression en cliquant sur le bouton + suivant les champs de variables.  Pour notre exemple de pourcentage de lecture, nous n'avons besoin que du total des IOPS (« *a* ») et des IOPS de lecture (« *b* »).
 
-. Dans le champ *expression*, vous utilisez les lettres correspondant à chaque variable pour créer votre expression. Nous savons que Read Percentage = (Read IOPS / Total IOPS) x 100, nous écrivons cette expression comme suit :
+. Dans le champ *Expression*, vous utilisez les lettres correspondant à chaque variable pour construire votre expression.  Nous savons que le pourcentage de lecture = (IOPS de lecture / IOPS totales) x 100, nous écririons donc cette expression comme suit :
 +
  (b / a) * 100
-. Le champ *Label* identifie l’expression. Remplacez l'étiquette par « pourcentage de lecture », ou quelque chose de tout aussi significatif pour vous.
-. Définissez le champ *unités* sur " %" ou sur "pourcentage".
+. Le champ *Label* identifie l'expression.  Modifiez l'étiquette en « Pourcentage de lecture » ou en quelque chose d'aussi significatif pour vous.
+. Modifiez le champ *Unités* en « % » ou « Pourcentage ».
 +
-Le graphique affiche le pourcentage de lecture des IOPS dans le temps pour les périphériques de stockage sélectionnés. Si vous le souhaitez, vous pouvez définir un filtre ou choisir une autre méthode d'agrégation. Sachez que si vous sélectionnez somme comme méthode de cumul, toutes les valeurs de pourcentage sont ajoutées ensemble, qui peuvent être supérieures à 100 %.
+Le graphique affiche le pourcentage de lecture IOPS au fil du temps pour les périphériques de stockage choisis.  Si vous le souhaitez, vous pouvez définir un filtre ou choisir une autre méthode de cumul.  Sachez que si vous sélectionnez Somme comme méthode de cumul, toutes les valeurs de pourcentage sont additionnées, ce qui peut potentiellement dépasser 100 %.
 
-. Cliquez sur *Enregistrer* pour enregistrer le graphique dans votre tableau de bord.
-
-
+. Cliquez sur *Enregistrer* pour enregistrer le graphique sur votre tableau de bord.
 
 
-=== Expressions exemple : E/S « système »
 
-Exemple 2 : parmi les mesures collectées à partir des sources de données sont la lecture, l'écriture et le nombre total d'IOPS. Toutefois, le nombre total d'IOPS indiqué par une source de données inclut parfois des IOPS « système », ce qui ne fait pas partie directement des opérations de lecture ou d'écriture des données. Ces E/S du système peuvent également être considérées comme des E/S « surcharges » qui sont nécessaires au bon fonctionnement du système, mais pas directement liées aux opérations de données.
 
-Pour afficher ces E/S système, vous pouvez limiter le nombre d'IOPS de lecture et d'écriture du total indiqué lors de l'acquisition. La formule peut ressembler à ceci :
+=== Exemple d'expressions : E/S « Système »
+
+Exemple 2 : Parmi les mesures collectées à partir des sources de données figurent la lecture, l’écriture et le nombre total d’E/S par seconde.  Cependant, le nombre total d'IOPS signalé par une source de données inclut parfois les IOPS « système », qui sont les opérations d'E/S qui ne font pas directement partie de la lecture ou de l'écriture de données.  Ces E/S système peuvent également être considérées comme des E/S « en hauteur », nécessaires au bon fonctionnement du système mais non directement liées aux opérations de données.
+
+Pour afficher ces E/S système, vous pouvez soustraire les IOPS en lecture et en écriture du total des IOPS signalés depuis l'acquisition.  La formule pourrait ressembler à ceci :
 
  System IOPS = Total IOPS - (Read IOPS + Write IOPS)
-Ces données peuvent ensuite être affichées dans un graphique en courbes sur votre tableau de bord. Pour ce faire, procédez comme suit :
+Ces données peuvent ensuite être affichées sous forme de graphique linéaire sur votre tableau de bord.  Pour ce faire, suivez ces étapes :
 
 .Étapes
 . Créez un nouveau tableau de bord ou ouvrez un tableau de bord existant en mode édition.
-. Ajoutez un widget au tableau de bord. Choisissez *graphique de lignes*.
+. Ajoutez un widget au tableau de bord.  Choisissez *Graphique linéaire*.
 +
-Le widget s'ouvre en mode édition. Par défaut, une requête est affichée avec _IOPS - Total_ pour _Storage_ Assets. Si vous le souhaitez, sélectionnez un autre type d'actif.
+Le widget s'ouvre en mode édition.  Par défaut, une requête s'affiche indiquant _IOPS - Total_ pour les actifs _Storage_.  Si vous le souhaitez, sélectionnez un autre type d’actif.
 
-. Dans le champ *cumul*, choisissez _sum_ by _All_.
+. Dans le champ *Regrouper*, choisissez _Somme_ par _Tous_.
 +
 Le graphique affiche une ligne indiquant la somme des IOPS totales.
 
-. Cliquez sur l'icône _Dupliquer cette requête_ pour créer une copie de la requête.
+. Cliquez sur l’icône _Dupliquer cette requête_ pour créer une copie de la requête.
 +
-Une copie de la requête est ajoutée sous l'original.
+Un duplicata de la requête est ajouté sous l'original.
 
-. Dans la deuxième requête, cliquez sur le bouton *convertir en expression*.
+. Dans la deuxième requête, cliquez sur le bouton *Convertir en expression*.
 +
-La requête en cours est convertie en mode expression. Cliquez sur *revenir à la requête* si vous souhaitez revenir au mode requête à tout moment. N'oubliez pas que le passage d'un mode à l'autre réinitialise les champs à leur valeur par défaut.
+La requête actuelle est convertie en mode Expression.  Cliquez sur *Revenir à la requête* si vous souhaitez revenir au mode Requête à tout moment.  Sachez que le passage d'un mode à l'autre réinitialisera les champs à leurs valeurs par défaut.
 
 +
-Pour l'instant, restez en mode expression.
+Pour l'instant, restez en mode Expression.
 
-. La mesure _IOPS - Total_ se trouve maintenant dans le champ de variable alphabétique "*a*". Cliquez sur _IOPS - Total_ et remplacez-le par _IOPS - Read_.
-. Dans le champ variable "*b*", cliquez sur *Select* et choisissez _IOPS - Write_.
-. Dans le champ *expression*, vous utilisez les lettres correspondant à chaque variable pour créer votre expression. Nous écrivons notre expression simplement comme :
+. La métrique _IOPS - Total_ se trouve désormais dans le champ de variable alphabétique « *a* ».  Cliquez sur _IOPS - Total_ et remplacez-le par _IOPS - Lecture_.
+. Dans le champ variable « *b* », cliquez sur *Sélectionner* et choisissez _IOPS - Écriture_.
+. Dans le champ *Expression*, vous utilisez les lettres correspondant à chaque variable pour construire votre expression.  Nous écririons notre expression simplement comme :
 +
  a + b
 +
-Dans la section Affichage, choisissez *diagramme de zone* pour cette expression.
+Dans la section Affichage, choisissez *Graphique en aires* pour cette expression.
 
-. Le champ *Label* identifie l’expression. Remplacez ce label par « IOPS système », ou quelque chose de tout aussi utile pour vous.
+. Le champ *Label* identifie l'expression.  Modifiez l'étiquette en « IOPS système » ou en quelque chose d'aussi significatif pour vous.
 +
-Le graphique affiche le nombre total d'IOPS sous forme de graphique linéaire et un graphique de superficie illustrant la combinaison d'opérations d'E/S par seconde en lecture et en écriture ci-dessous. La différence entre les deux montre les IOPS qui ne sont pas directement liées aux opérations de lecture ou d'écriture de données. Il s'agit de vos IOPS de système.
+Le graphique affiche le total des IOPS sous forme de graphique linéaire, avec un graphique en aires indiquant la combinaison des IOPS en lecture et en écriture en dessous.  L’écart entre les deux montre les IOPS qui ne sont pas directement liées aux opérations de lecture ou d’écriture de données.  Il s'agit de vos IOPS « système ».
 
-. Cliquez sur *Enregistrer* pour enregistrer le graphique dans votre tableau de bord.
+. Cliquez sur *Enregistrer* pour enregistrer le graphique sur votre tableau de bord.
 
 
-Pour utiliser une variable dans une expression, tapez simplement le nom de la variable, par exemple _$var1 * 100_. Seules les variables numériques peuvent être utilisées dans les expressions.
+Pour utiliser une variable dans une expression, saisissez simplement le nom de la variable, par exemple _$var1 * 100_.  Seules les variables numériques peuvent être utilisées dans les expressions.
 
 
 
 === Expressions dans un widget de tableau
 
-Les widgets de tableau traitent les expressions un peu différemment. Vous pouvez avoir jusqu'à cinq expressions dans un widget de table unique, chacune étant ajoutée en tant que nouvelle colonne à la table. Chaque expression peut inclure jusqu'à cinq valeurs sur lesquelles effectuer son calcul. Vous pouvez facilement nommer la colonne quelque chose de significatif.
+Les widgets de tableau gèrent les expressions un peu différemment.  Vous pouvez avoir jusqu'à cinq expressions dans un seul widget de tableau, chacune d'entre elles étant ajoutée en tant que nouvelle colonne au tableau.  Chaque expression peut inclure jusqu'à cinq valeurs sur lesquelles effectuer son calcul.  Vous pouvez facilement nommer la colonne avec un nom significatif.
 
 image:ExpressionExample.png["Expression dans un widget de tableau"]
 
@@ -514,20 +514,20 @@ image:ExpressionExample.png["Expression dans un widget de tableau"]
 
 == Variables
 
-Les variables vous permettent de modifier simultanément les données affichées dans certains ou tous les widgets d'un tableau de bord. En définissant un ou plusieurs widgets pour utiliser une variable commune, les modifications effectuées à un endroit provoquent la mise à jour automatique des données affichées dans chaque widget.
+Les variables vous permettent de modifier les données affichées dans certains ou tous les widgets d'un tableau de bord à la fois.  En définissant un ou plusieurs widgets pour utiliser une variable commune, les modifications apportées à un endroit entraînent la mise à jour automatique des données affichées dans chaque widget.
 
 
 
 === Types de variables
 
-Une variable peut être de l'un des types suivants :
+Une variable peut être de l'un des types suivants :
 
-* *Attribut* : utilisez les attributs ou les métriques d'un objet pour filtrer
-* *Annotation* : utilisez un pré-défini link:task_defining_annotations.html["Annotation"] pour filtrer les données du widget.
-* *Texte* : une chaîne alphanumérique.
-* *Numérique* : une valeur numérique. Utiliser par lui-même, ou comme valeur « de » ou « à », en fonction de votre champ de widget.
-* *Boolean* : utiliser pour les champs avec les valeurs vrai/Faux, Oui/non, etc. Pour la variable booléenne, les choix sont Oui, non, aucun, n'importe.
-* *Date* : une valeur de date. Utiliser comme valeur « de » ou « à », en fonction de la configuration de votre widget.
+* *Attribut* : utilisez les attributs ou les métriques d'un objet pour filtrer
+* *Annotation* : Utilisez unlink:task_defining_annotations.html["Annotation"] pour filtrer les données du widget.
+* *Texte* : Une chaîne alphanumérique.
+* *Numérique* : Une valeur numérique.  À utiliser seul ou comme valeur « de » ou « à », selon le champ de votre widget.
+* *Booléen* : À utiliser pour les champs avec des valeurs Vrai/Faux, Oui/Non, etc. Pour la variable booléenne, les choix sont Oui, Non, Aucun, N'importe lequel.
+* *Date* : une valeur de date.  À utiliser comme valeur « de » ou « à », selon la configuration de votre widget.
 
 
 image:Variables_Drop_Down_Showing_Annotations.png["Types de variables"]
@@ -536,41 +536,41 @@ image:Variables_Drop_Down_Showing_Annotations.png["Types de variables"]
 
 ==== Variables d'attribut
 
-La sélection d'une variable de type d'attribut permet de filtrer les données de widget contenant la ou les valeurs d'attribut spécifiées. L'exemple ci-dessous montre un widget de ligne affichant les tendances de mémoire libre pour les nœuds Agent. Nous avons créé une variable pour les adresses IP de nœud d'agent, actuellement définie pour afficher toutes les adresses IP :
+La sélection d'une variable de type Attribut vous permet de filtrer les données du widget contenant la ou les valeurs d'attribut spécifiées.  L'exemple ci-dessous montre un widget de ligne affichant les tendances de mémoire libre pour les nœuds d'agent.  Nous avons créé une variable pour les adresses IP des nœuds d'agent, actuellement configurée pour afficher toutes les adresses IP :
 
-image:Variables_Node_Example_Before_Variable_Applied.png["Nœuds d'agent avant le filtre de variable"]
+image:Variables_Node_Example_Before_Variable_Applied.png["Nœuds d'agent avant le filtre variable"]
 
-Mais si vous voulez temporairement voir uniquement les nœuds sur des sous-réseaux individuels de votre locataire, vous pouvez définir ou modifier la variable en une ou plusieurs adresses IP de nœud d'agent spécifiques. Ici, nous n'visualise que les nœuds sur le sous-réseau « 123 » :
+Mais si vous souhaitez temporairement voir uniquement les nœuds sur des sous-réseaux individuels de votre locataire, vous pouvez définir ou modifier la variable sur une ou plusieurs adresses IP de nœud d'agent spécifiques.  Ici, nous visualisons uniquement les nœuds du sous-réseau « 123 » :
 
-image:Variables_Node_Example_After_Variable_Applied.png["Nœuds agent après le filtre de variables"]
+image:Variables_Node_Example_After_Variable_Applied.png["Nœuds d'agent après filtre variable"]
 
-Vous pouvez également définir une variable pour filtrer sur _All_ objects avec un attribut particulier quel que soit le type d'objet, par exemple les objets avec un attribut de "vendor", en spécifiant _*.vendor_ dans le champ variable. Il n'est pas nécessaire de saisir le "*."; Data Infrastructure Insights le fournira si vous sélectionnez l'option générique.
+Vous pouvez également définir une variable pour filtrer sur _tous_ les objets avec un attribut particulier quel que soit le type d'objet, par exemple les objets avec un attribut « vendor », en spécifiant _*.vendor_ dans le champ variable.  Vous n'avez pas besoin de saisir le caractère « * ». Data Infrastructure Insights le fournira si vous sélectionnez l'option générique.
 
-image:Variables_Attribute_Vendor_Example.png["Variable d'attribut pour fournisseur"]
+image:Variables_Attribute_Vendor_Example.png["Variable d'attribut pour le fournisseur"]
 
-Lorsque vous effectuez la liste déroulante des choix de la valeur variable, les résultats sont filtrés. N'affichez donc que les fournisseurs disponibles en fonction des objets de votre tableau de bord.
+Lorsque vous déroulez la liste des choix pour la valeur de la variable, les résultats sont filtrés afin d'afficher uniquement les fournisseurs disponibles en fonction des objets de votre tableau de bord.
 
-image:Variables_Attribute_Vendor_Filtered_List.png["Variable d'attribut indiquant uniquement les fournisseurs disponibles"]
+image:Variables_Attribute_Vendor_Filtered_List.png["Variable d'attribut affichant uniquement les fournisseurs disponibles"]
 
-Si vous modifiez un widget sur votre tableau de bord où le filtre d'attribut est pertinent (c'est-à-dire que les objets du widget contiennent un attribut _*.vendor_), il vous indique que le filtre d'attribut est automatiquement appliqué.
+Si vous modifiez un widget sur votre tableau de bord où le filtre d'attribut est pertinent (ce qui signifie que les objets du widget contiennent un attribut _*.vendor_), cela vous montre que le filtre d'attribut est automatiquement appliqué.
 
-image:Variables_Attribute_inWidgetQuery.png["Variable d'attribut automatiquement appliquée"]
+image:Variables_Attribute_inWidgetQuery.png["Variable d'attribut appliquée automatiquement"]
 
-L'application des variables est aussi simple que la modification des données d'attribut de votre choix.
+Appliquer des variables est aussi simple que de modifier les données d’attribut de votre choix.
 
 
 
 ==== Variables d'annotation
 
-La sélection d'une variable d'annotation permet de filtrer les objets associés à cette annotation, par exemple ceux appartenant au même centre de données.
+Le choix d'une variable d'annotation vous permet de filtrer les objets associés à cette annotation, par exemple ceux appartenant au même centre de données.
 
-image:Variables_Annotation_Filtering.png["Filtrage d'annotations avec variable"]
+image:Variables_Annotation_Filtering.png["Filtrage d'annotation avec variable"]
 
 
 
-==== Texte, nombre, Date ou variable booléenne
+==== Variable texte, nombre, date ou booléenne
 
-Vous pouvez créer des variables génériques qui ne sont pas associées à un attribut particulier en sélectionnant un type de variable : _Text_, _Number_, _Boolean_ ou _Date_. Une fois la variable créée, vous pouvez la sélectionner dans un champ de filtre de widget. Lors de la définition d'un filtre dans un widget, en plus des valeurs spécifiques que vous pouvez sélectionner pour le filtre, toutes les variables qui ont été créées pour le tableau de bord sont affichées dans la liste--elles sont regroupées dans la section "variables" de la liste déroulante et ont des noms commençant par "$". Le choix d'une variable dans ce filtre vous permettra de rechercher les valeurs que vous entrez dans le champ variable du tableau de bord lui-même. Tous les widgets utilisant cette variable dans un filtre seront mis à jour dynamiquement.
+Vous pouvez créer des variables génériques qui ne sont pas associées à un attribut particulier en sélectionnant un type de variable _Texte_, _Nombre_, _Booléen_ ou _Date_.  Une fois la variable créée, vous pouvez la sélectionner dans un champ de filtre de widget.  Lors de la définition d'un filtre dans un widget, en plus des valeurs spécifiques que vous pouvez sélectionner pour le filtre, toutes les variables qui ont été créées pour le tableau de bord sont affichées dans la liste. Elles sont regroupées sous la section « Variables » dans la liste déroulante et ont des noms commençant par « $ ».  Choisir une variable dans ce filtre vous permettra de rechercher les valeurs que vous saisissez dans le champ variable du tableau de bord lui-même.  Tous les widgets utilisant cette variable dans un filtre seront mis à jour de manière dynamique.
 
 image:Variables_in_a_Widget_Filter.png["Sélection d'une variable dans un widget"]
 
@@ -578,126 +578,126 @@ image:Variables_in_a_Widget_Filter.png["Sélection d'une variable dans un widget
 
 ==== Portée du filtre variable
 
-Lorsque vous ajoutez une variable Annotation ou attribut à votre tableau de bord, la variable peut être appliquée à _All_ widgets du tableau de bord, ce qui signifie que tous les widgets de votre tableau de bord afficheront les résultats filtrés en fonction de la valeur que vous avez définie dans la variable.
+Lorsque vous ajoutez une variable d'annotation ou d'attribut à votre tableau de bord, la variable peut être appliquée à _tous_ les widgets du tableau de bord, ce qui signifie que tous les widgets de votre tableau de bord afficheront des résultats filtrés en fonction de la valeur que vous avez définie dans la variable.
 
 image:Variables_Automatic_Filter_Button.png["Filtre automatique"]
 
-Notez que seules les variables attribut et Annotation peuvent être filtrées automatiquement comme ceci. Les variables non-Annotation ou -Attribute ne peuvent pas être filtrées automatiquement. Chaque widget doit être configuré pour utiliser des variables de ces types.
+Notez que seules les variables d'attribut et d'annotation peuvent être filtrées automatiquement de cette manière.  Les variables non annotées ou attributaires ne peuvent pas être filtrées automatiquement.  Chaque widget individuel doit être configuré pour utiliser des variables de ces types.
 
-Pour désactiver le filtrage automatique de sorte que la variable s'applique uniquement aux widgets pour lesquels vous l'avez défini spécifiquement, cliquez sur le curseur « Filtrer automatiquement » pour le désactiver.
+Pour désactiver le filtrage automatique afin que la variable s'applique uniquement aux widgets pour lesquels vous l'avez spécifiquement définie, cliquez sur le curseur « Filtrer automatiquement » pour le désactiver.
 
-Pour définir une variable dans un widget individuel, ouvrez le widget en mode édition et sélectionnez l'annotation ou l'attribut spécifique dans le champ _Filter by_. Avec une variable d'annotation, vous pouvez sélectionner une ou plusieurs valeurs spécifiques ou sélectionner le nom de la variable (indiqué par le « $ ») pour permettre la saisie dans la variable au niveau du tableau de bord. La même chose s'applique aux variables d'attribut. Seuls les widgets pour lesquels vous définissez la variable affichent les résultats filtrés.
+Pour définir une variable dans un widget individuel, ouvrez le widget en mode édition et sélectionnez l'annotation ou l'attribut spécifique dans le champ _Filtrer par_.  Avec une variable d'annotation, vous pouvez sélectionner une ou plusieurs valeurs spécifiques, ou sélectionner le nom de la variable (indiqué par le « $ » initial) pour permettre la saisie de la variable au niveau du tableau de bord.  La même chose s’applique aux variables d’attribut.  Seuls les widgets pour lesquels vous définissez la variable afficheront les résultats filtrés.
 
-Le filtrage dans les variables est _Contextual_ ; lorsque vous sélectionnez une valeur de filtre ou des valeurs pour une variable, les autres variables de votre page n'affichent que les valeurs pertinentes pour ce filtre. Par exemple, lorsque vous définissez un filtre variable sur un stockage _Model_ spécifique, toutes les variables définies pour filtrer pour Storage _Name_ n'affichent que les valeurs pertinentes pour ce modèle.
+Le filtrage des variables est _contextuel_ ; lorsque vous sélectionnez une ou plusieurs valeurs de filtre pour une variable, les autres variables de votre page afficheront uniquement les valeurs pertinentes pour ce filtre.  Par exemple, lors de la définition d'un filtre de variable sur un _modèle_ de stockage spécifique, toutes les variables définies pour filtrer le _nom_ de stockage afficheront uniquement les valeurs pertinentes pour ce modèle.
 
-Pour utiliser une variable dans une expression, tapez simplement le nom de la variable dans l'expression, par exemple _$var1 * 100_. Seules les variables numériques peuvent être utilisées dans les expressions. Vous ne pouvez pas utiliser de variables d'annotation numérique ou d'attribut dans les expressions.
+Pour utiliser une variable dans une expression, saisissez simplement le nom de la variable dans le cadre de l'expression, par exemple, _$var1 * 100_.  Seules les variables numériques peuvent être utilisées dans les expressions.  Vous ne pouvez pas utiliser de variables d’annotation ou d’attribut numériques dans les expressions.
 
-Le filtrage dans les variables est _Contextual_ ; lorsque vous sélectionnez une valeur de filtre ou des valeurs pour une variable, les autres variables de votre page n'affichent que les valeurs pertinentes pour ce filtre. Par exemple, lorsque vous définissez un filtre variable sur un stockage _Model_ spécifique, toutes les variables définies pour filtrer pour Storage _Name_ n'affichent que les valeurs pertinentes pour ce modèle.
+Le filtrage des variables est _contextuel_ ; lorsque vous sélectionnez une ou plusieurs valeurs de filtre pour une variable, les autres variables de votre page afficheront uniquement les valeurs pertinentes pour ce filtre.  Par exemple, lors de la définition d'un filtre de variable sur un _modèle_ de stockage spécifique, toutes les variables définies pour filtrer le _nom_ de stockage afficheront uniquement les valeurs pertinentes pour ce modèle.
 
 
 
-==== Dénomination des variables
+==== Nommage des variables
 
-Noms des variables :
+Noms des variables :
 
-* Ne doit inclure que les lettres a-z, les chiffres 0-9, point (.), trait de soulignement (_) et espace ( ).
-* Ne peut pas comporter plus de 20 caractères.
-* Sont sensibles à la casse : $cityname et $cityname sont des variables différentes.
+* Doit inclure uniquement les lettres a à z, les chiffres 0 à 9, le point (.), le trait de soulignement (_) et l'espace ( ).
+* Ne peut pas dépasser 20 caractères.
+* Sont sensibles à la casse : $CityName et $cityname sont des variables différentes.
 * Ne peut pas être identique à un nom de variable existant.
 * Ne peut pas être vide.
 
 
 
 
-== Formatage des widgets de jauge
+== Widgets de jauge de formatage
 
-Les widgets solide et jauge à puce vous permettent de définir des seuils pour les niveaux _Warning_ et/ou _Critical_, fournissant une représentation claire des données que vous spécifiez.
+Les widgets Solid et Bullet Gauge vous permettent de définir des seuils pour les niveaux _Avertissement_ et/ou _Critique_, fournissant une représentation claire des données que vous spécifiez.
 
-image:GaugeWidgetFormatting.png["Paramètres de format pour le widget Gauge"]
+image:GaugeWidgetFormatting.png["Paramètres de format pour le widget de jauge"]
 
-Pour définir le formatage de ces widgets, procédez comme suit :
+Pour définir la mise en forme de ces widgets, suivez ces étapes :
 
-. Choisissez si vous souhaitez mettre en surbrillance des valeurs supérieures à (>) ou inférieures à (<) vos seuils. Dans cet exemple, nous allons mettre en surbrillance des valeurs supérieures à (>) les niveaux de seuil.
-. Choisissez une valeur pour le seuil « Avertissement ». Lorsque le widget affiche des valeurs supérieures à ce niveau, il affiche la jauge en orange.
-. Choisissez une valeur pour le seuil « critique ». Des valeurs supérieures à ce niveau entraînent l'affichage de la jauge en rouge.
-
-
-Vous pouvez choisir une valeur minimale et maximale pour la jauge. Les valeurs inférieures au minimum n'affichent pas la jauge. Les valeurs supérieures au maximum affichent une jauge complète. Si vous ne choisissez pas les valeurs minimum ou maximum, le widget sélectionne les valeurs min et max optimales en fonction de la valeur du widget.
-
-image:Gauge-Solid.png["Jauge pleine/traditionnelle, largeur=374"] image:Gauge-Bullet.png["Jauge à puce, largeur=374"]
+. Choisissez si vous souhaitez mettre en évidence les valeurs supérieures (>) ou inférieures (<) à vos seuils.  Dans cet exemple, nous mettrons en évidence les valeurs supérieures (>) aux niveaux de seuil.
+. Choisissez une valeur pour le seuil « Avertissement ».  Lorsque le widget affiche des valeurs supérieures à ce niveau, il affiche la jauge en orange.
+. Choisissez une valeur pour le seuil « Critique ».  Les valeurs supérieures à ce niveau entraîneront l'affichage de la jauge en rouge.
 
 
+Vous pouvez éventuellement choisir une valeur minimale et maximale pour la jauge.  Les valeurs inférieures au minimum n'afficheront pas la jauge.  Les valeurs supérieures au maximum afficheront une jauge pleine.  Si vous ne choisissez pas de valeurs minimales ou maximales, le widget sélectionne les valeurs minimales et maximales optimales en fonction de la valeur du widget.
 
-== Formatage du widget à valeur unique
-
-Dans le widget valeur unique, outre le réglage des seuils d'avertissement (orange) et critique (rouge), vous pouvez choisir d'avoir des valeurs « dans la plage » (celles qui se trouvent sous le niveau d'avertissement) affichées avec un arrière-plan vert ou blanc.
-
-image:Single-ValueWidgets.png["Widget de valeur unique avec et sans formatage"]
-
-Si vous cliquez sur le lien dans un widget à valeur unique ou un widget de jauge, une page de requête correspondant à la première requête du widget s'affiche.
+image:Gauge-Solid.png["Calibre solide/traditionnel, largeur = 374"] image:Gauge-Bullet.png["Calibre de balle, largeur = 374"]
 
 
 
-== Formatage des widgets de tableau
+== Formatage d'un widget à valeur unique
 
-Comme les widgets à valeur unique et jauge, vous pouvez définir un formatage conditionnel dans les widgets de tableau, ce qui vous permet de mettre en évidence des données avec des couleurs et/ou des icônes spéciales.
+dans le widget Valeur unique, en plus de définir les seuils d'avertissement (orange) et critique (rouge), vous pouvez choisir d'afficher les valeurs « Dans la plage » (celles en dessous du niveau d'avertissement) avec un arrière-plan vert ou blanc.
 
-La mise en forme conditionnelle vous permet de définir et de mettre en évidence les seuils de niveau d'avertissement et de niveau critique dans les widgets de tableau, offrant ainsi une visibilité instantanée des valeurs aberrantes et des points de données exceptionnels.
+image:Single-ValueWidgets.png["Widget à valeur unique avec et sans formatage"]
 
-image:ConditionalFormattingExample.png["Exemple de formatage conditionnel"]
-
-Le formatage conditionnel est défini séparément pour chaque colonne d'une table. Par exemple, vous pouvez choisir un ensemble de seuils pour une colonne de capacité et un autre pour une colonne de débit.
-
-Si vous modifiez l'affichage des unités pour une colonne, le formatage conditionnel reste et reflète la modification des valeurs. Les images ci-dessous montrent le même formatage conditionnel, même si l'unité d'affichage est différente.
-
-image:ConditionalFormatting_GiB.png["Mise en forme conditionnelle - Gio"] image:ConditionalFormatting_TiB.png["Mise en forme conditionnelle - Tio"]
-
-Vous pouvez choisir d'afficher ou non le format de condition en tant que couleur, icônes ou les deux.
+Cliquer sur le lien dans un widget à valeur unique ou dans un widget de jauge affichera une page de requête correspondant à la première requête du widget.
 
 
 
-== Choix de l'unité pour l'affichage des données
+== Widgets de tableau de formatage
 
-La plupart des widgets d'un tableau de bord vous permettent de spécifier les unités dans lesquelles afficher les valeurs, par exemple _mégaoctets_, _milliers_, _pourcentage_, _millisecondes (ms)_, etc. Dans de nombreux cas, Data Infrastructure Insights connaît le meilleur format pour les données acquises. Lorsque le format le plus adapté n'est pas connu, vous pouvez définir le format de votre choix.
+Comme les widgets à valeur unique et à jauge, vous pouvez définir une mise en forme conditionnelle dans les widgets de tableau, vous permettant de mettre en évidence les données avec des couleurs et/ou des icônes spéciales.
 
-Dans l'exemple de graphique en courbes ci-dessous, les données sélectionnées pour le widget sont connues sous la forme _octets_ (l'unité de données CEI de base : voir le tableau ci-dessous), de sorte que l'unité de base est automatiquement sélectionnée sous la forme 'octet (B)'. Toutefois, les valeurs de données sont suffisamment importantes pour être présentées sous forme de gibioctets (Gio). Data Infrastructure Insights formate donc automatiquement les valeurs par défaut sous forme de Gio. L'axe y du graphique affiche « Gio » comme unité d'affichage, et toutes les valeurs sont affichées en termes d'unité.
+La mise en forme conditionnelle vous permet de définir et de mettre en évidence les seuils de niveau d'avertissement et de niveau critique dans les widgets de tableau, offrant une visibilité instantanée sur les valeurs aberrantes et les points de données exceptionnels.
 
-image:used_memory_in_bytes.png["Octet d'unité de base affiché en gigaoctets,largeur=640"]
+image:ConditionalFormattingExample.png["Exemple de mise en forme conditionnelle"]
 
-Si vous souhaitez afficher le graphique dans une autre unité, vous pouvez choisir un autre format d'affichage des valeurs. Comme l'unité de base de cet exemple est _byte_, vous pouvez choisir parmi les formats « octet » pris en charge : bit (b), octet (B), kibyte (Kio), mebibyte (MIB), gibibyte (Gio). L'étiquette et les valeurs de l'axe y changent selon le format choisi.
+La mise en forme conditionnelle est définie séparément pour chaque colonne d'un tableau.  Par exemple, vous pouvez choisir un ensemble de seuils pour une colonne de capacité et un autre ensemble pour une colonne de débit.
 
-image:used_memory_in_bytes_gb.png["Choix d'une unité d'affichage, largeur=640"]
+Si vous modifiez l'affichage de l'unité pour une colonne, la mise en forme conditionnelle reste la même et reflète la modification des valeurs.  Les images ci-dessous montrent la même mise en forme conditionnelle même si l'unité d'affichage est différente.
 
-Dans les cas où l'unité de base n'est pas connue, vous pouvez attribuer une unité à partir de l' link:#available-units["unités disponibles"]ou saisir votre propre unité. Une fois l'unité de base affectée, vous pouvez choisir d'afficher les données dans l'un des formats pris en charge appropriés.
+image:ConditionalFormatting_GiB.png["Formatage conditionnel - Gio"] image:ConditionalFormatting_TiB.png["Mise en forme conditionnelle - TiB"]
 
-image:bits_per_second.png["Choisissez votre propre unité de base, largeur=320"]
-
-Pour effacer vos paramètres et recommencer, cliquez sur *Réinitialiser les paramètres par défaut*.
+Vous pouvez choisir d'afficher la mise en forme des conditions sous forme de couleur, d'icônes ou les deux.
 
 
 
-=== Un mot sur le format automatique
+== Choix de l'unité d'affichage des données
 
-La plupart des mesures sont signalées par des collecteurs de données dans la plus petite unité, par exemple en nombre entier, comme 1,234,567,890 octets. Par défaut, Data Infrastructure Insights formate automatiquement la valeur pour l'affichage le plus lisible. Par exemple, une valeur de données de 1,234,567,890 octets serait formatée automatiquement en 1.23 _Gibioctet_. Vous pouvez choisir de l'afficher dans un autre format, par exemple _mébioctets_. La valeur s'affiche en conséquence.
+La plupart des widgets d'un tableau de bord vous permettent de spécifier les unités dans lesquelles afficher les valeurs, par exemple _Mégaoctets_, _Milliers_, _Pourcentage_, _Millisecondes (ms)_, etc. Dans de nombreux cas, Data Infrastructure Insights connaît le meilleur format pour les données acquises.  Dans les cas où le meilleur format n'est pas connu, vous pouvez définir le format souhaité.
+
+Dans l'exemple de graphique linéaire ci-dessous, les données sélectionnées pour le widget sont connues pour être en _octets_ (l'unité de données IEC de base : voir le tableau ci-dessous), donc l'unité de base est automatiquement sélectionnée comme « octet (B) ».  Cependant, les valeurs de données sont suffisamment grandes pour être présentées sous forme de gibioctets (Gio), donc Data Infrastructure Insights formate automatiquement par défaut les valeurs en Gio.  L'axe Y du graphique indique « Gio » comme unité d'affichage et toutes les valeurs sont affichées en fonction de cette unité.
+
+image:used_memory_in_bytes.png["Unité de base Octet affiché en gigaoctets, largeur = 640"]
+
+Si vous souhaitez afficher le graphique dans une unité différente, vous pouvez choisir un autre format dans lequel afficher les valeurs.  Étant donné que l'unité de base dans cet exemple est _octet_, vous pouvez choisir parmi les formats « basés sur les octets » pris en charge : bit (b), octet (B), kibioctet (Kio), mébioctet (Mio), gibioctet (Gio).  L'étiquette et les valeurs de l'axe Y changent en fonction du format que vous choisissez.
+
+image:used_memory_in_bytes_gb.png["Choisir une unité d'affichage, largeur = 640"]
+
+Dans les cas où l'unité de base n'est pas connue, vous pouvez attribuer une unité parmi leslink:#available-units["unités disponibles"] , ou saisissez le vôtre.  Une fois que vous avez attribué une unité de base, vous pouvez ensuite choisir d'afficher les données dans l'un des formats pris en charge appropriés.
+
+image:bits_per_second.png["Choisissez votre propre unité de base, largeur = 320"]
+
+Pour effacer vos paramètres et recommencer, cliquez sur *Réinitialiser les valeurs par défaut*.
 
 
-NOTE: Data Infrastructure Insights utilise les normes de nommage en anglais américain. Le "milliard" américain équivaut à "mille millions".
+
+=== Un mot sur le formatage automatique
+
+La plupart des mesures sont rapportées par les collecteurs de données dans la plus petite unité, par exemple sous la forme d'un nombre entier tel que 1 234 567 890 octets.  Par défaut, Data Infrastructure Insights formatera automatiquement la valeur pour l'affichage le plus lisible.  Par exemple, une valeur de données de 1 234 567 890 octets serait automatiquement formatée à 1,23 _Gibioctets_.  Vous pouvez choisir de l'afficher dans un autre format, tel que _Mébioctets_.  La valeur s'affichera en conséquence.
+
+
+NOTE: Data Infrastructure Insights utilise les normes de dénomination des nombres en anglais américain.  Le « milliard » américain équivaut à « mille millions ».
 
 
 
-=== Widgets avec plusieurs requêtes
+=== Widgets avec requêtes multiples
 
-Si vous disposez d'un widget de séries chronologiques (ligne, spline, zone, zone empilée) comportant deux requêtes dans lesquelles les deux sont tracées sur l'axe y principal, l'unité de base n'est pas affichée en haut de l'axe Y. Toutefois, si votre widget a une requête sur l'axe y principal et une requête sur l'axe y secondaire, les unités de base de chacune sont affichées.
+Si vous disposez d'un widget de série chronologique (c'est-à-dire une ligne, une spline, une zone, une zone empilée) comportant deux requêtes où les deux sont tracées sur l'axe Y principal, l'unité de base n'est pas affichée en haut de l'axe Y.  Cependant, si votre widget comporte une requête sur l'axe Y principal et une requête sur l'axe Y secondaire, les unités de base de chacun sont affichées.
 
-image:UnitsOnPrimaryAndSecondaryYAxis.png["Unités sur les deux axes Y."]
+image:UnitsOnPrimaryAndSecondaryYAxis.png["Unités sur les deux axes Y"]
 
-Si votre widget a au moins trois requêtes, les unités de base ne sont pas affichées sur l'axe Y.
+Si votre widget comporte trois requêtes ou plus, les unités de base ne sont pas affichées sur l'axe Y.
 
 
 
 === Unités disponibles
 
-Le tableau suivant montre toutes les unités disponibles par catégorie.
+Le tableau suivant présente toutes les unités disponibles par catégorie.
 
 |===
 
@@ -705,144 +705,144 @@ Le tableau suivant montre toutes les unités disponibles par catégorie.
 | *Catégorie* | *Unités* 
 
 
-| Devise | dollar 
+| Devise | cent dollar 
 
 
-| Données (CEI) | octet binaire kibbyte mebibyte gibibyte tebibyte pebibyte exbibyte 
+| Données (CEI) | bit octet kibioctet mébioctet gibioctet tébioctet pébioctet exbioctet 
 
 
-| Date(CEI) | bit/sec octet/sec kibyte/sec mebibyte/sec gibibyte/sec tebibyte/sec pebibyte/sec 
+| Débit de données (CEI) | bit/sec octet/sec kibioctet/sec mébioctet/sec gibioctet/sec tébioctet/sec pébioctet/sec 
 
 
-| Données (métriques) | kilo-octet octet octet octet octet octet octet octet octet octet octet octet téraoctet 
+| Données (métriques) | kilooctet mégaoctet gigaoctet téraoctet pétaoctet exaoctet 
 
 
-| Date(métrique) | kilo-octet/s mégaoctet par seconde et gigaoctet par seconde téraoctet/s plusieurs pétaoctets/sec 
+| Débit de données (métrique) | kilooctet/sec mégaoctet/sec gigaoctet/sec téraoctet/sec pétaoctet/sec exaoctet/sec 
 
 
-| CEI | bami mebi gibi tebi exbi 
+| CEI | kibi mebi gibi tebi pebi exbi 
 
 
-| Décimale | nombre entier de milliers de milliards de bilions 
+| Décimal | nombre entier mille millions milliards mille milliards 
 
 
 | Pourcentage | pourcentage 
 
 
-| Heure | nanoseconde microseconde milliseconde seconde minute heure 
+| Durée | nanoseconde microseconde milliseconde seconde minute heure 
 
 
-| Température | celsius fahrenheit 
+| Température | Celsius Fahrenheit 
 
 
 | Fréquence | hertz kilohertz mégahertz gigahertz 
 
 
-| CPU | nanocores microcœurs millicores cœurs kilocolores megacores gigacores teracores petacores exacores 
+| processeur | nanocores microcores millicores coeurs kilocores mégacores gigacores teracores petacores exacores 
 
 
-| Débit | Opérations d'E/S par seconde (OPS/s) demandes par seconde (lectures/s) opérations par seconde (OPS/min) en lecture/min en écriture/min (min) 
+| Débit | E/S ops/sec ops/sec requêtes/sec lectures/sec écritures/sec ops/min lectures/min écritures/min 
 |===
 
 
-== Mode TV et actualisation automatique
+== Mode TV et rafraîchissement automatique
 
-Les données des widgets des tableaux de bord et des pages d'accueil des ressources sont automatiquement actualisées selon un intervalle d'actualisation déterminé par la plage horaire du tableau de bord sélectionnée. L'intervalle d'actualisation est basé sur le fait que le widget soit des séries chronologiques (ligne, spline, zone, graphique à surface empilée) ou des séries non temporelles (tous les autres graphiques).
+Les données des widgets des tableaux de bord et des pages de destination des ressources s'actualisent automatiquement en fonction d'un intervalle d'actualisation déterminé par la plage horaire du tableau de bord sélectionnée.  L'intervalle d'actualisation est basé sur le fait que le widget est une série chronologique (graphique linéaire, spline, aire, aire empilée) ou non chronologique (tous les autres graphiques).
 
 |===
 
 
-| Plage de temps du tableau de bord | Intervalle d'actualisation des séries de temps | Intervalle d'actualisation des séries non horaires 
+| Plage de temps du tableau de bord | Intervalle de rafraîchissement des séries chronologiques | Intervalle de rafraîchissement non chronologique 
 
 
-| Dernières 15 minutes | 10 secondes | 1 minute 
+| Les 15 dernières minutes | 10 secondes | 1 minute 
 
 
-| Dernières 30 minutes | 15 secondes | 1 minute 
+| Les 30 dernières minutes | 15 secondes | 1 minute 
 
 
-| Dernières 60 minutes | 15 secondes | 1 minute 
+| Les 60 dernières minutes | 15 secondes | 1 minute 
 
 
-| Dernières 2 heures | 30 secondes | 5 minutes 
+| Les 2 dernières heures | 30 secondes | 5 minutes 
 
 
-| Dernières 3 heures | 30 secondes | 5 minutes 
+| Les 3 dernières heures | 30 secondes | 5 minutes 
 
 
-| Dernières 6 heures | 1 minute | 5 minutes 
+| Les 6 dernières heures | 1 minute | 5 minutes 
 
 
-| Dernières 12 heures | 5 minutes | 10 minutes 
+| Les 12 dernières heures | 5 minutes | 10 minutes 
 
 
 | Dernières 24 heures | 5 minutes | 10 minutes 
 
 
-| 2 derniers jours | 10 minutes | 10 minutes 
+| Les 2 derniers jours | 10 minutes | 10 minutes 
 
 
-| 3 derniers jours | 15 minutes | 15 minutes 
+| Les 3 derniers jours | 15 minutes | 15 minutes 
 
 
-| 7 derniers jours | 1 heure | 1 heure 
+| Les 7 derniers jours | 1 heure | 1 heure 
 
 
-| 30 derniers jours | 2 heures | 2 heures 
+| Les 30 derniers jours | 2 heures | 2 heures 
 |===
 Chaque widget affiche son intervalle d'actualisation automatique dans le coin supérieur droit du widget.
 
-L'actualisation automatique n'est pas disponible pour la plage de temps du tableau de bord personnalisé.
+L'actualisation automatique n'est pas disponible pour la plage horaire du tableau de bord personnalisé.
 
-Combiné au *mode TV*, l'actualisation automatique permet d'afficher les données en temps quasi réel sur un tableau de bord ou une page de ressources. Le mode TV offre un affichage sans encombré ; le menu de navigation est masqué, offrant davantage d'espace pour l'affichage de vos données, tout comme le bouton Modifier. Le mode TV ignore les délais d'expiration habituels de Data Infrastructure Insights, laissant l'affichage en direct jusqu'à ce que la session soit fermée manuellement ou automatiquement par les protocoles de sécurité d'autorisation.
-
-
-NOTE: Étant donné que la console NetApp dispose de son propre délai d’expiration de connexion utilisateur de 7 jours, Data Infrastructure Insights doit également se déconnecter avec cet événement.  Vous pouvez simplement vous reconnecter et votre tableau de bord continuera à s'afficher.
-
-* Pour activer le mode TV, cliquez sur le bouton mode TV.
-* Pour désactiver le mode TV, cliquez sur le bouton *Quitter* dans le coin supérieur gauche de l'écran.
+Associé au *Mode TV*, l'actualisation automatique permet un affichage en temps quasi réel des données sur un tableau de bord ou une page d'actif.  Le mode TV offre un affichage épuré ; le menu de navigation est masqué, offrant plus d'espace à l'écran pour l'affichage de vos données, tout comme le bouton Modifier.  Le mode TV ignore les délais d'expiration typiques de Data Infrastructure Insights , laissant l'affichage en direct jusqu'à la déconnexion manuelle ou automatique par les protocoles de sécurité d'autorisation.
 
 
-Vous pouvez suspendre temporairement l'actualisation automatique en cliquant sur le bouton Pause dans le coin supérieur droit. En pause, le champ de plage de temps du tableau de bord affiche la plage de temps active des données en pause. Vos données sont toujours en cours d'acquisition et de mise à jour pendant l'actualisation automatique. Cliquez sur le bouton reprendre pour continuer l'actualisation automatique des données.
+NOTE: Étant donné que la NetApp Console dispose de son propre délai d’expiration de connexion utilisateur de 7 jours, Data Infrastructure Insights doit également se déconnecter avec cet événement.  Vous pouvez simplement vous reconnecter et votre tableau de bord continuera à s'afficher.
 
-image:AutoRefreshPaused.png["Actualisation automatique mise en pause"]
+* Pour activer le mode TV, cliquez sur le bouton Mode TV.
+* Pour désactiver le mode TV, cliquez sur le bouton *Quitter* en haut à gauche de l'écran.
+
+
+Vous pouvez suspendre temporairement l'actualisation automatique en cliquant sur le bouton Pause dans le coin supérieur droit.  En pause, le champ de plage horaire du tableau de bord affichera la plage horaire active des données en pause.  Vos données sont toujours en cours d'acquisition et de mise à jour pendant que l'actualisation automatique est suspendue.  Cliquez sur le bouton Reprendre pour continuer l’actualisation automatique des données.
+
+image:AutoRefreshPaused.png["Actualisation automatique interrompue"]
 
 
 
 == Groupes de tableaux de bord
 
-Le regroupement vous permet d'afficher et de gérer les tableaux de bord associés. Par exemple, vous pouvez disposer d'un groupe de tableaux de bord dédié au stockage de votre locataire. Les groupes de tableaux de bord sont gérés sur la page *tableaux de bord > Afficher tous les tableaux de bord*.
+Le regroupement vous permet de visualiser et de gérer les tableaux de bord associés.  Par exemple, vous pouvez avoir un groupe de tableaux de bord dédié au stockage sur votre locataire.  Les groupes de tableaux de bord sont gérés sur la page *Tableaux de bord > Afficher tous les tableaux de bord*.
 
 image:DashboardGroupNoPin.png["Regroupement du tableau de bord"]
 
-Deux groupes sont affichés par défaut :
+Deux groupes sont affichés par défaut :
 
 * *Tous les tableaux de bord* répertorie tous les tableaux de bord qui ont été créés, quel que soit le propriétaire.
 * *Mes tableaux de bord* répertorie uniquement les tableaux de bord créés par l'utilisateur actuel.
 
 
-Le nombre de tableaux de bord contenus dans chaque groupe s'affiche en regard du nom du groupe.
+Le nombre de tableaux de bord contenus dans chaque groupe est indiqué à côté du nom du groupe.
 
-Pour créer un nouveau groupe, cliquez sur le bouton *"+" Créer un nouveau groupe de tableau de bord*. Entrez un nom pour le groupe et cliquez sur *Créer un groupe*. Un groupe vide est créé avec ce nom.
+Pour créer un nouveau groupe, cliquez sur le bouton *"+" Créer un nouveau groupe de tableau de bord*.  Saisissez un nom pour le groupe et cliquez sur *Créer un groupe*.  Un groupe vide est créé avec ce nom.
 
-Pour ajouter des tableaux de bord au groupe, cliquez sur le groupe _tous les tableaux de bord_ pour afficher tous les tableaux de bord de votre locataire, cliquez sur _Mes tableaux de bord_ si vous souhaitez uniquement afficher les tableaux de bord que vous possédez, puis effectuez l'une des opérations suivantes :
+Pour ajouter des tableaux de bord au groupe, cliquez sur le groupe _Tous les tableaux de bord_ pour afficher tous les tableaux de bord de votre locataire, ou cliquez sur _Mes tableaux de bord_ si vous souhaitez uniquement voir les tableaux de bord que vous possédez, puis effectuez l'une des opérations suivantes :
 
-* Pour ajouter un tableau de bord unique, cliquez sur le menu à droite du tableau de bord et sélectionnez _Ajouter au groupe_.
-* Pour ajouter plusieurs tableaux de bord à un groupe, sélectionnez-les en cochant la case en regard de chaque tableau de bord, puis cliquez sur le bouton *actions groupées* et sélectionnez _Ajouter au groupe_.
-
-
-Supprimez les tableaux de bord du groupe actuel de la même manière en sélectionnant _Supprimer du groupe_. Vous ne pouvez pas supprimer de tableaux de bord du groupe _All Dashboards_ ou _My Dashboards_.
+* Pour ajouter un seul tableau de bord, cliquez sur le menu à droite du tableau de bord et sélectionnez _Ajouter au groupe_.
+* Pour ajouter plusieurs tableaux de bord à un groupe, sélectionnez-les en cliquant sur la case à cocher en regard de chaque tableau de bord, puis cliquez sur le bouton *Actions en masse* et sélectionnez _Ajouter au groupe_.
 
 
-NOTE: La suppression d'un tableau de bord d'un groupe ne supprime pas le tableau de bord de Data Infrastructure Insights. Pour supprimer complètement un tableau de bord, sélectionnez-le et cliquez sur _Delete_. Ceci le supprime de tous les groupes auxquels il appartenait et il n'est plus disponible pour aucun utilisateur.
+Supprimez les tableaux de bord du groupe actuel de la même manière en sélectionnant _Supprimer du groupe_.  Vous ne pouvez pas supprimer les tableaux de bord du groupe _Tous les tableaux de bord_ ou _Mes tableaux de bord_.
+
+
+NOTE: La suppression d'un tableau de bord d'un groupe ne supprime pas le tableau de bord de Data Infrastructure Insights.  Pour supprimer complètement un tableau de bord, sélectionnez le tableau de bord et cliquez sur _Supprimer_.  Cela le supprime de tous les groupes auxquels il appartenait et il n'est plus disponible pour aucun utilisateur.
 
 
 
-== Épinglez vos tableaux de bord favoris
+== Épinglez vos tableaux de bord préférés
 
-Vous pouvez gérer davantage vos tableaux de bord en les épingler en haut de votre liste de bord. Pour épingler un tableau de bord, cliquez simplement sur le bouton de la molette affiché lorsque vous placez le pointeur de la souris sur un tableau de bord dans n'importe quelle liste.
+Vous pouvez gérer davantage vos tableaux de bord en épinglant vos favoris en haut de votre liste de tableaux de bord.  Pour épingler un tableau de bord, cliquez simplement sur le bouton en forme de punaise affiché lorsque vous survolez un tableau de bord dans n'importe quelle liste.
 
-Le PIN/unpin du tableau de bord est une préférence utilisateur individuelle et indépendante du groupe (ou des groupes) auquel appartient le tableau de bord.
+L'épinglage/désépinglage du tableau de bord est une préférence individuelle de l'utilisateur et indépendante du groupe (ou des groupes) auquel appartient le tableau de bord.
 
 image:DashboardPin.png["Tableaux de bord épinglés"]
 
@@ -850,68 +850,68 @@ image:DashboardPin.png["Tableaux de bord épinglés"]
 
 == Thème sombre
 
-Vous pouvez choisir d'afficher Data Infrastructure Insights à l'aide d'un thème clair (par défaut), qui affiche la plupart des écrans à l'aide d'un fond clair avec du texte foncé, ou d'un thème sombre qui affiche la plupart des écrans à l'aide d'un fond sombre avec du texte clair.
+Vous pouvez choisir d'afficher Data Infrastructure Insights à l'aide d'un thème clair (par défaut), qui affiche la plupart des écrans avec un arrière-plan clair et du texte sombre, ou d'un thème sombre qui affiche la plupart des écrans avec un arrière-plan sombre et du texte clair.
 
-Pour basculer entre les thèmes clairs et sombres, cliquez sur le bouton username dans le coin supérieur droit de l'écran et choisissez le thème souhaité.
+Pour basculer entre les thèmes clairs et sombres, cliquez sur le bouton du nom d'utilisateur dans le coin supérieur droit de l'écran et choisissez le thème souhaité.
 
-image:DarkThemeSwitch.png["Basculer entre les thèmes lumineux et sombres"]
+image:DarkThemeSwitch.png["Basculer entre les thèmes clairs et sombres"]
 
-Vue Tableau de bord thème sombre : image:DarkThemeDashboardExample.png["Exemple de tableau de bord sur le thème sombre"]
+Vue du tableau de bord du thème sombre :image:DarkThemeDashboardExample.png["Exemple de tableau de bord à thème sombre"]
 
-Vue Tableau de bord thème clair : image:LightThemeDashboardExample.png["Exemple de tableau de bord sur le thème léger"]
-
-
-NOTE: Certaines zones d'écran, telles que certaines graphiques de widgets, affichent toujours des arrière-plans clairs, même lorsqu'elles sont visualisées sur un thème sombre.
+Vue du tableau de bord du thème clair :image:LightThemeDashboardExample.png["Exemple de tableau de bord à thème clair"]
 
 
+NOTE: Certaines zones de l'écran, telles que certains graphiques de widgets, affichent toujours des arrière-plans clairs même lorsqu'elles sont visualisées dans un thème sombre.
 
-== Interpolation de l'histogramme linéaire
 
-Différents collecteurs de données scruent souvent leurs données à différents intervalles. Par exemple, le collecteur de données A peut interroger toutes les 15 minutes alors que le collecteur de données B interroge toutes les cinq minutes. Lorsqu'un widget de graphique en ligne (également des graphiques de spline, de zone et de zone empilée) rassemble ces données de plusieurs collecteurs de données en une seule ligne (par exemple, lorsque le widget est regroupé par « tous »), Et actualiser la ligne toutes les cinq minutes, les données du collecteur B peuvent être affichées avec précision alors que les données du collecteur A peuvent avoir des écarts, ce qui affecte l'agrégat jusqu'à ce que le collecteur A interroge à nouveau.
 
-Pour résoudre ce problème, Data Infrastructure Insights interpole les données lors de l'agrégation, en utilisant les points de données environnants pour faire une « meilleure estimation » aux données jusqu'à ce que les collecteurs de données interrogent à nouveau. Vous pouvez toujours afficher les données de chaque objet du collecteur de données individuellement en ajustant le regroupement du widget.
+== Interpolation de graphique linéaire
+
+Différents collecteurs de données interrogent souvent leurs données à des intervalles différents.  Par exemple, le collecteur de données A peut interroger toutes les 15 minutes tandis que le collecteur de données B interroge toutes les cinq minutes.  Lorsqu'un widget de graphique linéaire (également des graphiques splines, à aires et à aires empilées) regroupe ces données provenant de plusieurs collecteurs de données en une seule ligne (par exemple, lorsque le widget regroupe par « tous ») et actualise la ligne toutes les cinq minutes, les données du collecteur B peuvent être affichées avec précision tandis que les données du collecteur A peuvent comporter des lacunes, affectant ainsi l'agrégat jusqu'à ce que le collecteur A interroge à nouveau.
+
+Pour remédier à ce problème, Data Infrastructure Insights interpole les données lors de l'agrégation, en utilisant les points de données environnants pour faire une « meilleure estimation » des données jusqu'à ce que les collecteurs de données effectuent une nouvelle interrogation.  Vous pouvez toujours afficher les données d'objet de chaque collecteur de données individuellement en ajustant le regroupement du widget.
 
 
 
 === Méthodes d'interpolation
 
-Lors de la création ou de la modification d'un graphique linéaire (ou d'une spline, d'une zone ou d'une zone empilée), vous pouvez définir la méthode d'interpolation sur l'un des trois types. Dans la section « Grouper par », choisissez l'interpolation souhaitée.
+Lors de la création ou de la modification d'un graphique linéaire (ou d'un graphique spline, à aires ou à aires empilées), vous pouvez définir la méthode d'interpolation sur l'un des trois types suivants.  Dans la section « Grouper par », choisissez l’interpolation souhaitée.
 
-image:Interpolation_Methods.png["Section regroupement de l'éditeur de widget affichant les trois méthodes d'interpolation"]
+image:Interpolation_Methods.png["Section de regroupement de l'éditeur de widgets montrant les trois méthodes d'interpolation"]
 
-* *Aucun* : ne rien faire, c'est-à-dire ne pas générer de points entre les deux.
-
-
-image:Interpolation_None.png["Ligne simple à angle droit ne montrant aucune interpolation entre les points de données"]
-
-* *Escalier* : un point est généré à partir de la valeur du point précédent. Dans une ligne droite, ceci s'affichera comme une disposition type « escalier ».
+* *Aucun* : Ne rien faire, c'est-à-dire ne pas générer de points entre les deux.
 
 
-image:Interpolation_Stair.png["Ligne droite simple montrant l'interpolation d'escalier"]
+image:Interpolation_None.png["Ligne droite simple à angle droit ne montrant aucune interpolation entre les points de données"]
 
-* *Linéaire* : un point est généré comme valeur entre la connexion des deux points. Génère une droite qui ressemble à la ligne reliant les deux points, mais avec des points de données supplémentaires (interpolés).
-
-
-image:Interpolation_Linear.png["Ligne droite simple montrant l'interpolation linéaire avec des points de données supplémentaires entre chaque point d'origine"]
+* *Escalier* : Un point est généré à partir de la valeur du point précédent.  En ligne droite, cela s'afficherait comme une disposition « en escalier » typique.
 
 
+image:Interpolation_Stair.png["Ligne droite simple montrant l'interpolation en escalier"]
 
-=== Limites d'anomalies dans les widgets en ligne
-
-Lors de l'inclusion d'un widget de graphique ligne ou Spline sur un tableau de bord ou une page d'accueil, vous pouvez choisir d'afficher le graphique dans le contexte des *limites attendues* pour les données. Vous pouvez penser à rechercher des anomalies dans les modèles de vos données.
-
-DII utilise les données saisonnières (horaire ou quotidien) pour définir les limites supérieures et inférieures là où il attend que les données tombent à un moment donné. Si les données dépassent ou tombent en dessous des limites attendues, le graphique les met en évidence comme une anomalie.
-
-image:expected_bounds_example_showing_spike.png["exemple de limites d'anomalie - affiche un pic où les données réelles dépassent la limite attendue, largeur=600"]
-
-Pour afficher les limites d'anomalie, modifiez le widget et choisissez _Afficher les limites d'anomalie_. Vous pouvez choisir parmi deux algorithmes de détection :
-
-* *Adaptive Detector* s'adapte rapidement aux changements, ce qui le rend utile pour les examens détaillés.
-* *Smooth Detector* minimise le bruit et les faux positifs, filtrant les fluctuations à court terme tout en détectant toujours des décalages importants.
+* *Linéaire* : un point est généré comme valeur entre la connexion des deux points.  Génère une ligne qui ressemble à la ligne reliant les deux points, mais avec des points de données supplémentaires (interpolés).
 
 
-En outre, vous pouvez choisir d'afficher la saisonnalité _horaire_ ou _quotidienne_, ainsi que de définir la sensibilité de la détection. _Haute_ sensibilité détecte plus de franchissement de limite, _faible_ sensibilité détecte moins.
+image:Interpolation_Linear.png["Ligne droite simple montrant une interpolation linéaire avec des points de données supplémentaires entre chaque point d'origine"]
 
-image:expected_bounds_settings.png["Paramètres des limites d'anomalie, y compris l'algorithme de détection, la saisonnalité et la sensibilité"]
 
-N'oubliez pas que vous ne pouvez afficher que les limites attendues lorsque le graphique est configuré pour afficher une seule ligne. Si vos paramètres ou filtres regrouper par affichent plusieurs lignes ou si vous avez défini plusieurs requêtes pour le widget, l'option d'affichage des limites attendues sera désactivée.
+
+=== Limites d'anomalie dans les widgets de ligne
+
+Lorsque vous incluez un widget de graphique linéaire ou spline sur un tableau de bord ou une page de destination, vous pouvez choisir d'afficher le graphique dans le contexte des *limites attendues* pour les données.  Vous pouvez considérer cela comme une recherche d’anomalies dans les modèles de vos données.
+
+DII utilise des données saisonnières (horaires ou quotidiennes) pour définir des limites supérieures et inférieures sur lesquelles il s'attend à ce que les données tombent à un moment donné.  Si les données dépassent ou chutent en dessous des limites attendues, le graphique mettra cela en évidence comme une anomalie.
+
+image:expected_bounds_example_showing_spike.png["exemple de limites d'anomalie - montrant un pic où les données réelles dépassent la limite attendue, largeur = 600"]
+
+Pour afficher les limites d'anomalie, modifiez le widget et choisissez _Afficher les limites d'anomalie_.  Vous pouvez choisir entre deux algorithmes de détection :
+
+* *Détecteur adaptatif* s'adapte rapidement aux changements, ce qui le rend utile pour les enquêtes détaillées.
+* *Smooth Detector* minimise le bruit et les faux positifs, filtrant les fluctuations à court terme tout en détectant les changements significatifs.
+
+
+De plus, vous pouvez choisir d'afficher la saisonnalité _horaire_ ou _quotidienne_, ainsi que de définir la sensibilité de détection.  Une sensibilité _élevée_ détecte davantage de franchissements de limites, une sensibilité _faible_ en détecte moins.
+
+image:expected_bounds_settings.png["paramètres des limites d'anomalie, y compris l'algorithme de détection, la saisonnalité et la sensibilité"]
+
+Gardez à l’esprit que vous ne pouvez afficher les limites attendues que lorsque le graphique est configuré pour afficher une seule ligne.  Si vos paramètres ou filtres de regroupement affichent plusieurs lignes, ou si vous avez défini plusieurs requêtes pour le widget, l'option permettant d'afficher les limites attendues sera désactivée.

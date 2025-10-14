@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar 
 permalink: concept_preview_features.html 
-summary: 'Les fonctionnalités d"aperçu sont disponibles dans une capacité limitée et les fonctionnalités de mise en évidence ne sont pas encore prêtes pour le temps de pointe.' 
+summary: 'Les fonctionnalités d"aperçu sont disponibles en capacité limitée et mettent en évidence les fonctionnalités qui ne sont pas encore prêtes pour les heures de grande écoute.' 
 keywords: coming soon, preview, 
 ---
-= Aperçu des fonctions et des fonctionnalités
+= Aperçu des fonctionnalités et fonctionnalités
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights met en avant les nouvelles fonctionnalités de manière _Preview_. Des fonctionnalités d'aperçu sont disponibles dans des environnements limités ou à une capacité limitée.
+Data Infrastructure Insights met en évidence les nouvelles fonctionnalités et fonctionnalités de manière _Aperçu_.  Les fonctionnalités d'aperçu sont disponibles dans des environnements limités ou à une capacité limitée.
 
 Si vous souhaitez prévisualiser une ou plusieurs de ces fonctionnalités, contactez votre équipe commerciale NetApp pour plus d'informations.

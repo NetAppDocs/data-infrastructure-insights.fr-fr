@@ -2,56 +2,56 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_ds.html 
 keywords: data collector, IBM DS6xxx, IBM DS6xxx, IBM, IBM DS 
-summary: Configuration du collecteur de données de la gamme DS8000 System Storage. 
+summary: Configuration du collecteur de données System Storage DS8000 Series. 
 ---
-= Collecteur de données de la gamme IBM System Storage DS8000
+= Collecteur de données IBM System Storage DS8000 Series
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Le collecteur de données IBM DS (CLI) prend en charge l'acquisition de données d'inventaire et de performance pour les périphériques DS6xxx et DS8xxx.
+Le collecteur de données IBM DS (CLI) prend en charge l'acquisition de données d'inventaire et de performances pour les périphériques DS6xxx et DS8xxx.
 
-Les périphériques DS3xxx, DS4xxx et DS5xxx sont pris en charge par le link:task_dc_na_eseries.html["Collecteur de données NetApp E-Series"]. Consultez le tableau de prise en charge de Data Infrastructure Insights pour connaître les modèles et les versions de micrologiciel pris en charge.
+Les périphériques DS3xxx, DS4xxx et DS5xxx sont pris en charge par lelink:task_dc_na_eseries.html["Collecteur de données NetApp E-Series"] .  Vous devez vous référer à la matrice de support de Data Infrastructure Insights pour connaître les modèles et les versions de micrologiciels pris en charge.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données IBM DS. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données IBM DS.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
 | Module de lecteur de disque | Disque 
 
 
-| Image stockage | Stockage 
+| Image de stockage | Stockage 
 
 
-| Pool d'extension | Nœud de stockage 
+| Piscine étendue | Nœud de stockage 
 
 
-| Volume du bloc fixe | Volumétrie 
+| Volume de bloc fixe | Volume 
 
 
 | Initiateur FC hôte (mappé) | Masque de volume 
 |===
-Remarque : il s'agit uniquement de mappages de terminologie communs et ne représentent peut-être pas tous les cas pour ce collectant de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-Vous devez disposer des éléments suivants pour configurer ce collecteur de données :
+Vous avez besoin des éléments suivants pour configurer ce collecteur de données :
 
-* Adresse IP de chaque matrice DS
+* Adresse IP de chaque baie DS
 * Nom d'utilisateur et mot de passe en lecture seule sur chaque baie DS
-* Logiciel tiers installé sur Data Infrastructure Insights au : IBM _dscli_
-* Validation des accès : exécutez les commandes _dscli_ à l'aide du nom d'utilisateur et du mot de passe
-* Configuration minimale requise pour les ports : 80, 443 et 1750
+* Logiciel tiers installé sur l'AU Data Infrastructure Insights : IBM _dscli_
+* Validation d'accès : exécutez les commandes _dscli_ en utilisant le nom d'utilisateur et le mot de passe
+* Exigences portuaires : 80, 443 et 1 750
 
 
 
@@ -63,16 +63,16 @@ Vous devez disposer des éléments suivants pour configurer ce collecteur de don
 | Champ | Description 
 
 
-| Stockage DS | Adresse IP ou nom de domaine complet du périphérique DS 
+| Stockage DS | Adresse IP ou nom de domaine complet de l'appareil DS 
 
 
-| Nom d'utilisateur | Nom d'utilisateur pour l'interface de ligne de commande DS 
+| Nom d'utilisateur | Nom d'utilisateur pour la DS CLI 
 
 
-| Mot de passe | Mot de passe pour l'interface de ligne de commande DS 
+| Mot de passe | Mot de passe pour la DS CLI 
 
 
-| _dscli_ chemin exécutable | Chemin complet vers l'exécutable _dscli_ 
+| chemin exécutable _dscli_ | Chemin complet vers l'exécutable _dscli_ 
 |===
 
 
@@ -83,28 +83,28 @@ Vous devez disposer des éléments suivants pour configurer ce collecteur de don
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire (min). La valeur par défaut est 40. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire (min).  La valeur par défaut est 40. 
 
 
 | Nom d'affichage du stockage | Nom de la baie de stockage IBM DS 
 
 
-| Périphériques d'exclusion d'inventaire | Liste des numéros de série des périphériques séparés par des virgules à exclure de la collecte des stocks 
+| Appareils exclus de l'inventaire | Liste séparée par des virgules des numéros de série des appareils à exclure de la collecte d'inventaire 
 
 
-| Intervalle d'interrogation des performances (s) | La valeur par défaut est 300. 
+| Intervalle d'interrogation des performances (sec) | La valeur par défaut est 300. 
 
 
-| Type de filtre de performances | Inclure : données collectées uniquement à partir des périphériques de la liste. Exclure : aucune donnée de ces périphériques n'est collectée 
+| Type de filtre de performance | Inclure : données collectées uniquement à partir des appareils de la liste.  Exclure : aucune donnée de ces appareils n'est collectée 
 
 
-| Liste des périphériques de filtre de performances | Liste séparée par des virgules d'ID de périphérique à inclure ou exclure de la collecte de performances 
+| Liste des périphériques de filtrage des performances | Liste séparée par des virgules des identifiants d'appareils à inclure ou à exclure de la collecte des performances 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -112,12 +112,12 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| Erreur contenant : CMUC00192E, CMUC00191E ou CMUC00190E | * Vérifier les informations d'identification et l'adresse IP saisies. * Essayez de communiquer avec la baie via la console de gestion Web \https://<ip>:8452/DS8000/Console. Remplacez <ip> par l'adresse IP configurée du collecteur de données. 
+| Erreur contenant : CMUC00192E, CMUC00191E ou CMUC00190E | * Vérifiez les informations d'identification et l'adresse IP saisie.  * Essayez de communiquer avec la baie via la console de gestion Web \https://<ip>:8452/DS8000/Console.  Remplacez <ip> par l'adresse IP configurée du collecteur de données. 
 
 
-| Erreur : * Impossible d'exécuter PROGRAM * erreur d'exécution de la commande | * À partir de l'unité d'acquisition Data Infrastructure Insights Ouvrez un fichier CMD * Ouvrez un fichier CLI.CFG dans le répertoire principal/lib de CLI et vérifiez la propriété JAVA_INSTALL, modifiez la valeur pour qu'elle corresponde à votre environnement * Afficher la version java installée sur cet ordinateur, en tapant: "java -version" * Ping l'adresse IP du périphérique de stockage IBM spécifiée dans la commande CLI émise. * Si toutes les réponses ci-dessus fonctionnent correctement, exécutez manuellement une commande CLI 
+| Erreur : * Impossible d'exécuter le programme * Erreur lors de l'exécution de la commande | * Depuis l'unité d'acquisition Data Infrastructure Insights, ouvrez un CMD * Ouvrez le fichier CLI.CFG dans le répertoire/lib de base de la CLI et vérifiez la propriété JAVA_INSTALL, modifiez la valeur pour qu'elle corresponde à votre environnement * Affichez la version Java installée sur cette machine en tapant : « java -version » * Envoyez une requête ping à l'adresse IP du périphérique de stockage IBM spécifié dans la commande CLI émise.  * Si tout ce qui précède a fonctionné correctement, exécutez manuellement une commande CLI 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

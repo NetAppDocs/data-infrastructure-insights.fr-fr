@@ -4,26 +4,26 @@ permalink: task_dc_emc_isilon_rest.html
 keywords: data collector, isilon, EMC, DELL, PowerScale 
 summary: Configuration du collecteur de données REST Dell EMC Isilon / PowerScale. 
 ---
-= Collecteur de données DE REPOS Dell EMC Isilon / PowerScale
+= Collecteur de données REST Dell EMC Isilon / PowerScale
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur de données REST Dell EMC Isilon / PowerScale pour acquérir des données d'inventaire et de performances à partir du stockage Dell EMC Isilon ou PowerScale. Ce collecteur prend en charge les baies exécutant OneFS 8.0.0+.
+Data Infrastructure Insights utilise le collecteur de données REST Dell EMC Isilon / PowerScale pour acquérir des données d'inventaire et de performances à partir du stockage Dell EMC Isilon ou PowerScale.  Ce collecteur prend en charge les tableaux exécutant OneFS 8.0.0+.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir de ce collecteur de données. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès de ce collecteur de données.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Lecteur | Disque 
+| Conduire | Disque 
 
 
 | Cluster | Stockage 
@@ -35,20 +35,20 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes à
 | Système de fichiers OneFS | Volume interne 
 
 
-| Système de fichiers OneFS | Pool de stockage 
+| Système de fichiers OneFS | Piscine de stockage 
 
 
 | Qtree | Qtree 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-Vous avez besoin des informations suivantes pour configurer ce collecteur de données :
+Vous avez besoin des informations suivantes pour configurer ce collecteur de données :
 
-* Un compte utilisateur et un mot de passe. Ce compte N'a PAS besoin d'être admin/root, mais vous DEVEZ accorder un nombre important de privilèges en lecture seule à votre compte de service - voir le tableau ci-dessous
+* Un compte utilisateur et un mot de passe.  Ce compte n'a PAS besoin d'être administrateur/root, mais vous DEVEZ accorder un nombre substantiel de privilèges en lecture seule à votre compte de service - voir le tableau ci-dessous
 * Adresse IP / Nom de domaine complet du cluster Dell EMC Isilon / PowerScale
 * Accès HTTPS au port 8080
 * Cluster Isilon / PowerScale exécutant OneFS 8.0.0 ou supérieur
@@ -56,22 +56,22 @@ Vous avez besoin des informations suivantes pour configurer ce collecteur de don
 
 [cols="3*"]
 |===
-| Nom de privilège | Description | r(lecture) ou rw (lecture+écriture) 
+| Nom du privilège | Description | r(lecture) ou rw (lecture+écriture) 
 
 
-| ISI_PRIV_LOGIN_PAPI | API de plateforme | r 
+| ISI_PRIV_LOGIN_PAPI | API de la plateforme | r 
 
 
-| ISI_PRIV_SYS_TIME | Heure | r 
+| ISI_PRIV_SYS_TIME | Durée | r 
 
 
-| ISI_PRIV_AUTH | Auth | r 
+| ISI_PRIV_AUTH | Authentification | r 
 
 
-| ISI_PRIV_ROLE | Privilège | r 
+| RÔLE_PRIV_ISI | Privilège | r 
 
 
-| ISI_PRIV_DEVICES | Périphériques | r 
+| APPAREILS_PRIVÉS_ISI | Appareils | r 
 
 
 | ISI_PRIV_EVENT | Événement | r 
@@ -83,31 +83,31 @@ Vous avez besoin des informations suivantes pour configurer ce collecteur de don
 | ISI_PRIV_NDMP | NDMP | r 
 
 
-| ISI_PRIV_NETWORK | Le réseau | r 
+| RÉSEAU_PRIVÉ_ISI | Réseau | r 
 
 
 | ISI_PRIV_NFS | NFS | r 
 
 
-| ISI_PRIV_PAPI_CONFIG | Configurer l'API de la plate-forme | r 
+| ISI_PRIV_PAPI_CONFIG | Configurer l'API de la plateforme | r 
 
 
 | ISI_PRIV_QUOTA | Quota | r 
 
 
-| ISI_PRIV_SMARTPOOLS | SmartPools | r 
+| Piscines intelligentes privées ISI | Piscines intelligentes | r 
 
 
 | ISI_PRIV_SMB | PME | r 
 
 
-| ISI_PRIV_STATISTICS | Statistiques | r 
+| STATISTIQUES_PRIV_ISI | Statistiques | r 
 
 
-| ISI_PRIV_SWIFT | SWIFT | r 
+| ISI_PRIV_SWIFT | Rapide | r 
 
 
-| ISI_PRIV_JOB_ENGINE | Moteur de tâches | r 
+| MOTEUR DE TRAVAIL ISI_PRIV | Moteur d'emploi | r 
 |===
 
 
@@ -121,7 +121,7 @@ Vous avez besoin des informations suivantes pour configurer ce collecteur de don
 | Adresse IP d'Isilon | L'adresse IP ou le nom de domaine complet du stockage Isilon 
 
 
-| Nom d'utilisateur | Nom d'utilisateur de l'Isilon 
+| Nom d'utilisateur | Nom d'utilisateur pour Isilon 
 
 
 | Mot de passe | Mot de passe utilisé pour l'Isilon 
@@ -138,16 +138,16 @@ Vous avez besoin des informations suivantes pour configurer ce collecteur de don
 | Port HTTPS | La valeur par défaut est 8080. 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 20. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire.  La valeur par défaut est 20. 
 
 
-| Intervalle d'interrogation des performances (s) | Intervalle entre les sondages de performances. La valeur par défaut est 300. 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performance.  La valeur par défaut est 300. 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -155,12 +155,12 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| "Informations d'identification non valides" avec des messages d'erreur "les commandes non activées pour l'administration basée sur les rôles nécessitent un accès utilisateur root" | * Vérifiez que l'utilisateur dispose des autorisations nécessaires pour exécuter les commandes suivantes sur le périphérique : > version isi osrelease > statut isi -q > statut isi -n > périphériques isi -d %s > licence isi * Vérifiez que les informations d'identification utilisées dans l'assistant correspondent aux informations d'identification de l'appareil 
+| « Informations de connexion non valides » avec le message d'erreur « Les commandes non activées pour l'administration basée sur les rôles nécessitent un accès utilisateur root » | * Vérifiez que l'utilisateur dispose des autorisations nécessaires pour exécuter les commandes suivantes sur le périphérique : > isi version osrelease > isi status -q > isi status -n > isi devices -d %s > isi license * Vérifiez que les informations d'identification utilisées dans l'assistant correspondent aux informations d'identification du périphérique 
 
 
-| "Erreur interne" avec les messages d'erreur "commande <votre commande> l'exécution a échoué avec l'autorisation: <votre autorisation actuelle>. Problème d'autorisation d'exécution de la commande sudo » | Vérifiez que l'utilisateur dispose des autorisations de sudo pour exécuter la commande suivante sur le périphérique 
+| « Erreur interne » avec les messages d'erreur « L'exécution de la commande <Votre commande> a échoué avec l'autorisation : <Votre autorisation actuelle>.  Problème d'autorisation d'exécution de la commande Sudo » | Vérifiez que l'utilisateur dispose des autorisations sudo pour exécuter la commande suivante sur l'appareil 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

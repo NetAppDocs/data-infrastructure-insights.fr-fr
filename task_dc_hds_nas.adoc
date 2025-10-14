@@ -4,26 +4,26 @@ permalink: task_dc_hds_nas.html
 keywords: data collector, HDS HNAS, HDS NAS 
 summary: 'Configuration du collecteur de données HDS NAS (HNAS).' 
 ---
-= Configuration du collecteur de données NAS Hitachi Vantara
+= Configuration du collecteur de données Hitachi Vantara NAS
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Le collecteur de données NAS Hitachi Vantara est un collecteur de données d'inventaire et de configuration qui prend en charge la découverte des clusters HDS NAS. Data Infrastructure Insights prend en charge la découverte des partages NFS et CIFS, des systèmes de fichiers (volumes internes) et des étendues (pools de stockage).
+Le collecteur de données Hitachi Vantara NAS est un collecteur de données d'inventaire et de configuration qui prend en charge la découverte de clusters NAS HDS.  Data Infrastructure Insights prend en charge la découverte des partages NFS et CIFS, des systèmes de fichiers (volumes internes) et des étendues (pools de stockage).
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données HNAS. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données HNAS.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Niveau | Groupe de disques 
+| Étage | Groupe de disques 
 
 
 | Cluster | Stockage 
@@ -32,24 +32,24 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes à
 | Nœud | Nœud de stockage 
 
 
-| De la plage | Pool de stockage 
+| Portée | Piscine de stockage 
 
 
-| Entraînement du système | LUN interne 
+| Lecteur système | Lun arrière-plan 
 
 
 | Système de fichiers | Volume interne 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-* Adresse IP du périphérique
+* Adresse IP de l'appareil
 * Port 22, protocole SSH
-* Nom d'utilisateur et mot de passe - niveau de privilège : superviseur
-* Remarque : ce collecteur de données est basé sur SSH. L'UA qui l'héberge doit donc être capable d'initier des sessions SSH vers TCP 22 sur le HNAS lui-même, ou l'unité de gestion des systèmes (SMU) à laquelle le cluster est connecté.
+* Nom d'utilisateur et mot de passe - niveau de privilège : Superviseur
+* Remarque : ce collecteur de données est basé sur SSH. L'AU qui l'héberge doit donc pouvoir lancer des sessions SSH sur TCP 22 sur le HNAS lui-même ou sur l'unité de gestion des systèmes (SMU) à laquelle le cluster est connecté.
 
 
 
@@ -64,10 +64,10 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Hôte HNAS | Adresse IP ou nom de domaine complet de l'hôte de gestion HNAS 
 
 
-| Nom d'utilisateur | Nom d'utilisateur pour la CLI HNAS 
+| Nom d'utilisateur | Nom d'utilisateur pour HNAS CLI 
 
 
-| Mot de passe | Mot de passe utilisé pour la CLI HNAS 
+| Mot de passe | Mot de passe utilisé pour HNAS CLI 
 |===
 
 
@@ -78,13 +78,13 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 30 minutes. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 30 minutes. 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -92,15 +92,15 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| "Erreur lors de la connexion" avec les messages d'erreur "erreur lors de la configuration du canal du shell :" ou "erreur lors de l'ouverture du canal du shell" | La cause est probablement des problèmes de connectivité réseau ou de configuration incorrecte du système SSH. Vérifiez la connexion avec un autre client SSH 
+| « Erreur de connexion » avec les messages d'erreur « Erreur de configuration du canal shell » ou « Erreur d'ouverture du canal shell » | Probablement causé par des problèmes de connectivité réseau ou par une mauvaise configuration de SSH.  Confirmer la connexion avec un autre client SSH 
 
 
-| "Timeout" ou "erreur lors de la récupération des données" avec les messages d'erreur "la commande: XXX a expiré". | * Essayez la commande avec un autre client SSH * augmentez le délai d'attente 
+| « Délai d'expiration » ou « Erreur lors de la récupération des données » avec les messages d'erreur « Commande : XXX a expiré. » | * Essayez la commande avec un autre client SSH * Augmentez le délai d'expiration 
 
 
-| « Erreur lors de la connexion » ou « informations d'identification non valides » avec des messages d'erreur « Impossible de communiquer avec le périphérique : » | * Vérifiez l'adresse IP * Vérifiez le nom d'utilisateur et le mot de passe * Confirmez la connexion avec un autre client SSH 
+| « Erreur de connexion » ou « Informations de connexion non valides » avec les messages d'erreur « Impossible de communiquer avec l'appareil : » | * Vérifier l'adresse IP * Vérifier le nom d'utilisateur et le mot de passe * Confirmer la connexion avec un autre client SSH 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

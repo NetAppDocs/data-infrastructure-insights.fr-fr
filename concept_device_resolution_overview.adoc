@@ -2,83 +2,83 @@
 sidebar: sidebar 
 permalink: concept_device_resolution_overview.html 
 keywords: Automatic, AR, AHR, Host, automatic device resolution 
-summary: 'La résolution automatique des périphériques vous aide à suivre avec précision les performances et l"inventaire de votre locataire.' 
+summary: 'La résolution automatique des appareils vous aide à suivre avec précision les performances et l"inventaire de votre locataire.' 
 ---
-= Présentation de la résolution automatique des périphériques
+= Présentation de la résolution automatique des appareils
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Vous devez identifier tous les dispositifs que vous souhaitez contrôler avec Data Infrastructure Insights. L'identification est nécessaire pour effectuer un suivi précis des performances et de l'inventaire de votre locataire. Généralement, la majorité des périphériques découverts sur votre locataire sont identifiés par _Automatic Device Resolution_.
+Vous devez identifier tous les appareils que vous souhaitez surveiller avec Data Infrastructure Insights.  L'identification est nécessaire afin de suivre avec précision les performances et l'inventaire de votre locataire.  En règle générale, la majorité des appareils détectés sur votre locataire sont identifiés via la _Résolution automatique des appareils_.
 
-Une fois que vous avez configuré des collecteurs de données, les périphériques de votre locataire, y compris les switchs, les baies de stockage et votre infrastructure virtuelle d'hyperviseurs et de VM, sont identifiés. Cependant, cela ne permet généralement pas d'identifier 100 % des périphériques de votre locataire.
+Une fois les collecteurs de données configurés, les périphériques de votre locataire, y compris les commutateurs, les baies de stockage et votre infrastructure virtuelle d’hyperviseurs et de machines virtuelles, sont identifiés.  Cependant, cela n’identifie normalement pas 100 % des appareils de votre locataire.
 
-Une fois les périphériques de type collecteur de données configurés, il est recommandé d'exploiter les règles de résolution des périphériques pour identifier les périphériques inconnus restants de votre locataire. La résolution de périphérique peut vous aider à résoudre les périphériques inconnus comme étant les types de périphériques suivants :
+Une fois les périphériques de type collecteur de données configurés, la meilleure pratique consiste à exploiter les règles de résolution de périphérique pour aider à identifier les périphériques inconnus restants sur votre locataire.  La résolution des appareils peut vous aider à résoudre les appareils inconnus tels que les types d'appareils suivants :
 
 * Hôtes physiques
-* Les baies de stockage
-* Les bandes
+* Baies de stockage
+* bandes
 
 
-Les périphériques qui restent inconnus après la résolution du périphérique sont considérés comme des périphériques génériques, que vous pouvez également afficher dans les requêtes et sur les tableaux de bord.
+Les appareils restant inconnus après la résolution de l'appareil sont considérés comme des appareils génériques, que vous pouvez également afficher dans les requêtes et sur les tableaux de bord.
 
-Les règles créées à leur tour identifieront automatiquement les nouveaux périphériques ayant des attributs similaires au fur et à mesure qu'ils sont ajoutés à votre environnement. Dans certains cas, la résolution des périphériques permet également une identification manuelle en contournant les règles de résolution des périphériques pour les périphériques non détectés dans Data Infrastructure Insights.
+Les règles créées à leur tour identifieront automatiquement les nouveaux appareils avec des attributs similaires à mesure qu'ils sont ajoutés à votre environnement.  Dans certains cas, la résolution des appareils permet également une identification manuelle en contournant les règles de résolution des appareils pour les appareils non détectés dans Data Infrastructure Insights.
 
-Une identification incomplète des périphériques peut entraîner des problèmes, notamment :
+Une identification incomplète des appareils peut entraîner des problèmes, notamment :
 
 * Chemins incomplets
-* Connexions à chemins d'accès multiples non identifiées
-* L'incapacité à regrouper les applications
+* Connexions multi-chemins non identifiées
+* L'impossibilité de regrouper les applications
 * Vues topologiques inexactes
 * Données inexactes dans l'entrepôt de données et les rapports
 
 
-La fonction de résolution du périphérique (gérer > résolution du périphérique) inclut les onglets suivants, chacun jouant un rôle dans la planification de la résolution du périphérique et dans l'affichage des résultats :
+La fonctionnalité de résolution de l'appareil (Gérer > Résolution de l'appareil) comprend les onglets suivants, chacun jouant un rôle dans la planification de la résolution de l'appareil et l'affichage des résultats :
 
-* *Fibre Channel Identify* contient une liste des WWN et des informations de port des périphériques Fibre Channel qui n'ont pas été résolus par la résolution automatique des périphériques. L'onglet identifie également le pourcentage de périphériques qui ont été identifiés.
-* *IP Address Identify* contient une liste de périphériques accédant aux partages CIFS et aux partages NFS qui n'ont pas été identifiés par la résolution automatique des périphériques. L'onglet identifie également le pourcentage de périphériques qui ont été identifiés.
-* *Règles de résolution automatique* contient la liste des règles qui sont exécutées lors de l'exécution de la résolution de périphérique Fibre Channel. Il s'agit de règles que vous créez pour résoudre les périphériques Fibre Channel non identifiés.
-* *Préférences* fournit des options de configuration que vous utilisez pour personnaliser la résolution de périphérique pour votre environnement.
+* *Fibre Channel Identify* contient une liste de WWN et d'informations de port des périphériques Fibre Channel qui n'ont pas été résolus via la résolution automatique des périphériques.  L'onglet identifie également le pourcentage d'appareils qui ont été identifiés.
+* *Identification de l'adresse IP* contient une liste des périphériques accédant aux partages CIFS et aux partages NFS qui n'ont pas été identifiés via la résolution automatique des périphériques.  L'onglet identifie également le pourcentage d'appareils qui ont été identifiés.
+* *Règles de résolution automatique* contient la liste des règles exécutées lors de la résolution des périphériques Fibre Channel.  Il s'agit de règles que vous créez pour résoudre les problèmes de périphériques Fibre Channel non identifiés.
+* *Préférences* fournit des options de configuration que vous utilisez pour personnaliser la résolution de l'appareil pour votre environnement.
 
 
 
 
 == Avant de commencer
 
-Vous devez savoir comment votre environnement est configuré avant de définir les règles d'identification des périphériques. Plus vous en saurez sur votre environnement, plus il sera facile d'identifier les périphériques.
+Vous devez savoir comment votre environnement est configuré avant de définir les règles d’identification des périphériques.  Plus vous en savez sur votre environnement, plus il sera facile d’identifier les appareils.
 
-Vous devez répondre à des questions similaires aux suivantes pour vous aider à créer des règles précises :
+Vous devez répondre à des questions similaires aux suivantes pour vous aider à créer des règles précises :
 
-* Votre environnement respecte-t-il des normes de dénomination pour les zones ou les hôtes, et quel est le pourcentage exact de ces zones ?
-* Votre environnement utilise-t-il un alias de commutateur ou un alias de stockage et correspond-il au nom d'hôte ?
-
-
-* À quelle fréquence les schémas de dénomination changent-ils pour votre locataire ?
-* Y a-t-il eu des acquisitions ou des fusions qui ont introduit différents systèmes de dénomination ?
+* Votre environnement dispose-t-il de normes de dénomination pour les zones ou les hôtes et quel pourcentage d’entre elles sont exactes ?
+* Votre environnement utilise-t-il un alias de commutateur ou un alias de stockage et correspondent-ils au nom d’hôte ?
 
 
-Après l'analyse de votre environnement, vous devriez être en mesure d'identifier les normes de dénomination existantes que vous pouvez vous attendre à des rencontres de fiabilité. Les informations que vous avez rassemblées peuvent être représentées graphiquement dans un chiffre similaire à ce qui suit :
-
-image:Device_Resolution_Venn.png["Diagramme de présentation du périphérique"]
-
-Dans cet exemple, le plus grand nombre de périphériques sont représentés de manière fiable par des alias de stockage. Les règles permettant d'identifier les hôtes utilisant des alias de stockage doivent d'abord être écrites, les règles utilisant des alias de commutateur doivent être écrites ensuite et les dernières règles créées doivent utiliser des alias de zone. En raison du chevauchement de l'utilisation des alias de zone et des alias de commutateur, certaines règles d'alias de stockage peuvent identifier des périphériques supplémentaires, laissant moins de règles requises pour les alias de zone et les alias de commutateur.
+* À quelle fréquence les schémas de dénomination changent-ils sur votre locataire ?
+* Y a-t-il eu des acquisitions ou des fusions qui ont introduit des schémas de dénomination différents ?
 
 
+Après avoir analysé votre environnement, vous devriez être en mesure d’identifier les normes de dénomination existantes que vous pouvez vous attendre à rencontrer de manière fiable.  Les informations que vous avez recueillies peuvent être représentées graphiquement dans une figure similaire à la suivante :
 
-== Étapes d'identification des périphériques
+image:Device_Resolution_Venn.png["Schéma de présentation de l'appareil"]
 
-En général, vous utilisez un flux de travail similaire à celui ci-dessous pour identifier les périphériques de votre locataire. L'identification est un processus itératif qui peut nécessiter plusieurs étapes de planification et de raffinage des règles.
+Dans cet exemple, le plus grand nombre de périphériques est représenté de manière fiable par des alias de stockage.  Les règles qui identifient les hôtes à l'aide d'alias de stockage doivent être écrites en premier, les règles utilisant des alias de commutateur doivent être écrites ensuite et les dernières règles créées doivent utiliser des alias de zone.  En raison du chevauchement de l'utilisation des alias de zone et des alias de commutateur, certaines règles d'alias de stockage peuvent identifier des périphériques supplémentaires, laissant moins de règles requises pour les alias de zone et les alias de commutateur.
+
+
+
+== Étapes pour identifier les appareils
+
+En règle générale, vous utiliseriez un flux de travail similaire à celui suivant pour identifier les appareils sur votre locataire.  L’identification est un processus itératif et peut nécessiter plusieurs étapes de planification et d’affinement des règles.
 
 * Environnement de recherche
-* Règles de plan
-* Créer/réviser des règles
-* Passez en revue les résultats
-* Créer des règles supplémentaires ou identifier manuellement les périphériques
-* L'a fait
+* Règles du plan
+* Créer/Réviser les règles
+* Résultats de l'examen
+* Créer des règles supplémentaires ou identifier manuellement les appareils
+* Fait
 
 
 
-NOTE: Si vous avez des périphériques non identifiés (ou des périphériques inconnus ou génériques) sur votre locataire et que vous configurez ensuite une source de données qui identifie ces périphériques lors de l'interrogation, ils ne seront plus affichés ou comptés comme périphériques génériques.
+NOTE: Si vous avez des périphériques non identifiés (également appelés périphériques inconnus ou génériques) sur votre locataire et que vous configurez ensuite une source de données qui identifie ces périphériques lors de l'interrogation, ils ne seront plus affichés ni comptés comme des périphériques génériques.
 
-Relié : link:task_device_resolution_rules.html["Création de règles de résolution de périphérique"] link:task_device_resolution_fibre_channel.html["Résolution de périphérique Fibre Channel"] link:task_device_resolution_ip.html["Résolution de périphérique IP"] link:task_device_resolution_preferences.html["Définition des préférences de résolution du périphérique"]
+En rapport:link:task_device_resolution_rules.html["Création de règles de résolution de périphérique"] link:task_device_resolution_fibre_channel.html["Résolution du périphérique Fibre Channel"] link:task_device_resolution_ip.html["Résolution du périphérique IP"] link:task_device_resolution_preferences.html["Définition des préférences de résolution de l'appareil"]

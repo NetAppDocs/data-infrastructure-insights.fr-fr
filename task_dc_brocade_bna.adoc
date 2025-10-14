@@ -10,42 +10,42 @@ summary: Configuration du collecteur Brocade BNA.
 
 
 [role="lead"]
-Les informations d'infrastructure de données utilisent le collecteur de données Brocade Network Advisor pour acquérir des données d'inventaire et de performance à partir de commutateurs Brocade.
+Data Infrastructure Insights utilise le collecteur de données Brocade Network Advisor pour acquérir des données d'inventaire et de performances à partir des commutateurs Brocade .
 
 
 
 == Terminologie
 
-Les informations d'infrastructure de données font l'acquisition des informations d'inventaire suivantes à partir du collecteur de données Brocade Network Advisor. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données Brocade Network Advisor.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Commutateur | Commutateur 
+| Changer | Changer 
 
 
 | Port | Port 
 
 
-| Structure virtuelle, structure physique | Structure 
+| Tissu virtuel, tissu physique | Tissu 
 
 
 | Commutateur logique | Commutateur logique 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-Les éléments suivants sont nécessaires pour configurer ce collecteur de données :
+Les éléments suivants sont requis pour configurer ce collecteur de données :
 
-* L'unité d'acquisition Data Infrastructure Insights initera les connexions au port TCP 443 sur le serveur BNA. Le serveur BNA doit exécuter la version 14.2.1 ou supérieure.
+* L'unité d'acquisition Data Infrastructure Insights initiera des connexions au port TCP 443 sur le serveur BNA.  Le serveur BNA doit exécuter la version 14.2.1 ou supérieure.
 * Adresse IP du serveur Brocade Network Advisor
-* Nom d'utilisateur et mot de passe d'un compte d'administrateur
-* Port requis : HTTP/HTTPS 443
+* Nom d'utilisateur et mot de passe d'un compte administrateur
+* Exigence de port : HTTP/HTTPS 443
 
 
 
@@ -57,10 +57,10 @@ Les éléments suivants sont nécessaires pour configurer ce collecteur de donn�
 | Champ | Description 
 
 
-| IP du serveur Brocade Network Advisor | Adresse IP du serveur Network Advisor 
+| Adresse IP du serveur Brocade Network Advisor | Adresse IP du serveur Network Advisor 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du commutateur 
+| Nom d'utilisateur | Nom d'utilisateur pour le commutateur 
 
 
 | Nom d'utilisateur | Nom d'utilisateur administrateur 
@@ -80,25 +80,25 @@ Les éléments suivants sont nécessaires pour configurer ce collecteur de donn�
 | Type de connexion | HTTPS (port par défaut 443) ou HTTP (port par défaut 80) 
 
 
-| Remplacer le port de connexion | Si ce champ est vide, utilisez le port par défaut dans le champ Type de connexion, sinon entrez le port de connexion à utiliser 
+| Remplacer le port de connexion | Si vide, utilisez le port par défaut dans le champ Type de connexion, sinon entrez le port de connexion à utiliser 
 
 
-| Mot de passe | Mot de passe du commutateur 
+| Mot de passe | Mot de passe pour le commutateur 
 
 
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 40 
+| Intervalle d'interrogation de l'inventaire (min) | La valeur par défaut est 40 
 
 
-| Passerelle d'accès aux rapports | Cochez cette case pour inclure les périphériques en mode passerelle d'accès 
+| Rapport sur la passerelle d'accès | Cochez cette case pour inclure les appareils en mode passerelle d'accès 
 
 
-| Intervalle d'interrogation des performances (s) | La valeur par défaut est 1800 
+| Intervalle d'interrogation des performances (sec) | La valeur par défaut est 1800 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -106,9 +106,9 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| Recevez un message indiquant que plus d'un nœud est connecté au port Access Gateway ou que le collecteur de données ne parvient pas à détecter le périphérique Access Gateway. | Vérifiez que le périphérique NPV fonctionne correctement et que tous les WWN connectés sont attendus. N'obtenez pas directement le périphérique NPV. L'acquisition du commutateur principal de la structure collecte plutôt les données du dispositif NPV. 
+| Recevez un message indiquant que plusieurs nœuds sont connectés au port Access Gateway ou que le collecteur de données ne parvient pas à détecter le périphérique Access Gateway. | Vérifiez que le périphérique NPV fonctionne correctement et que tous les WWN connectés sont attendus.  N'acquérez pas directement le dispositif NPV.  Au lieu de cela, l’acquisition du commutateur de structure principal collectera les données du périphérique NPV. 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

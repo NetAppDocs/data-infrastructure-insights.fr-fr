@@ -4,7 +4,7 @@ permalink: task_dc_rubrik_cdm.html
 keywords: data collector, Rubrik, 
 summary: Configuration du collecteur de données Rubrik CDM. 
 ---
-= Data Collector Rubrik CDM
+= Collecteur de données Rubrik CDM
 :hardbreaks:
 :allow-uri-read: 
 
@@ -16,14 +16,14 @@ Data Infrastructure Insights utilise le collecteur de données Rubrik pour acqu�
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données Rubrik. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données Rubrik.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Cluster | Stockage, pool de stockage 
+| Cluster | Stockage, réserve de stockage 
 
 
 | Nœud | Nœud de stockage 
@@ -31,20 +31,20 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes à
 
 | Disque | Disque 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour cette source de données.
 
 
 
-== De formation
+== Exigences
 
-Les éléments suivants sont nécessaires pour configurer ce collecteur de données :
+Les éléments suivants sont requis pour configurer ce collecteur de données :
 
-* L'unité d'acquisition Data Infrastructure Insights initie les connexions au port TCP 443 vers le cluster Rubrik. Un collecteur par cluster.
+* L'unité d'acquisition Data Infrastructure Insights initiera les connexions au port TCP 443 vers le cluster Rubrik.  Un collecteur par cluster.
 * Adresse IP du cluster Rubrik.
-* Nom d'utilisateur et mot de passe pour le cluster.
+* Nom d'utilisateur et mot de passe du cluster.
 * Adresse IP ou nom d'hôte du cluster Rubrik.
-* Pour l'authentification de base, un nom d'utilisateur et un mot de passe pour le cluster. Si vous préférez utiliser l'authentification basée sur le compte de service, vous devez disposer d'un compte de service, d'un secret et d'un ID d'organisation
-* Port requis : HTTPS 443
+* Pour l’authentification de base, un nom d’utilisateur et un mot de passe pour le cluster.  Si vous préférez utiliser l'authentification basée sur le compte de service, vous avez besoin d'un compte de service, d'un secret et d'un ID d'organisation
+* Exigence de port : HTTPS 443
 
 
 
@@ -56,10 +56,10 @@ Les éléments suivants sont nécessaires pour configurer ce collecteur de donn�
 | Champ | Description 
 
 
-| IP | Adresse IP du cluster Rubrik 
+| propriété intellectuelle | Adresse IP du cluster Rubrik 
 
 
-| Nom d'utilisateur / Compte de service | Nom d'utilisateur du cluster 
+| Nom d'utilisateur / Compte de service | Nom d'utilisateur pour le cluster 
 
 
 | Mot de passe / Secret | Mot de passe pour le cluster 
@@ -73,16 +73,16 @@ Les éléments suivants sont nécessaires pour configurer ce collecteur de donn�
 
 [cols="2*"]
 |===
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 
+| Intervalle d'interrogation de l'inventaire (min) | La valeur par défaut est 60 
 
 
-| Intervalle d'interrogation des performances (s) | La valeur par défaut est 300 
+| Intervalle d'interrogation des performances (sec) | La valeur par défaut est 300 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -90,12 +90,12 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| J'ai reçu un message indiquant que plusieurs stockages sont créés. | Vérifiez que le cluster est correctement configuré et que le collecteur pointe vers un seul cluster. 
+| J'ai reçu un message indiquant que plusieurs stockages ont été créés. | Vérifiez que le cluster est correctement configuré et que le collecteur pointe vers un seul cluster. 
 
 
 | Le sondage échoue avec 400 [Bad Request]...ManagedId non valide.... | Vous avez renseigné le champ ID d'organisation avec une valeur, mais le cluster Rubrik ne considère PAS qu'il s'agit d'un ID d'organisation valide, malgré le message d'erreur de Rubrik le désignant comme un « ManagedId ». 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: cs_automated_response_policies.html 
 keywords: alert, snapshot, ransomware, attack 
-summary: 'Vous pouvez définir des règles de réponse automatisées pour des attaques potentielles (par exemple, des ransomwares) et/ou des avertissements d"activité' 
+summary: 'Vous pouvez définir des politiques de réponse automatisées pour les attaques potentielles (telles que les ransomwares) et/ou les avertissements d"activité' 
 ---
-= Stratégies de réponse automatisées
+= Politiques de réponse automatisées
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,24 +14,24 @@ summary: 'Vous pouvez définir des règles de réponse automatisées pour des at
 
 
 [role="lead"]
-Les stratégies de réponse déclenchent des actions telles que la prise d'un instantané ou la restriction de l'accès de l'utilisateur en cas d'attaque ou de comportement anormal de l'utilisateur.
+Les politiques de réponse déclenchent des actions telles que la prise d’un instantané ou la restriction de l’accès des utilisateurs en cas d’attaque ou de comportement anormal des utilisateurs.
 
-Vous pouvez définir des stratégies sur des périphériques spécifiques ou sur tous les périphériques. Pour définir une stratégie de réponse, sélectionnez *Admin > Automated Response Policies* et cliquez sur le bouton *+Policy* approprié. Vous pouvez créer des stratégies pour les attaques ou les avertissements.
+Vous pouvez définir des politiques sur des appareils spécifiques ou sur tous les appareils.  Pour définir une politique de réponse, sélectionnez *Admin > Politiques de réponse automatisées* et cliquez sur le bouton *+Politique* approprié.  Vous pouvez créer des politiques pour les attaques ou pour les avertissements.
 
-image:ws_add_attack_policy.png["Ajoutez une boîte de dialogue Stratégie d'attaque affichant le menu déroulant du crochet Web"]
+image:ws_add_attack_policy.png["Ajouter une boîte de dialogue de politique d'attaque affichant la liste déroulante des webhooks"]
 
-Vous devez enregistrer la police avec un nom unique.
+Vous devez enregistrer la politique sous un nom unique.
 
-Pour désactiver une action de réponse automatisée (par exemple, prendre un instantané), il suffit d'annuler l'action et d'enregistrer la stratégie.
+Pour désactiver une action de réponse automatisée (par exemple, Prendre un instantané), décochez simplement l'action et enregistrez la politique.
 
-Lorsqu'une alerte est déclenchée par rapport aux périphériques spécifiés (ou à tous les périphériques, si elle est sélectionnée), la stratégie de réponse automatique prend un instantané de vos données. Vous pouvez voir l'état de l'instantané sur le link:cs_alert_data.html#the-alert-details-page["Page de détails de l'alerte"].
+Lorsqu'une alerte est déclenchée sur les appareils spécifiés (ou tous les appareils, s'ils sont sélectionnés), la politique de réponse automatisée prend un instantané de vos données.  Vous pouvez voir l'état de l'instantané sur lelink:cs_alert_data.html#the-alert-details-page["Page de détails de l'alerte"] .
 
-Reportez-vous link:cs_restrict_user_access.html["Limiter l'accès des utilisateurs"]à la page pour plus de détails sur la restriction de l'accès utilisateur par IP.
+Voir lelink:cs_restrict_user_access.html["Restreindre l'accès des utilisateurs"] page pour plus de détails sur la restriction de l'accès des utilisateurs par IP.
 
-Vous pouvez joindre un ou plusieurs webhooks à une stratégie pour être averti lorsqu'une alerte est créée et que des mesures sont prises. Il est recommandé d'ajouter au plus 10 webhooks à une stratégie.n'oubliez pas que si une stratégie est suspendue, les notifications webhook ne seront pas déclenchées.
+Vous pouvez attacher un ou plusieurs webhooks à une politique pour être averti lorsqu'une alerte est créée et qu'une action est entreprise.  Il est recommandé de ne pas ajouter plus de 10 webhooks à une politique. Gardez à l'esprit que si une politique est suspendue, les notifications de webhook ne seront pas déclenchées.
 
-Vous pouvez modifier ou interrompre une stratégie de réponse automatique en sélectionnant l'option dans le menu déroulant de la stratégie.
+Vous pouvez modifier ou suspendre une politique de réponse automatisée en choisissant l'option dans le menu déroulant de la politique.
 
-Le service de sécurité des charges de travail supprime automatiquement les snapshots une fois par jour en fonction des paramètres de suppression de Snapshot.
+Workload Security supprimera automatiquement les instantanés une fois par jour en fonction des paramètres de purge des instantanés.
 
 image:CloudSecure_SnapshotPurgeSettings.png["Paramètres de purge des instantanés"]

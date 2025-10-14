@@ -14,24 +14,24 @@ keywords: topology, analyze, analysis, map, virtual, vm, vmware
 
 
 [role="lead"]
-Avec *VM Analyzer* de DII, la gestion de vos ressources virtuelles devient plus simple et plus efficace. Cet outil puissant offre une visibilité de bout en bout, mappant les dépendances du VMDK/VM à l'hôte, au datastore, au volume interne/volume et au stockage.
+Avec *VM Analyzer* de DII, la gestion de vos actifs virtuels devient plus simple et plus efficace.  Cet outil puissant offre une visibilité de bout en bout, mappant les dépendances de VMDK/VM à l'hôte, au magasin de données, au volume interne/volume au stockage.
 
-Grâce à une carte topologique interactive, VM Analyzer vous permet de repérer les problèmes, de comprendre les modifications et d'améliorer la compréhension du flux de données. Rationalisez la gestion des machines virtuelles et augmentez votre visibilité sur les charges de travail virtuelles.
+En fournissant une carte topologique interactive, VM Analyzer vous permet d'identifier les problèmes, de comprendre les changements et d'améliorer la compréhension du flux de données.  Rationalisez la gestion des machines virtuelles et augmentez votre visibilité sur les charges de travail virtuelles.
 
-image:vm_analyzer_example_with_panel_a.png["Carte topologique d'un système de stockage avec l'analyseur VM"]
+image:vm_analyzer_example_with_panel_a.png["Carte topologique VM Analyzer d'un système de stockage"]
 
 
 
-== Explorer les connexions entre vos ressources
+== Explorez les connexions entre vos actifs
 
-Sélectionnez *observabilité > analyse > analyseur VM* pour afficher l'analyseur VM. Définissez un filtre pour l’application, la machine virtuelle, le volume, le volume interne ou ajoutez vos propres filtres. La carte des objets s'affiche, affichant les objets connectés. Passez le curseur sur un objet pour afficher les mesures de trafic pour ces connexions.
+Sélectionnez *Observabilité > Analyser > Analyseur de VM* pour afficher l'analyseur de VM.  Définissez un filtre pour l’application, la machine virtuelle, le volume, le volume interne ou ajoutez vos propres filtres.  La carte des objets s'affiche, montrant les objets connectés.  Passez la souris sur un objet pour afficher les mesures de trafic pour ces connexions.
 
 image:vm_analyzer_performance_metrics.png["Exemple de mesures de performances de VM Analyzer"]
 
 
-NOTE: La plupart des filtres VM Analyzer (y compris ceux que vous pouvez ajouter) sont contextuels ; lorsque vous sélectionnez un objet dans l'un de ces filtres, les choix présentés dans les autres listes déroulantes de filtre sont actualisés en contexte avec le ou les objets sélectionnés.
+NOTE: La plupart des filtres VM Analyzer (y compris ceux que vous pouvez ajouter) sont contextuels ; lorsque vous sélectionnez un objet dans l’un de ces filtres, les choix présentés dans les autres listes déroulantes de filtres sont actualisés en contexte avec l’objet ou les objets sélectionnés.
 
-Cliquer sur un objet ou un groupe ouvre un panneau coulissant fournissant des détails supplémentaires sur l'objet et ses connexions. Le panneau coulissant affiche un résumé détaillé de l'objet sélectionné (par exemple, le débit ou l'utilisation, selon le type d'objet), ainsi que des graphiques présentant des métriques telles que la latence ou les IOPS. Des onglets supplémentaires vous permettent d'explorer des ressources supplémentaires, des modifications et des alertes. Vous pouvez également choisir d'afficher les métriques des objets les plus corrélés ou en conflit sur les graphiques, si vous le souhaitez.
+Cliquer sur un objet ou un groupe ouvre un panneau coulissant fournissant des détails supplémentaires sur l'objet et ses connexions.  Le panneau coulissant affiche un résumé, qui fournit des détails sur l'objet sélectionné (par exemple, le débit ou l'utilisation, selon le type d'objet), et des graphiques affichant des métriques pour l'objet telles que la latence ou les IOPS.  Des onglets supplémentaires vous permettent d'explorer des ressources supplémentaires ou des modifications et des alertes associées.  Vous pouvez également choisir d'afficher les mesures des objets les plus corrélés ou les plus concurrents sur les graphiques, si vous le souhaitez.
 
 
 

@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: concept_troubleshooting_overview.html 
-summary: Cette section contient des conseils et des astuces pour résoudre les problèmes rencontrés dans votre environnement Data Infrastructure Insights. 
+summary: Dans cette section, vous trouverez des conseils et astuces pour vous aider à résoudre les problèmes dans votre environnement Data Infrastructure Insights . 
 keywords:  
 ---
-= Résolution des problèmes liés à l'exploitation de l'infrastructure de données
+= Dépannage des problèmes Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Les rubriques de cette section fournissent des conseils de dépannage en cas de problèmes liés à votre environnement Data Infrastructure Insights.
+Les rubriques de cette section fournissent des conseils de dépannage en cas de problèmes avec votre environnement Data Infrastructure Insights .
 
-Cliquez sur une catégorie dans le menu à gauche pour afficher les informations de dépannage correspondant à cette catégorie.
+Cliquez sur une catégorie dans le menu de gauche pour voir les informations de dépannage pour cette catégorie.
 
-Vous trouverez plus d'link:concept_requesting_support.html["assistance"]informations de dépannage et d'autres  informations sur la page informations sur l'infrastructure de données *aide > support*.
+Vous pouvez trouver plus de dépannage et d'autreslink:concept_requesting_support.html["soutien"] informations sur la page *Aide > Support* de Data Infrastructure Insights .

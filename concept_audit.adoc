@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_audit.html 
 keywords: audit, users, activities 
-summary: 'L"audit fournit une vue des activités du système et des utilisateurs dans le système Data Infrastructure Insights.' 
+summary: 'L"audit fournit une vue des activités du système et des utilisateurs dans le système Data Infrastructure Insights .' 
 ---
 = Audit
 :hardbreaks:
@@ -14,20 +14,20 @@ summary: 'L"audit fournit une vue des activités du système et des utilisateurs
 
 
 [role="lead"]
-Pour identifier les modifications attendues (pour le suivi) ou inattendues (pour le dépannage), vous pouvez afficher une piste d'audit des événements système et des activités utilisateur de Data Infrastructure Insights.
+Pour identifier les modifications attendues (pour le suivi) ou inattendues (pour le dépannage), vous pouvez afficher une piste d'audit des événements système et des activités des utilisateurs de Data Infrastructure Insights .
 
 
 
 == Affichage des événements audités
 
-Pour afficher la page Audit, cliquez sur *Admin > Audit* dans le menu. La page Audit s'affiche, avec les détails suivants pour chaque entrée d'audit :
+Pour afficher la page Audit, cliquez sur *Admin > Audit* dans le menu.  La page Audit s'affiche, fournissant les détails suivants pour chaque entrée d'audit :
 
 * *Heure* - Date et heure de l'événement ou de l'activité
-* *Utilisateur* - l'utilisateur qui a lancé l'activité
-* *Role* - rôle de l'utilisateur dans Data Infrastructure Insights (invité, utilisateur, administrateur)
-* *IP* - adresse IP associée à l'événement
-* *Action* - Type d'activité, par exemple connexion, création, mise à jour
-* *Catégorie* - la catégorie d'activité
+* *Utilisateur* - L'utilisateur qui a initié l'activité
+* *Rôle* - Le rôle de l'utilisateur dans Data Infrastructure Insights (invité, utilisateur, administrateur)
+* *IP* - L'adresse IP associée à l'événement
+* *Action* - Type d'activité, par exemple Connexion, Créer, Mettre à jour
+* *Catégorie* - La catégorie d'activité
 * *Détails* - Détails de l'activité
 
 
@@ -35,14 +35,14 @@ Pour afficher la page Audit, cliquez sur *Admin > Audit* dans le menu. La page A
 
 == Affichage des entrées d'audit
 
-Il existe plusieurs façons d'afficher les entrées d'audit :
+Il existe plusieurs façons différentes d’afficher les entrées d’audit :
 
-* Vous pouvez afficher les entrées d'audit en choisissant une période donnée (1 heure, 24 heures, 3 jours, etc.).
-* Vous pouvez modifier l'ordre de tri des entrées en croissant (flèche vers le haut) ou en descendant (flèche vers le bas) en cliquant sur la flèche dans l'en-tête de colonne.
+* Vous pouvez afficher les entrées d'audit en choisissant une période particulière (1 heure, 24 heures, 3 jours, etc.).
+* Vous pouvez modifier l'ordre de tri des entrées en croissant (flèche vers le haut) ou décroissant (flèche vers le bas) en cliquant sur la flèche dans l'en-tête de la colonne.
 +
-Par défaut, le tableau affiche les entrées dans l'ordre décroissant.
+Par défaut, le tableau affiche les entrées par ordre chronologique décroissant.
 
-* Vous pouvez utiliser les champs de filtre pour afficher uniquement les entrées souhaitées dans le tableau. Cliquez sur le bouton [+] pour ajouter des filtres supplémentaires.
+* Vous pouvez utiliser les champs de filtre pour afficher uniquement les entrées que vous souhaitez dans le tableau.  Cliquez sur le bouton [+] pour ajouter des filtres supplémentaires.
 +
 image:Audit_Filters.png["Filtres d'audit"]
 
@@ -50,9 +50,9 @@ image:Audit_Filters.png["Filtres d'audit"]
 
 
 
-=== Plus d'informations sur le filtrage
+=== En savoir plus sur le filtrage
 
-Vous pouvez utiliser l'une des méthodes suivantes pour affiner votre filtre :
+Vous pouvez utiliser l’un des éléments suivants pour affiner votre filtre :
 
 |===
 
@@ -60,77 +60,77 @@ Vous pouvez utiliser l'une des méthodes suivantes pour affiner votre filtre :
 | Filtre | Ce qu'il fait | Exemple | Résultat 
 
 
-| * (Astérisque) | permet de rechercher tout | vol*rhel | renvoie toutes les ressources commençant par « vol » et se terminant par « rhel ». 
+| * (Astérisque) | vous permet de rechercher tout ce que vous voulez | vol*rhel | renvoie toutes les ressources commençant par « vol » et se terminant par « rhel » 
 
 
-| ? (point d'interrogation) | permet de rechercher un nombre spécifique de caractères | BOS-PRD ??-S12 | Renvoie BOS-PRD**__12__**-S12, BOS-PRD**__23__**-S12, etc 
+| ? (point d'interrogation) | vous permet de rechercher un nombre spécifique de caractères | BOS-PRD??-S12 | renvoie BOS-PRD**__12__**-S12, BOS-PRD**__23__**-S12, et ainsi de suite 
 
 
-| OU | vous permet de spécifier plusieurs entités | FAS2240 OU CX600 OU FAS3270 | Renvoie l'un des modèles FAS2440, CX600 ou FAS3270 
+| OU | vous permet de spécifier plusieurs entités | FAS2240 OU CX600 OU FAS3270 | renvoie l'un des FAS2440, CX600 ou FAS3270 
 
 
-| PAS | permet d'exclure du texte des résultats de la recherche | PAS EMC* | Elle renvoie tous les éléments qui ne sont pas à l'avant par « EMC ». 
+| PAS | vous permet d'exclure du texte des résultats de recherche | NON EMC* | renvoie tout ce qui ne commence pas par « EMC » 
 
 
-| _Aucun_ | Recherche le champ vide/NULL/None dans n'importe quel champ sélectionné | _Aucun_ | renvoie les résultats lorsque le champ cible n'est pas vide 
+| _Aucun_ | recherche vide/NULL/Aucun dans n'importe quel champ sélectionné | _Aucun_ | renvoie les résultats lorsque le champ cible n'est pas vide 
 
 
-| Pas * | Comme avec _None_ ci-dessus, mais vous pouvez également utiliser ce formulaire pour rechercher des valeurs NULL dans les champs _text-only_ | Pas * | renvoie les résultats lorsque le champ cible n'est pas vide. 
+| Pas * | comme avec _None_ ci-dessus, mais vous pouvez également utiliser ce formulaire pour rechercher des valeurs NULL dans les champs _texte uniquement_ | Pas * | renvoie les résultats lorsque le champ cible n'est pas vide. 
 
 
-| « » | recherche une correspondance exacte | « NetApp* » | Renvoie les résultats contenant la chaîne littérale exacte _NetApp*_ 
+| "" | recherche une correspondance exacte | "NetApp*" | renvoie des résultats contenant la chaîne littérale exacte _NetApp*_ 
 |===
-Si vous placez une chaîne de filtre entre deux guillemets, Insight traite tout entre le premier et le dernier devis comme une correspondance exacte. Tous les caractères spéciaux ou opérateurs situés dans les guillemets seront traités comme des littéraux. Par exemple, le filtrage pour "*" renvoie des résultats qui sont un astérisque littéral ; l'astérisque ne sera pas traité comme un caractère générique dans ce cas. Les opérateurs OU ET NON sont également traités comme des chaînes littérales lorsqu'ils sont entourés de guillemets doubles.
+Si vous placez une chaîne de filtre entre guillemets doubles, Insight traite tout ce qui se trouve entre le premier et le dernier guillemet comme une correspondance exacte.  Tous les caractères spéciaux ou opérateurs à l’intérieur des guillemets seront traités comme des littéraux.  Par exemple, le filtrage par « * » renverra des résultats qui sont un astérisque littéral ; l'astérisque ne sera pas traité comme un caractère générique dans ce cas.  Les opérateurs OR et NOT seront également traités comme des chaînes littérales lorsqu'ils sont placés entre guillemets.
 
 
 
 == Événements et actions audités
 
-Les événements et les actions audités par Data Infrastructure Insights peuvent être classés dans les domaines suivants :
+Les événements et actions audités par Data Infrastructure Insights peuvent être classés dans les grands domaines suivants :
 
-* *Compte utilisateur* : connexion, déconnexion, changement de rôle, etc
-* *Unité d'acquisition* : créer, supprimer, etc
+* *Compte utilisateur* : Connexion, déconnexion, changement de rôle, etc.
+* *Unité d'acquisition* : créer, supprimer, etc.
 +
-Exemple : _unité d'acquisition *au-Boston-1* supprimé_.
+Exemple : _Unité d’acquisition *AU-Boston-1* supprimée_.
 
-* *Data Collector*: Ajouter, supprimer, modifier, différer/reprendre, changer l'unité d'acquisition, démarrage/arrêt, etc
+* *Collecteur de données* : ajouter, supprimer, modifier, reporter/reprendre, changer d'unité d'acquisition, démarrer/arrêter, etc.
 +
-Exemple : _source de données *laboratoire FlexPod* supprimé, fournisseur *NetApp*, modèle *logiciel de gestion des données ONTAP*, ip *192.168.106.5_*.
+Exemple : _Datasource * FlexPod Lab* supprimé, fournisseur * NetApp*, modèle * ONTAP Data Management Software*, IP *192.168.106.5_*.
 
-* *Application* : ajouter, attribuer à l'objet, supprimer, etc
+* *Application* : ajouter, affecter à un objet, supprimer, etc.
 +
-Exemple : _Volume interne *ocisedev:t1appSVM01:t1appFlexVol01* ajouté à l'application *Test App_*.
+Exemple : _Volume interne *ocisedev:t1appSVM01:t1appFlexVol01* ajouté à l'application *Test App_*.
 
-* *Annotation* : ajouter, affecter, supprimer, actions de règle d'annotation, modifications de valeur d'annotation, etc
+* *Annotation* : ajouter, attribuer, supprimer, actions de règle d'annotation, modifications de valeur d'annotation, etc.
 +
-Exemple : _valeur d'annotation *Boston* ajouté au type d'annotation *SalesOffice_*.
+Exemple : _Valeur d'annotation *Boston* ajoutée au type d'annotation *SalesOffice_*.
 
-* *Requête* : ajouter, supprimer, etc
+* *Requête* : ajouter, supprimer, etc.
 +
-Exemple : _Query *TL Sales Query* est ajouté_.
+Exemple : _La requête *TL Sales Query* est ajoutée_.
 
-* *Moniteur* : ajouter, supprimer, etc
+* *Moniteur* : ajouter, supprimer, etc.
 +
-Exemple : Monitor _aggr Size - ci Alerts Notifications Dev_ mis à jour
+Exemple : Surveiller _Aggr Size - CI Alerts Notifications Dev_ mis à jour
 
-* *Notification* : changer d'e-mail, etc
+* *Notification* : changement d'email, etc.
 +
-Exemple : destinataire _ci-alertes-notifications-dl_ créé
+Exemple : Destinataire _ci-alerts-notifications-dl_ créé
 
 
 
 
 
-== Exportation d'événements d'audit
+== Exportation des événements d'audit
 
-Vous pouvez exporter les résultats de votre affichage d'audit dans un fichier .CSV, qui vous permettra d'analyser les données ou de les importer dans une autre application.
+Vous pouvez exporter les résultats de votre affichage d'audit vers un fichier .CSV, ce qui vous permettra d'analyser les données ou de les importer dans une autre application.
 
 .Étapes
-. Sur la page Audit, définissez la plage de temps souhaitée et les filtres souhaités. Data Infrastructure Insights exporte uniquement les entrées d'audit correspondant au filtrage et à la plage de temps que vous avez définis.
-. Cliquez sur le bouton _Export_ image:ExportButton.png["Bouton Exporter"]dans le coin supérieur droit de la table.
+. Sur la page Audit, définissez la plage horaire souhaitée et les filtres souhaités.  Data Infrastructure Insights exportera uniquement les entrées d'audit qui correspondent au filtrage et à la plage horaire que vous avez définis.
+. Cliquez sur le bouton _Exporter_image:ExportButton.png["Bouton Exporter"] en haut à droite du tableau.
 
 
-Les événements d'audit affichés seront exportés vers un fichier .CSV, jusqu'à un maximum de 10,000 lignes.
+Les événements d'audit affichés seront exportés vers un fichier .CSV, jusqu'à un maximum de 10 000 lignes.
 
 
 
@@ -142,21 +142,21 @@ La durée pendant laquelle Data Infrastructure Insights conserve les données d'
 * Environnements abonnés : les données d'audit sont conservées pendant 1 an plus 1 jour
 
 
-Les entrées d'audit antérieures à la durée de conservation sont automatiquement supprimées. Aucune interaction de l'utilisateur n'est nécessaire.
+Les entrées d'audit plus anciennes que la durée de conservation sont automatiquement purgées.  Aucune interaction de l'utilisateur n'est nécessaire.
 
-Les entrées d'audit antérieures à la durée de conservation sont automatiquement supprimées. Aucune interaction de l'utilisateur n'est nécessaire.
+Les entrées d'audit plus anciennes que la durée de conservation sont automatiquement purgées.  Aucune interaction de l'utilisateur n'est nécessaire.
 
 
 
 == Dépannage
 
-Vous trouverez ici des suggestions pour résoudre les problèmes liés à l'audit.
+Vous trouverez ici des suggestions pour résoudre les problèmes liés à Audit.
 
 |===
 
 
-| *Problème:* | *Essayez ceci:* 
+| *Problème:* | *Essayez ceci :* 
 
 
-| Les messages d'audit me disent qu'un moniteur a été exporté. | Les ingénieurs NetApp peuvent généralement effectuer une exportation d'une configuration de moniteur personnalisée lors du développement et du test des nouvelles fonctionnalités. Si ce message ne s'affiche pas, envisagez d'explorer les actions de l'utilisateur nommé dans l'action vérifiée ou contactez l'assistance technique. 
+| Je vois des messages d'audit m'indiquant qu'un moniteur a été exporté. | L'exportation d'une configuration de moniteur personnalisée est généralement utilisée par les ingénieurs NetApp lors du développement et des tests de nouvelles fonctionnalités.  Si vous ne vous attendiez pas à voir ce message, pensez à explorer les actions de l'utilisateur nommé dans l'action auditée ou à contacter le support. 
 |===

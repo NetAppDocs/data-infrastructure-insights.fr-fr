@@ -2,41 +2,41 @@
 sidebar: sidebar 
 permalink: task_webhook_example_teams.html 
 keywords: webhook, notification, Microsoft, Teams, integration 
-summary: 'Créez un crochet Web pour signaler les seuils de performances ou d"inventaire pour Microsoft Teams' 
+summary: 'Créer un webhook pour alerter sur les seuils de performance ou d"inventaire pour Microsoft Teams' 
 ---
-= Exemple Webhook pour Microsoft Teams
+= Exemple de webhook pour Microsoft Teams
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Les Webpatères permettent aux utilisateurs d'envoyer des notifications d'alerte à diverses applications à l'aide d'un canal Web personnalisé. Cette page fournit un exemple de configuration des crochets pour les équipes.
+Les webhooks permettent aux utilisateurs d'envoyer des notifications d'alerte à diverses applications à l'aide d'un canal webhook personnalisé.  Cette page fournit un exemple de configuration de webhooks pour Teams.
 
 
-NOTE: Cette page fait référence aux instructions de tiers, qui peuvent faire l'objet de modifications. Reportez-vous au link:https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook["Documentation des équipes"] pour obtenir les informations les plus récentes.
+NOTE: Cette page fait référence à des instructions de tiers, qui peuvent être sujettes à modification.  Reportez-vous à lalink:https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook["Documentation des équipes"] pour les informations les plus récentes.
 
 
 
-== Configuration des équipes :
+== Configuration des équipes :
 
-. Dans Teams, sélectionnez le kebab et recherchez le Webhook entrant.
+. Dans Teams, sélectionnez le kebab et recherchez Webhook entrant.
 +
 image:Webhooks_Teams_Create_Webhook.png["Webhook entrant dans Teams"]
 
-. Sélectionnez *Ajouter à une association > Sélectionner une association > configurer un connecteur*.
-. Copiez l'URL du Webhook. Vous devez coller cette information dans la configuration du webhook Data Infrastructure Insights.
+. Sélectionnez *Ajouter à une équipe > Sélectionner une équipe > Configurer un connecteur*.
+. Copiez l'URL du Webhook.  Vous devrez coller ceci dans la configuration du webhook Data Infrastructure Insights .
 
 
 
 
-== Créer le Webhook Data Infrastructure Insights :
+== Créer un webhook Data Infrastructure Insights :
 
-. Dans Data Infrastructure Insights, accédez à *Admin > Notifications* et sélectionnez l'onglet *Webhooks*. Cliquez sur *+Webhook* pour créer un nouveau mousqueton.
-. Donnez au webhook un nom significatif, tel que "Teams Webhook".
-. Dans la liste déroulante _Template Type_, sélectionnez *Teams*.
+. Dans Data Infrastructure Insights, accédez à *Admin > Notifications* et sélectionnez l'onglet *Webhooks*.  Cliquez sur *+Webhook* pour créer un nouveau webhook.
+. Donnez au webhook un nom significatif, tel que « Webhook Équipes ».
+. Dans la liste déroulante _Type de modèle_, sélectionnez *Équipes*.
 
 
-image:Webhooks-Teams_example.png["Modèle de crochet Web pour les équipes"]
+image:Webhooks-Teams_example.png["Modèle de webhook Teams"]
 
 . Collez l'URL ci-dessus dans le champ _URL_.
 
@@ -45,12 +45,12 @@ image:Webhooks-Teams_example.png["Modèle de crochet Web pour les équipes"]
 
 == Notifications via Webhook
 
-Pour signaler des événements via Webhook, accédez à *alertes > moniteurs* dans Data Infrastructure Insights et cliquez sur *+Monitor* pour créer un nouveau link:task_create_monitor.html["superviser"].
+Pour notifier des événements via un webhook, dans Data Infrastructure Insights, accédez à *Alertes > Moniteurs* et cliquez sur *+Moniteur* pour créer un nouveaulink:task_create_monitor.html["moniteur"] .
 
-* Sélectionnez une mesure et définissez les conditions du moniteur.
-* Sous _configurer la ou les notifications d'équipe, choisissez la méthode de livraison *Webhook*.
-* Choisissez le « Teams » pour les événements souhaités (critique, Avertissement, résolu).
+* Sélectionnez une métrique et définissez les conditions du moniteur.
+* Sous _Configurer les notifications d'équipe_, choisissez la méthode de livraison *Webhook*.
+* Choisissez le webhook « Équipes » pour les événements souhaités (Critique, Avertissement, Résolu)
 +
-image:Webhooks_Teams_Notifications.png["Notifications de Webhook"]
+image:Webhooks_Teams_Notifications.png["Notifications Webhook"]
 
 

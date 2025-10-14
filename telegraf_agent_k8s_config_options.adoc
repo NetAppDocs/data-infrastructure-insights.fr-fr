@@ -16,122 +16,122 @@ summary: Configurez l’opérateur de surveillance NetApp Kubernetes à l’aide
 [role="lead"]
 Le link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Opérateur de surveillance Kubernetes"] Offre de nombreuses options de personnalisation via le fichier AgentConfiguration. Vous pouvez configurer les limites de ressources, les intervalles de collecte, les paramètres de proxy, les tolérances et les paramètres spécifiques aux composants afin d'optimiser la surveillance de votre environnement Kubernetes. Utilisez ces options pour personnaliser Telegraf, Kube-State-Metrics, la collecte des journaux, le mappage des charges de travail, la gestion des modifications et d'autres composants de surveillance.
 
-Le tableau ci-dessous répertorie les options possibles pour le fichier _AgentConfiguration_ :
+Le tableau ci-dessous répertorie les options possibles pour le fichier _AgentConfiguration_ :
 
 [cols="1,1,2"]
 |===
 | Composant | Option | Description 
 
 
-| agent |  | Options de configuration communes à tous les composants que l'opérateur peut installer. Ces options peuvent être considérées comme des options « globales ». 
+| agent |  | Options de configuration communes à tous les composants que l'opérateur peut installer.  Celles-ci peuvent être considérées comme des options « globales ». 
 
 
-|  | DockerRepo | Une substitution DockerRepo permet d'extraire les images des référentiels Docker privés du client plutôt que du référentiel Docker Data Infrastructure Insights . Le référentiel Docker Data Infrastructure Insights est utilisé par défaut. 
+|  | dockerRepo | Une substitution DockerRepo permet d'extraire les images des référentiels Docker privés du client plutôt que du référentiel Docker Data Infrastructure Insights . Le référentiel Docker Data Infrastructure Insights est utilisé par défaut. 
 
 
-|  | DockerImagePullSecret | Facultatif : un secret pour le référentiel privé du client. 
+|  | dockerImagePullSecret | Facultatif : un secret pour le référentiel privé du client. 
 
 
-|  | Nom du cluster | Champ de texte libre identifiant de manière unique un cluster parmi tous les clusters clients. Ce champ doit être unique pour un locataire Data Infrastructure Insights . La valeur par défaut correspond au champ « Nom du cluster » saisi par le client dans l'interface utilisateur. 
+|  | nom du cluster | Champ de texte libre identifiant de manière unique un cluster parmi tous les clusters clients. Ce champ doit être unique pour un locataire Data Infrastructure Insights . La valeur par défaut correspond au champ « Nom du cluster » saisi par le client dans l'interface utilisateur. 
 
 
-|  | Proxy format: Proxy: Server: Port: Nom d'utilisateur: Mot de passe: NoProxy: IsTelegrafProxyEnabled: IsAuProxyEnabled: IsFluentbitProxyEnabled: IsCollectorProxyEnabled: | Facultatif pour définir le proxy. Il s'agit généralement du proxy d'entreprise du client. 
+|  | Format proxy : proxy : serveur : port : nom d'utilisateur : mot de passe : noProxy : isTelegrafProxyEnabled : isAuProxyEnabled : isFluentbitProxyEnabled : isCollectorProxyEnabled : | Facultatif pour définir un proxy.  Il s’agit généralement du mandataire d’entreprise du client. 
 
 
-| telegraf |  | Options de configuration qui peuvent personnaliser l'installation de telegraf de l'opérateur 
+| télégraphe |  | Options de configuration permettant de personnaliser l'installation de Telegraf de l'opérateur 
 
 
-|  | Intervalle de collection | Intervalle de collecte des metrics, en secondes (max=60 s) 
+|  | intervalle de collection | Intervalle de collecte des métriques, en secondes (Max = 60 s) 
 
 
-|  | DsCpuLimit | Limite CPU pour les telegraf ds 
+|  | dsCpuLimit | Limite de CPU pour Telegraf DS 
 
 
-|  | DsMemLimit | Limite de mémoire pour les télégraf 
+|  | dsMemLimit | Limite de mémoire pour Telegraf DS 
 
 
-|  | DsCpuRequest | Demande CPU pour les telegraf ds 
+|  | dsCpuRequest | Demande de CPU pour Telegraf DS 
 
 
-|  | DsMemRequest | Demande de mémoire pour les télégraf 
+|  | dsMemRequest | Demande de mémoire pour telegraf ds 
 
 
-|  | RsCpuLimit | Limite CPU pour les RS telegraf 
+|  | Limite rsCpu | Limite de CPU pour Telegraf RS 
 
 
-|  | RsMemLimit | Limite de mémoire pour les RS telegraf 
+|  | rsMemLimit | Limite de mémoire pour Telegraf RS 
 
 
-|  | RsCpuRequest | Demande CPU pour les RS telegraf 
+|  | rsCpuRequest | Demande de CPU pour Telegraf RS 
 
 
-|  | RsMemRequest | Demande de mémoire pour les RS telegraf 
+|  | rsMemRequest | Demande de mémoire pour telegraf rs 
 
 
-|  | Avec privilèges d'exécution | Exécutez le conteneur _telegraf-mountstats-poller_ de telegraf DemonSet en mode privilégié. Définissez cette valeur sur true si SELinux est activé sur vos nœuds Kubernetes. 
+|  | exécuterPrivileged | Exécutez le conteneur _telegraf-mountstats-poller_ de Telegraf DaemonSet en mode privilégié.  Définissez cette option sur vrai si SELinux est activé sur vos nœuds Kubernetes. 
 
 
-|  | RunDsPrivileged | Définissez runDsPrivileged sur true pour exécuter le conteneur telegraf de telegraf DemonSet en mode privilégié. 
+|  | exécuterDsPrivileged | Définissez runDsPrivileged sur true pour exécuter le conteneur Telegraf du DaemonSet en mode privilégié. 
 
 
-|  | Taille de la batchSize | Voir link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
+|  | taille du lot | Voirlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
 
 
-|  | BufferLimit | Voir link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
+|  | limite de tampon | Voirlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
 
 
-|  | Interval | Voir link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
+|  | intervalle rond | Voirlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
 
 
-|  | CollectionJitter | Voir link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
+|  | collectionJitter | Voirlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
 
 
-|  | précision | Voir link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
+|  | précision | Voirlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
 
 
-|  | Intervalle de rinçage | Voir link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
+|  | intervalle de rinçage | Voirlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
 
 
-|  | Scintillement | Voir link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
+|  | flushJitter | Voirlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
 
 
-|  | OutputTimeout | Voir link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
+|  | délai d'expiration de sortie | Voirlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
 
 
-|  | Tolérances de type dsTolerations | télégraf-ds tolérances supplémentaires. 
+|  | dsTolérations | telegraf-ds tolérances supplémentaires. 
 
 
-|  | RsTolerations | tolérances supplémentaires de telegraf-rs. 
+|  | rsTolérances | telegraf-rs tolérances supplémentaires. 
 
 
-|  | SkipProcessorsAfterAggregators | Voir link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
+|  | ignorer les processeurs après les agrégateurs | Voirlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentation de configuration de Telegraf"] 
 
 
-|  | non protégé | Voir ceci link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["Problème connu de Telegraf"] . Le paramètre _non protégé_ demandera à l'opérateur de surveillance Kubernetes d'exécuter Telegraf avec le  `--unprotected` drapeau. 
+|  | non protégé | Voir ceci link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["problème connu de Telegraf"] . Le paramètre _non protégé_ demandera à l'opérateur de surveillance Kubernetes d'exécuter Telegraf avec le  `--unprotected` drapeau. 
 
 
-|  | insecureK8sSkipVerify | Si telegraf ne parvient pas à vérifier le certificat en raison de l'absence de SAN IP, essayez d'activer le saut de vérification 
+|  | insecureK8sSkipVerify | Si Telegraf ne parvient pas à vérifier le certificat en raison d'un manque de SAN IP, essayez d'activer l'option Ignorer la vérification. 
 
 
-| metrics-état-kube |  | Options de configuration permettant de personnaliser l'installation des mesures d'état kube de l'opérateur 
+| métriques d'état de kube |  | Options de configuration permettant de personnaliser l'installation des métriques d'état du kube de l'opérateur 
 
 
-|  | CpuLimit | Limite CPU pour le déploiement des indicateurs d'état kube 
+|  | Limite du processeur | Limite de CPU pour le déploiement de kube-state-metrics 
 
 
-|  | MemLimit | Limite MEM pour le déploiement de mesures kube-state 
+|  | limite de mémoire | Limite de mémoire pour le déploiement de kube-state-metrics 
 
 
-|  | CpuRequest | Demande de processeur pour le déploiement de metrics d'état kube 
+|  | demande de processeur | Demande de CPU pour le déploiement des métriques d'état Kube 
 
 
-|  | MemRequest | Demande MEM pour le déploiement de mesures d'état kube 
+|  | demande de mémoire | Demande de mémoire pour le déploiement des métriques d'état Kube 
 
 
-|  | ressources | une liste de ressources séparées par des virgules à capturer. exemple : cronjobs,demonsets,déploiements,ingresses,travaux,espaces de noms,nœuds,perstentvolumeclaims, perstentvolumes,pods,réplicasets,resourcetas,services,statefulsets 
+|  | ressources | une liste de ressources à capturer, séparées par des virgules. Exemple : cronjobs,daemonsets,deployments,ingresses,jobs,namespaces,nodes,persistentvolumeclaims, persistentvolumes,pods,replicasets,resourcequotas,services,statefulsets 
 
 
-|  | tolérances | tolérances supplémentaires des indicateurs d'état kube. 
+|  | tolérances | tolérances supplémentaires de kube-state-metrics. 
 
 
 |  | étiquettes | une liste séparée par des virgules de ressources pour lesquelles kube-state-metrics doit capturer les étiquettes +++ exemple : cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++ 
@@ -140,70 +140,70 @@ Le tableau ci-dessous répertorie les options possibles pour le fichier _AgentCo
 | journaux |  | Options de configuration permettant de personnaliser la collecte des journaux et l'installation de l'opérateur 
 
 
-|  | ReadFromHead | vrai/faux, doit couramment lire le journal à partir de la tête 
+|  | lireDeLaTête | vrai/faux, le bit fluide doit lire le journal depuis la tête 
 
 
-|  | délai dépassé | délai, en secondes 
+|  | temps mort | délai d'attente, en secondes 
 
 
-|  | DnsMode | TCP/UDP, mode pour DNS 
+|  | Mode DNS | TCP/UDP, mode pour DNS 
 
 
-|  | tolérances fluentes-bit | fluent-bit-ds tolérances supplémentaires. 
+|  | tolérances de bits fluides | tolérances supplémentaires fluent-bit-ds. 
 
 
-|  | tolérance-exportateur-événement | tolérances supplémentaires de l'exportateur d'événements. 
+|  | tolérances de l'exportateur d'événements | tolérances supplémentaires de l'exportateur d'événements. 
 
 
-|  | Event-exportateur-maxEventAgeSeconds | âge max. de l'événement de l'exportateur d'événement. Voir https://github.com/jkroepke/resmoio-kubernetes-event-exporter[] 
+|  | exportateur d'événements-maxEventAgeSeconds | exportateur d'événements âge maximal de l'événement.  Voir https://github.com/jkroepke/resmoio-kubernetes-event-exporter[] 
 
 
-|  | chemin du journal du conteneur de bits fluides | Par défaut, le DaemonSet Fluentbit monte les chemins d'accès /var/log et /var/lib/docker/containers pour accéder aux journaux des conteneurs Kubernetes et les lire. Si Kubernetes a été configuré pour placer les journaux des conteneurs dans un emplacement autre que celui par défaut, utilisez cette option pour modifier le DaemonSet Fluentbit afin de monter ce chemin. 
+|  | chemin du journal du conteneur fluent-bit | Par défaut, le DaemonSet Fluentbit montera les chemins d'hôte /var/log et /var/lib/docker/containers pour accéder/lire les journaux du conteneur Kubernetes.  Si Kubernetes a été configuré pour placer les journaux de conteneur dans un emplacement autre que celui par défaut, utilisez cette option pour modifier le DaemonSet Fluentbit afin de monter le chemin autre que celui par défaut. 
 
 
-| mappe des charges de travail |  | Options de configuration permettant de personnaliser la collection de cartes de charge de travail et l'installation de l'opérateur. 
+| carte de charge de travail |  | Options de configuration permettant de personnaliser la collecte et l'installation de la carte de charge de travail de l'opérateur. 
 
 
-|  | CpuLimit | Limite CPU pour net observateur ds 
+|  | Limite du processeur | Limite de CPU pour Net Observer DS 
 
 
-|  | MemLimit | limite mem pour les observateurs nets 
+|  | limite de mémoire | limite de mémoire pour l'observateur réseau ds 
 
 
-|  | CpuRequest | Demande CPU pour net observateur ds 
+|  | demande de processeur | Demande de CPU pour l'observateur réseau ds 
 
 
-|  | MemRequest | demande mem pour net observateur ds 
+|  | demande de mémoire | demande de mémoire pour l'observateur réseau ds 
 
 
-|  | Intervalle d'Aggregationde métadonnées | intervalle d'agrégation des mesures, en secondes 
+|  | metricAggregationInterval | intervalle d'agrégation des métriques, en secondes 
 
 
-|  | BpfPollInterval | Intervalle d'interrogation BPF, en secondes 
+|  | bpfPollInterval | Intervalle d'interrogation BPF, en secondes 
 
 
-|  | EnableDNSLookup | Vrai/faux, activer la recherche DNS 
+|  | activer DNSLookup | vrai/faux, activer la recherche DNS 
 
 
-|  | tolérances l4 | net-observateur-l4-ds tolérances supplémentaires. 
+|  | l4-tolérances | tolérances supplémentaires net-observer-l4-ds. 
 
 
-|  | Avec privilèges d'exécution | True/FALSE : définissez runPrivileged sur TRUE si SELinux est activé sur vos nœuds Kubernetes. 
+|  | exécuterPrivileged | true/false - Définissez runPrivileged sur true si SELinux est activé sur vos nœuds Kubernetes. 
 
 
-| gestion des modifications |  | Options de configuration de Kubernetes change Management and Analysis 
+| gestion du changement |  | Options de configuration pour la gestion et l'analyse des changements Kubernetes 
 
 
-|  | CpuLimit | Limite CPU pour change-observateur-Watch-RS 
+|  | Limite du processeur | Limite de CPU pour change-observer-watch-rs 
 
 
-|  | MemLimit | Limite MEM pour change-observateur-Watch-RS 
+|  | limite de mémoire | Limite de mémoire pour change-observer-watch-rs 
 
 
-|  | CpuRequest | Demande CPU pour change-observateur-Watch-RS 
+|  | demande de processeur | Demande CPU pour change-observer-watch-rs 
 
 
-|  | MemRequest | demande mem pour changement-observateur-watch-rs 
+|  | demande de mémoire | demande de modification de membre-observateur-watch-rs 
 
 
 |  | workloadFailureDeclarationIntervalSeconds | Intervalle après lequel un déploiement infructueux d'une charge de travail sera marqué comme ayant échoué, en secondes 
@@ -215,19 +215,19 @@ Le tableau ci-dessous répertorie les options possibles pour le fichier _AgentCo
 |  | nonWorkloadDeployAggrIntervalSeconds | Fréquence à laquelle les déploiements hors charge de travail sont combinés et envoyés, en secondes 
 
 
-|  | TermsToRedact | Un ensemble d'expressions régulières utilisées dans les noms env et les cartes de données dont la valeur sera bifftée. Exemples de termes : « pwd », « mot de passe », « jeton », « apikey », « api-key », « jwt » 
+|  | termesÀRédiger | Un ensemble d'expressions régulières utilisées dans les noms d'environnement et les cartes de données dont la valeur sera expurgée Exemples de termes : « pwd », « password », « token », « apikey », « api-key », « jwt » 
 
 
-|  | AdditionalKindsToWatch | Liste séparée par des virgules de types supplémentaires à surveiller par rapport à l'ensemble de types par défaut surveillés par le collecteur 
+|  | types supplémentaires à surveiller | Une liste séparée par des virgules de types supplémentaires à surveiller à partir de l'ensemble par défaut de types surveillés par le collecteur 
 
 
-|  | KindsToIgnoreFromWatch | Liste de types séparés par une virgule à ignorer de l'ensemble de types par défaut surveillés par le collecteur 
+|  | types à ignorer de la surveillance | Une liste séparée par des virgules de types à ignorer de l'observation à partir de l'ensemble par défaut de types surveillés par le collecteur 
 
 
-|  | LogRecordAggrIntervalSeconds | Fréquence à laquelle les enregistrements de journal sont envoyés à l'EC à partir du collecteur 
+|  | logRecordAggrIntervalSeconds | Fréquence à laquelle les enregistrements de journaux sont envoyés au CI depuis le collecteur 
 
 
-|  | tolérances de surveillance | change-observateur-watch-ds tolérances supplémentaires. Format abrégé à une seule ligne uniquement. Exemple : '{key: Taint1, operator: Exists, effect: NoSchedule},{key: Taint2, operator: Exists, effect: NoExecute}' 
+|  | tolérances de montre | change-observer-watch-ds tolérances supplémentaires.  Format abrégé sur une seule ligne uniquement.  Exemple : « {key : taint1, operator : Exists, effect : NoSchedule}, {key : taint2, operator : Exists, effect : NoExecute} » 
 |===
 
 

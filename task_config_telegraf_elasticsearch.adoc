@@ -10,43 +10,43 @@ summary: Configuration du collecteur de données Elasticsearch
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour collecter des metrics à partir de Elasticsearch.
+Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir d'Elasticsearch.
 
-. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez Elasticsearch.
+. Depuis *Observabilité > Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Elasticsearch.
 +
-Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+Sélectionnez le système d’exploitation ou la plate-forme sur laquelle l’agent Telegraf est installé.
 
-. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer les link:task_config_telegraf_agent.html["Installation de l'agent"]instructions.
-. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
-. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
+. Si vous n'avez pas encore installé d'agent pour la collecte, ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer lelink:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d’accès de l’agent à utiliser avec ce collecteur de données.  Vous pouvez ajouter une nouvelle clé d'accès d'agent en cliquant sur le bouton *+ Clé d'accès d'agent*.  Meilleure pratique : utilisez une clé d’accès d’agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple par système d’exploitation/plateforme.
+. Suivez les étapes de configuration pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.
 
 
 image:ElasticsearchDCConfigLinux.png["Configuration d'Elasticsearch"]
 
 
 
-== Configuration
+== Installation
 
-Vous trouverez des informations dans le link:https://www.elastic.co/guide/index.html["Documentation relative à Elasticsearch"].
+Des informations peuvent être trouvées dans lelink:https://www.elastic.co/guide/index.html["Documentation d'Elasticsearch"] .
 
 
 
 == Objets et compteurs
 
-Les objets suivants et leurs compteurs sont collectés :
+Les objets suivants et leurs compteurs sont collectés :
 
 [cols="<.<,<.<,<.<"]
 |===
-| Objet : | Identifiants : | Attributs : 
+| Objet: | Identifiants : | Attributs: 
 
 
-| Cluster Elasticsearch | Cluster de namespace | Nom de nœud IP du nœud État du cluster 
+| Cluster Elasticsearch | Cluster d'espace de noms | Nœud IP Nom du nœud Statut du cluster 
 
 
-| Nœud Elasticsearch | Nom du nœud ES du cluster d'espace de noms noeud ES noeud IP noeud ES | ID de zone 
+| Nœud Elasticsearch | Espace de noms Cluster ID du nœud ES IP du nœud ES Nœud ES | ID de zone 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur la link:concept_requesting_support.html["Assistance"] page.
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page.

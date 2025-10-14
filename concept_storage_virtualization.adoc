@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_storage_virtualization.html 
-summary: 'Les informations concernant l"infrastructure de données peuvent fournir des vues du stockage virtualisé frontal et back-end.' 
+summary: Data Infrastructure Insights peut fournir des vues sur le stockage virtualisé front-end et back-end. 
 keywords: storage, virtual, virtualized, virtualization, 
 ---
 = Virtualisation du stockage
@@ -10,34 +10,34 @@ keywords: storage, virtual, virtualized, virtualization,
 
 
 [role="lead"]
-Les informations d'infrastructure de données permettent de différencier une baie de stockage dotée d'un stockage local ou de la virtualisation d'autres baies de stockage. Vous pouvez ainsi établir le lien entre les coûts et distinguer les performances du stockage frontal et du stockage interne de votre infrastructure.
+Data Infrastructure Insights peut faire la différence entre une baie de stockage disposant d'un stockage local ou d'une virtualisation d'autres baies de stockage.  Cela vous donne la possibilité de relier les coûts et de distinguer les performances du front-end jusqu'au back-end de votre infrastructure.
 
 
 
-=== Virtualisation dans un widget Table
+=== Virtualisation dans un widget de table
 
-L'un des moyens les plus simples de commencer à examiner votre virtualisation du stockage est de créer un widget de tableau de bord montrant le type virtualisé. Lors de la création de la requête pour le widget, ajoutez simplement "virtualizedType" à votre groupement ou filtre.
+L’un des moyens les plus simples de commencer à examiner votre virtualisation de stockage est de créer un widget de tableau de bord affichant le type virtualisé.  Lors de la création de la requête pour le widget, ajoutez simplement « virtualizedType » à votre regroupement ou filtre.
 
-image:StorageVirtualization_TableWidgetSettings.png["Requête de base pour afficher les virtualizedTypes du stockage"]
+image:StorageVirtualization_TableWidgetSettings.png["Requête de base pour afficher les types de stockage virtualisés"]
 
-Le widget de table qui en résulte affiche les stockages _Standard_, _Backend_ et _Virtual_ de votre locataire.
+Le widget de tableau résultant vous montre les stockages _Standard_, _Backend_ et _Virtual_ sur votre locataire.
 
-image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["Tableau indiquant les types virtualisés"]
-
-
-
-=== Les pages d'accueil affichent des informations virtualisées
-
-Sur une page de stockage, de volume, de volume interne ou de disque, vous pouvez consulter les informations pertinentes sur la virtualisation. Par exemple, sur la page d'accueil du stockage ci-dessous, vous pouvez voir qu'il s'agit d'un stockage virtuel et quel système de stockage back-end s'applique. Tous les tableaux pertinents figurant sur les pages d'accueil indiqueront également des informations sur la virtualisation, le cas échéant.
-
-image:StorageVirtualization_StorageSummary.png["Page d'accueil du stockage affichant des informations sur le stockage virtuel et sauvegardé"]
+image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["Tableau présentant les types virtualisés"]
 
 
 
-=== Pages d'accueil et tableaux de bord existants
+=== Les pages de destination affichent des informations virtualisées
 
-Sachez que si vous disposez actuellement de pages d'accueil ou de tableaux de bord personnalisés sur votre locataire, ceux-ci n'afficheront pas automatiquement toutes les informations de virtualisation par défaut. Cependant, vous pouvez _revenir à la valeur par défaut_ tout tableau de bord ou page d'accueil personnalisé (vous devrez à nouveau mettre en œuvre vos personnalisations), ou modifier les widgets pertinents pour inclure les attributs ou mesures de virtualisation souhaités.
+Sur une page de destination de stockage, de volume, de volume interne ou de disque, vous pouvez voir les informations de virtualisation pertinentes.  Par exemple, en regardant la page de destination de stockage ci-dessous, vous pouvez voir qu'il s'agit d'un stockage virtuel et quel système de stockage backend s'applique.  Tous les tableaux pertinents sur les pages de destination afficheront également des informations de virtualisation, le cas échéant.
 
-_Rétablir par défaut_ est disponible dans le coin supérieur droit d'un tableau de bord personnalisé ou d'un écran de page d'accueil.
+image:StorageVirtualization_StorageSummary.png["Page de destination de stockage affichant les informations de stockage virtuel et sauvegardé"]
 
-image:RevertToDefault.png["Revenir au bouton par défaut"]
+
+
+=== Pages de destination et tableaux de bord existants
+
+Sachez que si vous disposez actuellement de pages de destination ou de tableaux de bord personnalisés sur votre locataire, ceux-ci n'afficheront pas automatiquement toutes les informations de virtualisation par défaut.  Cependant, vous pouvez _revenir aux valeurs par défaut_ de n'importe quel tableau de bord ou page de destination personnalisé (vous devrez réimplémenter vos personnalisations) ou modifier les widgets concernés pour inclure les attributs ou les mesures de virtualisation souhaités.
+
+_Revenir à la valeur par défaut_ est disponible dans le coin supérieur droit d'un tableau de bord personnalisé ou d'un écran de page de destination.
+
+image:RevertToDefault.png["Bouton Revenir à la valeur par défaut"]

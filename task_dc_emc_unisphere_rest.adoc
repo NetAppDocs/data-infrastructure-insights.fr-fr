@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_emc_unisphere_rest.html 
 keywords: data collector, Unisphere, EMC 
-summary: Configuration du collecteur de données REST Dell EMC Unisphere. 
+summary: Configuration du collecteur de données Dell EMC Unisphere REST. 
 ---
 = Configuration du collecteur de données REST Dell EMC Unisphere
 :hardbreaks:
@@ -10,21 +10,21 @@ summary: Configuration du collecteur de données REST Dell EMC Unisphere.
 
 
 [role="lead"]
-Ce collecteur de données acquiert les données d'inventaire et de performances de Dell EMC Unisphere pour les systèmes de gestion PowerMax / Vmax 3.
+Ce collecteur de données acquiert les données d'inventaire et de performances des systèmes de gestion Dell EMC Unisphere pour PowerMax / Vmax 3.
 
-Veuillez noter que Dell/EMC n'a pas introduit de statistiques par volume avant Unisphere 10.0 - ce collecteur de données prend en charge 9.2.0+, mais ne pourra pas collecter les statistiques de volume car elles n'existent pas.
+Veuillez noter que Dell/EMC n'a pas introduit de statistiques par volume avant Unisphere 10.0 - ce collecteur de données prend en charge la version 9.2.0+, mais ne pourra pas collecter de statistiques de volume car elles n'existent pas.
 
-Une instance Unisphere for Vmax/PowerMax peut gérer une ou plusieurs baies de stockage Symmetrix Vmax 3 ou supérieures. Ce collecteur tente par défaut de découvrir toutes les baies « locales » de cette instance Unisphere. Si une instance Unisphere voit des baies « distantes » (c'est-à-dire celles connectées via la réplication SRDF), elles seront ignorées et pour découvrir celles-ci, vous devez créer un collecteur Unisphere supplémentaire dans Data Infrastructure Insights pointés à n'importe quelle instance Unisphere de ce site les considère comme locales.
+Une instance Unisphere pour Vmax/PowerMax peut gérer une ou plusieurs baies de stockage Symmetrix Vmax 3 ou supérieures. Ce collecteur tentera par défaut de découvrir toutes celles qui sont « locales » pour cette instance Unisphere.  Si une instance Unisphere voit des tableaux « distants » (c'est-à-dire ceux connectés via la réplication SRDF), ils seront ignorés et pour les découvrir, vous devez créer un collecteur Unisphere supplémentaire dans Data Infrastructure Insights pointé vers l'instance Unisphere de ce site qui les voit comme locaux.
 
-Pour la configuration, le collecteur de données nécessite une adresse IP/FQDN du serveur Unisphere, la connectivité TCP au port 8443, ainsi qu'un nom d'utilisateur et un mot de passe.
+Pour la configuration, le collecteur de données nécessite une adresse IP/FQDN du serveur Unisphere, une connectivité TCP au port 8443, ainsi qu'un nom d'utilisateur et un mot de passe.
 
 
 
-== De formation
+== Exigences
 
-* Adresse IP/Nom de domaine complet du serveur Unisphere
+* Une adresse IP/nom de domaine complet du serveur Unisphere
 * Nom d'utilisateur et mot de passe
-* Orifice 8443.
+* Port 8443.
 
 
 
@@ -42,7 +42,7 @@ Pour la configuration, le collecteur de données nécessite une adresse IP/FQDN 
 | Port Unisphere | La valeur par défaut est 8443 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du serveur Unisphere 
+| Nom d'utilisateur | Nom d'utilisateur pour le serveur Unisphere 
 
 
 | Mot de passe | Mot de passe utilisé pour le serveur Unisphere 
@@ -56,25 +56,25 @@ Pour la configuration, le collecteur de données nécessite une adresse IP/FQDN 
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 40 minutes. 
+| Intervalle d'interrogation d'inventaire (min) | La valeur par défaut est de 40 minutes. 
 
 
-| Intervalle d'interrogation des performances (s) | Intervalle entre les sondages de performances. 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performance. 
 
 
-| Choisissez 'exclure' ou 'inclure' pour spécifier une liste | Indiquez s'il faut inclure ou exclure des VM 
+| Choisissez « Exclure » ou « Inclure » pour spécifier une liste | Spécifier s'il faut inclure ou exclure les machines virtuelles 
 
 
-| Liste des périphériques de filtre d'inventaire | Liste des machines virtuelles à filtrer (séparées par des virgules ou séparées par des points-virgules si la virgule est utilisée dans la valeur) pour le filtrage 
+| Liste des périphériques de filtrage d'inventaire | Liste des machines virtuelles à filtrer (séparées par des virgules ou par des points-virgules si une virgule est utilisée dans la valeur) pour le filtrage 
 
 
-| Intervalle d'interrogation des performances Unisphere (s) | La valeur par défaut est 300 secondes 
+| Intervalle de sondage des performances d'Unisphere (sec) | La valeur par défaut est de 300 secondes 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -82,12 +82,12 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| Erreur : l'authentification de l'utilisateur a échoué. | Assurez-vous que vos informations d'identification pour ce périphérique sont correctes. 
+| Erreur : l’authentification de l’utilisateur a échoué. | Assurez-vous que vos informations d'identification pour cet appareil sont correctes. 
 
 
-| État récent de l'inventaire : données inattendues récupérées -Array a signalé 0 volume | Indique généralement un problème d'autorisation (et non d'authentification). Assurez-vous que vos informations d'identification sont correctes et que le nom d'utilisateur est habilité à répertorier tous les volumes et à voir leurs attributs. 
+| Inventaire Statut récent : Données inattendues récupérées - La baie a signalé 0 volume | Indique généralement un problème d'autorisation (et non d'authentification).  Assurez-vous que vos informations d'identification sont correctes et que le nom d'utilisateur a le pouvoir de répertorier tous les volumes et de voir leurs attributs. 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

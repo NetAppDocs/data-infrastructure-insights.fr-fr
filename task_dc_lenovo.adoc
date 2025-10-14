@@ -10,17 +10,17 @@ summary: Configuration du collecteur de données Lenovo.
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur de données Lenovo pour détecter les données d'inventaire et de performances des systèmes de stockage Lenovo HX.
+Data Infrastructure Insights utilise le collecteur de données Lenovo pour découvrir les données d'inventaire et de performances des systèmes de stockage Lenovo HX.
 
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-* Adresse IP externe prismes
-* Nom d'utilisateur et mot de passe administrateur
-* Port TCP requis : 9440
+* Adresse IP externe de Prism
+* Nom d'utilisateur et mot de passe de l'administrateur
+* Exigence de port TCP : 9440
 
 
 
@@ -32,13 +32,13 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| Adresse IP externe prismes | L'adresse IP des services de données externes pour le cluster 
+| Adresse IP externe de Prism | L'adresse IP des services de données externes pour le cluster 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du compte Admin 
+| Nom d'utilisateur | Nom d'utilisateur pour le compte administrateur 
 
 
-| Mot de passe | Mot de passe du compte admin 
+| Mot de passe | Mot de passe pour le compte administrateur 
 |===
 
 
@@ -49,16 +49,16 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| Port TCP | Port TCP utilisé pour la connexion à la matrice. La valeur par défaut est 9440. 
+| Port TCP | Port TCP utilisé pour se connecter au tableau.  La valeur par défaut est 9440. 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 60 minutes. 
+| Intervalle d'interrogation de l'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 60 minutes. 
 
 
-| Intervalle d'interrogation des performances (s) | Intervalle entre les sondages de performances. La valeur par défaut est 300 secondes. 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performance. La valeur par défaut est de 300 secondes. 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

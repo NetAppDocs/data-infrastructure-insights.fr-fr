@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_ms_azure.html 
 keywords: data collector, azure, 
-summary: Configuration du collecteur de données de calcul Azure 
+summary: Configuration du collecteur de données de calcul Azure. 
 ---
 = Configuration du collecteur de données de calcul Azure
 :hardbreaks:
@@ -10,23 +10,23 @@ summary: Configuration du collecteur de données de calcul Azure
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur de données de calcul Azure pour acquérir des données d'inventaire et de performance à partir des instances de calcul Azure.
+Data Infrastructure Insights utilise le collecteur de données de calcul Azure pour acquérir des données d’inventaire et de performances à partir d’instances de calcul Azure.
 
 
 
-== De formation
+== Exigences
 
 Vous avez besoin des informations suivantes pour configurer ce collecteur de données.
 
-* Port requis : 443 HTTPS
+* Exigence de port : 443 HTTPS
 * URI de redirection Azure OAuth 2.0 (login.microsoftonline.com)
-* IP REST Azure Management (management.azure.com)
-* IP Azure Resource Manager (management.core.windows.net)
-* Identifiant d'application principale (client) du service Azure (rôle du lecteur requis)
-* Clé d'authentification principale du service Azure (mot de passe utilisateur)
-* Vous devez configurer un compte Azure pour la découverte Data Infrastructure Insights.
+* IP REST de gestion Azure (management.azure.com)
+* Adresse IP du gestionnaire de ressources Azure (management.core.windows.net)
+* ID d'application du principal de service Azure (client) (rôle de lecteur requis)
+* Clé d'authentification du principal du service Azure (mot de passe utilisateur)
+* Vous devez configurer un compte Azure pour la découverte de Data Infrastructure Insights .
 +
-Une fois le compte correctement configuré et que vous enregistrez l'application dans Azure, vous disposez des identifiants requis pour découvrir l'instance Azure avec Data Infrastructure Insights. Le lien suivant explique comment configurer le compte pour la découverte. https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+Une fois le compte correctement configuré et l’application enregistrée dans Azure, vous disposerez des informations d’identification requises pour découvrir l’instance Azure avec Data Infrastructure Insights.  Le lien suivant décrit comment configurer le compte pour la découverte.https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
 
 
 
@@ -34,23 +34,23 @@ Une fois le compte correctement configuré et que vous enregistrez l'application
 
 == Configuration
 
-Entrez les données dans les champs du collecteur de données conformément au tableau ci-dessous :
+Saisissez les données dans les champs du collecteur de données conformément au tableau ci-dessous :
 
 [cols="2*"]
 |===
 | Champ | Description 
 
 
-| Identifiant d'application principale (client) du service Azure (rôle du lecteur requis) | ID de connexion à Azure. Nécessite un accès au rôle Reader. 
+| ID d'application du principal de service Azure (client) (rôle de lecteur requis) | ID de connexion à Azure.  Nécessite un accès au rôle de lecteur. 
 
 
-| ID locataire Azure | ID locataire Microsoft 
+| ID de locataire Azure | ID de locataire Microsoft 
 
 
-| Clé d'authentification principale du service Azure | Clé d'authentification de connexion 
+| Clé d'authentification du principal du service Azure | Clé d'authentification de connexion 
 
 
-| J'ai bien compris que Microsoft me facture pour les demandes d'API | Vérifiez que vous avez bien compris que Microsoft vous facture des demandes d'API formulées par l'interrogation Insight. 
+| Je comprends que Microsoft me facture les demandes d'API | Cochez cette case pour vérifier que vous avez bien compris que Microsoft vous facture les demandes d’API effectuées par le sondage Insight. 
 |===
 
 
@@ -61,19 +61,19 @@ Entrez les données dans les champs du collecteur de données conformément au t
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 
+| Intervalle d'interrogation d'inventaire (min) | La valeur par défaut est 60 
 
 
-| Choisissez exclure ou inclure pour appliquer le filtrage des VM par balises | Indiquez s'il faut inclure ou exclure des VM par des étiquettes lors de la collecte de données. Si l'option "inclure" est sélectionnée, le champ clé d'étiquette ne peut pas être vide. 
+| Choisissez « Exclure » ou « Inclure » pour appliquer le filtre aux machines virtuelles par balises | Spécifiez s'il faut inclure ou exclure les machines virtuelles par balises lors de la collecte de données.  Si « Inclure » est sélectionné, le champ Clé de balise ne peut pas être vide. 
 
 
-| Clés de balise et valeurs sur lesquelles filtrer les machines virtuelles | Cliquez sur *+ Filter Tag* pour choisir les VM (et les disques associés) à inclure/exclure en filtrant les clés et les valeurs qui correspondent aux clés et aux valeurs des balises de la VM. La clé d'étiquette est requise, la valeur d'étiquette est facultative. Lorsque la valeur de balise est vide, la machine virtuelle est filtrée tant qu'elle correspond à la clé de balise. 
+| Clés et valeurs de balises sur lesquelles filtrer les machines virtuelles | Cliquez sur *+ Filtrer la balise* pour choisir les machines virtuelles (et les disques associés) à inclure/exclure en filtrant les clés et les valeurs qui correspondent aux clés et aux valeurs des balises sur la machine virtuelle.  La clé de balise est obligatoire, la valeur de balise est facultative.  Lorsque la valeur de balise est vide, la machine virtuelle est filtrée tant qu'elle correspond à la clé de balise. 
 
 
-| Intervalle d'interrogation des performances (s) | La valeur par défaut est 300 
+| Intervalle d'interrogation des performances (sec) | La valeur par défaut est 300 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

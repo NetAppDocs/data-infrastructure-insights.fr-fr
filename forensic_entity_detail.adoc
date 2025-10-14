@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: forensic_entity_detail.html 
 keywords: Forensic, entity, entity overview, entity behavior, entities 
-summary: Entités judiciaires 
+summary: Page des entités médico-légales 
 ---
-= Page entités judiciaires
+= Page des entités médico-légales
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,18 @@ summary: Entités judiciaires
 
 
 [role="lead"]
-La page entités Forensics fournit des informations détaillées sur l'activité des entités sur votre locataire.
+La page Entités médico-légales fournit des informations détaillées sur l’activité des entités sur votre locataire.
 
 
 
 == Examen des informations sur l'entité
 
-Cliquez sur *Forensics > activités médico-légales* et cliquez sur l'onglet _entités_ pour accéder à la page entités.
+Cliquez sur *Forensics > Activity Forensics* et cliquez sur l'onglet _Entities_ pour accéder à la page Entités.
 
-Cette page fournit une vue d'ensemble de l'activité de l'entité sur votre locataire, en mettant en évidence les informations suivantes : * Un graphique montrant _entités uniques_ consultées par minute * Un graphique de _types d'entité accédés_ * Une ventilation des _chemins communs_ * Une liste des _50 entités principales_ sur le nombre total d'entités
+Cette page fournit un aperçu de l'activité des entités sur votre locataire, en mettant en évidence les informations suivantes : * Un graphique montrant les _Entités uniques_ consultées par minute * Un graphique des _Types d'entités consultés_ * Une répartition des _Chemins communs_ * Une liste des _50 principales entités_ sur le nombre total d'entités
 
-image:CS-Entities-Page.png["Page entités"]
+image:CS-Entities-Page.png["Page des entités"]
 
-Un clic sur une entité dans la liste ouvre une page de présentation pour l'entité, affichant un profil de l'entité avec des détails tels que le nom, le type, le nom du périphérique, l'adresse IP la plus utilisée et le chemin d'accès, ainsi que le comportement de l'entité comme l'utilisateur, l'adresse IP, et heure du dernier accès à l'entité.
+Cliquer sur une entité dans la liste ouvre une page d'aperçu de l'entité, affichant un profil de l'entité avec des détails tels que le nom, le type, le nom de l'appareil, l'adresse IP de l'emplacement le plus consulté et le chemin, ainsi que le comportement de l'entité tel que l'utilisateur, l'adresse IP et l'heure du dernier accès à l'entité.
 
-image:CS-entity-detail-page.png["Page vue d'ensemble de l'entité"]
+image:CS-entity-detail-page.png["Page de présentation de l'entité"]

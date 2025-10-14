@@ -2,34 +2,34 @@
 sidebar: sidebar 
 permalink: cs_intro.html 
 keywords: CloudSecure, Cloud Secure 
-summary: Présentation 
+summary: Aperçu 
 ---
-= À propos de la sécurité des charges de travail du stockage
+= À propos de la sécurité des charges de travail de stockage
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Informations exploitables sur les menaces internes avec le système de stockage Workload Security (anciennement Cloud Secure), vous protégez vos données. Elle assure la visibilité et le contrôle centralisés sur tous les accès aux données de l'entreprise à l'échelle des environnements de cloud hybride, afin de garantir l'atteinte des objectifs de sécurité et de conformité.
+Data Infrastructure Insights Storage Workload Security (anciennement Cloud Secure) aide à protéger vos données grâce à des informations exploitables sur les menaces internes.  Il offre une visibilité et un contrôle centralisés de tous les accès aux données de l'entreprise dans les environnements de cloud hybride pour garantir que les objectifs de sécurité et de conformité sont atteints.
 
 
 
 == Visibilité
 
-Bénéficiez d'une visibilité et d'un contrôle centralisés sur l'accès des utilisateurs aux données stratégiques de l'entreprise stockées sur site ou dans le cloud.
+Bénéficiez d'une visibilité et d'un contrôle centralisés de l'accès des utilisateurs à vos données d'entreprise critiques stockées sur site ou dans le cloud.
 
-Remplacez les outils et les processus manuels qui n'offrent pas de visibilité opportune et exacte sur l'accès aux données et leur contrôle. La sécurité des charges de travail fonctionne de façon unique sur les systèmes de stockage cloud et sur site pour vous avertir en temps réel des comportements malveillants des utilisateurs.
-
-
-
-== La protection
-
-Protégez les données de l'entreprise contre les activités abusives ou les usurpations d'identité à l'aide de fonctionnalités avancées de machine learning et de détection des anomalies.
-
-Vous alerte en cas d'accès anormal aux données au moyen du machine learning avancé et de la détection des anomalies du comportement des utilisateurs.
+Remplacez les outils et les processus manuels qui ne parviennent pas à fournir une visibilité rapide et précise sur l’accès et le contrôle des données.  Workload Security fonctionne de manière unique sur les systèmes de stockage cloud et sur site pour vous fournir des alertes en temps réel sur le comportement malveillant des utilisateurs.
 
 
 
-== La conformité
+== Protection
 
-Assurez la conformité aux règles de l'entreprise en vérifiant l'accès des utilisateurs aux données critiques stockées dans des infrastructures sur site ou dans le cloud.
+Protégez les données de l’organisation contre toute utilisation abusive par des utilisateurs malveillants ou compromis grâce à l’apprentissage automatique avancé et à la détection des anomalies.
+
+Vous alerte de tout accès anormal aux données grâce à l'apprentissage automatique avancé et à la détection des anomalies du comportement des utilisateurs.
+
+
+
+== Conformité
+
+Assurez la conformité de l'entreprise en auditant l'accès des utilisateurs à vos données d'entreprise critiques stockées sur site ou dans le cloud.

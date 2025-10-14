@@ -1,50 +1,50 @@
 ---
 sidebar: sidebar 
 permalink: task_query_assign_multiple_applications.html 
-summary: Utilisez une requête pour attribuer plusieurs applications ou annotations à des objets ou pour en supprimer plusieurs. 
+summary: Utilisez une requête pour attribuer plusieurs applications ou annotations à des objets, ou pour supprimer plusieurs applications ou annotations de ces objets. 
 keywords: query, queries, application, annotation, multiple 
 ---
-= Attribution ou suppression de plusieurs applications à des ressources ou à des applications multiples
+= Affectation ou suppression de plusieurs applications à des actifs
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Vous pouvez affecter plusieurs link:task_create_application.html["en termes de latence"]applications à des ressources ou en supprimer en utilisant une requête au lieu de devoir les affecter ou les supprimer manuellement.
+Vous pouvez attribuer plusieurslink:task_create_application.html["applications"] pour supprimer plusieurs applications des actifs à l'aide d'une requête au lieu de devoir les attribuer ou les supprimer manuellement.
 
 
-NOTE: Vous pouvez utiliser ces étapes pour ajouter ou supprimer de link:task_defining_annotations.html["annotations"]la même manière.
+NOTE: Vous pouvez utiliser ces étapes pour ajouter ou supprimerlink:task_defining_annotations.html["annotations"] de la même façon.
 
 .Avant de commencer
-Vous devez avoir déjà créé une requête qui trouve toutes les ressources à modifier.
+Vous devez déjà avoir créé une requête qui trouve tous les actifs que vous souhaitez modifier.
 
 .Étapes
-. Cliquez sur *Explorer* et sélectionnez *requêtes métriques*.
+. Cliquez sur *Explorer* et sélectionnez *Requêtes métriques*.
 +
-La page requêtes s'affiche.
+La page Requêtes s'affiche.
 
-. Cliquez sur le nom de la requête qui trouve les ressources.
+. Cliquez sur le nom de la requête qui recherche les actifs.
 +
 La liste des actifs associés à la requête s'affiche.
 
-. Sélectionnez les ressources souhaitées dans la liste ou cliquez sur la case supérieure pour tout sélectionner.
+. Sélectionnez les actifs souhaités dans la liste ou cliquez sur la case à cocher supérieure pour sélectionner Tous.
 +
-La liste déroulante actions groupées s'affiche.
+La liste déroulante Actions en masse s'affiche.
 
-. Pour ajouter une application aux ressources sélectionnées, cliquez sur actions groupées et sélectionnez *Ajouter une application*.
+. Pour ajouter une application aux ressources sélectionnées, cliquez sur Actions groupées et sélectionnez *Ajouter une application*.
 . Sélectionnez une ou plusieurs applications.
 +
-Vous pouvez sélectionner plusieurs applications pour les hôtes, les volumes internes, les qtrees et les machines virtuelles, mais vous ne pouvez sélectionner qu'une seule application pour un volume ou un partage.
+Vous pouvez sélectionner plusieurs applications pour les hôtes, les volumes internes, les qtrees et les machines virtuelles ; cependant, vous ne pouvez sélectionner qu'une seule application pour un volume ou un partage.
 
 . Cliquez sur *Enregistrer*.
-. Pour supprimer une application affectée aux actifs, cliquez sur actions groupées et sélectionnez *Supprimer l'application*.
-. Sélectionnez l'application ou les applications que vous souhaitez supprimer.
+. Pour supprimer une application attribuée aux actifs, cliquez sur Actions groupées et sélectionnez *Supprimer l'application*.
+. Sélectionnez l’application ou les applications que vous souhaitez supprimer.
 . Cliquez sur *Supprimer*.
 
 
-Toutes les nouvelles applications que vous attribuez remplacent toutes les applications de la ressource dérivées d'une autre ressource. Par exemple, les volumes héritent des applications des hôtes. Lorsque de nouvelles applications sont attribuées à un volume, la nouvelle application est prioritaire sur l'application dérivée.
+Toutes les nouvelles applications que vous attribuez remplacent toutes les applications de l’actif dérivées d’un autre actif.  Par exemple, les volumes héritent des applications des hôtes et lorsque de nouvelles applications sont attribuées à un volume, la nouvelle application a la priorité sur l'application dérivée.
 
-Après avoir cliqué sur _Save_ sur un ajout en bloc ou sur _Remove_ sur une action de suppression en bloc, Data Infrastructure Insights vous informe que l'action prendra un certain temps. Vous pouvez ignorer ce message ; l'action se poursuit en arrière-plan.
+Après avoir cliqué sur _Enregistrer_ lors d'un ajout groupé ou sur _Supprimer_ lors d'une action de suppression groupée, Data Infrastructure Insights vous informe que l'action prendra un certain temps.  Vous pouvez ignorer ce message ; l'action continuera en arrière-plan.
 
 
-NOTE: Pour les environnements disposant d'un grand nombre de ressources associées, l'héritage des affectations d'applications peut prendre plusieurs minutes. Veuillez laisser plus de temps à l'héritage si vous disposez de nombreux biens connexes.
+NOTE: Pour les environnements comportant de grandes quantités d'actifs associés, l'héritage des affectations d'application à ces actifs peut prendre plusieurs minutes.  Veuillez prévoir plus de temps pour que l’héritage se produise si vous avez de nombreux biens liés.

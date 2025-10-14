@@ -2,26 +2,26 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_sphereon_intrepid.html 
 keywords: data collector, Brocade, Sphereon Intrepid, 
-summary: Configuration du collecteur de données du commutateur Brocade Sphereon/Intrepid 
+summary: Configuration du collecteur de données Brocade Sphereon/Intrepid Switch 
 ---
-= Configuration du collecteur de données du commutateur Brocade Sphereon/Intrepid
+= Configuration du collecteur de données Brocade Sphereon/Intrepid Switch
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur de données SNMP (Brocade Sphereon/Intrepid Switch) pour découvrir l'inventaire des commutateurs Brocade Sphereon ou Intrepid.
+Data Infrastructure Insights utilise le collecteur de données Brocade Sphereon/Intrepid Switch (SNMP) pour découvrir l'inventaire des commutateurs Brocade Sphereon ou Intrepid.
 
 
 
-== De formation
+== Exigences
 
-Les conditions suivantes doivent être remplies pour configurer ce collecteur de données :
+Les exigences suivantes doivent être respectées pour configurer ce collecteur de données :
 
-* Il doit y avoir une connectivité IP à tous les commutateurs de la structure. Si vous cochez la case détecter tous les switchs dans la structure, Data Infrastructure Insights identifie tous les switchs de la structure. Cependant, la connectivité IP à ces switchs supplémentaires est nécessaire pour les découvrir.
-* Chaîne de communauté en lecture seule en cas d'utilisation de SNMP V1 ou SNMP V2.
-* Accès HTTP au commutateur pour obtenir des informations de zoning.
-* Pour valider l'accès, exécutez l'utilitaire snmpwalk sur le commutateur (voir _<install_path>\bin\_).
+* Il doit y avoir une connectivité IP à tous les commutateurs de la structure.  Si vous cochez la case Découvrir tous les commutateurs de la structure, Data Infrastructure Insights identifie tous les commutateurs de la structure ; cependant, il a besoin d'une connectivité IP à ces commutateurs supplémentaires pour les découvrir.
+* Chaîne de communauté en lecture seule si vous utilisez SNMP V1 ou SNMP V2.
+* Accès HTTP au commutateur pour obtenir des informations de zonage.
+* Validation d'accès en exécutant l'utilitaire snmpwalk sur le commutateur (voir _<install_path>\bin\_).
 
 
 
@@ -33,16 +33,16 @@ Les conditions suivantes doivent être remplies pour configurer ce collecteur de
 | Champ | Description 
 
 
-| Commutateur Sphereon | Adresse IP ou nom de domaine complet du commutateur 
+| Interrupteur Sphèreon | Adresse IP ou nom de domaine complet du commutateur 
 
 
 | Version SNMP | Version SNMP 
 
 
-| Chaîne de communauté SNMP | Chaîne de communauté en lecture seule SNMP utilisée pour accéder au commutateur 
+| Chaîne de communauté SNMP | Chaîne de communauté SNMP en lecture seule utilisée pour accéder au commutateur 
 
 
-| Nom d'utilisateur SNMP | Nom d'utilisateur SMI-S du commutateur (SNMP v3 uniquement) 
+| Nom d'utilisateur SNMP | Nom d'utilisateur SMI-S pour le commutateur (SNMP v3 uniquement) 
 
 
 | Mot de passe SNMP | Mot de passe SMI-S pour le commutateur (SNMP v3 uniquement) 
@@ -56,31 +56,31 @@ Les conditions suivantes doivent être remplies pour configurer ce collecteur de
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 15 minutes. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 15 minutes. 
 
 
-| Protocole d'autorisation SNMP | Protocole d'authentification SNMP (SNMP v3 uniquement) 
+| Protocole d'authentification SNMP | Protocole d'authentification SNMP (SNMP v3 uniquement) 
 
 
 | Mot de passe de confidentialité SNMP | Mot de passe de confidentialité SNMP (SNMP v3 uniquement) 
 
 
-| Nombre de tentatives SNMP | Nombre de tentatives SNMP 
+| Nombre de tentatives SNMP | Nombre de tentatives de nouvelle tentative SNMP 
 
 
-| Nom de la structure | Nom de la structure à indiquer par le collecteur de données. Laissez vide pour signaler le nom de la structure comme WWN. 
+| Nom du tissu | Nom du tissu à signaler par le collecteur de données.  Laissez vide pour signaler le nom du tissu comme WWN. 
 
 
-| Activer le recouvrement | Sélectionnez cette option pour activer l'acquisition lors de la réception d'une interruption SNMP à partir du périphérique. Si vous sélectionnez Activer le recouvrement, vous devez également activer SNMP. 
+| Activer le piégeage | Sélectionnez cette option pour activer l'acquisition lors de la réception d'un trap SNMP du périphérique.  Si vous sélectionnez Activer le piégeage, vous devez également activer SNMP. 
 
 
-| Temps minimum entre les trappes (secondes) | Temps minimum entre les tentatives d'acquisition déclenchées par les interruptions. La valeur par défaut est 10 secondes. 
+| Temps minimum entre les pièges (secondes) | Temps minimum entre les tentatives d'acquisition déclenchées par des pièges. La valeur par défaut est de 10 secondes. 
 
 
-| Intervalle d'interrogation des performances (s) | Intervalle entre les sondages de performances. La valeur par défaut est 300 secondes. 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performance. La valeur par défaut est de 300 secondes. 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

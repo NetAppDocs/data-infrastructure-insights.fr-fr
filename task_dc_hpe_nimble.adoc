@@ -4,35 +4,35 @@ permalink: task_dc_hpe_nimble.html
 keywords: data collector, HP Nimble, HP, HPE, Alletra 6000 
 summary: 'Configuration du collecteur de données HP Enterprise Alletra 6000 (anciennement Nimble).' 
 ---
-= Collection de données HPE Alletra 6000
+= Collecteur de données HPE Alletra 6000
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Le collecteur de données HP Enterprise Alletra 6000 (anciennement Nimble) prend en charge les données d'inventaire et de performance des baies de stockage Alletra 6000.
+Le collecteur de données HP Enterprise Alletra 6000 (anciennement Nimble) prend en charge les données d'inventaire et de performances des baies de stockage Alletra 6000.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir de ce collecteur. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès de ce collecteur.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Baie | Stockage 
+| Tableau | Stockage 
 
 
 | Disque | Disque 
 
 
-| Volumétrie | Volumétrie 
+| Volume | Volume 
 
 
-| Piscine | Pool de stockage 
+| Piscine | Piscine de stockage 
 
 
 | Initiateur | Alias de l'hôte de stockage 
@@ -43,24 +43,24 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes à
 
 | Interface Fibre Channel | Contrôleur 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-Vous devez disposer des éléments suivants pour collecter les données d'inventaire et de configuration de la baie de stockage :
+Vous devez disposer des éléments suivants pour collecter les données d’inventaire et de configuration de la baie de stockage :
 
 * La baie doit être installée et configurée, et accessible depuis le client via son nom de domaine complet (FQDN) ou son adresse IP de gestion de baie.
-* La baie doit exécuter NimbleOS 2.3.x ou une version ultérieure.
-* Vous devez disposer d'un nom d'utilisateur et d'un mot de passe valides pour la baie ayant au moins le rôle « opérateur ». Le rôle « invité » ne dispose pas d'un accès suffisant pour comprendre les configurations des initiateurs.
-* Le port 5392 doit être ouvert sur la matrice.
+* Le tableau doit exécuter NimbleOS 2.3.x ou une version ultérieure.
+* Vous devez disposer d'un nom d'utilisateur et d'un mot de passe valides pour la baie avec au moins le rôle de niveau « Opérateur ».  Le rôle « Invité » ne dispose pas d’un accès suffisant pour comprendre les configurations de l’initiateur.
+* Le port 5392 doit être ouvert sur la baie.
 
 
-Pour collecter les données de performances de la baie de stockage, vous devez disposer des éléments suivants :
+Vous devez disposer des éléments suivants pour collecter les données de performances de la baie de stockage :
 
-* La baie doit exécuter NimbleOS 4.0.0 ou une version ultérieure
-* Les volumes de la matrice doivent être configurés. La seule API de performances dont NimbleOS dispose concerne les volumes et les rapports statistiques Data Infrastructure Insights sont dérivés des statistiques sur les volumes
+* Le tableau doit exécuter NimbleOS 4.0.0 ou une version ultérieure
+* La baie doit avoir des volumes configurés.  La seule API de performance dont dispose NimbleOS concerne les volumes, et tous les rapports statistiques de Data Infrastructure Insights sont dérivés des statistiques sur les volumes.
 
 
 
@@ -72,13 +72,13 @@ Pour collecter les données de performances de la baie de stockage, vous devez d
 | Champ | Description 
 
 
-| Adresse IP de gestion de baie | Nom de domaine complet (FQDN) ou adresse IP de gestion de baie. 
+| Adresse IP de gestion de la baie | Nom de domaine entièrement qualifié (FQDN) ou adresse IP de gestion de tableau. 
 
 
-| Nom d'utilisateur | Nom d'utilisateur de la matrice 
+| Nom d'utilisateur | Nom d'utilisateur pour le tableau 
 
 
-| Mot de passe | Mot de passe de la matrice 
+| Mot de passe | Mot de passe pour le tableau 
 |===
 
 
@@ -90,9 +90,9 @@ Pour collecter les données de performances de la baie de stockage, vous devez d
 | Champ | Description 
 
 
-| Port | Port utilisé par l'API REST Nimble. La valeur par défaut est 5392. 
+| Port | Port utilisé par l'API REST Nimble.  La valeur par défaut est 5392. 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 60 minutes. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 60 minutes. 
 |===
-Remarque : l'intervalle d'interrogation par défaut est de 300 secondes et ne peut pas être modifié. Il s'agit du seul intervalle pris en charge par HPE Alletra 6000.
+Remarque : l’intervalle d’interrogation des performances par défaut est de 300 secondes et ne peut pas être modifié.  Il s'agit du seul intervalle pris en charge par HPE Alletra 6000.

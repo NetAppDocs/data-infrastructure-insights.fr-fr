@@ -1,42 +1,42 @@
 ---
 sidebar: sidebar 
 permalink: security_admin_tool.html 
-summary: Data Infrastructure Insights applique de bonnes pratiques de sécurité tout au long du cycle de vie des versions. 
+summary: Data Infrastructure Insights suit les meilleures pratiques de sécurité tout au long du cycle de vie de la version. 
 keywords: security, risk, protection 
 ---
-= Outil SecurityAdmin
+= Outil d'administration de sécurité
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Les informations d'infrastructure de données incluent des fonctionnalités de sécurité qui permettent à votre environnement de fonctionner avec une sécurité renforcée. Ces fonctionnalités comprennent des améliorations au cryptage, au hachage de mot de passe et à la possibilité de modifier les mots de passe des utilisateurs internes ainsi que les paires de clés qui chiffrent et décryptent les mots de passe.
+Data Infrastructure Insights inclut des fonctionnalités de sécurité qui permettent à votre environnement de fonctionner avec une sécurité renforcée.  Les fonctionnalités incluent des améliorations du cryptage, du hachage de mot de passe et la possibilité de modifier les mots de passe des utilisateurs internes ainsi que les paires de clés qui cryptent et décryptent les mots de passe.
 
-Pour protéger les données sensibles, NetApp vous recommande de modifier les clés par défaut et le mot de passe utilisateur _acquisition_ après une installation ou une mise à niveau.
+Pour protéger les données sensibles, NetApp vous recommande de modifier les clés par défaut et le mot de passe utilisateur _Acquisition_ après une installation ou une mise à niveau.
 
-Les mots de passe cryptés de la source de données sont stockés dans Data Infrastructure Insights, qui utilise une clé publique pour chiffrer les mots de passe lorsqu'un utilisateur les saisit sur une page de configuration du collecteur de données. Data Infrastructure Insights ne dispose pas des clés privées requises pour décrypter les mots de passe du collecteur de données ; seules les unités d'acquisition (AUS) possèdent la clé privée du collecteur de données requise pour décrypter les mots de passe du collecteur de données.
+Les mots de passe chiffrés de la source de données sont stockés dans Data Infrastructure Insights, qui utilise une clé publique pour crypter les mots de passe lorsqu'un utilisateur les saisit dans une page de configuration du collecteur de données.  Data Infrastructure Insights ne dispose pas des clés privées requises pour déchiffrer les mots de passe des collecteurs de données ; seules les unités d'acquisition (AU) disposent de la clé privée du collecteur de données requise pour déchiffrer les mots de passe des collecteurs de données.
 
 
 
-== Mise à niveau et installation
+== Considérations relatives à la mise à niveau et à l'installation
 
-Si le système Insight contient des configurations de sécurité autres que celles par défaut (c'est-à-dire que vous avez des mots de passe avec clé de clés à clé), vous devez sauvegarder vos configurations de sécurité. L'installation de nouveaux logiciels ou, dans certains cas, la mise à niveau de logiciels restaure la configuration de sécurité par défaut de votre système. Lorsque votre système revient à la configuration par défaut, vous devez restaurer la configuration non par défaut pour que le système fonctionne correctement.
+Lorsque votre système Insight contient des configurations de sécurité non par défaut (c'est-à-dire que vous avez réinitialisé les mots de passe), vous devez sauvegarder vos configurations de sécurité.  L'installation d'un nouveau logiciel, ou dans certains cas la mise à niveau d'un logiciel, rétablit votre système à une configuration de sécurité par défaut.  Lorsque votre système revient à la configuration par défaut, vous devez restaurer la configuration non par défaut pour que le système fonctionne correctement.
 
 
 
 == Gestion de la sécurité sur l'unité d'acquisition
 
-L'outil SecurityAdmin vous permet de gérer les options de sécurité de Data Infrastructure Insights et est exécuté sur le système d'unités d'acquisition. La gestion de la sécurité inclut la gestion des clés et des mots de passe, l'enregistrement et la restauration des configurations de sécurité que vous créez ou restaurez aux paramètres par défaut.
+L'outil SecurityAdmin vous permet de gérer les options de sécurité pour Data Infrastructure Insights et est exécuté sur le système de l'unité d'acquisition.  La gestion de la sécurité comprend la gestion des clés et des mots de passe, l’enregistrement et la restauration des configurations de sécurité que vous créez ou la restauration des configurations aux paramètres par défaut.
 
 
 
 == Avant de commencer
 
-* Vous devez disposer de privilèges d'administrateur sur le système au pour installer le logiciel de l'unité d'acquisition (qui inclut l'outil SecurityAdmin).
-* Si vous avez des utilisateurs non-admin qui devront ensuite accéder à l'outil SecurityAdmin, ils doivent être ajoutés au groupe _cisys_. Le groupe _cisys_ est créé lors de l'installation au.
+* Vous devez disposer de privilèges d'administrateur sur le système AU pour installer le logiciel Acquisition Unit (qui inclut l'outil SecurityAdmin).
+* Si vous avez des utilisateurs non administrateurs qui devront ultérieurement accéder à l'outil SecurityAdmin, ils doivent être ajoutés au groupe _cisys_.  Le groupe _cisys_ est créé lors de l'installation d'AU.
 
 
-Après l'installation de au, l'outil SecurityAdmin se trouve sur le système d'unités d'acquisition à l'un des emplacements suivants :
+Après l'installation d'AU, l'outil SecurityAdmin se trouve sur le système de l'unité d'acquisition à l'un de ces emplacements :
 
 ....
 Windows - <install_path>\Cloud Insights\Acquisition Unit\acq\securityadmin\bin\securityadmin.bat
@@ -49,15 +49,15 @@ Linux - /bin/oci-securityadmin.sh
 Démarrez l'outil SecurityAdmin en mode interactif (-i).
 
 
-NOTE: Il est recommandé d'utiliser l'outil SecurityAdmin en mode interactif, afin d'éviter de transmettre des secrets sur la ligne de commande, qui peuvent être capturés dans les journaux.
+NOTE: Il est recommandé d'utiliser l'outil SecurityAdmin en mode interactif, pour éviter de transmettre des secrets sur la ligne de commande, qui peuvent être capturés dans les journaux.
 
-Les options suivantes sont affichées :
+Les options suivantes s'affichent :
 
-image:SecurityAdminMenuChoices.png["Options de l'outil SecurityAdmin (Linux)"]
+image:SecurityAdminMenuChoices.png["Options pour l'outil SecurityAdmin (Linux)"]
 
 . *Sauvegarde*
 +
-Crée un fichier zip de sauvegarde du coffre-fort contenant tous les mots de passe et clés et place le fichier à un emplacement spécifié par l'utilisateur ou aux emplacements par défaut suivants :
+Crée un fichier zip de sauvegarde du coffre-fort contenant tous les mots de passe et clés et place le fichier dans un emplacement spécifié par l'utilisateur, ou dans les emplacements par défaut suivants :
 
 +
 ....
@@ -65,92 +65,92 @@ Windows - <install_path>\Cloud Insights\Acquisition Unit\acq\securityadmin\backu
 Linux - /var/log/netapp/oci/backup/vault
 ....
 +
-Il est recommandé de préserver la sécurité des sauvegardes de coffre-fort, car elles contiennent des informations sensibles.
+Il est recommandé de conserver les sauvegardes du coffre-fort en toute sécurité, car elles contiennent des informations sensibles.
 
 . *Restaurer*
 +
-Restaure la sauvegarde zip du coffre-fort créé. Une fois restaurées, tous les mots de passe et clés sont rétablis dans les valeurs existantes au moment de la création de la sauvegarde.
+Restaure la sauvegarde zip du coffre-fort qui a été créé.  Une fois restaurés, tous les mots de passe et clés sont rétablis aux valeurs existantes au moment de la création de la sauvegarde.
 
 +
-Restore peut être utilisé pour synchroniser les mots de passe et les clés sur plusieurs serveurs, par exemple en procédant comme suit : 1) modifiez les clés de cryptage sur l'au. 2) Créez une sauvegarde du coffre-fort. 3) restaurez la sauvegarde du coffre-fort sur chacun des États-Unis.
+La restauration peut être utilisée pour synchroniser les mots de passe et les clés sur plusieurs serveurs, par exemple en suivant ces étapes : 1) Modifier les clés de chiffrement sur l'AU.  2) Créez une sauvegarde du coffre-fort.  3) Restaurez la sauvegarde du coffre-fort sur chacune des AU.
 
-. *Enregistrer / mettre à jour le script de récupération de clé externe*
+. *Enregistrer / Mettre à jour le script de récupération de clé externe*
 +
-Utilisez un script externe pour enregistrer ou modifier les clés de cryptage au utilisées pour crypter ou décrypter les mots de passe du terminal.
-
-+
-Lorsque vous modifiez des clés de cryptage, sauvegardez votre nouvelle configuration de sécurité afin de pouvoir la restaurer après une mise à niveau ou une installation.
+Utilisez un script externe pour enregistrer ou modifier les clés de chiffrement AU utilisées pour chiffrer ou déchiffrer les mots de passe des appareils.
 
 +
-Remarque cette option est uniquement disponible sous Linux.
+Lorsque vous modifiez les clés de chiffrement, vous devez sauvegarder votre nouvelle configuration de sécurité afin de pouvoir la restaurer après une mise à niveau ou une installation.
 
 +
-Lorsque vous utilisez votre propre script de récupération de clé avec l'outil SecurityAdmin, gardez à l'esprit les points suivants :
+Notez que cette option n'est disponible que sous Linux.
+
++
+Lorsque vous utilisez votre propre script de récupération de clé avec l’outil SecurityAdmin, gardez à l’esprit les points suivants :
 
 +
 ** L'algorithme actuellement pris en charge est RSA avec un minimum de 2048 bits.
-** Le script doit renvoyer les clés privées et publiques en texte brut. Le script ne doit pas renvoyer de clés publiques et privées cryptées.
+** Le script doit renvoyer les clés privées et publiques en texte brut.  Le script ne doit pas renvoyer de clés privées et publiques chiffrées.
 ** Le script doit renvoyer un contenu brut et codé (format PEM uniquement).
 ** Le script externe doit avoir des autorisations _execute_.
 
 
-. *Rotation des clés de cryptage*
+. *Rotation des clés de chiffrement*
 +
-Faites pivoter vos clés de cryptage (désenregistre les clés actuelles et enregistre les nouvelles clés). Pour utiliser une clé d'un système de gestion externe des clés, vous devez spécifier l'ID de clé publique et l'ID de clé privée
+Faites pivoter vos clés de chiffrement (annulez l'enregistrement des clés actuelles et enregistrez de nouvelles clés).  Pour utiliser une clé provenant d'un système de gestion de clés externe, vous devez spécifier l'ID de clé publique et l'ID de clé privée.
 
 
 
 . *Réinitialiser les touches par défaut*
 +
-Réinitialise le mot de passe de l'utilisateur d'acquisition et les clés de cryptage de l'utilisateur d'acquisition sur les valeurs par défaut. Les valeurs par défaut sont celles fournies lors de l'installation.
+Réinitialise le mot de passe de l'utilisateur d'acquisition et les clés de chiffrement de l'utilisateur d'acquisition aux valeurs par défaut. Les valeurs par défaut sont celles fournies lors de l'installation.
 
-. *Modifier le mot de passe de la banque de confiance*
+. *Modifier le mot de passe du Truststore*
 +
-Modifiez le mot de passe du magasin de confiance.
+Modifiez le mot de passe du truststore.
 
-. *Changer le mot de passe de la base de stockage*
+. *Modifier le mot de passe du magasin de clés*
 +
-Modifiez le mot de passe de la base de stockage de clés.
+Modifiez le mot de passe du keystore.
 
 . *Crypter le mot de passe du collecteur*
 +
 Crypter le mot de passe du collecteur de données.
 
-. *Quitter*
+. *Sortie*
 +
-Quittez l'outil SecurityAdmin.
+Quittez l’outil SecurityAdmin.
 
 
 
-Choisissez l'option que vous souhaitez configurer et suivez les invites.
+Choisissez l’option que vous souhaitez configurer et suivez les instructions.
 
 
 
-== Spécification d'un utilisateur pour exécuter l'outil
+== Spécifier un utilisateur pour exécuter l'outil
 
-Si vous vous trouvez dans un environnement contrôlé et soucieux de la sécurité, vous ne disposez peut-être pas du groupe _cisys_ mais vous pouvez toujours demander à des utilisateurs spécifiques d'exécuter l'outil SecurityAdmin.
+Si vous êtes dans un environnement contrôlé et soucieux de la sécurité, vous n'avez peut-être pas le groupe _cisys_, mais vous souhaiterez peut-être néanmoins que des utilisateurs spécifiques exécutent l'outil SecurityAdmin.
 
-Pour ce faire, vous pouvez installer manuellement le logiciel au et spécifier l'utilisateur/le groupe auquel vous souhaitez accéder.
+Vous pouvez y parvenir en installant manuellement le logiciel AU et en spécifiant l’utilisateur/groupe pour lequel vous souhaitez l’accès.
 
-* À l'aide de l'API, téléchargez le programme d'installation d'EC sur le système au et décompressez-le.
+* À l’aide de l’API, téléchargez le programme d’installation CI sur le système AU et décompressez-le.
 +
-** Vous aurez besoin d'un jeton d'autorisation unique. Reportez-vous à la documentation API swagger (_Admin > API Access_ et sélectionnez le lien _API Documentation_) et recherchez la section _GET /au/oneTimeToken_ API.
-** Une fois que vous avez le jeton, utilisez l'API _GET /au/installateurs/{Platform}/{version}_ pour télécharger le fichier d'installation. Vous devrez fournir une plate-forme (Linux ou Windows) ainsi qu'une version du programme d'installation.
+** Vous aurez besoin d’un jeton d’autorisation unique.  Consultez la documentation API Swagger (_Admin > Accès API_ et sélectionnez le lien _Documentation API_) et recherchez la section API _GET /au/oneTimeToken_.
+** Une fois que vous avez le jeton, utilisez l'API _GET /au/installers/{platform}/{version}_ pour télécharger le fichier d'installation.  Vous devrez fournir la plate-forme (Linux ou Windows) ainsi que la version du programme d'installation.
 
 
-* Copiez le fichier d'installation téléchargé sur le système au et décompressez-le.
-* Accédez au dossier contenant les fichiers et exécutez le programme d'installation en tant que racine, en spécifiant l'utilisateur et le groupe :
+* Copiez le fichier d'installation téléchargé sur le système AU et décompressez-le.
+* Accédez au dossier contenant les fichiers et exécutez le programme d'installation en tant que root, en spécifiant l'utilisateur et le groupe :
 +
  ./cloudinsights-install.sh <User> <Group>
 
 
-Si l'utilisateur et/ou le groupe spécifié n'existe pas, ils seront créés. L'utilisateur aura accès à l'outil SecurityAdmin.
+Si l'utilisateur et/ou le groupe spécifié n'existent pas, ils seront créés.  L'utilisateur aura accès à l'outil SecurityAdmin.
 
 
 
 == Mise à jour ou suppression du proxy
 
-L'outil SecurityAdmin peut être utilisé pour définir ou supprimer des informations de proxy pour l'unité d'acquisition en exécutant l'outil avec le paramètre _-pr_ :
+L'outil SecurityAdmin peut être utilisé pour définir ou supprimer les informations de proxy pour l'unité d'acquisition en exécutant l'outil avec le paramètre _-pr_ :
 
 [listing]
 ----
@@ -184,7 +184,7 @@ Documentation.
                              Note: domain is required if the proxy auth
                              scheme is NTLM.)
 ----
-Par exemple, pour supprimer le proxy, exécutez la commande suivante :
+Par exemple, pour supprimer le proxy, exécutez cette commande :
 
  [root@ci-eng-linau bin]# ./securityadmin -pr -rp
 Vous devez redémarrer l'unité d'acquisition après avoir exécuté la commande.
@@ -194,60 +194,60 @@ Pour mettre à jour un proxy, la commande est
  ./securityadmin -pr -upr <arg>
 
 
-== Récupération de clé externe
+== Récupération de clés externes
 
-Si vous fournissez un script shell UNIX, il peut être exécuté par l'unité d'acquisition pour récupérer la *clé privée* et la *clé publique* de votre système de gestion des clés.
+Si vous fournissez un script shell UNIX, il peut être exécuté par l'unité d'acquisition pour récupérer la *clé privée* et la *clé publique* de votre système de gestion de clés.
 
-Pour récupérer la clé, Data Infrastructure Insights exécute le script en passant deux paramètres : _Key ID_ et _Key type_. _Key ID_ peut être utilisé pour identifier la clé dans votre système de gestion des clés. _Key type_ est "public" ou "privé". Lorsque le type de clé est « public », le script doit renvoyer la clé publique. Lorsque le type de clé est "privé", la clé privée doit être renvoyée.
+Pour récupérer la clé, Data Infrastructure Insights exécutera le script en transmettant deux paramètres : _key id_ et _key type_.  _Key id_ peut être utilisé pour identifier la clé dans votre système de gestion de clés.  _Le type de clé_ est soit « public » soit « privé ».  Lorsque le type de clé est « public », le script doit renvoyer la clé publique.  Lorsque le type de clé est « privé », la clé privée doit être renvoyée.
 
-Pour renvoyer la clé à l'unité d'acquisition, le script doit imprimer la clé sur la sortie standard. Le script doit imprimer _uniquement_ la clé de la sortie standard ; aucun autre texte ne doit être imprimé sur la sortie standard. Une fois la clé demandée imprimée sur la sortie standard, le script doit se fermer avec un code de sortie de 0 ; tout autre code de retour est considéré comme une erreur.
+Pour renvoyer la clé à l'unité d'acquisition, le script doit imprimer la clé sur la sortie standard.  Le script doit imprimer _uniquement_ la clé sur la sortie standard ; aucun autre texte ne doit être imprimé sur la sortie standard.  Une fois la clé demandée imprimée sur la sortie standard, le script doit quitter avec un code de sortie de 0 ; tout autre code de retour est considéré comme une erreur.
 
-Le script doit être enregistré avec l'unité d'acquisition à l'aide de l'outil SecurityAdmin, qui exécutera le script avec l'unité d'acquisition. Le script doit disposer des autorisations _read_ et _execute_ pour l'utilisateur root et "cisys". Si le script shell est modifié après l'enregistrement, le script shell modifié doit être réenregistré avec l'unité d'acquisition.
+Le script doit être enregistré auprès de l'unité d'acquisition à l'aide de l'outil SecurityAdmin, qui exécutera le script avec l'unité d'acquisition.  Le script doit avoir les autorisations _read_ et _execute_ pour l'utilisateur root et "cisys".  Si le script shell est modifié après l'enregistrement, le script shell modifié doit être réenregistré auprès de l'unité d'acquisition.
 
 |===
 
 
-| paramètre d'entrée : id de clé | Identificateur de clé utilisé pour identifier la clé dans le système de gestion des clés du client. 
+| paramètre d'entrée : identifiant de clé | Identificateur de clé utilisé pour identifier la clé dans le système de gestion des clés des clients. 
 
 
-| paramètre d'entrée : type de clé | public ou privé. 
+| paramètre d'entrée : type de clé | public ou privé. 
 
 
-| sortie | La clé demandée doit être imprimée sur la sortie standard. La clé RSA 2048 bits est actuellement prise en charge. Les clés doivent être codées et imprimées au format suivant - format de clé privée - PEM, format de clé publique PKCS8 PrivateKeyInfo RFC 5958 codé DER - PEM, X.509 PublictsubjecKeyInfo RFC 5280 
+| sortir | La clé demandée doit être imprimée sur la sortie standard.  La clé RSA 2048 bits est actuellement prise en charge.  Les clés doivent être codées et imprimées au format suivant : format de clé privée - PEM, codé DER PKCS8 PrivateKeyInfo RFC 5958 format de clé publique - PEM, codé DER X.509 SubjectPublicKeyInfo RFC 5280 
 
 
-| code de sortie | Code de sortie de zéro pour réussir. Toutes les autres valeurs de sortie sont considérées comme ayant échoué. 
+| code de sortie | Code de sortie zéro en cas de réussite.  Toutes les autres valeurs de sortie sont considérées comme un échec. 
 
 
-| autorisations de script | Le script doit disposer d'une autorisation de lecture et d'exécution pour l'utilisateur root et cisys. 
+| autorisations de script | Le script doit avoir l'autorisation de lecture et d'exécution pour l'utilisateur root et « cisys ». 
 
 
-| journaux | Les exécutions de script sont consignées. Les journaux sont disponibles dans - /var/log/NetApp/cloudInsights/securityadmin/securityadmin.log /var/log/NetApp/cloudInsights/acq/acq.log 
+| journaux | Les exécutions de scripts sont enregistrées.  Les journaux peuvent être trouvés dans - /var/log/netapp/cloudinsights/securityadmin/securityadmin.log /var/log/netapp/cloudinsights/acq/acq.log 
 |===
 
 
-== Cryptage d'un mot de passe à utiliser dans l'API
+== Crypter un mot de passe à utiliser dans l'API
 
-L'option 8 vous permet de crypter un mot de passe que vous pouvez ensuite transmettre à un collecteur de données via l'API.
+L'option 8 vous permet de crypter un mot de passe, que vous pouvez ensuite transmettre à un collecteur de données via l'API.
 
-Démarrez l'outil SecurityAdmin en mode interactif et sélectionnez l'option 8 : _crypter le mot de passe_.
+Démarrez l'outil SecurityAdmin en mode interactif et sélectionnez l'option 8 : _Crypter le mot de passe_.
 
  securityadmin.sh -i
-Vous êtes invité à saisir le mot de passe que vous souhaitez crypter. Notez que les caractères que vous saisissez ne s'affichent pas à l'écran. Saisissez à nouveau le mot de passe lorsque vous y êtes invité.
+Vous êtes invité à saisir le mot de passe que vous souhaitez crypter.  Notez que les caractères que vous tapez ne sont pas affichés à l'écran.  Saisissez à nouveau le mot de passe lorsque vous y êtes invité.
 
-Sinon, si vous utilisez la commande dans un script, sur une ligne de commande, utilisez _securityadmin.sh_ avec le paramètre "-enc", en transmettant votre mot de passe non chiffré :
+Alternativement, si vous utilisez la commande dans un script, sur une ligne de commande, utilisez _securityadmin.sh_ avec le paramètre « -enc », en passant votre mot de passe non chiffré :
 
  securityadmin -enc mypassword
 image:SecurityAdmin_Encrypt_Key_API_CLI_Example.png["Exemple de CLI"]
 
-Le mot de passe chiffré s'affiche à l'écran. Copiez la chaîne entière, y compris les symboles de début ou de fin.
+Le mot de passe crypté s'affiche à l'écran.  Copiez la chaîne entière, y compris tous les symboles de début et de fin.
 
-image:SecurityAdmin_Encrypt_Key_1.png["Mode interactif crypter le mot de passe, largeur=640"]
+image:SecurityAdmin_Encrypt_Key_1.png["Mode interactif Crypter le mot de passe, largeur = 640"]
 
-Pour envoyer le mot de passe crypté à un collecteur de données, vous pouvez utiliser l'API de collecte de données. Le swagger pour cette API se trouve à l'adresse *Admin > API Access* et cliquez sur le lien « Documentation API ». Sélectionnez le type d'API « collecte de données ». Sous l'en-tête _data_collection.data_Collector_, choisissez l'API _/Collector/datasources_ POST pour cet exemple.
+Pour envoyer le mot de passe chiffré à un collecteur de données, vous pouvez utiliser l'API de collecte de données.  Le swagger de cette API peut être trouvé dans *Admin > Accès API* et cliquez sur le lien « Documentation API ».  Sélectionnez le type d'API « Collecte de données ».  Sous l'en-tête _data_collection.data_collector_, choisissez l'API POST _/collector/datasources_ pour cet exemple.
 
 image:SecurityAdmin_Encrypt_Key_Swagger_API.png["API pour la collecte de données"]
 
-Si vous définissez l'option _preEncrypted_ sur _True_, tout mot de passe que vous passez par la commande API sera traité comme *déjà crypté*; l'API ne recryptera pas le(s) mot(s) de passe. Lors de la création de votre API, il vous suffit de coller le mot de passe précédemment chiffré à l'emplacement approprié.
+Si vous définissez l'option _preEncrypted_ sur _True_, tout mot de passe que vous transmettez via la commande API sera traité comme *déjà chiffré* ; l'API ne rechiffrera pas le(s) mot(s) de passe.  Lors de la création de votre API, collez simplement le mot de passe précédemment crypté à l'emplacement approprié.
 
-image:SecurityAdmin_Encrypt_Key_API_Example.png["Exemple d'API, width=600"]
+image:SecurityAdmin_Encrypt_Key_API_Example.png["Exemple d'API, largeur = 600"]

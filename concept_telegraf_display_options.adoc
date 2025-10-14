@@ -4,24 +4,24 @@ permalink: concept_telegraf_display_options.html
 keywords: telegraf, data, display, 
 summary: 'Options d"affichage des données Telegraf' 
 ---
-= Transformation des mesures
+= Transformer les métriques
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights fournit différentes options de *transformation* pour certaines mesures dans des widgets (en particulier, les metrics appelés « personnalisés » ou les metrics d'intégration, telles que Kubernetes, les données avancées ONTAP, les plug-ins Telegraf, etc.), ce qui vous permet d'afficher les données de différentes manières. Lorsque vous ajoutez des mesures transformables à un widget, une liste déroulante vous propose les options de transformation suivantes :
+Data Infrastructure Insights fournit différentes options de *transformation* pour certaines métriques dans les widgets (en particulier, les métriques appelées « Personnalisées » ou métriques d'intégration, telles que celles de Kubernetes, ONTAP Advanced Data, des plugins Telegraf, etc.), vous permettant d'afficher les données de plusieurs manières.  Lorsque vous ajoutez des métriques transformables à un widget, une liste déroulante vous propose les choix de transformation suivants :
 
-Aucune : les données sont affichées telles qu'elles sont, sans manipulation.
+Aucun : les données sont affichées telles quelles, sans aucune manipulation.
 
-Taux : valeur actuelle divisée par la plage horaire depuis l'observation précédente.
+Taux : Valeur actuelle divisée par la plage de temps depuis l'observation précédente.
 
-Cumulatif : accumulation de la somme des valeurs précédentes et de la valeur actuelle.
+Cumulatif : L'accumulation de la somme des valeurs précédentes et de la valeur actuelle.
 
-Delta : différence entre la valeur d'observation précédente et la valeur actuelle.
+Delta : La différence entre la valeur d'observation précédente et la valeur actuelle.
 
-Delta rate : valeur Delta divisée par la plage de temps depuis l'observation précédente.
+Taux Delta : Valeur Delta divisée par la plage de temps depuis l'observation précédente.
 
-Taux cumulatif : valeur cumulée divisée par la plage horaire depuis l'observation précédente.
+Taux cumulé : valeur cumulée divisée par la plage de temps depuis l'observation précédente.
 
-Notez que la transformation des mesures ne modifie pas les données sous-jacentes, mais uniquement la façon dont elles sont affichées.
+Notez que la transformation des métriques ne modifie pas les données sous-jacentes elles-mêmes, mais uniquement la manière dont ces données sont affichées.

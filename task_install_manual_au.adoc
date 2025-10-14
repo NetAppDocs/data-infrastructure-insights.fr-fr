@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_install_manual_au.html 
 keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstall, delete, deleting, move, moving, manual, AU, Patch 
-summary: 'Les informations d"infrastructure de données peuvent être configurées pour que le logiciel au soit mis à jour manuellement, ce qui permet de mieux contrôler le logiciel installé sur votre locataire.' 
+summary: Data Infrastructure Insights peut être configuré pour que le logiciel AU soit mis à jour manuellement, offrant ainsi plus de contrôle sur le logiciel installé sur votre locataire. 
 ---
 = Installation manuelle du logiciel de l'unité d'acquisition
 :hardbreaks:
@@ -10,123 +10,123 @@ summary: 'Les informations d"infrastructure de données peuvent être configuré
 
 
 [role="lead"]
-Par défaut, Data Infrastructure Insights met à jour automatiquement le logiciel au (acquisition Unit) au fur et à mesure que des mises à jour sont déployées. Cependant, dans un environnement contrôlé sécurisé, la mise à jour automatique peut ne pas être possible ou souhaitée. Dans ce cas, vous pouvez configurer Data Infrastructure Insights pour que le logiciel au soit mis à jour manuellement, ce qui permet de mieux contrôler le logiciel installé sur votre locataire.
+Par défaut, Data Infrastructure Insights met à jour automatiquement le logiciel de l'unité d'acquisition (AU) à mesure que les mises à jour sont déployées.  Cependant, dans des environnements contrôlés et sécurisés, la mise à jour automatique peut ne pas être possible ou souhaitée.  Dans ces cas, Data Infrastructure Insights peut être configuré pour que le logiciel AU soit mis à jour manuellement, offrant ainsi plus de contrôle sur le logiciel installé sur votre locataire.
 
-Pour télécharger et installer manuellement le logiciel au, procédez comme suit. Data Infrastructure Insights fournit une page de documentation swagger utile que vous pouvez utiliser pour la plupart de ces étapes ou vous pouvez utiliser vos propres scripts/commandes d'API. Accédez à Admin > API Access et cliquez sur le lien API Documentation.
+Pour télécharger et installer manuellement le logiciel AU, procédez comme suit.  Data Infrastructure Insights fournit une page de documentation Swagger utile que vous pouvez utiliser pour bon nombre de ces étapes, ou vous pouvez utiliser votre propre script/commandes API.  Accédez à Admin > Accès API et cliquez sur le lien « Documentation API ».
 
 Le processus est similaire pour Linux et Windows.
 
 
 
-== Exécution D'une NOUVELLE installation au sous Linux :
+== Effectuer une NOUVELLE installation AU sous Linux :
 
-. Dans Data Infrastructure Insights, créez un jeton d'API.
+. Dans Data Infrastructure Insights, créez un jeton API.
 +
-.. Accédez à *Admin > accès API* et sélectionnez *+jeton d'accès API*.
+.. Accédez à *Admin > Accès API* et sélectionnez *+Jeton d’accès API*.
 +
 ... Définissez un *Nom* et une *Description* faciles à identifier
-... Type : choisissez *unité d'acquisition* et *collecte de données*
-... Autorisations : *lecture/écriture*
-... Sélectionnez les valeurs *Expiry* et *Auto-Renew* souhaitées
+... Type : Choisissez *Unité d'acquisition* et *Collecte de données*
+... Autorisations : *Lecture/Écriture*
+... Sélectionnez les valeurs d'*Expiration* et de *Renouvellement automatique* souhaitées
 
 
 .. Cliquez sur *Enregistrer*
-.. Copiez le jeton d'accès à l'API généré. Cette étape doit être effectuée avant de pouvoir fermer la fenêtre.
+.. Copiez le jeton d’accès API généré.  Cette étape doit être effectuée avant de pouvoir fermer la fenêtre.
 
 
 
 
-image:Manual_AU_Create_API_Token.png["Créer un jeton d'API"]
+image:Manual_AU_Create_API_Token.png["Créer un jeton API"]
 
-. Dans swagger (Admin > API Access > API Documentation), utilisez le jeton pour autoriser les API Data Infrastructure Insights
+. Dans Swagger (Admin > Accès API > Documentation API), utilisez le jeton pour autoriser les API Data Infrastructure Insights
 +
-.. Cliquez sur _Authorise_ en haut à droite de l'écran swagger
-.. Collez le jeton copié depuis le haut dans le champ clé APIKey client
+.. Cliquez sur _Autoriser_ en haut à droite de l'écran Swagger
+.. Collez le jeton copié ci-dessus dans le champ Clé API client
 .. Cliquez sur *Autoriser*
-.. Fermez la fenêtre
+.. Fermer la fenêtre
 
 
 
 
-image:Manual_AU_Authorization.png["Autorisez le jeton API"]
+image:Manual_AU_Authorization.png["Autoriser le jeton API"]
 
-. Téléchargez le programme d'installation au à l'aide de l'API _/au/installateurs/{Platform}/Latest_ ou _/au/installateurs/{Platform}/{version}_ :
+. Téléchargez le programme d'installation AU à l'aide de l'API _/au/installers/{platform}/latest_ ou _/au/installers/{platform}/{version}_ :
 +
-.. Plate-forme : *linux*
-.. Version : *<version>* (dernière ou spécifiée)
+.. Plateforme : *linux*
+.. Version : *<version>* (la plus récente ou spécifiée)
 
 
 
 
-image:Manual_AU_API_Retrieve_latest.png["API pour récupérer la dernière version au"]
+image:Manual_AU_API_Retrieve_latest.png["API pour récupérer la dernière version AU"]
 
 
-NOTE: Si vous ne téléchargez pas la dernière version, confirmez avec NetApp la version au à télécharger.
+NOTE: Si vous ne téléchargez pas la dernière version, confirmez auprès de NetApp la version AU à spécifier pour le téléchargement.
 
-. Cliquez sur *Télécharger le fichier*. Si vous effectuez ces étapes sur un système autre que le système au, copiez le fichier téléchargé sur le système au.
-. Vous pouvez également exécuter la commande CURL résultante sur le système au :
+. Cliquez sur *Télécharger le fichier*.  Si vous effectuez ces étapes sur un système autre que le système AU, copiez le fichier téléchargé sur le système AU.
+. Alternativement, vous pouvez exécuter la commande CURL résultante sur le système AU :
 +
  curl -X GET "<tenant>/rest/v1/au/installers/linux/<AU version>" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <token>"
-. À ce stade, le fichier d'installation doit être présent sur le système au.
+. À ce stade, le fichier d’installation doit être présent sur le système AU.
 
 
 
-IMPORTANT: Les étapes suivantes nécessitent l'utilisation d'un jeton temporaire. N'utilisez pas le jeton d'accès à l'API que vous avez créé ci-dessus.
+IMPORTANT: Les étapes suivantes nécessitent l’utilisation d’un jeton temporaire.  N'utilisez pas le jeton d'accès API que vous avez créé ci-dessus.
 
-. Dans le swagger de l'API Data Infrastructure Insights, créez un jeton unique à l'aide de l'API _/au/oneTimeToken_.
+. Dans l'API Swagger de Data Infrastructure Insights , créez un jeton unique à l'aide de l'API _/au/oneTimeToken_.
 +
-.. Copiez le jeton à usage unique obtenu.
+.. Copiez le jeton à usage unique résultant.
 
 
 
 
-image:Manual_AU_one_time_token.png["Créez un jeton d'API à usage unique"] image:Manual_AU_one_time_token_response.png["Réponse pour un exemple de jeton d'API à usage unique"]
+image:Manual_AU_one_time_token.png["Créer un jeton API à usage unique"] image:Manual_AU_one_time_token_response.png["Réponse à un exemple de jeton API à usage unique"]
 
-. Sur l'ordinateur sur lequel l'au va être installé, accédez au dossier contenant le fichier d'installation téléchargé. Les commandes ci-dessous nécessitent que l'utilisateur dispose des autorisations root.
+. Sur la machine sur laquelle l'AU va être installé, accédez au dossier contenant le fichier d'installation téléchargé.  Les commandes ci-dessous nécessitent que l'utilisateur dispose des autorisations root.
 +
 .. Décompressez le fichier d'installation
-.. Accédez au dossier d'installation qui en résulte
-.. Exportez le jeton à usage unique et la version du programme d'installation vers des variables d'environnement en exécutant les opérations suivantes :
+.. Changer de répertoire vers le dossier d'installation résultant
+.. Exportez le jeton à usage unique et la version du programme d’installation vers les variables d’environnement en exécutant la commande suivante :
 +
  export TOKEN=<One-Time Token>
-.. Exécutez les étapes suivantes pour installer l'EC avec un utilisateur et un groupe personnalisés :
+.. Exécutez ce qui suit pour installer CI avec un utilisateur et un groupe personnalisés :
 +
  ./cloudinsights-install.sh <custom user> <custom group>
 +
-Remarque : si vous ne souhaitez pas utiliser un utilisateur et un groupe personnalisés, vous pouvez utiliser l’utilisateur et le groupe par défaut “cisys”. Dans ce cas, exécutez la commande install ci-dessus, mais ne spécifiez pas l'utilisateur et le groupe.
+Remarque : si vous ne souhaitez pas utiliser d’utilisateur et de groupe personnalisés, vous pouvez utiliser l’utilisateur et le groupe « cisys » par défaut.  Dans ce cas, exécutez la commande d’installation ci-dessus mais ne spécifiez pas l’utilisateur et le groupe.
 
 
 
 
 
-À ce stade, le logiciel au est installé sur le système et est accessible par l'utilisateur et le groupe personnalisés. Cependant, vous n'avez pas la possibilité d'ajouter des collecteurs de données. Pour ce faire manuellement, lisez les instructions suivantes. Si vous souhaitez uniquement installer un correctif, reportez-vous à la <<downloading-a-patch,Correctif>> section ci-dessous.
+À ce stade, le logiciel AU est installé sur le système et est accessible par l’utilisateur et le groupe personnalisés.  Cependant, vous n'avez pas la possibilité d'ajouter des collecteurs de données.  Pour le faire manuellement, lisez les instructions suivantes.  Si vous souhaitez uniquement installer un correctif, consultez le<<downloading-a-patch,Correctif>> section ci-dessous.
 
 
 
 == Installation manuelle des collecteurs de données
 
-Téléchargez la dernière version de datasources.war à l'aide de /Collector/patch/datasources/latest API :
+Téléchargez la dernière version de datasources.war à l'aide de l'API /collector/patch/datasourceswar/latest :
 
-image:API_Manual_Download_datasources.png["API pour récupérer la dernière datasources.war"]
+image:API_Manual_Download_datasources.png["API pour récupérer les dernières sources de données.war"]
 
-Remarque : si vous ne téléchargez pas la dernière version, confirmez auprès de NetApp la version à télécharger.
+Remarque : si vous ne téléchargez pas la dernière version, confirmez auprès de NetApp la version à spécifier pour le téléchargement.
 
-Cliquez sur Télécharger le fichier. Si vous effectuez ces étapes sur un système autre que le système au, copiez le paquet zip datasources.war téléchargé sur le système au.
+Cliquez sur Télécharger le fichier.  Si vous effectuez ces étapes sur un système autre que le système AU, copiez le fichier zip datasources.war téléchargé sur le système AU.
 
-Assurez-vous que le paquet zip datasources.war est copié dans le répertoire suivant : /var/lib/netapp/cloudInsights/acq/download
+Assurez-vous que le fichier zip datasources.war est copié dans le répertoire suivant : /var/lib/netapp/cloudinsights/acq/download
 
-Accédez au répertoire /var/lib/NetApp/cloudInsights/acq/download pour datasources.war et vérifiez le fichier zip dans ce répertoire :
+Accédez au répertoire /var/lib/netapp/cloudinsights/acq/download pour datasources.war et vérifiez le fichier zip qui s'y trouve :
 
-. Pour les étapes suivantes, vous devez basculer vers (ou déconnecter root et vous connecter avec) l'utilisateur personnalisé.
+. Vous devez passer à (ou vous déconnecter de root et vous connecter avec) l'utilisateur personnalisé pour les étapes suivantes.
 +
  su <custom user>
 +
-Remarque : si vous utilisez l’utilisateur et le groupe “cisys” par défaut, vous n’avez pas besoin d’effectuer cette étape.
+Remarque : si vous utilisez l’utilisateur et le groupe « cisys » par défaut, vous n’avez pas besoin d’effectuer cette étape.
 
 +
-Remarque : l'utilisateur personnalisé peut être tout utilisateur membre d'un groupe personnalisé que vous avez fourni à cloudinsights-install.sh lors de l'installation au, et peut être identique ou différent de l'utilisateur personnalisé que vous avez fourni lors de l'installation au.
+Remarque : l’utilisateur personnalisé peut être n’importe quel utilisateur membre d’un groupe personnalisé que vous avez fourni à cloudinsights-install.sh lors de l’installation d’AU, et peut être identique ou différent de l’utilisateur personnalisé que vous avez fourni lors de l’installation d’AU.
 
-. Effectuez les opérations suivantes :
+. Procédez comme suit :
 +
 ....
 chmod 770 /var/lib/netapp/cloudinsights/acq/download/datasources-war-<version>.zip
@@ -136,40 +136,40 @@ drwxrwx--- 2 test-user2 test-group-1  4096 Feb 16 10:10 datasources-war-<version
 …
 ....
 +
-Remarque : si vous utilisez l’utilisateur et le groupe cisys, ceux-ci seront affichés dans la sortie ci-dessus.
+Remarque : si vous utilisez l’utilisateur et le groupe « cisys », ceux-ci seront affichés dans la sortie ci-dessus.
 
 +
-Remarque : si vous prévoyez d'installer en utilisant différents utilisateurs personnalisés, assurez-vous que les autorisations de groupe sont définies sur lecture et écriture pour le propriétaire et le groupe (chmod 660 …)
+Remarque : si vous prévoyez d'effectuer l'installation à l'aide de différents utilisateurs personnalisés, assurez-vous que les autorisations de groupe sont définies en lecture et en écriture pour le propriétaire et le groupe (chmod 660…)
 
-. Redémarrez au. Dans Data Infrastructure Insights, accédez à observabilité > Collectors et sélectionnez l'onglet acquisition Units. Choisissez redémarrer dans le menu « trois points » à droite de l'au.
-
-
+. Redémarrez la AU. Dans Data Infrastructure Insights, accédez à Observabilité > Collecteurs et sélectionnez l’onglet Unités d’acquisition.  Choisissez Redémarrer dans le menu « trois points » à droite de l’AU.
 
 
-== Téléchargement d'un correctif
 
-Téléchargez le correctif à l'aide de l'API /Collector/patch/file/{version} :
 
-image:API_Manual_Download_patch.png["API pour récupérer le correctif"]
+== Téléchargement d'un patch
 
-Remarque : confirmez avec NetApp la version à télécharger.
+Téléchargez le patch en utilisant l'API /collector/patch/file/{version} :
 
-Cliquez sur Télécharger le fichier. Si vous effectuez ces étapes sur un système autre que le système au, copiez le paquet zip téléchargé sur le système au.
+image:API_Manual_Download_patch.png["API pour récupérer le patch"]
 
-Assurez-vous que le paquet zip de correctifs est copié dans le répertoire suivant : /var/lib/netapp/cloudInsights/acq/download
+Remarque : confirmez auprès de NetApp la version à spécifier pour le téléchargement.
 
-Accédez au répertoire /var/lib/netapp/cloudInsights/acq/download pour trouver le correctif et vérifiez le fichier .zip à cet emplacement :
+Cliquez sur Télécharger le fichier.  Si vous effectuez ces étapes sur un système autre que le système AU, copiez le pack zip de correctifs téléchargé sur le système AU.
 
-. Pour les étapes suivantes, vous devez basculer vers (ou déconnecter root et vous connecter avec) l'utilisateur personnalisé.
+Assurez-vous que le fichier zip du correctif est copié dans le répertoire suivant : /var/lib/netapp/cloudinsights/acq/download
+
+Accédez au répertoire /var/lib/netapp/cloudinsights/acq/download pour le correctif et vérifiez le fichier .zip qui s'y trouve :
+
+. Vous devez passer à (ou vous déconnecter de root et vous connecter avec) l'utilisateur personnalisé pour les étapes suivantes.
 +
  su <custom user>
 +
-Remarque : si vous utilisez l’utilisateur et le groupe “cisys” par défaut, vous n’avez pas besoin d’effectuer cette étape.
+Remarque : si vous utilisez l’utilisateur et le groupe « cisys » par défaut, vous n’avez pas besoin d’effectuer cette étape.
 
 +
-Remarque : l'utilisateur personnalisé peut être tout utilisateur membre d'un groupe personnalisé que vous avez fourni à cloudinsights-install.sh lors de l'installation au, et peut être identique ou différent de l'utilisateur personnalisé que vous avez fourni lors de l'installation au.
+Remarque : l’utilisateur personnalisé peut être n’importe quel utilisateur membre d’un groupe personnalisé que vous avez fourni à cloudinsights-install.sh lors de l’installation d’AU, et peut être identique ou différent de l’utilisateur personnalisé que vous avez fourni lors de l’installation d’AU.
 
-. Effectuez les opérations suivantes :
+. Procédez comme suit :
 +
 ....
 chmod 770 /var/lib/netapp/cloudinsights/acq/download/<patch_file_name>.zip
@@ -179,43 +179,43 @@ drwxrwx--- 2 test-user2 test-group-1  4096 Feb 16 10:10 <patch_file_name>.zip
 …
 ....
 +
-Remarque : si vous utilisez l’utilisateur et le groupe cisys, ceux-ci seront affichés dans la sortie ci-dessus.
+Remarque : si vous utilisez l’utilisateur et le groupe « cisys », ceux-ci seront affichés dans la sortie ci-dessus.
 
 +
-Remarque : si vous prévoyez d'installer en utilisant différents utilisateurs personnalisés, assurez-vous que les autorisations de groupe sont définies sur lecture et écriture pour le propriétaire et le groupe (chmod 660 …)
+Remarque : si vous prévoyez d'effectuer l'installation à l'aide de différents utilisateurs personnalisés, assurez-vous que les autorisations de groupe sont définies en lecture et en écriture pour le propriétaire et le groupe (chmod 660…)
 
-. Redémarrez au. Dans Data Infrastructure Insights, accédez à observabilité > Collectors et sélectionnez l'onglet acquisition Units. Choisissez redémarrer dans le menu « trois points » à droite de l'au.
-
-
+. Redémarrez la AU. Dans Data Infrastructure Insights, accédez à Observabilité > Collecteurs et sélectionnez l’onglet Unités d’acquisition.  Choisissez Redémarrer dans le menu « trois points » à droite de l’AU.
 
 
-== Récupération de clé externe
 
-Si vous fournissez un script shell UNIX, il peut être exécuté par l'unité d'acquisition pour récupérer la *clé privée* et la *clé publique* de votre système de gestion des clés.
 
-Pour récupérer la clé, Data Infrastructure Insights exécute le script en passant deux paramètres : _Key ID_ et _Key type_. _Key ID_ peut être utilisé pour identifier la clé dans votre système de gestion des clés. _Key type_ est "public" ou "privé". Lorsque le type de clé est « public », le script doit renvoyer la clé publique. Lorsque le type de clé est "privé", la clé privée doit être renvoyée.
+== Récupération de clés externes
 
-Pour renvoyer la clé à l'unité d'acquisition, le script doit imprimer la clé sur la sortie standard. Le script doit imprimer _uniquement_ la clé de la sortie standard ; aucun autre texte ne doit être imprimé sur la sortie standard. Une fois la clé demandée imprimée sur la sortie standard, le script doit se fermer avec un code de sortie de 0 ; tout autre code de retour est considéré comme une erreur.
+Si vous fournissez un script shell UNIX, il peut être exécuté par l'unité d'acquisition pour récupérer la *clé privée* et la *clé publique* de votre système de gestion de clés.
 
-Le script doit être enregistré avec l'unité d'acquisition à l'aide de l'outil SecurityAdmin, qui exécutera le script avec l'unité d'acquisition. Le script doit disposer des autorisations _read_ et _execute_ pour l'utilisateur root et "cisys". Si le script shell est modifié après l'enregistrement, le script shell modifié doit être réenregistré avec l'unité d'acquisition.
+Pour récupérer la clé, Data Infrastructure Insights exécutera le script en transmettant deux paramètres : _key id_ et _key type_.  _Key id_ peut être utilisé pour identifier la clé dans votre système de gestion de clés.  _Le type de clé_ est soit « public » soit « privé ».  Lorsque le type de clé est « public », le script doit renvoyer la clé publique.  Lorsque le type de clé est « privé », la clé privée doit être renvoyée.
+
+Pour renvoyer la clé à l'unité d'acquisition, le script doit imprimer la clé sur la sortie standard.  Le script doit imprimer _uniquement_ la clé sur la sortie standard ; aucun autre texte ne doit être imprimé sur la sortie standard.  Une fois la clé demandée imprimée sur la sortie standard, le script doit quitter avec un code de sortie de 0 ; tout autre code de retour est considéré comme une erreur.
+
+Le script doit être enregistré auprès de l'unité d'acquisition à l'aide de l'outil SecurityAdmin, qui exécutera le script avec l'unité d'acquisition.  Le script doit avoir les autorisations _read_ et _execute_ pour l'utilisateur root et "cisys".  Si le script shell est modifié après l'enregistrement, le script shell modifié doit être réenregistré auprès de l'unité d'acquisition.
 
 |===
 
 
-| paramètre d'entrée : id de clé | Identificateur de clé utilisé pour identifier la clé dans le système de gestion des clés du client. 
+| paramètre d'entrée : identifiant de clé | Identificateur de clé utilisé pour identifier la clé dans le système de gestion des clés des clients. 
 
 
-| paramètre d'entrée : type de clé | public ou privé. 
+| paramètre d'entrée : type de clé | public ou privé. 
 
 
-| sortie | La clé demandée doit être imprimée sur la sortie standard. La clé RSA 2048 bits est actuellement prise en charge. Les clés doivent être codées et imprimées au format suivant - format de clé privée - PEM, format de clé publique PKCS8 PrivateKeyInfo RFC 5958 codé DER - PEM, X.509 PublictsubjecKeyInfo RFC 5280 
+| sortir | La clé demandée doit être imprimée sur la sortie standard.  La clé RSA 2048 bits est actuellement prise en charge.  Les clés doivent être codées et imprimées au format suivant : format de clé privée - PEM, codé DER PKCS8 PrivateKeyInfo RFC 5958 format de clé publique - PEM, codé DER X.509 SubjectPublicKeyInfo RFC 5280 
 
 
-| code de sortie | Code de sortie de zéro pour réussir. Toutes les autres valeurs de sortie sont considérées comme ayant échoué. 
+| code de sortie | Code de sortie zéro en cas de réussite.  Toutes les autres valeurs de sortie sont considérées comme un échec. 
 
 
-| autorisations de script | Le script doit disposer d'une autorisation de lecture et d'exécution pour l'utilisateur root et cisys. 
+| autorisations de script | Le script doit avoir l'autorisation de lecture et d'exécution pour l'utilisateur root et « cisys ». 
 
 
-| journaux | Les exécutions de script sont consignées. Les journaux sont disponibles dans - /var/log/NetApp/cloudInsights/securityadmin/securityadmin.log /var/log/NetApp/cloudInsights/acq/acq.log 
+| journaux | Les exécutions de scripts sont enregistrées.  Les journaux peuvent être trouvés dans - /var/log/netapp/cloudinsights/securityadmin/securityadmin.log /var/log/netapp/cloudinsights/acq/acq.log 
 |===

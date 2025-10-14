@@ -2,40 +2,40 @@
 sidebar: sidebar 
 permalink: task_dc_aws_s3.html 
 keywords: data collector, S3, Storage 
-summary: 'Configuration d"AWS S3 en tant que collecteur de données de stockage.' 
+summary: 'Configuration d"AWS S3 comme collecteur de données de stockage.' 
 ---
-= Configuration d'AWS S3 en tant que collecteur de données de stockage
+= Configuration d'AWS S3 comme collecteur de données de stockage
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Les informations d'infrastructure de données utilisent AWS S3 en tant que collecteur de données de stockage pour acquérir des données d'inventaire et de performance à partir d'instances AWS S3.
+Data Infrastructure Insights utilise AWS S3 comme collecteur de données de stockage pour acquérir des données d'inventaire et de performances à partir des instances AWS S3.
 
 
 
-== De formation
+== Exigences
 
-Pour collecter des données à partir d'AWS S3 en tant que périphériques de stockage, vous devez disposer des informations suivantes :
+Pour collecter des données à partir d'AWS S3 en tant que périphériques de stockage, vous devez disposer des informations suivantes :
 
-* Vous devez disposer de l'une des options suivantes :
+* Vous devez posséder l'un des éléments suivants :
 +
-** Le rôle *IAM* pour votre compte cloud AWS, si vous utilisez l'authentification par rôle IAM. Le rôle IAM s'applique uniquement si votre unité d'acquisition est installée sur une instance AWS.
-** L'ID *IAM Access Key* et la clé d'accès secrète pour votre compte de cloud AWS, si vous utilisez l'authentification IAM Access Key.
+** Le *rôle IAM* pour votre compte cloud AWS, si vous utilisez l'authentification par rôle IAM.  Le rôle IAM s'applique uniquement si votre unité d'acquisition est installée sur une instance AWS.
+** L'ID *Clé d'accès IAM* et la clé d'accès secrète de votre compte cloud AWS, si vous utilisez l'authentification par clé d'accès IAM.
 
 
-* Vous devez disposer du privilège « organisation de liste »
+* Vous devez avoir le privilège « liste d'organisation »
 * Port 443 HTTPS
-* Il est possible de signalement des instances AWS S3 en tant que machine virtuelle ou (moins naturellement) d'un hôte. Les volumes EBS peuvent être signalés comme des virtualDisk utilisés par la machine virtuelle, ainsi qu'un datastore fournissant la capacité pour la virtuelleDisk.
+* Les instances AWS S3 peuvent être signalées comme une machine virtuelle ou (moins naturellement) comme un hôte.  Les volumes EBS peuvent être signalés à la fois comme un disque virtuel utilisé par la machine virtuelle et comme un magasin de données fournissant la capacité du disque virtuel.
 
 
-Les clés d'accès comprennent un ID de clé d'accès (par exemple, AKIAIOSFONDN7EXAMPLE) et une clé d'accès secrète (par exemple, wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY). Vous utilisez des clés d'accès pour signer les demandes de programmation que vous créez à AWS si vous utilisez les opérations de kits de développement logiciel et D'API REST AWS ou Query. Ces clés sont fournies avec votre contrat Amazon.
+Les clés d'accès se composent d'un ID de clé d'accès (par exemple, AKIAIOSFODNN7EXAMPLE) et d'une clé d'accès secrète (par exemple, wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY).  Vous utilisez des clés d'accès pour signer les demandes programmatiques que vous envoyez à AWS si vous utilisez les kits SDK AWS, REST ou les opérations API de requête.  Ces clés sont fournies avec votre contrat Amazon.
 
 
 
 == Configuration
 
-Entrez les données dans les champs du collecteur de données conformément au tableau ci-dessous :
+Saisissez les données dans les champs du collecteur de données conformément au tableau ci-dessous :
 
 [cols="2*"]
 |===
@@ -45,16 +45,16 @@ Entrez les données dans les champs du collecteur de données conformément au t
 | Région AWS | Choisissez la région AWS 
 
 
-| Rôle IAM | À utiliser uniquement lorsqu'il est acquis sur un au dans AWS. Voir ci-dessous pour plus d'informations sur <<iam-role,Rôle IAM>>. 
+| Rôle IAM | À utiliser uniquement lors de l'acquisition sur un AU dans AWS.  Voir ci-dessous pour plus d'informations sur<<iam-role,Rôle IAM>> . 
 
 
-| ID de clé d'accès IAM AWS | Entrez l'ID de clé d'accès IAM AWS. Obligatoire si vous n'utilisez pas le rôle IAM. 
+| ID de clé d'accès AWS IAM | Saisissez l’ID de clé d’accès AWS IAM.  Obligatoire si vous n'utilisez pas le rôle IAM. 
 
 
-| Clé d'accès secrète AWS IAM | Entrez la clé d'accès secrète IAM AWS. Obligatoire si vous n'utilisez pas le rôle IAM. 
+| Clé d'accès secrète AWS IAM | Saisissez la clé d’accès secrète AWS IAM.  Obligatoire si vous n'utilisez pas le rôle IAM. 
 
 
-| J'ai compris les factures AWS pour les demandes d'API | Vérifiez que vous savez qu'AWS vous facture pour les requêtes d'API formulées par l'interrogation Data Infrastructure Insights. 
+| Je comprends qu'AWS me facture les demandes d'API | Cochez cette case pour vérifier que vous avez bien compris qu’AWS vous facture les demandes d’API effectuées par le sondage Data Infrastructure Insights . 
 |===
 
 
@@ -65,68 +65,68 @@ Entrez les données dans les champs du collecteur de données conformément au t
 | Champ | Description 
 
 
-| Rôle inter-comptes | Rôle d'accès aux ressources de différents comptes AWS. 
+| Rôle inter-comptes | Rôle permettant d'accéder aux ressources dans différents comptes AWS. 
 
 
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 
+| Intervalle d'interrogation d'inventaire (min) | La valeur par défaut est 60 
 
 
-| Choisissez exclure ou inclure pour appliquer le filtrage des VM par balises | Indiquez s'il faut inclure ou exclure des VM par des étiquettes lors de la collecte de données. Si l'option "inclure" est sélectionnée, le champ clé d'étiquette ne peut pas être vide. 
+| Choisissez « Exclure » ou « Inclure » pour appliquer le filtre aux machines virtuelles par balises | Spécifiez s'il faut inclure ou exclure les machines virtuelles par balises lors de la collecte de données.  Si « Inclure » est sélectionné, le champ Clé de balise ne peut pas être vide. 
 
 
-| Intervalle d'interrogation des performances (s) | La valeur par défaut est 1800 
+| Intervalle d'interrogation des performances (sec) | La valeur par défaut est 1800 
 |===
 
 
 == Clé d'accès IAM
 
-Les clés d'accès sont des identifiants à long terme pour un utilisateur IAM ou l'utilisateur root du compte AWS. Les clés d'accès sont utilisées pour signer des demandes de programmation vers l'interface de ligne de commande AWS ou l'API AWS (directement ou à l'aide du kit de développement logiciel AWS).
+Les clés d’accès sont des informations d’identification à long terme pour un utilisateur IAM ou l’utilisateur racine du compte AWS.  Les clés d'accès sont utilisées pour signer des requêtes programmatiques à l'AWS CLI ou à l'API AWS (directement ou à l'aide du SDK AWS).
 
-Les clés d'accès sont constituées de deux parties : un ID de clé d'accès et une clé d'accès secrète. Lorsque vous utilisez l'authentification _IAM Access Key_ (par opposition à l'authentification _IAM role_), vous devez utiliser à la fois l'ID de clé d'accès et la clé d'accès secrète pour l'authentification des requêtes. Pour plus d'informations, consultez la documentation Amazon sur link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html["Touches d'accès"].
+Les clés d'accès se composent de deux parties : un identifiant de clé d'accès et une clé d'accès secrète.  Lorsque vous utilisez l'authentification _IAM Access Key_ (par opposition à l'authentification _IAM Role_), vous devez utiliser à la fois l'ID de clé d'accès et la clé d'accès secrète pour l'authentification des demandes.  Pour plus d'informations, consultez la documentation Amazon surlink:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html["Clés d'accès"] .
 
 
 
 == Rôle IAM
 
-Lorsque vous utilisez l'authentification _IAM role_ (par opposition à l'authentification IAM Access Key), vous devez vous assurer que le rôle que vous créez ou spécifiez dispose des autorisations appropriées nécessaires pour accéder à vos ressources.
+Lorsque vous utilisez l’authentification _IAM Role_ (par opposition à l’authentification par clé d’accès IAM), vous devez vous assurer que le rôle que vous créez ou spécifiez dispose des autorisations appropriées nécessaires pour accéder à vos ressources.
 
-Par exemple, si vous créez un rôle IAM nommé _InstanceS3ReadOnly_, vous devez configurer la règle pour accorder l'autorisation d'accès à la liste en lecture seule S3 à toutes les ressources S3 pour ce rôle IAM. En outre, vous devez accorder l'accès STS (Security Token Service) pour que ce rôle soit autorisé à assumer des comptes croisés de rôles.
+Par exemple, si vous créez un rôle IAM nommé _InstanceS3ReadOnly_, vous devez configurer la stratégie pour accorder l'autorisation d'accès à la liste en lecture seule S3 à toutes les ressources S3 pour ce rôle IAM.  De plus, vous devez accorder l'accès STS (Security Token Service) afin que ce rôle soit autorisé à assumer des rôles sur plusieurs comptes.
 
-Une fois que vous avez créé un rôle IAM, vous pouvez le rattacher à une nouvelle instance S3 ou à toute instance S3 existante.
+Après avoir créé un rôle IAM, vous pouvez l’attacher lorsque vous créez une nouvelle instance S3 ou toute instance S3 existante.
 
-Une fois le rôle IAM _InstanceS3ReadOnly_ à une instance S3, vous pouvez récupérer les informations d'identification temporaires via les métadonnées de l'instance par le nom de rôle IAM et les utiliser pour accéder aux ressources AWS par toute application exécutée sur cette instance S3.
+Après avoir attaché le rôle IAM _InstanceS3ReadOnly_ à une instance S3, vous pourrez récupérer les informations d'identification temporaires via les métadonnées d'instance par nom de rôle IAM et les utiliser pour accéder aux ressources AWS par n'importe quelle application exécutée sur cette instance S3.
 
-Pour plus d'informations, reportez-vous au document Amazon sur link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html["Rôles IAM"].
+Pour plus d'informations, consultez la documentation Amazon surlink:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html["Rôles IAM"] .
 
-Remarque : le rôle IAM ne peut être utilisé que lorsque l'unité d'acquisition est exécutée dans une instance AWS.
-
-
-
-== Mappage des balises Amazon avec les annotations Data Infrastructure Insights
-
-Le collecteur de données AWS S3 en tant que stockage inclut une option qui vous permet de remplir les annotations Data Infrastructure Insights avec des balises configurées sur S3. Les annotations doivent être nommées exactement comme les balises AWS. Data Infrastructure Insights remplit toujours les annotations de type texte portant le même nom et fera une « meilleure tentative » pour remplir les annotations d'autres types (nombre, booléen, etc.). Si votre annotation est de type différent et que le collecteur de données ne parvient pas à la remplir, il peut être nécessaire de supprimer l'annotation et de la recréer en tant que type de texte.
-
-AWS est sensible à la casse, tandis que Data Infrastructure Insights n'est pas sensible à la casse. Par conséquent, si vous créez une annotation nommée « PROPRIÉTAIRE » dans Data Infrastructure Insights et des balises nommées « PROPRIÉTAIRE », « propriétaire » et « propriétaire » dans S3, toutes les variations S3 de « propriétaire » seront mappées sur l'annotation « PROPRIÉTAIRE » DE Cloud Insight.
+Remarque : le rôle IAM ne peut être utilisé que lorsque l’unité d’acquisition s’exécute dans une instance AWS.
 
 
 
-== Collecte depuis les comptes enfants AWS
+== Mappage des balises Amazon aux annotations Data Infrastructure Insights
 
-Data Infrastructure Insights prend en charge la collecte de comptes enfants pour AWS dans un collecteur de données AWS unique. La configuration de cette collection est effectuée dans l'environnement AWS :
+Le collecteur de données AWS S3 as Storage inclut une option qui vous permet de renseigner les annotations Data Infrastructure Insights avec des balises configurées sur S3.  Les annotations doivent être nommées exactement comme les balises AWS.  Data Infrastructure Insights renseignera toujours les annotations de type texte portant le même nom et fera de son mieux pour renseigner les annotations d'autres types (nombre, booléen, etc.).  Si votre annotation est d'un type différent et que le collecteur de données ne parvient pas à la renseigner, il peut être nécessaire de supprimer l'annotation et de la recréer en tant que type de texte.
 
-* Vous devez configurer chaque compte enfant pour qu'il dispose d'un rôle AWS qui permet à l'ID de compte principal d'accéder aux informations S3 à partir du compte enfants.
-* Chaque compte enfant doit avoir le nom du rôle configuré comme la même chaîne.
-* Entrez cette chaîne de nom de rôle dans la section Data Infrastructure Insights AWS Data Collector *Advanced Configuration*, dans le champ *Cross account role*.
-* Le compte sur lequel le collecteur est installé doit disposer de _déléguer l'accès administrateur_ Privileges. Pour link:https://docs.aws.amazon.com/accounts/latest/reference/using-orgs-delegated-admin.html["Documentation AWS"]plus d'informations, reportez-vous à la section.
+Notez qu'AWS est sensible à la casse, tandis que Data Infrastructure Insights n'est pas sensible à la casse.  Ainsi, si vous créez une annotation nommée « OWNER » dans Data Infrastructure Insights et des balises nommées « OWNER », « Owner » et « owner » dans S3, toutes les variantes S3 de « owner » seront mappées à l'annotation « OWNER » de Cloud Insight.
 
 
-Meilleure pratique : il est fortement recommandé d'attribuer la politique AWS prédéfinie _Amazon S3ReadOnlyAccess_ au compte principal S3. En outre, l'utilisateur configuré dans la source de données doit avoir au moins la stratégie prédéfinie _AWOrganiztionsReadOnlyAccess_, afin d'interroger AWS.
 
-Pour plus d'informations sur la configuration de votre environnement afin que des informations sur l'infrastructure de données puissent être collectées à partir de comptes enfants AWS, consultez les documents suivants :
+== Collecte à partir des comptes enfants AWS
 
-link:https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html["Tutoriel : déléguer l'accès aux comptes AWS à l'aide des rôles IAM"]
+Data Infrastructure Insights prend en charge la collecte de comptes enfants pour AWS au sein d'un seul collecteur de données AWS.  La configuration de cette collection est effectuée dans l'environnement AWS :
 
-link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html["Configuration AWS : accès à un utilisateur IAM dans un autre compte AWS dont vous disposez"]
+* Vous devez configurer chaque compte enfant pour qu'il dispose d'un rôle AWS qui permet à l'ID de compte principal d'accéder aux détails S3 à partir du compte enfant.
+* Chaque compte enfant doit avoir le nom de rôle configuré comme la même chaîne.
+* Saisissez cette chaîne de nom de rôle dans la section *Configuration avancée* de Data Infrastructure Insights AWS Data Collector, dans le champ *Rôle inter-comptes*.
+* Le compte sur lequel le collecteur est installé doit disposer des privilèges _administrateur d'accès délégué_.  Voir lelink:https://docs.aws.amazon.com/accounts/latest/reference/using-orgs-delegated-admin.html["Documentation AWS"] pour plus d'informations.
+
+
+Meilleure pratique : il est fortement recommandé d’attribuer la stratégie AWS prédéfinie _AmazonS3ReadOnlyAccess_ au compte principal S3.  De plus, l'utilisateur configuré dans la source de données doit avoir au moins la politique prédéfinie _AWSOrganizationsReadOnlyAccess_ attribuée, afin d'interroger AWS.
+
+Veuillez consulter les éléments suivants pour obtenir des informations sur la configuration de votre environnement afin de permettre à Data Infrastructure Insights de collecter des données à partir des comptes enfants AWS :
+
+link:https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html["Tutoriel : Déléguer l'accès aux comptes AWS à l'aide des rôles IAM"]
+
+link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html["Configuration AWS : fournir l'accès à un utilisateur IAM dans un autre compte AWS dont vous êtes propriétaire"]
 
 link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["Création d'un rôle pour déléguer des autorisations à un utilisateur IAM"]
 
@@ -134,4 +134,4 @@ link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.h
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

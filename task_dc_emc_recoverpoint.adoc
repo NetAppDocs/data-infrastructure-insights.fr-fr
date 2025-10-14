@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_emc_recoverpoint.html 
 keywords: data collector, RecoverPoint, EMC, DELL 
-summary: Configuration DU collecteur de données DELL EMC RecoverPoint. 
+summary: Configuration du collecteur de données DELL EMC RecoverPoint. 
 ---
 = Collecteur de données Dell EMC RecoverPoint
 :hardbreaks:
@@ -10,17 +10,17 @@ summary: Configuration DU collecteur de données DELL EMC RecoverPoint.
 
 
 [role="lead"]
-L'utilisation principale du collecteur de données EMC RecoverPoint consiste à découvrir les relations de réplication volume-volume que l'appliance de stockage RecoverPoint facilite. Ce collecteur découvre également l'appliance RecoverPoint elle-même. Veuillez noter que Dell/EMC vend une solution de sauvegarde VMware pour VM--« RecoverPoint for VM »--non prise en charge par ce collecteur
+Le principal cas d’utilisation du collecteur de données EMC RecoverPoint est de découvrir les relations de réplication de volume à volume que l’appliance de stockage RecoverPoint facilite.  Ce collecteur découvrira également l’appliance Recoverpoint elle-même.  Veuillez noter que Dell/EMC vend une solution de sauvegarde VMware pour les machines virtuelles - « RecoverPoint pour machines virtuelles » - qui n'est pas prise en charge par ce collecteur.
 
 Pour la configuration, le collecteur de données nécessite l'adresse IP des processeurs de stockage ainsi qu'un nom d'utilisateur et un mot de passe en lecture seule.
 
-Le collecteur de données EMC RecoverPoint rassemble les relations de réplication volume-volume que RecoverPoint coordonne sur les autres matrices de stockage. Data Infrastructure Insights affiche une baie de stockage pour chaque cluster RecoverPoint et collecte les données d'inventaire pour les nœuds et les ports de stockage sur ce cluster. Aucune donnée de volume ou de pool de stockage n'est collectée.
+Le collecteur de données EMC RecoverPoint rassemble les relations de réplication de volume à volume que RecoverPoint coordonne sur d'autres baies de stockage.  Data Infrastructure Insights affiche une baie de stockage pour chaque cluster RecoverPoint et collecte des données d’inventaire pour les nœuds et les ports de stockage sur ce cluster.  Aucune donnée de pool de stockage ou de volume n'est collectée.
 
 
 
-== De formation
+== Exigences
 
-Les informations suivantes sont requises pour configurer ce collecteur de données :
+Les informations suivantes sont requises pour configurer ce collecteur de données :
 
 * Adresse IP ou nom de domaine complet du processeur de stockage
 * Nom d'utilisateur et mot de passe en lecture seule
@@ -39,7 +39,7 @@ Les informations suivantes sont requises pour configurer ce collecteur de donné
 | Adresse de RecoverPoint | Adresse IP ou nom de domaine complet du cluster RecoverPoint 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du cluster RecoverPoint 
+| Nom d'utilisateur | Nom d'utilisateur pour le cluster RecoverPoint 
 
 
 | Mot de passe | Mot de passe utilisé pour le cluster RecoverPoint 
@@ -53,10 +53,10 @@ Les informations suivantes sont requises pour configurer ce collecteur de donné
 | Champ | Description 
 
 
-| Port TCP | Port TCP utilisé pour se connecter au cluster RecoverPoint 
+| Port TCP | Port TCP utilisé pour se connecter au cluster Recoverpoint 
 
 
-| Intervalle d'interrogation des stocks (minutes) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 20 minutes. 
+| Intervalle d'interrogation d'inventaire (minutes) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 20 minutes. 
 
 
 | Clusters exclus | Liste séparée par des virgules d'ID ou de noms de cluster à exclure lors de l'interrogation. 
@@ -65,4 +65,4 @@ Les informations suivantes sont requises pour configurer ce collecteur de donné
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

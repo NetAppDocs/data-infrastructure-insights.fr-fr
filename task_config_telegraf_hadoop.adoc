@@ -10,62 +10,62 @@ summary: Configuration du collecteur de données Hadoop
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour collecter des metrics à partir de Hadoop.
+Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Hadoop.
 
 
 
 == Installation
 
-. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Avec Hadoop
+. Depuis *Observabilité > Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Hadoop.
 +
-Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+Sélectionnez le système d’exploitation ou la plate-forme sur laquelle l’agent Telegraf est installé.
 
-. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer les link:task_config_telegraf_agent.html["Installation de l'agent"]instructions.
-. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
-. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
+. Si vous n'avez pas encore installé d'agent pour la collecte, ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer lelink:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d’accès de l’agent à utiliser avec ce collecteur de données.  Vous pouvez ajouter une nouvelle clé d'accès d'agent en cliquant sur le bouton *+ Clé d'accès d'agent*.  Meilleure pratique : utilisez une clé d’accès d’agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple par système d’exploitation/plateforme.
+. Suivez les étapes de configuration pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.
 
 
 image:HadoopDCConfigLinux-1.png["Configuration Hadoop"] image:HadoopDCConfigLinux-2.png["Configuration Hadoop"]
 
 
 
-== Configuration
+== Installation
 
-Un déploiement Hadoop complet nécessite les composants suivants :
+Un déploiement Hadoop complet implique les composants suivants :
 
-* NameNode : système principal Hadoop Distributed File System (HDFS). Coordonne une série de DataNodes.
-* Second NameNode : basculement à chaud pour le NameNode principal. Dans Hadoop, la promotion vers NameNode n'a pas lieu automatiquement. Second NameNode collecte les informations du NameNode pour être prêt à être promu au besoin.
-* DataNode : propriétaire réel des données.
-* ResourceManager : le système principal de calcul (Yarn). Coordonne une série de gestionnaires de nœud.
-* NodeManager : la ressource pour le calcul. Emplacement réel pour l'exécution des applications.
-* JobHistoriyServer : responsable du traitement de toutes les requêtes liées à l'historique des travaux.
+* NameNode : le système principal du système de fichiers distribué Hadoop (HDFS).  Coordonne une série de DataNodes.
+* NameNode secondaire : un basculement à chaud pour le NameNode principal.  Dans Hadoop, la promotion vers NameNode ne se produit pas automatiquement.  Le NameNode secondaire collecte les informations du NameNode pour être prêt à être promu en cas de besoin.
+* DataNode : propriétaire actuel des données.
+* ResourceManager : le système de calcul principal (Yarn).  Coordonne une série de NodeManagers.
+* NodeManager : la ressource pour le calcul.  Emplacement réel d'exécution des applications.
+* JobHistoryServer : responsable du traitement de toutes les demandes liées à l'historique des tâches.
 
 
-Le plug-in Hadoop est basé sur le plug-in Jolokia de telegraf. Par exemple, pour collecter des informations à partir de tous les composants Hadoop, JMX doit être configuré et exposé via Jolokia sur tous les composants.
+Le plugin Hadoop est basé sur le plugin Jolokia de Telegraf.  En tant qu'exigence de collecte d'informations à partir de tous les composants Hadoop, JMX doit être configuré et exposé via Jolokia sur tous les composants.
 
 
 
 === Compatibilité
 
-La configuration a été développée à partir de la version Hadoop 2.9.2.
+La configuration a été développée sur la version Hadoop 2.9.2.
 
 
 
-=== Configuration
+=== Installation
 
 
 
-==== Bol d'agent Jolokia
+==== Agent Jar Jolokia
 
-Pour tous les composants individuels, une version du fichier JAR de l'agent Jolokia doit être téléchargée. La version testée était link:https://jolokia.org/download.html["Agent de Jolokia 1.6.0"].
+Pour tous les composants individuels, une version du fichier jar de l'agent Jolokia doit être téléchargée.  La version testée étaitlink:https://jolokia.org/download.html["Agent Jolokia 1.6.0"] .
 
-Les instructions ci-dessous supposent que le fichier jar téléchargé (jolokia-jvm-1.6.0-agent.jar) est placé sous l'emplacement '/opt/hadoop/lib/'.
+Les instructions ci-dessous supposent que le fichier jar téléchargé (jolokia-jvm-1.6.0-agent.jar) est placé sous l'emplacement « /opt/hadoop/lib/ ».
 
 
 
-==== Nom de nœud
+==== NomNode
 
-Pour configurer NameNode afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
+Pour configurer NameNode afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
 
 [listing]
 ----
@@ -74,9 +74,9 @@ You can choose a different port for JMX (8000 above) and Jolokia (7800). If you 
 ----
 
 
-==== Nom de nœud secondaire
+==== Nom du nœud secondaire
 
-Pour configurer le NameNode secondaire pour exposer l’API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
+Pour configurer le NameNode secondaire afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
 
 [listing]
 ----
@@ -87,7 +87,7 @@ You can choose a different port for JMX (8002 above) and Jolokia (7802). If you 
 
 ==== Nœud de données
 
-Pour configurer les DataNodes pour exposer l’API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
+Pour configurer les DataNodes afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
 
 [listing]
 ----
@@ -96,9 +96,9 @@ You can choose a different port for JMX (8001 above) and Jolokia (7801). If you 
 ----
 
 
-==== ResourceManager
+==== Gestionnaire de ressources
 
-Pour configurer ResourceManager pour exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
+Pour configurer le ResourceManager afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
 
 [listing]
 ----
@@ -107,9 +107,9 @@ You can choose a different port for JMX (8003 above) and Jolokia (7803). If you 
 ----
 
 
-==== Gestionnaire de nœud
+==== Gestionnaire de nœuds
 
-Pour configurer les gestionnaires de nœud afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
+Pour configurer les NodeManagers afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
 
 [listing]
 ----
@@ -118,9 +118,9 @@ You can choose a different port for JMX (8004 above) and Jolokia (7804). If you 
 ----
 
 
-==== JobHistoriyServer
+==== Serveur d'historique des tâches
 
-Pour configurer JobHistoriyServer afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
+Pour configurer le JobHistoryServer afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans <HADOOP_HOME>/etc/hadoop/hadoop-env.sh :
 
 [listing]
 ----
@@ -131,32 +131,32 @@ You can choose a different port for JMX (8005 above) and Jolokia (7805). If you 
 
 == Objets et compteurs
 
-Les objets suivants et leurs compteurs sont collectés :
+Les objets suivants et leurs compteurs sont collectés :
 
 [cols="<.<,<.<,<.<"]
 |===
-| Objet : | Identifiants : | Attributs : 
+| Objet: | Identifiants : | Attributs: 
 
 
-| Nom de nœud secondaire Hadoop | Serveur d'espace de noms de cluster | Noeud Nom noeud IP Compile Info version 
+| Nom du nœud secondaire Hadoop | Serveur d'espace de noms de cluster | Nom du nœud IP du nœud Informations de compilation Version 
 
 
-| Hadoop NodeManager | Serveur d'espace de noms de cluster | IP du nœud de nom de nœud 
+| Gestionnaire de nœuds Hadoop | Serveur d'espace de noms de cluster | Nom du nœud IP du nœud 
 
 
-| Gestionnaire de ressources Hadoop | Serveur d'espace de noms de cluster | IP du nœud de nom de nœud 
+| Gestionnaire de ressources Hadoop | Serveur d'espace de noms de cluster | Nom du nœud IP du nœud 
 
 
-| Nœud de données Hadoop | Serveur d'espace de noms de cluster | Version de l'ID de cluster IP du nœud de nom de nœud 
+| Nœud de données Hadoop | Serveur d'espace de noms de cluster | Nom du nœud IP du nœud ID du cluster Version 
 
 
-| Nom de nœud Hadoop | Serveur d'espace de noms de cluster | Nom du nœud Nom de la transaction IP ID de transaction dernière heure écrite depuis la dernière édition de l'état HA fichier Etat du système Etat du système ID de bloc ID de groupe Infos de cluster version distincte nombre de versions 
+| Nom du nœud Hadoop | Serveur d'espace de noms de cluster | Nom du nœud IP du nœud ID de transaction Dernière heure d'écriture depuis le dernier chargement Modifications État HA État du système de fichiers ID du pool de blocs ID du cluster Informations de compilation Nombre de versions distinctes Version 
 
 
-| Hadoop JobHistoriyServer | Serveur d'espace de noms de cluster | IP du nœud de nom de nœud 
+| Serveur d'historique des tâches Hadoop | Serveur d'espace de noms de cluster | Nom du nœud IP du nœud 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur la link:concept_requesting_support.html["Assistance"] page.
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page.

@@ -10,44 +10,44 @@ summary: Configuration du collecteur de données MySQL
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour collecter des metrics de MySQL.
+Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de MySQL.
 
 
 
 == Installation
 
-. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez MySQL.
+. Depuis *Observabilité > Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez MySQL.
 +
-Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+Sélectionnez le système d’exploitation ou la plate-forme sur laquelle l’agent Telegraf est installé.
 
-. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer les link:task_config_telegraf_agent.html["Installation de l'agent"]instructions.
-. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
-. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
+. Si vous n'avez pas encore installé d'agent pour la collecte, ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer lelink:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d’accès de l’agent à utiliser avec ce collecteur de données.  Vous pouvez ajouter une nouvelle clé d'accès d'agent en cliquant sur le bouton *+ Clé d'accès d'agent*.  Meilleure pratique : utilisez une clé d’accès d’agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple par système d’exploitation/plateforme.
+. Suivez les étapes de configuration pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.
 
 
 image:MySQLDCConfigWindows.png["Configuration MySQL"]
 
 
 
-== Configuration
+== Installation
 
-Vous trouverez des informations dans le link:https://dev.mysql.com/doc/["Documentation MySQL"].
+Des informations peuvent être trouvées dans lelink:https://dev.mysql.com/doc/["Documentation MySQL"] .
 
 
 
 == Objets et compteurs
 
-Les objets suivants et leurs compteurs sont collectés :
+Les objets suivants et leurs compteurs sont collectés :
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| Objet : | Identifiants : | Attributs : | Points de données : 
+| Objet: | Identifiants : | Attributs: | Points de données : 
 
 
-| MySQL | Espace de noms serveur MySQL | Nom du nœud IP du nœud | Clients abandonnés (par seconde) connexions abandonnées (par seconde) RX Bytes (par seconde) TX Bytes (par seconde) commandes Admin (par seconde) Commandes ALTER Event commandes ALTER fonction commandes ALTER instance commandes ALTER procédure commandes ALTER Server commandes ALTER Table commandes ALTER Tablespace commandes ALTER User commandes Analyze commandes Assign to Keycache commandes Begin log procédure commandes change DB commandes change DB commandes change Master change Repl Filter commandes Check commandes Commandes de la somme de contrôle commandes d'archivage commandes de création de bases de données commandes de création d'événements commandes de création d'index commandes de procédure création de commandes de création de tableaux commandes de déclenchement création de commandes UDF création de commandes d'affichage commandes de DEALLOC erreurs de connexion SQL acceptent les tables de disques tmp erreurs retardées commandes de rinçage Gestionnaire de validation InnoDB tampon octets de pool de données blocs de clés non vidés clés demandes de lecture clés demandes d'écriture clé durée d'exécution max. Dépassée connexions ouvertes fichiers exécution comptes de schéma de performance perdu préparé stmt nombre Qcache requêtes de blocs libres Sélectionner une plage complète Vérification de la plage de sélection Sélectionnez verrouillage immédiat de la table d'examen 
+| MySQL | Espace de noms du serveur MySQL | IP du nœud Nom du nœud | Clients abandonnés (par seconde) Connexions abandonnées (par seconde) Octets RX (par seconde) Octets TX (par seconde) Commandes Admin (par seconde) Commandes Alter Event Commandes Alter Function Commandes Alter Instance Commandes Alter Procedure Commandes Alter Server Commandes Alter Table Commandes Alter Tablespace Commandes Alter User Commandes Analyze Commandes Assign To Keycache Commandes Begin Commandes Binlog Commandes Call Procedure Commandes Change DB Commandes Change Master Commandes Change Repl Filter Commandes Check Commandes Checksum Commandes Commit Commandes Create DB Commandes Create Event Commandes Create Function Commandes Create Index Commandes Create Procedure Commandes Create Server Commandes Create Table Commandes Create Trigger Commandes Create UDF Commandes Create User Commandes Create View Commandes Dealloc Erreurs de connexion SQL Accept Create Tmp Disk Tables Erreurs différées Commandes Flush Handler Commit Innodb Buffer Pool Octets Données Blocs de clés non vidés Requêtes de lecture de clé Requêtes d'écriture de clé Écritures de clé Temps d'exécution maximal Dépassement du nombre maximal de connexions utilisées Fichiers ouverts Performances Schéma Comptes perdus Nombre de déclarations préparées Qcache Blocs gratuits Requêtes Questions Sélectionner une jointure complète Sélectionner une jointure de plage complète Sélectionner une vérification de plage Sélectionner une analyse Verrous de table Immédiat 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur la link:concept_requesting_support.html["Assistance"] page.
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page.

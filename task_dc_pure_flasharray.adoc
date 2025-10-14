@@ -4,51 +4,51 @@ permalink: task_dc_pure_flasharray.html
 keywords: data collector, Pure Storage, pure 
 summary: Configuration du collecteur de données Pure Storage. 
 ---
-= Collecteur de données FlashArray de Pure Storage
+= Collecteur de données Pure Storage FlashArray
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur de données Pure Storage FlashArray pour collecter les données d'inventaire et de performance.
+Data Infrastructure Insights utilise le collecteur de données Pure Storage FlashArray pour collecter des données d'inventaire et de performances.
 
 
 
 == Terminologie
 
-Pour chaque type de ressource acquise par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour l’actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
 | Disque (SSD) | Disque 
 
 
-| Baie | Stockage 
+| Tableau | Stockage 
 
 
 | Contrôleur | Nœud de stockage 
 
 
-| Volumétrie | Volumétrie 
+| Volume | Volume 
 
 
-| Mappage de LUN | Carte de volume 
+| Carte LUN | Carte des volumes 
 
 
-| Initiateur,cible | Masque de volume 
+| Initiateur, cible | Masque de volume 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
 * Adresse IP du système de stockage
-* Nom d'utilisateur et mot de passe du compte Administrateur du système Pure Storage.
-* Port requis : HTTP/HTTPS 80/443
+* Nom d'utilisateur et mot de passe pour le compte Administrateur du système de stockage Pure.
+* Exigence de port : HTTP/HTTPS 80/443
 
 
 
@@ -66,7 +66,7 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Nom d'utilisateur | Nom d'utilisateur avec privilèges d'administrateur 
 
 
-| Mot de passe du compte admin privilégié | Mot de passe 
+| Mot de passe pour le compte privilégié administrateur | Mot de passe 
 |===
 
 
@@ -77,22 +77,22 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| Type de connexion | Choisissez HTTP ou HTTPS. Affiche également le port par défaut. 
+| Type de connexion | Choisissez HTTP ou HTTPS.  Affiche également le port par défaut. 
 
 
-| Remplacer le port TCP | Si ce champ est vide, utilisez le port par défaut dans le champ Type de connexion, sinon entrez le port de connexion à utiliser 
+| Remplacer le port TCP | Si vide, utilisez le port par défaut dans le champ Type de connexion, sinon entrez le port de connexion à utiliser 
 
 
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 minutes 
+| Intervalle d'interrogation de l'inventaire (min) | La valeur par défaut est de 60 minutes 
 
 
-| Intervalle d'interrogation des performances (s) | La valeur par défaut est 300 
+| Intervalle d'interrogation des performances (sec) | La valeur par défaut est 300 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -100,9 +100,9 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| "Informations d'identification non valides" avec les messages d'erreur "la stratégie n'autorise pas" ou "vous n'êtes pas autorisé" | Valider le compte utilisateur et le mot de passe Pure via l'interface http Pure 
+| « Identifiants de connexion non valides » avec les messages d'erreur « La politique ne le permet pas » ou « Vous n'êtes pas autorisé » | Valider le compte utilisateur et le mot de passe Pure via l'interface http Pure 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

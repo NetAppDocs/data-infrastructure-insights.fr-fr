@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_emc_powerstore.html 
 keywords: data collector, PowerStore, EMC, DELL 
-summary: Configuration DU collecteur de données DELL EMC PowerStore. 
+summary: Configuration du collecteur de données DELL EMC PowerStore. 
 ---
 = Collecteur de données Dell EMC PowerStore
 :hardbreaks:
@@ -10,54 +10,54 @@ summary: Configuration DU collecteur de données DELL EMC PowerStore.
 
 
 [role="lead"]
-Le collecteur de données EMC PowerStore rassemble les informations d'inventaire à partir du stockage EMC PowerStore. Pour la configuration, le collecteur de données nécessite l'adresse IP des processeurs de stockage ainsi qu'un nom d'utilisateur et un mot de passe en lecture seule.
+Le collecteur de données EMC PowerStore collecte les informations d'inventaire à partir du stockage EMC PowerStore.  Pour la configuration, le collecteur de données nécessite l'adresse IP des processeurs de stockage ainsi qu'un nom d'utilisateur et un mot de passe en lecture seule.
 
-Le collecteur de données EMC PowerStore rassemble les relations de réplication volume-volume que PowerStore coordonne entre les autres matrices de stockage. Data Infrastructure Insights affiche une matrice de stockage pour chaque cluster PowerStore et collecte les données d'inventaire pour les nœuds et les ports de stockage de ce cluster. Aucune donnée de volume ou de pool de stockage n'est collectée.
+Le collecteur de données EMC PowerStore rassemble les relations de réplication de volume à volume que PowerStore coordonne sur d'autres baies de stockage.  Data Infrastructure Insights affiche une baie de stockage pour chaque cluster PowerStore et collecte des données d'inventaire pour les nœuds et les ports de stockage sur ce cluster.  Aucune donnée de pool de stockage ou de volume n'est collectée.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir de ce collecteur de données. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès de ce collecteur de données.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
 | hôte | hôte 
 
 
-| host_volume_mapping | host_volume_mapping 
+| mappage_volume_hôte | mappage_volume_hôte 
 
 
-| Matériel (il a des disques sous objet "extra_details"): Lecteurs | Disque 
+| matériel (il a des lecteurs sous l'objet « extra_details ») : lecteurs | Disque 
 
 
-| Appliance | Poolde stockage 
+| Appareil | Pool de stockage 
 
 
 | Cluster | Baie de stockage 
 
 
-| Nœud | StorageNode 
+| Nœud | Nœud de stockage 
 
 
-| port fc | Port 
+| fc_port | Port 
 
 
-| volumétrie | Volumétrie 
+| volume | Volume 
 
 
-| Volume interne | système_fichiers 
+| Volume interne | système de fichiers 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-Les informations suivantes sont requises pour configurer ce collecteur de données :
+Les informations suivantes sont requises pour configurer ce collecteur de données :
 
 * Adresse IP ou nom de domaine complet du processeur de stockage
 * Nom d'utilisateur et mot de passe en lecture seule
@@ -92,12 +92,12 @@ Les informations suivantes sont requises pour configurer ce collecteur de donné
 | Port HTTPS | La valeur par défaut est 443 
 
 
-| Intervalle d'interrogation des stocks (minutes) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 60 minutes. 
+| Intervalle d'interrogation d'inventaire (minutes) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 60 minutes. 
 |===
-La collecte des performances PowerStore de Cloud Insight utilise les données sources de granularité de 5 minutes de PowerStore. C'est pourquoi Data Infrastructure Insights interroge ces données toutes les cinq minutes, mais elles ne sont pas configurables.
+La collecte des performances PowerStore de Cloud Insight utilise les données sources de granularité de 5 minutes de PowerStore.  En tant que tel, Data Infrastructure Insights interroge ces données toutes les cinq minutes, et cela n'est pas configurable.
 
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

@@ -1,105 +1,105 @@
 ---
 sidebar: sidebar 
 permalink: security_information_and_region.html 
-summary: Data Infrastructure Insights applique de bonnes pratiques de sécurité tout au long du cycle de vie des versions. 
+summary: Data Infrastructure Insights suit les meilleures pratiques de sécurité tout au long du cycle de vie de la version. 
 keywords: security, risk, protection 
 ---
-= Information et région
+= Informations et région
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp prend très au sérieux la sécurité des informations client. Voici comment et où les informations relatives à l'infrastructure de données sont stockées.
+NetApp prend très au sérieux la sécurité des informations clients.  Voici comment et où Data Infrastructure Insights stocke vos informations.
 
 
 
-== Quelles sont les informations stockées par Data Infrastructure Insights ?
+== Quelles informations Data Infrastructure Insights stocke-t-il ?
 
-Data Infrastructure Insights stocke les informations suivantes :
+Data Infrastructure Insights stocke les informations suivantes :
 
-* Les données de performance
+* Données de performance
 +
-Les données de performances sont des données de séries chronologiques fournissant des informations sur les performances de l'appareil/source surveillé. Cela inclut, par exemple, le nombre d'E/S fournies par un système de stockage, le débit d'un port FiberChannel, le nombre de pages fournies par un serveur Web, le temps de réponse d'une base de données, etc.
+Les données de performances sont des données chronologiques fournissant des informations sur les performances du périphérique/de la source surveillée.  Cela inclut, par exemple, le nombre d'E/S fournies par un système de stockage, le débit d'un port FibreChannel, le nombre de pages fournies par un serveur Web, le temps de réponse d'une base de données, etc.
 
 * Données d'inventaire
 +
-Les données d'inventaire se composent de métadonnées décrivant l'appareil/la source surveillé et la façon dont il est configuré. Cela inclut, par exemple, les versions matérielles et logicielles installées, les disques et les LUN d'un système de stockage, les cœurs de CPU, la RAM et les disques d'une machine virtuelle, les espaces de stockage d'une base de données, le nombre et le type de ports d'un commutateur SAN, les noms de répertoire/fichier (si la sécurité des charges de travail de stockage est activée), etc
+Les données d’inventaire se composent de métadonnées décrivant le périphérique/la source surveillée et la manière dont il est configuré.  Cela inclut, par exemple, les versions matérielles et logicielles installées, les disques et les LUN d'un système de stockage, les cœurs de processeur, la RAM et les disques d'une machine virtuelle, les espaces table d'une base de données, le nombre et le type de ports sur un commutateur SAN, les noms de répertoire/fichier (si Storage Workload Security est activé), etc.
 
 * Données de configuration
 +
-Cette section récapitule les données de configuration fournies par le client utilisées pour gérer l'inventaire et les opérations du client, par exemple les noms d'hôtes ou les adresses IP des périphériques surveillés, les intervalles d'interrogation, les valeurs de délai d'attente, etc
+Ceci résume les données de configuration fournies par le client utilisées pour gérer l'inventaire et les opérations du client, par exemple les noms d'hôte ou les adresses IP des périphériques surveillés, les intervalles d'interrogation, les valeurs de délai d'expiration, etc.
 
 * Secrets
 +
-Les secrets sont les références utilisées par l'unité d'acquisition Data Infrastructure Insights pour accéder aux appareils et services du client. Ces informations d'identification sont chiffrées à l'aide d'un cryptage asymétrique puissant, et les clés privées sont stockées uniquement sur les unités d'acquisition et ne quittent jamais l'environnement du client. Même les SRE Privileged Data Infrastructure Insights ne peuvent pas accéder aux secrets des clients en texte brut en raison de cette conception.
+Les secrets sont constitués des informations d'identification utilisées par l'unité d'acquisition Data Infrastructure Insights pour accéder aux appareils et services des clients.  Ces informations d’identification sont cryptées à l’aide d’un cryptage asymétrique puissant et les clés privées sont stockées uniquement sur les unités d’acquisition et ne quittent jamais l’environnement client.  Même les SRE privilégiés de Data Infrastructure Insights ne peuvent pas accéder aux secrets des clients en texte clair en raison de cette conception.
 
 * Données fonctionnelles
 +
-Il s'agit de données générées par NetApp avec le service de données cloud qui informe NetApp dans le développement, le déploiement, les opérations, la maintenance et la sécurisation du service de données cloud. Les données fonctionnelles ne contiennent pas d'informations client ou de données personnelles.
+Il s'agit de données générées suite à la fourniture du service de données cloud par NetApp , qui informe NetApp dans le développement, le déploiement, les opérations, la maintenance et la sécurisation du service de données cloud.  Les données fonctionnelles ne contiennent pas d’informations client ni d’informations personnelles.
 
 * Données d'accès utilisateur
 +
 Informations d'authentification et d'accès qui permettent à NetApp Console de communiquer avec les sites régionaux Data Infrastructure Insights , y compris les données liées à l'autorisation de l'utilisateur.
 
-* Données du répertoire utilisateur pour la sécurité des charges de travail de stockage
+* Données de l'annuaire utilisateur de la sécurité de la charge de travail de stockage
 +
-Lorsque la fonctionnalité de sécurité de la charge de travail est activée ET que le client choisit d'activer le collecteur d'annuaire de l'utilisateur, le système stocke les noms d'affichage des utilisateurs, les adresses e-mail de l'entreprise et d'autres informations collectées à partir d'Active Directory.
+Dans les cas où la fonctionnalité de sécurité de la charge de travail est activée ET que le client choisit d'activer le collecteur d'annuaires utilisateurs, le système stockera les noms d'affichage des utilisateurs, les adresses e-mail d'entreprise et d'autres informations collectées à partir d'Active Directory.
 
 
 
 
-NOTE: Les données de répertoire d'utilisateurs font référence aux informations de répertoire d'utilisateurs collectées par le collecteur de données de l'annuaire d'utilisateurs Workload Security, et non aux données relatives aux utilisateurs de Data Infrastructure Insights/Workload Security eux-mêmes.
+NOTE: Les données de l'annuaire utilisateur font référence aux informations de l'annuaire utilisateur collectées par le collecteur de données de l'annuaire utilisateur Workload Security, et non aux données sur les utilisateurs de Data Infrastructure Insights/Workload Security eux-mêmes.
 
-*Aucune donnée personnelle explicite* n'est recueillie dans les ressources de l'infrastructure et des services. Les informations collectées concernent uniquement les mesures de performance, les informations de configuration et les métadonnées de l'infrastructure, comme bon nombre de fournisseurs de téléphonie, y compris le support automatique NetApp et ActiveIQ. Toutefois, en fonction des conventions de nom utilisées par le client, les données pour les partages, les volumes, les machines virtuelles, les qtrees, les applications, etc., peuvent contenir des informations personnelles identifiables.
+*Aucune donnée personnelle explicite* n'est collectée à partir des ressources d'infrastructure et de services.  Les informations collectées se composent uniquement de mesures de performances, d'informations de configuration et de métadonnées d'infrastructure, à l'instar de nombreuses informations téléphoniques des fournisseurs, notamment le support automatique NetApp et ActiveIQ.  Cependant, en fonction des conventions de dénomination d'un client, les données relatives aux partages, aux volumes, aux machines virtuelles, aux qtrees, aux applications, etc. peuvent contenir des informations personnellement identifiables.
 
-Si la sécurité des charges de travail est activée, le système examine en outre les noms de fichiers et de répertoires sur SMB ou d'autres partages, qui peuvent contenir des informations personnellement identifiables. Lorsque les clients activent le collecteur d'annuaire d'utilisateurs Workload Security (qui mappe essentiellement les SID Windows aux noms d'utilisateurs via Active Directory), le nom d'affichage, l'adresse e-mail d'entreprise et tous les attributs supplémentaires sélectionnés seront collectés et stockés par Data Infrastructure Insights.
+Si la sécurité de la charge de travail est activée, le système examine également les noms de fichiers et de répertoires sur SMB ou d'autres partages, qui peuvent contenir des informations personnellement identifiables.  Lorsque les clients activent le collecteur d'annuaires utilisateurs Workload Security (qui mappe essentiellement les SID Windows aux noms d'utilisateur via Active Directory), le nom d'affichage, l'adresse e-mail de l'entreprise et tous les attributs supplémentaires sélectionnés seront collectés et stockés par Data Infrastructure Insights.
 
-En outre, les journaux d'accès à Data Infrastructure Insights sont conservés et contiennent les adresses IP et e-mail des utilisateurs utilisés pour se connecter au service.
+De plus, les journaux d'accès à Data Infrastructure Insights sont conservés et contiennent les adresses IP et e-mail des utilisateurs utilisées pour se connecter au service.
 
 
 
-== Où mes informations sont-elles stockées ?
+== Où sont stockées mes informations ?
 
-Les informations d'infrastructure de données stockent les informations en fonction de la région dans laquelle votre environnement est créé.
+Data Infrastructure Insights stocke les informations en fonction de la région dans laquelle votre environnement est créé.
 
-Les informations suivantes sont stockées dans la région hôte :
+Les informations suivantes sont stockées dans la région hôte :
 
-* Données de télémétrie et de ressources/objet, notamment compteurs et mesures de performances
+* Télémétrie et informations sur les actifs/objets, y compris les compteurs et les mesures de performance
 * Informations sur l'unité d'acquisition
 * Données fonctionnelles
 * Informations d'audit sur les activités des utilisateurs dans Data Infrastructure Insights
-* Informations Active Directory de sécurité des charges de travail
+* Informations sur la sécurité de la charge de travail Active Directory
 * Informations sur l'audit de sécurité de la charge de travail
 
 
-Quelle que soit la région hébergeant votre environnement Data Infrastructure Insights, les informations suivantes résident aux États-Unis :
+Les informations suivantes résident aux États-Unis, quelle que soit la région hébergeant votre environnement Data Infrastructure Insights :
 
-* Informations sur le site de l'environnement (parfois appelées « locataire »), telles que le site ou le propriétaire du compte.
+* Informations sur le site environnemental (parfois appelé « locataire ») telles que le propriétaire du site/compte.
 * Informations permettant à NetApp Console de communiquer avec les sites régionaux Data Infrastructure Insights , y compris tout ce qui concerne l'autorisation de l'utilisateur.
-* Informations relatives à la relation entre l'utilisateur Data Infrastructure Insights et le locataire.
+* Informations relatives à la relation entre l’utilisateur Data Infrastructure Insights et le locataire.
 
 
 
 
-=== Régions hôtes
+=== Régions d'accueil
 
-Les régions hôtes sont les suivantes :
+Les régions hôtes comprennent :
 
-* ÉTATS-Unis : US-est-1
-* EMEA : Europe centrale 1
-* APAC : ap-Sud-est-2
+* États-Unis : us-east-1
+* EMEA : eu-central-1
+* APAC : ap-sud-est-2
 
 
 
 
 == Plus d'informations
 
-Pour en savoir plus sur la confidentialité et la sécurité de NetApp, consultez les liens suivants :
+Vous pouvez en savoir plus sur la confidentialité et la sécurité de NetApp en suivant les liens suivants :
 
 * link:https://www.netapp.com/us/company/trust-center/index.aspx["Centre de confiance"]
-* link:https://www.netapp.com/us/company/trust-center/privacy/data-location-cross-border-transfers.aspx["Transferts de données hors des frontières"]
-* link:https://www.netapp.com/us/company/trust-center/privacy/bcr-binding-corporate-rules.aspx["Règles de société contraignantes"]
-* link:https://www.netapp.com/us/company/trust-center/transparency/third-party-data-requests.aspx["Répondre aux demandes de données tierces"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/data-location-cross-border-transfers.aspx["Transferts de données transfrontaliers"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/bcr-binding-corporate-rules.aspx["Règles d'entreprise contraignantes"]
+* link:https://www.netapp.com/us/company/trust-center/transparency/third-party-data-requests.aspx["Répondre aux demandes de données de tiers"]
 * link:https://www.netapp.com/us/company/trust-center/privacy/privacy-principles-security-safeguards.aspx["Principes de confidentialité de NetApp"]
 

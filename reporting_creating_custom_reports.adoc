@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reporting_creating_custom_reports.html 
-summary: 'Utilisation des outils de création de rapports pour créer des rapports personnalisés (« ad hoc »)' 
+summary: 'Utilisation d"outils de création de rapports pour créer des rapports personnalisés (« ad hoc »)' 
 keywords: reporting, cognos, data warehouse, dwh, ad-hoc, custom 
 ---
 = Création de rapports personnalisés
@@ -10,326 +10,326 @@ keywords: reporting, cognos, data warehouse, dwh, ad-hoc, custom
 
 
 [role="lead"]
-Vous pouvez utiliser les outils de création de rapports pour créer des rapports personnalisés. Après avoir créé des rapports, vous pouvez les enregistrer et les exécuter selon un planning régulier. Les résultats des rapports peuvent être automatiquement envoyés par e-mail à vous-même et à d'autres personnes.
+Vous pouvez utiliser les outils de création de rapports pour créer des rapports personnalisés.  Après avoir créé des rapports, vous pouvez les enregistrer et les exécuter selon un calendrier régulier.  Les résultats des rapports peuvent être automatiquement envoyés par courrier électronique à vous-même et à d’autres.
 
 
-NOTE: La fonction de génération de rapports est disponible dans Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Édition Premium"].
+NOTE: La fonctionnalité de reporting est disponible dans Data Infrastructure Insightslink:concept_subscribing_to_cloud_insights.html["Édition Premium"] .
 
-Les exemples de cette section présentent le processus suivant, qui peut être utilisé pour n'importe quel modèle de données de reporting Data Infrastructure Insights :
+Les exemples de cette section montrent le processus suivant, qui peut être utilisé pour n’importe lequel des modèles de données Data Infrastructure Insights Reporting :
 
-* Identifier une question à répondre avec un rapport
-* Déterminer les données nécessaires pour soutenir les résultats
-* Sélection d'éléments de données pour le rapport
-
-
-Avant de concevoir votre rapport personnalisé, vous devez effectuer certaines tâches préalables. Si vous ne les remplissez pas, les rapports peuvent être imprécis ou incomplets.
-
-Par exemple, si vous n'avez pas terminé le processus d'identification du périphérique, vos rapports de capacité ne seront pas précis. Ou, si vous ne terminez pas de définir des annotations (par exemple, des niveaux, des unités commerciales et des data centers), vos rapports personnalisés peuvent ne pas générer des rapports précis sur les données de votre domaine ou indiquer « N/A » pour certains points de données.
-
-Avant de concevoir vos rapports, effectuez les tâches suivantes :
-
-* Tout configurer link:task_configure_data_collectors.html["collecteurs de données"]correctement.
-* Entrez des annotations (telles que des niveaux, des data centers et des entités commerciales) sur les périphériques et les ressources de votre locataire. Il est avantageux d'avoir des annotations stables avant de générer des rapports, car le reporting Data Infrastructure Insights collecte des informations d'historique.
+* Identifier une question à laquelle il faut répondre avec un rapport
+* Déterminer les données nécessaires pour étayer les résultats
+* Sélection des éléments de données pour le rapport
 
 
+Avant de concevoir votre rapport personnalisé, vous devez effectuer certaines tâches préalables.  Si vous ne les remplissez pas, les rapports pourraient être inexacts ou incomplets.
+
+Par exemple, si vous ne terminez pas le processus d’identification de l’appareil, vos rapports de capacité ne seront pas précis.  Ou, si vous ne terminez pas la définition des annotations (telles que les niveaux, les unités commerciales et les centres de données), vos rapports personnalisés risquent de ne pas signaler avec précision les données de votre domaine ou d'afficher « N/A » pour certains points de données.
+
+Avant de concevoir vos rapports, effectuez les tâches suivantes :
+
+* Configurer toutlink:task_configure_data_collectors.html["collecteurs de données"] correctement.
+* Saisissez des annotations (telles que les niveaux, les centres de données et les unités commerciales) sur les appareils et les ressources de votre locataire.  Il est avantageux d’avoir des annotations stables avant de générer des rapports, car Data Infrastructure Insights Reporting collecte des informations historiques.
 
 
-== Processus de création de rapports
 
-Le processus de création de rapports personnalisés (également appelés « ad hoc ») implique plusieurs tâches :
+
+== Processus de création de rapport
+
+Le processus de création de rapports personnalisés (également appelés « ad hoc ») implique plusieurs tâches :
 
 * Planifiez les résultats de votre rapport.
-* Identifiez les données à l'appui de vos résultats.
-* Sélectionnez le modèle de données (par exemple, le modèle de données Chargeback, le modèle de données Inventory, etc.) qui contient les données.
+* Identifiez les données pour étayer vos résultats.
+* Sélectionnez le modèle de données (par exemple, le modèle de données de rétrofacturation, le modèle de données d'inventaire, etc.) qui contient les données.
 * Sélectionnez les éléments de données pour le rapport.
-* Vous pouvez éventuellement formater, trier et filtrer les résultats du rapport.
+* Formatez, triez et filtrez éventuellement les résultats du rapport.
 
 
 
 
-=== Planifier les résultats de votre rapport personnalisé
+=== Planification des résultats de votre rapport personnalisé
 
-Avant d'ouvrir les outils de création de rapports, vous pouvez planifier les résultats souhaités à partir du rapport. Avec les outils de création de rapports, vous pouvez facilement créer des rapports et peut ne pas avoir besoin de beaucoup de planification. Cependant, il est bon d'obtenir un bon sens de la part du demandeur de rapport sur les exigences du rapport.
+Avant d’ouvrir les outils de création de rapport, vous souhaiterez peut-être planifier les résultats que vous souhaitez obtenir du rapport.  Grâce aux outils de création de rapports, vous pouvez créer des rapports facilement et ne pas avoir besoin de beaucoup de planification. Cependant, il est judicieux d'obtenir une idée des exigences du demandeur du rapport.
 
-* Identifiez la question que vous souhaitez répondre. Par exemple :
+* Identifiez la question exacte à laquelle vous souhaitez répondre. Par exemple:
 +
 ** Quelle est la capacité restante ?
-** Quels sont les coûts de refacturation par unité commerciale ?
-** Quelle est la capacité par niveau pour s'assurer que les unités commerciales sont alignées sur le niveau de stockage approprié ?
-** Comment puis-je prévoir les besoins en énergie et en climatisation ? (Ajoutez des métadonnées personnalisées en ajoutant des annotations aux ressources.)
+** Quels sont les coûts de rétrofacturation par unité commerciale ?
+** Quelle est la capacité par niveau pour garantir que les unités commerciales sont alignées sur le niveau de stockage approprié ?
+** Comment puis-je prévoir les besoins en énergie et en refroidissement ?  (Ajoutez des métadonnées personnalisées en ajoutant des annotations aux ressources.)
 
 
-* Identifiez les éléments de données dont vous avez besoin pour prendre en charge une réponse.
-* Identifiez les relations entre les données que vous voulez voir dans la réponse. N'incluez pas de relations illogiques dans votre question, par exemple, « Je veux voir les ports qui se rapportent à la capacité ».
-* Identifier tous les calculs nécessaires sur les données.
-* Déterminez les types de filtrage nécessaires pour limiter les résultats.
+* Identifiez les éléments de données dont vous avez besoin pour étayer la réponse.
+* Identifiez les relations entre les données que vous souhaitez voir dans la réponse.  N'incluez pas de relations illogiques dans votre question, par exemple : « Je veux voir les ports liés à la capacité. »
+* Identifiez tous les calculs nécessaires sur les données.
+* Déterminez quels types de filtrage sont nécessaires pour limiter les résultats.
 * Déterminez si vous devez utiliser des données actuelles ou historiques.
-* Déterminez si vous devez définir des privilèges d'accès sur les rapports pour limiter les données à des publics spécifiques.
-* Identifier la manière dont le rapport sera distribué. Par exemple, doit-il être envoyé par e-mail à un horaire fixe ou inclus dans la zone du dossier contenu de l'équipe ?
-* Déterminez qui sera responsable du rapport. Cela peut affecter la complexité de la conception.
-* Créer une maquette du rapport.
+* Déterminez si vous devez définir des privilèges d’accès sur les rapports pour limiter les données à des publics spécifiques.
+* Déterminer comment le rapport sera distribué.  Par exemple, doit-il être envoyé par courrier électronique selon un calendrier défini ou inclus dans la zone de dossier de contenu de l'équipe ?
+* Déterminez qui tiendra à jour le rapport.  Cela pourrait affecter la complexité de la conception.
+* Créez une maquette du rapport.
 
 
 
 
-=== Conseils pour concevoir des rapports
+=== Conseils pour la conception de rapports
 
-Plusieurs conseils peuvent être utiles lors de la conception de rapports.
+Plusieurs conseils peuvent être utiles lorsque vous concevez des rapports.
 
 * Déterminez si vous devez utiliser des données actuelles ou historiques.
 +
-La plupart des rapports n'ont besoin que de générer des rapports sur les données les plus récentes disponibles dans les informations sur l'infrastructure de données.
+La plupart des rapports doivent uniquement rendre compte des dernières données disponibles dans Data Infrastructure Insights.
 
 * Les rapports Data Infrastructure Insights fournissent des informations historiques sur la capacité et les performances, mais pas sur l'inventaire.
-* Chacun voit l'ensemble des données. Cependant, vous devrez peut-être limiter ces données à des publics spécifiques.
+* Tout le monde voit toutes les données ; cependant, vous devrez peut-être limiter les données à des publics spécifiques.
 +
-Pour segmenter les informations des différents utilisateurs, vous pouvez créer des rapports et définir des autorisations d'accès.
+Pour segmenter les informations pour différents utilisateurs, vous pouvez créer des rapports et définir des autorisations d'accès sur ceux-ci.
 
 
 
 
 
-== Modèles de données de création de rapports
+== Modèles de données de reporting
 
 Data Infrastructure Insights comprend plusieurs modèles de données à partir desquels vous pouvez sélectionner des rapports prédéfinis ou créer votre propre rapport personnalisé.
 
-Chaque modèle de données comprend un simple data Mart et un Data Mart avancé :
+Chaque modèle de données contient un datamart simple et un datamart avancé :
 
-* Le magasin de données simple permet d'accéder rapidement aux éléments de données les plus couramment utilisés et ne comprend que le dernier instantané des données de l'entrepôt de données ; il n'inclut pas les données historiques.
-* Le data Mart avancé fournit toutes les valeurs et tous les détails disponibles dans le simple data Mart et inclut l'accès aux valeurs de données historiques.
+* Le datamart simple fournit un accès rapide aux éléments de données les plus couramment utilisés et inclut uniquement le dernier instantané des données de l'entrepôt de données ; il n'inclut pas les données historiques.
+* Le datamart avancé fournit toutes les valeurs et tous les détails disponibles dans le datamart simple et inclut l'accès aux valeurs des données historiques.
 
 
 
 
 === Modèles de données de capacité
 
-Vous aide à répondre aux questions concernant la capacité de stockage, l'utilisation du système de fichiers, la capacité de volume interne, la capacité de port, la capacité qtree, Et la capacité de la machine virtuelle (VM). Le modèle de données de capacité est un conteneur pour plusieurs modèles de données de capacité. Vous pouvez créer des rapports répondant à différents types de questions à l'aide de ce modèle de données :
+Vous permet de répondre à des questions sur la capacité de stockage, l'utilisation du système de fichiers, la capacité du volume interne, la capacité du port, la capacité du qtree et la capacité de la machine virtuelle (VM).  Le modèle de données de capacité est un conteneur pour plusieurs modèles de données de capacité.  Vous pouvez créer des rapports répondant à différents types de questions à l’aide de ce modèle de données :
 
 
 
-==== Modèle de données de capacité du pool de stockage et du pool de stockage
+==== Modèle de données de capacité de stockage et de pool de stockage
 
-Vous permet de répondre aux questions concernant la planification des ressources de stockage, y compris les pools de stockage et les pools, et inclut à la fois les données des pools de stockage physiques et virtuels. Avec ce modèle de données simple, vous pouvez répondre à toutes les questions relatives à la capacité sur place et à l'utilisation de la capacité des pools de stockage par niveau et par data Center à long terme. Si les nouveaux rapports sur la capacité vous servent, vous devez commencer par le modèle de données, car il s'agit d'un modèle de données plus simple et ciblé. Vous pouvez répondre à des questions similaires à ce qui suit à l'aide de ce modèle de données :
+Vous permet de répondre à des questions sur la planification des ressources de capacité de stockage, y compris le stockage et les pools de stockage, et inclut les données des pools de stockage physiques et virtuels.  Ce modèle de données simple peut vous aider à répondre aux questions liées à la capacité de l'étage et à l'utilisation de la capacité des pools de stockage par niveau et par centre de données au fil du temps.  Si vous débutez dans les rapports de capacité, vous devez commencer par ce modèle de données, car il s'agit d'un modèle de données plus simple et ciblé.  Vous pouvez répondre à des questions similaires aux suivantes en utilisant ce modèle de données :
 
 * Quelle est la date prévue pour atteindre le seuil de capacité de 80 % de mon stockage physique ?
-* Quelle est la capacité de stockage physique d'une baie pour un niveau donné ?
-* Quelle est ma capacité de stockage par fabricant et par famille, ainsi que par data Center ?
-* Quelle est la tendance à l'utilisation du stockage sur une baie pour tous les niveaux ?
-* Quels sont mes 10 principaux systèmes de stockage avec un taux d'utilisation optimal ?
-* Quelle est la tendance à l'utilisation du stockage par les pools de stockage ?
+* Quelle est la capacité de stockage physique sur une baie pour un niveau donné ?
+* Quelle est ma capacité de stockage par fabricant et par famille ainsi que par centre de données ?
+* Quelle est la tendance d’utilisation du stockage sur une baie pour tous les niveaux ?
+* Quels sont mes 10 meilleurs systèmes de stockage avec la plus grande utilisation ?
+* Quelle est la tendance d’utilisation du stockage des pools de stockage ?
 * Quelle est la capacité déjà allouée ?
-* Quelle est la capacité disponible pour l'allocation ?
+* Quelle capacité est disponible pour l’allocation ?
 
 
 
 
 ==== Modèle de données d'utilisation du système de fichiers
 
-Ce modèle de données permet de contrôler l'utilisation de la capacité par les hôtes au niveau du système de fichiers. Les administrateurs peuvent déterminer la capacité allouée et utilisée par système de fichiers, déterminer le type de système de fichiers et identifier les statistiques de tendances par type de système de fichiers. Vous pouvez répondre aux questions suivantes à l'aide de ce modèle de données :
+Ce modèle de données fournit une visibilité sur l’utilisation de la capacité par les hôtes au niveau du système de fichiers.  Les administrateurs peuvent déterminer la capacité allouée et utilisée par système de fichiers, déterminer le type de système de fichiers et identifier les statistiques de tendance par type de système de fichiers.  Vous pouvez répondre aux questions suivantes en utilisant ce modèle de données :
 
 * Quelle est la taille du système de fichiers ?
-* Où les données sont-elles conservées et comment elles sont accessibles, par exemple, en local ou en SAN ?
-* Quelles sont les tendances historiques de la capacité du système de fichiers ? Alors, en se basant sur ce fait, que pouvons-nous prévoir pour les besoins futurs ?
+* Où sont conservées les données et comment y accède-t-on, par exemple en local ou sur SAN ?
+* Quelles sont les tendances historiques concernant la capacité du système de fichiers ?  Alors, sur cette base, à quoi pouvons-nous nous attendre pour les besoins futurs ?
 
 
 
 
 ==== Modèle de données de capacité de volume interne
 
-Répond à des questions sur le volume interne utilisé, la capacité allouée et l'utilisation de la capacité au fil du temps :
+Vous permet de répondre à des questions sur la capacité interne utilisée, la capacité allouée et l'utilisation de la capacité au fil du temps :
 
-* Quels volumes internes ont une utilisation supérieure à un seuil prédéfini ?
-* Quels volumes internes risquent de manquer de capacité en fonction d'une tendance ? 8 quelle est la capacité utilisée par rapport à la capacité allouée sur nos volumes internes ?
-
-
-
-
-==== Modèle de données de capacité de port
-
-Vous permet de répondre à des questions sur la connectivité du port du commutateur, l'état du port et la vitesse du port au fil du temps. Vous pouvez répondre à des questions comme suit pour vous aider à planifier l'achat de nouveaux commutateurs : comment créer une prévision de consommation des ports qui prévoit la disponibilité des ressources (port) (selon le data Center, le fournisseur des commutateurs et la vitesse du port) ?
-
-* Quels ports sont susceptibles de manquer de capacité pour fournir la vitesse des données, les data centers, le fournisseur et le nombre de ports hôtes et de stockage ?
-* Quelles sont les tendances de capacité des ports de commutation au fil du temps ?
-* Quelle est la vitesse des ports ?
-* Quel type de capacité de port est nécessaire et quelle entreprise est sur le point de sortir d'un certain type de port ou fournisseur ?
-* Quel est le délai optimal pour acheter cette capacité et la rendre disponible ?
+* Quels volumes internes ont une utilisation supérieure à un seuil prédéfini ?
+* Quels volumes internes risquent de manquer de capacité en fonction d’une tendance ?  8 Quelle est la capacité utilisée par rapport à la capacité allouée sur nos volumes internes ?
 
 
 
 
-==== Modèle de données de capacité qtree
+==== Modèle de données de capacité portuaire
 
-Permet de tendances de l'utilisation des qtrees (avec des données telles que la capacité utilisée par rapport à la capacité allouée) dans le temps. Vous pouvez afficher ces informations en fonction de différentes dimensions (par exemple, par entité commerciale, application, niveau et niveau de service). Vous pouvez répondre aux questions suivantes à l'aide de ce modèle de données :
+Vous permet de répondre à des questions sur la connectivité du port du commutateur, l'état du port et la vitesse du port au fil du temps.  Vous pouvez répondre à des questions similaires aux suivantes pour vous aider à planifier les achats de nouveaux commutateurs : Comment puis-je créer une prévision de consommation de ports qui prédit la disponibilité des ressources (ports) (en fonction du centre de données, du fournisseur de commutateurs et de la vitesse du port) ?
 
-* Quelle est la capacité utilisée pour les qtrees par rapport aux limites définies par application ou entité commerciale ?
-* Quelles sont les tendances en matière de capacité utilisée et libre afin de pouvoir planifier la capacité ?
-* Quelles entités commerciales utilisent le plus de capacités ?
+* Quels ports sont susceptibles de manquer de capacité, en fonction de la vitesse des données, du centre de données, du fournisseur et du nombre de ports hôtes et de stockage ?
+* Quelles sont les tendances de la capacité des ports de commutation au fil du temps ?
+* Quelles sont les vitesses des ports ?
+* Quel type de capacité portuaire est nécessaire et quelle organisation est sur le point de manquer d’un certain type de port ou d’un certain fournisseur ?
+* Quel est le moment optimal pour acheter cette capacité et la rendre disponible ?
+
+
+
+
+==== Modèle de données Qtree Capacity
+
+Vous permet de suivre l'utilisation de Qtree (avec des données telles que la capacité utilisée par rapport à la capacité allouée) au fil du temps.  Vous pouvez afficher les informations selon différentes dimensions, par exemple par entité commerciale, application, niveau et niveau de service.  Vous pouvez répondre aux questions suivantes en utilisant ce modèle de données :
+
+* Quelle est la capacité utilisée pour les qtrees par rapport aux limites définies par application ou entité commerciale ?
+* Quelles sont les tendances de notre capacité utilisée et libre afin que nous puissions faire une planification de capacité ?
+* Quelles entités commerciales utilisent le plus de capacité ?
 * Quelles applications consomment le plus de capacité ?
 
 
 
 
-==== Modèle de données de capacité de la machine virtuelle
+==== Modèle de données de capacité VM
 
-Permet de générer des rapports sur l'utilisation de la capacité de votre environnement virtuel. Ce modèle de données vous permet de créer des rapports sur l'évolution de l'utilisation de la capacité au fil du temps pour les machines virtuelles et les datastores. Le modèle de données offre également le provisionnement fin et les données de refacturation des machines virtuelles.
+Vous permet de signaler votre environnement virtuel et son utilisation de la capacité.  Ce modèle de données vous permet de générer des rapports sur les changements d’utilisation de la capacité au fil du temps pour les machines virtuelles et les magasins de données.  Le modèle de données fournit également des données de provisionnement dynamique et de rétrofacturation de machine virtuelle.
 
-* Comment déterminer la refacturation des capacités en fonction de la capacité provisionnée aux machines virtuelles et aux datastores ?
-* Quelle capacité n'est pas utilisée par les ordinateurs virtuels et quelle partie des ressources inutilisées est disponible, orpheline ou autre ?
-* De quoi devons-nous acheter en fonction des tendances de consommation ?
-* Quelles sont les économies réalisées en termes d'efficacité du stockage grâce aux technologies de déduplication et de provisionnement fin du stockage ?
-
-
-Capacités dans le modèle de données VM Capacity sont extraites de disques virtuels (VMDK). Cela signifie que la taille provisionnée d'une machine virtuelle qui utilise le modèle de données de capacité de la machine virtuelle correspond à la taille de ses disques virtuels. Cette configuration est différente de la capacité provisionnée dans la vue Virtual machines des informations sur l'infrastructure de données, qui indique la taille provisionnée de la machine virtuelle elle-même.
+* Comment puis-je déterminer la rétrofacturation de capacité en fonction de la capacité provisionnée sur les machines virtuelles et les magasins de données ?
+* Quelle capacité n'est pas utilisée par les machines virtuelles et quelle partie inutilisée est libre, orpheline ou autre ?
+* Que devons-nous acheter en fonction des tendances de consommation ?
+* Quelles économies d’efficacité de stockage puis-je réaliser en utilisant les technologies de provisionnement fin et de déduplication du stockage ?
 
 
-
-==== Modèle de données Volume Capacity
-
-Vous permet d'analyser tous les aspects des volumes de votre locataire et d'organiser les données par fournisseur, modèle, niveau, niveau de service et data Center.
-
-Vous pouvez afficher la capacité des volumes orphelins, des volumes inutilisés et des volumes de protection (utilisés pour la réplication). Vous pouvez également voir différentes technologies de volumes (iSCSI ou FC) et comparer des volumes virtuels à des volumes non virtuels pour des problèmes de virtualisation de baies.
-
-Vous pouvez répondre à des questions similaires à celles qui suivent avec ce modèle de données :
-
-* Quels volumes ont une utilisation supérieure à un seuil prédéfini ?
-* Quelle est la tendance de mon data Center à analyser la capacité de volumes orphelins ?
-* Quelle part de ma capacité de data Center est virtualisée ou provisionnée ?
-* Quelle part de la capacité de mon data Center doit être réservée à la réplication ?
+Les capacités du modèle de données VM Capacity sont extraites des disques virtuels (VMDK).  Cela signifie que la taille provisionnée d’une machine virtuelle utilisant le modèle de données VM Capacity correspond à la taille de ses disques virtuels.  Ceci est différent de la capacité provisionnée dans la vue Machines virtuelles dans Data Infrastructure Insights, qui affiche la taille provisionnée pour la machine virtuelle elle-même.
 
 
 
+==== Modèle de données de capacité de volume
 
-=== Modèle de données de refacturation
+Vous permet d'analyser tous les aspects des volumes de votre locataire et d'organiser les données par fournisseur, modèle, niveau, niveau de service et centre de données.
 
-Répond à des questions sur la capacité utilisée et la capacité allouée sur les ressources de stockage (volumes, volumes internes et qtrees). Ce modèle de données fournit des informations de comptabilité et de refacturation de la capacité de stockage par hôte, application et entités commerciales, et inclut des données actuelles et historiques. Les données de rapports peuvent être classées par niveau de service et par niveau de stockage.
+Vous pouvez afficher la capacité liée aux volumes orphelins, aux volumes inutilisés et aux volumes de protection (utilisés pour la réplication).  Vous pouvez également voir différentes technologies de volume (iSCSI ou FC) et comparer les volumes virtuels aux volumes non virtuels pour les problèmes de virtualisation de matrice.
 
-Vous pouvez utiliser ce modèle de données pour générer des rapports de refacturation en identifiant la capacité utilisée par une entité business. Ce modèle de données vous permet de créer des rapports unifiés sur plusieurs protocoles (notamment NAS, SAN, FC et iSCSI).
+Vous pouvez répondre à des questions similaires aux suivantes avec ce modèle de données :
 
-* Pour le stockage sans volumes internes, les rapports de refacturation indiquent la refacturation par volumes.
+* Quels volumes ont une utilisation supérieure à un seuil prédéfini ?
+* Quelle est la tendance dans mon centre de données en matière de capacité de volume orphelin ?
+* Quelle part de la capacité de mon centre de données est virtualisée ou provisionnée de manière dynamique ?
+* Quelle part de la capacité de mon centre de données doit être réservée à la réplication ?
+
+
+
+
+=== Modèle de données de rétrofacturation
+
+Vous permet de répondre à des questions sur la capacité utilisée et la capacité allouée sur les ressources de stockage (volumes, volumes internes et qtrees).  Ce modèle de données fournit des informations sur la rétrofacturation et la responsabilité de la capacité de stockage par hôtes, applications et entités commerciales, et inclut des données actuelles et historiques.  Les données du rapport peuvent être classées par niveau de service et par niveau de stockage.
+
+Vous pouvez utiliser ce modèle de données pour générer des rapports de rétrofacturation en recherchant la quantité de capacité utilisée par une entité commerciale.  Ce modèle de données vous permet de créer des rapports unifiés de plusieurs protocoles (y compris NAS, SAN, FC et iSCSI).
+
+* Pour le stockage sans volumes internes, les rapports de rétrofacturation affichent la rétrofacturation par volumes.
 * Pour le stockage avec volumes internes :
 +
-** Si les entités commerciales sont attribuées aux volumes, les rapports de refacturation affichent la refacturation par volume.
-** Si les entités business ne sont pas affectées aux volumes mais qu'elles sont attribuées aux qtrees, les rapports de refacturation sont indiqués par les qtrees.
-** Si les entités business ne sont pas affectées aux volumes et ne sont pas affectées aux qtrees, les rapports de refacturation affichent le volume interne.
-** La décision d'afficher la refacturation par volume, qtree ou volume interne est prise pour chaque volume interne. Il est donc possible que différents volumes internes du même pool de stockage affichent la refacturation à différents niveaux.
+** Si des entités commerciales sont affectées à des volumes, les rapports de rétrofacturation affichent la rétrofacturation par volumes.
+** Si les entités commerciales ne sont pas affectées à des volumes mais affectées à des qtrees, les rapports de rétrofacturation affichent la rétrofacturation par qtrees.
+** Si les entités commerciales ne sont pas affectées à des volumes ni à des qtrees, les rapports de rétrofacturation affichent le volume interne.
+** La décision d'afficher la rétrofacturation par volume, qtree ou volume interne est prise pour chaque volume interne. Il est donc possible que différents volumes internes du même pool de stockage affichent la rétrofacturation à différents niveaux.
 
 
 
 
-Les données de capacité sont supprimées après un intervalle de temps par défaut. Pour plus de détails, voir processus d'entrepôt de données.
+Les faits de capacité sont purgés après un intervalle de temps par défaut.  Pour plus de détails, voir Processus de l'entrepôt de données.
 
-Les rapports utilisant le modèle de données Chargeback peuvent afficher des valeurs différentes de celles qui utilisent le modèle de données de capacité de stockage.
+Les rapports utilisant le modèle de données de rétrofacturation peuvent afficher des valeurs différentes de celles des rapports utilisant le modèle de données de capacité de stockage.
 
-* Pour les baies de stockage qui ne sont pas des systèmes de stockage NetApp, les données des deux modèles de données sont identiques.
-* Pour les systèmes de stockage NetApp et Celerra, le modèle de données Chargeback utilise une seule couche (de volumes, de volumes internes ou de qtrees) pour établir leurs factures, tandis que le modèle de données Storage Capacity utilise plusieurs couches (de volumes et de volumes internes) pour établir les frais.
+* Pour les baies de stockage qui ne sont pas des systèmes de stockage NetApp , les données des deux modèles de données sont les mêmes.
+* Pour les systèmes de stockage NetApp et Celerra, le modèle de données de rétrofacturation utilise une seule couche (de volumes, de volumes internes ou de qtrees) pour baser ses frais, tandis que le modèle de données de capacité de stockage utilise plusieurs couches (de volumes et de volumes internes) pour baser ses frais.
 
 
 
 
 === Modèle de données d'inventaire
 
-Réponses à des questions sur les ressources d'inventaire, notamment les hôtes, les systèmes de stockage, les commutateurs, les disques, les bandes qtrees, quotas, machines virtuelles et serveurs, ainsi que périphériques génériques. Le modèle de données Inventory inclut plusieurs sous-marins qui vous permettent d'afficher des informations concernant les réplications, les chemins FC, les chemins iSCSI, les chemins NFS et les violations. Le modèle de données d'inventaire n'inclut pas les données historiques. Questions auxquelles vous pouvez répondre avec ces données
+Vous permet de répondre à des questions sur les ressources d'inventaire, notamment les hôtes, les systèmes de stockage, les commutateurs, les disques, les bandes, les qtrees, les quotas, les machines virtuelles et les serveurs, ainsi que les périphériques génériques.  Le modèle de données d'inventaire comprend plusieurs sous-marchés qui vous permettent d'afficher des informations sur les réplications, les chemins FC, les chemins iSCSI, les chemins NFS et les violations.  Le modèle de données d’inventaire n’inclut pas de données historiques.  Questions auxquelles vous pouvez répondre avec ces données
 
-* Quels sont les ressources dont je dispose et où sont-elles?
-* Qui utilise ces ressources ?
-* Quels sont les types d'appareils dont je dispose et quels sont les composants de ces appareils ?
-* Combien d'hôtes par système d'exploitation puis-je disposer et combien de ports existent sur ces hôtes ?
-* Quelles baies de stockage existent par fournisseur dans chaque data Center ?
-* Combien de commutateurs par fournisseur y a-t-il dans chaque data Center ?
-* Combien de ports ne sont pas sous licence ?
-* Quelles bandes de fournisseurs utilisons-nous et combien de ports existent sur chaque bande ?re tous les périphériques génériques identifiés avant de commencer à travailler sur les rapports ?
-* Quels sont les chemins entre les hôtes et les volumes de stockage ou les bandes ?
-* Quels sont les chemins entre les périphériques génériques et les volumes ou les bandes de stockage ?
-* Combien de violations de chaque type possède-t-il par data Center ?
-* Pour chaque volume répliqué, quels sont les volumes source et cible ?
-* Ai-je des incompatibilités de micrologiciel ou des discordances de vitesse de port entre les HBA et les commutateurs hôte Fibre Channel ?
+* Quels sont mes actifs et où se trouvent-ils ?
+* Qui utilise les actifs ?
+* Quels types d’appareils possèdes-je et quels sont les composants de ces appareils ?
+* Combien d'hôtes par système d'exploitation ai-je et combien de ports existent sur ces hôtes ?
+* Quelles baies de stockage par fournisseur existent dans chaque centre de données ?
+* Combien de commutateurs par fournisseur ai-je dans chaque centre de données ?
+* Combien de ports ne sont pas autorisés ?
+* Quelles bandes de fournisseurs utilisons-nous et combien de ports existent sur chaque bande ? Tous les périphériques génériques sont-ils identifiés avant de commencer à travailler sur les rapports ?
+* Quels sont les chemins entre les hôtes et les volumes de stockage ou les bandes ?
+* Quels sont les chemins entre les périphériques génériques et les volumes de stockage ou les bandes ?
+* Combien de violations de chaque type ai-je par centre de données ?
+* Pour chaque volume répliqué, quels sont les volumes source et cible ?
+* Y a-t-il des incompatibilités de micrologiciel ou des décalages de vitesse de port entre les HBA hôtes Fibre Channel et les commutateurs ?
 
 
 
 
 === Modèle de données de performance
 
-Répond aux questions de performances des volumes, des volumes d'application, des volumes internes, des commutateurs, des applications Ordinateurs virtuels, VMDK, ESX par rapport aux machines virtuelles, aux hôtes et aux nœuds d'applications. Nombre de ces données de rapport _Hourly_, _Daily_ ou les deux. Grâce à ce modèle de données, vous pouvez créer des rapports qui répondent à plusieurs types de questions de gestion des performances :
+Vous permet de répondre à des questions sur les performances des volumes, des volumes d'application, des volumes internes, des commutateurs, des applications, des machines virtuelles, des VMDK, des ESX par rapport aux machines virtuelles, des hôtes et des nœuds d'application.  La plupart d'entre eux rapportent des données horaires, quotidiennes ou les deux.  À l’aide de ce modèle de données, vous pouvez créer des rapports qui répondent à plusieurs types de questions de gestion des performances :
 
-* Quels volumes ou volumes internes n'ont pas été utilisés ou consultés au cours d'une période spécifique ?
-* Pouvons-nous identifier les erreurs de configuration potentielles du stockage d'une application (non utilisée) ?
-* Quel était le comportement d'accès global d'une application ?
-* Les volumes hiérarchisés sont-ils affectés de manière appropriée pour une application donnée ?
-* Pouvons-nous utiliser un stockage moins coûteux pour une application en cours d'exécution sans affecter les performances des applications ?
-* Quelles sont les applications produisant plus d'accès au stockage actuellement configuré ?
-
-
-Lorsque vous utilisez les tables de performances du commutateur, vous pouvez obtenir les informations suivantes :
-
-* Mon trafic hôte via des ports connectés est-il équilibré ?
-* Quels commutateurs ou ports présentent un grand nombre d'erreurs ?
-* Quels sont les commutateurs les plus utilisés en fonction des performances du port ?
-* Quels sont les commutateurs sous-utilisés basés sur les performances du port ?
-* Quel est le débit des tendances hôtes en fonction des performances du port ?
-* Quelle est l'utilisation des performances des X derniers jours pour un hôte, un système de stockage, une bande ou un commutateur spécifié ?
-* Quels sont les périphériques générant du trafic sur un commutateur spécifique (par exemple, quels sont les périphériques responsables de l'utilisation d'un commutateur hautement utilisé) ?
-* Quel est le débit d'une unité commerciale spécifique de notre environnement ?
+* Quels volumes ou volumes internes n’ont pas été utilisés ou consultés pendant une période spécifique ?
+* Pouvons-nous identifier une éventuelle mauvaise configuration du stockage d’une application (inutilisée) ?
+* Quel était le modèle de comportement d’accès global pour une application ?
+* Les volumes hiérarchisés sont-ils attribués de manière appropriée pour une application donnée ?
+* Pourrions-nous utiliser un stockage moins cher pour une application en cours d’exécution sans impact sur les performances de l’application ?
+* Quelles sont les applications qui génèrent le plus d’accès au stockage actuellement configuré ?
 
 
-Lorsque vous utilisez les tables de performances des disques, vous pouvez obtenir les informations suivantes :
+Lorsque vous utilisez les tableaux de performances des commutateurs, vous pouvez obtenir les informations suivantes :
 
-* Quel est le débit d'un pool de stockage spécifié basé sur les données de performances du disque ?
+* Le trafic de mon hôte via les ports connectés est-il équilibré ?
+* Quels commutateurs ou ports présentent un nombre élevé d’erreurs ?
+* Quels sont les commutateurs les plus utilisés en fonction des performances des ports ?
+* Quels sont les commutateurs sous-utilisés en fonction des performances des ports ?
+* Quelle est la tendance du débit de l'hôte en fonction des performances du port ?
+* Quelle est l'utilisation des performances au cours des X derniers jours pour un hôte, un système de stockage, une bande ou un commutateur spécifié ?
+* Quels périphériques produisent du trafic sur un commutateur spécifique (par exemple, quels périphériques sont responsables de l'utilisation d'un commutateur très utilisé) ?
+* Quel est le débit d’une unité commerciale spécifique dans notre environnement ?
+
+
+Lorsque vous utilisez les tableaux de performances du disque, vous pouvez obtenir les informations suivantes :
+
+* Quel est le débit d’un pool de stockage spécifié en fonction des données de performances du disque ?
 * Quel est le pool de stockage le plus utilisé ?
-* Quelle est l'utilisation moyenne du disque pour un stockage spécifique ?
-* Quelle est la tendance à l'utilisation d'un système de stockage ou d'un pool de stockage basé sur des données de performances sur disque ?
-* Quelles sont les tendances d'utilisation des disques pour un pool de stockage spécifique ?
+* Quelle est l’utilisation moyenne du disque pour un stockage spécifique ?
+* Quelle est la tendance d’utilisation d’un système de stockage ou d’un pool de stockage en fonction des données de performances du disque ?
+* Quelle est la tendance d’utilisation du disque pour un pool de stockage spécifique ?
 
 
-Lorsque vous utilisez des tables de performances VM et VMDK, vous pouvez obtenir les informations suivantes :
+Lorsque vous utilisez les tables de performances VM et VMDK, vous pouvez obtenir les informations suivantes :
 
 * Mon environnement virtuel fonctionne-t-il de manière optimale ?
-* Quels VMDK correspondent aux charges de travail les plus élevées ?
-* Comment utiliser les performances rapportées par des VMD mappées sur différents datastores pour prendre des décisions concernant la réorganisation de niveaux.
+* Quels VMDK signalent les charges de travail les plus élevées ?
+* Comment puis-je utiliser les performances signalées par les VMD mappés à différents magasins de données pour prendre des décisions concernant la hiérarchisation.
 
 
-Le modèle de données performances comprend des informations qui vous aident à déterminer la pertinence des niveaux, les erreurs de configuration du stockage pour les applications, ainsi que les heures de dernier accès des volumes et des volumes internes. Ce modèle de données fournit des données telles que les temps de réponse, les IOPS, le débit, le nombre d'écritures en attente et l'état accédé.
-
-
-
-=== Modèle de données d'efficacité du stockage
-
-Vous permet de suivre le score et le potentiel en matière d'efficacité du stockage dans le temps. Ce modèle de données stocke les mesures de la capacité provisionnée et de la quantité utilisée ou consommée (la mesure physique). Par exemple, lorsque le provisionnement fin est activé, Data Infrastructure Insights indique la capacité prélevée sur le périphérique. Vous pouvez également utiliser ce modèle afin de déterminer l'efficacité lorsque la déduplication est activée. Vous pouvez répondre à diverses questions à l'aide du magasin de données Storage Efficiency :
-
-* Quels sont les économies que nous pouvons réaliser en termes d'efficacité du stockage grâce à l'implémentation des technologies de provisionnement fin et de déduplication ?
-* Quelles sont les économies de stockage réalisées dans l'ensemble des data centers ?
-* Sur la base des tendances historiques de capacité, à quel moment faut-il acheter du stockage supplémentaire ?
-* Quel serait le gain de capacité si nous avions activé des technologies telles que le provisionnement fin et la déduplication ?
-* Concernant la capacité de stockage, suis-je en danger maintenant ?
+Le modèle de données de performances inclut des informations qui vous aident à déterminer la pertinence des niveaux, les erreurs de configuration de stockage pour les applications et les dernières heures d'accès des volumes et des volumes internes.  Ce modèle de données fournit des données telles que les temps de réponse, les IOP, le débit, le nombre d'écritures en attente et l'état d'accès.
 
 
 
+=== Modèle de données d'efficacité de stockage
 
-=== Tableaux de faits et de dimensions des modèles de données
+Vous permet de suivre le score d'efficacité du stockage et le potentiel au fil du temps.  Ce modèle de données stocke les mesures non seulement de la capacité provisionnée, mais également de la quantité utilisée ou consommée (la mesure physique).  Par exemple, lorsque le provisionnement léger est activé, Data Infrastructure Insights indique la quantité de capacité extraite du périphérique.  Vous pouvez également utiliser ce modèle pour déterminer l’efficacité lorsque la déduplication est activée.  Vous pouvez répondre à diverses questions en utilisant le datamart Storage Efficiency :
+
+* Quelles sont nos économies d’efficacité de stockage grâce à la mise en œuvre de technologies de provisionnement léger et de déduplication ?
+* Quelles sont les économies de stockage réalisées dans les centres de données ?
+* En fonction des tendances historiques en matière de capacité, quand devons-nous acheter du stockage supplémentaire ?
+* Quel serait le gain de capacité si nous activions des technologies telles que le provisionnement léger et la déduplication ?
+* En ce qui concerne la capacité de stockage, suis-je actuellement en danger ?
+
+
+
+
+=== Tables de faits et de dimensions du modèle de données
 
 Chaque modèle de données comprend à la fois des tables de faits et de dimensions.
 
-* Tableaux de faits : contiennent des données mesurées, par exemple la quantité, la capacité brute et utilisable. Contiennent des clés étrangères pour les tables de cotes.
-* Tables de dimensions : contiennent des informations descriptives sur les faits, par exemple, les centres de données et les business units. Une dimension est une structure, souvent composée de hiérarchies, qui catégorise les données. Les attributs dimensionnels permettent de décrire les valeurs dimensionnelles.
+* Tables de faits : contiennent des données mesurées, par exemple, la quantité, la capacité brute et utilisable.  Contient des clés étrangères vers des tables de dimension.
+* Tables de dimensions : contiennent des informations descriptives sur des faits, par exemple, le centre de données et les unités commerciales.  Une dimension est une structure, souvent composée de hiérarchies, qui catégorise les données.  Les attributs dimensionnels aident à décrire les valeurs dimensionnelles.
 
 
-À l'aide d'attributs de cotes différents ou multiples (vus comme des colonnes dans les rapports), vous créez des rapports qui accèdent aux données pour chaque dimension décrite dans le modèle de données.
+À l'aide d'attributs de dimension différents ou multiples (vus comme des colonnes dans les rapports), vous créez des rapports qui accèdent aux données de chaque dimension décrite dans le modèle de données.
 
 
 
-=== Couleurs utilisées dans les éléments de modèle de données
+=== Couleurs utilisées dans les éléments du modèle de données
 
-Les couleurs des éléments de modèle de données ont des indications différentes.
+Les couleurs sur les éléments du modèle de données ont des indications différentes.
 
 * Actifs jaunes : représentent les mesures.
-* Actifs non jaunes : représentent des attributs. Ces valeurs ne sont pas agrégées.
+* Actifs non jaunes : représentent des attributs.  Ces valeurs ne s'agrègent pas.
 
 
 
 
-=== Utilisation de plusieurs modèles de données dans un rapport
+=== Utilisation de plusieurs modèles de données dans un seul rapport
 
-Généralement, vous utilisez un modèle de données par rapport. Toutefois, vous pouvez écrire un rapport qui combine des données de plusieurs modèles de données.
+En règle générale, vous utilisez un modèle de données par rapport.  Cependant, vous pouvez rédiger un rapport qui combine des données provenant de plusieurs modèles de données.
 
-Pour écrire un rapport qui combine des données de plusieurs modèles de données, choisissez l'un des modèles de données à utiliser comme base, puis écrivez des requêtes SQL pour accéder aux données à partir des magasins de données supplémentaires. Vous pouvez utiliser la fonction jonction SQL pour combiner les données des différentes requêtes dans une seule requête que vous pouvez utiliser pour écrire le rapport.
+Pour rédiger un rapport combinant des données provenant de plusieurs modèles de données, choisissez l'un des modèles de données à utiliser comme base, puis écrivez des requêtes SQL pour accéder aux données à partir des datamarts supplémentaires.  Vous pouvez utiliser la fonction SQL Join pour combiner les données des différentes requêtes en une seule requête que vous pouvez utiliser pour rédiger le rapport.
 
-Imaginons par exemple que vous souhaitiez disposer de la capacité actuelle de chaque baie de stockage et que vous souhaitez capturer des annotations personnalisées sur les baies. Vous pouvez créer le rapport à l'aide du modèle de données capacité de stockage. Vous pouvez utiliser les éléments des tables capacité et dimension actuelles et ajouter une requête SQL séparée pour accéder aux informations d'annotations dans le modèle de données Inventory. Enfin, vous pouvez combiner les données en reliant les données de stockage d'inventaire à la table dimension de stockage à l'aide du nom de stockage et des critères de jointure.
+Par exemple, supposons que vous souhaitiez connaître la capacité actuelle de chaque baie de stockage et que vous souhaitiez capturer des annotations personnalisées sur les baies.  Vous pouvez créer le rapport à l’aide du modèle de données Capacité de stockage.  Vous pouvez utiliser les éléments des tables Capacité actuelle et Dimensions et ajouter une requête SQL distincte pour accéder aux informations d'annotations dans le modèle de données d'inventaire.  Enfin, vous pouvez combiner les données en liant les données de stockage d’inventaire à la table de dimension de stockage à l’aide du nom de stockage et des critères de jointure.

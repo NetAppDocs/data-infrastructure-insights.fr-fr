@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_emc_datadomain.html 
 keywords: data collector, Data Domain, EMC, DELL 
-summary: Configuration DU collecteur de données DELL EMC Data Domain. 
+summary: Configuration du collecteur de données DELL EMC Data Domain. 
 ---
 = Collecteur de données DELL EMC Data Domain
 :hardbreaks:
@@ -10,23 +10,23 @@ summary: Configuration DU collecteur de données DELL EMC Data Domain.
 
 
 [role="lead"]
-Ce collecteur de données rassemble les informations d'inventaire et de performances des systèmes de stockage Dell EMC Data Domain Deduplication. Pour configurer ce collecteur de données, vous devez suivre des instructions de configuration spécifiques et des recommandations d'utilisation.
+Ce collecteur de données collecte des informations d'inventaire et de performances à partir des systèmes de stockage de déduplication DELL EMC Data Domain.  Pour configurer ce collecteur de données, vous devez suivre des instructions de configuration et des recommandations d'utilisation spécifiques.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données Data Domain. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès du collecteur de données Data Domain.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
 | Disque | Disque 
 
 
-| Baie | Stockage 
+| Tableau | Stockage 
 
 
 | Port FC | Port 
@@ -38,15 +38,15 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes à
 | Quota | Quota 
 
 
-| Partage NFS et CIFS | Fileshare 
+| Partage NFS et CIFS | Partage de fichiers 
 |===
-Remarque : il s'agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce coletor de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-Vous avez besoin des informations suivantes pour configurer ce collecteur de données :
+Vous avez besoin des informations suivantes pour configurer ce collecteur de données :
 
 * Adresse IP du périphérique Data Domain
 * Nom d'utilisateur et mot de passe en lecture seule pour le stockage Data Domain
@@ -62,13 +62,13 @@ Vous avez besoin des informations suivantes pour configurer ce collecteur de don
 | Champ | Description 
 
 
-| Adresse IP | Adresse IP ou nom de domaine complet de la baie de stockage Data Domain 
+| adresse IP | L'adresse IP ou le nom de domaine complet de la baie de stockage Data Domain 
 
 
-| Nom d'utilisateur | Nom d'utilisateur de la baie de stockage Data Domain 
+| Nom d'utilisateur | Le nom d'utilisateur pour la baie de stockage Data Domain 
 
 
-| Mot de passe | Mot de passe de la matrice de stockage Data Domain 
+| Mot de passe | Le mot de passe de la baie de stockage Data Domain 
 |===
 
 
@@ -79,7 +79,7 @@ Vous avez besoin des informations suivantes pour configurer ce collecteur de don
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 20. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire.  La valeur par défaut est 20. 
 
 
 | Port SSH | Port de service SSH 
@@ -88,4 +88,4 @@ Vous avez besoin des informations suivantes pour configurer ce collecteur de don
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

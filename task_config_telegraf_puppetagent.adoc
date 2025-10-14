@@ -2,54 +2,54 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_puppetagent.html 
 keywords: telegraf, installation, install, Puppet 
-summary: Configuration Puppet Data Collector 
+summary: Configuration du collecteur de données Puppet 
 ---
-= Collecteur de données Puppet Agent
+= Collecteur de données d'agent de marionnettes
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour collecter des metrics à partir de l'agent Puppet.
+Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Puppet Agent.
 
 
 
 == Installation
 
-. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez Puppet.
+. Depuis *Observabilité > Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Puppet.
 +
-Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+Sélectionnez le système d’exploitation ou la plate-forme sur laquelle l’agent Telegraf est installé.
 
-. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer les link:task_config_telegraf_agent.html["Installation de l'agent"]instructions.
-. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
-. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
-
-
-image:PuppetDCConfigWindows.png["Configuration de Puppet"]
+. Si vous n'avez pas encore installé d'agent pour la collecte, ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer lelink:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d’accès de l’agent à utiliser avec ce collecteur de données.  Vous pouvez ajouter une nouvelle clé d'accès d'agent en cliquant sur le bouton *+ Clé d'accès d'agent*.  Meilleure pratique : utilisez une clé d’accès d’agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple par système d’exploitation/plateforme.
+. Suivez les étapes de configuration pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.
 
 
+image:PuppetDCConfigWindows.png["Configuration de la marionnette"]
 
-== Configuration
 
-Vous trouverez des informations dans le https://puppet.com/docs["Documentation Puppet"]
+
+== Installation
+
+Des informations peuvent être trouvées dans le https://puppet.com/docs["Documentation des marionnettes"]
 
 
 
 == Objets et compteurs
 
-Les objets suivants et leurs compteurs sont collectés :
+Les objets suivants et leurs compteurs sont collectés :
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
 
 
-| Objet : | Identifiants : | Attributs : | Points de données : 
+| Objet: | Identifiants : | Attributs: | Points de données : 
 
 
-| Agent Puppet | UUID de nœud de namespace | Nom du nœud emplacement nœud version IP de la chaîne de configuration version Puppet | Changements Total des événements échec événements succès événements Total des ressources modifiées Ressources non modifiées Ressources non activées redémarrer les ressources désync Ressources redémarrées Ressources planifiées Ressources ignorées Ressources Total temps d'ancrage temps d'extraction temps d'extraction Cron Time Exec Time File Time Filebucket Time LASTRUN temps temps du temps du temps du temps du temps de service Sshauthorizedkey Time Total Utilisateur de temps 
+| Agent marionnette | UUID du nœud d'espace de noms | Nom du nœud Emplacement IP du nœud Version Chaîne de configuration Version Puppet | Modifications Total des événements Échecs Succès Ressources Total Ressources modifiées Ressources échouées Échec du redémarrage des ressources Ressources désynchronisées Ressources redémarrées Ressources planifiées Ressources ignorées Temps total Heure d'ancrage Heure de récupération de la configuration Heure cron Heure d'exécution Heure du fichier Heure du compartiment de fichiers Heure de la dernière exécution Heure du package Heure de planification Heure du service Heure de la clé Sshauthorized Heure totale Utilisateur 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur la link:concept_requesting_support.html["Assistance"] page.
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page.

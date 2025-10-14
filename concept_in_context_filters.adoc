@@ -1,42 +1,42 @@
 ---
 sidebar: sidebar 
 permalink: concept_in_context_filters.html 
-summary: 'Vous pouvez filtrer les objets qui sont directement liés à l"actif actuel.' 
+summary: 'Vous pouvez filtrer les objets directement liés à l"actif actuel.' 
 keywords: Assets, landing page, filtering, context, related 
 ---
-= Filtrage des objets dans le contexte
+= Filtrage des objets en contexte
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Lors de la configuration d'un widget sur la page d'accueil d'une ressource, vous pouvez définir des filtres _dans-contexte_ pour afficher uniquement les objets directement liés à l'actif actuel. Par défaut, lorsque vous ajoutez un widget, les objets _all_ du type sélectionné sur votre locataire s'affichent. Les filtres dans le contexte vous permettent d'afficher uniquement les données pertinentes pour votre ressource actuelle.
+Lors de la configuration d'un widget sur la page de destination d'un actif, vous pouvez définir des filtres _in-context_ pour afficher uniquement les objets directement liés à l'actif actuel.  Par défaut, lorsque vous ajoutez un widget, _tous_ les objets du type sélectionné sur votre locataire sont affichés.  Les filtres contextuels vous permettent d'afficher uniquement les données pertinentes pour votre actif actuel.
 
-Sur la plupart des pages d'accueil des ressources, les widgets vous permettent de filtrer les objets associés à la ressource actuelle. Dans les listes déroulantes de filtres, les types d'objets qui affichent une icône de lien peuvent être filtrés dans le contexte de l'actif actuel.
+Sur la plupart des pages de destination des ressources, les widgets vous permettent de filtrer les objets liés à la ressource actuelle.  Dans les listes déroulantes de filtre, les types d'objets qui affichent une icône de lien peuvent être filtrés dans le contexte de l'actif actuel.
 
-Par exemple, sur une page Storage Asset, vous pouvez ajouter un widget Bar Chart pour afficher les IOPS les plus élevées sur les volumes internes uniquement sur ce stockage. Par défaut, lorsque vous ajoutez un widget, _all_ volumes internes sur votre tenant s'affichent.
+Par exemple, sur une page d’actif de stockage, vous pouvez ajouter un widget de graphique à barres pour afficher les IOPS les plus élevées sur les volumes internes uniquement sur ce stockage.  Par défaut, lorsque vous ajoutez un widget, _tous_ les volumes internes de votre locataire sont affichés.
 
-Pour afficher uniquement les volumes internes de l'actif de stockage actuel, procédez comme suit :
+Pour afficher uniquement les volumes internes sur la ressource de stockage actuelle, procédez comme suit :
 
 .Étapes
-. Ouvrez une page de ressources pour toute ressource *Storage*.
-. Cliquez sur *Modifier* pour ouvrir la page de ressources en mode Édition.
-. Cliquez sur *Ajouter un widget* et sélectionnez _BarBar Chart_.
-. Sélectionnez *Volume interne* pour le type d'objet à afficher dans le graphique à barres. Notez que le type d'objet de volume interne est associé à une icône de lien. L'icône « lié » est activée par défaut.
+. Ouvrez une page d'actif pour n'importe quel actif *Stockage*.
+. Cliquez sur *Modifier* pour ouvrir la page de l'actif en mode Édition.
+. Cliquez sur *Ajouter un widget* et sélectionnez _Graphique à barres_.
+. Sélectionnez *Volume interne* comme type d’objet à afficher sur le graphique à barres.  Notez que le type d’objet de volume interne possède une icône de lien à côté de lui.  L'icône « lié » est activée par défaut.
 +
-image:LinkingObjects.png["volumes des graphiques à barres"]
+image:LinkingObjects.png["graphiques à barres de volumes"]
 
 . Choisissez _IOPS - Total_ et définissez les filtres supplémentaires que vous souhaitez.
-. Réduisez le champ *remonter* en cliquant sur [X] en regard de celui-ci. Le champ *Afficher* s'affiche.
+. Réduisez le champ *Roll Up* en cliquant sur le [X] à côté de celui-ci.  Le champ *Afficher* s'affiche.
 . Choisissez d'afficher le Top 10.
 . Enregistrez le widget.
 +
-Le graphique à barres indique uniquement les volumes internes résidant sur l'actif de stockage actuel.
+Le graphique à barres affiche uniquement les volumes internes qui résident sur la ressource de stockage actuelle.
 
 
 
-Le widget s'affiche sur les pages d'actifs de tous les objets de stockage. Lorsque le lien In-context est activé dans le widget, le graphique à barres affiche les données des volumes internes liés uniquement à l'actif de stockage actuellement affiché.
+Le widget sera affiché sur les pages d’actifs pour tous les objets de stockage.  Lorsque le lien contextuel est activé dans le widget, le graphique à barres affiche les données des volumes internes liés uniquement à la ressource de stockage actuellement affichée.
 
-Pour dissocier les données de l'objet, modifiez le widget et cliquez sur l'icône de lien en regard du type d'objet. Le lien devient désactivé et le graphique affiche les données de _tous_ objets sur votre locataire.
+Pour dissocier les données de l'objet, modifiez le widget et cliquez sur l'icône de lien à côté du type d'objet.  Le lien est désactivé et le graphique affiche les données de _tous_ les objets de votre locataire.
 
-Vous pouvez également utiliser link:concept_dashboard_features.html#variables["*variables spéciales dans les widgets*"] pour afficher les informations relatives aux ressources sur les pages d'accueil.
+Vous pouvez également utiliserlink:concept_dashboard_features.html#variables["*variables spéciales dans les widgets*"] pour afficher des informations relatives aux actifs sur les pages de destination.

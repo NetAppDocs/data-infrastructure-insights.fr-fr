@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_cloud_volumes.html 
-summary: Configuration du collecteur de données NetApp Cloud volumes Services pour AWS 
+summary: Configurer les services NetApp Cloud Volumes pour le collecteur de données AWS 
 keywords: data collector, NetApp, Cloud, AWS 
 ---
-= Collecteur de données NetApp Cloud volumes Services pour AWS
+= Collecteur de données NetApp Cloud Volumes Services pour AWS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ keywords: data collector, NetApp, Cloud, AWS
 
 
 [role="lead"]
-Ce collecteur de données prend en charge la collecte d'inventaire depuis les configurations NetApp Cloud volumes Services pour AWS.
+Ce collecteur de données prend en charge la collecte d'inventaire à partir de NetApp Cloud Volumes Services pour les configurations AWS.
 
 
 
@@ -25,13 +25,13 @@ Ce collecteur de données prend en charge la collecte d'inventaire depuis les co
 | Champ | Description 
 
 
-| Région Cloud volumes | Région de NetApp Cloud volumes Services pour AWS 
+| Région des volumes de nuages | Région des services NetApp Cloud Volumes pour AWS 
 
 
-| Clé API | Clé Cloud volumes API 
+| Clé API | Clé API Cloud Volumes 
 
 
-| Clé secrète | Clé secrète Cloud volumes 
+| Clé secrète | Clé secrète de Cloud Volumes 
 |===
 
 
@@ -42,19 +42,19 @@ Ce collecteur de données prend en charge la collecte d'inventaire depuis les co
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 minutes 
+| Intervalle d'interrogation d'inventaire (min) | La valeur par défaut est de 60 minutes 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| J'ai reçu une erreur similaire à celle-ci : « échec de l'exécution de la demande : connexion à <point de terminaison de la région AWS>:8080 [<point de terminaison de la région AWS>/IP du point de terminaison de la région AWS] échec : connexion expirée : OBTENTION DU nom de domaine complet du point de terminaison de la région \https://<AWS>:8080/v1/stockage/IPRanges HTTP/1.1 » | Lelink:task_configure_acquisition_unit.html#proxy-configuration-2["proxy"] utilisé par Data Infrastructure Insights pour communiquer avec l'unité d'acquisition ne communique pas entre Data Infrastructure Insights et le collecteur de données lui-même.  Voici quelques éléments que vous pouvez essayer : assurez-vous que l’unité d’acquisition est capable de résoudre le nom de domaine complet et d’atteindre le port requis.  Confirmez qu’un proxy n’est pas requis pour atteindre le point de terminaison spécifié dans le message d’erreur.  Curl peut être utilisé pour tester la communication entre l'unité d'acquisition et le point de terminaison.  Assurez-vous que vous n'utilisez *pas* de proxy pour ce test.  Exemple : root@acquisitionunit# curl -s -H accept:application/json -H "Content-type: application/json" -H api-key:<clé API utilisée dans les informations d'identification du collecteur de données -H secret-key:<clé secrète utilisée dans les informations d'identification du collecteur de données> -X GET \https://<AWS Regional Endpoint>:8080/v1/Storage/IPRanges 
+| J'ai reçu une erreur similaire à celle-ci : « Échec de l'exécution de la requête : connexion à <AWS region endpoint>:8080 [<AWS region endpoint>/AWS region endpoint IP>] a échoué : délai de connexion expiré : GET \https://<AWS Region Endpoint FQDN>:8080/v1/Storage/IPRanges HTTP/1.1 » | Lelink:task_configure_acquisition_unit.html#proxy-configuration-2["procuration"] utilisé par Data Infrastructure Insights pour communiquer avec l'unité d'acquisition ne communique pas entre Data Infrastructure Insights et le collecteur de données lui-même.  Voici quelques éléments que vous pouvez essayer : assurez-vous que l’unité d’acquisition est capable de résoudre le nom de domaine complet et d’atteindre le port requis.  Confirmez qu’un proxy n’est pas requis pour atteindre le point de terminaison spécifié dans le message d’erreur.  Curl peut être utilisé pour tester la communication entre l'unité d'acquisition et le point de terminaison.  Assurez-vous que vous n'utilisez *pas* de proxy pour ce test.  Exemple : root@acquisitionunit# curl -s -H accept:application/json -H "Content-type: application/json" -H api-key:<clé API utilisée dans les informations d'identification du collecteur de données -H secret-key:<clé secrète utilisée dans les informations d'identification du collecteur de données> -X GET \https://<AWS Regional Endpoint>:8080/v1/Storage/IPRanges 
 |===
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

@@ -2,39 +2,39 @@
 sidebar: sidebar 
 permalink: kubernetes_node_detail.html 
 keywords: k8s, pods, clusters, nodes. troubleshooting, planning 
-summary: La page de détails des nœuds Kubernetes fournit des informations sur le stockage persistant et Pod en back-end. 
+summary: La page de détails du nœud Kubernetes fournit un aperçu du stockage PV et Pod back-end. 
 ---
-= Page des détails des nœuds Kubernetes
+= Page de détails du nœud Kubernetes
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dans l'explorateur Kubernetes, vous pouvez cliquer sur une icône de nœud pour ouvrir une page d'informations détaillée pour ce nœud. Cette page vous permet d'afficher des informations sur le nœud, ainsi que d'explorer les VM, les pods et les conteneurs.
+Dans Kubernetes Explorer, vous pouvez cliquer sur l’icône d’un nœud pour ouvrir une page d’informations détaillées pour ce nœud.  Sur cette page, vous pouvez afficher des informations sur le nœud ainsi qu'explorer les informations sur la VM, le pod et le conteneur.
 
-image:KubernetesNodeFiltering.png["Page Détails du nœud Kubernetes affichant le filtrage"]
+image:KubernetesNodeFiltering.png["Page de détails du nœud Kubernetes affichant le filtrage"]
 
 
 
 == Exploration des pods et des volumes persistants du nœud
 
-Les informations sur l'infrastructure de données offrent une visibilité sur le stockage interne de vos environnements Kubernetes, ce qui vous donne accès aux pods Kubernetes et aux volumes persistants (PVS). Vous pouvez suivre les compteurs PV tels que les IOPS, la latence et le débit, depuis l'utilisation d'un seul pod via un compteur PV vers un PV et jusqu'au périphérique de stockage interne.
+Data Infrastructure Insights offre une visibilité sur le stockage back-end de vos environnements Kubernetes, vous donnant un aperçu de vos pods Kubernetes et de vos volumes persistants (PV).  Vous pouvez suivre les compteurs PV tels que les IOPS, la latence et le débit de l'utilisation d'un seul Pod via un compteur PV jusqu'à un PV et jusqu'au périphérique de stockage back-end.
 
-Au niveau des volumes persistants, Data Infrastructure Insights collecte des informations sur la capacité du back-end (volume ou volume interne selon le type de volume persistant) (total, utilisé, pourcentage utilisé), ainsi que sur le nombre de snapshots des volumes internes. Sur le Pod au niveau du stockage, il collecte la capacité interne et le nombre de snapshots des volumes internes.
+Au niveau PV, Data Infrastructure Insights collecte des informations sur la capacité du back-end (volume interne ou volume selon le type de PV) (total, utilisé, pourcentage utilisé), ainsi que le nombre d'instantanés du volume interne.  Au niveau du pod, il collecte la capacité back-end et le nombre d'instantanés de volume interne.
 
-Sur une page d'accueil Volume ou Internal Volume, deux tableaux sont affichés :
+Sur une page de destination Volume ou Volume interne, deux tableaux sont affichés :
 
-image:Kubernetes_PV_Table.png["Tableau Kubernetes PV"] image:Kubernetes_Pod_Table.png["Tableau Kubernetes Pod"]
-
-
-NOTE: Si vous avez personnalisé la page d'accueil de votre volume ou volume interne, il se peut que les tables PV et Pod ne s'affichent pas automatiquement. Pour voir ces tables, vous devez rétablir la page par défaut, à ce stade où vous verrez les tables PV et Pod. Vous pouvez ensuite modifier la personnalisation de la page comme vous le souhaitez.
-
-Notez que pour tirer parti de ces nouvelles tables, il est recommandé de désinstaller votre agent Kubernetes actuel afin de l'installer à nouveau. Vous devez également installer Kube-State-Metrics version 2.1.0 ou ultérieure.
+image:Kubernetes_PV_Table.png["Table PV Kubernetes"] image:Kubernetes_Pod_Table.png["Table de pods Kubernetes"]
 
 
+NOTE: Si vous avez personnalisé votre page de destination Volume ou Volume interne, vous ne verrez peut-être pas automatiquement les tables PV et Pod.  Pour voir ces tables, vous devez rétablir la page par défaut, auquel cas vous verrez les tables PV et Pod.  Vous pouvez ensuite procéder à la personnalisation de la page comme vous le souhaitez.
 
-== Liens entre un nœud Kubernetes et une machine virtuelle
+Notez que pour profiter de ces nouvelles tables, il est recommandé de désinstaller votre agent Kubernetes actuel et de l'installer à nouveau.  Vous devez également installer Kube-State-Metrics version 2.1.0 ou ultérieure.
 
-Sur une page Kubernetes Node, vous pouvez cliquer sur pour ouvrir la page VM du nœud. La page VM comprend également un lien de retour vers le nœud lui-même.
 
-image:Kubernetes_Node_Page_with_VM_Link.png["Page de nœud Kubernetes affichant le lien vers la machine virtuelle"] image:Kubernetes_VM_Page_with_Node_Link.png["Page de la machine virtuelle Kubernetes affichant le lien du nœud"]
+
+== Liens entre le nœud Kubernetes et la VM
+
+Sur une page de nœud Kubernetes, vous pouvez cliquer pour ouvrir la page de la machine virtuelle du nœud.  La page VM inclut également un lien vers le nœud lui-même.
+
+image:Kubernetes_Node_Page_with_VM_Link.png["Page du nœud Kubernetes affichant le lien vers la machine virtuelle"] image:Kubernetes_VM_Page_with_Node_Link.png["Page de la machine virtuelle Kubernetes affichant le lien vers le nœud"]

@@ -10,29 +10,29 @@ summary: Configuration du collecteur de données VNXe.
 
 
 [role="lead"]
-Le collecteur de données Dell EMC Unity (anciennement VNXe) fournit une prise en charge de l'inventaire des baies de stockage unifiées VNXe. Data Infrastructure Insights prend actuellement en charge les protocoles iSCSI et NAS.
+Le collecteur de données DELL EMC Unity (anciennement VNXe) fournit une prise en charge d'inventaire pour les baies de stockage unifiées VNXe.  Data Infrastructure Insights prend actuellement en charge les protocoles iSCSI et NAS.
 
 
 
-== De formation
+== Exigences
 
-* Le collecteur de données Unity est basé sur la CLI ; vous devez installer Unisphere for Unity CLI (uemcli.exe) sur l'unité d'acquisition où réside votre collecteur de données VNXe.
-* uemcli.exe utilise HTTPS comme protocole de transport. L'unité d'acquisition doit donc pouvoir lancer des connexions HTTPS vers Unity.
-* Adresse IP ou nom de domaine complet du périphérique Unity
-* Vous devez disposer d'au moins un utilisateur en lecture seule à utiliser par le collecteur de données.
-* HTTPS pour le port 443 est requis
-* Le collecteur de données EMC Unity prend en charge les protocoles NAS et iSCSI pour l'inventaire ; les volumes Fibre Channel seront découverts, mais Data Infrastructure Insights ne fournit pas de rapport sur le mappage FC, le masquage ou les ports de stockage.
+* Le collecteur de données Unity est basé sur CLI ; vous devez installer Unisphere pour Unity CLI (uemcli.exe) sur l'unité d'acquisition où réside votre collecteur de données VNXe.
+* uemcli.exe utilise HTTPS comme protocole de transport, l'unité d'acquisition devra donc pouvoir initier des connexions HTTPS vers Unity.
+* Adresse IP ou nom de domaine complet de l'appareil Unity
+* Vous devez disposer d'au moins un utilisateur en lecture seule pour pouvoir utiliser le collecteur de données.
+* HTTPS sur le port 443 est requis
+* Le collecteur de données EMC Unity fournit une prise en charge NAS et iSCSI pour l'inventaire ; les volumes Fibre Channel seront découverts, mais Data Infrastructure Insights ne génère pas de rapport sur le mappage FC, le masquage ou les ports de stockage.
 
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données Unity. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès du collecteur de données Unity.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
 | Disque | Disque 
@@ -44,13 +44,13 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes à
 | Processeur | Nœud de stockage 
 
 
-| Pool de stockage | Pool de stockage 
+| Piscine de stockage | Piscine de stockage 
 
 
-| Informations générales sur les blocs iSCSI, VMware VMFS | Partagez 
+| Informations générales sur les blocs iSCSI, VMware VMFS | Partager 
 
 
-| Réplication du système distant | Synchronisation 
+| Système de réplication à distance | Synchronisation 
 
 
 | Nœud iSCSI | Nœud cible iSCSI 
@@ -58,7 +58,7 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes à
 
 | Initiateur iSCSI | Initiateur cible iSCSI 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour cette source de données.
 
 
 
@@ -69,16 +69,16 @@ Remarque : il s'agit uniquement de mappages terminologiques courants et peuvent 
 | Champ | Description 
 
 
-| Stockage unitaire | Adresse IP ou nom de domaine complet du périphérique Unity 
+| Stockage Unity | Adresse IP ou nom de domaine complet de l'appareil Unity 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du périphérique Unity 
+| Nom d'utilisateur | Nom d'utilisateur pour l'appareil Unity 
 
 
-| Mot de passe | Mot de passe du périphérique Unity 
+| Mot de passe | Mot de passe pour l'appareil Unity 
 
 
-| Chemin complet vers l'UEMCLI exécutable | Chemin d'accès complet au dossier contenant l'exécutable _uemcli.exe_ 
+| Chemin complet vers l'exécutable UEMCLI | Chemin complet vers le dossier contenant l'exécutable _uemcli.exe_ 
 |===
 
 
@@ -89,19 +89,19 @@ Remarque : il s'agit uniquement de mappages terminologiques courants et peuvent 
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 40 minutes 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire.  La valeur par défaut est de 40 minutes 
 
 
 | Port CLI Unity | Port utilisé pour l'interface de ligne de commande Unity 
 
 
-| Intervalle d'interrogation des performances (s) | La valeur par défaut est 300. 
+| Intervalle d'interrogation des performances (sec) | La valeur par défaut est 300. 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -109,9 +109,9 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| « Impossible d'exécuter l'utilitaire externe » avec les messages d'erreur « Impossible de trouver le fichier exécutable Unisphere uemcli ». | * Vérifiez que l'adresse IP, le nom d'utilisateur et le mot de passe sont corrects * Vérifiez que la CLI Unisphere est installée sur l'unité d'acquisition Data Infrastructure Insights * Vérifiez que le répertoire d'installation de la CLI Unisphere est correct dans la configuration de la source de données * Vérifiez que l'adresse IP du VNXe est correcte dans la configuration de la source de données. Dans l'unité d'acquisition Data Infrastructure Insights, ouvrez un CMD et passez au répertoire d'installation configuré : ${INSTALLDIR. Essayez d'établir une connexion avec le périphérique VNXe en tapant : uemcli -d <votre IP> -u <votre ID> /sys/General show 
+| « Échec de l'exécution de l'utilitaire externe » avec le message d'erreur « Impossible de trouver l'exécutable Unisphere uemcli » | * Vérifiez l'adresse IP, le nom d'utilisateur et le mot de passe corrects. * Confirmez que Unisphere CLI est installé sur l'unité d'acquisition Data Infrastructure Insights. * Confirmez que le répertoire d'installation d'Unisphere CLI est correct dans la configuration de la source de données. * Confirmez que l'adresse IP du VNXe est correcte dans la configuration de la source de données.  À partir de l'unité d'acquisition Data Infrastructure Insights , ouvrez un CMD et accédez au répertoire d'installation configuré : ${INSTALLDIR.  Essayez d'établir une connexion avec le périphérique VNXe en tapant : uemcli -d <Votre IP> -u <Votre ID> /sys/general show 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

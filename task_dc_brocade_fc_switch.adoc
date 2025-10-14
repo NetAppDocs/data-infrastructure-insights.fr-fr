@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_fc_switch.html 
 keywords: data collector, Brocade, FC switch, 
-summary: Configuration du collecteur de données des commutateurs FC Brocade 
+summary: Configuration du collecteur de données des commutateurs FC Brocade . 
 ---
 = Collecteur de données du commutateur FC Brocade
 :hardbreaks:
@@ -10,26 +10,26 @@ summary: Configuration du collecteur de données des commutateurs FC Brocade
 
 
 [role="lead"]
-Les informations d'infrastructure de données utilisent la source de données Brocade FC Switch (SSH) pour détecter l'inventaire des commutateurs Brocade ou des commutateurs rebrandés exécutant le micrologiciel FOS (système d'exploitation factorisé) version 4.2 et ultérieure. Les périphériques en mode commutateur FC et passerelle d'accès sont pris en charge.
+Data Infrastructure Insights utilise la source de données Brocade FC Switch (SSH) pour découvrir l'inventaire des périphériques de commutation Brocade ou renommés exécutant le micrologiciel Factored Operating System (FOS) 4.2 et versions ultérieures.  Les appareils en modes commutateur FC et passerelle d'accès sont pris en charge.
 
 
 
 == Terminologie
 
-Les informations d'inventaire suivantes sont acquises à partir du collecteur de données du commutateur FC Brocade. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données Brocade FC Switch.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Commutateur | Commutateur 
+| Changer | Changer 
 
 
 | Port | Port 
 
 
-| Structure virtuelle, structure physique | Structure 
+| Tissu virtuel, tissu physique | Tissu 
 
 
 | Zone | Zone 
@@ -38,22 +38,22 @@ Les informations d'inventaire suivantes sont acquises à partir du collecteur de
 | Commutateur logique | Commutateur logique 
 
 
-| Volume virtuel | Volumétrie 
+| Volume virtuel | Volume 
 
 
-| Zone LSAN | Zone IVR 
+| Zone LSA | Zone IVR 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-* L'unité d'acquisition Data Infrastructure Insights (au) initie les connexions au port TCP 22 sur les commutateurs Brocade pour collecter les données d'inventaire. L'UA initiera également les connexions au port UDP 161 pour la collecte des données de performances.
-* Il doit y avoir une connectivité IP à tous les commutateurs de la structure. Si vous cochez la case détecter tous les switchs dans la structure, Data Infrastructure Insights identifie tous les switchs de la structure. Cependant, la connectivité IP à ces switchs supplémentaires est nécessaire pour les découvrir.
-* Le même compte est nécessaire au niveau global pour tous les commutateurs du maillage. Vous pouvez utiliser PuTTY (émulateur de terminal open source) pour confirmer l'accès.
+* L'unité d'acquisition Data Infrastructure Insights (AU) initiera des connexions au port TCP 22 sur les commutateurs Brocade pour collecter des données d'inventaire.  L'AU initiera également des connexions au port UDP 161 pour la collecte de données de performances.
+* Il doit y avoir une connectivité IP à tous les commutateurs de la structure.  Si vous cochez la case Découvrir tous les commutateurs de la structure, Data Infrastructure Insights identifie tous les commutateurs de la structure ; cependant, il a besoin d'une connectivité IP à ces commutateurs supplémentaires pour les découvrir.
+* Le même compte est nécessaire à l’échelle mondiale sur tous les commutateurs de la structure.  Vous pouvez utiliser PuTTY (émulateur de terminal open source) pour confirmer l'accès.
 * Les ports 161 et 162 doivent être ouverts à tous les commutateurs de la structure pour l'interrogation des performances SNMP.
-* Chaîne de communauté en lecture seule SNMP
+* Chaîne de communauté SNMP en lecture seule
 
 
 
@@ -65,19 +65,19 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| IP du commutateur | Adresse IP ou nom de domaine complet du serveur EFC 
+| Changer d'adresse IP | Adresse IP ou nom de domaine complet du serveur EFC 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du commutateur 
+| Nom d'utilisateur | Nom d'utilisateur pour le commutateur 
 
 
-| Mot de passe | Mot de passe du commutateur 
+| Mot de passe | Mot de passe pour le commutateur 
 
 
 | SNMP | Version SNMP 
 
 
-| Chaîne de communauté SNMP | Chaîne de communauté en lecture seule SNMP utilisée pour accéder au commutateur 
+| Chaîne de communauté SNMP | Chaîne de communauté SNMP en lecture seule utilisée pour accéder au commutateur 
 
 
 | Nom d'utilisateur SNMP | Nom d'utilisateur SNMP 
@@ -94,49 +94,49 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| Nom de la structure | Nom de la structure à indiquer par le collecteur de données. Laissez vide pour signaler le nom de la structure comme WWN. 
+| Nom du tissu | Nom du tissu à signaler par le collecteur de données.  Laissez vide pour signaler le nom du tissu comme WWN. 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 15. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire.  La valeur par défaut est 15. 
 
 
-| Périphériques exclus | Liste des ID de périphériques séparés par des virgules à exclure de l'interrogation 
+| Appareils exclus | Liste séparée par des virgules des identifiants d'appareils à exclure de l'interrogation 
 
 
-| Domaines d'administration actifs | Sélectionnez si vous utilisez des domaines Admin 
+| Domaines d'administration actifs | Sélectionnez si vous utilisez des domaines d'administration 
 
 
-| Récupérer les données MPR | Sélectionnez cette option pour acquérir des données de routage à partir de votre routeur multiprotocole. 
+| Récupérer les données MPR | Sélectionnez cette option pour acquérir les données de routage de votre routeur multiprotocole. 
 
 
-| Activer le recouvrement | Sélectionnez cette option pour activer l'acquisition lors de la réception d'une interruption SNMP à partir du périphérique. Si vous sélectionnez Activer le recouvrement, vous devez également activer SNMP. 
+| Activer le piégeage | Sélectionnez cette option pour activer l'acquisition lors de la réception d'un trap SNMP du périphérique.  Si vous sélectionnez Activer le piégeage, vous devez également activer SNMP. 
 
 
-| Temps minimum entre les recouvrements (s) | Temps minimum entre les tentatives d'acquisition déclenchées par les interruptions. La valeur par défaut est 10. 
+| Temps minimum entre les pièges (sec) | Temps minimum entre les tentatives d'acquisition déclenchées par des pièges.  La valeur par défaut est 10. 
 
 
-| Découvrir tous les commutateurs du tissu | Sélectionnez pour découvrir tous les commutateurs de la structure 
+| Découvrez tous les commutateurs du fabric | Sélectionnez pour découvrir tous les commutateurs du fabric 
 
 
-| Choisissez de favoriser HBA par rapport aux alias de zone | Choisissez de favoriser les alias de HBA ou de zone 
+| Privilégier les HBA plutôt que les alias de zone | Choisissez de privilégier les alias HBA ou de zone 
 
 
-| Intervalle d'interrogation des performances (s) | Intervalle entre les sondages de performances. La valeur par défaut est 300. 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performance.  La valeur par défaut est 300. 
 
 
-| Protocole d'autorisation SNMP | Protocole d'authentification SNMP (SNMP v3 uniquement) 
+| Protocole d'authentification SNMP | Protocole d'authentification SNMP (SNMP v3 uniquement) 
 
 
 | Mot de passe de confidentialité SNMP | Mot de passe de confidentialité SNMP (SNMP v3 uniquement) 
 
 
-| Nouvelles tentatives SNMP | Nombre de tentatives SNMP 
+| Nouvelles tentatives SNMP | Nombre de tentatives de nouvelle tentative SNMP 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -144,22 +144,22 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| L'acquisition de l'inventaire de la source de données Brocade échoue avec l'erreur : <date> <heure> ERREUR [com.onaro.sanscreen.acquisition.framework.datasource.BaseDataSource] erreur 2 sur 2: <nom de la source de données> [erreur interne] - Impossible de générer le modèle pour le périphérique <IP>. Erreur lors de la détection de l'invite ([Nom du périphérique <nom>] : impossible de générer le modèle pour le périphérique <IP>. Erreur lors de la détection de l'invite) | Le problème peut survenir lorsque le commutateur Brocade prend trop de temps pour revenir avec une invite, dépassant le délai par défaut de 5 secondes. Dans les paramètres de configuration avancée du collecteur de données dans Data Infrastructure Insights, essayez d'augmenter la valeur _SSH Banner Wait Timeout (sec)_ à une valeur supérieure. 
+| L'acquisition de l'inventaire de la source de données Brocade échoue avec l'erreur : <date> <heure> ERREUR [com.onaro.sanscreen.acquisition.framework.datasource.BaseDataSource] Erreur 2 sur 2 : <nom de la source de données> [Erreur interne] - Impossible de générer le modèle pour le périphérique <IP>.  Erreur lors de la détection de l'invite ([Nom du périphérique <nom>] : Impossible de générer le modèle pour le périphérique <IP>.  Erreur lors de la détection de l'invite) | Le problème peut être dû au fait que le commutateur Brocade met trop de temps à renvoyer une invite, dépassant le délai d'expiration par défaut de 5 secondes.  Dans les paramètres de configuration avancée du collecteur de données dans Data Infrastructure Insights, essayez d'augmenter le _Délai d'attente de la bannière SSH (sec)_ à une valeur plus élevée. 
 
 
-| Erreur : « les informations de l'infrastructure de données ont reçu un rôle de châssis non valide » | Vérifiez que l'utilisateur configuré dans cette source de données a reçu l'autorisation de rôle de châssis. 
+| Erreur : « Data Infrastructure Insights a reçu un rôle de châssis non valide » | Vérifiez que l’utilisateur configuré dans cette source de données dispose de l’autorisation de rôle de châssis. 
 
 
-| Erreur : « adresse IP du châssis non concordante » | En règle générale, DII ne prend pas en charge la traduction d'adresses réseau ni la traduction d'adresses de port entre l'unité d'acquisition et les appareils. DII peut détecter que le nom d'hôte ou l'adresse IP dans la configuration du collecteur ne correspond à aucune des adresses que l'appareil pense détenir. 
+| Erreur : « Adresse IP du châssis incompatible » | En règle générale, DII ne prend PAS en charge la traduction d'adresses réseau ou la traduction d'adresses de port entre l'unité d'acquisition et les périphériques.  DII peut détecter que le nom d'hôte/l'adresse IP dans la configuration du collecteur ne correspond à aucune des adresses que l'appareil pense avoir. 
 
 
-| Recevez un message indiquant que plus d'un nœud est connecté au port Access Gateway | Vérifiez que le périphérique NPV fonctionne correctement et que tous les WWN connectés sont attendus. N'obtenez pas directement le périphérique NPV. L'acquisition du commutateur principal de la structure collecte plutôt les données du dispositif NPV. 
+| Recevez un message indiquant que plusieurs nœuds sont connectés au port Access Gateway | Vérifiez que le périphérique NPV fonctionne correctement et que tous les WWN connectés sont attendus.  N'acquérez pas directement le dispositif NPV.  Au lieu de cela, l’acquisition du commutateur de structure principal collectera les données du périphérique NPV. 
 
 
-| Erreur : ....Nombre maximal de sessions à distance pour la connexion... | FOS impose différentes limites quant au nombre de sessions SSH simultanées prises en charge par rôle utilisateur. La session SSH de DII sur cet appareil est rejetée à la connexion pour non-respect de ces limites. Cela peut indiquer que des collecteurs en double découvrent la même ressource, ce qui est à éviter. 
+| Erreur : ....Nombre maximal de sessions à distance pour la connexion... | FOS a des limites différentes pour le nombre de sessions SSH simultanées prises en charge par rôle d'utilisateur.  La session SSH de DII sur cet appareil est rejetée lors de la connexion pour violation de ces limites.  Cela peut être un signe que vous avez des collectionneurs en double qui découvrent le même actif, ce qui doit être évité. 
 |===
 
 
@@ -167,24 +167,24 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| Échec de la collecte des performances avec « délai dépassé lors de l'envoi de la requête SNMP ». | Selon les variables de requête et la configuration du commutateur, certaines requêtes peuvent dépasser le délai d'expiration par défaut. link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["En savoir plus"] . 
+| La collecte des performances échoue avec le message « Délai d'attente expiré lors de l'envoi de la requête SNMP ». | Selon les variables de requête et la configuration du commutateur, certaines requêtes peuvent dépasser le délai d'expiration par défaut. link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["En savoir plus"] . 
 
 
-| La collecte des performances échoue avec... Des doublons de lignes ont été trouvés dans la table SNMP... | DII a détecté des réponses SNMP incorrectes. Vous utilisez probablement FOS 8.2.3e. Effectuez la mise à niveau vers la version 8.2.3e2 ou supérieure. 
+| La collecte des performances échoue avec... Des doublons de lignes ont été trouvés dans la table SNMP... | DII a détecté de mauvaises réponses SNMP.  Vous utilisez probablement FOS 8.2.3e.  Effectuez une mise à niveau vers la version 8.2.3e2 ou supérieure. 
 
 
-| Les collectes de performances échouent avec... Nom d'utilisateur inconnu... | Vous avez configuré votre collecteur DII avec un « Nom d'utilisateur SNMP » qui n'est pas attribué à l'un des emplacements utilisateur SNMPv3. La simple création d'un utilisateur sur Brocade FOS ne l'active pas nécessairement comme utilisateur SNMPv3 ; vous devez le placer dans l'un des emplacements utilisateur v3. 
+| Les collectes de performances échouent avec... Nom d'utilisateur inconnu... | Vous avez configuré votre collecteur DII avec une valeur « Nom d'utilisateur SNMP » qui n'est pas insérée dans l'un des emplacements utilisateur SNMPv3.  La simple création d'un utilisateur sur Brocade FOS ne l'active PAS nécessairement en tant qu'utilisateur SNMPv3 - vous devez le placer dans l'un des emplacements utilisateur v3. 
 
 
-| Les collections de performances échouent avec... Niveau de sécurité non pris en charge... | Vous avez configuré votre collecteur DII pour utiliser SNMPv3, mais avec des paramètres de cryptage (alias confidentialité) et/ou d'autorisation qui ne sont pas activés sur l'appareil en question. 
+| Les collectes de performances échouent avec... Niveau de sécurité non pris en charge... | Vous avez configuré votre collecteur DII pour utiliser SNMPv3, mais avec des paramètres de cryptage (alias confidentialité) et/ou d'autorisation qui ne sont pas activés sur l'appareil en question. 
 
 
-| La collecte des performances échoue avec… Le mot de passe de confidentialité vide n'est autorisé que pour le protocole de confidentialité AUCUN | Vous avez configuré votre collecteur DII pour utiliser SNMPv3, avec un protocole de cryptage, également appelé protocole de confidentialité (AES, etc.), mais vous avez une valeur « Mot de passe de confidentialité SNMP » vide, donc DII ne peut pas négocier les flux de données SNMPv3 chiffrés avec cet appareil 
+| La collecte des performances échoue avec… Le mot de passe de confidentialité vide n'est autorisé que pour le protocole de confidentialité AUCUN | Vous avez configuré votre collecteur DII pour utiliser SNMPv3, avec un protocole de cryptage, également appelé protocole de confidentialité (AES, etc.), mais vous avez une valeur « Mot de passe de confidentialité SNMP » vide, donc DII ne peut pas négocier les flux de données SNMPv3 chiffrés avec cet appareil. 
 
 
-| La collecte des performances échoue avec .....VF:nn, erreur : aucun accès... | Vous avez configuré votre collecteur DII pour utiliser SNMPv3 sur un appareil avec plusieurs Virtual Fabrics activés, mais l'utilisateur SNMPv3 ne dispose pas des droits pour le NN VF. DII ne prend pas en charge la découverte partielle d'une ressource physique ; vous devez toujours lui accorder l'accès aux 128 VF possibles de manière proactive, car il tentera toujours de récupérer les données de performances de toute VF existante sur un appareil physique donné. 
+| La collecte des performances échoue avec .....VF:nn, erreur : aucun accès... | Vous avez configuré votre collecteur DII pour utiliser SNMPv3 sur un périphérique avec plusieurs Virtual Fabrics activés, mais l'utilisateur SNMPv3 n'a PAS de droits pour VF NN.  DII ne prend pas en charge la découverte partielle d'un actif physique. Vous devez toujours accorder à DII l'accès à tous les 128 VF possibles de manière proactive, car DII tentera toujours de récupérer les données de performances pour tout VF existant sur un périphérique physique donné. 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

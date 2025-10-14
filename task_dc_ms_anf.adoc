@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_ms_anf.html 
 keywords: data collector, azure, Netapp files, anf 
-summary: Configuration du collecteur de données Azure NetApp Files. 
+summary: Configuration du collecteur de données Azure NetApp Files . 
 ---
 = Configuration du collecteur de données Azure NetApp Files
 :hardbreaks:
@@ -10,21 +10,21 @@ summary: Configuration du collecteur de données Azure NetApp Files.
 
 
 [role="lead"]
-Les informations d'infrastructure de données utilisent le collecteur de données Azure NetApp Files pour acquérir des données d'inventaire et de performance.
+Data Infrastructure Insights utilise le collecteur de données Azure NetApp Files pour acquérir des données d’inventaire et de performances.
 
 
 
-== De formation
+== Exigences
 
 Vous avez besoin des informations suivantes pour configurer ce collecteur de données.
 
-* Port requis : 443 HTTPS
-* IP REST Azure Management (management.azure.com)
-* ID client principal du service Azure (compte utilisateur)
-* Clé d'authentification principale du service Azure (mot de passe utilisateur)
-* Vous devez configurer un compte Azure pour la découverte Data Infrastructure Insights.
+* Exigence de port : 443 HTTPS
+* IP REST de gestion Azure (management.azure.com)
+* ID client du principal du service Azure (compte d'utilisateur)
+* Clé d'authentification du principal du service Azure (mot de passe utilisateur)
+* Vous devez configurer un compte Azure pour la découverte de Data Infrastructure Insights .
 +
-Une fois le compte correctement configuré et que vous enregistrez l'application dans Azure, vous disposez des identifiants requis pour découvrir l'instance Azure avec Data Infrastructure Insights. Le lien suivant explique comment configurer le compte pour la découverte :
+Une fois le compte correctement configuré et l’application enregistrée dans Azure, vous disposerez des informations d’identification requises pour découvrir l’instance Azure avec Data Infrastructure Insights.  Le lien suivant décrit comment configurer le compte pour la découverte :
 
 
 
@@ -34,23 +34,23 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-ser
 
 == Configuration
 
-Entrez les données dans les champs du collecteur de données conformément au tableau ci-dessous :
+Saisissez les données dans les champs du collecteur de données conformément au tableau ci-dessous :
 
 [cols="2*"]
 |===
 | Champ | Description 
 
 
-| ID client principal du service Azure | ID de connexion à Azure 
+| ID client du principal du service Azure | ID de connexion à Azure 
 
 
 | ID de locataire Azure | ID de locataire Azure 
 
 
-| Clé d'authentification principale du service Azure | Clé d'authentification de connexion 
+| Clé d'authentification du principal du service Azure | Clé d'authentification de connexion 
 
 
-| J'ai bien compris que Microsoft me facture pour les demandes d'API | Vérifiez que vous avez bien compris que Microsoft vous facture des demandes d'API formulées par l'interrogation Insight. 
+| Je comprends que Microsoft me facture les demandes d'API | Cochez cette case pour vérifier que vous avez bien compris que Microsoft vous facture les demandes d’API effectuées par le sondage Insight. 
 |===
 
 
@@ -61,14 +61,14 @@ Entrez les données dans les champs du collecteur de données conformément au t
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 
+| Intervalle d'interrogation d'inventaire (min) | La valeur par défaut est 60 
 |===
 
 
 == Dépannage
 
-* Les identifiants utilisés par votre collecteur de données ANF doivent avoir accès à tous les abonnements Azure qui contiennent des volumes ANF.
-* Si l'accès au lecteur provoque l'échec de la collecte des performances, essayez d'accorder l'accès au collaborateur au niveau d'un groupe de ressources.
+* Les informations d’identification utilisées par votre collecteur de données ANF doivent avoir accès à tous les abonnements Azure contenant des volumes ANF.
+* Si l’accès du lecteur entraîne l’échec de la collecte des performances, essayez d’accorder l’accès du contributeur au niveau du groupe de ressources.
 
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

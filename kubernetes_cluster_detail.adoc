@@ -2,73 +2,73 @@
 sidebar: sidebar 
 permalink: kubernetes_cluster_detail.html 
 keywords: kubernetes, pods, clusters, nodes. troubleshooting, planning 
-summary: La page de détails de Kubernetes fournit des informations et des informations pour vous aider dans la résolution de problèmes et la planification. 
+summary: La page de détails de Kubernetes fournit des informations et des détails pour aider au dépannage et à la planification. 
 ---
-= Page des détails du cluster Kubernetes
+= Page de détails du cluster Kubernetes
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-La page des détails du cluster Kubernetes affiche une présentation détaillée du cluster Kubernetes.
+La page de détails du cluster Kubernetes affiche un aperçu détaillé de votre cluster Kubernetes.
 
-image:Kubernetes_Detail_Page_new.png["Page des détails du cluster"]
+image:Kubernetes_Detail_Page_new.png["Page de détails du cluster"]
 
 
 
-== L'espace de noms, les nœuds et le Pod
+== Nombre d'espaces de noms, de nœuds et de pods
 
-Le nombre en haut de la page indique le nombre total d'espaces de noms, de nœuds et de pods dans le cluster, ainsi que le nombre de fenêtres d'alerte en cours et en attente.
+Les comptes en haut de la page vous indiquent le nombre total d'espaces de noms, de nœuds et de pods dans le cluster, ainsi que le nombre de popds actuellement en alerte et en attente.
 
 
 
 == Ressources partagées et saturation
 
-En haut à droite de la page de détails se trouve la saturation de votre cluster en tant que pourcentage actuel, ainsi qu'un graphique affichant la tendance récente dans le temps. La saturation du cluster est la plus élevée du CPU, de la mémoire ou du stockage à chaque point du temps.
+En haut à droite de la page de détails se trouve la saturation de votre cluster sous forme de pourcentage actuel ainsi qu'un graphique montrant la tendance récente au fil du temps.  La saturation du cluster correspond à la saturation la plus élevée du processeur, de la mémoire ou du stockage à chaque instant.
 
-Ci-dessous, la page affiche par défaut *Shared Resources*, avec des onglets pour CPU, mémoire et stockage. Chaque onglet affiche le pourcentage de saturation et la tendance dans le temps, avec des détails d'utilisation supplémentaires. Pour le stockage, la valeur indiquée est le plus grand nombre de saturation du système de fichiers back-end et du système de fichiers, qui sont calculés indépendamment.
+En dessous, la page affiche par défaut l'utilisation des *Ressources partagées*, avec des onglets pour le processeur, la mémoire et le stockage.  Chaque onglet affiche le pourcentage de saturation et la tendance au fil du temps, avec des détails d'utilisation supplémentaires.  Pour le stockage, la valeur affichée est la plus élevée entre la saturation du backend et du système de fichiers, qui sont calculées indépendamment.
 
-Les périphériques les plus utilisés sont indiqués dans un tableau en bas. Cliquez sur n'importe quel lien pour explorer ces périphériques.
+Les appareils les plus utilisés sont indiqués dans un tableau en bas.  Cliquez sur n’importe quel lien pour explorer ces appareils.
 
 
 
 == Espaces de noms
 
-L'onglet espaces de noms affiche la liste de tous les espaces de noms de votre environnement Kubernetes, indiquant l'utilisation du CPU et de la mémoire, ainsi que le nombre de workloads dans chaque espace de noms. Cliquez sur les liens Nom pour explorer chaque espace de noms.
+L'onglet Espaces de noms affiche une liste de tous les espaces de noms de votre environnement Kubernetes, indiquant l'utilisation du processeur et de la mémoire ainsi qu'un nombre de charges de travail dans chaque espace de noms.  Cliquez sur les liens Nom pour explorer chaque espace de noms.
 
-image:Kubernetes_Namespace_tab_new.png["Liste des espaces de noms actuels de votre environnement K8s"]
+image:Kubernetes_Namespace_tab_new.png["liste des espaces de noms actuels dans votre environnement K8s"]
 
 
 
 == Charges de travail
 
-De la même manière, l'onglet charges de travail affiche la liste des charges de travail de chaque namespace, avec pour nouveau l'affichage de l'utilisation du processeur et de la mémoire. Un clic sur les liens de l'espace de noms permet d'accéder à chacun d'eux
+De même, l’onglet Charges de travail affiche une liste des charges de travail dans chaque espace de noms, indiquant à nouveau l’utilisation du processeur et de la mémoire.  En cliquant sur les liens de l'espace de noms, vous accédez à chacun d'eux.
 
-image:Kubernetes_Workloads_tab_new.png["Liste des espaces de noms actuels de votre environnement K8s"]
+image:Kubernetes_Workloads_tab_new.png["liste des espaces de noms actuels dans votre environnement K8s"]
 
 
 
-== Le groupe d'instruments « roue »
+== La « roue » du cluster
 
-image:Kubernetes_Wheel_Section.png["Roue du groupe d'instruments"]
+image:Kubernetes_Wheel_Section.png["Roue de cluster"]
 
-La section roue du cluster fournit un aperçu de l'état des nœuds et des pods pour en savoir plus. Si votre cluster contient plus de nœuds que ce qui peut être affiché dans cette zone de la page, vous pourrez tourner la roue à l'aide des boutons disponibles.
+La section « Roue » du cluster fournit un aperçu de l'état des nœuds et des pods, que vous pouvez explorer pour obtenir plus d'informations.  Si votre cluster contient plus de nœuds que ce qui peut être affiché dans cette zone de la page, vous pourrez tourner la roue à l'aide des boutons disponibles.
 
-Les pods ou les nœuds d'alerte s'affichent en rouge. Les zones « Avertissement » s'affichent en orange. Les modules qui ne sont pas programmés (c'est-à-dire non connectés) s'affichent dans le coin inférieur du bloc d'instruments.
+Les pods ou nœuds d'alerte sont affichés en rouge.  Les zones « Avertissement » sont affichées en orange.  Les pods non planifiés (c'est-à-dire non attachés) s'afficheront dans le coin inférieur de la « Roue » du cluster.
 
-Le fait de passer la souris sur un pod (cercle) ou un nœud (barre) permet d'étendre la vue du nœud.
+Survoler un pod (cercle) ou un nœud (barre) étendra la vue du nœud.
 
 image:Kubernetes_Node_Expand.png["Nœud étendu"]
 
-Cliquez sur le pod ou le nœud dans cette vue pour effectuer un zoom avant sur la vue développée du nœud.
+Cliquer sur le pod ou le nœud dans cette vue effectuera un zoom avant sur la vue du nœud développée.
 
-image:Kubernetes_Critical_Pod_Zoom.png["Vue de nœud développée"]
+image:Kubernetes_Critical_Pod_Zoom.png["Vue étendue du nœud"]
 
-À partir de là, vous pouvez passer le curseur sur un élément pour afficher des détails sur cet élément. Par exemple, passez la souris sur le pod critique dans cet exemple pour afficher des détails sur ce pod.
+À partir de là, vous pouvez survoler un élément pour afficher les détails de cet élément.  Par exemple, survoler le pod critique dans cet exemple affiche les détails sur ce pod.
 
-image:Kubernetes_Pod_Red.png["Informations sur le pod critique"]
+image:Kubernetes_Pod_Red.png["Informations critiques sur les pods"]
 
-Vous pouvez afficher les informations relatives au système de fichiers, à la mémoire et à la CPU en passant le pointeur de la souris sur les éléments du nœud.
+Vous pouvez afficher les informations sur le système de fichiers, la mémoire et le processeur en survolant les éléments du nœud.
 
 image:Kubernetes_Capacity_Info.png["Capacité et allocation des nœuds"]
 
@@ -76,4 +76,4 @@ image:Kubernetes_Capacity_Info.png["Capacité et allocation des nœuds"]
 
 == Une note sur les jauges
 
-Les jauges mémoire et CPU affichent trois couleurs, puisqu'elles indiquent _used_ par rapport à _allocatable Capacity_ et _total Capacity_.
+Les jauges de mémoire et de processeur affichent trois couleurs, car elles indiquent la capacité utilisée par rapport à la capacité allouable et à la capacité totale.

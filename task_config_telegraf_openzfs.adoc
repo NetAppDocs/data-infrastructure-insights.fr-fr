@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_openzfs.html 
 keywords: telegraf, installation, install, openzfs 
-summary: Configuration OpenZFS Data Collector 
+summary: Configuration du collecteur de données OpenZFS 
 ---
 = Collecteur de données OpenZFS
 :hardbreaks:
@@ -10,31 +10,31 @@ summary: Configuration OpenZFS Data Collector
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour collecter des mesures à partir d'OpenZFS.
+Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir d'OpenZFS.
 
 
 
 == Installation
 
-. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez OpenZFS.
+. Depuis *Observabilité > Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez OpenZFS.
 +
-Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+Sélectionnez le système d’exploitation ou la plate-forme sur laquelle l’agent Telegraf est installé.
 
-. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer les link:task_config_telegraf_agent.html["Installation de l'agent"]instructions.
-. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
-. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
+. Si vous n'avez pas encore installé d'agent pour la collecte, ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer lelink:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d’accès de l’agent à utiliser avec ce collecteur de données.  Vous pouvez ajouter une nouvelle clé d'accès d'agent en cliquant sur le bouton *+ Clé d'accès d'agent*.  Meilleure pratique : utilisez une clé d’accès d’agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple par système d’exploitation/plateforme.
+. Suivez les étapes de configuration pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.
 
 
 image:OpenZFSDCConfigLinux.png["Configuration Linux OpenZFS"]
 
 
 
-== Configuration
+== Installation
 
-Vous trouverez des informations supplémentaires dans le link:http://open-zfs.org/wiki/Documentation["Documentation OpenZFS"].
+Des informations complémentaires peuvent être trouvées dans lelink:http://open-zfs.org/wiki/Documentation["Documentation OpenZFS"] .
 
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur la link:concept_requesting_support.html["Assistance"] page.
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page.

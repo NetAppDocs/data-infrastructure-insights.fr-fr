@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vmax_powermax.html 
 keywords: data collector, EMC, DELL, vmax, powermax 
-summary: Configuration du collecteur de données Dell EMC VMAX et de la famille de périphériques PowerMax. 
+summary: 'Configuration du collecteur de données de la famille d"appareils Dell EMC VMAX et PowerMax.' 
 ---
-= Dell EMC VMAX et PowerMax Family of Devices Data Collector
+= Collecteur de données de la famille d'appareils Dell EMC VMAX et PowerMax
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights découvre les baies de stockage EMC VMAX et PowerMax à l'aide des commandes symcli Solutions Enabler associées à un serveur Solutions Enabler existant dans votre environnement. Le serveur Solutions Enabler existant est connecté à la baie de stockage VMAX/PowerMax par l'accès aux volumes du contrôleur d'accès.
+Data Infrastructure Insights découvre les baies de stockage EMC VMAX et PowerMax à l'aide des commandes symcli Solutions Enabler en conjonction avec un serveur Solutions Enabler existant dans votre environnement.  Le serveur Solutions Enabler existant dispose d'une connectivité à la baie de stockage VMAX/PowerMax via l'accès aux volumes de contrôle d'accès.
 
 
 
-== De formation
+== Exigences
 
-Avant de configurer ce collecteur de données, vous devez vous assurer que Data Infrastructure Insights dispose d'une connectivité TCP au port 2707 sur le serveur Solutions Enabler existant. Data Infrastructure Insights détecte toutes les baies Symmetrix qui sont « locales » sur ce serveur, comme indiqué dans la sortie « liste symcfg » de ce serveur.
+Avant de configurer ce collecteur de données, vous devez vous assurer que Data Infrastructure Insights dispose d'une connectivité TCP au port 2707 sur le serveur Solutions Enabler existant.  Data Infrastructure Insights découvre tous les tableaux Symmetrix qui sont « locaux » sur ce serveur, comme indiqué dans la sortie « symcfg list » de ce serveur.
 
-* L'outil EMC Solutions Enabler (CLI) avec l'application SMI-S Provider doit être installé sur le serveur de l'unité d'acquisition et la version doit correspondre ou être antérieure à la version exécutée sur Solutions Enabler Server.
-* Un fichier {installdir}\EMC\SYMAPI\config\netcnfg correctement configuré est requis. Ce fichier définit les noms de service pour les serveurs Solutions Enabler, ainsi que la méthode d'accès (SECURE / NOSECURE /ANY).
-* Si vous avez besoin d'une latence en lecture/écriture au niveau du nœud de stockage, le SMI-S Provider doit communiquer avec une instance en cours d'exécution de l'application UNISPHERE pour VMAX.
-* Adresse IP du serveur Managing Solutions Enabler
-* Autorisations d'administrateur sur le serveur Solutions Enabler (se)
-* Nom d'utilisateur et mot de passe en lecture seule pour le logiciel se
-* L'application UNISPHERE for VMAX doit exécuter et collecter des statistiques pour les baies EMC VMAX et PowerMax sStorage gérées par l'installation SMI-S Provider
-* Validation de l'accès pour les performances : dans un navigateur Web de votre unité d'acquisition, accédez à _\https://<SMI-S Hostname ou IP>:5989/ecomconfig_ où « SMI-S Hostname or IP » est l'adresse IP ou le nom d'hôte de votre serveur SMI-S. Cette URL est destinée à un portail d'administration pour le service EMC SMI-S (ou « ECOM »). Vous recevrez une fenêtre contextuelle de connexion.
-* Les autorisations doivent être déclarées dans le fichier de configuration du démon du serveur Solutions Enabler, généralement trouvé ici : _/var/symapi/config/daemon_Users_
+* L'application EMC Solutions Enabler (CLI) avec fournisseur SMI-S doit être installée sur le serveur de l'unité d'acquisition et la version doit correspondre ou être antérieure à la version exécutée sur le serveur Solutions Enabler.
+* Un fichier {installdir}\EMC\SYMAPI\config\netcnfg correctement configuré est requis.  Ce fichier définit les noms de service pour les serveurs Solutions Enabler, ainsi que la méthode d'accès (SECURE / NOSECURE / ANY).
+* Si vous avez besoin d'une latence de lecture/écriture au niveau du nœud de stockage, le fournisseur SMI-S doit communiquer avec une instance en cours d'exécution de l'application UNISPHERE pour VMAX.
+* Adresse IP du serveur de gestion Solutions Enabler
+* Autorisations d'administrateur sur le serveur Solutions Enabler (SE)
+* Nom d'utilisateur et mot de passe en lecture seule pour le logiciel SE
+* L'application UNISPHERE pour VMAX doit être en cours d'exécution et collecter des statistiques pour les baies de stockage EMC VMAX et PowerMax gérées par l'installation du fournisseur SMI-S
+* Validation d'accès pour les performances : Dans un navigateur Web sur votre unité d'acquisition, accédez à _\https://<Nom d'hôte ou IP SMI-S>:5989/ecomconfig_ où « Nom d'hôte ou IP SMI-S » est l'adresse IP ou le nom d'hôte de votre serveur SMI-S.  Cette URL est destinée à un portail administratif pour le service EMC SMI-S (alias « ECOM ») - vous recevrez une fenêtre contextuelle de connexion.
+* Les autorisations doivent être déclarées dans le fichier de configuration du démon du serveur Solutions Enabler, généralement trouvé ici : _/var/symapi/config/daemon_users_
 +
 Voici un exemple de fichier avec les autorisations cisys appropriées.
 
@@ -49,11 +49,11 @@ cisys storapid <all>
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir de la source de données EMC VMAX/PowerMax. Pour chaque type d'actif acquis, la terminologie la plus utilisée pour ce bien est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir de la source de données EMC VMAX/PowerMax.  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
 | Disque | Disque 
@@ -62,37 +62,37 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes à
 | Groupe de disques | Groupe de disques 
 
 
-| Stockage | Stockage de baies 
+| Stockage | Stockage en réseau 
 
 
 | Directeur | Nœud de stockage 
 
 
-| Pool de périphériques, pool de ressources de stockage (SRP) | Pool de stockage 
+| Pool de périphériques, pool de ressources de stockage (SRP) | Piscine de stockage 
 
 
-| Dispositif TDEV | Volumétrie 
+| Appareil TDev | Volume 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
 == Configuration
 
-*Remarque :* si l'authentification utilisateur SMI-S n'est pas activée, les valeurs par défaut du collecteur de données Data Infrastructure Insights sont ignorées.
+*Remarque :* si l’authentification utilisateur SMI-S n’est pas activée, les valeurs par défaut du collecteur de données Data Infrastructure Insights sont ignorées.
 
 [cols="2*"]
 |===
 | Champ | Description 
 
 
-| Nom du service | Nom de service comme spécifié dans le fichier _netcnfg_ 
+| Nom du service | Nom du service tel que spécifié dans le fichier _netcnfg_ 
 
 
-| Chemin complet vers l'interface de ligne de commande | Chemin d'accès complet au dossier contenant l'interface de ligne de commande Symmetrix 
+| Chemin d'accès complet vers la CLI | Chemin d'accès complet au dossier contenant la CLI Symmetrix 
 
 
-| Adresse IP de l'hôte SMI-S | Adresse IP de l'hôte SMI-S. 
+| Adresse IP de l'hôte SMI-S | Adresse IP de l'hôte SMI-S 
 |===
 
 
@@ -103,73 +103,73 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 40 minutes. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 40 minutes. 
 
 
-| Choisissez 'exclure' ou 'inclure' pour spécifier une liste | Indiquez si vous souhaitez inclure ou exclure la liste des matrices ci-dessous lors de la collecte des données. 
+| Choisissez « Exclure » ou « Inclure » pour spécifier une liste | Indiquez si vous souhaitez inclure ou exclure la liste de tableaux ci-dessous lors de la collecte de données. 
 
 
-| Liste des périphériques de filtre d'inventaire | Liste des ID de périphériques à inclure ou exclure, séparés par des virgules 
+| Liste des périphériques de filtrage d'inventaire | Liste séparée par des virgules des identifiants d'appareils à inclure ou à exclure 
 
 
-| Mise en cache de la connexion | Choisissez une méthode de mise en cache de connexion : * LOCAL signifie que le service d'acquisition Cloud Insights s'exécute sur le serveur Solutions Enabler, qui bénéficie d'une connectivité Fibre Channel aux baies Symmetrix que vous recherchez à détecter et a accès aux volumes gatekeeper. Ceci peut être observé dans certaines configurations RAU (Remote acquisition Unit). * REMOTE_CACHED est la valeur par défaut et devrait être utilisé dans la plupart des cas. Les paramètres de fichier NETCNFG sont utilisés pour se connecter à l'aide d'IP au serveur Solutions Enabler, qui doit disposer d'une connectivité Fibre Channel aux baies Symmetrix que vous recherchez et qui a accès aux volumes Gatekeeper. * Si les options REMOTE_CACHED font échouer les commandes CLI, utilisez l'option REMOTE. N'oubliez pas qu'il ralentira le processus d'acquisition (voire quelques heures, voire plusieurs jours, dans des cas extrêmes). Les paramètres de fichier NETCNFG sont toujours utilisés pour une connexion IP au serveur Solutions Enabler qui dispose d'une connectivité Fibre Channel aux baies Symmetrix découvertes. *Remarque :* ce paramètre ne modifie pas le comportement de Data Infrastructure Insights par rapport aux tableaux répertoriés comme DISTANTS par la sortie "symcfg list". Data Infrastructure Insights collecte les données uniquement sur les terminaux affichés comme LOCAUX par cette commande. 
+| Mise en cache des connexions | Choisissez la méthode de mise en cache de connexion : * LOCAL signifie que le service Cloud Insights Acquisition s'exécute sur le serveur Solutions Enabler, qui dispose d'une connectivité Fibre Channel aux baies Symmetrix que vous cherchez à découvrir et a accès aux volumes du contrôleur d'accès.  Cela peut être observé dans certaines configurations d'unité d'acquisition à distance (RAU).  * REMOTE_CACHED est la valeur par défaut et doit être utilisé dans la plupart des cas.  Cela utilise les paramètres du fichier NETCNFG pour se connecter via IP au serveur Solutions Enabler, qui doit disposer d'une connectivité Fibre Channel aux baies Symmetrix que vous cherchez à découvrir et a accès aux volumes Gatekeeper.  * Dans le cas où les options REMOTE_CACHED font échouer les commandes CLI, utilisez l'option REMOTE.  Gardez à l’esprit que cela ralentira le processus d’acquisition (éventuellement jusqu’à des heures, voire des jours, dans les cas extrêmes).  Les paramètres du fichier NETCNFG sont toujours utilisés pour une connexion IP au serveur Solutions Enabler qui dispose d'une connectivité Fibre Channel aux baies Symmetrix en cours de découverte.  *Remarque :* ce paramètre ne modifie pas le comportement de Data Infrastructure Insights par rapport aux tableaux répertoriés comme À DISTANCE par la sortie « symcfg list ».  Data Infrastructure Insights collecte les données uniquement sur les périphériques affichés comme LOCAUX par cette commande. 
 
 
-| Protocole SMI-S | Protocole utilisé pour la connexion au fournisseur SMI-S. Affiche également le port par défaut utilisé. 
+| Protocole SMI-S | Protocole utilisé pour se connecter au fournisseur SMI-S.  Affiche également le port par défaut utilisé. 
 
 
-| Remplacer le port SMIS | Si ce champ est vide, utilisez le port par défaut dans le champ Type de connexion, sinon entrez le port de connexion à utiliser 
+| Remplacer le port SMIS | Si vide, utilisez le port par défaut dans le champ Type de connexion, sinon entrez le port de connexion à utiliser 
 
 
-| Nom d'utilisateur SMI-S. | Nom d'utilisateur pour l'hôte SMI-S Provider 
+| Nom d'utilisateur SMI-S | Nom d'utilisateur pour l'hôte du fournisseur SMI-S 
 
 
-| Mot de passe SMI-S. | Nom d'utilisateur pour l'hôte SMI-S Provider 
+| Mot de passe SMI-S | Nom d'utilisateur pour l'hôte du fournisseur SMI-S 
 
 
-| Intervalle d'interrogation des performances (en secondes) | Intervalle entre les sondages de performance (par défaut 1000 secondes) 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performances (par défaut 1 000 secondes) 
 
 
-| Hoose 'exclure' ou 'inclure' pour spécifier une liste | Indiquez si vous souhaitez inclure ou exclure la liste des matrices ci-dessous lors de la collecte des données de performances 
+| choisissez « Exclure » ou « Inclure » pour spécifier une liste | Indiquez si vous souhaitez inclure ou exclure la liste de tableaux ci-dessous lors de la collecte des données de performances 
 
 
-| Liste des périphériques de filtre de performances | Liste des ID de périphériques à inclure ou exclure, séparés par des virgules 
+| Liste des périphériques de filtrage des performances | Liste séparée par des virgules des identifiants d'appareils à inclure ou à exclure 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| Erreur : la fonction demandée n'est pas actuellement sous licence | Installez la licence du serveur SYMAPI. 
+| Erreur : la fonctionnalité demandée n'est actuellement pas sous licence | Installez la licence du serveur SYMAPI. 
 
 
-| Erreur : aucun périphérique n'a été trouvé | Assurez-vous que les périphériques Symmetrix sont configurés pour être gérés par le serveur Solutions Enabler : - exécutez la liste symcfg -v pour afficher la liste des périphériques Symmetrix configurés. 
+| Erreur : aucun appareil n'a été trouvé | Assurez-vous que les périphériques Symmetrix sont configurés pour être gérés par le serveur Solutions Enabler : - Exécutez symcfg list -v pour voir la liste des périphériques Symmetrix configurés. 
 
 
-| Erreur : un service réseau demandé est introuvable dans le fichier de service | Assurez-vous que le nom du service Solutions Enabler est défini dans le fichier netcnfg pour Solutions Enabler. Ce fichier se trouve généralement sous SYMAPI\config\ dans l'installation du client Solutions Enabler. 
+| Erreur : aucun service réseau demandé n'a été trouvé dans le fichier de service | Assurez-vous que le nom du service Solutions Enabler est défini dans le fichier netcnfg pour Solutions Enabler.  Ce fichier se trouve généralement sous SYMAPI\config\ dans l'installation du client Solutions Enabler. 
 
 
-| Erreur : l'établissement de liaisons client/serveur distant a échoué | Consultez les fichiers storsrvd.log* les plus récents sur l'hôte Solutions Enabler que nous essayons de découvrir. 
+| Erreur : la liaison client/serveur distant a échoué | Vérifiez les fichiers storsrvd.log* les plus récents sur l’hôte Solutions Enabler que nous essayons de découvrir. 
 
 
-| Erreur : nom commun dans le certificat client non valide | Modifiez le fichier _hosts_ sur le serveur Solutions Enabler afin que le nom d'hôte de l'unité d'acquisition soit résolu à l'adresse IP telle qu'indiquée dans le fichier storsrvd.log sur le serveur Solutions Enabler. 
+| Erreur : le nom commun dans le certificat client n'est pas valide | Modifiez le fichier _hosts_ sur le serveur Solutions Enabler afin que le nom d'hôte de l'unité d'acquisition corresponde à l'adresse IP telle qu'indiquée dans le fichier storsrvd.log sur le serveur Solutions Enabler. 
 
 
-| Erreur : la fonction n'a pas pu obtenir de mémoire | Assurez-vous qu'il y a suffisamment de mémoire disponible dans le système pour exécuter Solutions Enabler 
+| Erreur : la fonction n’a pas pu obtenir de mémoire | Assurez-vous qu'il y a suffisamment de mémoire libre disponible dans le système pour exécuter Solutions Enabler 
 
 
-| Erreur : Solutions Enabler n'a pas pu traiter toutes les données requises. | Étudier l'état de santé et le profil de charge de Solutions Enabler 
+| Erreur : Solutions Enabler n’a pas pu fournir toutes les données requises. | Enquêter sur l'état de santé et le profil de charge de Solutions Enabler 
 
 
-| Erreur : • la commande CLI "symcfg list -tdev" peut renvoyer des données incorrectes lorsqu'elle est recueillie avec Solutions Enabler 7.x à partir d'un serveur Solutions Enabler 8.x. • La commande "symcfg list -srp" CLI peut renvoyer des données incorrectes lorsqu'elle est recueillie avec Solutions Enabler 8.1.0 ou une version antérieure à partir d'un serveur Solutions Enabler 8.3 ou une version ultérieure. | Vérifiez que vous utilisez la même version principale de Solutions Enabler 
+| Erreur : • La commande CLI « symcfg list -tdev » peut renvoyer des données incorrectes lorsqu'elle est collectée avec Solutions Enabler 7.x à partir d'un serveur Solutions Enabler 8.x.  • La commande CLI « symcfg list -srp » peut renvoyer des données incorrectes lorsqu'elle est collectée avec Solutions Enabler 8.1.0 ou une version antérieure à partir d'un serveur Solutions Enabler 8.3 ou une version ultérieure. | Assurez-vous d'utiliser la même version majeure de Solutions Enabler 
 
 
-| J'ai constaté des erreurs de collecte de données avec le message "code inconnu" | Ce message peut s'afficher si les autorisations ne sont pas déclarées dans le fichier de configuration du démon du serveur Solutions Enabler (voir <<de formation,De formation>>ci-dessus). Cela suppose que la version de votre client se correspond à la version de votre serveur se. Cette erreur peut également se produire si l'utilisateur _cisys_ (qui exécute les commandes de Solutions Enabler) n'a pas été configuré avec les autorisations de démon nécessaires dans le fichier de configuration /var/symapi/config/Daemon_Users. Pour résoudre ce problème, éditez le fichier /var/symapi/config/daemon_users et assurez-vous que l'utilisateur cisys possède l'autorisation <all> spécifiée pour le démon storapid. Exemple : 14:11:25 # queue /var/symapi/config/daemon_users ... cisys storapid <all> 
+| Je vois des erreurs de collecte de données avec le message : « code inconnu » | Vous pouvez voir ce message si les autorisations ne sont pas déclarées dans le fichier de configuration du démon du serveur Solutions Enabler (voir le<<exigences,Exigences>> au-dessus de.)  Cela suppose que la version de votre client SE correspond à la version de votre serveur SE.  Cette erreur peut également se produire si l'utilisateur _cisys_ (qui exécute les commandes Solutions Enabler) n'a pas été configuré avec les autorisations de démon nécessaires dans le fichier de configuration /var/symapi/config/daemon_users.  Pour résoudre ce problème, modifiez le fichier /var/symapi/config/daemon_users et assurez-vous que l'utilisateur cisys dispose de l'autorisation <all> spécifiée pour le démon storapid.  Exemple : 14:11:25 # tail /var/symapi/config/daemon_users ... cisys storapid <all> 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

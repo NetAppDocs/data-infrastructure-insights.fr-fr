@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_create_application.html 
-summary: Vous définissez les applications que vous appliquez ensuite aux ressources de votre locataire, selon les besoins. 
+summary: Vous définissez des applications que vous appliquez ensuite aux actifs de votre locataire selon vos besoins. 
 keywords: application, create application, 
 ---
 = Création d'applications
@@ -10,17 +10,17 @@ keywords: application, create application,
 
 
 [role="lead"]
-Pour suivre les données associées à des applications spécifiques s'exécutant sur votre locataire, vous pouvez définir les applications dans Data Infrastructure Insights.
+Pour suivre les données associées à des applications spécifiques exécutées sur votre locataire, vous pouvez définir les applications dans Data Infrastructure Insights.
 
-.Description de la tâche
-Les informations sur l'infrastructure de données vous permettent de suivre les données des ressources associées aux applications, par exemple pour l'utilisation ou le reporting des coûts.
+.À propos de cette tâche
+Data Infrastructure Insights vous permet de suivre les données des actifs associés aux applications pour des éléments tels que l'utilisation ou les rapports de coûts.
 
 .Étapes
-. Dans le menu informations sur l'infrastructure de données, cliquez sur *observabilité > enrichir > applications*. Sélectionnez
+. Dans le menu Data Infrastructure Insights , cliquez sur *Observabilité > Enrichir > Applications*. Sélectionner
 +
 La boîte de dialogue Ajouter une application s'affiche.
 
-. Saisissez un nom unique pour l'application.
+. Entrez un nom unique pour l'application.
 . Sélectionnez une priorité pour l'application.
 . Cliquez sur *Enregistrer*.
 
@@ -29,22 +29,22 @@ Après avoir défini une application, elle peut être affectée à des actifs.
 
 
 
-== Affectation d'applications aux ressources
+== Affectation d'applications à des actifs
 
-Cette procédure attribue l'application à un hôte comme exemple. Vous pouvez affecter un hôte, une machine virtuelle, un volume ou des volumes internes à une application.
+Cette procédure attribue l’application à un hôte à titre d’exemple.  Vous pouvez attribuer un hôte, une machine virtuelle, un volume ou des volumes internes à une application.
 
 .Étapes
-. Recherchez la ressource à attribuer à l'application :
-. Cliquez sur *Queries > +New Query* et recherchez Host.
-. Cochez la case à gauche de l'hôte que vous souhaitez associer à l'application.
-. Cliquez sur *actions groupées > Ajouter une application*.
-. Sélectionnez l'application à laquelle vous affectez la ressource.
+. Localisez l'actif auquel vous souhaitez affecter l'application :
+. Cliquez sur *Requêtes > +Nouvelle requête* et recherchez Hôte.
+. Cliquez sur la case à cocher à gauche de l’hôte que vous souhaitez associer à l’application.
+. Cliquez sur *Actions en masse > Ajouter une application*.
+. Sélectionnez l’application à laquelle vous attribuez l’actif.
 
 
-Toutes les nouvelles applications que vous attribuez remplacent toutes les applications de la ressource dérivées d'une autre ressource. Par exemple, les volumes héritent des applications des hôtes. Lorsque de nouvelles applications sont attribuées à un volume, la nouvelle application est prioritaire sur l'application dérivée.
+Toutes les nouvelles applications que vous attribuez remplacent toutes les applications de l’actif dérivées d’un autre actif.  Par exemple, les volumes héritent des applications des hôtes et lorsque de nouvelles applications sont attribuées à un volume, la nouvelle application a la priorité sur l'application dérivée.
 
 
-NOTE: Pour les environnements disposant d'un grand nombre de ressources associées, l'héritage des affectations d'applications peut prendre plusieurs minutes. Veuillez laisser plus de temps à l'héritage si vous disposez de nombreux biens connexes.
+NOTE: Pour les environnements comportant de grandes quantités d'actifs associés, l'héritage des affectations d'application à ces actifs peut prendre plusieurs minutes.  Veuillez prévoir plus de temps pour que l’héritage se produise si vous avez de nombreux biens liés.
 
-.Une fois que vous avez terminé
-Après avoir affecté l'hôte à l'application, vous pouvez affecter les ressources restantes à l'application. Pour accéder à la page d'accueil de l'application, cliquez sur *gérer > application* et sélectionnez l'application que vous avez créée.
+.Après avoir terminé
+Après avoir attribué l'hôte à l'application, vous pouvez attribuer les ressources restantes à l'application.  Pour accéder à la page de destination de l'application, cliquez sur *Gérer > Application* et sélectionnez l'application que vous avez créée.

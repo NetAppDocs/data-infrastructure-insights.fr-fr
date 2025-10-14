@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_log_explorer.html 
 keywords: logs, monitors, alerts, EMS, 
-summary: 'L"explorateur de journaux est un outil puissant pour rechercher des problèmes dans différents journaux système.' 
+summary: 'L"explorateur de journaux est un outil puissant permettant d"enquêter sur les problèmes via différents journaux système.' 
 ---
 = Explorateur de journaux
 :hardbreaks:
@@ -10,78 +10,78 @@ summary: 'L"explorateur de journaux est un outil puissant pour rechercher des pr
 
 
 [role="lead"]
-Data Infrastructure Insights Log Explorer est un outil puissant d'interrogation des journaux système. En plus de vous aider dans les enquêtes, vous pouvez également enregistrer une requête de journal dans un moniteur afin de fournir des alertes lorsque ces déclencheurs de journal particuliers sont activés.
+Data Infrastructure Insights Log Explorer est un outil puissant permettant d'interroger les journaux système.  En plus d'aider aux enquêtes, vous pouvez également enregistrer une requête de journal dans un moniteur pour fournir des alertes lorsque ces déclencheurs de journal particuliers sont activés.
 
-Pour commencer à explorer les journaux, cliquez sur *requêtes de journal > +Nouvelle requête de journal*.
+Pour commencer à explorer les journaux, cliquez sur *Requêtes de journal > +Nouvelle requête de journal*.
 
 Sélectionnez un journal disponible dans la liste.
 
 image:LogExplorer_2022.png["Choisissez votre journal"]
 
 
-NOTE: Les types de journaux disponibles pour les requêtes peuvent varier en fonction de votre environnement. D'autres types de journaux peuvent être ajoutés au fil du temps.
+NOTE: Les types de journaux disponibles pour l'interrogation peuvent varier en fonction de votre environnement.  Des types de journaux supplémentaires peuvent être ajoutés au fil du temps.
 
-Vous pouvez définir des filtres pour affiner davantage les résultats de la requête. Par exemple, pour rechercher tous les messages de journal affichant une défaillance, définissez un filtre pour _messages_ contenant le mot "échec".
+Vous pouvez définir des filtres pour affiner davantage les résultats de la requête.  Par exemple, pour rechercher tous les messages de journal indiquant un échec, définissez un filtre pour _Messages_ contenant le mot « échec ».
 
 
-TIP: Vous pouvez commencer à saisir le texte souhaité dans le champ de filtre ; Data Infrastructure Insights vous invite à créer une recherche générique contenant la chaîne au fur et à mesure de la saisie.
+TIP: Vous pouvez commencer à saisir le texte souhaité dans le champ de filtre ; Data Infrastructure Insights vous invitera à créer une recherche générique contenant la chaîne au fur et à mesure de la saisie.
 
-Les résultats s'affichent dans un graphique indiquant le nombre d'instances de journal pour chaque période affichée. Sous le graphique se trouvent les entrées du journal temindividus. Le graphique et les entrées se réactualisent automatiquement en fonction de la plage horaire sélectionnée.
+Les résultats sont affichés dans un graphique indiquant le nombre d’instances de journal dans chaque période indiquée.  Sous le graphique se trouvent les entrées du journal elles-mêmes.  Le graphique et les entrées s'actualisent automatiquement en fonction de la plage horaire sélectionnée.
 
 image:LogExplorer_QueryForFailed.png["Exemple de requête montrant le filtre"]
 
 
 
-== Filtrage
+== Filtration
 
 
 
-=== Inclure / exclure
+=== Inclure / Exclure
 
-Lorsque vous filtrez les journaux, vous pouvez choisir d'inclure *les chaînes que vous tapez (c'est-à-dire "Filtrer vers") ou *les exclure*. Les chaînes exclues sont affichées dans le filtre terminé sous la forme « NOT <string> ».
+Lors du filtrage des journaux, vous pouvez choisir d'*inclure* (c'est-à-dire « Filtrer sur ») ou d'*exclure* les chaînes que vous saisissez.  Les chaînes exclues sont affichées dans le filtre complété comme « PAS <chaîne> ».
 
-image:Log_Advanced_Query_Filter_Exclude.png["Filtre du journal affichant l'option exclure"]
+image:Log_Advanced_Query_Filter_Exclude.png["Filtre de journal affichant l'option Exclure"]
 
-Filtres basés sur des caractères génériques ou des expressions (par exemple NON, OU « aucun », etc.) s'affiche en bleu foncé dans le champ du filtre. Les éléments que vous sélectionnez directement dans la liste s'affichent en bleu clair.
+Les filtres basés sur des caractères génériques ou des expressions (par exemple NOT, OR, « Aucun », etc.) s'affichent en bleu foncé dans le champ de filtre.  Les éléments que vous sélectionnez directement dans la liste sont affichés en bleu clair.
 
 
-NOTE: A tout moment, vous pouvez cliquer sur _Créer un moniteur de journal_ pour créer un nouveau moniteur basé sur le filtre actuel.
+NOTE: À tout moment, vous pouvez cliquer sur _Créer un moniteur de journal_ pour créer un nouveau moniteur basé sur le filtre actuel.
 
 
 
 === Filtrage avancé
 
-Lorsque vous filtrez des valeurs de texte ou de liste dans des requêtes ou des widgets de tableau de bord, lorsque vous commencez à taper, vous avez la possibilité de créer un *filtre générique* basé sur le texte en cours. Si vous sélectionnez cette option, tous les résultats correspondant à l'expression de caractère générique seront résélectionnés. Vous pouvez également créer des expressions à l'aide de NOT, AND, or ou, ou vous pouvez sélectionner l'option « aucun » pour filtrer les valeurs nulles.
+Lorsque vous filtrez des valeurs de texte ou de liste dans des requêtes ou des widgets de tableau de bord, lorsque vous commencez à saisir, vous avez la possibilité de créer un *filtre générique* basé sur le texte actuel.  La sélection de cette option renverra tous les résultats correspondant à l’expression générique.  Vous pouvez également créer des expressions en utilisant NOT, AND ou OR, ou vous pouvez sélectionner l'option « Aucun » pour filtrer les valeurs nulles.
 
 
-NOTE: Assurez-vous d'enregistrer votre requête tôt et souvent lorsque vous créez votre filtrage. Advanced Querying est une entrée de chaîne de "forme libre", et des erreurs d'analyse peuvent se produire au fur et à mesure que vous construisez.
+NOTE: Assurez-vous d’enregistrer votre requête tôt et souvent lorsque vous créez votre filtrage.  L'interrogation avancée est une entrée de chaîne « de forme libre » et des erreurs d'analyse peuvent se produire au fur et à mesure de la création.
 
-Jetez un coup d'œil à cette image d'écran affichant les résultats filtrés pour une requête avancée du journal _logs.kubernetes.event_. Il y a beaucoup de choses dans cette page, qui est expliquée ci-dessous l'image:
+Jetez un œil à cette image d’écran montrant les résultats filtrés pour une requête avancée du journal _logs.kubernetes.event_.  Il se passe beaucoup de choses sur cette page, ce qui est expliqué sous l'image :
 
-image:Log_Advanced_Query_ScreenExplained.png["L'écran requête avancée a été expliqué"]
+image:Log_Advanced_Query_ScreenExplained.png["L'écran de requête avancée expliqué"]
 
-. Cette chaîne de requête avancée filtre les éléments suivants :
+. Cette chaîne de requête avancée filtre les éléments suivants :
 +
-** Filtrer les entrées de journal avec un _motif_ qui inclut le mot "échec", mais pas n'importe quoi avec la raison spécifique de "FailedMount".
-** Incluez toutes les entrées qui incluent également un _metadata.namespace_ incluant le mot "monitoring", mais excluez les espaces de noms spécifiques de "cm-monitoring" ou "EG-monitoring".
+** Filtrez les entrées de journal avec une _raison_ qui inclut le mot « échec », mais rien avec la raison spécifique « FailedMount ».
+** Incluez toutes les entrées qui incluent également un _metadata.namespace_ incluant le mot « monitoring », mais excluez les espaces de noms spécifiques « cm-monitoring » ou « eg-monitoring ».
 +
-Notez que, dans le cas ci-dessus, étant donné que "cm-monitoring" et "EG-monitoring" contiennent un tiret ("-"), les chaînes doivent être incluses entre guillemets ou une erreur d'analyse sera affichée. Les chaînes qui n'incluent pas de tirets, d'espaces, etc. N'ont pas besoin d'être placées entre guillemets. En cas de doute, essayez de mettre la chaîne entre guillemets.
+Notez que dans le cas ci-dessus, puisque « cm-monitoring » et « eg-monitoring » contiennent tous deux un tiret (« - »), les chaînes doivent être incluses entre guillemets, sinon une erreur d'analyse sera affichée.  Les chaînes qui n'incluent pas de tirets, d'espaces, etc. n'ont pas besoin d'être placées entre guillemets.  En cas de doute, essayez de mettre la chaîne entre guillemets.
 
 
 
-. Les résultats du filtre actuel, y compris les valeurs « Filtrer par » ET le filtre de requête avancée, sont affichés dans la liste des résultats. La liste peut être triée par colonnes affichées. Pour afficher des colonnes supplémentaires, sélectionner l'icône « vitesse ».
-. Le graphique a été agrandi pour afficher uniquement les résultats du journal qui se sont produits dans une période donnée. La plage horaire affichée ici reflète le niveau de zoom actuel. Sélectionnez le bouton _Réinitialiser le zoom_ pour rétablir le niveau de zoom sur la plage de temps actuelle de Data Infrastructure Insights.
-. Les résultats du graphique ont été regroupés par le champ _source_. Le graphique présente les résultats dans chaque colonne, regroupés en couleurs. Passez le curseur sur une colonne du graphique pour afficher des détails sur les entrées spécifiques.
+. Les résultats du filtre actuel, y compris toutes les valeurs « Filtrer par » ET le filtre de requête avancée, sont affichés dans la liste des résultats.  La liste peut être triée par n'importe quelle colonne affichée.  Pour afficher des colonnes supplémentaires, sélectionnez l'icône « engrenage ».
+. Le graphique a été agrandi pour afficher uniquement les résultats du journal qui se sont produits dans une période donnée.  La plage horaire affichée ici reflète le niveau de zoom actuel.  Sélectionnez le bouton _Réinitialiser le zoom_ pour rétablir le niveau de zoom sur la plage horaire actuelle de Data Infrastructure Insights .
+. Les résultats du graphique ont été regroupés par le champ _source_.  Le graphique montre les résultats dans chaque colonne regroupés par couleurs.  Survoler une colonne du graphique affichera certains détails sur les entrées spécifiques.
 +
-image:Log_Advanced_Query_Group_Detail.png["Détails du survol groupés"]
+image:Log_Advanced_Query_Group_Detail.png["Détails de survol groupés"]
 
 
 
 
 
-==== Raffinage des filtres
+==== Filtres de raffinage
 
-Vous pouvez utiliser les éléments suivants pour affiner votre filtre :
+Vous pouvez utiliser les éléments suivants pour affiner votre filtre :
 
 |===
 
@@ -89,58 +89,58 @@ Vous pouvez utiliser les éléments suivants pour affiner votre filtre :
 | Filtre | Ce qu'il fait 
 
 
-| * (Astérisque) | permet de rechercher tout 
+| * (Astérisque) | vous permet de rechercher tout ce que vous voulez 
 
 
-| ? (point d'interrogation) | permet de rechercher un nombre spécifique de caractères 
+| ? (point d'interrogation) | vous permet de rechercher un nombre spécifique de caractères 
 
 
 | OU | vous permet de spécifier plusieurs entités 
 
 
-| PAS | permet d'exclure du texte des résultats de la recherche 
+| PAS | vous permet d'exclure du texte des résultats de recherche 
 
 
-| _Aucun_ | Recherche les valeurs NULL dans tous les champs 
+| _Aucun_ | recherche les valeurs NULL dans tous les champs 
 
 
-| Pas * | Recherche les valeurs NULL dans les champs _text-only_ 
+| Pas * | recherche les valeurs NULL dans les champs _texte uniquement_ 
 |===
-Si vous placez une chaîne de filtre entre deux guillemets, Insight traite tout entre le premier et le dernier devis comme une correspondance exacte. Tous les caractères spéciaux ou opérateurs situés dans les guillemets seront traités comme des littéraux. Par exemple, le filtrage pour "*" renvoie des résultats qui sont un astérisque littéral ; l'astérisque ne sera pas traité comme un caractère générique dans ce cas. Les opérateurs OU ET NON sont également traités comme des chaînes littérales lorsqu'ils sont entourés de guillemets doubles.
+Si vous placez une chaîne de filtre entre guillemets doubles, Insight traite tout ce qui se trouve entre le premier et le dernier guillemet comme une correspondance exacte.  Tous les caractères spéciaux ou opérateurs à l’intérieur des guillemets seront traités comme des littéraux.  Par exemple, le filtrage par « * » renverra des résultats qui sont un astérisque littéral ; l'astérisque ne sera pas traité comme un caractère générique dans ce cas.  Les opérateurs OR et NOT seront également traités comme des chaînes littérales lorsqu'ils sont placés entre guillemets.
 
-Vous pouvez combiner un filtre simple avec un filtre de requête avancé ; le filtre résultant est un « ET » des deux.
+Vous pouvez combiner un filtre simple avec un filtre de requête avancé ; le filtre résultant est un « ET » des deux.
 
 
 
 === La légende du graphique
 
-La _Légende_ sous le tableau a aussi quelques surprises. Pour chaque résultat (basé sur le filtre actuel) affiché dans la légende, vous avez la possibilité d'afficher uniquement les résultats pour cette ligne (Ajouter un filtre) ou d'afficher les résultats AUTRES QUE pour cette ligne (Ajouter un filtre d'exclusion). Le graphique et la liste des entrées du journal sont mis à jour pour afficher les résultats en fonction de votre sélection. Pour supprimer ce filtre, ouvrez de nouveau la légende et sélectionnez [X] pour effacer le filtre de légende.
+La _Légende_ sous le graphique réserve également quelques surprises.  Pour chaque résultat (basé sur le filtre actuel) affiché dans la légende, vous avez la possibilité d'afficher uniquement les résultats de cette ligne (Ajouter un filtre) ou d'afficher tous les résultats NON pour cette ligne (Ajouter un filtre d'exclusion).  Le graphique et la liste des entrées de journal sont mis à jour pour afficher les résultats en fonction de votre sélection.  Pour supprimer ce filtrage, ouvrez à nouveau la légende et sélectionnez le [X] pour effacer le filtre basé sur la légende.
 
-image:Log_Advanced_Query_Legend.png["Recherche avancée Legen montrant \"Ajouter un filtre\" pour le premier résultat"]
+image:Log_Advanced_Query_Legend.png["Requête avancée Légen affichant « Ajouter un filtre » pour le premier résultat"]
 
 
 
 == Détails du journal
 
-Si vous cliquez n'importe où dans une entrée de journal de la liste, un volet de détails s'ouvre pour cette entrée. Ici, vous pouvez explorer d'autres informations sur cet événement.
+Cliquer n’importe où dans une entrée de journal dans la liste ouvrira un volet de détails pour cette entrée.  Ici, vous pouvez explorer plus d'informations sur l'événement.
 
-Cliquez sur « Ajouter un filtre » pour ajouter le champ sélectionné au filtre actuel. La liste des entrées de journal sera mise à jour en fonction du nouveau filtre.
+Cliquez sur « Ajouter un filtre » pour ajouter le champ sélectionné au filtre actuel.  La liste des entrées du journal sera mise à jour en fonction du nouveau filtre.
 
-Notez que certains champs ne peuvent pas être ajoutés en tant que filtres ; dans ce cas, l'icône _Ajouter un filtre_ n'est pas disponible.
+Notez que certains champs ne peuvent pas être ajoutés en tant que filtres ; dans ces cas, l'icône _Ajouter un filtre_ n'est pas disponible.
 
-image:LogExplorer_DetailPane.png["Volet détail de l'entrée de journal"]
+image:LogExplorer_DetailPane.png["Volet de détails des entrées de journal"]
 
 
 
 == Dépannage
 
-Vous trouverez ici des suggestions de dépannage des problèmes liés aux requêtes de journal.
+Vous trouverez ici des suggestions pour résoudre les problèmes liés aux requêtes de journal.
 
 |===
 
 
-| *Problème:* | *Essayez ceci:* 
+| *Problème:* | *Essayez ceci :* 
 
 
-| Je ne vois pas les messages "debug" dans ma requête de journal | La messagerie du journal de débogage n'est pas collectée. Pour capturer les messages que vous souhaitez, définissez la gravité du message en question sur _informationnel, erreur, alerte, urgence,_ ou _avis_. 
+| Je ne vois pas de messages « debug » dans ma requête de journal | Les messages du journal de débogage ne sont pas collectés.  Pour capturer les messages souhaités, modifiez le niveau de gravité du message concerné en _informationnel, erreur, alerte, urgence_ ou _avis_. 
 |===

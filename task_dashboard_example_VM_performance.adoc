@@ -1,115 +1,115 @@
 ---
 sidebar: sidebar 
 permalink: task_dashboard_example_VM_performance.html 
-summary: Exemple de tableau de bord soulignant les performances des machines virtuelles. 
+summary: 'Exemple de tableau de bord mettant en évidence les performances d"une machine virtuelle.' 
 keywords: dashboard, widget, custom, example, virtual machine, vm, performance 
 ---
-= Exemple de tableau de bord : performances des ordinateurs virtuels
+= Exemple de tableau de bord : performances d'une machine virtuelle
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Les opérations IT sont confrontées à de nombreux défis. Les administrateurs doivent en faire plus avec moins, et une visibilité complète sur vos data centers dynamiques est primordiale. Dans cet exemple, nous allons vous montrer comment créer un tableau de bord avec des widgets qui vous fournissent des informations opérationnelles sur les performances des machines virtuelles de votre locataire. En suivant cet exemple et en créant des widgets pour cibler vos propres besoins spécifiques, vous pouvez exemple visualiser les performances de stockage back-end par rapport aux performances des machines virtuelles front-end, ou afficher la latence des machines virtuelles par rapport à la demande d'E/S.
+Les opérations informatiques sont aujourd’hui confrontées à de nombreux défis.  On demande aux administrateurs de faire plus avec moins, et avoir une visibilité complète sur vos centres de données dynamiques est indispensable.  Dans cet exemple, nous allons vous montrer comment créer un tableau de bord avec des widgets qui vous donnent des informations opérationnelles sur les performances de la machine virtuelle (VM) sur votre locataire.  En suivant cet exemple et en créant des widgets pour cibler vos besoins spécifiques, vous pouvez effectuer des opérations telles que la visualisation des performances de stockage back-end par rapport aux performances de la machine virtuelle front-end, ou l'affichage de la latence de la machine virtuelle par rapport à la demande d'E/S.
 
-.Description de la tâche
-Dans cette section, nous allons créer un tableau de bord des performances des ordinateurs virtuels comprenant les éléments suivants :
+.À propos de cette tâche
+Ici, nous allons créer un tableau de bord des performances de la machine virtuelle contenant les éléments suivants :
 
-* Un tableau répertoriant les noms de VM et les données de performances
-* Tableau comparant la latence du serveur virtuel à la latence du stockage
-* Un graphique illustrant le nombre total d'IOPS en lecture, écriture et lecture pour les machines virtuelles
-* Un graphique illustrant le débit maximal pour vos machines virtuelles
+* un tableau répertoriant les noms des machines virtuelles et les données de performances
+* un graphique comparant la latence des machines virtuelles à la latence du stockage
+* un graphique montrant les lectures, les écritures et le total des IOPS pour les machines virtuelles
+* un graphique montrant le débit maximal de vos machines virtuelles
 
 
-Ce n'est qu'un exemple de base. Vous pouvez personnaliser votre tableau de bord pour mettre en évidence et comparer les données de performances de votre choix, afin de cibler vos propres meilleures pratiques opérationnelles.
+Ceci n'est qu'un exemple de base.  Vous pouvez personnaliser votre tableau de bord pour mettre en évidence et comparer toutes les données de performance que vous choisissez, afin de cibler vos propres meilleures pratiques opérationnelles.
 
 .Étapes
-. Connectez-vous à Insight en tant qu'utilisateur avec des autorisations d'administration.
-. Dans le menu *tableaux de bord*, sélectionnez *[+Nouveau tableau de bord]*.
+. Connectez-vous à Insight en tant qu’utilisateur disposant d’autorisations administratives.
+. Dans le menu *Tableaux de bord*, sélectionnez *[+Nouveau tableau de bord]*.
 +
 La page *Nouveau tableau de bord* s'ouvre.
 
-. En haut de la page, saisissez un nom unique pour le tableau de bord, par exemple « VM Performance by application ».
+. En haut de la page, saisissez un nom unique pour le tableau de bord, par exemple « Performances des machines virtuelles par application ».
 . Cliquez sur *Enregistrer* pour enregistrer le tableau de bord avec le nouveau nom.
-. Commençons à ajouter nos widgets. Si nécessaire, cliquez sur l'icône *Edit* pour activer le mode Edit.
-. Cliquez sur l'icône *Add widget* et sélectionnez *Table* pour ajouter un nouveau widget de tableau de bord.
+. Commençons à ajouter nos widgets.  Si nécessaire, cliquez sur l'icône *Modifier* pour activer le mode Édition.
+. Cliquez sur l’icône *Ajouter un widget* et sélectionnez *Tableau* pour ajouter un nouveau widget de tableau au tableau de bord.
 +
-La boîte de dialogue Modifier le widget s'ouvre. Les données affichées par défaut s'affichent pour tous les stockages de votre locataire.
+La boîte de dialogue Modifier le widget s'ouvre.  Les données par défaut affichées concernent tous les stockages de votre locataire.
 
 
 
 image:VMDashboard-TableWidget1.png["Boîte de dialogue Modifier le widget de tableau"]
 
-. Nous pouvons personnaliser ce widget. Dans le champ Nom en haut, supprimez le widget 1 et entrez le tableau performances de l'ordinateur virtuel.
-. Cliquez sur la liste déroulante Type de ressource et remplacez _Storage_ par _Virtual machine_.
+. Nous pouvons personnaliser ce widget.  Dans le champ Nom en haut, supprimez « Widget 1 » et saisissez « Tableau des performances de la machine virtuelle ».
+. Cliquez sur la liste déroulante du type d’actif et remplacez _Stockage_ par _Machine virtuelle_.
 +
 Les données du tableau changent pour afficher toutes les machines virtuelles de votre locataire.
 
-. Ajoutons quelques colonnes à la table. Cliquez sur l'icône engrenage à droite et sélectionnez _Hypervisor name_, _IOPS - Total_ et _latence - Total_. Vous pouvez également essayer de saisir le nom dans la recherche pour afficher rapidement le champ souhaité.
+. Ajoutons quelques colonnes au tableau.  Cliquez sur l’icône d’engrenage à droite et sélectionnez _Nom de l’hyperviseur_, _IOPS - Total_ et _Latence - Total_.  Vous pouvez également essayer de saisir le nom dans la recherche pour afficher rapidement le champ souhaité.
 +
-Ces colonnes sont maintenant affichées dans le tableau. Vous pouvez trier la table en fonction de l'une de ces colonnes. Notez que les colonnes sont affichées dans l'ordre dans lequel elles ont été ajoutées au widget.
+Ces colonnes sont désormais affichées dans le tableau.  Vous pouvez trier le tableau selon n’importe laquelle de ces colonnes.  Notez que les colonnes sont affichées dans l’ordre dans lequel elles ont été ajoutées au widget.
 
-. Dans le cadre de cet exercice, nous exclurons les machines virtuelles qui ne sont pas utilisées activement. Analysons tout autre élément avec moins de 10 000 IOPS totales. Cliquez sur le bouton *[+]* en regard de *Filtrer par* et sélectionnez _IOPS - Total_. Cliquez sur *any* et saisissez "10" dans le champ *de*. Laissez le champ *à* vide. Cliquez sur outrder le champ de filtre ou appuyez sur entrée pour définir le filtre.
+. Pour cet exercice, nous exclurons les machines virtuelles qui ne sont pas activement utilisées. Nous allons donc filtrer tout ce qui a moins de 10 IOPS au total.  Cliquez sur le bouton *[+]* à côté de *Filtrer par* et sélectionnez _IOPS - Total_.  Cliquez sur *N'importe lequel* et entrez « 10 » dans le champ *de*.  Laissez le champ *à* vide.  Cliquez en dehors du champ de filtre ou appuyez sur Entrée pour définir le filtre.
 +
-Le tableau montre désormais uniquement les machines virtuelles avec au moins 10 IOPS totales.
+Le tableau affiche désormais uniquement les machines virtuelles avec un total de 10 IOPS ou plus.
 
-. Nous pouvons réduire davantage la table en regroupant les résultats. Cliquez sur le bouton *[+]* en regard de *Grouper par* et sélectionnez un champ à regrouper par, comme _application_ ou _Hypervisor name_. Le regroupement est automatiquement appliqué.
+. Nous pouvons encore réduire le tableau en regroupant les résultats.  Cliquez sur le bouton *[+]* à côté de *Grouper par* et sélectionnez un champ par lequel regrouper, tel que _Application_ ou _Nom de l'hyperviseur_.  Le regroupement est appliqué automatiquement.
 +
-Les lignes de la table sont désormais regroupées en fonction de vos paramètres. Vous pouvez développer et réduire les groupes selon vos besoins. Les lignes groupées affichent des données cumulées pour chacune des colonnes. Certaines colonnes vous permettent de choisir la méthode de défilement de cette colonne.
+Les lignes du tableau sont désormais regroupées en fonction de vos paramètres.  Vous pouvez développer et réduire les groupes selon vos besoins.  Les lignes groupées affichent les données cumulées pour chacune des colonnes.  Certaines colonnes vous permettent de choisir la méthode de cumul pour cette colonne.
 
 
 
 image:VMDashboard-TableWidgetGroup.png["Exemple de regroupement de widgets de tableau"]
 
-. Lorsque vous avez personnalisé le widget de tableau à votre convenance, cliquez sur le bouton *[Save]*.
+. Lorsque vous avez personnalisé le widget de tableau à votre convenance, cliquez sur le bouton *[Enregistrer]*.
 +
-Le widget de tableau de bord est enregistré dans le tableau de bord.
+Le widget de tableau est enregistré dans le tableau de bord.
 
 
 
-Vous pouvez redimensionner le widget du tableau de bord en faisant glisser le coin inférieur droit. Rendez le widget plus large pour afficher clairement toutes les colonnes. Cliquez sur *Enregistrer* pour enregistrer le tableau de bord actuel.
+Vous pouvez redimensionner le widget sur le tableau de bord en faisant glisser le coin inférieur droit.  Agrandissez le widget pour afficher clairement toutes les colonnes.  Cliquez sur *Enregistrer* pour enregistrer le tableau de bord actuel.
 
-Nous ajouterons ensuite des graphiques pour afficher les performances de nos machines virtuelles. Créons un graphique qui compare la latence des machines virtuelles à la latence des disques VMDK.
+Ensuite, nous ajouterons quelques graphiques pour montrer les performances de notre machine virtuelle.  Créons un graphique linéaire comparant la latence de la VM avec la latence de VMDK.
 
-. Si nécessaire, cliquez sur l'icône *Edit* du tableau de bord pour activer le mode Edit.
-. Cliquez sur l'icône *[Add widget]* et sélectionnez _Line Chart_ pour ajouter un nouveau widget graphique en ligne au tableau de bord.
-. La boîte de dialogue *Edit widget* s'ouvre. Nommez ce widget « VM/latence maximale VMDK »
-. Sélectionnez *machine virtuelle* et choisissez _latence - Max_. Définissez les filtres que vous souhaitez ou laissez *Filter by* vide. Pour *faire un cumul*, choisissez _sum_ par _All_. Afficher ces données sous la forme d'un _Line Chart_ et laisser _y-Axis_ comme _Primary_.
-. Cliquez sur le bouton *[+Query]* pour ajouter une seconde ligne de données. Pour cette ligne, sélectionnez _VMDK_ et _latence - Max_. Définissez les filtres que vous souhaitez ou laissez *Filter by* vide. Pour *faire un cumul*, choisissez _sum_ par _All_. Afficher ces données sous la forme d'un _Line Chart_ et laisser _y-Axis_ comme _Primary_.
-. Cliquez sur *[Save]* pour ajouter ce widget au tableau de bord.
+. Si nécessaire, cliquez sur l'icône *Modifier* sur le tableau de bord pour activer le mode Édition.
+. Cliquez sur l'icône *[Ajouter un widget]* et sélectionnez _Graphique linéaire_ pour ajouter un nouveau widget de graphique linéaire au tableau de bord.
+. La boîte de dialogue *Modifier le widget* s'ouvre.  Nommez ce widget « VM / VMDK Max Latency »
+. Sélectionnez *Machine virtuelle* et choisissez _Latence - Max_.  Définissez les filtres que vous souhaitez ou laissez *Filtrer par* vide.  Pour *Regrouper*, choisissez _Somme_ par _Tous_.  Affichez ces données sous forme de _graphique linéaire_ et laissez _axe Y_ comme _principal_.
+. Cliquez sur le bouton *[+Requête]* pour ajouter une deuxième ligne de données.  Pour cette ligne, sélectionnez _VMDK_ et _Latency - Max_.  Définissez les filtres que vous souhaitez ou laissez *Filtrer par* vide.  Pour *Regrouper*, choisissez _Somme_ par _Tous_.  Affichez ces données sous forme de _graphique linéaire_ et laissez _axe Y_ comme _principal_.
+. Cliquez sur *[Enregistrer]* pour ajouter ce widget au tableau de bord.
 
 
 image:VMDashboard-LineChartVMLatency.png["Graphique linéaire montrant les données de latence"]
 
-Nous allons ensuite ajouter un graphique illustrant le nombre total d'IOPS, lecture, écriture et lecture de VM dans un seul graphique.
+Ensuite, nous ajouterons un graphique montrant la lecture, l’écriture et le nombre total d’IOPS de la machine virtuelle dans un seul graphique.
 
-. Cliquez sur l'icône *[Ajouter widget]* et sélectionnez _Area Chart_ pour ajouter un nouveau widget graphique de zone au tableau de bord.
-. La boîte de dialogue Modifier le widget s'ouvre. Nommez ce widget « VM IOPS »
-. Sélectionnez *Virtual machine* et choisissez _IOPS - Total_. Définissez les filtres que vous souhaitez ou laissez *Filtrer par* vide. Pour *cumul*, choisissez _somme_ par _tout_. Afficher ces données sous la forme d'un _Area Chart_ et laisser _y-Axis_ sous la forme _Primary_.
-. Cliquez sur le bouton *[+Query]* pour ajouter une seconde ligne de données. Pour cette ligne, sélectionnez *Virtual machine* et choisissez _IOPS - Read_.
-. Cliquez sur le bouton *[+Query]* pour ajouter une troisième ligne de données. Pour cette ligne, sélectionnez *Virtual machine* et choisissez _IOPS - Write_.
+. Cliquez sur l'icône *[Ajouter un widget]* et sélectionnez _Graphique en aires_ pour ajouter un nouveau widget de graphique en aires au tableau de bord.
+. La boîte de dialogue Modifier le widget s'ouvre.  Nommez ce widget « VM IOPS »
+. Sélectionnez *Machine virtuelle* et choisissez _IOPS - Total_.  Définissez les filtres que vous souhaitez ou laissez *Filtrer par* vide. Pour *Réduire*, choisissez _Somme_ par _Tous_.  Affichez ces données sous forme de _graphique à aires_ et laissez _axe Y_ comme _principal_.
+. Cliquez sur le bouton *[+Requête]* pour ajouter une deuxième ligne de données.  Pour cette ligne, sélectionnez *Machine virtuelle* et choisissez _IOPS - Lecture_.
+. Cliquez sur le bouton *[+Requête]* pour ajouter une troisième ligne de données.  Pour cette ligne, sélectionnez *Machine virtuelle* et choisissez _IOPS - Écriture_.
 . Cliquez sur *Afficher la légende* pour afficher une légende pour ce widget sur le tableau de bord.
 
 
-image:VMDashboard-AreaChartVMIOPS.png["Graphique à secteurs affichant les IOPS de VM"]
+image:VMDashboard-AreaChartVMIOPS.png["Graphique en aires montrant les IOPS des machines virtuelles"]
 
-. Cliquez sur *[Save]* pour ajouter ce widget au tableau de bord.
-
-
-Nous allons ensuite ajouter un tableau illustrant le débit des ordinateurs virtuels pour chaque application associée à la machine virtuelle. Nous allons utiliser la fonction d'enroulement pour cela.
-
-. Cliquez sur l'icône *[Add widget]* et sélectionnez _Line Chart_ pour ajouter un nouveau widget graphique en ligne au tableau de bord.
-. La boîte de dialogue Modifier le widget s'ouvre. Nommez ce widget « VM Throughput by application »
-. Sélectionnez Virtual machine (ordinateur virtuel) et choisissez Throughput - Total. Définissez les filtres que vous souhaitez ou laissez le filtre vide. Pour faire un cumul, choisissez « Max » et sélectionnez par « application » ou « Nom ». Afficher les 10 principales applications. Affichez ces données sous forme de graphique linéaire et laissez l'axe y comme principal.
-. Cliquez sur *[Save]* pour ajouter ce widget au tableau de bord.
+. Cliquez sur *[Enregistrer]* pour ajouter ce widget au tableau de bord.
 
 
-Vous pouvez déplacer les widgets sur le tableau de bord en maintenant le bouton de la souris enfoncé n'importe où en haut du widget et en le faisant glisser vers un nouvel emplacement.
+Ensuite, nous ajouterons un graphique montrant le débit de la machine virtuelle pour chaque application associée à la machine virtuelle.  Nous utiliserons la fonction Roll Up pour cela.
+
+. Cliquez sur l'icône *[Ajouter un widget]* et sélectionnez _Graphique linéaire_ pour ajouter un nouveau widget de graphique linéaire au tableau de bord.
+. La boîte de dialogue Modifier le widget s'ouvre.  Nommez ce widget « Débit VM par application »
+. Sélectionnez Machine virtuelle et choisissez Débit - Total.  Définissez les filtres souhaités ou laissez Filtrer par vide.  Pour Roll up, choisissez « Max » et sélectionnez par « Application » ou « Nom ».  Afficher les 10 meilleures applications.  Affichez ces données sous forme de graphique linéaire et laissez l’axe Y comme axe principal.
+. Cliquez sur *[Enregistrer]* pour ajouter ce widget au tableau de bord.
+
+
+Vous pouvez déplacer des widgets sur le tableau de bord en maintenant le bouton de la souris enfoncé n'importe où en haut du widget et en le faisant glisser vers un nouvel emplacement.
 
 Vous pouvez redimensionner les widgets en faisant glisser le coin inférieur droit.
 
-Une fois vos modifications effectuées, assurez-vous que *[Save]* est le tableau de bord.
+Assurez-vous de *[Enregistrer]* le tableau de bord après avoir effectué vos modifications.
 
-Votre tableau de bord final des performances VM se présente comme suit :
+Votre tableau de bord final des performances de la machine virtuelle ressemblera à ceci :
 
-image:VMDashExample1.png["Tableau de bord VM exemple complet montrant tous les widgets en place"]
+image:VMDashExample1.png["Exemple complet du tableau de bord VM montrant tous les widgets en place"]

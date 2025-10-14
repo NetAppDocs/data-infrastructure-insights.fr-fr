@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: task_dc_infinidat_infinibox.html 
 keywords: data collector, infinidat, InfiniBox 
-summary: 'Configuration du collecteur de données Infinidat Box d"Infinidat' 
+summary: Configuration du collecteur de données Infinidat InfiniBox. 
 ---
-= Collecteur de données Infinidat Box d'Infinidat
+= Collecteur de données Infinidat InfiniBox
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Le collecteur de données Infinidat Box (HTTP) est utilisé pour recueillir des informations d'inventaire à partir du système de stockage Infinidat Box d'Infinidat.
+Le collecteur de données Infinidat InfiniBox (HTTP) est utilisé pour collecter des informations d'inventaire à partir du système de stockage Infinidat InfiniBox.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données Infinidat InfiniBox. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données Infinidat InfiniBox.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Pool de stockage | Pool de stockage 
+| Piscine de stockage | Piscine de stockage 
 
 
 | Nœud | Contrôleur 
@@ -35,17 +35,17 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes au
 | Système de fichiers | Partage de fichiers 
 
 
-| Exportations des systèmes de fichiers | Partagez 
+| Exportations du système de fichiers | Partager 
 |===
 
 
-== De formation
+== Exigences
 
-Les conditions suivantes sont requises lors de la configuration de ce collecteur de données.
+Les exigences suivantes doivent être respectées lors de la configuration de ce collecteur de données.
 
-* Adresse IP ou FQDN du noeud de gestion InfiniBox
-* ID utilisateur et mot de passe administrateur
-* Le port 443 via l'API REST
+* Adresse IP ou FQDN du nœud de gestion InfiniBox
+* Identifiant et mot de passe de l'administrateur
+* Port 443 via l'API REST
 
 
 
@@ -60,10 +60,10 @@ Les conditions suivantes sont requises lors de la configuration de ce collecteur
 | Hôte InfiniBox | Adresse IP ou nom de domaine complet du nœud de gestion InfiniBox 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du nœud de gestion InfiniBox 
+| Nom d'utilisateur | Nom d'utilisateur pour le nœud de gestion InfiniBox 
 
 
-| Mot de passe | Mot de passe du noeud de gestion de l'InfiniBox 
+| Mot de passe | Mot de passe pour le nœud de gestion InfiniBox 
 |===
 
 
@@ -74,13 +74,13 @@ Les conditions suivantes sont requises lors de la configuration de ce collecteur
 | Champ | Description 
 
 
-| Port TCP | Port TCP utilisé pour se connecter au serveur InfiniBox. La valeur par défaut est 443. 
+| Port TCP | Port TCP utilisé pour se connecter au serveur InfiniBox.  La valeur par défaut est 443. 
 
 
-| Intervalle de sondage des stocks | Intervalle entre les sondages d'inventaire. La valeur par défaut est 60 minutes. 
+| Intervalle d'interrogation de l'inventaire | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 60 minutes. 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

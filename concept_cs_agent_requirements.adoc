@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_agent_requirements.html 
-summary: 'Le serveur ou la machine virtuelle que vous utilisez en tant qu"agent doit respecter la configuration minimale requise' 
+summary: Le serveur ou la machine virtuelle que vous utilisez comme agent doit répondre aux exigences minimales 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
-= Exigences de l'agent de sécurité de la charge de travail
+= Exigences relatives à l'agent de sécurité de la charge de travail
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,109 +14,109 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 
 
 [role="lead"]
-Vous devezlink:task_cs_add_agent.html["installer un agent de sécurité de charge de travail"] afin d'acquérir des informations auprès de vos collecteurs de données.  Avant d'installer l'agent, assurez-vous que votre environnement répond aux exigences du système d'exploitation, du processeur, de la mémoire et de l'espace disque.
+Vous devezlink:task_cs_add_agent.html["installer un agent de sécurité de charge de travail"] afin d'acquérir des informations auprès de vos collecteurs de données. Avant d'installer l'agent, assurez-vous que votre environnement répond aux exigences du système d'exploitation, du processeur, de la mémoire et de l'espace disque.
 
 [cols="36,60"]
 |===
-| Composant | Configuration Linux requise 
+| Composant | Exigences Linux 
 
 
-| Système d'exploitation | Un ordinateur exécutant une version sous licence de l'un des systèmes d'exploitation suivants : * AlmaLinux 9.4 (64 bits) à 9.5 (64 bits), 10 (64 bits), y compris SELinux * CentOS Stream 9 (64 bits) * Debian 11 (64 bits), 12 (64 bits), y compris SELinux * OpenSUSE Leap 15.3 (64 bits) à 15.6 (64 bits) * Oracle Linux 8.10 (64 bits), 9.1 (64 bits) à 9.6 (64 bits), y compris SELinux * Red Hat Enterprise Linux 8.10 (64 bits), 9.1 (64 bits) à 9.6 (64 bits), 10 (64 bits), y compris SELinux * Rocky 9.4 (64 bits) à 9.6 (64 bits), y compris SELinux * SUSE Linux Enterprise Server 15 SP4 (64 bits) à 15 SP6 (64 bits), y compris SELinux * Ubuntu 20.04 LTS (64 bits), 22.04 LTS (64 bits), 24.04 LTS (64 bits) Cet ordinateur ne doit exécuter aucun autre logiciel de niveau application.  Un serveur dédié est recommandé. 
+| Système opérateur | Un ordinateur exécutant une version sous licence de l'un des systèmes d'exploitation suivants : * AlmaLinux 9.4 (64 bits) à 9.5 (64 bits), 10 (64 bits), y compris SELinux * CentOS Stream 9 (64 bits) * Debian 11 (64 bits), 12 (64 bits), y compris SELinux * OpenSUSE Leap 15.3 (64 bits) à 15.6 (64 bits) * Oracle Linux 8.10 (64 bits), 9.1 (64 bits) à 9.6 (64 bits), y compris SELinux * Red Hat Enterprise Linux 8.10 (64 bits), 9.1 (64 bits) à 9.6 (64 bits), 10 (64 bits), y compris SELinux * Rocky 9.4 (64 bits) à 9.6 (64 bits), y compris SELinux * SUSE Linux Enterprise Server 15 SP4 (64 bits) à 15 SP6 (64 bits), y compris SELinux * Ubuntu 20.04 LTS (64 bits), 22.04 LTS (64 bits), 24.04 LTS (64 bits) Cet ordinateur ne doit exécuter aucun autre logiciel de niveau application. Un serveur dédié est recommandé. 
 
 
-| Commandes | le dézipper est requis pour l'installation. En outre, la commande « udo su – » est requise pour l'installation, l'exécution de scripts et la désinstallation. 
+| Commandes | 'unzip' est requis pour l'installation.  De plus, la commande « sudo su – » est requise pour l’installation, l’exécution de scripts et la désinstallation. 
 
 
-| CPU | 4 cœurs de processeurs 
+| processeur | 4 cœurs de processeur 
 
 
-| Mémoire | 16 GO DE RAM 
+| Mémoire | 16 Go de RAM 
 
 
-| Espace disque disponible | L'espace disque doit être alloué de la manière suivante : /opt/NetApp 36 Go (minimum 35 Go d'espace libre après la création du système de fichiers) Remarque : il est recommandé d'allouer un peu d'espace disque supplémentaire pour permettre la création du système de fichiers. Assurez-vous qu'il y a au moins 35 Go d'espace libre dans le système de fichiers. Si /opt est un dossier monté à partir d'un stockage NAS, assurez-vous que les utilisateurs locaux ont accès à ce dossier. L'installation de l'agent ou du collecteur de données peut échouer si les utilisateurs locaux n'ont pas l'autorisation de ce dossier. Reportez-vous à la  section pour plus de détails.link:task_cs_add_agent.html#troubleshooting-agent-errors["dépannage"] 
+| Espace disque disponible | L'espace disque doit être alloué de cette manière : /opt/netapp 36 Go (minimum 35 Go d'espace libre après la création du système de fichiers) Remarque : il est recommandé d'allouer un peu d'espace disque supplémentaire pour permettre la création du système de fichiers.  Assurez-vous qu'il y a au moins 35 Go d'espace libre dans le système de fichiers.  Si /opt est un dossier monté à partir d'un stockage NAS, assurez-vous que les utilisateurs locaux ont accès à ce dossier.  L'installation de l'agent ou du collecteur de données peut échouer si les utilisateurs locaux ne disposent pas de l'autorisation d'accéder à ce dossier. voir lelink:task_cs_add_agent.html#troubleshooting-agent-errors["dépannage"] section pour plus de détails. 
 
 
-| Le réseau | Connexion Ethernet de 100 Mbit/s à 1 Gbit/s, adresse IP statique, connectivité IP à tous les périphériques et port requis à l'instance de sécurité de la charge de travail (80 ou 443). 
+| Réseau | Connexion Ethernet 100 Mbps à 1 Gbps, adresse IP statique, connectivité IP à tous les appareils et un port requis pour l'instance Workload Security (80 ou 443). 
 |===
-Remarque : l'agent Workload Security peut être installé sur la même machine qu'un agent et/ou une unité d'acquisition Data Infrastructure Insights. Toutefois, il est recommandé de les installer sur des machines distinctes. Si ces derniers sont installés sur la même machine, veuillez allouer de l'espace disque comme indiqué ci-dessous :
+Remarque : l'agent Workload Security peut être installé sur la même machine qu'une unité d'acquisition et/ou un agent Data Infrastructure Insights .  Cependant, il est recommandé de les installer sur des machines séparées.  Dans le cas où ceux-ci sont installés sur la même machine, veuillez allouer de l'espace disque comme indiqué ci-dessous :
 
 |===
 
 
-| Espace disque disponible | 50-55 Go pour Linux, l'espace disque doit être alloué de cette manière : /opt/netapp 25-30 Go /var/log/netapp 25 Go 
+| Espace disque disponible | 50-55 Go Pour Linux, l'espace disque doit être alloué de cette manière : /opt/netapp 25-30 Go /var/log/netapp 25 Go 
 |===
 
 
 == Recommandations supplémentaires
 
-* Il est fortement recommandé de synchroniser l'heure à la fois sur le système ONTAP et sur l'ordinateur Agent à l'aide de *NTP (Network Time Protocol)* ou *SNTP (simple Network Time Protocol)*.
+* Il est fortement recommandé de synchroniser l'heure sur le système ONTAP et sur la machine Agent à l'aide du *Network Time Protocol (NTP)* ou du *Simple Network Time Protocol (SNTP)*.
 
 
 
 
 == Règles d'accès au réseau cloud
 
-Pour les environnements de sécurité de la charge de travail *basés aux États-Unis* :
+Pour les environnements de sécurité des charges de travail *basés aux États-Unis* :
 
 [cols="5*"]
 |===
 | Protocole | Port | Source | Destination | Description 
 
 
-| TCP | 443 | Agent de sécurité des charges de travail | <site_name> .cs01.cloudinsights.netapp.com <site_name> .c01.cloudinsights.netapp.com <site_name> .c02.cloudinsights.netapp.com | Accès aux informations exploitables de l'infrastructure de données 
+| TCP | 443 | Agent de sécurité de la charge de travail | <nom_site>.cs01.cloudinsights.netapp.com <nom_site>.c01.cloudinsights.netapp.com <nom_site>.c02.cloudinsights.netapp.com | Accès aux Data Infrastructure Insights 
 
 
-| TCP | 443 | Agent de sécurité des charges de travail | agentlogin.cs01.cloudinsights.netapp.com | Accès aux services d'authentification 
+| TCP | 443 | Agent de sécurité de la charge de travail | agentlogin.cs01.cloudinsights.netapp.com | Accès aux services d'authentification 
 |===
-Pour les environnements de sécurité des charges de travail * basés en Europe :
+Pour les environnements de sécurité des charges de travail *basés en Europe* :
 
 [cols="5*"]
 |===
 | Protocole | Port | Source | Destination | Description 
 
 
-| TCP | 443 | Agent de sécurité des charges de travail | <site_name> .cs01-eu-1.cloudinsights.netapp.com <site_name> .c01-eu-1.cloudinsights.netapp.com <site_name> .c02-eu-1.cloudinsights.netapp.com | Accès aux informations exploitables de l'infrastructure de données 
+| TCP | 443 | Agent de sécurité de la charge de travail | <nom_site>.cs01-eu-1.cloudinsights.netapp.com <nom_site>.c01-eu-1.cloudinsights.netapp.com <nom_site>.c02-eu-1.cloudinsights.netapp.com | Accès aux Data Infrastructure Insights 
 
 
-| TCP | 443 | Agent de sécurité des charges de travail | agentlogin.cs01-eu-1.cloudinsights.netapp.com | Accès aux services d'authentification 
+| TCP | 443 | Agent de sécurité de la charge de travail | agentlogin.cs01-eu-1.cloudinsights.netapp.com | Accès aux services d'authentification 
 |===
-Pour les environnements de sécurité de la charge de travail *APAC* :
+Pour les environnements de sécurité des charges de travail *basés sur la région APAC* :
 
 [cols="5*"]
 |===
 | Protocole | Port | Source | Destination | Description 
 
 
-| TCP | 443 | Agent de sécurité des charges de travail | <site_name> .cs01-ap-1.cloudinsights.netapp.com <site_name> .c01-ap-1.cloudinsights.netapp.com <site_name> .c02-ap-1.cloudinsights.netapp.com | Accès aux informations exploitables de l'infrastructure de données 
+| TCP | 443 | Agent de sécurité de la charge de travail | <nom_site>.cs01-ap-1.cloudinsights.netapp.com <nom_site>.c01-ap-1.cloudinsights.netapp.com <nom_site>.c02-ap-1.cloudinsights.netapp.com | Accès aux Data Infrastructure Insights 
 
 
-| TCP | 443 | Agent de sécurité des charges de travail | agentlogin.cs01-ap-1.cloudinsights.netapp.com | Accès aux services d'authentification 
+| TCP | 443 | Agent de sécurité de la charge de travail | agentlogin.cs01-ap-1.cloudinsights.netapp.com | Accès aux services d'authentification 
 |===
 
 
-== Règles dans le réseau
+== Règles du réseau
 
 [cols="5*"]
 |===
 | Protocole | Port | Source | Destination | Description 
 
 
-| TCP | 389 (LDAP) 636 (LDAPS/Start-tls) | Agent de sécurité des charges de travail | URL du serveur LDAP | Connectez-vous à LDAP 
+| TCP | 389 (LDAP) 636 (LDAP / start-tls) | Agent de sécurité de la charge de travail | URL du serveur LDAP | Se connecter à LDAP 
 
 
-| TCP | 443 | Agent de sécurité des charges de travail | Adresse IP de gestion du cluster ou du SVM (selon la configuration du collecteur SVM) | Communication de l'API avec ONTAP 
+| TCP | 443 | Agent de sécurité de la charge de travail | Adresse IP de gestion du cluster ou du SVM (selon la configuration du collecteur SVM) | Communication API avec ONTAP 
 
 
-| TCP | 35000 - 55000 | Adresses IP des LIF de données des SVM | Agent de sécurité des charges de travail | Communication de ONTAP à l'agent de sécurité de la charge de travail pour les événements Fpolicy. Ces ports doivent être ouverts vers l'agent de sécurité de la charge de travail pour que ONTAP lui envoie des événements, y compris tout pare-feu sur l'agent de sécurité de la charge de travail lui-même (le cas échéant). NOTEZ que vous n'avez pas besoin de réserver *tous* de ces ports, mais que les ports que vous réservez pour ce port doivent être compris dans cette plage. Il est recommandé de commencer par réserver ~100 ports et d'augmenter si nécessaire. 
+| TCP | 35000 - 55000 | Adresses IP LIF des données SVM | Agent de sécurité de la charge de travail | Communication d' ONTAP à l'agent de sécurité de la charge de travail pour les événements Fpolicy.  Ces ports doivent être ouverts vers l'agent de sécurité de la charge de travail pour ONTAP puisse lui envoyer des événements, y compris tout pare-feu sur l'agent de sécurité de la charge de travail lui-même (le cas échéant).  NOTEZ que vous n'avez pas besoin de réserver *tous* ces ports, mais les ports que vous réservez pour cela doivent être dans cette plage.  Il est recommandé de commencer par réserver environ 100 ports, et d'augmenter si nécessaire. 
 
 
-| TCP | 35000-55000 | IP de gestion de cluster | Agent de sécurité des charges de travail | Communication entre l'adresse IP de gestion du cluster ONTAP et l'agent Workload Security Agent pour les événements EMS. Ces ports doivent être ouverts vers l'agent Workload Security Agent pour qu'ONTAP puisse lui envoyer des événements EMS, y compris tout pare-feu de l'agent Workload Security Agent (le cas échéant). NOTEZ que vous n'avez pas besoin de réserver *tous* de ces ports, mais que les ports que vous réservez pour ce port doivent être compris dans cette plage. Il est recommandé de commencer par réserver ~100 ports et d'augmenter si nécessaire. 
+| TCP | 35000-55000 | IP de gestion de cluster | Agent de sécurité de la charge de travail | Communication de l'IP de gestion du cluster ONTAP à l'agent de sécurité de la charge de travail pour les *événements EMS*.  Ces ports doivent être ouverts vers l'agent de sécurité de la charge de travail pour ONTAP puisse lui envoyer des *événements EMS*, y compris tout pare-feu sur l'agent de sécurité de la charge de travail lui-même (le cas échéant).  NOTEZ que vous n'avez pas besoin de réserver *tous* ces ports, mais les ports que vous réservez pour cela doivent être dans cette plage.  Il est recommandé de commencer par réserver environ 100 ports, et d'augmenter si nécessaire. 
 
 
-| SSH | 22 | Agent de sécurité des charges de travail | Gestion du cluster | Nécessaire pour le blocage des utilisateurs CIFS/SMB. 
+| SSH | 22 | Agent de sécurité de la charge de travail | Gestion des clusters | Nécessaire pour le blocage des utilisateurs CIFS/SMB. 
 |===
 
 
 == Dimensionnement du système
 
-Pour plus d'informations sur le dimensionnement, reportez-vous à la link:concept_cs_event_rate_checker.html["Vérificateur de taux d'événement"]documentation.
+Voir lelink:concept_cs_event_rate_checker.html["Vérificateur de taux d'événements"] documentation pour obtenir des informations sur le dimensionnement.

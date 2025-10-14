@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_powervm.html 
 keywords: IBM, powerVM, 
-summary: Configuration du collecteur de données IBM PowerVM 
+summary: Configuration du collecteur de données IBM PowerVM. 
 ---
 = Configuration du collecteur de données IBM PowerVM
 :hardbreaks:
@@ -16,43 +16,43 @@ Le collecteur de données IBM PowerVM (SSH) est utilisé pour collecter des info
 
 == Terminologie
 
-Data Infrastructure Insights acquiert des informations d'inventaire à partir des partitions virtuelles s'exécutant sur des instances matérielles IBM POWER. Pour chaque type d'actif acquis, la terminologie la plus utilisée pour l'actif est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert des informations d'inventaire à partir des partitions virtuelles exécutées sur les instances matérielles IBM POWER.  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour l’actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| hdisque | Disque virtuel 
+| disque dur | Disque virtuel 
 
 
 | Système géré | Hôte 
 
 
-| LPAR, serveur VIO | Ordinateur virtuel 
+| LPAR, serveur VIO | Machine virtuelle 
 
 
-| Groupe de volumes | Datastore 
+| Groupe de volumes | Magasin de données 
 
 
 | Volume physique | LUN 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-Les conditions suivantes doivent être remplies pour configurer et utiliser ce collecteur de données :
+Les exigences suivantes doivent être remplies pour configurer et utiliser ce collecteur de données :
 
 * Adresse IP de la console de gestion du matériel (HMC)
-* Nom d'utilisateur et mot de passe permettant d'accéder à la console HMC (Hardware Management Console) via SSH
-* Port requis SSH-22
+* Nom d'utilisateur et mot de passe permettant d'accéder à la console de gestion du matériel (HMC) via SSH
+* Exigence de port SSH-22
 * Afficher les autorisations sur tous les systèmes de gestion et les domaines de sécurité des partitions logiques
 +
-L'utilisateur doit également disposer de l'autorisation Afficher sur les configurations HMC et de la possibilité de collecter des informations VPD pour le regroupement de sécurité de la console HMC. L'utilisateur doit également être autorisé à accéder aux commandes Virtual IO Server sous le regroupement de sécurité de partition logique. Il est recommandé de commencer par un rôle d'opérateur, puis de supprimer tous les rôles. Les utilisateurs en lecture seule de la console HMC ne disposent pas des privilèges nécessaires pour exécuter des commandes proxy sur les hôtes AIX.
+L'utilisateur doit également disposer de l'autorisation d'affichage sur les configurations HMC et de la possibilité de collecter des informations VPD pour le groupe de sécurité de la console HMC.  L'utilisateur doit également être autorisé à accéder à la commande Virtual IO Server sous le groupe de sécurité Partition logique.  Il est recommandé de commencer par le rôle d’un opérateur, puis de supprimer tous les rôles.  Les utilisateurs en lecture seule sur la console HMC ne disposent pas des privilèges nécessaires pour exécuter des commandes proxy sur les hôtes AIX.
 
-* La meilleure pratique d'IBM consiste à faire contrôler les appareils par deux ou plusieurs NCSM. Sachez que OnCommand Insight peut signaler les périphériques dupliqués. Il est donc fortement recommandé d'ajouter des périphériques redondants à la liste « exclure les périphériques » de la configuration avancée pour ce collecteur de données.
+* La meilleure pratique d'IBM consiste à faire surveiller les périphériques par deux ou plusieurs HMC.  Sachez que cela peut amener OnCommand Insight à signaler des périphériques dupliqués. Il est donc fortement recommandé d'ajouter des périphériques redondants à la liste « Exclure les périphériques » dans la configuration avancée de ce collecteur de données.
 
 
 
@@ -64,10 +64,10 @@ L'utilisateur doit également disposer de l'autorisation Afficher sur les config
 | Champ | Description 
 
 
-| Adresse IP de la console de gestion du matériel (HMC) | Adresse IP ou nom de domaine complet de la console PowerVM Hardware Management Console 
+| Adresse IP de la console de gestion du matériel (HMC) | Adresse IP ou nom de domaine complet de la console de gestion du matériel PowerVM 
 
 
-| Utilisateur HMC | Nom d'utilisateur de la console de gestion du matériel 
+| Utilisateur HMC | Nom d'utilisateur pour la console de gestion du matériel 
 
 
 | Mot de passe | Mot de passe utilisé pour la console de gestion du matériel 
@@ -81,7 +81,7 @@ L'utilisateur doit également disposer de l'autorisation Afficher sur les config
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 20 minutes. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 20 minutes. 
 
 
 | Port SSH | Port utilisé pour SSH vers PowerVM 
@@ -90,13 +90,13 @@ L'utilisateur doit également disposer de l'autorisation Afficher sur les config
 | Mot de passe | Mot de passe utilisé pour la console de gestion du matériel 
 
 
-| Nombre de tentatives | Nombre de tentatives d'inventaire 
+| Nombre de tentatives | Nombre de tentatives de ré-inventaire 
 
 
-| Exclure les périphériques | Liste séparée par des virgules d'ID de périphérique ou de noms d'affichage à exclure 
+| Exclure les appareils | Liste séparée par des virgules des identifiants d'appareils ou des noms d'affichage à exclure 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

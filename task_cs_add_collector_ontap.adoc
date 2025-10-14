@@ -10,38 +10,38 @@ summary: Ajout de collecteurs de données
 
 
 [role="lead"]
-La sécurité de la charge de travail utilise des collecteurs de données pour collecter les données d'accès des fichiers et des utilisateurs à partir de terminaux. Les données sont fournies à la charge de travail Security à des fins d'analyse.
+Workload Security utilise des collecteurs de données pour collecter les données d'accès aux fichiers et aux utilisateurs à partir des appareils.  Les données sont fournies à Workload Security pour analyse.
 
 .Avant de commencer
-Vous avez besoin des informations suivantes pour configurer ce collecteur de données :
+Vous avez besoin des informations suivantes pour configurer ce collecteur de données :
 
 * Un agent doit être configuré pour collecter des données
-* Adresse IP de gestion SVM
+* L'adresse IP de gestion SVM
 * Un nom d'utilisateur pour accéder au SVM
-* Mot de passe pour accéder à la SVM
+* Le mot de passe pour accéder au SVM
 
 
 .Étapes de configuration
-. Connectez-vous en tant qu'administrateur ou responsable de compte à votre environnement de sécurité de la charge de travail.
-. Cliquez sur *observabilité > Collectors > +Data Collectors*
+. Connectez-vous en tant qu’administrateur ou propriétaire de compte à votre environnement Workload Security.
+. Cliquez sur *Observabilité > Collecteurs > +Collecteurs de données*
 +
 Le système affiche les collecteurs de données disponibles.
 
-. Cliquez sur *+surveillance* dans la vignette NetApp ONTAP.
+. Cliquez sur *+Surveiller* dans la mosaïque NetApp ONTAP .
 +
-Le système affiche la page de configuration Add Data Collector : ONTAP SVM.
+Le système affiche la page de configuration Ajouter un collecteur de données : Ontap SVM.
 
 . Entrez un nom unique pour le collecteur
-. Sélectionnez l'agent qui va collecter les données
-. Entrer l'adresse IP de gestion SVM
-. Entrer le nom d'utilisateur pour accéder au SVM
-. Entrer le mot de passe pour accéder à la SVM
-. Cliquez sur *+Ajouter un collecteur*
+. Sélectionnez l'agent qui collectera les données
+. Entrez l'adresse IP de gestion SVM
+. Entrez le nom d'utilisateur pour accéder au SVM
+. Entrez le mot de passe pour accéder au SVM
+. Cliquez sur *+Ajouter un collectionneur*
 
 
-.Une fois que vous avez terminé
-* Cliquez sur *Workload Security > Collectors* pour vérifier l'état du collecteur que vous avez configuré.
+.Après avoir terminé
+* Cliquez sur *Sécurité de la charge de travail > Collecteurs* pour vérifier l’état du collecteur que vous avez configuré.
 +
-Il y a normalement un délai avant l'affichage de l'état du collecteur.
+Il y a normalement un délai avant que l'état du collecteur ne soit affiché.
 
 

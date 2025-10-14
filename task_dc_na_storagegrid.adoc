@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_storagegrid.html 
-summary: Configuration du collecteur de données NetApp StorageGRID 
+summary: Configurer le collecteur de données NetApp StorageGRID 
 keywords: data collector, queries, create, storagegrid 
 ---
 = Collecteur de données NetApp StorageGRID
@@ -10,7 +10,7 @@ keywords: data collector, queries, create, storagegrid
 
 
 [role="lead"]
-Le collecteur de données NetApp StorageGRID prend en charge l'inventaire et la collecte des performances à partir des configurations StorageGRID.
+Le collecteur de données NetApp StorageGRID prend en charge la collecte d'inventaire et de performances à partir des configurations StorageGRID .
 
 [NOTE]
 ====
@@ -25,11 +25,11 @@ Pour les clients utilisant le modèle de licence hérité (MU), StorageGRID est 
 
 == Terminologie
 
-Les informations d'inventaire suivantes sont acquises depuis le collecteur NetApp StorageGRID. Pour chaque type d'actif acquis, la terminologie la plus utilisée pour ce bien est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès du collecteur NetApp StorageGRID .  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
 | StorageGRID | Stockage 
@@ -38,20 +38,20 @@ Les informations d'inventaire suivantes sont acquises depuis le collecteur NetAp
 | Nœud | Nœud 
 
 
-| Locataire | Pool de stockage 
+| Locataire | Piscine de stockage 
 
 
-| Godet | Volume interne 
+| Seau | Volume interne 
 |===
 
 
-== De formation
+== Exigences
 
-La configuration de cette source de données est requise pour :
+Voici les exigences pour la configuration de cette source de données :
 
 * Adresse IP de l'hôte StorageGRID
-* Nom d'utilisateur et mot de passe pour un utilisateur auquel les rôles de requête métrique et d'accès au locataire ont été attribués
-* Orifice 443
+* Un nom d'utilisateur et un mot de passe pour un utilisateur auquel les rôles Requête de métrique et Accès au locataire ont été attribués
+* Port 443
 
 
 
@@ -80,21 +80,21 @@ La configuration de cette source de données est requise pour :
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60 minutes 
+| Intervalle d'interrogation d'inventaire (min) | La valeur par défaut est de 60 minutes 
 
 
-| Intervalle d'interrogation des performances (s) | La valeur par défaut est 900 secondes 
+| Intervalle d'interrogation des performances (sec) | La valeur par défaut est de 900 secondes 
 |===
 
 
 == Authentification unique (SSO)
 
-Les link:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"]versions de micrologiciel ont les versions d'API correspondantes ; l'API 3.0 et les versions plus récentes prennent en charge la connexion SSO (Single Sign-on).
+Lelink:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"] les versions du micrologiciel ont des versions d'API correspondantes ; l'API 3.0 et les versions plus récentes prennent en charge la connexion par authentification unique (SSO).
 
 |===
 
 
-| Version du micrologiciel | Version API | Prise en charge d'un SSO 
+| Version du micrologiciel | Version API | Prise en charge de l'authentification unique (SSO) 
 
 
 | 11,1 | 2 | Non 
@@ -109,4 +109,4 @@ Les link:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"]versions de mi
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_cs.html 
 keywords: data collector, IBM CS, CS Series 
-summary: Configuration du collecteur de données IBM CS 
+summary: Configuration du collecteur de données IBM CS. 
 ---
 = Collecteur de données IBM CS
 :hardbreaks:
@@ -10,39 +10,39 @@ summary: Configuration du collecteur de données IBM CS
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour détecter les données d'inventaire et de performance des systèmes de stockage IBM CS.
+Data Infrastructure Insights utilise ce collecteur de données pour découvrir les données d'inventaire et de performances des systèmes de stockage IBM CS.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données IBM CS. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données IBM CS.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Pool de stockage | Pool de stockage 
+| Piscine de stockage | Piscine de stockage 
 
 
-| Conteneur | Volume interne 
+| Récipient | Volume interne 
 
 
-| Conteneur | Partage de fichiers 
+| Récipient | Partage de fichiers 
 
 
-| Partage NFS | Partagez 
+| Partage NFS | Partager 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
 * L'adresse IP des services de données externes pour le cluster
-* Nom d'utilisateur et mot de passe administrateur
-* Orifice 9440
+* Nom d'utilisateur et mot de passe de l'administrateur
+* Port 9440
 
 
 
@@ -54,13 +54,13 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| Adresse IP externe prismes | L'adresse IP des services de données externes pour le cluster 
+| Adresse IP externe de Prism | L'adresse IP des services de données externes pour le cluster 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du compte Admin 
+| Nom d'utilisateur | Nom d'utilisateur pour le compte administrateur 
 
 
-| Mot de passe | Mot de passe du compte admin 
+| Mot de passe | Mot de passe pour le compte administrateur 
 |===
 
 
@@ -71,16 +71,16 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| Port TCP | Port TCP utilisé pour la connexion à la baie IBM CS. La valeur par défaut est 9440. 
+| Port TCP | Port TCP utilisé pour se connecter au tableau IBM CS.  La valeur par défaut est 9440. 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 60 minutes. 
+| Intervalle d'interrogation de l'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 60 minutes. 
 
 
-| Intervalle(s) d'interrogation de performance | Intervalle entre les sondages de performances. La valeur par défaut est 300 secondes. 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performance. La valeur par défaut est de 300 secondes. 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

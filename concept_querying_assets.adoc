@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_querying_assets.html 
-summary: Aperçu des requêtes 
+summary: Présentation des requêtes 
 keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, Host, Internal Volume, iSCSI, Network, Portal, Path, Port, Qtree, Quota, Share, Storage, Node, Pool, SVM, Switch, Tape, VMDK, Virtual Machine, VM, Volume, Zone, Member 
 ---
 = Ressources utilisées dans les requêtes
@@ -10,23 +10,23 @@ keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, 
 
 
 [role="lead"]
-Les requêtes vous permettent de surveiller et de dépanner votre réseau en recherchant les ressources et les mesures de votre locataire à un niveau granulaire basé sur des critères sélectionnés par l'utilisateur (par exemple, les annotations).
+Les requêtes vous permettent de surveiller et de dépanner votre réseau en recherchant les ressources et les mesures de votre locataire à un niveau granulaire en fonction de critères sélectionnés par l'utilisateur (par exemple, des annotations).
 
-Notez que les règles d'annotation, qui attribuent automatiquement des annotations aux ressources, _exigent_ une requête.
+Notez que les règles d'annotation, qui attribuent automatiquement des annotations aux ressources, _nécessitent_ une requête.
 
-Vous pouvez interroger les ressources d'inventaire physiques ou virtuelles (et leurs metrics associés) sur votre locataire, ou les metrics fournis avec l'intégration, comme Kubernetes ou ONTAP Advanced Data.
+Vous pouvez interroger les actifs d'inventaire physiques ou virtuels (et leurs métriques associées) sur votre locataire, ou les métriques fournies avec l'intégration telle que Kubernetes ou ONTAP Advanced Data.
 
 
 
-== Inventaire des actifs
+== Actifs d'inventaire
 
-Les types de ressources suivants peuvent être utilisés dans les requêtes, les widgets de tableau de bord et les pages d'accueil personnalisées des ressources. Les champs et compteurs disponibles pour les filtres, les expressions et l'affichage varient selon les types d'actifs. Toutes les ressources ne peuvent pas être utilisées dans tous les types de widget.
+Les types d'actifs suivants peuvent être utilisés dans les requêtes, les widgets de tableau de bord et les pages de destination d'actifs personnalisés.  Les champs et compteurs disponibles pour les filtres, les expressions et l'affichage varient selon les types d'actifs.  Tous les actifs ne peuvent pas être utilisés dans tous les types de widgets.
 
-* Client supplémentaire
-* Datastore
+* Application
+* Magasin de données
 * Disque
-* Structure
-* Périphérique générique
+* Tissu
+* Dispositif générique
 * Hôte
 * Volume interne
 * Session iSCSI
@@ -35,24 +35,24 @@ Les types de ressources suivants peuvent être utilisés dans les requêtes, les
 * Port
 * Qtree
 * Quota
-* Partagez
+* Partager
 * Stockage
 * Nœud de stockage
-* Pool de stockage
-* Storage Virtual machine (SVM)
-* Commutateur
-* Bande
+* Piscine de stockage
+* Machine virtuelle de stockage (SVM)
+* Changer
+* Ruban adhésif
 * VMDK
-* Ordinateur virtuel
-* Volumétrie
+* Machine virtuelle
+* Volume
 * Zone
 * Membre de la zone
 
 
 
 
-== Métriques d'intégration
+== Mesures d'intégration
 
-Outre les requêtes relatives aux ressources d'inventaire et aux mesures de performances associées, vous pouvez également effectuer des requêtes pour des indicateurs *de données d'intégration*, tels que ceux générés par Kubernetes ou Docker, ou fournis avec les métriques avancées de ONTAP.
+Outre l'interrogation des actifs d'inventaire et de leurs mesures de performances associées, vous pouvez également interroger les mesures de *données d'intégration*, telles que celles générées par Kubernetes ou Docker, ou fournies avec ONTAP Advanced Metrics.
 
 image:QueryPageFilter.png["Exemple de filtre de requête d'intégration"]

@@ -10,23 +10,23 @@ summary: Configuration du collecteur de données HDS Ops Center.
 
 
 [role="lead"]
-Ce collecteur de données utilise la suite intégrée d'applications d'Hitachi Ops Center pour accéder aux données d'inventaire et de performances de plusieurs périphériques de stockage. Pour la découverte des stocks et de la capacité, l'installation du centre d'exploitation doit inclure les composants « Services communs » et « Administrateur ». Pour la collecte des performances, vous devez également avoir déployé « Analyzer ».
+Ce collecteur de données utilise la suite d'applications intégrée de Hitachi Ops Center pour accéder aux données d'inventaire et de performances de plusieurs périphériques de stockage.  Pour la découverte de l'inventaire et de la capacité, votre installation Ops Center doit inclure les composants « Services communs » et « Administrateur ».  Pour la collecte des performances, vous devez également avoir « Analyzer » déployé.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir de ce collecteur de données. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès de ce collecteur de données.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
 | Systèmes de stockage | Stockage 
 
 
-| Volumétrie | Volumétrie 
+| Volume | Volume 
 
 
 | Groupes de parité | Pool de stockage (RAID), groupes de disques 
@@ -35,39 +35,39 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes à
 | Disque | Disque 
 
 
-| Pool de stockage | Pool de stockage (fin, SNAP) 
+| Piscine de stockage | Pool de stockage (mince, SNAP) 
 
 
-| Groupes de parité externes | Storage Pool(interne), groupes de disques 
+| Groupes de parité externes | Pool de stockage (backend), groupes de disques 
 
 
-| Port | Nœud de stockage → nœud de contrôleur → port 
+| Port | Nœud de stockage → Nœud de contrôleur → Port 
 
 
-| Groupes d'hôtes | Mappage de volume et masquage 
+| Groupes d'accueil | Cartographie et masquage des volumes 
 
 
-| Paires de volume | Synchronisation du stockage 
+| Paires de volumes | Synchronisation du stockage 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== Exigences d'inventaire
+== Exigences en matière d'inventaire
 
-Vous devez disposer des éléments suivants pour collecter les données de stock :
+Vous devez disposer des éléments suivants pour collecter des données d’inventaire :
 
-* Adresse IP ou nom d'hôte du serveur Ops Center hébergeant le composant « Common Services »
-* Compte utilisateur root/sysadmin et mot de passe existant sur tous les serveurs hébergeant les composants Ops Center. HDS n'a pas implémenté de prise en charge des API REST pour l'utilisation par les utilisateurs LDAP/SSO jusqu'à Ops Center 10.8+
-
-
+* Adresse IP ou nom d'hôte du serveur Ops Center hébergeant le composant « Services communs »
+* Compte utilisateur root/sysadmin et mot de passe qui existent sur tous les serveurs hébergeant les composants Ops Center.  HDS n'a pas implémenté la prise en charge de l'API REST pour l'utilisation par les utilisateurs LDAP/SSO avant Ops Center 10.8+
 
 
-== Exigences en matière de performances
 
-Les exigences suivantes doivent être respectées pour collecter les données de performance :
 
-Le module « Analyzer » du HDS Ops Center doit être installé. Les matrices de stockage doivent alimenter le module « analyseur » du Ops Center
+== Exigences de performance
+
+Les exigences suivantes doivent être respectées pour collecter des données de performance :
+
+Le module « Analyzer » du HDS Ops Center doit être installé. Les baies de stockage doivent alimenter le module « Analyzer » du Ops Center.
 
 
 
@@ -78,7 +78,7 @@ Le module « Analyzer » du HDS Ops Center doit être installé. Les matrices de
 | Champ | Description 
 
 
-| Adresse IP du centre d'opérations Hitachi | Adresse IP ou nom de domaine complet du serveur Ops Center hébergeant le composant "Common Services" 
+| Adresse IP du centre d'opérations Hitachi | Adresse IP ou nom de domaine complet du serveur Ops Center hébergeant le composant « Services communs » 
 
 
 | Nom d'utilisateur | Nom d'utilisateur pour le serveur Ops Center. 
@@ -96,21 +96,21 @@ Le module « Analyzer » du HDS Ops Center doit être installé. Les matrices de
 | Champ | Description 
 
 
-| Type de connexion | HTTPS (port 443) est l'option par défaut 
+| Type de connexion | HTTPS (port 443) est la valeur par défaut 
 
 
-| Remplacer le port TCP | Spécifiez le port à utiliser si ce n'est pas le port par défaut 
+| Remplacer le port TCP | Spécifiez le port à utiliser s'il n'est pas celui par défaut 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 40. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire.  La valeur par défaut est 40. 
 
 
-| Choisissez 'exclure' ou 'inclure' pour spécifier une liste | Indiquez si vous souhaitez inclure ou exclure la liste des matrices ci-dessous lors de la collecte des données. 
+| Choisissez « Exclure » ou « Inclure » pour spécifier une liste | Indiquez si vous souhaitez inclure ou exclure la liste de tableaux ci-dessous lors de la collecte de données. 
 
 
-| Filtrer la liste des périphériques | Liste séparée par des virgules des numéros de série de périphérique à inclure ou exclure 
+| Liste des appareils de filtrage | Liste séparée par des virgules des numéros de série des appareils à inclure ou à exclure 
 
 
-| Intervalle d'interrogation des performances (s) | Intervalle entre les sondages de performances. La valeur par défaut est 300. 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performance.  La valeur par défaut est 300. 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

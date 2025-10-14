@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reporting_create_example.html 
-summary: 'Utilisez cette procédure pour créer un rapport à l"aide des rapports prédéfinis Data Infrastructure Insights.' 
+summary: Utilisez cette procédure pour créer un rapport à l’aide des rapports Data Infrastructure Insights prédéfinis. 
 keywords: reporting, cognos, data warehouse, dwh, create, report 
 ---
 = Création d'un rapport (exemple)
@@ -10,40 +10,40 @@ keywords: reporting, cognos, data warehouse, dwh, create, report
 
 
 [role="lead"]
-Utilisez les étapes de cet exemple pour générer un rapport simple sur la capacité physique des pools de stockage et de stockage dans plusieurs data centers.
+Utilisez les étapes de cet exemple pour générer un rapport simple sur la capacité physique du stockage et des pools de stockage dans un certain nombre de centres de données.
 
 .Étapes
-. Accédez à *Menu > contenu > contenu de l'équipe > Rapports*
-. Dans le coin supérieur droit de l'écran, sélectionnez *[Nouveau +]*
-. Sélectionnez *Rapport*
+. Accédez à *Menu > Contenu > Contenu de l'équipe > Rapports*
+. En haut à droite de l'écran, sélectionnez *[Nouveau +]*
+. Sélectionnez *Signaler*
 +
-image:Reporting_New_Report.png["Création d'un nouveau rapport"]
+image:Reporting_New_Report.png["Créer un nouveau rapport"]
 
-. Dans l'onglet *Templates*, sélectionnez _Blank_
+. Dans l'onglet *Modèles*, sélectionnez _Vide_
 +
-Les onglets Source et données s'affichent
+Les onglets Source et Données s'affichent
 
-. Ouvrir *sélectionnez une source +*
-. Sous *contenu de l'équipe*, ouvrez *Packages*
+. Ouvrir *Sélectionner une source +*
+. Sous *Contenu de l'équipe*, ouvrez *Packages*
 +
-La liste des packages disponibles s'affiche.
+Une liste des packages disponibles s'affiche.
 
-. Choisissez *capacité de stockage et de pool de stockage* image:Reporting_Select_Source_For_Report.png["Sélection d'une source pour le rapport"]
+. Choisissez *Capacité de stockage et de pool de stockage*image:Reporting_Select_Source_For_Report.png["Sélection d'une source pour le rapport"]
 . Sélectionnez *Ouvrir*
 +
 Les styles disponibles pour votre rapport sont affichés.
 
-. Sélectionnez *liste*
+. Sélectionnez *Liste*
 +
 Ajoutez des noms appropriés pour la liste et la requête
 
 . Sélectionnez *OK*
-. Développez _la capacité physique_
-. Développez jusqu'au niveau le plus bas de _Data Center_
-. Faites glisser _Data Center_ vers le palais de reporting.
-. Développez _Capacity (Mo)_
-. Faites glisser _Capacity (Mo)_ vers le palais de reporting.
-. Faites glisser _used Capacity (MB)_ vers le palais de reporting.
+. Développer la _capacité physique_
+. Développez jusqu'au niveau le plus bas du _Data Center_
+. Faites glisser _Data Center_ vers la palette Rapports.
+. Augmenter la _Capacité (Mo)_
+. Faites glisser _Capacité (Mo)_ vers la palette Rapports.
+. Faites glisser _Capacité utilisée (Mo)_ vers la palette Rapports.
 . Exécutez le rapport en sélectionnant un type de sortie dans le menu *Exécuter*.
 +
 image:Reporting_Running_A_Report.png["Sélection d'une sortie de rapport"]
@@ -51,6 +51,6 @@ image:Reporting_Running_A_Report.png["Sélection d'une sortie de rapport"]
 
 
 .Résultat
-Un rapport similaire à ce qui suit est créé :
+Un rapport similaire au suivant est créé :
 
 image:Reporting-Example1.png["Exemple de rapport"]

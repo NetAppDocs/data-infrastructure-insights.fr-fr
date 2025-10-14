@@ -2,15 +2,15 @@
 sidebar: sidebar 
 permalink: task_dc_cohesity_smartfiles.html 
 keywords: data collector, cohesity 
-summary: Configuration du collecteur de données SmartFiles de Cohesity. 
+summary: Configuration du collecteur de données Cohesity SmartFiles. 
 ---
-= Le collecteur de données SmartFiles de Cohesity
+= Collecteur de données Cohesity SmartFiles
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Ce collecteur basé sur l'API REST va acquérir un cluster Cohesity, découvrant les « vues » (comme les volumes internes Data Infrastructure Insights), les différents nœuds, ainsi que la collecte des metrics de performance.
+Ce collecteur basé sur l'API REST acquerra un cluster Cohesity, découvrira les « vues » (en tant que volumes internes Data Infrastructure Insights ), les différents nœuds, ainsi que collectera des mesures de performances.
 
 
 
@@ -21,10 +21,10 @@ Ce collecteur basé sur l'API REST va acquérir un cluster Cohesity, découvrant
 | Champ | Description 
 
 
-| Groupe d'instruments IP de Cohesity | Adresse IP du cluster Cohesity 
+| IP du cluster Cohesity | Adresse IP du cluster Cohesity 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du cluster Cohesity 
+| Nom d'utilisateur | Nom d'utilisateur pour le cluster Cohesity 
 
 
 | Mot de passe | Mot de passe utilisé pour le cluster Cohesity 
@@ -41,13 +41,13 @@ Ce collecteur basé sur l'API REST va acquérir un cluster Cohesity, découvrant
 | Port TCP | Port utilisé pour la communication TCP avec le cluster Cohesity 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 60 minutes. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 60 minutes. 
 
 
-| Intervalle d'interrogation des performances (min) | Intervalle entre les sondages de performances. La valeur par défaut est 900 secondes. 
+| Intervalle de sondage des performances (min) | Intervalle entre les sondages de performance. La valeur par défaut est de 900 secondes. 
 |===
 
 
 == Dépannage
 
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

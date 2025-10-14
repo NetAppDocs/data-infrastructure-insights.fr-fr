@@ -10,17 +10,17 @@ summary: Configuration du collecteur de données Oracle ZFS.
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur de données Oracle ZFS Storage Appliance pour collecter les données d'inventaire et de performances.
+Data Infrastructure Insights utilise le collecteur de données Oracle ZFS Storage Appliance pour collecter des données d'inventaire et de performances.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire avec le collecteur de données Oracle ZFS. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert des informations d'inventaire avec le collecteur de données Oracle ZFS.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
 | Disque (SSD) | Disque 
@@ -32,41 +32,41 @@ Data Infrastructure Insights acquiert les informations d'inventaire avec le coll
 | Contrôleur | Nœud de stockage 
 
 
-| LUN | Volumétrie 
+| LUN | Volume 
 
 
-| Mappage de LUN | Carte de volume 
+| Carte LUN | Carte des volumes 
 
 
-| Initiateur,cible | Masque de volume 
+| Initiateur, cible | Masque de volume 
 
 
-| Partagez | Volume interne 
+| Partager | Volume interne 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour cette source de données.
 
 
 
-== De formation
+== Exigences
 
-* Noms d'hôte pour le ZFS Controller-1 et le ZFS Controller-2
-* Nom d'utilisateur et mot de passe administrateur
-* Port requis : 215 HTTP/HTTPS
-
-
+* Noms d'hôte pour le contrôleur ZFS-1 et le contrôleur ZFS-2
+* Nom d'utilisateur et mot de passe de l'administrateur
+* Exigence de port : 215 HTTP/HTTPS
 
 
-== Mesures de performances requises
-
-Les appliances Oracle ZFS offrent aux administrateurs de stockage une flexibilité considérable pour la capture des statistiques de performances. Data Infrastructure Insights attend de vous que _chaque_ contrôleur d'une paire haute disponibilité soit configuré pour capturer les mesures suivantes :
-
-* smb2.ops[part]
-* nfs3.ops[part]
-* nfs4.ops[part]
-* nfs4-1.ops[part]
 
 
-Si le contrôleur n'est pas en mesure de capturer l'un ou l'autre de ces éléments, les informations sur l'infrastructure de données n'auront probablement pas, ou ne sous-auront pas, la charge de travail sur les « volumes internes ».
+== Mesures de performance requises
+
+Les appliances Oracle ZFS offrent aux administrateurs de stockage une grande flexibilité pour capturer les statistiques de performances.  Data Infrastructure Insights s'attend à ce que chaque contrôleur d'une paire à haute disponibilité soit configuré pour capturer les métriques suivantes :
+
+* smb2.ops[partager]
+* nfs3.ops[partager]
+* nfs4.ops[partager]
+* nfs4-1.ops[partager]
+
+
+Si le contrôleur ne parvient pas à capturer tout ou partie de ces éléments, Data Infrastructure Insights risque de ne pas avoir, ou de sous-déclarer, la charge de travail sur les « volumes internes ».
 
 
 
@@ -77,16 +77,16 @@ Si le contrôleur n'est pas en mesure de capturer l'un ou l'autre de ces éléme
 | Champ | Description 
 
 
-| Nom d'hôte ZFS Controller-1 | Nom d'hôte du contrôleur de stockage 1 
+| Nom d'hôte du contrôleur ZFS-1 | Nom d'hôte pour le contrôleur de stockage 1 
 
 
-| Nom d'hôte ZFS Controller-2 | Nom d'hôte du contrôleur de stockage 2 
+| Nom d'hôte du contrôleur ZFS-2 | Nom d'hôte pour le contrôleur de stockage 2 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du compte d'administrateur du système de stockage 
+| Nom d'utilisateur | Nom d'utilisateur pour le compte d'utilisateur administrateur du système de stockage 
 
 
-| Mot de passe | Mot de passe du compte utilisateur administrateur 
+| Mot de passe | Mot de passe pour le compte utilisateur administrateur 
 |===
 
 
@@ -100,19 +100,19 @@ Si le contrôleur n'est pas en mesure de capturer l'un ou l'autre de ces éléme
 | Type de connexion | HTTPS ou HTTP, affiche également le port par défaut 
 
 
-| Remplacer le port de connexion | Si ce champ est vide, utilisez le port par défaut dans le champ Type de connexion, sinon entrez le port de connexion à utiliser 
+| Remplacer le port de connexion | Si vide, utilisez le port par défaut dans le champ Type de connexion, sinon entrez le port de connexion à utiliser 
 
 
-| Intervalle d'interrogation d'inventaire | La valeur par défaut est 60 secondes 
+| Intervalle d'interrogation de l'inventaire | La valeur par défaut est de 60 secondes 
 
 
-| Intervalle d'interrogation des performances (s) | La valeur par défaut est 300. 
+| Intervalle d'interrogation des performances (sec) | La valeur par défaut est 300. 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -120,43 +120,43 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2a, 2a"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
  a| 
-« Identifiants de connexion non valides »
+« Informations de connexion non valides »
  a| 
-Valider le compte utilisateur et le mot de passe ZFS
-
-
-
- a| 
-« Échec de la demande avec l'état 404 \https://.....:215/api/access/v1"
- a| 
-Votre baie ZFS est peut-être trop ancienne pour prendre en charge l'API REST. AK 2013.1.3.0 a été la première version de ZFS compatible avec l'API REST, et toutes les appliances ZFS ne peuvent pas être mises à niveau vers celle-ci.
+valider le compte utilisateur et le mot de passe Zfs
 
 
 
  a| 
-"Erreur de configuration" avec le message d'erreur "le service REST est désactivé"
+« La requête a échoué avec le statut 404 \https://.....:215/api/access/v1 »
  a| 
-Vérifiez que le service REST est activé sur ce périphérique.
+Votre tableau ZFS est peut-être trop ancien pour bénéficier de la prise en charge de l'API REST.  AK 2013.1.3.0 a été la première version du système d'exploitation ZFS compatible avec l'API REST, et tous les appareils ZFS ne peuvent pas être mis à niveau vers cette version.
 
 
 
  a| 
-"Erreur de configuration" avec message d'erreur "utilisateur non autorisé pour la commande"
+« Erreur de configuration » avec le message d'erreur « Le service REST est désactivé »
  a| 
-Cette erreur est probablement due à certains rôles (par exemple, 'Advanced_analytics') qui ne sont pas inclus pour l'utilisateur configuré.
+Vérifiez que le service REST est activé sur cet appareil.
 
-L'application de la portée analytique pour l'utilisateur avec un rôle en lecture seule peut supprimer l'erreur. Voici la procédure à suivre :
 
-. Sur le système ZFS, à partir de l'écran Configuration -> utilisateurs, déplacez votre souris sur le rôle et double-cliquez pour autoriser la modification
-. Sélectionnez « analyse » dans le menu déroulant objectif. Une liste des propriétés possibles s'affiche.
-. Cliquez sur la case la plus en haut pour sélectionner les trois propriétés.
-. Cliquez sur le bouton Ajouter à droite.
-. Cliquez sur le bouton appliquer en haut à droite de la fenêtre contextuelle. La fenêtre contextuelle se ferme.
+
+ a| 
+« Erreur de configuration » avec le message d'erreur « Utilisateur non autorisé pour la commande »
+ a| 
+Cette erreur est probablement due au fait que certains rôles (par exemple, « advanced_analytics ») ne sont pas inclus pour l'utilisateur configuré.
+
+L’application de la portée Analytics pour l’utilisateur avec un rôle en lecture seule peut supprimer l’erreur. Suivez ces étapes :
+
+. Sur le système ZFs, depuis l'écran Configuration -> Utilisateurs, déplacez votre souris sur le rôle et double-cliquez pour autoriser la modification
+. Sélectionnez « Analyse » dans le menu déroulant Portée.  Une liste des propriétés possibles apparaît.
+. Cliquez sur la case à cocher la plus haute et elle sélectionnera les trois propriétés.
+. Cliquez sur le bouton Ajouter sur le côté droit.
+. Cliquez sur le bouton Appliquer en haut à droite de la fenêtre contextuelle.  La fenêtre contextuelle se fermera.
 
 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

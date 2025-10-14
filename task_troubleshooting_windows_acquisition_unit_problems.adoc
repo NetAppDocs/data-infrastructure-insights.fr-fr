@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_troubleshooting_windows_acquisition_unit_problems.html 
-summary: 'Conseils de dépannage pour les problèmes d"unité d"acquisition sous Windows.' 
+summary: Conseils de dépannage pour les problèmes d’unité d’acquisition sous Windows. 
 keywords: AU, acquisition unit, trioubleshooting 
 ---
 = Dépannage des problèmes d'unité d'acquisition sous Windows
@@ -10,65 +10,65 @@ keywords: AU, acquisition unit, trioubleshooting
 
 
 [role="lead"]
-Vous trouverez ici des suggestions de dépannage des problèmes liés aux unités d'acquisition sur un serveur Windows.
+Vous trouverez ici des suggestions pour résoudre les problèmes liés aux unités d'acquisition sur un serveur Windows.
 
 |===
 
 
-| *Problème:* | *Essayez ceci:* 
+| *Problème:* | *Essayez ceci :* 
 
 
-| Le statut au sur la page *observabilité > collecteurs* de l'onglet *unités d'acquisition* affiche "certificat expiré" ou "certificat révoqué" . | Cliquez sur le menu à droite de l'UA et sélectionnez *Restaurer la connexion*. Suivez les instructions pour restaurer votre unité d'acquisition : 1. Arrêtez le service de l'unité d'acquisition (au). Vous pouvez cliquer sur le bouton _Copy Stop Command_ pour copier rapidement la commande dans le presse-papiers, puis la coller dans une invite de commande sur la machine d'acquisition. 2. Créez un fichier nommé « token » dans le dossier _c:\Program Files\Cloud Insights\acquisition Unit\conf\_ sur le dossier au. 3. Cliquez sur le bouton _Copier le token_ et collez ce token dans le fichier que vous avez créé. 4. Redémarrez le service AU. Cliquez sur le bouton _Copy Restart Command_ et collez la commande dans une invite de commande sur l'au. 
+| Le statut AU sur la page *Observabilité > Collecteurs* dans l'onglet *Unités d'acquisition* affiche « Certificat expiré » ou « Certificat révoqué ». | Cliquez sur le menu à droite de l'AU et sélectionnez *Restaurer la connexion*.  Suivez les instructions pour restaurer votre unité d’acquisition : 1.  Arrêtez le service Unité d'acquisition (AU).  Vous pouvez cliquer sur le bouton _Copier la commande d'arrêt_ pour copier rapidement la commande dans le presse-papiers, puis coller cette commande dans une invite de commande sur la machine de l'unité d'acquisition. 2.  Créez un fichier nommé « token » dans le dossier _c:\Program Files\ Cloud Insights\Acquisition Unit\conf\_ sur l'AU. 3.  Cliquez sur le bouton _Copier le jeton_ et collez ce jeton dans le fichier que vous avez créé. 4.  Redémarrez le service AU.  Cliquez sur le bouton _Copier la commande de redémarrage_ et collez la commande dans une invite de commande sur l'AU. 
 
 
-| Configuration serveur non respectée | Assurez-vous que votre serveur d'unité d'acquisition ou votre VM se rencontrent link:concept_acquisition_unit_requirements.html["de formation"] 
+| Les exigences du serveur ne sont pas satisfaites | Assurez-vous que votre serveur d'unité d'acquisition ou votre machine virtuelle répondlink:concept_acquisition_unit_requirements.html["exigences"] 
 
 
-| Configuration réseau non respectée | Assurez-vous que le serveur/la machine virtuelle de votre unité d'acquisition peut accéder à votre environnement Data Infrastructure Insights (<environment-name>.c01.cloudInsights.NetApp.com) via une connexion SSL sur le port 443. Essayez les commandes suivantes : _ping <environment-name>.c01.cloudInsights.NetApp.com_ _traceroute <environment-name>.c01.cloudInsights.NetApp.com_ _curl \https://<environment-name>.c01.cloudInsights.NetApp.com_ _wget \https://<environment-name>.c01.cloudInsights.NetApp.com_ Notez que le port 443 doit être ouvert depuis l'infrastructure de données sortantes. 
+| Les exigences du réseau ne sont pas satisfaites | Assurez-vous que votre serveur/VM d'unité d'acquisition peut accéder à votre environnement Data Infrastructure Insights (<environment-name>.c01.cloudinsights.netapp.com) via une connexion SSL sur le port 443.  Essayez les commandes suivantes : _ping <environment-name>.c01.cloudinsights.netapp.com_ _traceroute <environment-name>.c01.cloudinsights.netapp.com_ _curl \https://<environment-name>.c01.cloudinsights.netapp.com_ _wget \https://<environment-name>.c01.cloudinsights.netapp.com_ Notez que le port 443 doit être ouvert « sortant » de l'AU vers Data Infrastructure Insights. 
 
 
-| Le serveur proxy n'est pas configuré correctement | Vérifiez les paramètres de votre proxy et désinstallez/réinstallez le logiciel de l'unité d'acquisition si nécessaire pour entrer les paramètres de proxy corrects. 1. Essayez de « boucler ». Reportez-vous aux informations/documentation sur "boucle homme" concernant les proxys : --préproxy, --proxy-* (c'est un caractère générique "*" car Curl prend en charge de nombreux paramètres proxy). 2. Essayez « wget ». Consultez la documentation pour connaître les options du proxy. 
+| Le serveur proxy n'est pas configuré correctement | Vérifiez vos paramètres proxy et désinstallez/réinstallez le logiciel de l'unité d'acquisition si nécessaire pour entrer les paramètres proxy corrects. 1.  Essayez « curl ».  Reportez-vous aux informations/documentations « man curl » concernant les proxys : --preproxy, --proxy-* (il s'agit d'un caractère générique « * » car curl prend en charge de nombreux paramètres de proxy). 2.  Essayez "wget".  Consultez la documentation pour les options proxy. 
 
 
-| L'installation de l'unité d'acquisition a échoué dans Data Infrastructure Insights avec des erreurs d'identification lors du démarrage du service d'acquisition (et visible dans le fichier acq.log). | Cela peut être dû à l'inclusion de caractères spéciaux dans les informations d'identification du proxy. Désinstallez l'au (_sudo cloudInsights-uninstall.sh_) et réinstallez-le sans utiliser de caractères spéciaux. 
+| L'installation de l'unité d'acquisition a échoué dans Data Infrastructure Insights avec des erreurs d'informations d'identification lors du démarrage du service d'acquisition (et visible dans le fichier acq.log). | Cela peut être dû à l'inclusion de caractères spéciaux dans les informations d'identification du proxy.  Désinstallez l'AU (_sudo cloudinsights-uninstall.sh_) et réinstallez-le sans utiliser de caractères spéciaux. 
 
 
 | Problèmes d'autorisation | Assurez-vous d'être connecté en tant qu'utilisateur avec des autorisations d'administrateur 
 
 
-| Acquisition non en cours d'exécution | Vous trouverez des informations dans le fichier acq.log dans le dossier _<répertoire d'installation>\Cloud Insights\acquisition Unit\log_. Redémarrez l'acquisition via les services Windows 
+| L'acquisition ne fonctionne pas | Vous pouvez trouver des informations dans le fichier acq.log dans le dossier _<répertoire d'installation>\ Cloud Insights\Acquisition Unit\log_.  Redémarrer l'acquisition via les services Windows 
 
 
-| Problèmes de collecte de données | Envoyez un rapport d'erreur à partir de la page d'accueil du Data Collector en cliquant sur le bouton « Envoyer un rapport d'erreur » 
+| Problèmes de collecte de données | Envoyez un rapport d'erreur depuis la page de destination du collecteur de données en cliquant sur le bouton « Envoyer un rapport d'erreur » 
 
 
-| État : échec du signal de détection | L'unité d'acquisition (au) envoie un signal de détection à Data Infrastructure Insights toutes les 60 secondes pour renouveler son bail. Si l'appel de pulsation échoue en raison d'un problème de réseau ou si Data Infrastructure Insights ne répond pas, l'heure de bail de l'au n'est pas mise à jour. Lorsque la durée de bail de l'au expire, Data Infrastructure Insights affiche l'état « échec de Heartbeat ». Étapes de dépannage : * Vérifiez la connexion réseau entre l'unité d'acquisition sever et CloudInsights. * Vérifiez si le service de l'unité d'acquisition est en cours d'exécution. Si le service n'est pas en cours d'exécution, démarrez-le. * Vérifiez le journal de l'unité d'acquisition (<dossier d'installation>:\Program Files\Cloud Insights\acquisition Unit\log\acq.log) pour voir s'il y a des erreurs. 
+| Statut : Échec du battement de cœur | L'unité d'acquisition (AU) envoie un battement de cœur à Data Infrastructure Insights toutes les 60 secondes pour renouveler son bail.  Si l'appel de pulsation échoue en raison d'un problème de réseau ou d'une absence de réponse de Data Infrastructure Insights, la durée de bail de l'AU n'est pas mise à jour.  Lorsque la durée du bail de l'AU expire, Data Infrastructure Insights affiche le statut « Échec du battement de cœur ».  Étapes de dépannage : * Vérifiez la connexion réseau entre le serveur de l’unité d’acquisition et CloudInsights.  * Vérifiez si le service Unité d’acquisition est en cours d’exécution.  Si le service n'est pas en cours d'exécution, démarrez-le.  * Vérifiez le journal de l'unité d'acquisition (<Répertoire d'installation>:\Program Files\ Cloud Insights\Acquisition Unit\log\acq.log) pour voir s'il y a des erreurs. 
 
 
-| Je vois un message « Heartbeat Error: | Cette erreur peut se produire en cas d'interruption du réseau entraînant l'interruption de la communication entre l'unité d'acquisition et l'environnement Data Infrastructure Insights pendant plus d'une minute. Vérifiez que la connexion entre l'au et Data Infrastructure Insights est stable et active. 
+| Je vois un message « Erreur de battement de cœur : » | Cette erreur peut se produire en cas d'interruption du réseau entraînant une interruption de la communication entre l'unité d'acquisition et l'environnement Data Infrastructure Insights pendant plus d'une minute.  Vérifiez que la connexion entre l’AU et Data Infrastructure Insights est stable et active. 
 |===
 
 
-== Considérations sur Proxies et pare-feu
+== Considérations sur les proxys et les pare-feu
 
-Si votre entreprise a besoin d'un proxy pour accéder à Internet, vous devrez peut-être comprendre le comportement du proxy de votre entreprise et rechercher certaines exceptions pour que Data Infrastructure Insights fonctionne. Gardez à l'esprit les éléments suivants :
+Si votre organisation nécessite l'utilisation d'un proxy pour l'accès à Internet, vous devrez peut-être comprendre le comportement du proxy de votre organisation et rechercher certaines exceptions pour que Data Infrastructure Insights fonctionne.  Gardez à l’esprit les points suivants :
 
-* Tout d'abord, votre organisation bloque-t-elle l'accès par défaut et autorise-t-elle uniquement l'accès à des sites ou domaines Web spécifiques par exception ? Si c'est le cas, vous devrez ajouter le domaine suivant à votre liste d'exceptions :
+* Tout d’abord, votre organisation bloque-t-elle l’accès par défaut et autorise-t-elle uniquement l’accès à des sites Web/domaines spécifiques par exception ?  Si tel est le cas, vous devrez ajouter le domaine suivant à votre liste d’exceptions :
 +
  *.cloudinsights.netapp.com
 +
-Votre unité d'acquisition Data Infrastructure Insights, ainsi que vos interactions dans un navigateur Web avec Data Infrastructure Insights, seront toutes effectuées sur les hôtes portant ce nom de domaine.
+Votre unité d'acquisition Data Infrastructure Insights , ainsi que vos interactions dans un navigateur Web avec Data Infrastructure Insights, seront toutes dirigées vers des hôtes portant ce nom de domaine.
 
-* Deuxièmement, certains proxys tentent d'effectuer une inspection TLS/SSL en usurpant l'identité des sites Web Data Infrastructure Insights avec des certificats numériques non générés par NetApp. Le modèle de sécurité de l'unité d'acquisition Data Infrastructure Insights est fondamentalement incompatible avec ces technologies. Vous aurez également besoin du nom de domaine ci-dessus, à l'exception de cette fonctionnalité, pour que l'unité d'acquisition Data Infrastructure Insights se connecte avec succès à Data Infrastructure Insights et facilite la découverte des données.
-
-
+* Deuxièmement, certains proxys tentent d’effectuer une inspection TLS/SSL en se faisant passer pour des sites Web Data Infrastructure Insights avec des certificats numériques non générés par NetApp.  Le modèle de sécurité de l’unité d’acquisition Data Infrastructure Insights est fondamentalement incompatible avec ces technologies.  Vous aurez également besoin du nom de domaine ci-dessus, exclu de cette fonctionnalité, pour que l'unité d'acquisition de Data Infrastructure Insights puisse se connecter avec succès à Data Infrastructure Insights et faciliter la découverte de données.
 
 
-=== Affichage des noeuds finaux du proxy
 
-Vous pouvez afficher vos noeuds finaux proxy en cliquant sur le lien *Paramètres proxy* lorsque vous choisissez un collecteur de données pendant l'intégration, ou sur le lien sous _Paramètres proxy_ de la page *aide > support*. Un tableau comme celui ci-dessous s'affiche. Si vous avez la sécurité de la charge de travail dans votre environnement, les URL de point final configurées s'affichent également dans cette liste.
 
-image:ProxyEndpoints_NewTable.png["Table des noeuds finaux du proxy"]
+=== Affichage des points de terminaison proxy
+
+Vous pouvez afficher vos points de terminaison proxy en cliquant sur le lien *Paramètres proxy* lors du choix d'un collecteur de données lors de l'intégration, ou sur le lien sous _Paramètres proxy_ sur la page *Aide > Assistance*.  Un tableau comme celui-ci s’affiche.  Si vous disposez de Workload Security dans votre environnement, les URL des points de terminaison configurés seront également affichées dans cette liste.
+
+image:ProxyEndpoints_NewTable.png["Tableau des points de terminaison proxy"]
 
 
 
@@ -76,4 +76,4 @@ image:ProxyEndpoints_NewTable.png["Table des noeuds finaux du proxy"]
 
 Des conseils de dépannage supplémentaires peuvent être trouvés dans lelink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["Base de connaissances NetApp"] (connexion d'assistance requise).
 
-Des informations de support supplémentaires sont disponibles sur la page Data Infrastructure Insightslink:concept_requesting_support.html["Assistance"].
+Des informations d'assistance supplémentaires peuvent être trouvées dans Data Infrastructure Insightslink:concept_requesting_support.html["Support"] page.

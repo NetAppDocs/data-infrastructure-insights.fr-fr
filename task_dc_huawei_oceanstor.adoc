@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_huawei_oceanstor.html 
 keywords: data collector, Huawei, OceanStor, Dorado 
-summary: 'Configuration du collecteur de données Huawei OceanStor (REST/HTTPS)' 
+summary: 'Configuration du collecteur de données Huawei OceanStor (REST/HTTPS).' 
 ---
 = Collecteur de données Huawei OceanStor
 :hardbreaks:
@@ -10,20 +10,20 @@ summary: 'Configuration du collecteur de données Huawei OceanStor (REST/HTTPS)'
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur de données Huawei OceanStor (REST/HTTPS) pour détecter l'inventaire et les performances des systèmes de stockage Huawei OceanStor et OceanStor Dorado.
+Data Infrastructure Insights utilise le collecteur de données Huawei OceanStor (REST/HTTPS) pour découvrir l'inventaire et les performances du stockage Huawei OceanStor et OceanStor Dorado.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations suivantes sur l'inventaire et les performances à partir de Huawei OceanStor. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire et de performances suivantes auprès de Huawei OceanStor.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Pool de stockage | Pool de stockage 
+| Piscine de stockage | Piscine de stockage 
 
 
 | Système de fichiers | Volume interne 
@@ -32,34 +32,34 @@ Data Infrastructure Insights acquiert les informations suivantes sur l'inventair
 | Contrôleur | Nœud de stockage 
 
 
-| Port FC (mappé) | Carte de volume 
+| Port FC (cartographié) | Carte des volumes 
 
 
 | Initiateur FC hôte (mappé) | Masque de volume 
 
 
-| Partage NFS/CIFS | Partagez 
+| Partage NFS/CIFS | Partager 
 
 
 | Cible de liaison iSCSI | Nœud cible iSCSI 
 
 
-| Initiateur de liaison iSCSI | Nœud initiateur iSCSI 
+| Initiateur de lien iSCSI | Nœud initiateur iSCSI 
 
 
 | Disque | Disque 
 
 
-| LUN | Volumétrie 
+| LUN | Volume 
 |===
 
 
-== De formation
+== Exigences
 
-Les conditions suivantes sont requises pour configurer ce collecteur de données :
+Les exigences suivantes sont requises pour configurer ce collecteur de données :
 
-* Adresse IP du périphérique
-* Informations d'identification permettant d'accéder au gestionnaire de périphériques OceanStor
+* Adresse IP de l'appareil
+* Informations d'identification pour accéder au gestionnaire de périphériques OceanStor
 * Le port 8088 doit être disponible
 
 
@@ -72,13 +72,13 @@ Les conditions suivantes sont requises pour configurer ce collecteur de données
 | Champ | Description 
 
 
-| Adresse IP de l'hôte OceanStor | Adresse IP ou nom de domaine complet du OceanStor Device Manager 
+| Adresse IP de l'hôte OceanStor | Adresse IP ou nom de domaine complet du gestionnaire de périphériques OceanStor 
 
 
-| Nom d'utilisateur | Nom utilisé pour se connecter à OceanStor Device Manager 
+| Nom d'utilisateur | Nom utilisé pour se connecter au gestionnaire de périphériques OceanStor 
 
 
-| Mot de passe | Mot de passe utilisé pour se connecter à OceanStor Device Manager 
+| Mot de passe | Mot de passe utilisé pour se connecter au gestionnaire de périphériques OceanStor 
 |===
 
 
@@ -89,16 +89,16 @@ Les conditions suivantes sont requises pour configurer ce collecteur de données
 | Champ | Description 
 
 
-| Port TCP | Port TCP utilisé pour la connexion à OceanStor Device Manager. La valeur par défaut est 8088. 
+| Port TCP | Port TCP utilisé pour se connecter à OceanStor Device Manager.  La valeur par défaut est 8088. 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 60 minutes. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 60 minutes. 
 
 
-| Intervalle d'interrogation des performances (s). | La valeur par défaut est 300 secondes. 
+| Intervalle d'interrogation des performances (sec). | La valeur par défaut est de 300 secondes. 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur ce Data Collector sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

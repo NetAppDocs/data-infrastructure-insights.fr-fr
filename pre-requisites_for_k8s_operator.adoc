@@ -11,74 +11,74 @@ summary: 'Data Infrastructure Insights prend en charge Telegraf en tant qu"agent
 
 
 [role="lead"]
-Lisez ces informations avant d'installer ou de mettre à niveau link:task_config_telegraf_agent_k8s.html["Opérateur de surveillance Kubernetes"].
+Lisez ces informations avant d'installer ou de mettre à niveau lelink:task_config_telegraf_agent_k8s.html["Opérateur de surveillance Kubernetes"] .
 
 |===
-| Composant | Conditions requises 
+| Composant | Exigence 
 
 
-| Version Kubernetes | Kubernetes v1.20 et versions ultérieures. 
+| Version de Kubernetes | Kubernetes v1.20 et supérieur. 
 
 
 | Distributions Kubernetes | AWS Elastic Kubernetes Service (EKS) Azure Kubernetes Service (AKS) Google Kubernetes Engine (GKE) Red Hat OpenShift Rancher Kubernetes Engine (RKE) VMware Tanzu 
 
 
-| Linux | Data Infrastructure Insights ne prend pas en charge les nœuds qui s'exécutent avec l'architecture Arm64. Surveillance réseau : doit exécuter le noyau Linux version 4.18.0 ou ultérieure. Le système d'exploitation de photons n'est pas pris en charge. 
+| Système d'exploitation Linux | Data Infrastructure Insights ne prend pas en charge les nœuds exécutés avec l’architecture Arm64.  Surveillance du réseau : doit exécuter le noyau Linux version 4.18.0 ou supérieure.  Photon OS n'est pas pris en charge. 
 
 
-| Étiquettes | Les informations d'infrastructure de données prennent en charge la surveillance des nœuds Kubernetes exécutant Linux, en spécifiant un sélecteur de nœuds Kubernetes qui recherche les étiquettes Kubernetes suivantes sur ces plateformes : Kubernetes v1.20 et versions ultérieures : Kubernetes.io/os = linux Rancher + bétail.io comme plateforme d'orchestration/Kubernetes : bétail.io/os = linux 
+| Étiquettes | Data Infrastructure Insights prend en charge la surveillance des nœuds Kubernetes qui exécutent Linux, en spécifiant un sélecteur de nœud Kubernetes qui recherche les étiquettes Kubernetes suivantes sur ces plates-formes : Kubernetes v1.20 et versions ultérieures : Kubernetes.io/os = linux Rancher + cattle.io comme plate-forme d'orchestration/Kubernetes : cattle.io/os = linux 
 
 
-| Commandes | Les commandes curl et kubectl doivent être disponibles.; pour de meilleurs résultats, ajoutez ces commandes au CHEMIN. 
+| Commandes | Les commandes curl et kubectl doivent être disponibles. Pour de meilleurs résultats, ajoutez ces commandes au PATH. 
 
 
-| Connectivité | Kubectl cli est configuré pour communiquer avec le cluster K8s cible et dispose d'une connectivité Internet à votre environnement Data Infrastructure Insights. Si vous êtes derrière un proxy pendant l'installation, suivez les instructions de link:task_config_telegraf_agent_k8s.html#configuring-proxy-support["Configuration du support de proxy"]la section installation de l'opérateur. Pour un audit et un reporting précis des données, synchronisez l'heure sur la machine Agent à l'aide du protocole NTP (Network Time Protocol) ou SNTP (simple Network Time Protocol). 
+| Connectivité | kubectl cli est configuré pour communiquer avec le cluster K8s cible et disposer d'une connectivité Internet à votre environnement Data Infrastructure Insights .  Si vous êtes derrière un proxy lors de l'installation, suivez les instructions dulink:task_config_telegraf_agent_k8s.html#configuring-proxy-support["Configuration de la prise en charge du proxy"] section de l'installation de l'opérateur.  Pour un audit et des rapports de données précis, synchronisez l'heure sur la machine Agent à l'aide du protocole NTP (Network Time Protocol) ou du protocole SNTP (Simple Network Time Protocol). 
 
 
-| Autre | Si vous utilisez OpenShift 4.6 ou une version supérieure, vous devez suivre le  en plus de vous link:task_config_telegraf_agent_k8s.html#openshift-instructions["Instructions OpenShift"]assurer que ces conditions préalables sont remplies. 
+| Autre | Si vous utilisez OpenShift 4.6 ou supérieur, vous devez suivre leslink:task_config_telegraf_agent_k8s.html#openshift-instructions["Instructions OpenShift"] en plus de veiller à ce que ces conditions préalables soient respectées. 
 
 
-| Jeton d'API | Si vous redéployez l'opérateur (c'est-à-dire que vous le mettez à jour ou le remplacez), il n'est pas nécessaire de créer un nouveau jeton d'API ; vous pouvez réutiliser le jeton précédent. 
+| Jeton API | Si vous redéployez l'opérateur (c'est-à-dire que vous le mettez à jour ou le remplacez), il n'est pas nécessaire de créer un nouveau jeton API ; vous pouvez réutiliser le jeton précédent. 
 |===
 
 
-== Points importants à noter avant de commencer
+== Choses importantes à noter avant de commencer
 
-Si vous <<using-a-custom-or-private-docker-repository,référentiel personnalisé>>utilisez un <<configuring-proxy-support,proxy>>, utilisez un , ou <<openshift-instructions,OpenShift>>, lisez attentivement les sections suivantes.
+Si vous courez avec un<<configuring-proxy-support,procuration>> , avoir un<<using-a-custom-or-private-docker-repository,référentiel personnalisé>> , ou utilisent<<openshift-instructions,OpenShift>> , lisez attentivement les sections suivantes.
 
-Lisez également à propos de <<autorisations,Autorisations>>.
+Lire aussi à propos de<<autorisations,Autorisations>> .
 
 
 
-=== Configuration du support de proxy
+=== Configuration de la prise en charge du proxy
 
-Vous pouvez utiliser un proxy sur votre locataire à deux endroits pour installer l'opérateur de surveillance Kubernetes NetApp. Il peut s'agir de systèmes proxy identiques ou distincts :
+Il existe deux endroits où vous pouvez utiliser un proxy sur votre locataire afin d’installer NetApp Kubernetes Monitoring Operator.  Il peut s'agir des mêmes systèmes proxy ou de systèmes proxy distincts :
 
-* Proxy nécessaire lors de l'exécution de l'extrait de code d'installation (à l'aide de « curl ») pour connecter le système sur lequel l'extrait de code est exécuté à votre environnement Data Infrastructure Insights
+* Proxy nécessaire lors de l'exécution de l'extrait de code d'installation (à l'aide de « curl ») pour connecter le système où l'extrait est exécuté à votre environnement Data Infrastructure Insights
 * Proxy requis par le cluster Kubernetes cible pour communiquer avec votre environnement Data Infrastructure Insights
 
 
-Si vous utilisez un proxy pour l'une ou l'autre de ces versions, ou les deux, pour installer le moniteur d'exploitation NetApp Kubernetes, vous devez d'abord vous assurer que votre proxy est configuré pour permettre une bonne communication avec votre environnement Data Infrastructure Insights. Par exemple, dans les serveurs/machines virtuelles depuis lesquels vous souhaitez installer l'opérateur, vous devez être en mesure d'accéder aux informations exploitables de l'infrastructure de données et de télécharger des binaires depuis Data Infrastructure Insights.
+Si vous utilisez un proxy pour l'un ou les deux, pour installer NetApp Kubernetes Operating Monitor, vous devez d'abord vous assurer que votre proxy est configuré pour permettre une bonne communication avec votre environnement Data Infrastructure Insights .  Par exemple, à partir des serveurs/VM à partir desquels vous souhaitez installer l'opérateur, vous devez pouvoir accéder à Data Infrastructure Insights et pouvoir télécharger des binaires depuis Data Infrastructure Insights.
 
-Pour le proxy utilisé pour installer le moniteur d'exploitation NetApp Kubernetes, définissez les variables d'environnement _http_proxy/https_proxy_ avant d'installer l'opérateur. Pour certains environnements proxy, il peut être nécessaire de définir la variable _no_proxy Environment_.
+Pour le proxy utilisé pour installer NetApp Kubernetes Operating Monitor, avant d'installer l'opérateur, définissez les variables d'environnement _http_proxy/https_proxy_.  Pour certains environnements proxy, vous devrez peut-être également définir la variable d'environnement _no_proxy_.
 
-Pour définir la ou les variables, effectuez les opérations suivantes sur votre système *avant* d'installer NetApp Kubernetes Monitoring Operator :
+Pour définir la ou les variables, effectuez les étapes suivantes sur votre système *avant* d'installer NetApp Kubernetes Monitoring Operator :
 
-. Définissez les variables d'environnement _https_proxy_ et/ou _http_proxy_ pour l'utilisateur actuel :
+. Définissez les variables d'environnement _https_proxy_ et/ou _http_proxy_ pour l'utilisateur actuel :
 +
-.. Si le proxy en cours de configuration n'a pas d'authentification (nom d'utilisateur/mot de passe), exécutez la commande suivante :
+.. Si le proxy en cours de configuration ne dispose pas d'authentification (nom d'utilisateur/mot de passe), exécutez la commande suivante :
 +
  export https_proxy=<proxy_server>:<proxy_port>
-.. Si le proxy en cours de configuration dispose d'une authentification (nom d'utilisateur/mot de passe), exécutez la commande suivante :
+.. Si le proxy en cours de configuration dispose d'une authentification (nom d'utilisateur/mot de passe), exécutez cette commande :
 +
  export http_proxy=<proxy_username>:<proxy_password>@<proxy_server>:<proxy_port>
 
 
 
 
-Pour que le proxy utilisé pour votre cluster Kubernetes communique avec votre environnement Data Infrastructure Insights, installez l'opérateur de surveillance Kubernetes NetApp après avoir lu toutes ces instructions.
+Pour que le proxy utilisé pour votre cluster Kubernetes communique avec votre environnement Data Infrastructure Insights , installez NetApp Kubernetes Monitoring Operator après avoir lu toutes ces instructions.
 
-Configurez la section proxy de AgentConfiguration dans Operator-config.yaml avant de déployer l'opérateur de surveillance NetApp Kubernetes.
+Configurez la section proxy d’AgentConfiguration dans operator-config.yaml avant de déployer l’opérateur de surveillance NetApp Kubernetes.
 
 [listing]
 ----
@@ -104,41 +104,41 @@ agent:
 ----
 
 
-=== À l'aide d'un référentiel docker personnalisé ou privé
+=== Utiliser un référentiel Docker personnalisé ou privé
 
-Par défaut, l'opérateur de surveillance Kubernetes NetApp extrait les images du conteneur du référentiel informations exploitables de l'infrastructure de données. Si vous utilisez un cluster Kubernetes comme cible de surveillance et que ce cluster est configuré pour extraire uniquement les images de conteneur à partir d'un référentiel Docker personnalisé ou privé ou d'un registre de conteneurs, vous devez configurer l'accès aux conteneurs requis par l'opérateur de surveillance NetApp Kubernetes.
+Par défaut, l'opérateur de surveillance NetApp Kubernetes extrait les images de conteneur du référentiel Data Infrastructure Insights .  Si vous disposez d'un cluster Kubernetes utilisé comme cible pour la surveillance et que ce cluster est configuré pour extraire uniquement des images de conteneur à partir d'un référentiel Docker personnalisé ou privé ou d'un registre de conteneurs, vous devez configurer l'accès aux conteneurs nécessaires à l'opérateur de surveillance NetApp Kubernetes.
 
-Exécutez l'extrait de code image dans la mosaïque d'installation de NetApp Monitoring Operator. Cette commande permet de se connecter au référentiel Data Infrastructure Insights, d'extraire toutes les dépendances d'image pour l'opérateur et de se déconnecter du référentiel Data Infrastructure Insights. Lorsque vous y êtes invité, saisissez le mot de passe temporaire du référentiel fourni. Cette commande permet de télécharger toutes les images utilisées par l'opérateur, y compris pour les fonctions facultatives. Voir ci-dessous pour connaître les caractéristiques auxquelles ces images sont utilisées.
+Exécutez « Image Pull Snippet » à partir de la mosaïque d’installation de NetApp Monitoring Operator.  Cette commande se connectera au référentiel Data Infrastructure Insights , extraira toutes les dépendances d'image pour l'opérateur et se déconnectera du référentiel Data Infrastructure Insights .  Lorsque vous y êtes invité, saisissez le mot de passe temporaire du référentiel fourni.  Cette commande télécharge toutes les images utilisées par l'opérateur, y compris pour les fonctionnalités optionnelles.  Voir ci-dessous pour les fonctionnalités pour lesquelles ces images sont utilisées.
 
-Fonctionnalités centrales de l'opérateur et surveillance Kubernetes
+Fonctionnalités de l'opérateur principal et surveillance de Kubernetes
 
 * surveillance netapp
 * proxy kube-rbac
-* metrics-état-kube
-* telegraf
-* utilisateur-root-distroless
+* métriques d'état de kube
+* télégraphe
+* utilisateur root sans distribution
 
 
 Journal des événements
 
-* fluent-bit
-* exportateur-événements-kubernetes
+* bit courant
+* exportateur d'événements Kubernetes
 
 
-Performances et carte réseau
+Performances et carte du réseau
 
-* ci-net-observateur
+* ci-net-observer
 
 
-Envoyez l'image de docker de l'opérateur à votre référentiel docker privé, local ou d'entreprise, conformément aux règles de votre entreprise. Assurez-vous que les balises d'image et les chemins de répertoire vers ces images dans votre référentiel sont cohérents avec ceux du référentiel Data Infrastructure Insights.
+Poussez l'image Docker de l'opérateur vers votre référentiel Docker privé/local/d'entreprise conformément à vos politiques d'entreprise.  Assurez-vous que les balises d’image et les chemins d’accès aux répertoires de ces images dans votre référentiel sont cohérents avec ceux du référentiel Data Infrastructure Insights .
 
-Modifiez le déploiement de l'opérateur de surveillance dans Operator-deployment.yaml, et modifiez toutes les références d'image pour utiliser votre référentiel Docker privé.
+Modifiez le déploiement de l'opérateur de surveillance dans operator-deployment.yaml et modifiez toutes les références d'image pour utiliser votre référentiel Docker privé.
 
 ....
 image: <docker repo of the enterprise/corp docker repo>/kube-rbac-proxy:<kube-rbac-proxy version>
 image: <docker repo of the enterprise/corp docker repo>/netapp-monitoring:<version>
 ....
-Modifiez la configuration d'agentConfiguration dans Operator-config.yaml pour refléter le nouvel emplacement docker repo. Créez une nouvelle imagePullSecret pour votre référentiel privé. Pour plus de détails, voir _https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_
+Modifiez AgentConfiguration dans operator-config.yaml pour refléter le nouvel emplacement du référentiel Docker.  Créez un nouveau imagePullSecret pour votre référentiel privé, pour plus de détails, consultez _https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_
 
 [listing]
 ----
@@ -154,21 +154,21 @@ agent:
 
 === Instructions OpenShift
 
-Si vous exécutez sur OpenShift 4.6 ou une version ultérieure, vous devez modifier la configuration d'agentConfiguration dans _operator-config.yaml_ pour activer le paramètre _runPrivileged_ :
+Si vous utilisez OpenShift 4.6 ou une version ultérieure, vous devez modifier AgentConfiguration dans _operator-config.yaml_ pour activer le paramètre _runPrivileged_ :
 
 ....
 # Set runPrivileged to true SELinux is enabled on your kubernetes nodes
 runPrivileged: true
 ....
-OpenShift peut implémenter un niveau de sécurité supplémentaire qui peut bloquer l'accès à certains composants Kubernetes.
+Openshift peut implémenter un niveau de sécurité supplémentaire qui peut bloquer l'accès à certains composants Kubernetes.
 
 
 
 === Autorisations
 
-Si le cluster que vous contrôlez contient des ressources personnalisées qui n'ont pas de ClusterRole link:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles["agrégats à afficher"], vous devez accorder manuellement à l'opérateur l'accès à ces ressources pour les surveiller avec les journaux d'événements.
+Si le cluster que vous surveillez contient des ressources personnalisées qui n'ont pas de ClusterRole,link:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles["agrégats à visualiser"] , vous devrez accorder manuellement à l'opérateur l'accès à ces ressources pour les surveiller avec les journaux d'événements.
 
-. Modifiez _Operator-additional-permissions.yaml_ avant l'installation ou après l'installation, modifiez la ressource _ClusterRole/<namespace>-additional-permissions_
-. Créez une nouvelle règle pour les apiGroups et les ressources souhaités avec les verbes ["get", "Watch", "list"]. Voir \https://kubernetes.io/docs/reference/access-authn-authz/rbac/
+. Modifiez _operator-additional-permissions.yaml_ avant l'installation, ou après l'installation, modifiez la ressource _ClusterRole/<namespace>-additional-permissions_
+. Créez une nouvelle règle pour les apiGroups et ressources souhaités avec les verbes ["get", "watch", "list"].  Voir \ https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 . Appliquez vos modifications au cluster
 

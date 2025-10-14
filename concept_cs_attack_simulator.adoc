@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept_cs_attack_simulator.html 
 keywords: ransomware, simulation, simulator, restrict, attack 
-summary: 'À l"aide d"un script, vous pouvez simuler une attaque par ransomware à des fins de test ou de démonstration de Workload Security' 
+summary: 'À l"aide d"un script, vous pouvez simuler une attaque de ransomware pour tester ou démontrer la sécurité de la charge de travail.' 
 ---
-= Sécurité des charges de travail : simulation d'une attaque
+= Sécurité des charges de travail : simulation d'une attaque
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,48 +14,48 @@ summary: 'À l"aide d"un script, vous pouvez simuler une attaque par ransomware 
 
 
 [role="lead"]
-Vous pouvez utiliser les instructions de cette page pour simuler une attaque à des fins de test ou de démonstration de la sécurité des charges de travail à l'aide du script inclus de simulation d'attaques par ransomware.
+Vous pouvez utiliser les instructions de cette page pour simuler une attaque afin de tester ou de démontrer la sécurité de la charge de travail à l'aide du script de simulation de ransomware inclus.
 
 
 
-== À noter avant de commencer
+== Choses à noter avant de commencer
 
-* Le script de simulation d'attaque par ransomware fonctionne uniquement sur Linux. Le script de simulation doit également générer des alertes de haute confiance dans le cas où l'utilisateur a intégré ONTAP ARP à Workload Security.
+* Le script de simulation de ransomware ne fonctionne que sur Linux.  Le script de simulation doit également générer des alertes de haute confiance dans le cas où l'utilisateur a intégré ONTAP ARP à Workload Security.
 * Workload Security détectera les événements et les alertes générés avec NFS 4.1 uniquement si la version ONTAP est 9.15 ou supérieure.
-* Le script est fourni avec les fichiers d'installation de l'agent de sécurité de la charge de travail. Il est disponible sur n'importe quelle machine sur laquelle un agent de sécurité de la charge de travail est installé.
-* Vous pouvez exécuter le script sur l'agent de sécurité de la charge de travail lui-même ; il n'est pas nécessaire de préparer une autre machine Linux. Cependant, si vous préférez exécuter le script sur un autre système, copiez simplement le script et exécutez-le là.
+* Le script est fourni avec les fichiers d’installation de l’agent Workload Security.  Il est disponible sur toute machine sur laquelle un agent Workload Security est installé.
+* Vous pouvez exécuter le script sur la machine de l’agent Workload Security elle-même ; il n’est pas nécessaire de préparer une autre machine Linux.  Cependant, si vous préférez exécuter le script sur un autre système, copiez simplement le script et exécutez-le là-bas.
 * Les utilisateurs peuvent opter pour le script Python ou Shell en fonction de leurs préférences et des exigences système.
-* Le script Python nécessite des prérequis. Si vous ne souhaitez pas utiliser Python, utilisez le script shell.
+* Le script Python nécessite des installations préalables.  Si vous ne souhaitez pas utiliser Python, utilisez le script shell.
 
 
 
 
-== Lignes directrices :
+== Directives :
 
-Ce script doit être exécuté sur une SVM contenant un dossier contenant un nombre important de fichiers à chiffrer, idéalement 100 ou plus, y compris les fichiers des sous-dossiers. Assurez-vous que les fichiers ne sont pas vides.
+Ce script doit être exécuté sur une SVM contenant un dossier avec un nombre substantiel de fichiers à chiffrer, idéalement 100 ou plus, y compris les fichiers dans les sous-dossiers.  Assurez-vous que les fichiers ne sont pas vides.
 
-Pour générer l'alerte, suspendez temporairement le collecteur avant la création des données de test. Une fois les fichiers d'exemple générés, relancez le collecteur et lancez le processus de chiffrement.
+Pour générer l'alerte, mettez temporairement le collecteur en pause avant la création des données de test.  Une fois les fichiers d’échantillon générés, reprenez le collecteur et lancez le processus de cryptage.
 
 
 
-== Étapes :
+== Mesures:
 
 
 
 === Préparez le système :
 
-Commencez par monter le volume cible sur la machine. Vous pouvez monter une exportation NFS ou CIFS.
+Tout d’abord, montez le volume cible sur la machine.  Vous pouvez monter une exportation NFS ou CIFS.
 
 
 
-==== Pour monter l'exportation NFS sous Linux :
+==== Pour monter l'exportation NFS sous Linux :
 
 [listing]
 ----
 mount -t nfs -o vers=4.0 10.193.177.158:/svmvol1 /mntpt
 mount -t nfs -o vers=4.0 Vserver data IP>:/nfsvol /destinationlinuxfolder
 ----
-Ne montez pas NFS version 4.1 ; il n'est pas pris en charge par Fpolicy.
+Ne montez pas la version NFS 4.1 ; elle n'est pas prise en charge par Fpolicy.
 
 
 
@@ -69,12 +69,12 @@ mount -t cifs //10.193.77.91/sharedfolderincluster /root/destinationfolder/ -o u
 
 ==== Activer la protection autonome contre les ransomwares ONTAP (facultatif) :
 
-Si la version de votre cluster ONTAP est 9.11.1 ou supérieure, vous pouvez activer le service ONTAP Ransomware Protection en exécutant la commande suivante sur la console de commande ONTAP.
+Si la version de votre cluster ONTAP est 9.11.1 ou supérieure, vous pouvez activer le service ONTAP Ransomware Protection en exécutant la commande suivante sur la console de commande ONTAP .
 
  security anti-ransomware volume enable -volume [volume_name] -vserver [svm_name]
-Configurez ensuite un Data Collector :
+Ensuite, configurez un collecteur de données :
 
-. Configurez l'agent de sécurité de la charge de travail si ce n'est déjà fait.
+. Configurez l’agent Workload Security si ce n’est pas déjà fait.
 . Configurez un collecteur de données SVM si ce n’est pas déjà fait.
 . Assurez-vous que le protocole de montage est sélectionné lors de la configuration du collecteur de données.
 
@@ -83,9 +83,9 @@ Configurez ensuite un Data Collector :
 
 == Générez les fichiers d'exemple par programmation :
 
-Avant de créer les fichiers, vous devez d’abord arrêter ou link:task_add_collector_svm.html#play-pause-data-collector["mettre en pause le collecteur de données"] traitement.
+Avant de créer les fichiers, vous devez d’abord arrêter oulink:task_add_collector_svm.html#play-pause-data-collector["mettre en pause le collecteur de données"] traitement.
 
-Avant d'exécuter la simulation, vous devez d'abord ajouter des fichiers à chiffrer. Vous pouvez copier manuellement les fichiers à chiffrer dans le dossier cible ou utiliser l'un des scripts inclus pour les créer par programmation. Quelle que soit la méthode choisie, assurez-vous qu'au moins 100 fichiers sont présents à chiffrer.
+Avant d'exécuter la simulation, vous devez d'abord ajouter les fichiers à chiffrer.  Vous pouvez soit copier manuellement les fichiers à crypter dans le dossier cible, soit utiliser l'un des scripts inclus pour créer les fichiers par programmation.  Quelle que soit la méthode utilisée, assurez-vous qu'au moins 100 fichiers sont présents à crypter.
 
 Si vous choisissez de créer les fichiers par programmation, vous pouvez utiliser le Shell ou Python :
 
@@ -94,7 +94,7 @@ Si vous choisissez de créer les fichiers par programmation, vous pouvez utilise
 === Coquille:
 
 . Connectez-vous à la boîte Agent.
-. Montez un partage NFS ou CIFS depuis la SVM du fichier vers la machine Agent. CD dans ce dossier.
+. Montez un partage NFS ou CIFS depuis la SVM du fichier vers la machine Agent.  CD dans ce dossier.
 . Copiez le script du répertoire d’installation de l’agent (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/create_dataset.sh) vers l’emplacement de montage cible.
 . Exécutez la commande suivante à l'aide des scripts dans le répertoire monté (par exemple /root/demo) pour créer le dossier et les fichiers du jeu de données de test :
 +
@@ -110,25 +110,25 @@ Si vous choisissez de créer les fichiers par programmation, vous pouvez utilise
 
 ==== Script Python Prérequis :
 
-* Installez Python (si ce n'est pas déjà fait).
+* Installez Python (si ce n’est pas déjà fait).
 +
-** Téléchargez Python 3.5.2 ou supérieur depuis  https://www.python.org/[] .
-** Pour vérifier l’installation de Python, exécutez  `python --version` .
+** Téléchargez Python 3.5.2 ou supérieur depuis https://www.python.org/[] .
+** Pour vérifier l’installation de Python, exécutez `python --version` .
 ** Le script Python a été testé sur des versions aussi anciennes que la 3.5.2.
 
 
 * Installez pip s'il n'est pas déjà installé :
 +
-** Téléchargez le script get-pip.py depuis  https://bootstrap.pypa.io/[] .
-** Installer pip en utilisant  `python get-pip.py` .
-** Vérifiez l'installation de pip avec  `pip --version` .
+** Téléchargez le script get-pip.py depuis https://bootstrap.pypa.io/[] .
+** Installer pip en utilisant `python get-pip.py` .
+** Vérifiez l'installation de pip avec `pip --version` .
 
 
 * Bibliothèque PyCryptodome :
 +
 ** Le script utilise la bibliothèque PyCryptodome.
-** Installer PyCryptodome avec  `pip install pycryptodome` .
-** Confirmez l'installation de PyCryptodome en exécutant  `pip show pycryptodome` .
+** Installer PyCryptodome avec `pip install pycryptodome` .
+** Confirmez l'installation de PyCryptodome en exécutant `pip show pycryptodome` .
 
 
 
@@ -138,17 +138,17 @@ Si vous choisissez de créer les fichiers par programmation, vous pouvez utilise
 ==== Script de création de fichier Python :
 
 . Connectez-vous à la boîte Agent.
-. Montez un partage NFS ou CIFS depuis la SVM du fichier vers la machine Agent. CD dans ce dossier.
+. Montez un partage NFS ou CIFS depuis la SVM du fichier vers la machine Agent.  CD dans ce dossier.
 . Copiez le script du répertoire d’installation de l’agent (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/python/create_dataset.py) vers l’emplacement de montage cible.
 . Exécutez la commande suivante à l'aide des scripts dans le répertoire monté (par exemple /root/demo) pour créer le dossier et les fichiers du jeu de données de test :
 +
  'python create_dataset.py'
-. Cela créera 100 fichiers non vides avec différentes extensions dans le dossier de montage sous un répertoire appelé « test_dataset »
+. Cela créera 100 fichiers non vides avec différentes extensions à l'intérieur du dossier de montage sous un répertoire appelé « test_dataset »
 
 
 
 
-== Reprendre le collectionneur
+== Reprendre le collecteur
 
 Si vous avez mis le collecteur en pause avant de suivre ces étapes, assurez-vous de reprendre le collecteur une fois les fichiers d'exemple créés.
 
@@ -156,7 +156,7 @@ Si vous avez mis le collecteur en pause avant de suivre ces étapes, assurez-vou
 
 == Générez les fichiers d'exemple par programmation :
 
-Avant de créer les fichiers, vous devez d’abord arrêter ou link:task_add_collector_svm.html#play-pause-data-collector["mettre en pause le collecteur de données"] traitement.
+Avant de créer les fichiers, vous devez d’abord arrêter oulink:task_add_collector_svm.html#play-pause-data-collector["mettre en pause le collecteur de données"] traitement.
 
 Pour générer une alerte Ransomware, vous pouvez exécuter le script inclus qui simulera une alerte ransomware dans Workload Security.
 
@@ -168,7 +168,7 @@ Pour générer une alerte Ransomware, vous pouvez exécuter le script inclus qui
 . Exécutez la commande suivante à l'aide des scripts dans le répertoire monté (par exemple /root/demo) pour crypter l'ensemble de données de test :
 +
  './simulate_attack.sh'
-. Cela cryptera les fichiers d'échantillons créés sous le répertoire « test_dataset ».
+. Cela cryptera les fichiers d'exemple créés sous le répertoire « test_dataset ».
 
 
 
@@ -180,14 +180,14 @@ Pour générer une alerte Ransomware, vous pouvez exécuter le script inclus qui
 . Exécutez la commande suivante à l'aide des scripts dans le répertoire monté (par exemple /root/demo) pour crypter l'ensemble de données de test :
 +
  'python simulate_attack.py'
-. Cela cryptera les fichiers d'échantillons créés sous le répertoire « test_dataset ».
+. Cela cryptera les fichiers d'exemple créés sous le répertoire « test_dataset ».
 
 
 
 
 == Générer une alerte dans Workload Security
 
-Une fois l'exécution du script du simulateur terminée, une alerte s'affichera sur l'interface Web dans quelques minutes.
+Une fois l’exécution du script du simulateur terminée, une alerte s’affichera sur l’interface Web dans quelques minutes.
 
 Remarque : si toutes les conditions suivantes sont remplies, une alerte de haute confiance sera générée.
 
@@ -196,15 +196,15 @@ Remarque : si toutes les conditions suivantes sont remplies, une alerte de haut
 . Le collecteur de données de sécurité de la charge de travail est ajouté en mode Cluster.
 
 
-Workload Security détecte les modèles de ransomware en fonction du comportement de l'utilisateur tandis qu'ONTAP ARP détecte l'activité de ransomware en fonction des activités de chiffrement dans les fichiers.
+Workload Security détecte les modèles de ransomware en fonction du comportement de l'utilisateur tandis ONTAP ARP détecte l'activité de ransomware en fonction des activités de chiffrement dans les fichiers.
 
-Si les conditions sont remplies, Workload Security marque les alertes comme étant des alertes de haute confiance.
+Si les conditions sont remplies, Workload Security marque les alertes comme alerte de haute confiance.
 
-Exemple d'alerte de haute confiance sur la page de liste des alertes :
+Exemple d’alerte de haute confiance sur la page de liste des alertes :
 
 image:ws_high_confidence_alert.png["Exemple d'alerte de haute confiance, page de liste"]
 
-Exemple de détail d'alerte de haute confiance :
+Exemple de détail d’alerte de haute confiance :
 
 image:ws_high_confidence_alert_detail.png["Exemple d'alerte de haute confiance, page de détails"]
 
@@ -212,6 +212,6 @@ image:ws_high_confidence_alert_detail.png["Exemple d'alerte de haute confiance, 
 
 == Déclenchement de l'alerte plusieurs fois
 
-Workload Security apprend le comportement des utilisateurs et ne génère pas d'alertes sur les attaques répétées de ransomware dans les 24 heures pour le même utilisateur.
+Workload Security apprend le comportement de l'utilisateur et ne génère pas d'alertes en cas d'attaques de ransomware répétées dans les 24 heures pour le même utilisateur.
 
 Pour générer une nouvelle alerte avec un utilisateur différent, veuillez suivre à nouveau les mêmes étapes (création de données de test puis cryptage des données de test).

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_acquisition_unit_requirements.html 
-summary: 'Le serveur ou la machine virtuelle que vous utilisez comme unité d"acquisition doit satisfaire aux exigences minimales.' 
+summary: Le serveur ou la machine virtuelle que vous utilisez comme unité d’acquisition doit répondre aux exigences minimales. 
 keywords: AU, acquisition unit, requirements, sizing 
 ---
 = Exigences relatives à l'unité d'acquisition
@@ -10,57 +10,57 @@ keywords: AU, acquisition unit, requirements, sizing
 
 
 [role="lead"]
-Vous devez installer une unité d'acquisition (au) afin d'obtenir des informations auprès de vos collecteurs de données d'infrastructure (stockage, VM, port, EC2, etc.). Avant d'installer l'unité d'acquisition, assurez-vous que votre locataire répond aux exigences en matière de système d'exploitation, de processeur, de mémoire et d'espace disque.
+Vous devez installer une unité d'acquisition (AU) afin d'acquérir des informations à partir des collecteurs de données de votre infrastructure (stockage, VM, port, EC2, etc.).  Avant d'installer l'unité d'acquisition, vous devez vous assurer que votre locataire répond aux exigences du système d'exploitation, du processeur, de la mémoire et de l'espace disque.
 
 
 
-== De formation
+== Exigences
 
 |===
 
 
-| Composant | Configuration Linux requise | Configuration Windows requise 
+| Composant | Exigences Linux | Configuration requise pour Windows 
 
 
-| Système d'exploitation | Un ordinateur exécutant une version sous licence de l'un des systèmes d'exploitation suivants : * AlmaLinux 9.3 à 9.5 * Centos (64 bits) : 7.2 à 7.9, 8.1 à 8.4, Stream 8, Stream 9 * Debian (64 bits) : 9 à 12 * OpenSUSE Leap 15.1 à 15.6 * Oracle Enterprise Linux (64 bits) : 7.5 à 7.9, 8.1 à 8.10, 9.3 à 9.6 * Red Hat (64 bits) : 7.2 à 7.9, 8.1 à 8.10, 9.1 à 9.6 * Rocky 9.0 à 9.5 * SUSE Linux Enterprise Server 15, 15 SP2 à 15 SP6 * Ubuntu Server : 18.04, 20.04, 22.04, 24.04 LTS * SELinux sur les plates-formes ci-dessus Cet ordinateur ne doit exécuter aucun autre logiciel au niveau de l'application. Un serveur dédié est recommandé. Si vous utilisez SELinux, il est recommandé d'exécuter les commandes suivantes sur le système d'unité d'acquisition : sudo semanage fcontext -a -t usr_t "/opt/NetApp/cloudinsights(/.*)?" sudo restorecon -R /opt/NetApp/cloudinsights | Un ordinateur exécutant une version sous licence de l'une des versions suivantes : * Microsoft Windows 10 64 bits * Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 cet ordinateur ne doit pas exécuter d'autre logiciel au niveau de l'application. Un serveur dédié est recommandé. 
+| Système opérateur | Un ordinateur exécutant une version sous licence de l'une des versions suivantes : * AlmaLinux 9.3 à 9.5 * Centos (64 bits) : 7.2 à 7.9, 8.1 à 8.4, Stream 8, Stream 9 * Debian (64 bits) : 9 à 12 * OpenSUSE Leap 15.1 à 15.6 * Oracle Enterprise Linux (64 bits) : 7.5 à 7.9, 8.1 à 8.10, 9.3 à 9.6 * Red Hat (64 bits) : 7.2 à 7.9, 8.1 à 8.10, 9.1 à 9.6 * Rocky 9.0 à 9.5 * SUSE Linux Enterprise Server 15, 15 SP2 à 15 SP6 * Ubuntu Server : 18.04, 20.04, 22.04, 24.04 LTS * SELinux sur les plates-formes ci-dessus Cet ordinateur ne doit exécuter aucun autre logiciel au niveau de l'application. Un serveur dédié est recommandé.  Si vous utilisez SELinux, il est recommandé d'exécuter les commandes suivantes sur le système d'unité d'acquisition : sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | Un ordinateur exécutant une version sous licence de l'un des systèmes d'exploitation suivants : * Microsoft Windows 10 64 bits * Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 Cet ordinateur ne doit exécuter aucun autre logiciel au niveau de l'application. Un serveur dédié est recommandé. 
 
 
-| CPU | 2 cœurs de processeurs | Identique 
+| processeur | 2 cœurs de processeur | Même 
 
 
-| Mémoire | 8 GO DE RAM | Identique 
+| Mémoire | 8 Go de RAM | Même 
 
 
-| Espace disque disponible | 50 Go (100 Go recommandés) pour Linux, l'espace disque doit être alloué de la manière suivante : /opt/NetApp 10 Go (20 Go pour les grands environnements) /var/log/NetApp 40 Go (80 Go pour les grands environnements) /tmp au moins 1 Go disponible pendant l'installation | 50 GO 
+| Espace disque disponible | 50 Go (100 Go recommandés) Pour Linux, l'espace disque doit être alloué de cette manière : /opt/netapp 10 Go (20 Go pour les grands environnements) /var/log/netapp 40 Go (80 Go pour les grands environnements) /tmp au moins 1 Go disponible pendant l'installation | 50 Go 
 
 
-| Le réseau | Une connexion Ethernet 100 Mbit/s/1 Gbit/s, une adresse IP statique et une connectivité port 80 ou 443 (sortante) de l'unité d'acquisition vers *.cloudInsights.NetApp.com ou votre locataire Data Infrastructure Insights (https://<tenant_id>.c01.cloudInsights.NetApp.com) sont requis. Pour connaître les exigences entre l'unité d'acquisition et chaque Data Collector, reportez-vous aux instructions du link:data_collector_list.html["Collecteur de données"]. Si votre entreprise a besoin d'un proxy pour accéder à Internet, vous devrez peut-être comprendre le comportement du proxy de votre entreprise et rechercher certaines exceptions pour que Data Infrastructure Insights fonctionne. Par exemple, votre organisation bloque-t-elle l'accès par défaut et autorise-t-elle uniquement l'accès à des sites ou domaines Web spécifiques par exception ? Si c'est le cas, vous devrez ajouter le domaine suivant à la liste d'exceptions : *.cloudInsights.NetApp.com pour plus d'informations, lisez à propos de Proxies link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["Ici (Linux)"] ou link:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["Ici (Windows)"]. Notez que le port 443 doit être ouvert « sortant » de l'au vers Data Infrastructure Insights. | Identique 
+| Réseau | Une connexion Ethernet 100 Mbps/1 Gbps, une adresse IP statique et une connectivité au port 80 ou 443 (sortante) de l'unité d'acquisition vers *.cloudinsights.netapp.com ou votre locataire Data Infrastructure Insights (c'est-à-dire \https://<tenant_id>.c01.cloudinsights.netapp.com) sont requises.  Pour connaître les exigences entre l'unité d'acquisition et chaque collecteur de données, veuillez vous référer aux instructions dulink:data_collector_list.html["Collecteur de données"] .  Si votre organisation nécessite l'utilisation d'un proxy pour l'accès à Internet, vous devrez peut-être comprendre le comportement du proxy de votre organisation et rechercher certaines exceptions pour que Data Infrastructure Insights fonctionne.  Par exemple, votre organisation bloque-t-elle l’accès par défaut et autorise-t-elle uniquement l’accès à des sites Web/domaines spécifiques par exception ?  Si tel est le cas, vous devrez ajouter le domaine suivant à la liste des exceptions : *.cloudinsights.netapp.com Pour plus d'informations, lisez à propos des proxyslink:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["ici (Linux)"] oulink:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["ici (Windows)"] .  Notez que le port 443 doit être ouvert « sortant » de l'AU vers Data Infrastructure Insights. | Même 
 
 
-| Autorisations | Autorisations sudo sur le serveur de l'unité d'acquisition. /tmp doit être monté avec les fonctions exec. | Autorisations d'administrateur sur le serveur de l'unité d'acquisition 
+| Autorisations | Autorisations Sudo sur le serveur de l'unité d'acquisition.  /tmp doit être monté avec des capacités exécutives. | Autorisations d'administrateur sur le serveur de l'unité d'acquisition 
 
 
-| Analyse antivirus |  | Au cours de l'installation, vous devez désactiver complètement tous les antivirus. Après l'installation, les chemins utilisés par le logiciel acquisition Unit doivent être exclus de l'analyse antivirus. 
+| Analyse antivirus |  | Lors de l'installation, vous devez désactiver complètement tous les antivirus.  Après l'installation, les chemins utilisés par le logiciel de l'unité d'acquisition doivent être exclus de l'analyse antivirus. 
 |===
 
 
 == Recommandations supplémentaires
 
-* Pour un audit et un reporting précis des données, il est fortement recommandé de synchroniser l'heure sur la machine de l'unité d'acquisition à l'aide de *Network Time Protocol (NTP)* ou *simple Network Time Protocol (SNTP)*.
+* Pour un audit et des rapports de données précis, il est fortement recommandé de synchroniser l'heure sur la machine de l'unité d'acquisition à l'aide du *Network Time Protocol (NTP)* ou du *Simple Network Time Protocol (SNTP)*.
 
 
 
 
-== Par rapport au dimensionnement
+== Concernant le dimensionnement
 
-Vous pouvez commencer avec une unité d'acquisition Data Infrastructure Insights qui dispose de 8 Go de mémoire et 50 Go d'espace disque. Toutefois, pour les environnements plus volumineux, vous devez vous poser les questions suivantes :
+Vous pouvez démarrer avec une unité d'acquisition Data Infrastructure Insights avec seulement 8 Go de mémoire et 50 Go d'espace disque. Cependant, pour les environnements plus grands, vous devez vous poser les questions suivantes :
 
-Vous vous attendez à :
+Vous attendez-vous à :
 
-* Découvrez plus de 2500 machines virtuelles ou 10 clusters ONTAP de grande taille (> 2 nœuds), Symmetrix ou HDS/HPE VSP/XP sur cette unité d'acquisition ?
-* Déployer 75 collecteurs de données ou plus sur cette unité d'acquisition ?
+* Découvrez plus de 2500 machines virtuelles ou 10 grands clusters ONTAP (> 2 nœuds), Symmetrix ou baies HDS/HPE VSP/XP sur cette unité d'acquisition ?
+* Déployer 75 collecteurs de données ou plus au total sur cette unité d’acquisition ?
 
 
-Pour chaque réponse "Oui" ci-dessus, il est recommandé d'ajouter 8 Go de mémoire et 50 Go d'espace disque à l'au. Donc, par exemple, si vous avez répondu « Oui » aux deux, vous devriez déployer un système de 24 Go avec 150 Go ou plus d'espace disque. Sous Linux, l'espace disque à ajouter à l'emplacement du journal.
+Pour chaque réponse « Oui » ci-dessus, il est recommandé d'ajouter 8 Go de mémoire et 50 Go d'espace disque à l'AU.  Ainsi, par exemple, si vous avez répondu « Oui » aux deux questions, vous devez déployer un système de mémoire de 24 Go avec 150 Go ou plus d’espace disque.  Sous Linux, l'espace disque à ajouter à l'emplacement du journal.
 
-Pour toute question sur le dimensionnement, contactez le support NetApp.
+Pour des questions supplémentaires sur le dimensionnement, contactez le support NetApp .

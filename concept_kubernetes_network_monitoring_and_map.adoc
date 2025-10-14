@@ -2,44 +2,44 @@
 sidebar: sidebar 
 permalink: concept_kubernetes_network_monitoring_and_map.html 
 keywords: service map, workloads, 
-summary: Présente les dépendances et les flux des workloads Kubernetes, et souligne les problèmes de réseau et de performance 
+summary: Présente les dépendances et les flux de charge de travail de Kubernetes et met en évidence les problèmes de réseau et de performances 
 ---
-= Surveillance et mappage des performances du réseau Kubernetes
+= Surveillance et cartographie des performances du réseau Kubernetes
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-La fonctionnalité de surveillance et de mappage des performances réseau Kubernetes simplifie la résolution de problèmes en mappant les dépendances entre les services (également appelés workloads). Elle fournit une visibilité en temps réel sur les latences des performances réseau et les anomalies pour identifier les problèmes de performance avant qu'ils n'affectent les utilisateurs. Cette fonctionnalité aide les entreprises à réduire les coûts globaux grâce à l'analyse et à l'audit des flux de trafic Kubernetes.
+La fonctionnalité Kubernetes Network Performance Monitoring and Map simplifie le dépannage en mappant les dépendances entre les services (également appelés charges de travail) et offre une visibilité en temps réel sur les latences et les anomalies des performances du réseau pour identifier les problèmes de performances avant qu'ils n'affectent les utilisateurs.  Cette capacité aide les organisations à réduire les coûts globaux en analysant et en auditant les flux de trafic Kubernetes.
 
-Principales fonctionnalités : • la carte des workloads présente les dépendances et les flux des workloads Kubernetes, et souligne les problèmes de réseau et de performance. • Surveiller le trafic réseau entre les pods Kubernetes, les workloads et les nœuds ; identifier la source des problèmes de trafic et de latence. • Réduire les coûts globaux en analysant les entrées, les sorties, le trafic interrégional et le trafic de réseau interzone.
+Principales fonctionnalités : • La carte de charge de travail présente les dépendances et les flux de charge de travail de Kubernetes et met en évidence les problèmes de réseau et de performances.  • Surveillez le trafic réseau entre les pods, les charges de travail et les nœuds Kubernetes ; identifiez la source des problèmes de trafic et de latence.  • Réduisez les coûts globaux en analysant le trafic réseau entrant, sortant, interrégional et interzone.
 
-image:workload-map-animated.gif["Exemple de carte des charges de travail"]
+image:workload-map-animated.gif["Exemple de carte de charge de travail"]
 
 
 
-== Conditions préalables
+== Prérequis
 
-Avant de pouvoir utiliser le contrôle et le mappage des performances du réseau Kubernetes, vous devez avoir configuré le link:task_config_telegraf_agent_k8s.html["Opérateur de surveillance NetApp Kubernetes"] pour activer cette option. Pendant le déploiement de l'opérateur, cochez la case « performances du réseau et carte » pour l'activer. Vous pouvez également activer cette option en accédant à une page d'accueil Kubernetes et en sélectionnant « Modifier le déploiement ».
+Avant de pouvoir utiliser la surveillance et la cartographie des performances du réseau Kubernetes, vous devez avoir configuré lelink:task_config_telegraf_agent_k8s.html["Opérateur de surveillance NetApp Kubernetes"] pour activer cette option.  Lors du déploiement de l'opérateur, sélectionnez la case à cocher « Performances et carte du réseau » pour l'activer.  Vous pouvez également activer cette option en accédant à une page de destination Kubernetes et en sélectionnant « Modifier le déploiement ».
 
-image:ServiceMap_NKMO_Deployment_Options.png["Sélection de l'option carte pendant le stup NKMO"]
+image:ServiceMap_NKMO_Deployment_Options.png["sélection de l'option Carte pendant l'arrêt de NKMO"]
 
 
 
 == Moniteurs
 
-La carte des charges de travail utilise link:task_create_monitor.html["moniteurs"] pour dériver des informations. Data Infrastructure Insights fournit plusieurs moniteurs Kubernetes par défaut (ceux-ci peuvent être _utilisés_ par défaut). Vous pouvez _reprendre_ (c'est-à-dire activer) les moniteurs de votre choix), ou vous pouvez créer des moniteurs personnalisés pour les objets kubernetes que Workload Map utilisera également.
+La carte de charge de travail utiliselink:task_create_monitor.html["moniteurs"] pour obtenir des informations.  Data Infrastructure Insights fournit un certain nombre de moniteurs Kubernetes par défaut (notez que ceux-ci peuvent être _en pause_ par défaut).  Vous pouvez _Reprendre_ (c'est-à-dire activer) les moniteurs que vous souhaitez, ou vous pouvez créer des moniteurs personnalisés pour les objets Kubernetes, que Workload Map utilisera également.
 
-Vous pouvez créer des alertes de metric Data Infrastructure Insights sur l'un des types d'objet ci-dessous. Assurez-vous que les données sont regroupées par type d'objet par défaut.
+Vous pouvez créer des alertes de métrique Data Infrastructure Insights sur n’importe lequel des types d’objets ci-dessous.  Assurez-vous que les données sont regroupées par type d’objet par défaut.
 
-* workloads kubernetes
-* kubernetes.demonset
-* kubernetes.deployment
+* charge de travail Kubernetes
+* ensemble de démons Kubernetes
+* déploiement de Kubernetes
 * kubernetes.cronjob
-* kubernetes.travail
-* kubernetes.repliaset
+* kubernetes.job
+* kubernetes.replicaset
 * kubernetes.statefulset
-* pod kubernetes
+* kubernetes.pod
 * kubernetes.network_traffic_l4
 
 
@@ -47,67 +47,67 @@ Vous pouvez créer des alertes de metric Data Infrastructure Insights sur l'un d
 
 == La carte
 
-La carte montre les services/charges de travail et leurs relations les uns avec les autres. Les flèches indiquent l'itinéraire de la circulation. Le survol d'une charge de travail affiche un récapitulatif des informations relatives à cette charge, comme vous pouvez le voir dans cet exemple :
+La carte montre les services/charges de travail et leurs relations entre eux.  Les flèches indiquent les directions de circulation.  Le survol d'une charge de travail affiche des informations récapitulatives pour cette charge de travail, comme vous pouvez le voir dans cet exemple :
 
-image:ServiceMap_Simple_Example.png["Exemple de charge de travail Workload Map"]
+image:ServiceMap_Simple_Example.png["Exemple de carte de charge de travail"]
 
-Les icônes situées dans les cercles représentent différents types de services. Notez que les icônes ne sont visibles que si les objets sous-jacents ont <<workload-labels,étiquettes>>.
+Les icônes dans les cercles représentent différents types de services.  Notez que les icônes ne sont visibles que si les objets sous-jacents ont<<workload-labels,étiquettes>> .
 
-image:ServiceMap_Icons.png["Explication des icônes de service"]
+image:ServiceMap_Icons.png["Icônes de service expliquées"]
 
-La taille de chaque cercle indique la taille du nœud. Notez que ces tailles sont relatives, le niveau de zoom ou la taille de l'écran de votre navigateur peut affecter la taille réelle des cercles. De la même manière, le style de ligne de trafic vous donne une vue d'un coup d'œil de la taille de la connexion ; les lignes en gras sont à fort trafic, tandis que les lignes en pointillés légers sont à faible trafic.
+La taille de chaque cercle indique la taille du nœud.  Notez que ces tailles sont relatives, le niveau de zoom de votre navigateur ou la taille de votre écran peuvent affecter les tailles réelles des cercles.  De la même manière, le style de ligne de trafic vous donne un aperçu rapide de la taille de la connexion ; les lignes continues en gras correspondent à un trafic élevé, tandis que les lignes pointillées claires correspondent à un trafic plus faible.
 
-Les nombres à l'intérieur des cercles correspondent au nombre de connexions externes en cours de traitement par le service.
+Les nombres à l'intérieur des cercles indiquent le nombre de connexions externes actuellement traitées par le service.
 
-image:ServiceMap_Node_and_Connection_Legend.png["légende indiquant le cercle relatif (nœud) et les tailles de connexion"]
+image:ServiceMap_Node_and_Connection_Legend.png["légende indiquant les tailles relatives du cercle (nœud) et de la connexion"]
 
 
 
-== Détails de la charge de travail et alertes
+== Détails et alertes de charge de travail
 
-Les cercles affichés en couleur indiquent une alerte de niveau critique ou d'avertissement pour la charge de travail. Passez le curseur sur le cercle pour obtenir un résumé du problème ou cliquez sur le cercle pour ouvrir un panneau coulissant avec plus de détails.
+Les cercles affichés en couleur indiquent une alerte de niveau d'avertissement ou critique pour la charge de travail.  Passez la souris sur le cercle pour obtenir un résumé du problème ou cliquez sur le cercle pour ouvrir un panneau coulissant avec plus de détails.
 
-image:Workload_Map_Slideout_with_Alert.png["Détails de la diapositive sur la charge de travail avec alertes"]
+image:Workload_Map_Slideout_with_Alert.png["Détails de la charge de travail coulissante avec alertes"]
 
 
 
 == Recherche et filtrage
 
-À l'instar des autres fonctionnalités Data Infrastructure Insights, vous pouvez facilement définir des filtres pour vous concentrer sur les objets ou les attributs de workload spécifiques que vous souhaitez.
+Comme avec d’autres fonctionnalités de Data Infrastructure Insights , vous pouvez facilement définir des filtres pour vous concentrer sur les objets spécifiques ou les attributs de charge de travail souhaités.
 
-image:Workload_Map_Filtering.png["Filtrage de mappage des charges de travail"]
+image:Workload_Map_Filtering.png["Filtrage de la carte de charge de travail"]
 
-De même, la saisie d'une chaîne dans le champ _find_ met en surbrillance les charges de travail correspondantes.
+De même, la saisie d’une chaîne dans le champ _Rechercher_ mettra en évidence les charges de travail correspondantes.
 
-image:Workload_Map_Find_Highlighting.png["la saisie dans la zone rechercher met en évidence les workloads"]
+image:Workload_Map_Find_Highlighting.png["la saisie dans la zone de recherche met en évidence les charges de travail"]
 
 
 
 == Étiquettes de charge de travail
 
-Les étiquettes de charge de travail sont nécessaires si vous souhaitez que la carte identifie les types de charges de travail affichées (c'est-à-dire les icônes en cercle). Les étiquettes sont dérivées comme suit :
+Les étiquettes de charge de travail sont nécessaires si vous souhaitez que la carte identifie les types de charges de travail affichées (c'est-à-dire les icônes en forme de cercle).  Les étiquettes sont dérivées comme suit :
 
-* Nom du service/de l'application s'exécutant en termes génériques
-* Si la source est un pod :
+* Nom du service/de l'application exécuté en termes génériques
+* Si la source est un pod :
 +
 ** L'étiquette est dérivée de l'étiquette de charge de travail du pod
-** Libellé attendu sur le workload : app.kubernetes.io/composant
-** Référence du nom de l'étiquette : https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/[]
+** Étiquette attendue sur la charge de travail : app.kubernetes.io/component
+** Référence du nom de l'étiquette : https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/[]
 ** Étiquettes recommandées :
 +
-*** front-end
-*** back-end
+*** l'extrémité avant
+*** backend
 *** base de données
 *** cache
 *** file d'attente
-*** kafka
+*** Kafka
 
 
 
 
-* Si la source est externe au cluster kubernetes :
+* Si la source est externe au cluster Kubernetes :
 +
-** Data Infrastructure Insights tente d'analyser le nom DNS résolu pour extraire le type de service.
+** Data Infrastructure Insights tentera d'analyser le nom résolu DNS pour extraire le type de service.
 +
 Par exemple, avec un nom DNS résolu de _s3.eu-north-1.amazonaws.com_, le nom résolu est analysé pour obtenir _s3_ comme type de service.
 
@@ -117,16 +117,16 @@ Par exemple, avec un nom DNS résolu de _s3.eu-north-1.amazonaws.com_, le nom r�
 
 
 
-== Plongez au cœur de l'aventure
+== Plongez en profondeur
 
-Cliquez avec le bouton droit de la souris sur une charge de travail pour afficher des options supplémentaires afin d'en savoir plus. Par exemple, vous pouvez effectuer un zoom avant pour afficher les connexions de cette charge de travail.
+Un clic droit sur une charge de travail vous présente des options supplémentaires à explorer plus en détail.  Par exemple, à partir d’ici, vous pouvez zoomer pour afficher les connexions pour cette charge de travail.
 
-image:Workload_Map_Zoom_Into_Connections.png["Carte de la charge de travail cliquez avec le bouton droit de la souris sur Zoom pour afficher les connexions de la charge de travail"]
+image:Workload_Map_Zoom_Into_Connections.png["Carte de charge de travail Cliquez avec le bouton droit de la souris sur Zoom pour afficher les connexions de la charge de travail"]
 
-Vous pouvez également ouvrir le panneau détaillé pour afficher directement l'onglet _Summary_, _Network_ ou _Pod & Storage_.
+Vous pouvez également ouvrir le panneau coulissant des détails pour afficher directement l'onglet _Résumé_, _Réseau_ ou _Pod et stockage_.
 
-image:Workload_Map_Detail_Network_Slideout.png["Exemple d'onglet réseau de la diapositive détaillée"]
+image:Workload_Map_Detail_Network_Slideout.png["Exemple d'onglet réseau coulissant détaillé"]
 
-Enfin, en sélectionnant _aller à la page de ressources_, vous ouvrez la page d'accueil détaillée de la ressource pour la charge de travail.
+Enfin, la sélection de _Accéder à la page des ressources_ ouvrira la page de destination détaillée des ressources pour la charge de travail.
 
-image:Workload_Map_Asset_Page.png["Page ressource de charge de travail"]
+image:Workload_Map_Asset_Page.png["Page d'actifs de charge de travail"]

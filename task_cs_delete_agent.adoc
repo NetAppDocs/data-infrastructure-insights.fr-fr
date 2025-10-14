@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_cs_delete_agent.html 
 keywords: agent, Workload Security, delete agent, Cloud Secure 
-summary: Suppression des agents de sécurité de charge de travail 
+summary: Suppression des agents Workload Security 
 ---
 = Suppression d'un agent de sécurité de charge de travail
 :hardbreaks:
@@ -10,34 +10,34 @@ summary: Suppression des agents de sécurité de charge de travail
 
 
 [role="lead"]
-Lorsque vous supprimez un agent de sécurité de charge de travail, tous les collecteurs de données associés à l'agent doivent être supprimés en premier.
+Lorsque vous supprimez un agent Workload Security, tous les collecteurs de données associés à l'agent doivent d'abord être supprimés.
 
 
 
 == Suppression d'un agent
 
 
-IMPORTANT: La suppression d'un agent supprime tous les collecteurs de données associés à l'agent. Si vous prévoyez de configurer les collecteurs de données avec un autre agent, vous devez créer une sauvegarde des configurations Data Collector avant de supprimer l'agent.
+IMPORTANT: La suppression d’un agent supprime tous les collecteurs de données associés à l’agent.  Si vous prévoyez de configurer les collecteurs de données avec un agent différent, vous devez créer une sauvegarde des configurations du collecteur de données avant de supprimer l'agent.
 
 .Avant de commencer
-. Assurez-vous que tous les collecteurs de données associés à l'agent sont supprimés du portail de sécurité de la charge de travail.
+. Assurez-vous que tous les collecteurs de données associés à l'agent sont supprimés du portail Workload Security.
 +
-Remarque : ignorez cette étape si tous les collecteurs associés sont à l'état ARRÊTÉ.
+Remarque : ignorez cette étape si tous les collecteurs associés sont à l’état ARRÊTÉ.
 
 
 
-.Procédure de suppression d'un agent :
-. SSH dans le VM agent et exécutez la commande suivante. Lorsque vous y êtes invité, entrez « y » pour continuer.
+.Étapes pour supprimer un agent :
+. Connectez-vous à la machine virtuelle de l’agent via SSH et exécutez la commande suivante.  Lorsque vous y êtes invité, entrez « y » pour continuer.
 +
 ....
 sudo /opt/netapp/cloudsecure/agent/install/cloudsecure-agent-uninstall.sh
 Uninstall CloudSecure Agent? [y|N]:
 ....
-. Cliquez sur *sécurité de la charge de travail > collecteurs > agents*
+. Cliquez sur *Sécurité de la charge de travail > Collecteurs > Agents*
 +
 Le système affiche la liste des agents configurés.
 
-. Cliquez sur le menu d'options de l'agent que vous supprimez.
+. Cliquez sur le menu d’options de l’agent que vous supprimez.
 . Cliquez sur *Supprimer*.
 +
 Le système affiche la page *Supprimer l'agent*.

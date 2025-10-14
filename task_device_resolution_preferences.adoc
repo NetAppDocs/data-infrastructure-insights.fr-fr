@@ -4,19 +4,19 @@ permalink: task_device_resolution_preferences.html
 keywords: Automatic, AR, AHR, Host, automatic device resolution, FC, Identify 
 summary:  
 ---
-= Configuration des options dans l'onglet Préférences
+= Options de paramétrage dans l'onglet Préférences
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-L'onglet Préférences de résolution du périphérique permet de créer un programme de résolution automatique, de spécifier des venders de stockage et de bande à inclure ou exclure de l'identification, et de définir des options de recherche DNS.
+L'onglet des préférences de résolution de périphérique vous permet de créer une planification de résolution automatique, de spécifier les fournisseurs de stockage et de bande à inclure ou à exclure de l'identification et de définir les options de recherche DNS.
 
 
 
-== Planning de résolution automatique
+== Planification de résolution automatique
 
-Un planning de résolution automatique peut indiquer quand la résolution automatique du périphérique est exécutée :
+Un programme de résolution automatique peut spécifier quand la résolution automatique du périphérique est exécutée :
 
 |===
 
@@ -24,37 +24,37 @@ Un planning de résolution automatique peut indiquer quand la résolution automa
 | Option | Description 
 
 
-| Toutes les | Utilisez cette option pour exécuter la résolution automatique des périphériques aux intervalles de jours, heures ou minutes. 
+| Chaque | Utilisez cette option pour exécuter la résolution automatique du périphérique à des intervalles de jours, d'heures ou de minutes. 
 
 
-| Tous les jours | Utilisez cette option pour exécuter la résolution automatique du périphérique tous les jours à une heure donnée. 
+| Tous les jours | Utilisez cette option pour exécuter la résolution automatique de l'appareil quotidiennement à une heure précise. 
 
 
-| Manuellement | Utilisez cette option pour exécuter uniquement la résolution automatique des périphériques manuellement. 
+| Manuellement | Utilisez cette option pour exécuter uniquement la résolution automatique du périphérique manuellement. 
 
 
-| Sur chaque changement d'environnement | Utilisez cette option pour exécuter la résolution automatique des périphériques lorsqu'un changement d'environnement est apporté. 
+| À chaque changement d'environnement | Utilisez cette option pour exécuter la résolution automatique du périphérique chaque fois qu'un changement se produit dans l'environnement. 
 |===
-Si vous spécifiez _manuellement_, la résolution automatique nocturne du périphérique est désactivée.
+Si vous spécifiez _Manuellement_, la résolution automatique nocturne du périphérique est désactivée.
 
 
 
 == Options de traitement DNS
 
-Les options de traitement DNS vous permettent de sélectionner les fonctions suivantes :
+Les options de traitement DNS vous permettent de sélectionner les fonctionnalités suivantes :
 
 * Lorsque le traitement des résultats de recherche DNS est activé, vous pouvez ajouter une liste de noms DNS à ajouter aux périphériques résolus.
-* Vous pouvez sélectionner résolution automatique des adresses IP : pour activer la résolution automatique des hôtes pour les initiateurs et les hôtes iSCSI qui accèdent aux partages NFS à l'aide de la recherche DNS. Si ce n'est pas spécifié, seule la résolution FC est effectuée.
-* Vous pouvez choisir d'autoriser des traits de soulignement dans les noms d'hôte et d'utiliser un alias « connecté à » au lieu de l'alias de port standard dans les résultats.
+* Vous pouvez sélectionner Résolution automatique des IP : pour activer la résolution automatique de l'hôte pour les initiateurs iSCSI et les hôtes accédant aux partages NFS à l'aide de la recherche DNS.  Si cela n'est pas spécifié, seule la résolution basée sur FC est effectuée.
+* Vous pouvez choisir d'autoriser les traits de soulignement dans les noms d'hôtes et d'utiliser un alias « connecté à » au lieu de l'alias de port standard dans les résultats.
 
 
 
 
-=== Y compris les fournisseurs spécifiques de systèmes de stockage et de bandes, ou l'exclusion de ces fournisseurs
+=== Inclure ou exclure des fournisseurs spécifiques de stockage et de bandes
 
-Vous pouvez inclure ou exclure certains fournisseurs de stockage et de bandes pour la résolution automatique. Vous pouvez exclure des fournisseurs spécifiques si vous savez, par exemple, qu'un hôte spécifique deviendra un hôte hérité et qu'il doit être exclu de votre nouvel environnement. Vous pouvez également réajouter des fournisseurs que vous avez précédemment exclus mais qui ne souhaitez plus exclure.
+Vous pouvez inclure ou exclure des fournisseurs de stockage et de bande spécifiques pour une résolution automatique.  Vous souhaiterez peut-être exclure des fournisseurs spécifiques si vous savez, par exemple, qu'un hôte spécifique deviendra un hôte hérité et devra être exclu de votre nouvel environnement.  Vous pouvez également rajouter des fournisseurs que vous avez précédemment exclus mais que vous ne souhaitez plus exclure.
 
 
-NOTE: Les règles de résolution des périphériques pour bande ne fonctionnent que pour les WWN où le fournisseur pour ce WWN est défini sur _inclus comme bande uniquement_ dans les préférences des fournisseurs.
+NOTE: Les règles de résolution de périphérique pour la bande fonctionnent uniquement pour les WWN où le fournisseur de ce WWN est défini sur _Inclus en tant que bande uniquement_ dans les préférences des fournisseurs.
 
-Voir aussi : link:concept_device_resolution_regex_examples.html["Exemples d'expression régulière"]
+Voir aussi :link:concept_device_resolution_regex_examples.html["Exemples d'expressions régulières"]

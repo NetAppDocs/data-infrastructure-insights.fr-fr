@@ -4,45 +4,45 @@ permalink: infrastructure_change_analytics.html
 keywords: changes, management, analysis, infra, infrastructure 
 summary: 'Data Infrastructure Insights suit les changements dans l"infrastructure pour faciliter l"analyse et le dépannage.' 
 ---
-= Analyse des modifications de l'infrastructure
+= Analyse des changements d'infrastructure
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-L'analyse des modifications de l'infrastructure vous offre un aperçu complet des modifications récentes apportées à l'infrastructure (stockage, commutateur, etc.) de votre locataire. Avec l'analyse des modifications, vous pouvez suivre les modifications de configuration et explorer les problèmes attendus et inattendus.
+L'analyse des changements d'infrastructure vous offre une vue tout-en-un des changements récents apportés à l'infrastructure (stockage, commutateur, etc.) de votre locataire.  Avec Change Analysis, vous pouvez suivre les modifications de configuration et analyser les problèmes attendus et inattendus.
 
 
 
-== Comment l'analyse des changements d'infrastructure peut-elle aider ?
+== Comment l’analyse des changements d’infrastructures aide-t-elle ?
 
-Dans n'importe quel environnement, des modifications de vos ressources peuvent se produire en raison de modifications mal configurées, de pertes d'alimentation, etc. L'analyse des modifications aide en fournissant une seule fenêtre pour afficher et mettre en corrélation l'état de vos ressources avec les pannes ou les modifications planifiées. Les modifications sont calculées avec chaque sondage d'inventaire (après le premier sondage sur un nouveau collecteur).
+Dans n'importe quel environnement, des modifications de vos ressources peuvent survenir en raison de modifications mal configurées, d'une panne de courant, etc. L'analyse des changements vous aide en fournissant un volet unique pour visualiser et corréler l'état de vos ressources avec les pannes ou les modifications planifiées.  Les changements sont calculés à chaque interrogation d'inventaire (suivant la première interrogation sur un nouveau collecteur).
 
-Pour analyser les modifications d'infrastructure, accédez à *observabilité > analyse des modifications*. Les alertes et les modifications de configuration pour la plage horaire actuelle sont répertoriées. Les lignes d'alerte indiquent l'état d'alerte actuel (actif ou résolu).
+Pour analyser les changements d’infrastructure, accédez à *Observabilité > Analyse des changements*.  Les alertes et les modifications de configuration pour la plage horaire actuelle sont répertoriées.  Les lignes d’alerte affichent l’état actuel de l’alerte (active ou résolue).
 
-Vous pouvez également accéder à une page d'accueil pour une ressource. Si des modifications ont été apportées à cette ressource ou aux ressources associées, elles seront affichées dans la section vue experte de la page. Effectuez un zoom avant pour étudier les modifications individuelles ou laissez la vue large pour voir toutes les modifications dans la plage horaire sélectionnée. Passez le curseur sur une modification pour obtenir un résumé de la modification. En cliquant sur ce changement, l'affichage expert se concentre sur l'heure de ce changement.
+Vous pouvez également accéder à une page de destination pour une ressource.  Si des modifications ont été apportées à cette ressource ou aux ressources associées, elles seront affichées dans la section Performances de la page.  Effectuez un zoom avant pour examiner les modifications individuelles ou laissez la vue large pour voir toutes les modifications dans la plage de temps sélectionnée.  En survolant une modification, vous obtiendrez un résumé de la modification.  Cliquer sur ce changement concentrera les performances au moment de ce changement.
 
-image:change_analysis_on_a_landing_page.png["Analyse des modifications sur une page d'accueil"]
+image:change_analysis_on_a_landing_page.png["Analyse des changements sur une page de destination"]
 
-La sélection d'un élément dans la liste ouvre un volet coulissant donnant plus de détails sur l'alerte ou la modification.
-
-
-
-== Filtrage
-
-Comme pour toutes les fonctionnalités de Cloud Insights, le filtrage de la liste des modifications est intuitif : en haut de la page, vous pouvez filtrer des types d'actifs spécifiques (_déclenché sur:type_) et/ou filtrer uniquement des actifs portant des noms spécifiques si vous le souhaitez (_déclenché sur:nom_), ou ajouter vos propres filtres en sélectionnant le bouton {+].
-
-image:infraChange_filter_dropdown.png["Liste déroulante filtrage des modifications d'infrastructure"]
-
-Vous pouvez également accéder directement aux alertes clés ou aux modifications apportées dans la section d'état située sous les paramètres de filtre, y compris les trois principales ressources présentant le plus d'alertes.
-
-image:Change_Analysis_filters_and_status.png["état et liens rapides vers les alertes et les modifications"]
+La sélection d’un élément dans la liste ouvrira un volet coulissant donnant plus de détails sur l’alerte ou la modification.
 
 
 
-== Quels sont les objets analysés pour les modifications ?
+== Filtration
 
-Le tableau suivant répertorie les objets et les attributs inclus dans l'analyse des modifications d'infrastructure.
+Comme pour toutes les fonctionnalités de Cloud Insights, le filtrage de la liste des modifications est intuitif : en haut de la page, vous pouvez filtrer par types d'actifs spécifiques (_Triggered On:type_), et/ou filtrer uniquement les actifs avec des noms spécifiques si vous le souhaitez (_Triggered On:name_), ou ajouter vos propres filtres en sélectionnant le bouton {+].
+
+image:infraChange_filter_dropdown.png["Menu déroulant de filtrage des modifications d'infrastructure"]
+
+Vous pouvez également accéder directement aux alertes ou modifications clés à partir de la section d'état sous les paramètres de filtre, y compris les trois principales ressources actuelles avec le plus d'alertes.
+
+image:Change_Analysis_filters_and_status.png["statut et liens rapides vers les alertes et les modifications"]
+
+
+
+== Quels objets sont analysés pour détecter les modifications ?
+
+Le tableau suivant répertorie les objets et attributs inclus dans l’analyse des changements d’infrastructure.
 
 |===
 
@@ -50,46 +50,46 @@ Le tableau suivant répertorie les objets et les attributs inclus dans l'analyse
 | Type d'objet | Attributs 
 
 
-| Disque | Disksize.total isVirtual diskGroup SPEED type location serialNumber role status vendor model storage.name storagePools.name name isEncrypted 
+| Disque | diskSize.total estVirtual diskGroup vitesse type emplacement numéro de série rôle statut fournisseur modèle stockage.name storagePools.name nom est crypté 
 
 
-| Stockage | Famille ip isActive microcodeVersion nom de modèle protocoles serialNumber vendor 
+| Stockage | famille ip isActive microcodeVersion modèle nom protocoles numéro de série fournisseur 
 
 
-| StorageNode | Nom storage.name nodeVersion model serialNumber numberOfProcessors state partner.name cache memory manageIpsParentSerialNumber sitename 
+| Nœud de stockage | nom stockage.nom nodeVersion modèle numéro de série nombre de processeurs état partenaire.nom cache mémoire gestion adresses IP parentSerialNumber siteName 
 
 
-| Poolde stockage | Type de nom isAutoTiering isCompartion virtuelle vendorTier usesFlashPools Storage.vendor Storage.ip Storage.model Storage.family storage.name storageNodes.name Capacity.total (attribut dynamique) isCompactionSavingsEnabled isEncrypted objectStoreName objectStoreProviderType objectStoreSizeLimit objectStoreTieringFullnessThreshold objectStoreName 
+| Pool de stockage | nom type isAutoTiering isVirtual redondance vendorTier usesFlashPools storage.vendor storage.ip storage.model storage.family storage.name storageNodes.name capacity.total (attribut dynamique) isCompactionSavingsEnabled isEncrypted objectStoreName objectStoreProviderType objectStoreSizeLimit objectStoreTieringFullnessThreshold objectStoreS3Name objectStoreServer 
 
 
-| Qtree | Tapez securityStyle isOplocksEnabled shares.name storage.name internalVolume.name storageVirtualMachine.name simpleName StatusText name 
+| Qtree | type securityStyle isOplocksEnabled shares.name storage.name internalVolume.name storageVirtualMachine.name simpleName statusText name 
 
 
-| StorageVirtualmachine | Nom storage.name type d'état protocoles ipSpace internalVolumeLimit 
+| Machine virtuelle de stockage | nom stockage.nom état type ipSpace protocoles internalVolumeLimit 
 
 
-| Volumétrie | Nom simpleName label type storage.name Storage.vendor Storage.ip Storage.model Storage.family isAutoTiering isThinProvisioned diskGroup isMainframe isMeta isReplicaSource isReplicaTarget isSnapshot isVirtual internalVolume.name internalVolume.virtualStorage storageNodes.name storageNodes.partner.name storagePools.name storageVirtualMachine.name storageGroups Encrypted isCompressionEnabled qosBurstIOPS qosLimitIOPS 
+| Volume | nom simpleName étiquette type stockage.nom stockage.fournisseur stockage.ip stockage.modèle stockage.famille isAutoTiering isThinProvisioned diskGroup isMainframe isMeta isReplicaSource isReplicaTarget isSnapshot isVirtual internalVolume.nom internalVolume.virtualStorage storageNodes.nom storageNodes.partner.nom storagePools.nom storageVirtualMachine.nom storageGroups isEncrypted isCompressionEnabled qosBurstIOPS qosLimitIOPS qosLimitMBPS qosMinIOPS qosPolicy qosLimitRaw 
 
 
-| Volume interne | FlashPoolEligibilité name simpleName spaceGuarantee status type virtualStorage replicaSources.name storageNodes.name storageNodes.partner.name storage.name Storage.Vendor Storage.ip Storage.model Storage.family storageVirtualMachine.name storagePool.name Capacity.isThinProvisioned qosPolicy qosLimitRaw qosLimitIOPS qosLimitMBPS isEncrypted adaptiveQosPolicy junctionPath objectStoreTieringPolicy tieringMinimumCoolingDays 
+| Volume interne | flashPoolEligibility nom simpleName spaceGuarantee statut type virtualStorage replicaSources.name storageNodes.name storageNodes.partner.name storage.name storage.vendor storage.ip storage.model storage.family storageVirtualMachine.name storagePool.name capacity.isThinProvisioned qosPolicy qosLimitRaw qosLimitIOPS qosLimitMBPS isEncrypted adaptiveQosPolicy junctionPath objectStoreTieringPolicy tieringMinimumCoolingDays 
 
 
-| Virtualmachine | Nom dnsName processeurs de mémoire ip os guestState powerState host.name host.clustername host.ip host.os dataStore.name instanceType publicIps SecurityGroups virtualCenterIp 
+| Machine virtuelle | nom dnsName ip os mémoire processeurs guestState powerState host.name host.clusterName host.ip host.os dataStore.name instanceType publicIps securityGroups virtualCenterIp 
 
 
-| Datastore | Nom virtualCenterIp type 
+| Magasin de données | nom virtualCenterIp type 
 
 
-| Hôte | Nom modèle ip isconstructeur du système d'exploitation actif cpuCount memory isHypervisor clustername virtualCenterIp 
+| Hôte | nom modèle ip isActive système d'exploitation fabricant cpuCount mémoire isHypervisor clusterName virtualCenterIp 
 
 
-| vmdk (VirtualMachineDisk) | Type de nom dataStore.name isRdm virtualMachine.host.name virtualMachine.name isSnapshot 
+| vmdk (disque de machine virtuelle) | nom type dataStore.name isRdm virtualMachine.host.name virtualMachine.name isSnapshot 
 
 
-| Port | Nom isType wwn actif portIndex vitesse de la lame gbicType connectedPorts.device.name connectedPorts.device.type connectedPorts.name connectedPorts.nodeWwn connectedports.wwn Controller device.name device.type fabrics.name Fabrics.vsanId nodeWwn description 
+| Port | nom isActive type wwn portIndex vitesse de la lame gbicType connectedPorts.device.name connectedPorts.device.type connectedPorts.name connectedPorts.nodeWwn connectedPorts.wwn contrôleur device.name device.type fabrics.name fabrics.vsanId nodeWwn description 
 |===
-« Analyse des changements » permet de suivre les alertes dans les cas suivants :
+« Analyse des changements » suit les alertes pour les cas suivants :
 
-* Alertes des moniteurs de journaux sur les types de journaux _logs.vmware.events_ et _logs.NetApp.ems_.
-* Les alertes des moniteurs de mesure sur les types d'objet ci-dessus doivent être sélectionnées dans le champ _regrouper par_ pour que l'analyse des modifications puisse les suivre.
+* Alertes des moniteurs de journaux sur les types de journaux _logs.vmware.events_ et _logs.netapp.ems_.
+* Alertes des moniteurs de métriques sur les types d'objets ci-dessus ; ceux-ci doivent être sélectionnés dans le champ _Grouper par_ pour que Change Analysis puisse les suivre.
 

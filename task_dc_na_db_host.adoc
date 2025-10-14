@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_dc_na_db_host.html 
 keywords: data collector, generic db 
-summary: Collecteur de résolveur hôte DB générique 
+summary: 'Collecteur de résolveur d"hôte de base de données générique' 
 ---
-= Résolveur d'hôte de BD générique NetApp
+= Résolveur d'hôte de base de données générique NetApp
 :hardbreaks:
 :allow-uri-read: 
 
@@ -16,7 +16,7 @@ Ce collecteur de données acquiert l'inventaire
 
 == Terminologie
 
-Data Infrastructure Insights acquiert l'inventaire à partir de ce collecteur.
+Data Infrastructure Insights acquiert l'inventaire auprès de ce collecteur.
 
 
 
@@ -27,19 +27,19 @@ Data Infrastructure Insights acquiert l'inventaire à partir de ce collecteur.
 | Champ | Description 
 
 
-| Adresse IP du serveur DB | Adresse IP du serveur DB 
+| Adresse IP du serveur de base de données | Adresse IP du serveur de base de données 
 
 
 | Port du serveur DB | la valeur par défaut est 3306 
 
 
-| Nom de classe de conducteur qualifié | Nom de classe du pilote. 
+| Nom de la classe de conducteur qualifié | Nom de classe pour le pilote. 
 
 
 | URL du pilote JDBC | URL du pilote 
 
 
-| Requête SQL | Requête utilisée pour renvoyer des données de la table 
+| Requête SQL | La requête utilisée pour renvoyer les données de la table 
 |===
 
 
@@ -50,12 +50,12 @@ Data Infrastructure Insights acquiert l'inventaire à partir de ce collecteur.
 | Champ | Description 
 
 
-| Intervalle d'interrogation d'inventaire (min) | La valeur par défaut est 60 minutes 
+| Intervalle d'interrogation d'inventaire (min) | La valeur par défaut est de 60 minutes 
 
 
-| Activez la connexion SSL | Sélectionnez cette option pour activer la connexion via SSL 
+| Activer la connexion SSL | Sélectionnez pour activer la connexion via SSL 
 
 
-| Signaler l'alias WWN | Sélectionnez cette option pour signaler l'alias WWN 
+| Signaler un alias WWN | Sélectionnez pour signaler l'alias WWN 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

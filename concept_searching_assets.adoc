@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_searching_assets.html 
-summary: Recherche avancée techniquest peut vous aider à trouver les ressources que vous recherchez. 
+summary: Les techniques de recherche avancées peuvent vous aider à localiser les actifs que vous recherchez. 
 keywords: asset page, objects, search, advanced, alerts 
 ---
-= Conseils et astuces pour rechercher des ressources et des alertes
+= Conseils et astuces pour rechercher des actifs et des alertes
 :hardbreaks:
 :allow-uri-read: 
 
@@ -12,17 +12,17 @@ keywords: asset page, objects, search, advanced, alerts
 [role="lead"]
 Plusieurs techniques de recherche peuvent être utilisées pour rechercher des données ou des objets dans votre environnement surveillé.
 
-* *Recherche de caractères génériques*
+* *Recherche générique*
 +
-Vous pouvez effectuer une recherche par caractère générique à l'aide du caractère *. Par exemple, _applic*n_ renverra _application_.
+Vous pouvez effectuer une recherche avec plusieurs caractères génériques à l'aide du caractère *.  Par exemple, _applic*n_ renverrait _application_.
 
 * *Phrases utilisées dans la recherche*
 +
-Une expression est un groupe de mots entouré de guillemets, par exemple "VNX LUN 5". Vous pouvez utiliser des guillemets doubles pour rechercher des documents contenant des espaces dans leurs noms ou attributs.
+Une phrase est un groupe de mots entourés de guillemets doubles ; par exemple, « VNX LUN 5 ».  Vous pouvez utiliser des guillemets doubles pour rechercher des documents contenant des espaces dans leurs noms ou leurs attributs.
 
 * *Opérateurs booléens*
 +
-En utilisant des opérateurs booléens OU, ET, et NON, vous pouvez combiner plusieurs termes pour former une requête plus complexe.
+En utilisant les opérateurs booléens OU, ET et NON, vous pouvez combiner plusieurs termes pour former une requête plus complexe.
 
 +
 OU
@@ -31,13 +31,13 @@ OU
 L'opérateur OR est l'opérateur de conjonction par défaut.
 
 +
-S'il n'y a pas d'opérateur booléen entre deux termes, l'opérateur OR est utilisé.
+S'il n'y a pas d'opérateur booléen entre deux termes, l'opérateur OU est utilisé.
 
 +
-L'opérateur OR lie deux termes et trouve un document correspondant si l'un des termes existe dans un document.
+L'opérateur OR relie deux termes et trouve un document correspondant si l'un des termes existe dans un document.
 
 +
-Par exemple, _stockage OU netapp_ recherche des documents contenant _Storage_ ou _netapp_.
+Par exemple, _storage OR netapp_ recherche les documents qui contiennent _storage_ ou _netapp_.
 
 +
 Des notes élevées sont attribuées aux documents qui correspondent à la plupart des termes.
@@ -46,19 +46,19 @@ Des notes élevées sont attribuées aux documents qui correspondent à la plupa
 ET
 
 +
-Vous pouvez utiliser l'opérateur AND pour rechercher des documents dans lesquels les deux termes de recherche existent dans un seul document. Par exemple, _stockage ET netapp_ recherchent des documents contenant à la fois _stockage_ et _netapp_.
+Vous pouvez utiliser l'opérateur AND pour rechercher des documents dans lesquels les deux termes de recherche existent dans un seul document.  Par exemple, _storage AND netapp_ recherche les documents qui contiennent à la fois _storage_ et _netapp_.
 
 +
-Vous pouvez utiliser le symbole *&&&&* au lieu du mot ET.
+Vous pouvez utiliser le symbole *&&* à la place du mot AND.
 
 +
 PAS
 
 +
-Lorsque vous utilisez L'opérateur NOT, tous les documents contenant le terme après NE sont pas exclus des résultats de la recherche. Par exemple, _stockage ET NON netapp_ recherche des documents qui ne contiennent que _Storage_ et non _netapp_.
+Lorsque vous utilisez l'opérateur NOT, tous les documents contenant le terme après NOT sont exclus des résultats de la recherche.  Par exemple, _storage NOT netapp_ recherche les documents qui contiennent uniquement _storage_ et non _netapp_.
 
 +
-Vous pouvez utiliser le symbole *!* au lieu du mot NON.
+Vous pouvez utiliser le symbole *!* à la place du mot NOT.
 
 
 
@@ -66,13 +66,13 @@ La recherche n'est pas sensible à la casse.
 
 
 
-== Recherche à l'aide de termes indexés
+== Rechercher à l'aide de termes indexés
 
-Les recherches qui correspondent à davantage de termes indexés entraînent des scores plus élevés.
+Les recherches qui correspondent à davantage de termes indexés génèrent des scores plus élevés.
 
-La chaîne de recherche est divisée en termes de recherche séparés par espace. Par exemple, la chaîne de recherche « stockage aurora netapp » est divisée en trois mots clés : « stockage », « aurora » et « netapp ». La recherche s'effectue à l'aide des trois termes. Les documents qui correspondent à la plupart de ces termes auront le score le plus élevé. Plus vous fournissez d'informations, mieux les résultats de recherche sont nombreux. Par exemple, vous pouvez rechercher un stockage par son nom et son modèle.
+La chaîne de recherche est divisée en termes de recherche distincts par un espace.  Par exemple, la chaîne de recherche « storage aurora netapp » est divisée en trois mots-clés : « storage », « aurora » et « netapp ».  La recherche est effectuée en utilisant les trois termes.  Les documents qui correspondent à la plupart de ces termes auront le score le plus élevé.  Plus vous fournissez d'informations, meilleurs seront les résultats de recherche.  Par exemple, vous pouvez rechercher un stockage par son nom et son modèle.
 
-L'interface utilisateur affiche les résultats de la recherche dans les différentes catégories, avec les trois meilleurs résultats par catégorie. Si vous n'avez pas trouvé d'objet que vous attendiez, vous pouvez inclure plus de termes dans la chaîne de recherche pour améliorer les résultats de la recherche.
+L'interface utilisateur affiche les résultats de la recherche par catégories, avec les trois premiers résultats par catégorie.  Si vous n’avez pas trouvé l’objet que vous attendiez, vous pouvez inclure plus de termes dans la chaîne de recherche pour améliorer les résultats de la recherche.
 
 Le tableau suivant fournit une liste de termes indexés qui peuvent être ajoutés à la chaîne de recherche.
 
@@ -80,44 +80,44 @@ Le tableau suivant fournit une liste de termes indexés qui peuvent être ajout�
 | Catégorie | Termes indexés 
 
 
-| Stockage | modèle du fournisseur de noms « stockage » 
+| Stockage | modèle de fournisseur de nom de « stockage » 
 
 
-| Poolde stockage | Nom du nom « storagepool » des adresses IP de stockage du numéro de série du stockage du fournisseur de stockage pour tous les noms de volumes internes associés pour tous les disques associés 
+| Pool de stockage | nom du pool de stockage nom du stockage adresses IP du stockage numéro de série du stockage fournisseur de stockage modèle de stockage noms de tous les volumes internes associés noms de tous les disques associés 
 
 
-| Volume interne | Nom interne du nom des adresses IP de stockage du numéro de série de stockage du fournisseur de stockage du nom de modèle de stockage du pool de stockage de tous les partages associés de toutes les applications associées 
+| Volume interne | "internalvolume" nom nom du stockage adresses IP du stockage numéro de série du stockage fournisseur de stockage modèle de stockage nom du pool de stockage noms de tous les partages associés noms de toutes les applications associées 
 
 
-| Volumétrie | Noms d'étiquette de nom « volume » de tous les volumes internes nom du pool de stockage nom des adresses IP de stockage du numéro de série de stockage du modèle de stockage du fournisseur de stockage 
+| Volume | nom de « volume » nom de l'étiquette noms de tous les volumes internes nom du pool de stockage nom du stockage adresses IP du stockage numéro de série du stockage fournisseur de stockage modèle de stockage 
 
 
-| Nœud de stockage | Nom de « storagenode » des adresses IP de stockage du numéro de série de stockage du modèle de stockage du fournisseur 
+| Nœud de stockage | "storagenode" nom nom du stockage adresses IP du stockage numéro de série du stockage fournisseur de stockage modèle de stockage 
 
 
-| Hôte | Nom « hôte » adresses IP noms de toutes les applications associées 
+| Hôte | nom d'« hôte » adresses IP noms de toutes les applications associées 
 
 
-| Datastore | Nom du « datastore » : noms IP du centre virtuel de tous les volumes, noms de tous les volumes, de tous les volumes internes 
+| Magasin de données | nom du « datastore » nom du centre virtuel noms IP de tous les volumes noms de tous les volumes internes 
 
 
-| Ordinateurs virtuels | Nom de "virtualmachine" Nom DNS adresses IP nom de l'hôte adresses IP des noms d'hôte de tous les datastores noms de toutes les applications associées 
+| Machines virtuelles | nom de « machine virtuelle » nom DNS adresses IP nom de l'hôte adresses IP de l'hôte noms de tous les magasins de données noms de toutes les applications associées 
 
 
-| Commutateurs (standard et NPV) | « Switch » adresse IP wwn nom numéro de série modèle ID de domaine nom de la structure wwn de la structure 
+| Commutateurs (réguliers et NPV) | "switch" adresse IP nom wwn numéro de série modèle identifiant de domaine nom de la structure wwn de la structure 
 
 
-| Client supplémentaire | nom du locataire secteur d'activité projet de l'unité commerciale 
+| Application | « application » nom locataire secteur d'activité unité commerciale projet 
 
 
-| Bande | Nom de l'adresse IP « bande » fournisseur du numéro de série 
+| Ruban adhésif | "bande" adresse IP nom numéro de série fournisseur 
 
 
-| Port | nom wwn « port » 
+| Port | nom WWN « port » 
 
 
-| Structure | nom wwn de la « structure » 
+| Tissu | nom wwn « tissu » 
 
 
-| Storage Virtual machine (SVM) | UUID de nom « storagevirtualmachine » 
+| Machine virtuelle de stockage (SVM) | UUID du nom « storagevirtualmachine » 
 |===

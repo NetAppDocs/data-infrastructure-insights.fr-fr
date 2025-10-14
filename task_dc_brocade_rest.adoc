@@ -2,46 +2,46 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_rest.html 
 keywords: data collector, Brocade, FC switch, FOS, Rest 
-summary: Configuration du collecteur de données REST Brocade FOS. 
+summary: Configuration du collecteur de données Brocade FOS REST. 
 ---
-= Collecteur de données REST Brocade FOS
+= Collecteur de données Brocade FOS REST
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur REST Brocade FOS pour détecter l'inventaire et les performances des commutateurs Brocade exécutant le firmware FabricOS (FOS) version 8.2 et ultérieure. Veuillez noter que les premières versions de FOS 8.2 peuvent contenir des bugs d'API REST ; il est fortement recommandé d'exécuter la dernière version possible de FOS prise en charge par votre plateforme.
+Data Infrastructure Insights utilise le collecteur Brocade FOS REST pour découvrir l'inventaire et les performances des périphériques de commutation Brocade exécutant le micrologiciel FabricOS (FOS) 8.2 et versions ultérieures.  Veuillez noter que les premières versions de FOS 8.2 peuvent contenir des bugs d'API REST ; il est fortement recommandé d'exécuter la dernière version de FOS possible prise en charge par votre plateforme.
 
-Remarque : le niveau « utilisateur » par défaut de FOS n'est pas suffisamment puissant pour que Data Infrastructure Insights affiche tous les aspects logiques d'un périphérique. Nous avons besoin d'un compte utilisateur avec le rôle « châssis » activé, ainsi que des autorisations sur toutes les structures virtuelles configurées sur un commutateur.
+Remarque : le niveau « utilisateur » par défaut de FOS n'est pas suffisamment puissant pour que Data Infrastructure Insights puisse visualiser tous les aspects logiques d'un périphérique. Nous avons besoin d'un compte utilisateur avec le « rôle de châssis » activé, ainsi que des autorisations sur toutes les structures virtuelles configurées sur un commutateur.
 
-Voici un exemple de procédure permettant de créer un compte utilisateur « avec le moins de privilèges » pour l'utilisation de Data Infrastructure Insights dans une session SSH vers un périphérique FOS :
+Voici un exemple de la manière dont vous pouvez créer un compte utilisateur « à privilèges minimaux » pour l'utilisation de Data Infrastructure Insights dans une session SSH sur un périphérique FOS :
 
-UserConfig --add NetAppCIUser -r user -l 1-128 -c user -p Qwerty !
+userConfig --add NetAppCIUser -r utilisateur -l 1-128 -c utilisateur -p Qwerty!
 
-Cela créera un utilisateur « NetAppCIUser » avec le mot de passe « Qwerty! ». Cet utilisateur a le rôle « user » (-r) sur les 128 structures virtuelles possibles ( -l ). Cet utilisateur possède en outre le rôle “Chassis” ( -c) requis, avec un accès de niveau utilisateur attribué.
+Cela créera un utilisateur « NetAppCIUser » avec un mot de passe « Qwerty! ».  Cet utilisateur a le rôle « utilisateur » (-r) sur les 128 structures virtuelles possibles ( -l ).  Cet utilisateur dispose en outre du rôle « Châssis » requis (-c) avec un accès de niveau utilisateur attribué.
 
-Par défaut, ce collecteur tentera de découvrir tous les périphériques FOS faisant partie de toutes les structures dont le commutateur fait partie.
+Par défaut, ce collecteur tentera de découvrir tous les périphériques FOS qui font partie de toutes les structures dont le commutateur fait partie.
 
-Remarque : l'utilisateur en lecture seule par défaut de FOS, « utilisateur », NE dispose PAS d'autorisations d'affichage sur toutes les structures virtuelles et ne dispose PAS d'autorisations de « rôle châssis ». Cela signifie que vous aurez peu de chances de réussir à utiliser l'option « utilisateur » avec Data Infrastructure Insights, qui doit comprendre à la fois la configuration physique et logique du périphérique FOS.
+Remarque : l'utilisateur en lecture seule par défaut de FOS, « user », n'a PAS d'autorisations d'affichage sur tous les Virtual Fabrics, ni d'autorisations de « rôle de châssis ».  Cela signifie que vous aurez peu de chances de réussir en utilisant « utilisateur » avec Data Infrastructure Insights, qui doit comprendre à la fois la configuration physique et logique du périphérique FOS.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données REST Brocade FOS. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données Brocade FOS REST.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Commutateur | Commutateur 
+| Changer | Changer 
 
 
 | Port | Port 
 
 
-| Structure virtuelle, structure physique | Structure 
+| Tissu virtuel, tissu physique | Tissu 
 
 
 | Zone | Zone 
@@ -50,16 +50,16 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes à
 | Commutateur logique | Commutateur logique 
 
 
-| Zone LSAN | Zone IVR 
+| Zone LSA | Zone IVR 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-* Il doit y avoir une connectivité TCP à tous les commutateurs de la structure. Ce type de collecteur de données essaiera de manière transparente HTTP et HTTPS pour chaque périphérique de la structure. Si vous cochez la case _détecter tous les commutateurs dans la structure_, Data Infrastructure Insights identifie tous les commutateurs de la structure. Cependant, il faut que la connectivité TCP à ces commutateurs supplémentaires soit nécessaire pour les découvrir.
-* Le même compte est nécessaire au niveau global pour tous les commutateurs du maillage. Vous pouvez utiliser l'interface Web du périphérique pour confirmer l'accès.
+* Il doit y avoir une connectivité TCP vers tous les commutateurs de la structure.  Ce type de collecteur de données essaiera de manière transparente HTTP et HTTPS pour chaque périphérique de la structure.  Si vous sélectionnez la case à cocher _Découvrir tous les commutateurs de la structure_, Data Infrastructure Insights identifie tous les commutateurs de la structure ; cependant, il a besoin d'une connectivité TCP à ces commutateurs supplémentaires pour les découvrir.
+* Le même compte est nécessaire à l’échelle mondiale sur tous les commutateurs de la structure.  Vous pouvez utiliser l'interface Web de l'appareil pour confirmer l'accès.
 
 
 
@@ -71,13 +71,13 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| IP du commutateur | Adresse IP ou nom de domaine complet du commutateur FOS 
+| Changer d'adresse IP | Adresse IP ou nom de domaine complet du commutateur FOS 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du commutateur 
+| Nom d'utilisateur | Nom d'utilisateur pour le commutateur 
 
 
-| Mot de passe | Mot de passe du commutateur 
+| Mot de passe | Mot de passe pour le commutateur 
 |===
 
 
@@ -88,31 +88,31 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| Périphériques exclus | Liste séparée par des virgules des adresses IPv4 de périphérique à exclure de l'interrogation. 
+| Appareils exclus | Liste séparée par des virgules des adresses IPv4 des périphériques à exclure de l'interrogation. 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 60. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire.  La valeur par défaut est 60. 
 
 
-| Découvrir tous les commutateurs du tissu | Sélectionnez pour découvrir tous les switchs de la structure. 
+| Découvrez tous les commutateurs du fabric | Sélectionnez pour découvrir tous les commutateurs du tissu. 
 
 
-| Choisissez de favoriser HBA par rapport aux alias de zone | Choisissez de favoriser les alias de HBA ou de zone. 
+| Privilégier les HBA plutôt que les alias de zone | Choisissez de privilégier les alias HBA ou de zone. 
 
 
 | Type de connexion | HTTP ou HTTPS. 
 
 
-| Notez que ce paramètre ne modifie que l'EC de protocole qui tente d'utiliser d'abord par périphérique. L'EC essaiera automatiquement le protocole opposé si la valeur par défaut échoue | Remplacer le port TCP 
+| Notez que ce paramètre modifie uniquement le protocole que CI tente d'utiliser en premier par périphérique - CI tentera automatiquement le protocole opposé si la valeur par défaut échoue | Remplacer le port TCP 
 
 
-| Spécifiez un port si la valeur par défaut n'est pas utilisée. | Intervalle d'interrogation des performances (s) 
+| Spécifiez un port si vous n'utilisez pas le port par défaut. | Intervalle d'interrogation des performances (sec) 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -120,21 +120,21 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| La fonction de test m'avertit qu'un protocole est inaccessible | Un périphérique Brocade FOS 8.2+ donné ne veut parler que sur HTTP ou HTTPS. Si un commutateur est équipé d'un certificat numérique, le commutateur affichera des erreurs HTTP si l'on tente de communiquer avec lui avec HTTP ou HTTPS non chiffré. La fonction de test tente de communiquer avec HTTP et HTTPS. Si le test vous indique qu'un protocole réussit, vous pouvez enregistrer le collecteur en toute sécurité et ne vous inquiétez pas que l'autre protocole a échoué. Le collecteur tentera les deux protocoles pendant la collecte et n'échouera que si aucun des deux protocoles ne fonctionne. 
+| La fonctionnalité Test m'avertit qu'un protocole est inaccessible | Un périphérique Brocade FOS 8.2+ donné ne voudra communiquer que sur HTTP ou HTTPS. Si un commutateur dispose d'un certificat numérique installé, le commutateur renverra des erreurs HTTP si l'on tente de communiquer avec lui avec HTTP non chiffré plutôt qu'avec HTTPS.  La fonction de test tente la communication avec HTTP et HTTPS. Si le test vous indique qu'un protocole réussit, vous pouvez enregistrer le collecteur en toute sécurité et ne pas vous inquiéter de l'échec de l'autre protocole. Le collecteur tentera les deux protocoles pendant la collecte et échouera uniquement si aucun ne fonctionne. 
 
 
-| Erreur : l'inventaire échoue avec l'erreur 401 Non autorisé... Clé de session non valide... | Il s'agit d'un bug spécifique présent dans certaines versions 8.2 FOS très anciennes, comme la 8.2.1c, qui ne prennent pas correctement en charge l'authentification HTTP de base. Effectuez une mise à niveau vers une version 8.2 ou 9.* ultérieure. 
+| Erreur : l'inventaire échoue avec l'erreur 401 Non autorisé... Clé de session non valide... | Il s'agit d'un bug distinct dans certaines versions très anciennes de 8.2 FOS, comme 8.2.1c, qui ne prennent PAS correctement en charge l'authentification de base HTTP.  Mise à niveau vers une version ultérieure 8.2 ou 9.* 
 
 
-| Erreur : « les informations de l'infrastructure de données ont reçu un rôle de châssis non valide » | Vérifiez que l'utilisateur configuré dans cette source de données a reçu l'autorisation de rôle de châssis. 
+| Erreur : « Data Infrastructure Insights a reçu un rôle de châssis non valide » | Vérifiez que l’utilisateur configuré dans cette source de données dispose de l’autorisation de rôle de châssis. 
 
 
-| Erreur : « adresse IP du châssis non concordante » | Modifiez la configuration de la source de données pour utiliser l'adresse IP du châssis. 
+| Erreur : « Adresse IP du châssis incompatible » | Modifiez la configuration de la source de données pour utiliser l'adresse IP du châssis. 
 
 
-| Échec de l'inventaire avec un 403 interdit | Il peut s'agir simplement de mauvaises informations d'identification ou indiquer que vous essayez d'utiliser un rôle suffisamment puissant. Rappelez-vous que les utilisateurs de niveau « utilisateur » NE disposent PAS du droit requis de « rôle de châssis », ou consultez l'accès aux structures virtuelles non par défaut. 
+| L'inventaire échoue avec une erreur 403 Forbidden | Il peut s'agir simplement d'informations d'identification erronées ou cela peut indiquer que vous essayez d'utiliser un rôle insuffisamment puissant. N'oubliez pas que les utilisateurs de niveau « utilisateur » n'ont PAS le droit « Rôle de châssis » requis ni l'accès à la vue aux structures virtuelles non par défaut. 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

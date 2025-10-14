@@ -1,20 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: reference_schemas.html 
-summary: 'Diagrammes de schéma d"entrepôt de données et tableaux à utiliser avec Reporting' 
+summary: 'Diagrammes et tables de schéma d"entrepôt de données à utiliser avec les rapports' 
 keywords: dwh, data warehouse, schema, reporting 
 ---
-= Schémas d'informations d'infrastructure de données pour le reporting
+= Schémas Data Infrastructure Insights pour la création de rapports
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Ces tableaux et diagrammes de schéma sont fournis ici en tant que référence pour le reporting Data Infrastructure Insights.
+Ces tables de schéma et diagrammes sont fournis ici à titre de référence pour les rapports Data Infrastructure Insights .
 
-link:https://docs.netapp.com/us-en/cloudinsights/ci_reporting_database_schema.pdf["*Tables de schémas*"] Au format .PDF. Cliquez sur le lien pour l'ouvrir ou cliquez avec le bouton droit de la souris et choisissez _Enregistrer sous..._ pour le télécharger.
+link:https://docs.netapp.com/us-en/cloudinsights/ci_reporting_database_schema.pdf["*Tables de schéma*"]au format .PDF.  Cliquez sur le lien pour l'ouvrir ou faites un clic droit et choisissez _Enregistrer sous..._ pour télécharger.
 
-link:reporting_schema_diagrams.html["*Schémas*"]
+link:reporting_schema_diagrams.html["* Diagrammes de schéma *"]
 
 
-NOTE: La fonction de génération de rapports est disponible dans Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Édition Premium"].
+NOTE: La fonctionnalité de reporting est disponible dans Data Infrastructure Insightslink:concept_subscribing_to_cloud_insights.html["Édition Premium"] .

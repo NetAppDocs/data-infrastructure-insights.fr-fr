@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_cloud_insights_onboarding_1.html 
-summary: 'Vous inscrire pour obtenir des informations exploitables sur l"infrastructure de données et créer votre locataire.' 
+summary: Inscription à Data Infrastructure Insights et création de votre locataire. 
 keywords: onboarding, new user 
 ---
-= Intégration de données exploitables de l'infrastructure de données
+= Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,50 +14,50 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Avant de pouvoir commencer à travailler avec Data Infrastructure Insights, vous devez vous inscrire sur le portail * NetApp Console*.  Si vous disposez déjà d'une connexion à la console NetApp , vous pouvez démarrer un essai gratuit de Data Infrastructure Insights en quelques étapes rapides.
+Avant de pouvoir commencer à travailler avec Data Infrastructure Insights, vous devez vous inscrire sur le portail * NetApp Console*.  Si vous disposez déjà d'une connexion à la NetApp Console , vous pouvez démarrer un essai gratuit de Data Infrastructure Insights en quelques étapes rapides.
 
 
 
 == Création de votre compte NetApp Console
 
-Pour démarrer avec les services cloud de NetApp, accédez àlink:https://console.netapp.com/["* Console NetApp *"^] et cliquez sur *Commencer*.
+Pour démarrer avec les services cloud de NetApp, accédez àlink:https://console.netapp.com/["* NetApp Console*"^] et cliquez sur *Commencer*.
 
-* Si vous n'êtes pas encore inscrit, sélectionnez *s'inscrire*
+* Si vous n'êtes pas encore inscrit, sélectionnez *S'inscrire*
 * Saisissez une adresse e-mail professionnelle valide et choisissez un mot de passe.
-* Entrez le nom de votre entreprise, ainsi que votre nom complet.
-* Acceptez les conditions générales et sélectionnez *Continuer*.
+* Entrez le nom de votre entreprise et votre nom complet.
+* Acceptez les termes et conditions et sélectionnez *Continuer*.
 * La console vous guidera tout au long du processus de démarrage.
 
 
 
 
-=== Que faire si j’ai déjà une connexion à la console NetApp ?
+=== Que faire si j’ai déjà une connexion à la NetApp Console ?
 
-Une fois que vous avez un compte NetApp Console, choisissez simplement *Connexion* sur lelink:https://console.netapp.com/["* Console NetApp *"^] page du portail.
+Une fois que vous avez un compte NetApp Console , choisissez simplement *Connexion* sur lelink:https://console.netapp.com/["* NetApp Console*"^] page du portail.
 
-Entrez votre adresse e-mail et votre mot de passe. Vous serez ensuite redirigé vers la page d'offres clouds de NetApp.
+Entrez votre adresse email et votre mot de passe.  Vous serez ensuite redirigé vers la page des offres cloud de NetApp.
 
 Accédez à *Analyse et contrôle > Observabilité* pour en savoir plus sur Data Infrastructure Insights et/ou demander une démonstration.
 
 
 
-== Commencez l'essai gratuit de Data Infrastructure Insights
+== Démarrez votre essai gratuit de Data Infrastructure Insights
 
-Si vous vous connectez pour la première fois à Data Infrastructure Insights, sous l'offre Data Infrastructure Insights, cliquez sur *commencer l'essai gratuit*. Les informations sur l'infrastructure de données vous aideront à créer le locataire de votre entreprise, notamment à sélectionner la région dans laquelle vous souhaitez placer votre locataire.
+Si c'est la première fois que vous vous connectez à Data Infrastructure Insights, sous l'offre Data Infrastructure Insights , cliquez sur *Démarrer l'essai gratuit*.  Data Infrastructure Insights vous guidera dans la création du locataire de votre entreprise, y compris la sélection de la région dans laquelle vous souhaitez que votre locataire réside.
 
-image:trial_region_selector.png["Sélectionnez la région dans laquelle héberger votre locataire Data Infrastructure Insights"]
+image:trial_region_selector.png["Sélection de la région dans laquelle héberger votre locataire Data Infrastructure Insights"]
 
 Une fois la création de votre locataire terminée, utilisez vos informations d'identification de console pour vous connecter et démarrer votre essai gratuit de 30 jours de Data Infrastructure Insights.  Au cours de cet essai, vous pouvez découvrir les fonctionnalités offertes par Data Infrastructure Insights .
 
-Pendant l'essai gratuit, vous pouvez link:concept_subscribing_to_cloud_insights.html["commencez votre abonnement"] à tout moment accéder à la vue sur l'infrastructure de données. Lorsque vous êtes abonné, vous pouvez utiliser les fonctionnalités Data Infrastructure Insights basées sur votre abonnement actuel.
+Pendant l'essai gratuit, vous pouvezlink:concept_subscribing_to_cloud_insights.html["démarrez votre abonnement"] à Data Infrastructure Insights à tout moment.  Lorsque vous êtes abonné, vous pouvez utiliser les fonctionnalités de Data Infrastructure Insights en fonction de votre abonnement actuel.
 
 
 
-== Connectez-vous et allez
+== Sign in et c'est parti
 
-Une fois votre locataire créé, vous pouvez à tout moment vous connecter simplement au portail de la console NetApp et accéder aulink:https://services.cloud.netapp.com["Services cloud"] page et sélectionnez *Accéder à Data Infrastructure Insights*.
+Une fois votre locataire créé, vous pouvez à tout moment vous connecter simplement au portail de la NetApp Console et accéder aulink:https://services.cloud.netapp.com["Services cloud"] page et sélectionnez *Accéder à Data Infrastructure Insights*.
 
-Vous pouvez également ouvrir un navigateur directement vers l'URL du locataire Data Infrastructure Insights, par exemple :
+Vous pouvez également ouvrir un navigateur directement sur l'URL de votre locataire Data Infrastructure Insights , par exemple :
 
  \https://<tenant-prefix>.c01.cloudinsights.netapp.com/
 L'URL sera également incluse dans l'e-mail d'invitation de chaque utilisateur pour un accès et une mise en favoris simples.  Si l'utilisateur n'est pas déjà connecté à la console, il sera invité à se connecter.
@@ -65,7 +65,7 @@ L'URL sera également incluse dans l'e-mail d'invitation de chaque utilisateur p
 
 NOTE: Les nouveaux utilisateurs doivent toujours s'inscrire pour accéder à la console avant de pouvoir accéder à l'URL de leur locataire.
 
-La première fois que vous vous connectez à un nouveau locataire, vous serez guidé lors de la configuration de link:task_getting_started_with_cloud_insights.html["*commencer la collecte de données*"].
+La première fois que vous vous connectez à un nouveau locataire, vous serez guidé dans la configurationlink:task_getting_started_with_cloud_insights.html["*commence à collecter des données*"] .
 
 
 

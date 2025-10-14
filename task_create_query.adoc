@@ -1,119 +1,119 @@
 ---
 sidebar: sidebar 
 permalink: task_create_query.html 
-summary: 'Les requêtes vous permettent d"identifier rapidement et facilement les ressources et les indicateurs d"intérêt.' 
+summary: Les requêtes vous permettent d’identifier rapidement et facilement les actifs et les mesures d’intérêt. 
 keywords: query, queries 
 ---
-= Création de requêtes
+= Créer des requêtes
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Les requêtes vous permettent de rechercher les ressources de votre locataire à un niveau granulaire, ce qui vous permet de filtrer les données que vous souhaitez et de trier les résultats selon vos préférences.
+Les requêtes vous permettent de rechercher les actifs de votre locataire à un niveau granulaire, ce qui vous permet de filtrer les données souhaitées et de trier les résultats à votre guise.
 
-Par exemple, vous pouvez créer une requête pour _volumes_, ajouter un filtre pour trouver des _stockages_ particuliers associés aux volumes sélectionnés, ajouter un autre filtre pour trouver une _annotation_ particulière, par exemple "Tier 1" dans les stockages sélectionnés, Et enfin, ajoutez un autre filtre pour trouver tous les stockages avec _IOPS - Read (IO/s)_ supérieur à 25. Lorsque les résultats sont affichés, vous pouvez trier les colonnes d'informations associées à la requête dans l'ordre croissant ou décroissant.
+Par exemple, vous pouvez créer une requête pour les _volumes_, ajouter un filtre pour rechercher des _stockages_ particuliers associés aux volumes sélectionnés, ajouter un autre filtre pour rechercher une _annotation_ particulière telle que « Niveau 1 » sur les stockages sélectionnés, et enfin ajouter un autre filtre pour rechercher tous les stockages avec _IOPS - Lecture (IO/s)_ supérieur à 25.  Lorsque les résultats sont affichés, vous pouvez ensuite trier les colonnes d’informations associées à la requête par ordre croissant ou décroissant.
 
-Remarque : lorsqu'un nouveau collecteur de données est ajouté qui acquiert des ressources ou que des annotations ou des affectations d'application sont effectuées, vous pouvez interroger ces nouveaux actifs, annotations ou applications uniquement après l'indexation des requêtes. L'indexation a lieu à un intervalle planifié régulièrement ou pendant certains événements tels que l'exécution de règles d'annotation.
+Remarque : lorsqu'un nouveau collecteur de données est ajouté et acquiert des ressources, ou que des annotations ou des affectations d'application sont effectuées, vous pouvez interroger ces nouvelles ressources, annotations ou applications uniquement après l'indexation des requêtes.  L'indexation se produit à un intervalle régulier ou lors de certains événements tels que l'exécution de règles d'annotation.
 
-.La création d'une requête est très simple :
-. Accédez à *requêtes > *+Nouvelle requête*.
-. Dans la liste 'Sélectionner...', sélectionnez le type d'objet à rechercher. Vous pouvez faire défiler la liste ou commencer à taper pour trouver plus rapidement ce que vous recherchez.
+.Créer une requête est très simple :
+. Accédez à *Requêtes > *+Nouvelle requête*.
+. Dans la liste « Sélectionner... », sélectionnez le type d’objet que vous souhaitez interroger.  Vous pouvez faire défiler la liste ou commencer à taper pour trouver plus rapidement ce que vous recherchez.
 
 
-.Liste de défilement :
-image:QueryDrop-DownList.png["Liste déroulante requête"]
+.Liste déroulante :
+image:QueryDrop-DownList.png["Menu déroulant de requête"]
 
-.Type à rechercher :
-image:QueryPageFilter.png["Saisir pour trouver"]
+.Tapez pour rechercher :
+image:QueryPageFilter.png["Taper pour trouver"]
 
-Vous pouvez ajouter des filtres pour affiner davantage votre requête en cliquant sur le bouton *+* dans le champ *Filtrer par*. Grouper les lignes par objet ou attribut. Lorsque vous utilisez des données d'intégration (Kubernetes, ONTAP Advanced Metrics, etc.), vous pouvez regrouper par plusieurs attributs, si vous le souhaitez.
+Vous pouvez ajouter des filtres pour affiner davantage votre requête en cliquant sur le bouton *+* dans le champ *Filtrer par*.  Regrouper les lignes par objet ou par attribut.  Lorsque vous travaillez avec des données d'intégration (Kubernetes, ONTAP Advanced Metrics, etc.), vous pouvez regrouper par plusieurs attributs, si vous le souhaitez.
 
-image:QueryFilterExample.png["Filtrage et regroupement de requêtes"]
+image:QueryFilterExample.png["Filtrage et regroupement des requêtes"]
 
-La liste des résultats de la requête affiche un certain nombre de colonnes par défaut, en fonction du type d'objet recherché. Pour ajouter, supprimer ou modifier les colonnes, cliquez sur l'icône engrenage à droite du tableau. Les colonnes disponibles varient en fonction du type de ressource/mesure.
+La liste des résultats de la requête affiche un certain nombre de colonnes par défaut, en fonction du type d'objet recherché.  Pour ajouter, supprimer ou modifier les colonnes, cliquez sur l’icône d’engrenage à droite du tableau.  Les colonnes disponibles varient en fonction du type d'actif/métrique.
 
-image:QuerySelectColumns.png["Sélectionnez colonnes"]
+image:QuerySelectColumns.png["Sélectionner les colonnes"]
 
 
 
 == Voyez-le en action
 
-link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Explorez et analysez avec des requêtes dans Data Infrastructure Insights (vidéo)"]
+link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Explorer et analyser avec des requêtes dans Data Infrastructure Insights (Vidéo)"]
 
 
 
-== Choisissez agrégation, unités, mise en forme conditionnelle
+== Choix de l'agrégation, des unités et de la mise en forme conditionnelle
 
 
 
 === Agrégation et unités
 
-Pour les colonnes « valeur », vous pouvez affiner davantage les résultats de votre requête en choisissant la manière dont les valeurs affichées sont agrégées et en sélectionnant les unités dans lesquelles ces valeurs sont affichées. Ces options sont disponibles en sélectionnant le menu « trois points » dans le coin supérieur d'une colonne.
+Pour les colonnes « valeur », vous pouvez affiner davantage les résultats de votre requête en choisissant la manière dont les valeurs affichées sont agrégées ainsi qu'en sélectionnant les unités dans lesquelles ces valeurs sont affichées.  Ces options se trouvent en sélectionnant le menu « trois points » dans le coin supérieur d'une colonne.
 
-image:Query_Page_Aggregation_etc.png["Résultats de la page de requête montrant l'agrégation, la mise en forme conditionnelle, l'affichage de l'unité et le changement de nom de la colonne"]
+image:Query_Page_Aggregation_etc.png["Résultats de la page de requête affichant l'agrégation, la mise en forme conditionnelle, l'affichage des unités et le renommage des colonnes"]
 
 
 
 ==== Unités
 
-Vous pouvez sélectionner les unités dans lesquelles afficher les valeurs. Par exemple, si la colonne sélectionné affiche la capacité brute et que les valeurs s'affichent en Gio, mais que vous préférez les afficher en Tio, sélectionnez simplement Tio dans la liste déroulante Affichage des unités.
+Vous pouvez sélectionner les unités dans lesquelles afficher les valeurs.  Par exemple, si la colonne sélectionnée affiche la capacité brute et que les valeurs sont affichées en Gio, mais que vous préférez les afficher en Tio, sélectionnez simplement Tio dans la liste déroulante Affichage de l'unité.
 
 
 
 ==== Agrégation
 
-Par le même jeton, si les valeurs affichées sont agrégées à partir des données sous-jacentes sous la forme « moyenne », Mais vous préférez afficher la somme de toutes les valeurs, sélectionnez « somme » dans la liste déroulante _regrouper par_ (si vous voulez que des valeurs groupées affichent les sommes) ou dans la liste déroulante _Time Aggregate by_ (si vous voulez que les valeurs de ligne affichent des sommes de données sous-jacentes).
+De la même manière, si les valeurs affichées sont agrégées à partir des données sous-jacentes sous la forme « Moyenne », mais que vous préférez afficher la somme de toutes les valeurs, sélectionnez « Somme » dans la liste déroulante _Grouper par_ (si vous souhaitez que les valeurs groupées affichent les sommes) ou dans la liste déroulante _Agréger par heure_ (si vous souhaitez que les valeurs de ligne affichent les sommes des données sous-jacentes).
 
-Vous pouvez choisir d'agréger des points de données groupés par _AVG, Max, min ou SUM_.
+Vous pouvez choisir d'agréger des points de données groupés par _Moyenne, Max, Min ou Somme_.
 
-Vous pouvez agréger des données de ligne individuelles par _moyenne, dernier point de données acquis, maximum, minimum ou somme_.
+Vous pouvez regrouper les données de lignes individuelles par _Moyenne, Dernier point de données acquis, Maximum, Minimum ou Somme_.
 
 
 
 ==== Mise en forme conditionnelle
 
-La mise en forme conditionnelle vous permet de mettre en évidence les seuils de niveau Avertissement et critique dans la liste des résultats de la requête, ce qui apporte une visibilité instantanée sur les valeurs aberrantes et les points de données exceptionnels.
+La mise en forme conditionnelle vous permet de mettre en évidence les seuils de niveau d'avertissement et de niveau critique dans la liste des résultats de la requête, offrant ainsi une visibilité instantanée sur les valeurs aberrantes et les points de données exceptionnels.
 
 image:Query_Page_Conditional_Formatting.png["Mise en forme conditionnelle sur la page de requête"]
 
-Le formatage conditionnel est défini séparément pour chaque colonne. Par exemple, vous pouvez choisir un ensemble de seuils pour une colonne de capacité et un autre pour une colonne de débit.
+La mise en forme conditionnelle est définie séparément pour chaque colonne.  Par exemple, vous pouvez choisir un ensemble de seuils pour une colonne de capacité et un autre ensemble pour une colonne de débit.
 
 
 
 ==== Renommer la colonne
 
-Renommer une colonne modifie le nom affiché dans la liste des résultats de la requête. Le nouveau nom de colonne est également affiché dans le fichier résultant si vous exportez la liste de requêtes au format .CSV.
+Renommer une colonne modifie le nom affiché dans la liste des résultats de la requête.  Le nouveau nom de colonne est également affiché dans le fichier résultant si vous exportez la liste de requêtes au format .CSV.
 
 
 
-=== Économisez
+=== Enregistrer
 
-Une fois que vous avez configuré votre requête pour afficher les résultats souhaités, vous pouvez cliquer sur le bouton *Enregistrer* pour enregistrer la requête en vue d'une utilisation ultérieure. Donnez-lui un nom unique et significatif.
+Après avoir configuré votre requête pour afficher les résultats souhaités, vous pouvez cliquer sur le bouton *Enregistrer* pour enregistrer la requête pour une utilisation ultérieure.  Donnez-lui un nom significatif et unique.
 
 
 
-== Plus d'informations sur le filtrage
+== En savoir plus sur le filtrage
 
 
 
 === Caractères génériques et expressions
 
-Lorsque vous filtrez des valeurs de texte ou de liste dans des requêtes ou des widgets de tableau de bord, lorsque vous commencez à taper, vous avez la possibilité de créer un *filtre générique* basé sur le texte en cours. Si vous sélectionnez cette option, tous les résultats correspondant à l'expression de caractère générique seront résélectionnés. Vous pouvez également créer *expressions* à l'aide DE NOT ou OU, ou sélectionner l'option "aucun" pour filtrer les valeurs nulles dans le champ.
+Lorsque vous filtrez des valeurs de texte ou de liste dans des requêtes ou des widgets de tableau de bord, lorsque vous commencez à saisir, vous avez la possibilité de créer un *filtre générique* basé sur le texte actuel.  La sélection de cette option renverra tous les résultats correspondant à l’expression générique.  Vous pouvez également créer des *expressions* en utilisant NOT ou OR, ou vous pouvez sélectionner l'option « Aucun » pour filtrer les valeurs nulles dans le champ.
 
 image:Type-Ahead-Example-ingest.png["Filtre générique"]
 
-Filtres basés sur des caractères génériques ou des expressions (par exemple NON, OU « aucun », etc.) s'affiche en bleu foncé dans le champ du filtre. Les éléments que vous sélectionnez directement dans la liste s'affichent en bleu clair.
+Les filtres basés sur des caractères génériques ou des expressions (par exemple NOT, OR, « Aucun », etc.) s'affichent en bleu foncé dans le champ de filtre.  Les éléments que vous sélectionnez directement dans la liste sont affichés en bleu clair.
 
 image:Type-Ahead-Example-Wildcard-DirectSelect.png["Résultats du filtre générique"]
 
-Notez que le filtrage des caractères génériques et des expressions fonctionne avec du texte ou des listes, mais pas avec des valeurs numériques, des dates ou des valeurs booléennes.
+Notez que le filtrage par caractères génériques et par expressions fonctionne avec du texte ou des listes, mais pas avec des nombres, des dates ou des booléens.
 
 
 
-=== Raffinage des filtres
+=== Filtres de raffinage
 
-Vous pouvez utiliser les éléments suivants pour affiner votre filtre :
+Vous pouvez utiliser les éléments suivants pour affiner votre filtre :
 
 |===
 
@@ -121,24 +121,24 @@ Vous pouvez utiliser les éléments suivants pour affiner votre filtre :
 | Filtre | Ce qu'il fait | Exemple | Résultat 
 
 
-| * (Astérisque) | permet de rechercher tout | vol*rhel | renvoie toutes les ressources commençant par « vol » et se terminant par « rhel ». 
+| * (Astérisque) | vous permet de rechercher tout ce que vous voulez | vol*rhel | renvoie toutes les ressources commençant par « vol » et se terminant par « rhel » 
 
 
-| ? (point d'interrogation) | permet de rechercher un nombre spécifique de caractères | BOS-PRD ??-S12 | Renvoie BOS-PRD**__12__**-S12, BOS-PRD**__23__**-S12, etc 
+| ? (point d'interrogation) | vous permet de rechercher un nombre spécifique de caractères | BOS-PRD??-S12 | renvoie BOS-PRD**__12__**-S12, BOS-PRD**__23__**-S12, et ainsi de suite 
 
 
-| OU | vous permet de spécifier plusieurs entités | FAS2240 OU CX600 OU FAS3270 | Renvoie l'un des modèles FAS2440, CX600 ou FAS3270 
+| OU | vous permet de spécifier plusieurs entités | FAS2240 OU CX600 OU FAS3270 | renvoie l'un des FAS2440, CX600 ou FAS3270 
 
 
-| PAS | permet d'exclure du texte des résultats de la recherche | PAS EMC* | Elle renvoie tous les éléments qui ne sont pas à l'avant par « EMC ». 
+| PAS | vous permet d'exclure du texte des résultats de recherche | NON EMC* | renvoie tout ce qui ne commence pas par « EMC » 
 
 
-| _Aucun_ | Recherche les valeurs NULL dans tous les champs | _Aucun_ | renvoie les résultats où le champ cible est vide 
+| _Aucun_ | recherche les valeurs NULL dans tous les champs | _Aucun_ | renvoie les résultats lorsque le champ cible est vide 
 
 
-| Pas * | Recherche les valeurs NULL dans les champs _text-only_ | Pas * | renvoie les résultats où le champ cible est vide 
+| Pas * | recherche les valeurs NULL dans les champs _texte uniquement_ | Pas * | renvoie les résultats lorsque le champ cible est vide 
 |===
-Si vous placez une chaîne de filtre entre deux guillemets, Insight traite tout entre le premier et le dernier devis comme une correspondance exacte. Tous les caractères spéciaux ou opérateurs situés dans les guillemets seront traités comme des littéraux. Par exemple, le filtrage pour "*" renvoie des résultats qui sont un astérisque littéral ; l'astérisque ne sera pas traité comme un caractère générique dans ce cas. Les opérateurs OU ET NON sont également traités comme des chaînes littérales lorsqu'ils sont entourés de guillemets doubles.
+Si vous placez une chaîne de filtre entre guillemets doubles, Insight traite tout ce qui se trouve entre le premier et le dernier guillemet comme une correspondance exacte.  Tous les caractères spéciaux ou opérateurs à l’intérieur des guillemets seront traités comme des littéraux.  Par exemple, le filtrage par « * » renverra des résultats qui sont un astérisque littéral ; l'astérisque ne sera pas traité comme un caractère générique dans ce cas.  Les opérateurs OR et NOT seront également traités comme des chaînes littérales lorsqu'ils sont placés entre guillemets.
 
 
 
@@ -147,23 +147,23 @@ Si vous placez une chaîne de filtre entre deux guillemets, Insight traite tout 
 Lorsque vous filtrez une valeur booléenne, les choix suivants peuvent vous être proposés pour filtrer :
 
 * *Tout* : cela renverra _tous_ les résultats, y compris les résultats définis sur « Oui », « Non » ou pas définis du tout.
-* *Oui* : renvoie uniquement les résultats « Oui ».  Notez que DII affiche « Oui » comme coche dans la plupart des tableaux.  Les valeurs peuvent être définies sur « Vrai », « Activé », etc. DII traite toutes ces valeurs comme « Oui ».
-* *Non* : renvoie uniquement les résultats « Non ».  Notez que DII affiche « Non » sous la forme d’un « X » dans la plupart des tableaux.  Les valeurs peuvent être définies sur « Faux », « Désactivé », etc. DII traite toutes ces valeurs comme « Non ».
-* *Aucun* : renvoie uniquement les résultats pour lesquels la valeur n'a pas été définie du tout.  Également appelées valeurs « nulles ».
+* *Oui* : renvoie uniquement les résultats « Oui ». Notez que DII affiche « Oui » comme coche dans la plupart des tableaux. Les valeurs peuvent être définies sur « Vrai », « Activé », etc. DII traite toutes ces valeurs comme « Oui ».
+* *Non* : renvoie uniquement les résultats « Non ». Notez que DII affiche « Non » sous la forme d’un « X » dans la plupart des tableaux. Les valeurs peuvent être définies sur « Faux », « Désactivé », etc. DII traite toutes ces valeurs comme « Non ».
+* *Aucun* : renvoie uniquement les résultats pour lesquels la valeur n'a pas été définie du tout. Également appelées valeurs « nulles ».
 
 
 
 
-== Que dois-je faire maintenant que j'ai des résultats de requête ?
+== Que dois-je faire maintenant que j’ai les résultats de la requête ?
 
-L'interrogation permet d'ajouter des annotations ou d'affecter des applications aux ressources en toute simplicité. Notez que vous pouvez uniquement attribuer des applications ou des annotations à vos ressources d'inventaire (disque, stockage, etc.). Les metrics d'intégration ne peuvent pas prendre en charge les affectations d'annotations ou d'applications.
+L'interrogation fournit un endroit simple pour ajouter des annotations ou attribuer des applications à des actifs.  Notez que vous ne pouvez attribuer des applications ou des annotations qu'à vos ressources d'inventaire (disque, stockage, etc.).  Les mesures d’intégration ne peuvent pas prendre en charge les annotations ou les affectations d’application.
 
-Pour affecter une annotation ou une application aux ressources résultant de votre requête, sélectionnez la ou les ressources à l'aide de la case à cocher située à gauche du tableau des résultats, puis cliquez sur le bouton *actions groupées* à droite. Choisissez l'action à appliquer aux actifs sélectionnés.
+Pour attribuer une annotation ou une application aux ressources résultant de votre requête, sélectionnez simplement la ou les ressources à l'aide de la colonne de cases à cocher à gauche du tableau des résultats, puis cliquez sur le bouton *Actions en masse* à droite.  Choisissez l’action souhaitée à appliquer aux actifs sélectionnés.
 
-image:QueryVolumeBulkActions.png["Exemple d'actions groupées de requête"]
+image:QueryVolumeBulkActions.png["Exemple d'actions de requête en masse"]
 
 
 
 == Les règles d'annotation nécessitent une requête
 
-Si vous configurez link:task_create_annotation_rules.html["Règles d'annotation"], chaque règle doit avoir une requête sous-jacente à utiliser. Mais comme vous l'avez vu ci-dessus, les requêtes peuvent être aussi larges ou aussi étroites que vous le souhaitez.
+Si vous configurezlink:task_create_annotation_rules.html["Règles d'annotation"] , chaque règle doit avoir une requête sous-jacente avec laquelle travailler.  Mais comme vous l'avez vu ci-dessus, les requêtes peuvent être aussi larges ou aussi étroites que vous le souhaitez.

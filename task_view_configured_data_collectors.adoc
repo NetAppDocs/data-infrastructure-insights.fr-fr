@@ -10,38 +10,38 @@ summary: Un résumé.
 
 
 [role="lead"]
-La page collecteurs de données installés permet d'accéder aux collecteurs de données qui ont été configurés pour Data Infrastructure Insights. Vous pouvez utiliser cette page pour modifier des collecteurs de données existants.
+La page Collecteurs de données installés donne accès aux collecteurs de données qui ont été configurés pour Data Infrastructure Insights.  Vous pouvez utiliser cette page pour modifier les collecteurs de données existants.
 
 .Étapes
-. Dans le menu Data Infrastructure Insights, cliquez sur *observabilité > Collectors*
+. Dans le menu Data Infrastructure Insights , cliquez sur *Observabilité > Collecteurs*
 +
-L'écran collecteurs de données disponibles s'affiche.
+L'écran Collecteurs de données disponibles s'affiche.
 
-. Cliquez sur *collecteurs de données installés*
+. Cliquez sur *Collecteurs de données installés*
 +
-Une liste de tous les collecteurs de données installés s'affiche. La liste fournit le nom du collecteur, son état, l'adresse IP à laquelle le collecteur accède et quand les données ont été acquises pour la dernière fois depuis le périphérique A. Les actions pouvant être effectuées sur cet écran sont les suivantes :
+Une liste de tous les collecteurs de données installés s'affiche.  La liste fournit le nom du collecteur, le statut, l'adresse IP à laquelle le collecteur accède et la date de la dernière acquisition des données à partir d'un périphérique.  Les actions qui peuvent être effectuées sur cet écran incluent :
 
 +
-** Contrôle de l'interrogation
+** Sondage de contrôle
 ** Modifier les informations d'identification du collecteur de données
-** Collecteurs de données de clonage
+** Collecteurs de données clonés
 
 
 
 
 
 
-== Contrôle de l'interrogation du Data Collector
+== Contrôler l'interrogation du collecteur de données
 
-Après avoir apporté une modification à un collecteur de données, vous pouvez interroger immédiatement pour vérifier vos modifications ou reporter la collecte de données sur un collecteur de données pendant un, trois ou cinq jours pendant que vous travaillez sur un problème.
+Après avoir apporté une modification à un collecteur de données, vous souhaiterez peut-être qu'il interroge immédiatement pour vérifier vos modifications, ou vous souhaiterez peut-être reporter la collecte de données sur un collecteur de données d'un, trois ou cinq jours pendant que vous travaillez sur un problème.
 
 .Étapes
-. Dans le menu Data Infrastructure Insights, cliquez sur *observabilité > Collectors*
-. Cliquez sur *collecteurs de données installés*
-. Cochez la case à gauche du Data Collector que vous souhaitez modifier
-. Cliquez sur *actions groupées* et sélectionnez l'action d'interrogation que vous souhaitez effectuer.
+. Dans le menu Data Infrastructure Insights , cliquez sur *Observabilité > Collecteurs*
+. Cliquez sur *Collecteurs de données installés*
+. Cochez la case à gauche du collecteur de données que vous souhaitez modifier
+. Cliquez sur *Actions groupées* et sélectionnez l’action de sondage que vous souhaitez effectuer.
 +
-Les actions en bloc peuvent être exécutées simultanément sur plusieurs collecteurs de données. Sélectionnez les collecteurs de données et choisissez l'action à effectuer dans le menu *action groupée*.
+Les actions en masse peuvent être effectuées simultanément sur plusieurs collecteurs de données.  Sélectionnez les collecteurs de données et choisissez l'action à effectuer dans le menu *Action en masse*.
 
 
 
@@ -49,67 +49,67 @@ Les actions en bloc peuvent être exécutées simultanément sur plusieurs colle
 
 == Modification des informations du collecteur de données
 
-Vous pouvez modifier les informations de configuration existantes du collecteur de données.
+Vous pouvez modifier les informations de configuration du collecteur de données existant.
 
-.Pour modifier un collecteur de données unique :
-. Dans le menu Data Infrastructure Insights, cliquez sur *observabilité > Collectors* pour ouvrir la liste des Data Collectors installés.
+.Pour modifier un seul collecteur de données :
+. Dans le menu Data Infrastructure Insights , cliquez sur *Observabilité > Collecteurs* pour ouvrir la liste des collecteurs de données installés.
 . Dans le menu d'options à droite du collecteur de données que vous souhaitez modifier, cliquez sur *Modifier*.
 +
 La boîte de dialogue Modifier le collecteur s'ouvre.
 
-. Entrez les modifications et cliquez sur *Tester la configuration* pour tester la nouvelle configuration ou cliquez sur *Enregistrer* pour enregistrer la configuration.
+. Saisissez les modifications et cliquez sur *Tester la configuration* pour tester la nouvelle configuration ou cliquez sur *Enregistrer* pour enregistrer la configuration.
 
 
-Vous pouvez également modifier plusieurs collecteurs de données :
+Vous pouvez également modifier plusieurs collecteurs de données :
 
 . Cochez la case à gauche de chaque collecteur de données que vous souhaitez modifier.
-. Cliquez sur le bouton *actions groupées* et choisissez *Modifier* pour ouvrir la boîte de dialogue Modifier le collecteur de données.
+. Cliquez sur le bouton *Actions en masse* et choisissez *Modifier* pour ouvrir la boîte de dialogue Modifier le collecteur de données.
 . Modifiez les champs comme ci-dessus.
 +
 
-NOTE: Les collecteurs de données sélectionnés doivent être du même fournisseur et du même modèle et résident sur la même unité d'acquisition.
+NOTE: Les collecteurs de données sélectionnés doivent être du même fournisseur et du même modèle, et résider sur la même unité d'acquisition.
 
 +
-Lors de l'édition de plusieurs collecteurs de données, le champ Nom du collecteur de données affiche "Mixte" et ne peut pas être modifié. D'autres champs, tels que le nom d'utilisateur et le mot de passe, affichent « Mixte » et peuvent être modifiés. Les champs qui partagent la même valeur sur les collecteurs de données sélectionnés affichent les valeurs actuelles et peuvent être modifiés.
+Lors de la modification de plusieurs collecteurs de données, le champ Nom du collecteur de données affiche « Mixte » et ne peut pas être modifié.  D'autres champs tels que le nom d'utilisateur et le mot de passe affichent « Mixte » et peuvent être modifiés.  Les champs qui partagent la même valeur dans les collecteurs de données sélectionnés affichent les valeurs actuelles et peuvent être modifiés.
 
 +
-Lors de l'édition de plusieurs collecteurs de données, le bouton *Test Configuration* n'est pas disponible.
+Lors de la modification de plusieurs collecteurs de données, le bouton *Tester la configuration* n'est pas disponible.
 
 
 
 
 
-== Clonage des collecteurs de données
+== Clonage de collecteurs de données
 
-La fonction de clonage permet d'ajouter rapidement une source de données dotée des mêmes identifiants et attributs qu'une autre source de données. Le clonage vous permet de configurer facilement plusieurs instances d'un même type de périphérique.
+À l’aide de la fonction de clonage, vous pouvez rapidement ajouter une source de données possédant les mêmes informations d’identification et attributs qu’une autre source de données.  Le clonage vous permet de configurer facilement plusieurs instances du même type d'appareil.
 
 .Étapes
-. Dans le menu Data Infrastructure Insights, cliquez sur *observabilité > Collectors*.
-. Cliquez sur *collecteurs de données installés*.
-. Cochez la case à gauche du collecteur de données que vous souhaitez copier.
-. Dans le menu d'options à droite du collecteur de données sélectionné, cliquez sur *Clone*.
+. Dans le menu Data Infrastructure Insights , cliquez sur *Observabilité > Collecteurs*.
+. Cliquez sur *Collecteurs de données installés*.
+. Cliquez sur la case à cocher à gauche du collecteur de données que vous souhaitez copier.
+. Dans le menu d’options à droite du collecteur de données sélectionné, cliquez sur *Cloner*.
 +
-La boîte de dialogue Cloner le Data Collector s'affiche.
+La boîte de dialogue Cloner le collecteur de données s'affiche.
 
-. Entrez de nouvelles informations dans les champs obligatoires.
+. Saisissez les nouvelles informations dans les champs obligatoires.
 . Cliquez sur *Enregistrer*.
 
 
-.Une fois que vous avez terminé
+.Après avoir terminé
 L'opération de clonage copie tous les autres attributs et paramètres pour créer le nouveau collecteur de données.
 
 
 
-== Exécution d'actions en bloc sur des collecteurs de données
+== Exécution d'actions en masse sur les collecteurs de données
 
-Vous pouvez modifier simultanément certaines informations pour plusieurs collecteurs de données. Cette fonction vous permet de lancer un sondage, de reporter l'interrogation et de reprendre l'interrogation sur plusieurs collecteurs de données. En outre, vous pouvez supprimer plusieurs collecteurs de données.
+Vous pouvez modifier simultanément certaines informations pour plusieurs collecteurs de données.  Cette fonctionnalité vous permet de lancer un sondage, de reporter le sondage et de reprendre le sondage sur plusieurs collecteurs de données.  De plus, vous pouvez supprimer plusieurs collecteurs de données.
 
 .Étapes
-. Dans le menu Data Infrastructure Insights, cliquez sur *observabilité > Collectors*
-. Cliquez sur *collecteurs de données installés*
-. Cochez la case à gauche des collecteurs de données que vous souhaitez modifier.
-. Dans le menu d'options à droite, cliquez sur l'option que vous souhaitez exécuter.
+. Dans le menu Data Infrastructure Insights , cliquez sur *Observabilité > Collecteurs*
+. Cliquez sur *Collecteurs de données installés*
+. Cliquez sur la case à cocher à gauche des collecteurs de données que vous souhaitez modifier.
+. Dans le menu d’options à droite, cliquez sur l’option que vous souhaitez exécuter.
 
 
-.Une fois que vous avez terminé
-L'opération que vous avez sélectionnée est exécutée sur les collecteurs de données. Lorsque vous avez choisi de supprimer des collecteurs de données, une boîte de dialogue vous demande de vous conformer à l'action.
+.Après avoir terminé
+L'opération que vous avez sélectionnée est effectuée sur les collecteurs de données.  Lorsque vous choisissez de supprimer des collecteurs de données, une boîte de dialogue s'affiche vous demandant de confirmer l'action.

@@ -10,41 +10,41 @@ summary: Configuration du collecteur de données DELL EMC ScaleIO/PowerFlex.
 
 
 [role="lead"]
-Le collecteur de données ScaleIO/PowerFlex collecte les informations d'inventaire à partir du stockage ScaleIO et PowerFlex. Pour la configuration, ce collecteur de données nécessite l'adresse de la passerelle ScaleIO/PowerFlex ainsi qu'un nom d'utilisateur et un mot de passe administrateur.
+Le collecteur de données ScaleIO/PowerFlex collecte les informations d'inventaire à partir du stockage ScaleIO et PowerFlex.  Pour la configuration, ce collecteur de données nécessite l'adresse de la passerelle ScaleIO/PowerFlex ainsi qu'un nom d'utilisateur et un mot de passe administrateur.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données ScaleIO/PowerFlex. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données ScaleIO/PowerFlex.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Cluster MDM (Meta Data Manager) | Stockage 
+| Cluster MDM (gestionnaire de métadonnées) | Stockage 
 
 
-| SDS (ScaleIO/serveur de données PowerFlex) | Nœud de stockage 
+| SDS (serveur de données ScaleIO/PowerFlex) | Nœud de stockage 
 
 
-| Pool de stockage | Pool de stockage 
+| Piscine de stockage | Piscine de stockage 
 
 
-| Volumétrie | Volumétrie 
+| Volume | Volume 
 
 
-| Périphérique | Disque 
+| Appareil | Disque 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
 * Accès en lecture seule au compte utilisateur Admin
-* Port requis : port HTTPS 443
+* Exigence de port : port HTTPS 443
 
 
 
@@ -59,16 +59,16 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Passerelle(s) ScaleIO/PowerFlex | Adresses IP ou FQDN des passerelles ScaleIO/PowerFlex, séparées par une virgule (,) ou un point-virgule (;) 
 
 
-| Nom d'utilisateur | Nom d'utilisateur Admin utilisé pour se connecter au périphérique ScaleIO/PowerFlex 
+| Nom d'utilisateur | Nom d'utilisateur administrateur utilisé pour se connecter au périphérique ScaleIO/PowerFlex 
 
 
-| Mot de passe | Mot de passe utilisé pour se connecter au périphérique ScaleIO/PowerFlex 
+| Mot de passe | Mot de passe utilisé pour se connecter à l'appareil ScaleIO/PowerFlex 
 |===
 
 
 == Configuration avancée
 
-Cochez la case Inventaire pour activer la collecte de stock.
+Cliquez sur la case à cocher Inventaire pour activer la collecte d’inventaire.
 
 [cols="2*"]
 |===
@@ -78,13 +78,13 @@ Cochez la case Inventaire pour activer la collecte de stock.
 | Port HTTPS | 443 
 
 
-| Intervalle d'interrogation des stocks (min) | La valeur par défaut est 60. 
+| Intervalle d'interrogation de l'inventaire (min) | La valeur par défaut est 60. 
 
 
-| Délai de connexion (s) | La valeur par défaut est 60. 
+| Délai d'expiration de la connexion (sec) | La valeur par défaut est 60. 
 |===
 
 
 == Dépannage
 
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

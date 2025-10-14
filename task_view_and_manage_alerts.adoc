@@ -4,16 +4,16 @@ permalink: task_view_and_manage_alerts.html
 summary: Affichage des alertes déclenchées par les moniteurs 
 keywords: monitor, alert, viewing 
 ---
-= Affichage et gestion des alertes à partir des moniteurs
+= Affichage et gestion des alertes des moniteurs
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights affiche des alertes en cas link:task_create_monitor.html["seuils surveillés"]de dépassement.
+Data Infrastructure Insights affiche des alertes lorsquelink:task_create_monitor.html["seuils surveillés"] sont dépassés.
 
 
-TIP: Les fonctions de surveillance et d'alerte sont disponibles dans Data Infrastructure Insights Standard Edition et versions ultérieures.
+TIP: Les moniteurs et les alertes sont disponibles dans Data Infrastructure Insights Standard Edition et versions ultérieures.
 
 
 
@@ -21,40 +21,40 @@ TIP: Les fonctions de surveillance et d'alerte sont disponibles dans Data Infras
 
 Pour afficher et gérer les alertes, procédez comme suit.
 
-. Accédez à la page *alertes > toutes les alertes*.
-. Une liste des 1,000 alertes les plus récentes s'affiche. Vous pouvez trier cette liste sur n'importe quel champ en cliquant sur l'en-tête de colonne du champ. La liste affiche les informations suivantes. Notez que toutes ces colonnes ne sont pas affichées par défaut. Vous pouvez sélectionner les colonnes à afficher en cliquant sur l'icône « engrenage » :
+. Accédez à la page *Alertes > Toutes les alertes*.
+. Une liste contenant jusqu'aux 1 000 alertes les plus récentes s'affiche.  Vous pouvez trier cette liste sur n’importe quel champ en cliquant sur l’en-tête de colonne du champ.  La liste affiche les informations suivantes.  Notez que toutes ces colonnes ne sont pas affichées par défaut.  Vous pouvez sélectionner les colonnes à afficher en cliquant sur l'icône « engrenage » :
 +
 ** *ID d'alerte* : ID d'alerte unique généré par le système
-** *Déclenché Time* : heure à laquelle le moniteur concerné a déclenché l'alerte
-** *Gravité actuelle* (onglet alertes actives) : gravité actuelle de l'alerte active
-** *Gravité supérieure* (onglet alertes résolues); gravité maximale de l'alerte avant sa résolution
-** *Moniteur* : moniteur configuré pour déclencher l'alerte
-** *Déclenché le* : objet sur lequel le seuil surveillé a été dépassé
-** *État* : état d'alerte actuel, _New_ ou _In Process_
-** *État actif* : _actif_ ou _résolu_
-** *Condition* : condition de seuil qui a déclenché l'alerte
-** *Métrique* : la mesure de l'objet sur laquelle le seuil surveillé a été dépassé
-** *État du moniteur* : état actuel du moniteur qui a déclenché l'alerte
-** *A une action corrective*: L'alerte a suggéré des actions correctives. Ouvrez la page d'alerte pour les afficher.
+** *Heure de déclenchement* : L'heure à laquelle le moniteur concerné a déclenché l'alerte
+** *Gravité actuelle* (onglet Alertes actives) : la gravité actuelle de l'alerte active
+** *Gravité maximale* (onglet Alertes résolues) ; la gravité maximale de l'alerte avant sa résolution
+** *Moniteur* : Le moniteur configuré pour déclencher l'alerte
+** *Déclenché le* : L'objet sur lequel le seuil surveillé a été dépassé
+** *Statut* : État d'alerte actuel, _Nouveau_ ou _En cours_
+** *Statut actif* : _Actif_ ou _Résolu_
+** *Condition* : La condition de seuil qui a déclenché l'alerte
+** *Métrique* : La métrique de l'objet sur laquelle le seuil surveillé a été dépassé
+** *État du moniteur* : État actuel du moniteur qui a déclenché l'alerte
+** *A une action corrective* : L'alerte a suggéré des actions correctives.  Ouvrez la page d'alerte pour les afficher.
 
 
 
 
-Vous pouvez gérer une alerte en cliquant sur le menu situé à droite de l'alerte et en choisissant l'une des options suivantes :
+Vous pouvez gérer une alerte en cliquant sur le menu à droite de l'alerte et en choisissant l'une des options suivantes :
 
-* *En cours* pour indiquer que l'alerte est en cours d'enquête ou doit être maintenue ouverte
-* *Rejeter* pour supprimer l'alerte de la liste des alertes actives.
+* *En cours* pour indiquer que l'alerte fait l'objet d'une enquête ou doit rester ouverte
+* *Ignorer* pour supprimer l'alerte de la liste des alertes actives.
 
 
-Vous pouvez gérer plusieurs alertes en cochant la case à gauche de chaque alerte et en cliquant sur _Modifier le statut des alertes sélectionnées_.
+Vous pouvez gérer plusieurs alertes en sélectionnant la case à cocher à gauche de chaque alerte et en cliquant sur _Modifier le statut des alertes sélectionnées_.
 
-Cliquez sur un ID d'alerte pour ouvrir la page Détails de l'alerte.
+Cliquer sur un ID d’alerte ouvre la page de détails de l’alerte.
 
 
 
 == Panneau de détails des alertes
 
-Sélectionnez une ligne d'alerte pour ouvrir son panneau de détails. Ce panneau fournit des informations supplémentaires sur l'alerte, notamment un résumé, une vue expert affichant des graphiques relatifs aux données de l'objet, les actifs associés et les commentaires saisis par les enquêteurs.
+Sélectionnez n’importe quelle ligne d’alerte pour ouvrir le panneau de détails de l’alerte.  Le panneau de détails de l'alerte fournit des détails supplémentaires sur l'alerte, notamment un _Résumé_, une section _Performances_ affichant des graphiques liés aux données de l'objet, tous les _Actifs associés_ et les _Commentaires_ saisis par les enquêteurs de l'alerte.
 
 image:metric_alert_detail_pane.png["panneau de détails des alertes métriques"]
 
@@ -62,20 +62,20 @@ image:metric_alert_detail_pane.png["panneau de détails des alertes métriques"]
 
 == Alertes lorsque des données sont manquantes
 
-Dans un système en temps réel tel que Data Infrastructure Insights, pour déclencher l'analyse d'un moniteur afin de décider si une alerte doit être générée, nous nous appuyons sur l'une des deux choses suivantes :
+Dans un système en temps réel tel que Data Infrastructure Insights, pour déclencher l'analyse d'un moniteur afin de décider si une alerte doit être générée, nous nous appuyons sur l'une des deux choses suivantes :
 
-* la prochaine donnée à arriver
-* un minuteur à tirer lorsqu'il n'y a pas de point de données et que vous avez attendu assez longtemps
-
-
-Comme c'est le cas avec une arrivée de données lente, ou pas d'arrivée de données, le mécanisme de temporisation doit prendre le relais car le taux d'arrivée des données est insuffisant pour déclencher des alertes en « temps réel ». La question se pose donc généralement comme « combien de temps puis-je attendre avant de fermer la fenêtre d'analyse et d'examiner ce que j'ai ? ». Si vous attendez trop longtemps, vous ne générez pas les alertes assez rapidement pour être utile.
-
-Si vous disposez d'un moniteur avec une fenêtre de 30 minutes qui indique qu'une condition est violée par le dernier point de données avant une perte de données à long terme, Une alerte est générée car le moniteur n'a reçu aucune autre information à utiliser pour confirmer la récupération de la mesure ou noter que la condition persiste.
+* le prochain point de données à arriver
+* un minuteur à déclencher lorsqu'il n'y a pas de point de données et que vous avez attendu suffisamment longtemps
 
 
+Comme c'est le cas avec une arrivée lente des données (ou aucune arrivée de données), le mécanisme de minuterie doit prendre le relais car le taux d'arrivée des données est insuffisant pour déclencher des alertes en « temps réel ».  La question devient donc généralement : « Combien de temps dois-je attendre avant de fermer la fenêtre d’analyse et de regarder ce que j’ai ? »  Si vous attendez trop longtemps, vous ne générez pas les alertes assez rapidement pour être utiles.
 
-== Alertes « actives en permanence »
+Si vous disposez d'un moniteur avec une fenêtre de 30 minutes qui détecte qu'une condition est violée par le dernier point de données avant une perte de données à long terme, une alerte sera générée car le moniteur n'a reçu aucune autre information à utiliser pour confirmer une récupération de la métrique ou pour signaler que la condition a persisté.
 
-Il est possible de configurer un moniteur de façon à ce que la condition existe toujours * sur l'objet surveillé--par exemple, IOPS > 1 ou latence > 0. Ils sont souvent créés sous forme de moniteurs « test » puis oubliés. Ces moniteurs créent des alertes qui restent ouvertes en permanence sur les objets constitutifs, ce qui peut entraîner des problèmes de stabilité et de contrainte du système au fil du temps.
 
-Pour éviter cela, Data Infrastructure Insights fermera automatiquement toute alerte « active en permanence » au bout de 7 jours. Notez que les conditions sous-jacentes du moniteur peuvent (probablement) continuer à exister, ce qui provoque l'émission d'une nouvelle alerte presque immédiatement, mais cette fermeture d'alertes « toujours actives » réduit une partie de la contrainte système qui peut autrement se produire.
+
+== Alertes « actives en permanence »
+
+Il est possible de configurer un moniteur de telle manière que la condition existe *toujours* sur l'objet surveillé, par exemple, IOPS > 1 ou latence > 0.  Ceux-ci sont souvent créés comme moniteurs « de test » puis oubliés.  Ces moniteurs créent des alertes qui restent ouvertes en permanence sur les objets constitutifs, ce qui peut entraîner des problèmes de stress et de stabilité du système au fil du temps.
+
+Pour éviter cela, Data Infrastructure Insights fermera automatiquement toute alerte « active en permanence » après 7 jours.  Notez que les conditions de surveillance sous-jacentes peuvent (probablement) continuer à exister, provoquant l'émission d'une nouvelle alerte presque immédiatement, mais cette fermeture des alertes « toujours actives » atténue une partie du stress du système qui peut autrement se produire.

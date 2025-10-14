@@ -4,7 +4,7 @@ permalink: task_config_telegraf_kubernetes.html
 keywords: telegraf 
 summary: Collecteur de données pour Kubernetes 
 ---
-= Data Collector : Kubernetes
+= Collecteur de données : Kubernetes
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,33 +14,33 @@ summary: Collecteur de données pour Kubernetes
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour collecter les metrics Kubernetes Pod, de nœud et de conteneur.
+Data Infrastructure Insights utilise ce collecteur de données pour collecter les métriques Kubernetes Pod, Node et Container.
 
 
 
 == Installation
 
-Pour connaître les instructions d'installation de Kubernetes, rendez-vous sur la link:task_config_telegraf_agent_k8s.html["Opérateur de surveillance Kubernetes"] page.
+Pour les instructions d'installation de Kubernetes, veuillez consulter lelink:task_config_telegraf_agent_k8s.html["Opérateur de surveillance Kubernetes"] page.
 
 
 
-== À propos des indicateurs Kube-State
+== À propos de Kube-state-metrics
 
-L'opérateur de surveillance Kubernetes installe automatiquement des metrics kube-state. Aucune interaction de l'utilisateur n'est nécessaire.
+L'opérateur de surveillance Kubernetes installe automatiquement kube-state-metrics ; aucune interaction de l'utilisateur n'est nécessaire.
 
 
 
 === Compteurs Kube-state-metrics
 
-L'opérateur de surveillance NetApp Kubernetes extrait les compteurs de métriques kube-state répertoriés ci-dessous. Plus de détails sur chaque compteur peuvent être trouvés à: https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[].
+L'opérateur de surveillance NetApp Kubernetes extrait les compteurs kube-state-metrics répertoriés ci-dessous.  Vous trouverez plus de détails sur chaque compteur à l'adresse suivante : https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[] .
 
-. Indicateurs de démonstration
-. Indicateurs de déploiement
-. Mesures de l'espace de noms
-. Metrics de nœud
-. Métriques de volume persistant
-. Metrics de demande de volume persistant
-. Metrics de pod
+. Métriques DaemonSet
+. Mesures de déploiement
+. Métriques de l'espace de noms
+. Métriques des nœuds
+. Mesures de volume persistantes
+. Mesures de réclamation de volume persistant
+. Mesures du pod
 . Métriques de ReplicaSet
 . Mesures de service
 . Métriques StatefulSet

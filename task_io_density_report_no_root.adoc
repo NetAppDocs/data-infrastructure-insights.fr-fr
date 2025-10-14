@@ -1,69 +1,69 @@
 ---
 sidebar: sidebar 
 permalink: task_io_density_report_no_root.html 
-summary: 'Lorsque vous recherchez une densité d"E/S élevée, vous voulez exclure les volumes racine.' 
+summary: 'Lorsque vous recherchez une densité d"E/S élevée, vous souhaitez exclure les volumes racine.' 
 keywords: NetApp, root volume, high I/O, 
 ---
-= Les rapports de densité d'E/S décrivent uniquement les volumes de données internes
+= S'assurer que les rapports de densité d'E/S décrivent uniquement les volumes de données internes
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Le volume racine de NetApp contient des répertoires et des fichiers de configuration pour la gestion du système de stockage. Lorsque vous recherchez une densité d'E/S élevée, vous voulez exclure ces volumes racine.
+Le volume racine NetApp contient des répertoires et des fichiers de configuration pour la gestion du système de stockage.  Lorsque vous recherchez une densité d'E/S élevée, vous souhaitez exclure ces volumes racine.
 
-Lors de la surveillance de votre environnement, il est plus important de déterminer quels volumes de données internes produisent des chiffres de densité d'E/S élevés. Pour identifier avec précision uniquement les volumes de données, vous devez isoler les volumes internes NetApp des requêtes utilisées pour surveiller la densité des E/S.
+Lors de la surveillance de votre environnement, il est plus important de déterminer quels volumes de données internes produisent des nombres de densité d'E/S élevés.  Afin d'identifier avec précision uniquement les volumes de données, vous devez isoler les volumes internes NetApp des requêtes que vous utilisez pour surveiller la densité des E/S.
 
-Ce guide explique comment identifier facilement les agrégats racine NetApp, les isoler des résultats des requêtes de volume internes et créer des règles qui excluent tous les nouveaux agrégats racine NetApp lors de leur ajout au système. Les fonctions Insight suivantes permettent de s'assurer que vos rapports de densité d'E/S sont issus des volumes de données internes :
+Ce guide décrit comment identifier facilement les agrégats racine NetApp , les isoler des résultats des requêtes de volume internes et créer des règles qui excluent tous les nouveaux agrégats racine NetApp lorsqu'ils sont ajoutés au système.  Les fonctionnalités Insight suivantes sont utilisées pour garantir que vos rapports de densité d'E/S sont dérivés de volumes de données internes :
 
-* Une requête est créée afin d'identifier tous les agrégats racine NetApp surveillés par Insight.
-* Une annotation est attribuée à chacun des agrégats racines NetApp.
-* Une règle d'annotation est créée pour appliquer cette annotation aux nouveaux agrégats racine NetApp.
-
-
-Les étapes de ce guide peuvent également être appliquées aux systèmes de stockage d'autres fournisseurs. Vous devez identifier les volumes contenant des répertoires et des fichiers de configuration pour gérer le système de stockage et utiliser des étapes similaires pour exclure ces volumes.
+* Une requête est créée pour identifier tous les agrégats racines NetApp surveillés par Insight.
+* Une annotation est attribuée à chacun des agrégats racines NetApp .
+* Une règle d’annotation est créée pour appliquer l’annotation aux nouveaux agrégats racines NetApp .
 
 
+Les étapes de ce guide peuvent également être appliquées aux systèmes de stockage d’autres fournisseurs.  Vous devrez identifier les volumes qui contiennent des répertoires et des fichiers de configuration pour la gestion du système de stockage et utiliser des étapes similaires pour exclure ces volumes.
 
-== Création d'une requête pour identifier les agrégats racine NetApp
 
-Les requêtes fournissent une recherche granulaire, en fonction des critères sélectionnés par l'utilisateur. Une requête vous permet de rechercher des volumes internes sur votre locataire qui contiennent l'agrégat racine NetApp.
+
+== Création d'une requête pour identifier les agrégats racines NetApp
+
+Les requêtes fournissent une recherche à un niveau granulaire, en fonction de critères sélectionnés par l'utilisateur.  L’utilisation d’une requête vous permet de rechercher des volumes internes sur votre locataire qui contiennent l’agrégat racine NetApp .
 
 .Étapes
-. Créez une requête pour identifier les agrégats racine NetApp sur votre locataire : cliquez sur *requêtes > Nouvelle requête > Sélectionner un type de ressource* (?)
+. Créez une requête pour identifier les agrégats racines NetApp sur votre locataire : cliquez sur *Requêtes > Nouvelle requête > Sélectionner le type de ressource* (?)
 . Cliquez sur *pool de stockage*
-. Entrer le nom de l'agrégat root
+. Entrez le nom de l'agrégat racine
 +
-Cet exemple utilise "aggr0" pour le nom. Lors de la création d'un agrégat, seules les exigences suivantes concernant le nom doivent être respectées :
+Cet exemple utilise « aggr0 » pour le nom.  Lors de la création d'un agrégat, seules les exigences suivantes concernant le nom doivent être respectées :
 
 +
-.. Il doit commencer par une lettre ou un trait de soulignement (_).
+.. Il doit commencer soit par une lettre, soit par un trait de soulignement (_).
 .. Il ne peut contenir que des lettres, des chiffres et des traits de soulignement.
-.. Elle peut comporter 250 caractères maximum. Dans la plupart des cas, l'agrégat est nommé aggr0, aggr_0 ou quelque chose de similaire. Elle peut nécessiter un processus itératif pour identifier tous les agrégats racine NetApp de votre locataire.
+.. Il peut contenir 250 caractères ou moins.  Dans la plupart des cas, l'agrégat est nommé aggr0, aggr_0 ou quelque chose de similaire.  Il peut être nécessaire d’effectuer un processus itératif pour identifier tous les agrégats racines NetApp sur votre locataire.
 
 
 . Cliquez sur *Enregistrer* et entrez un nom pour la nouvelle requête.
 +
-Comme mentionné précédemment, il peut s'agir d'un processus itératif et nécessite plusieurs requêtes pour identifier tous les agrégats racines NetApp.
+Comme mentionné précédemment, il peut s’agir d’un processus itératif et nécessiter plusieurs requêtes pour identifier tous les agrégats racines NetApp .
 
 
 
 
 
-== Créez une annotation pour les volumes racine renvoyés par vos requêtes
+== Créez une annotation pour les volumes racines renvoyés par vos requêtes
 
-Les annotations sont des notes spécialisées que vous attribuez à vos ressources, ce qui vous permet de filtrer les ressources par leurs annotations. Les annotations que vous créez seront utilisées pour identifier les agrégats racine NetApp de votre locataire et vous assurer qu'ils ne sont pas inclus dans un rapport spécifique.
+Les annotations sont des notes spécialisées que vous attribuez à vos ressources, vous permettant de filtrer les ressources par leurs annotations.  L'annotation que vous créez sera utilisée pour identifier les agrégats racines NetApp sur votre locataire et garantir qu'ils ne sont pas inclus dans un rapport spécifique.
 
 .Avant de commencer
-Vous devez avoir identifié tous les agrégats racine à exclure du rapport « densité d'E/S élevée ».
+Vous devez avoir identifié tous les agrégats racines que vous souhaitez exclure du rapport « Densité d'E/S élevée ».
 
 .Étapes
-. Dans le menu informations sur l'infrastructure de données, cliquez sur *gérer > Annotations*
+. Dans le menu Data Infrastructure Insights , cliquez sur *Gérer > Annotations*
 . Cliquez sur *Ajouter*
 +
-.. Entrez le nom de l'annotation : *RootAggr*
-.. Entrez une description de l'annotation : *Supprimer l'agrégat racine du rapport "densité d'E/S élevée"*
-.. Saisissez le type d'annotation : *Boolean*
+.. Entrez le nom de l'annotation : *RootAggr*
+.. Saisissez une description de l'annotation : *Supprimer l'agrégat racine du rapport « Densité d'E/S élevée »*
+.. Entrez le type d'annotation : *Booléen*
 
 
 . Cliquez sur *Enregistrer*
@@ -71,21 +71,21 @@ Vous devez avoir identifié tous les agrégats racine à exclure du rapport « d
 
 
 
-== Créez une règle d'annotation pour automatiser l'exclusion des agrégats spécifiques de votre rapport de densité d'E/S.
+== Créez une règle d'annotation pour automatiser l'exclusion d'agrégats spécifiques de votre rapport de densité d'E/S
 
-Au lieu d'appliquer manuellement des annotations à des ressources individuelles, vous pouvez appliquer automatiquement des annotations à plusieurs ressources à l'aide de règles d'annotation. Les règles d'annotation sont basées sur les requêtes que vous créez et lorsqu'elles sont exécutées sur le système, elles ajoutent de nouvelles ressources à des ensembles de ressources existants. Lorsque ces ensembles d'actifs sont exclus d'un rapport, les nouveaux actifs sont également automatiquement exclus.
+Au lieu d'appliquer manuellement des annotations à des ressources individuelles, vous pouvez appliquer automatiquement des annotations à plusieurs ressources à l'aide de règles d'annotation.  Les règles d'annotation sont basées sur les requêtes que vous créez et lorsqu'elles sont exécutées sur le système, elles ajoutent de nouveaux actifs aux ensembles d'actifs existants.  Lorsque ces ensembles d’actifs sont exclus d’un rapport, les nouveaux actifs sont également automatiquement exclus.
 
 .Avant de commencer
-Vous devez avoir créé et enregistré une requête qui identifie les agrégats racine NetApp que vous avez identifiés sur votre locataire.
+Vous devez avoir créé et enregistré une requête qui identifie les agrégats racines NetApp que vous avez identifiés sur votre locataire.
 
 .Étapes
-. Dans la barre d'outils informations sur l'infrastructure de données, cliquez sur *gérer > règles d'annotation*.
+. Dans la barre d’outils Data Infrastructure Insights , cliquez sur *Gérer > Règles d’annotation*.
 . Cliquez sur *Ajouter*. La boîte de dialogue Ajouter une règle s'affiche.
 +
-.. Dans la zone Nom, entrez un nom unique qui décrit la règle : *"RootAggrExclude"*
-.. Cliquez sur requête et sélectionnez la requête que Insight doit utiliser pour appliquer la règle d'annotation à : *"Aggregate0"*
-.. Cliquez sur Annotation et sélectionnez : *"exclure agg racine"*
-.. Cliquez sur *valeur* et saisissez *vrai*
+.. Dans la zone Nom, saisissez un nom unique qui décrit la règle : *"RootAggrExclude"*
+.. Cliquez sur Requête et sélectionnez la requête qu'Insight doit utiliser pour appliquer la règle d'annotation à : *"Aggregate0"*
+.. Cliquez sur Annotation et sélectionnez : *« Exclure l'agrégation racine »*
+.. Cliquez sur *Valeur* et entrez *Vrai*
 
 
 

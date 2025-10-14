@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_efcm.html 
 keywords: data collector, Brocade, EFCM, 
-summary: Configuration du collecteur de données Brocade 
+summary: Configuration du collecteur de données Brocade . 
 ---
 = Configuration du collecteur de données Brocade Enterprise Fabric Connectivity Manager
 :hardbreaks:
@@ -10,17 +10,17 @@ summary: Configuration du collecteur de données Brocade
 
 
 [role="lead"]
-Les informations d'infrastructure de données utilisent le collecteur de données Brocade EFCM (Enterprise Fabric Connectivity Manager) pour découvrir l'inventaire des commutateurs Brocade EFCM. Data Infrastructure Insights prend en charge les versions 9.5, 9.6 et 9.7 de EFCM.
+Data Infrastructure Insights utilise le collecteur de données Brocade Enterprise Fabric Connectivity Manager (EFCM) pour découvrir l'inventaire des commutateurs Brocade EFCM.  Data Infrastructure Insights prend en charge les versions EFCM 9.5, 9.6 et 9.7.
 
 
 
-== De formation
+== Exigences
 
 * Adresse réseau ou nom de domaine complet pour le serveur EFCM
 * La version EFCM doit être 9.5, 9.6 ou 9.7
 * Adresse IP du serveur EFCM
 * Nom d'utilisateur et mot de passe en lecture seule pour le serveur EFCM
-* Accès validé au commutateur Connectrix par Telnet à partir du serveur Data Infrastructure Insights, en utilisant le nom d'utilisateur et le mot de passe en lecture seule sur le port 51512
+* Accès validé au commutateur Connectrix par Telnet depuis le serveur Data Infrastructure Insights , en utilisant le nom d'utilisateur et le mot de passe en lecture seule sur le port 51512
 
 
 
@@ -32,13 +32,13 @@ Les informations d'infrastructure de données utilisent le collecteur de donnée
 | Champ | Description 
 
 
-| Serveur EFC | Adresse IP ou nom de domaine complet du serveur EFC 
+| serveur EFC | Adresse IP ou nom de domaine complet du serveur EFC 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du commutateur 
+| Nom d'utilisateur | Nom d'utilisateur pour le commutateur 
 
 
-| Mot de passe | Mot de passe du commutateur 
+| Mot de passe | Mot de passe pour le commutateur 
 |===
 
 
@@ -49,32 +49,32 @@ Les informations d'infrastructure de données utilisent le collecteur de donnée
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 15 minutes. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 15 minutes. 
 
 
-| Nom de la structure | Le nom de la structure doit être signalé par le collecteur de données EFCM. Laissez vide pour signaler le nom de la structure comme WWN. 
+| Nom du tissu | Nom du tissu à signaler par le collecteur de données EFCM.  Laissez vide pour signaler le nom du tissu comme WWN. 
 
 
 | Port de communication | Port utilisé pour la communication avec le commutateur 
 
 
-| Activer le recouvrement | Sélectionnez cette option pour activer l'acquisition lors de la réception d'une interruption SNMP à partir du périphérique. Si vous sélectionnez Activer le recouvrement, vous devez également activer SNMP. 
+| Activer le piégeage | Sélectionnez cette option pour activer l'acquisition lors de la réception d'un trap SNMP du périphérique.  Si vous sélectionnez Activer le piégeage, vous devez également activer SNMP. 
 
 
-| Temps minimum entre les recouvrements (s) | Temps minimum entre les tentatives d'acquisition déclenchées par les interruptions. La valeur par défaut est 15 secondes. 
+| Temps minimum entre les pièges (sec) | Temps minimum entre les tentatives d'acquisition déclenchées par des pièges. La valeur par défaut est de 15 secondes. 
 
 
-| Zonesets inactifs | Liste séparée par des virgules des zonesets inactifs sur lesquels effectuer l'acquisition, en plus d'effectuer l'acquisition sur les ensembles de zones actives 
+| Ensembles de zones inactifs | Liste séparée par des virgules des ensembles de zones inactifs sur lesquels effectuer l'acquisition, en plus d'effectuer l'acquisition sur les ensembles de zones actifs 
 
 
-| NIC à utiliser | Spécifiez quelle interface réseau doit être utilisée sur le RAU lors de la génération de rapports sur les périphériques SAN 
+| Carte réseau à utiliser | Spécifiez quelle interface réseau doit être utilisée sur le RAU lors de la création de rapports sur les périphériques SAN 
 
 
-| Exclure les périphériques | Liste de noms d'unités séparés par des virgules à inclure ou exclure de l'interrogation 
+| Exclure les appareils | Liste séparée par des virgules des noms d'unités à inclure ou à exclure de l'interrogation 
 
 
-| Utilisez le surnom du commutateur EFCM comme nom de commutateur | Sélectionnez cette option pour utiliser le surnom du commutateur EFCM comme nom du commutateur Data Infrastructure Insights. 
+| Utilisez le surnom du commutateur EFCM comme nom de commutateur | Sélectionnez cette option pour utiliser le surnom du commutateur EFCM comme nom de commutateur Data Infrastructure Insights . 
 
 
-| Intervalle d'interrogation des performances (s) | Intervalle entre les sondages de performances. La valeur par défaut est 300 secondes. 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performance. La valeur par défaut est de 300 secondes. 
 |===

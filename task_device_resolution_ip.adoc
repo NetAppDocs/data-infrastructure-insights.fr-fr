@@ -10,47 +10,47 @@ summary:
 
 
 [role="lead"]
-L'écran IP Identify affiche tous les partages iSCSI et CIFS ou NFS identifiés par la résolution automatique du périphérique ou par la résolution manuelle des périphériques. Les périphériques non identifiés sont également affichés. L'écran comprend l'adresse IP, le nom, l'état, le nœud iSCSI et le nom de partage des périphériques. Le pourcentage de périphériques qui ont été identifiés avec succès est également affiché.
+L'écran d'identification IP affiche tous les partages iSCSI et CIFS ou NFS qui ont été identifiés par une résolution automatique ou manuelle du périphérique.  Des appareils non identifiés sont également affichés.  L'écran inclut l'adresse IP, le nom, l'état, le nœud iSCSI et le nom de partage des périphériques.  Le pourcentage d’appareils qui ont été identifiés avec succès est également affiché.
 
-image:Device_Resolution_IP.png["Résolution de périphérique IP"]
+image:Device_Resolution_IP.png["Résolution du périphérique IP"]
 
 
 
 == Ajout manuel de périphériques IP
 
-Vous pouvez ajouter manuellement un périphérique IP à Data Infrastructure Insights à l'aide de la fonction d'ajout manuel disponible dans l'écran IP Identify.
+Vous pouvez ajouter manuellement un périphérique IP à Data Infrastructure Insights à l'aide de la fonction d'ajout manuel disponible dans l'écran Identification IP.
 
 .Procédure
-. Connectez-vous à l'interface utilisateur Web Data Infrastructure Insights.
-. Cliquez sur *gérer > résolution du périphérique*
-. Cliquez sur l'onglet *IP Address Identify*.
+. Connectez-vous à l'interface Web de Data Infrastructure Insights .
+. Cliquez sur *Gérer > Résolution de l'appareil*
+. Cliquez sur l'onglet *Identification de l'adresse IP*.
 . Cliquez sur le bouton *Ajouter*.
 +
 La boîte de dialogue Ajouter un périphérique s'affiche
 
-. Entrez l'adresse, l'adresse IP et un nom de périphérique unique.
+. Saisissez l’adresse, l’adresse IP et un nom d’appareil unique.
 
 
 .Résultat
-Le périphérique que vous entrez est ajouté à la liste des périphériques dans l'onglet IP Address Identify (identification de l'adresse IP).
+L'appareil que vous saisissez est ajouté à la liste des appareils dans l'onglet Identification de l'adresse IP.
 
 
 
 == Importation de l'identification du périphérique IP à partir d'un fichier .CSV
 
-Vous pouvez importer manuellement des identifications de périphérique IP dans la fonction résolution de périphérique à l'aide d'une liste d'identifications de périphérique dans un fichier .CSV.
+Vous pouvez importer manuellement les identifications de périphériques IP dans la fonction Résolution de périphérique à l'aide d'une liste d'identifications de périphériques dans un fichier .CSV.
 
 . Avant de commencer
 
 
-Vous devez disposer d'un fichier .CSV correctement formaté pour importer des identifications de périphérique directement dans la fonction résolution de périphérique. Le fichier .CSV pour les périphériques IP requiert les informations suivantes :
+Vous devez disposer d'un fichier .CSV correctement formaté pour pouvoir importer les identifications des appareils directement dans la fonction Résolution des appareils.  Le fichier .CSV pour les périphériques IP nécessite les informations suivantes :
 
 |===
 
 
-| Adresse | IP | Nom 
+| Adresse | propriété intellectuelle | Nom 
 |===
-Les champs de données doivent être entre guillemets, comme illustré dans l'exemple ci-dessous.
+Les champs de données doivent être placés entre guillemets, comme indiqué dans l'exemple ci-dessous.
 
 ....
 "Address","IP","Name"
@@ -59,33 +59,33 @@ Les champs de données doivent être entre guillemets, comme illustré dans l'ex
 "ADDRESS593","IP593","NAME-593"
 ....
 
-NOTE: Il est recommandé d'exporter d'abord les informations d'identification de l'adresse IP dans un fichier .CSV, d'effectuer les modifications souhaitées dans ce fichier, puis de réimporter le fichier dans IP Address identifier. Cela permet de s'assurer que les colonnes attendues sont présentes et dans le bon ordre.
+NOTE: En tant que meilleure pratique, il est recommandé d'exporter d'abord les informations d'identification de l'adresse IP vers un fichier .CSV, d'apporter les modifications souhaitées dans ce fichier, puis de réimporter le fichier dans l'identification de l'adresse IP.  Cela garantit que les colonnes attendues sont présentes et dans le bon ordre.
 
 
 
 == Exportation de l'identification du périphérique IP vers un fichier .CSV
 
-Vous pouvez exporter des identifications de périphériques IP existants vers un fichier .CSV à partir de la fonction de résolution de périphériques Data Infrastructure Insights. Vous pouvez exporter une identification de périphérique pour la modifier, puis l'importer à nouveau dans Data Infrastructure Insights, où elle est ensuite utilisée pour identifier les périphériques similaires à ceux qui correspondent à l'origine à l'identification exportée.
+Vous pouvez exporter les identifications de périphériques IP existantes vers un fichier .CSV à partir de la fonctionnalité de résolution de périphérique de Data Infrastructure Insights .  Vous souhaiterez peut-être exporter une identification d'appareil afin de pouvoir la modifier, puis la réimporter dans Data Infrastructure Insights où elle sera ensuite utilisée pour identifier les appareils similaires à ceux correspondant à l'origine à l'identification exportée.
 
-.Description de la tâche
-. Ce scénario peut être utilisé lorsque les périphériques ont des attributs similaires qui peuvent être facilement modifiés dans le fichier .CSV, puis importés à nouveau dans le système.
+.À propos de cette tâche
+. Ce scénario peut être utilisé lorsque les appareils ont des attributs similaires qui peuvent être facilement modifiés dans le fichier .CSV, puis réimportés dans le système.
 
-Lorsque vous exportez une identification de périphérique IP dans un fichier .CSV, le fichier contient les informations suivantes dans l'ordre indiqué :
+Lorsque vous exportez une identification de périphérique IP vers un fichier .CSV, le fichier contient les informations suivantes dans l'ordre indiqué :
 
 |===
 
 
-| Adresse | IP | Nom 
+| Adresse | propriété intellectuelle | Nom 
 |===
 .Procédure
-. Connectez-vous à l'interface utilisateur Web Data Infrastructure Insights.
-. Cliquez sur *gérer > résolution du périphérique*
-. Sélectionnez l'onglet *IP Address Identify*.
+. Connectez-vous à l'interface Web de Data Infrastructure Insights .
+. Cliquez sur *Gérer > Résolution du périphérique*
+. Sélectionnez l'onglet *Identification de l'adresse IP*.
 . Sélectionnez le ou les périphériques IP dont vous souhaitez exporter l'identification.
-. Cliquez sur le bouton *Exporter*image:ExportButton.png["Bouton Exporter"].
+. Cliquez sur *Exporter*image:ExportButton.png["Bouton Exporter"] bouton.
 +
-Indiquez si vous souhaitez ouvrir le fichier .CSV ou enregistrer le fichier.
+Sélectionnez si vous souhaitez ouvrir le fichier .CSV ou enregistrer le fichier.
 
 
 
-Relié : link:task_device_resolution_fibre_channel.html["Résolution de périphérique Fibre Channel"] link:task_device_resolution_rules.html["Création de règles de résolution de périphérique"] link:task_device_resolution_preferences.html["Définition des préférences de résolution du périphérique"]
+En rapport:link:task_device_resolution_fibre_channel.html["Résolution du périphérique Fibre Channel"] link:task_device_resolution_rules.html["Création de règles de résolution de périphérique"] link:task_device_resolution_preferences.html["Définition des préférences de résolution de l'appareil"]

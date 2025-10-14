@@ -10,43 +10,43 @@ summary: Configuration du collecteur de données DELL EMC Celerra.
 
 
 [role="lead"]
-Ce collecteur de données acquiert les informations d'inventaire à partir du système de stockage de fichiers VNX. Pour la configuration, ce collecteur de données nécessite l'adresse IP des processeurs de stockage ainsi qu'un nom d'utilisateur et un mot de passe en lecture seule.
+Ce collecteur de données acquiert des informations d'inventaire à partir du système de stockage de fichiers VNX.  Pour la configuration, ce collecteur de données nécessite l'adresse IP des processeurs de stockage ainsi qu'un nom d'utilisateur et un mot de passe en lecture seule.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du collecteur de données VNX File. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d’inventaire suivantes à partir du collecteur de données de fichiers VNX.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Celerra Network Server/Celerra Storage Pool | Pool de stockage 
+| Serveur réseau Celerra/Pool de stockage Celerra | Piscine de stockage 
 
 
 | Système de fichiers | Volume interne 
 
 
-| Data Mover | Contrôleur 
+| Déplaceur de données | Contrôleur 
 
 
-| Système de fichiers monté sur un mécanisme de déplacement des données | Partage de fichiers 
+| Système de fichiers monté sur un dispositif de transfert de données | Partage de fichiers 
 
 
-| Exports CIFS et NFS | Partagez 
+| Exportations CIFS et NFS | Partager 
 
 
-| Volume de disque | LUN interne 
+| Volume du disque | LUN principal 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-Vous devez disposer des éléments suivants pour configurer ce collecteur de données :
+Vous avez besoin des éléments suivants pour configurer ce collecteur de données :
 
 * L'adresse IP du processeur de stockage
 * Nom d'utilisateur et mot de passe en lecture seule
@@ -62,13 +62,13 @@ Vous devez disposer des éléments suivants pour configurer ce collecteur de don
 | Champ | Description 
 
 
-| Adresse IP du fichier VNX | Adresse IP ou nom de domaine complet du périphérique VNX File 
+| Adresse IP du fichier VNX | Adresse IP ou nom de domaine complet du périphérique de fichier VNX 
 
 
-| Nom d'utilisateur | Nom utilisé pour se connecter au périphérique VNX File 
+| Nom d'utilisateur | Nom utilisé pour se connecter au périphérique de fichier VNX 
 
 
-| Mot de passe | Mot de passe utilisé pour se connecter au périphérique VNX File 
+| Mot de passe | Mot de passe utilisé pour se connecter au périphérique de fichier VNX 
 |===
 
 
@@ -79,13 +79,13 @@ Vous devez disposer des éléments suivants pour configurer ce collecteur de don
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (minutes) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 20 minutes. 
+| Intervalle d'interrogation d'inventaire (minutes) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 20 minutes. 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -93,9 +93,9 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| Erreur : impossible de continuer pendant la mise à jour DART en cours | Solution possible : interrompre le collecteur de données et attendre la fin de la mise à niveau du DART avant de tenter une autre demande d'acquisition. 
+| Erreur : Impossible de continuer pendant la mise à jour de DART | Solution possible : mettez en pause le collecteur de données et attendez que la mise à niveau de DART soit terminée avant de tenter une autre demande d’acquisition. 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

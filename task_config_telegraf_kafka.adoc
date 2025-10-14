@@ -10,54 +10,54 @@ summary: Configuration du collecteur de données Kafka
 
 
 [role="lead"]
-Data Infrastructure Insights utilise ce collecteur de données pour collecter les metrics de Kafka.
+Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Kafka.
 
 
 
 == Installation
 
-. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez Kafka.
+. Depuis *Observabilité > Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Kafka.
 +
-Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+Sélectionnez le système d’exploitation ou la plate-forme sur laquelle l’agent Telegraf est installé.
 
-. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer les link:task_config_telegraf_agent.html["Installation de l'agent"]instructions.
-. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
-. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
-
-
-image:KafkaDCConfigWindows.png["Configuration Kafka"]
+. Si vous n'avez pas encore installé d'agent pour la collecte, ou si vous souhaitez installer un agent pour un autre système d'exploitation ou une autre plate-forme, cliquez sur _Afficher les instructions_ pour développer lelink:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d’accès de l’agent à utiliser avec ce collecteur de données.  Vous pouvez ajouter une nouvelle clé d'accès d'agent en cliquant sur le bouton *+ Clé d'accès d'agent*.  Meilleure pratique : utilisez une clé d’accès d’agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple par système d’exploitation/plateforme.
+. Suivez les étapes de configuration pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.
 
 
+image:KafkaDCConfigWindows.png["Configuration de Kafka"]
 
-== Configuration
 
-Le plug-in Kafka est basé sur le plug-in Jolokia de telegraf. Par exemple, pour recueillir des informations auprès de tous les courtiers Kafka, JMX doit être configuré et exposé via Jolokia sur tous les composants.
+
+== Installation
+
+Le plugin Kafka est basé sur le plugin Jolokia de Telegraf.  En tant qu'exigence de collecte d'informations auprès de tous les courtiers Kafka, JMX doit être configuré et exposé via Jolokia sur tous les composants.
 
 
 
 === Compatibilité
 
-La configuration a été développée par rapport à Kafka version 0.11.0.2.
+La configuration a été développée sur la version 0.11.0.2 de Kafka.
 
 
 
-=== Configuration
+=== Mise en place
 
-Toutes les instructions ci-dessous supposent que votre emplacement d'installation pour kafka est '/opt/kafka'. Vous pouvez adapter les instructions ci-dessous en fonction de votre emplacement d'installation.
-
-
-
-==== Bol d'agent Jolokia
-
-Une version le fichier JAR de l'agent Jolokia doit être link:https://jolokia.org/download.html["téléchargé"]. La version testée était l'agent Jolokia 1.6.0.
-
-Les instructions ci-dessous supposent que le fichier jar téléchargé (jolokia-jvm-1.6.0-agent.jar) est placé sous l'emplacement '/opt/kafka/libs/'.
+Toutes les instructions ci-dessous supposent que votre emplacement d'installation pour Kafka est « /opt/kafka ».  Vous pouvez adapter les instructions ci-dessous pour refléter votre emplacement d'installation.
 
 
 
-==== Kafka Brokers
+==== Agent Jar Jolokia
 
-Pour configurer Kafka Brokers afin d'exposer l'API Jolokia, vous pouvez ajouter ce qui suit dans <KAFKA_HOME>/bin/kafka-Server-start.sh, juste avant l'appel kafka-run-class.sh :
+Une version du fichier jar de l'agent Jolokia doit êtrelink:https://jolokia.org/download.html["téléchargé"] .  La version testée était l'agent Jolokia 1.6.0.
+
+Les instructions ci-dessous supposent que le fichier jar téléchargé (jolokia-jvm-1.6.0-agent.jar) est placé sous l'emplacement « /opt/kafka/libs/ ».
+
+
+
+==== Courtiers Kafka
+
+Pour configurer Kafka Brokers afin d'exposer l'API Jolokia, vous pouvez ajouter ce qui suit dans <KAFKA_HOME>/bin/kafka-server-start.sh, juste avant l'appel 'kafka-run-class.sh' :
 
 [listing]
 ----
@@ -65,25 +65,25 @@ export JMX_PORT=9999
 export RMI_HOSTNAME=`hostname -I`
 export KAFKA_JMX_OPTS="-javaagent:/opt/kafka/libs/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0  -Dcom.sun.management.jmxremote.password.file=/opt/kafka/config/jmxremote.password -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=$RMI_HOSTNAME -Dcom.sun.management.jmxremote.rmi.port=$JMX_PORT"
 ----
-Notez que l'exemple ci-dessus utilise 'hostname -i' pour configurer la variable d'environnement 'RMI_HOSTNAME'. Dans plusieurs machines IP, vous devez modifier cette configuration pour recueillir l'IP sur laquelle vous vous prenez en charge pour les connexions RMI.
+Notez que l'exemple ci-dessus utilise « hostname -I » pour configurer la variable d'environnement « RMI_HOSTNAME ».  Dans le cas de machines à plusieurs IP, cela devra être modifié pour collecter l'IP qui vous intéresse pour les connexions RMI.
 
-Vous pouvez choisir un autre port pour JMX (9999 ci-dessus) et Jolokia (8778). Si vous avez un IP interne pour verrouiller Jolokia sur vous pouvez remplacer le 0.0.0.0 "tout capturer" par votre propre IP. Notez que cette adresse IP doit être accessible à partir du plug-in telegraf. Vous pouvez utiliser l'option -Dcom.sun.management.jmxremote.authenticate=false' si vous ne souhaitez pas vous authentifier. Utilisation à vos propres risques.
+Vous pouvez choisir un port différent pour JMX (9999 ci-dessus) et Jolokia (8778).  Si vous disposez d'une IP interne sur laquelle verrouiller Jolokia, vous pouvez remplacer le « catch all » 0.0.0.0 par votre propre IP.  Notez que cette IP doit être accessible depuis le plugin Telegraf.  Vous pouvez utiliser l'option '-Dcom.sun.management.jmxremote.authenticate=false' si vous ne souhaitez pas vous authentifier.  Utilisez-le à vos propres risques.
 
 
 
 == Objets et compteurs
 
-Les objets suivants et leurs compteurs sont collectés :
+Les objets suivants et leurs compteurs sont collectés :
 
 [cols="<.<,<.<,<.<"]
 |===
-| Objet : | Identifiants : | Attributs : 
+| Objet: | Identifiants : | Attributs: 
 
 
-| Courtier Kafka | Courtier d'espace de noms de cluster | IP du nœud de nom de nœud 
+| Courtier Kafka | Courtier d'espace de noms de cluster | Nom du nœud IP du nœud 
 |===
 
 
 == Dépannage
 
-Vous trouverez des informations supplémentaires sur la link:concept_requesting_support.html["Assistance"] page.
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page.

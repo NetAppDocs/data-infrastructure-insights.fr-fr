@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: san_analyzer_overview.html 
-summary: SAN Analyzer fournit la topologie des ressources de votre locataire 
+summary: SAN Analyzer fournit une topologie des actifs de votre locataire 
 keywords: topology, analyze, analysis, map 
 ---
 = Présentation de SAN Analyzer
@@ -16,22 +16,22 @@ keywords: topology, analyze, analysis, map
 [role="lead"]
 Le SAN joue un rôle crucial dans la gestion des charges de travail vitales, mais sa complexité peut entraîner des pannes importantes et des perturbations pour les clients.  Avec *SAN Analyzer* de DII, la gestion du SAN devient plus simple et plus efficace.  Cet outil puissant offre une visibilité de bout en bout, mappant les dépendances de la VM/hôte au réseau, au LUN et au stockage.  En fournissant une carte topologique interactive, SAN Analyzer vous permet d'identifier les problèmes, de comprendre les changements et d'améliorer la compréhension du flux de données.  Optimisez la gestion SAN dans les environnements informatiques complexes avec SAN Analyzer et augmentez votre visibilité sur les charges de travail en bloc.
 
-image:san_analyzer_example_with_panel.png["Carte topologique d'un système de stockage avec l'analyseur SAN"]
+image:san_analyzer_example_with_panel.png["Carte topologique SAN Analyzer d'un système de stockage"]
 
 
 
-== Explorer les connexions entre vos ressources
+== Explorez les connexions entre vos actifs
 
-Sélectionnez *observabilité > analyse > analyseur SAN* pour afficher l'analyseur SAN. Définissez un filtre pour l'application, l'hôte, la structure et/ou le stockage. La carte des objets s'affiche, affichant les objets connectés. Passez le curseur sur un objet pour afficher les mesures de trafic pour ces connexions.
+Sélectionnez *Observabilité > Analyser > Analyseur SAN* pour afficher l'analyseur SAN.  Définissez un filtre pour l'application, l'hôte, la structure et/ou le stockage.  La carte des objets s'affiche, montrant les objets connectés.  Passez la souris sur un objet pour afficher les mesures de trafic pour ces connexions.
 
-image:san_analyzer_traffic_metrics.png["Exemple de mesures du trafic de l'analyseur SAN"]
+image:san_analyzer_traffic_metrics.png["Exemple de mesures de trafic de SAN Analyzer"]
 
 
-NOTE: La plupart des filtres SAN Analyzer (y compris ceux que vous pouvez ajouter) sont contextuels ; lorsque vous sélectionnez un objet dans l'un de ces filtres, les choix présentés dans les autres listes déroulantes de filtre sont actualisés en contexte avec le ou les objets sélectionnés. Les seules exceptions à cette règle sont application, Port et Switch ; ces filtres ne sont pas contextuels.
+NOTE: La plupart des filtres SAN Analyzer (y compris ceux que vous pouvez ajouter) sont contextuels ; lorsque vous sélectionnez un objet dans l’un de ces filtres, les choix présentés dans les autres listes déroulantes de filtres sont actualisés en fonction de l’objet ou des objets sélectionnés.  Les seules exceptions à cette règle sont Application, Port et Switch ; ces filtres ne sont pas contextuels.
 
-Cliquer sur un objet ou un groupe ouvre un panneau coulissant fournissant des détails supplémentaires sur l'objet et ses connexions. Le panneau coulissant affiche un récapitulatif qui fournit des détails sur l'objet sélectionné (par exemple, IP, hyperviseur, structures connectées, etc., en fonction du type d'objet), ainsi que des graphiques affichant les mesures pour l'objet, telles que la latence ou les IOPS, et les modifications et alertes, le cas échéant. Vous pouvez également choisir d'afficher les mesures des objets Top Correlation sur les graphiques, si vous le souhaitez.
+Cliquer sur un objet ou un groupe ouvre un panneau coulissant fournissant des détails supplémentaires sur l'objet et ses connexions.  Le panneau coulissant affiche un résumé, qui fournit des détails sur l'objet sélectionné (par exemple, IP, hyperviseur, Connected Fabrics, etc., selon le type d'objet), ainsi que des graphiques affichant des métriques pour l'objet telles que la latence ou les IOPS, et les modifications et alertes si nécessaire.  Vous pouvez également choisir d'afficher les mesures des objets les plus corrélés sur les graphiques, si vous le souhaitez.
 
-En plus de l'onglet Résumé, le panneau coulissant affiche des onglets pour des éléments tels que les détails de port ou les informations de zone, s'il s'applique à l'objet choisi.
+En plus de l'onglet Résumé, le panneau coulissant affiche des onglets pour des éléments tels que les détails du port ou les informations de zone, selon l'objet choisi.
 
 image:san_analyzer_slideout_example.png["Panneau coulissant de l'analyseur SAN"]
 
@@ -39,9 +39,9 @@ Si votre environnement possède des protocoles différents, vous pouvez filtrer 
 
 image:san_analyzer_protocols.png["Protocoles SAN Analyzer"]
 
-Si votre environnement inclut des périphériques iSCSI, passez la souris sur l'objet _iSCSI_ pour mettre en évidence les connexions associées aux périphériques iSCSI concernés.
+Si votre environnement inclut des périphériques iSCSI, le survol de l'objet _iSCSI_ met en évidence les connexions liées à ces périphériques iSCSI concernés.
 
-image:san_analyzer_iscsi_traffic.png["Trafic iSCSI mis en surbrillance"]
+image:san_analyzer_iscsi_traffic.png["Trafic iSCSI mis en évidence"]
 
 
 
@@ -51,7 +51,7 @@ Quelques solutions à essayer si vous rencontrez des problèmes :
 
 [cols="2*"]
 |===
-| *Problème:* | *Essayez ceci:* 
+| *Problème:* | *Essayez ceci :* 
 
 
 | Je vois <0, =0 ou >0 dans la légende pour des métriques telles que _trafficUtilization_ ou _trafficRate_. | Cela peut se produire dans de très rares cas où les valeurs métriques sont inférieures à deux décimales, comme 0,000123.  L’élargissement de la fenêtre temporelle pourrait aider à analyser la métrique plus efficacement. 

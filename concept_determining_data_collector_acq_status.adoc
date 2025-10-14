@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: concept_determining_data_collector_acq_status.html 
-summary: 'État d"acquisition du Data Collector' 
+summary: 'État d"acquisition du collecteur de données' 
 keywords: collector, acquisition, status 
 ---
-= Détermination de l'état d'acquisition du collecteur de données
+= Déterminer l'état d'acquisition du collecteur de données
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Comme les collecteurs de données sont la principale source d'informations pour les informations d'infrastructure de données, il est impératif de rester en cours d'exécution.
+Étant donné que les collecteurs de données constituent la principale source d’informations pour Data Infrastructure Insights, il est impératif de veiller à ce qu’ils restent en état de fonctionnement.
 
-L'état du collecteur de données s'affiche dans le coin supérieur droit de n'importe quelle page de ressources sous forme de message « acquis il y a N minutes », où N indique la durée d'acquisition la plus récente du ou des collecteurs de données du bien. L'heure/la date d'acquisition s'affiche également.
+L'état du collecteur de données s'affiche dans le coin supérieur droit de n'importe quelle page d'actif sous la forme du message « Acquis il y a N minutes », où N indique l'heure d'acquisition la plus récente du ou des collecteurs de données de l'actif.  L'heure/date d'acquisition est également affichée.
 
-Un clic sur le message affiche un tableau avec le nom, l'état et la dernière heure d'acquisition réussie. Si vous êtes connecté en tant qu'administrateur, cliquez sur le lien du nom du collecteur de données dans le tableau pour accéder à la page détaillée de ce collecteur de données.
+Cliquer sur le message affiche un tableau avec le nom du collecteur de données, son statut et l'heure de la dernière acquisition réussie.  Si vous êtes connecté en tant qu'administrateur, cliquez sur le lien du nom du collecteur de données dans le tableau pour accéder à la page de détails de ce collecteur de données.

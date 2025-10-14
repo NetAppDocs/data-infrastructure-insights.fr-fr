@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_feature_tutorials.html 
-summary: Des didacticiels vous expliquent comment réaliser de nombreuses tâches dans Data Infrastructure Insights. 
+summary: Data Infrastructure Insights propose des tutoriels pour vous montrer comment effectuer de nombreuses tâches. 
 keywords: onboarding, getting started, video, tutorial, resolution, dashboard, query, troubleshooting 
 ---
-= Tutoriels de fonctionnalités
+= Tutoriels sur les fonctionnalités
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,27 +14,27 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 [role="lead"]
-Les fonctionnalités utiles de Data Infrastructure Insights vous permettent de résoudre rapidement et facilement les problèmes et d'obtenir des informations sur votre environnement d'entreprise. Trouvez facilement des données grâce à des requêtes puissantes, visualisez des données dans des tableaux de bord et envoyez des alertes par e-mail pour les seuils de données que vous définissez.
+Data Infrastructure Insights regorge de fonctionnalités utiles qui vous permettent de résoudre rapidement et facilement les problèmes et de fournir des informations sur votre environnement d'entreprise.  Recherchez facilement des données grâce à des requêtes puissantes, visualisez les données dans des tableaux de bord et envoyez des alertes par e-mail pour les seuils de données que vous définissez.
 
 
 
 == Liste de contrôle et didacticiels vidéo
 
-La *liste de contrôle de démarrage* affichée sur votre locataire Data Infrastructure Insights contient une liste de plusieurs tâches et concepts utiles. La sélection d'un élément de la checklist permet d'accéder à la page Data Infrastructure Insights appropriée pour ce concept. Par exemple, cliquer sur l'élément _Créer un tableau de bord_ ouvre la page informations sur l'infrastructure de données *tableaux de bord*.
+La *liste de contrôle de démarrage* affichée sur votre locataire Data Infrastructure Insights contient une liste de plusieurs tâches et concepts utiles.  La sélection d’un élément dans la liste de contrôle vous amène à la page Data Infrastructure Insights appropriée pour ce concept.  Par exemple, cliquer sur l'élément _Créer un tableau de bord_ ouvre la page *Tableaux de bord* de Data Infrastructure Insights .
 
-image:OnboardingChecklist.png["Progression de la liste de contrôle du tutoriel"]
+image:OnboardingChecklist.png["Liste de contrôle du didacticiel Progression"]
 
-En haut de la page se trouve un lien vers un tutoriel vidéo montrant comment créer un tableau de bord. Vous pouvez afficher la vidéo autant de fois que vous le souhaitez jusqu'à ce que vous cliquiez sur le bouton _Got! Ne plus afficher ce lien_ pour cette vidéo. La vidéo est disponible chaque fois que vous accédez à la page tableaux de bord, jusqu'à ce que vous la rejetez.
+En haut de la page se trouve un lien vers un didacticiel vidéo montrant comment créer un tableau de bord.  Vous pouvez visionner la vidéo autant de fois que vous le souhaitez jusqu'à ce que vous cliquiez sur _Compris !  Ne plus afficher ceci_ lien pour cette vidéo.  La vidéo est disponible à chaque fois que vous accédez à la page Tableaux de bord, jusqu'à ce que vous la fermiez.
 
-image:Startup-DashboardWatchVideo.png["Voir le lien vers la vidéo"]
+image:Startup-DashboardWatchVideo.png["Regarder le lien vidéo"]
 
-Après avoir regardé la vidéo au moins une fois, l'élément _Créer un tableau de bord_ dans la liste de contrôle est désactivé, indiquant que vous avez terminé le tutoriel. Vous pouvez ensuite passer au tutoriel suivant.
-
-
-NOTE: Vous pouvez afficher les didacticiels dans l'ordre de votre choix, autant de fois que vous le souhaitez jusqu'à ce que vous soyez congédié.
+Après avoir regardé la vidéo au moins une fois, l'élément _Créer un tableau de bord_ de la liste de contrôle est coché, indiquant que vous avez terminé le didacticiel.  Vous pouvez ensuite passer au tutoriel suivant.
 
 
+NOTE: Vous pouvez consulter les tutoriels dans l'ordre de votre choix, autant de fois que vous le souhaitez jusqu'à leur fermeture.
 
-=== Rejet de la liste de contrôle
 
-La liste de contrôle de démarrage s'affiche jusqu'à ce que vous cliquiez sur le lien _ne plus l'afficher_ au bas de la liste de contrôle. Même après avoir rejeté la liste de contrôle, les didacticiels sont toujours disponibles sur chaque page Data Infrastructure Insights appropriée jusqu'à ce que vous les rejetez de la barre d'en-tête des messages.
+
+=== Rejeter la liste de contrôle
+
+La liste de contrôle de démarrage s'affiche jusqu'à ce que vous cliquiez sur le lien _Ne plus afficher_ en bas de la liste de contrôle.  Même après avoir ignoré la liste de contrôle, les didacticiels sont toujours disponibles sur chaque page Data Infrastructure Insights appropriée jusqu'à ce que vous les ignoriez tous à partir de la barre d'en-tête du message.

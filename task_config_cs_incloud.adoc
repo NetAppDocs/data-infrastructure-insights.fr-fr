@@ -2,72 +2,72 @@
 sidebar: sidebar 
 permalink: task_config_cs_incloud.html 
 keywords: Cloud, Storage, AWS, Cloud Volumes, Cloud ONTAP, firewall, VPC, Subnet,  cloud secure 
-summary: 'La sécurité de la charge de travail utilise des collecteurs de données pour collecter les données d"accès des fichiers et des utilisateurs à partir de terminaux.' 
+summary: 'Workload Security utilise des collecteurs de données pour collecter les données d"accès aux fichiers et aux utilisateurs à partir des appareils.' 
 ---
-= Configuration de Cloud Volumes ONTAP et d'Amazon FSX pour NetApp ONTAP Collector
+= Configuration du collecteur Cloud Volumes ONTAP et Amazon FSx for NetApp ONTAP
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-La sécurité de la charge de travail utilise des collecteurs de données pour collecter les données d'accès des fichiers et des utilisateurs à partir de terminaux.
+Workload Security utilise des collecteurs de données pour collecter les données d'accès aux fichiers et aux utilisateurs à partir des appareils.
 
 
 
 == Configuration du stockage Cloud Volumes ONTAP
 
-Pour configurer une instance AWS HA à un seul nœud ou pour héberger l'agent Workload Security, reportez-vous à la documentation OnCommand Cloud Volumes ONTAP : https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/index.html[]
+Consultez la documentation OnCommand Cloud Volumes ONTAP pour configurer une instance AWS à nœud unique / HA pour héberger l'agent de sécurité de la charge de travail :https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/index.html[]
 
-Une fois la configuration terminée, suivre les étapes pour configurer votre SVM : https://docs.netapp.com/us-en/cloudinsights/task_add_collector_svm.html[]
+Une fois la configuration terminée, suivez les étapes pour configurer votre SVM :https://docs.netapp.com/us-en/cloudinsights/task_add_collector_svm.html[]
 
 
 
 == Plateformes prises en charge
 
-* Cloud Volumes ONTAP, pris en charge dans tous les fournisseurs de services cloud disponibles, là où il est disponible. Par exemple : Amazon, Azure et Google Cloud.
-* ONTAP, Amazon FSX
+* Cloud Volumes ONTAP, pris en charge par tous les fournisseurs de services cloud disponibles, partout où ils sont disponibles.  Par exemple : Amazon, Azure, Google Cloud.
+* ONTAP Amazon FSx
 
 
 
 
-== Configuration de l'ordinateur agent
+== Configuration de la machine agent
 
-La machine de l'agent doit être configurée dans les sous-réseaux respectifs des fournisseurs de services cloud. Pour en savoir plus sur l'accès au réseau, consultez le [exigences de l'agent].
+La machine agent doit être configurée dans les sous-réseaux respectifs des fournisseurs de services cloud.  Pour en savoir plus sur l'accès au réseau, consultez les [Exigences relatives à l'agent].
 
-Vous trouverez ci-dessous les étapes d'installation d'Agent dans AWS. Des étapes équivalentes, applicables au fournisseur de services cloud, peuvent être suivies dans Azure ou Google Cloud pour l'installation.
+Vous trouverez ci-dessous les étapes d’installation de l’agent dans AWS.  Des étapes équivalentes, applicables au fournisseur de services cloud, peuvent être suivies dans Azure ou Google Cloud pour l’installation.
 
-Dans AWS, procédez comme suit pour configurer la machine à utiliser comme agent de sécurité de la charge de travail :
+Dans AWS, procédez comme suit pour configurer la machine à utiliser comme agent de sécurité de charge de travail :
 
-Procédez comme suit pour configurer la machine à utiliser en tant qu'agent de sécurité de la charge de travail :
+Suivez les étapes suivantes pour configurer la machine à utiliser comme agent de sécurité de charge de travail :
 
 .Étapes
-. Connectez-vous à la console AWS, accédez à la page EC2-instances et sélectionnez _Launch instance_.
-. Sélectionnez un ami RHEL ou CentOS avec la version appropriée comme indiqué sur cette page : https://docs.netapp.com/us-en/cloudinsights/concept_cs_agent_requirements.html[]
-. Sélectionnez le VPC et le sous-réseau dans lesquels réside l'instance de Cloud ONTAP.
-. Sélectionnez _t2.XLarge_ (4 cpu virtuels et 16 Go de RAM) comme ressources allouées.
+. Connectez-vous à la console AWS et accédez à la page EC2-Instances et sélectionnez _Lancer l'instance_.
+. Sélectionnez une AMI RHEL ou CentOS avec la version appropriée comme mentionné dans cette page :https://docs.netapp.com/us-en/cloudinsights/concept_cs_agent_requirements.html[]
+. Sélectionnez le VPC et le sous-réseau dans lesquels réside l’instance Cloud ONTAP .
+. Sélectionnez _t2.xlarge_ (4 vcpus et 16 Go de RAM) comme ressources allouées.
 +
 .. Créez l'instance EC2.
 
 
-. Installez les packages Linux requis à l'aide du gestionnaire de package YUM :
+. Installez les packages Linux requis à l'aide du gestionnaire de packages YUM :
 +
-.. Installez les packages Linux natifs _wget_ et _unzip_.
+.. Installez _wget_ et _unzip_ les packages Linux natifs.
 
 
 
 
 
 
-== Installez l'agent de sécurité de la charge de travail
+== Installer l'agent Workload Security
 
-. Connectez-vous en tant qu'administrateur ou responsable de compte à votre environnement Data Infrastructure Insights.
-. Accédez à Workload Security *Collectors* et cliquez sur l'onglet *agents*.
+. Connectez-vous en tant qu'administrateur ou propriétaire de compte à votre environnement Data Infrastructure Insights .
+. Accédez à Workload Security *Collectors* et cliquez sur l'onglet *Agents*.
 . Cliquez sur *+Agent* et spécifiez RHEL comme plate-forme cible.
-. Copiez la commande installation de l'agent.
-. Collez la commande installation de l'agent dans l'instance RHEL EC2 à laquelle vous êtes connecté. Ceci installe l'agent Workload Security, à condition que tous les link:concept_cs_agent_requirements.html["Conditions préalables de l'agent"] soient satisfaits.
+. Copiez la commande d’installation de l’agent.
+. Collez la commande d’installation de l’agent dans l’instance RHEL EC2 à laquelle vous êtes connecté.  Cela installe l'agent Workload Security, fournissant tous leslink:concept_cs_agent_requirements.html["Prérequis de l'agent"] sont respectées.
 
 
-Pour des étapes détaillées, veuillez vous reporter au lien suivant : https://docs.NetApp.com/US-en/cloudInsights/task_cs_add_agent.html#Steps-to-install-agent
+Pour les étapes détaillées, veuillez vous référer à ce lien : https://docs.netapp.com/us-en/cloudinsights/task_cs_add_agent.html#steps-to-install-agent
 
 
 
@@ -78,8 +78,8 @@ Les problèmes connus et leurs résolutions sont décrits dans le tableau suivan
 |===
 
 
-| Problème | Solution 
+| Problème | Résolution 
 
 
-| L'erreur "sécurité de la charge de travail : échec de la détermination du type de ONTAP pour le collecteur de données Amazon FxSN" est indiquée par le Data Collector. Le client ne peut pas ajouter un nouveau collecteur de données Amazon FSxN à la sécurité de la charge de travail. La connexion au cluster FSxN sur le port 443 de l'agent est en cours de temporisation. Les règles requises sont activées pour permettre la communication entre le pare-feu et les groupes de sécurité AWS. Un agent est déjà déployé et se trouve également dans le même compte AWS. Ce même agent est utilisé pour connecter et surveiller les dispositifs NetApp restants (et tous fonctionnent). | Résoudre ce problème en ajoutant le segment réseau LIF fsxadmin à la règle de sécurité de l'agent. Autorisé tous les ports si vous n'êtes pas sûr des ports. 
+| L'erreur « Sécurité de la charge de travail : échec de détermination du type ONTAP pour le collecteur de données Amazon FxSN » est affichée par le collecteur de données.  Le client ne peut pas ajouter de nouveau collecteur de données Amazon FSxN dans Workload Security.  La connexion au cluster FSxN sur le port 443 depuis l'agent expire.  Les groupes de sécurité du pare-feu et AWS ont les règles requises activées pour permettre la communication.  Un agent est déjà déployé et se trouve également dans le même compte AWS.  Ce même agent est utilisé pour connecter et surveiller les périphériques NetApp restants (et ils fonctionnent tous). | Résolvez ce problème en ajoutant le segment réseau LIF fsxadmin à la règle de sécurité de l'agent.  Autorisez tous les ports si vous n'êtes pas sûr des ports. 
 |===

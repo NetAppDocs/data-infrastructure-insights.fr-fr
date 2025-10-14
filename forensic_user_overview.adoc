@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: forensic_user_overview.html 
 keywords: Forensic, user, user, activity 
-summary: informations utilisateur médico-légales 
+summary: 'détails de l"utilisateur médico-légal' 
 ---
-= Vue d'ensemble de l'utilisateur judiciaire
+= Présentation de l'utilisateur forensique
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,26 +14,26 @@ summary: informations utilisateur médico-légales
 
 
 [role="lead"]
-Les informations relatives à chaque utilisateur sont fournies dans la vue d'ensemble de l'utilisateur. Utilisez ces vues pour comprendre les caractéristiques des utilisateurs, les entités associées et les activités récentes.
+Les informations relatives à chaque utilisateur sont fournies dans la vue d'ensemble de l'utilisateur.  Utilisez ces vues pour comprendre les caractéristiques des utilisateurs, les entités associées et les activités récentes.
 
 
 
 == Profil utilisateur
 
-Les informations du profil utilisateur incluent les coordonnées et l'emplacement de l'utilisateur. Le profil fournit les informations suivantes :
+Les informations du profil utilisateur incluent les coordonnées et l’emplacement de l’utilisateur.  Le profil fournit les informations suivantes :
 
 * Nom de l'utilisateur
-* Adresse électronique de l'utilisateur
-* Responsable de l'utilisateur
+* Adresse e-mail de l'utilisateur
+* Gestionnaire des utilisateurs
 * Contact téléphonique de l'utilisateur
-* Emplacement de l'utilisateur
+* Localisation de l'utilisateur
 
 
 
 
 == Comportement de l'utilisateur
 
-Les informations sur le comportement de l'utilisateur identifient les activités et opérations récentes effectuées par l'utilisateur. Ces informations comprennent :
+Les informations sur le comportement de l’utilisateur identifient les activités et opérations récentes effectuées par l’utilisateur.  Ces informations comprennent :
 
 * Activité récente
 +
@@ -59,6 +59,6 @@ La liste des utilisateurs est actualisée toutes les 12 heures.
 
 
 
-== Stratégie de conservation
+== Politique de conservation
 
-S'il n'est pas actualisé à nouveau, la liste des utilisateurs est conservée pendant 13 mois. Au bout de 13 mois, les données seront supprimées. Si votre environnement de sécurité des workloads est supprimé, toutes les données associées à l'environnement sont supprimées.
+Si elle n'est pas actualisée à nouveau, la liste des utilisateurs est conservée pendant 13 mois.  Après 13 mois, les données seront supprimées.  Si votre environnement Workload Security est supprimé, toutes les données associées à l'environnement sont supprimées.

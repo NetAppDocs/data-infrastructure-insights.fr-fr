@@ -1,31 +1,31 @@
 ---
 sidebar: sidebar 
 permalink: concept_asset_alerts_section.html 
-summary: Présentation de la section alertes associées de la page de ressources dans Data Infrastructure Insights. 
+summary: 'Présentation de la section Alertes associées à la page d"actif dans Data Infrastructure Insights.' 
 keywords: asset, landing page, violations, Alerts, 
 ---
-= Section alertes associées à la page de ressources
+= Section Alertes relatives à la page des actifs
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Vous pouvez utiliser la section alertes associées d'une page de ressources pour afficher toutes les alertes qui se produisent sur votre locataire à la suite d'un moniteur attribué à un actif. Les moniteurs génèrent des alertes en fonction des conditions que vous définissez et vous permettent d'identifier l'implication et d'analyser l'impact et la cause première du problème de manière à permettre une correction rapide et efficace.
+Vous pouvez utiliser la section Alertes associées d'une page d'actif pour voir toutes les alertes qui se produisent sur votre locataire à la suite d'un moniteur attribué à un actif.  Les moniteurs génèrent des alertes en fonction des conditions que vous définissez et vous permettent d'identifier l'implication et d'analyser l'impact et la cause profonde du problème d'une manière qui permet une correction rapide et efficace.
 
-L'exemple suivant montre une section typique des alertes associées qui s'affiche sur une page de ressource :
+L'exemple suivant montre une section d'alertes associées typique qui s'affiche sur une page d'actif :
 
 image:Alerts_on_Landing_Page.png["Tableau des alertes associées"]
 
-La section alertes associées vous permet d'afficher et de gérer les alertes qui se produisent sur votre réseau en fonction des conditions de surveillance affectées à un actif.
+La section Alertes associées vous permet d'afficher et de gérer les alertes qui se produisent sur votre réseau en raison des conditions de surveillance attribuées à un actif.
 
 .Étapes
-* Recherchez une page de ressources en procédant de l'une des façons suivantes :
+* Localisez une page de ressource en effectuant l’une des opérations suivantes :
 +
-** Saisissez le nom de la ressource dans la zone de recherche, puis sélectionnez la ressource dans la liste.
-** Dans un widget Dashboard, cliquez sur le nom d'une ressource.
-** Rechercher un ensemble d'actifs et sélectionner activé dans la liste des résultats.
+** Tapez le nom de l’actif dans la zone de recherche, puis sélectionnez l’actif dans la liste.
+** Dans un widget de tableau de bord, cliquez sur le nom d’un actif.
+** Recherchez un ensemble d’actifs et sélectionnez-en un dans la liste des résultats.
 
 
 
 
-La page ASSET s'affiche. La section alertes associées affiche l'heure à laquelle l'alerte a été déclenchée ainsi que l'état actuel de l'alerte et le moniteur qui l'a déclenchée. Vous pouvez cliquer sur l'ID d'alerte pour ouvrir la page d'arrivée de l'alerte pour une enquête plus approfondie.
+La page des ressources s'affiche.  La section Alertes associées affiche l'heure à laquelle l'alerte a été déclenchée ainsi que l'état actuel de l'alerte et le moniteur qui l'a déclenchée.  Vous pouvez cliquer sur l'ID d'alerte pour ouvrir la page de destination de l'alerte afin de procéder à une enquête plus approfondie.

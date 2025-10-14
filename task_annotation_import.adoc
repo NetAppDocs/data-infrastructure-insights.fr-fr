@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_annotation_import.html 
 keywords: annotations, import, api 
-summary: 'Vous pouvez importer des annotations et des applications à l"aide de l"API Data Infrastructure Insights.' 
+summary: Vous pouvez importer des annotations et des applications à l’aide de l’API Data Infrastructure Insights . 
 ---
 = Importation d'annotations
 :hardbreaks:
@@ -14,16 +14,16 @@ summary: 'Vous pouvez importer des annotations et des applications à l"aide de 
 
 
 [role="lead"]
-Data Infrastructure Insights inclut une API pour importer des annotations ou des applications à partir d'un fichier CSV et les attribuer aux objets que vous spécifiez.
+Data Infrastructure Insights inclut une API permettant d'importer des annotations ou des applications à partir d'un fichier CSV et de les attribuer aux objets que vous spécifiez.
 
 
-NOTE: L'API Data Infrastructure Insights est disponible dans *Data Infrastructure Insights Premium Edition*.
+NOTE: L'API Data Infrastructure Insights est disponible dans * Data Infrastructure Insights Premium Edition*.
 
 
 
 == Importation
 
-Les liens *Admin > API Access* contiennent link:API_Overview.html["documentation"] pour l'API *Assets/Import*. Cette documentation contient des informations sur le format de fichier .CSV.
+Les liens *Admin > Accès API* contiennentlink:API_Overview.html["documentation"] pour l'API *Assets/Import*.  Cette documentation contient des informations sur le format de fichier .CSV.
 
 image:api_assets_import.png["API d'importation"]
 
@@ -31,69 +31,69 @@ image:api_assets_import.png["API d'importation"]
 
 == Format de fichier .CSV
 
-Le format général du fichier CSV est le suivant : La première ligne du fichier définit les champs d'importation et spécifie l'ordre des champs. Cette opération est suivie de lignes distinctes pour chaque annotation ou application. Il n'est pas nécessaire de définir chaque champ. Toutefois, les lignes d'annotation suivantes doivent suivre le même ordre que la ligne de définition.
+Le format général du fichier CSV est le suivant.  La première ligne du fichier définit les champs d'importation et spécifie l'ordre des champs.  Ceci est suivi de lignes séparées pour chaque annotation ou application.  Vous n’avez pas besoin de définir tous les champs.  Cependant, les lignes d’annotation suivantes doivent suivre le même ordre que la ligne de définition.
 
  [Object Type] , [Object Name or ID] , Annotation Type [, Annotation Type,  ...] [, Application] [, Tenant] [, Line_Of_Business] [, Business_Unit] [, Project]
-Reportez-vous à la documentation API pour des exemples de fichiers .CSV.
+Consultez la documentation de l'API pour des exemples de fichiers .CSV.
 
-Vous pouvez importer et attribuer des annotations à partir d'un fichier .CSV à partir de l'outil de swagger de l'API lui-même. Il vous suffit de choisir le fichier à utiliser et de cliquer sur le bouton _Execute_ :
+Vous pouvez importer et attribuer des annotations à partir d'un fichier .CSV depuis l'API Swagger elle-même.  Choisissez simplement le fichier à utiliser et cliquez sur le bouton _Exécuter_ :
 
-image:api_assets_import_assign.png["Importer et affecter"]
+image:api_assets_import_assign.png["Importer et attribuer"]
 
 
 
 == Comportement d'importation
 
-Lors de l'importation, des données sont ajoutées, fusionnées ou remplacées, en fonction des objets et des types d'objets en cours d'importation. Lors de l'importation, gardez à l'esprit les comportements suivants.
+Lors de l'opération d'importation, les données sont ajoutées, fusionnées ou remplacées, en fonction des objets et des types d'objets importés.  Lors de l’importation, gardez à l’esprit les comportements suivants.
 
 * Ajoute une annotation ou une application si aucune n'existe avec le même nom dans le système cible.
-* Fusionne une annotation si le type d'annotation est une liste et qu'une annotation avec le même nom existe dans le système cible.
-* Remplace une annotation si le type d'annotation est autre qu'une liste et qu'une annotation du même nom existe dans le système cible.
+* Fusionne une annotation si le type d'annotation est une liste et qu'une annotation portant le même nom existe dans le système cible.
+* Remplace une annotation si le type d'annotation est autre qu'une liste et qu'une annotation portant le même nom existe dans le système cible.
 +
-Remarque : si une annotation portant le même nom mais avec un type différent existe dans le système cible, l'importation échoue. Si les objets dépendent de l'annotation qui a échoué, ces objets peuvent afficher des informations incorrectes ou indésirables. Vous devez vérifier toutes les dépendances des annotations une fois l'opération d'importation terminée.
+Remarque : si une annotation portant le même nom mais un type différent existe dans le système cible, l'importation échoue.  Si les objets dépendent de l’annotation ayant échoué, ces objets peuvent afficher des informations incorrectes ou indésirables.  Vous devez vérifier toutes les dépendances d’annotation une fois l’opération d’importation terminée.
 
-* Si une valeur d'annotation est vide, cette annotation est supprimée de l'objet. Les annotations héritées ne sont pas affectées.
-* Les valeurs d'annotation de type de date doivent être transmises en millisecondes sous forme d'heure unix.
-* Lors de l'annotation des volumes ou des volumes internes, le nom de l'objet combine le nom du stockage et le nom du volume en utilisant le séparateur «\-> ». Par exemple : _<Nom du stockage>\-><Nom du volume>_
-* Si un nom d'objet contient une virgule, le nom entier doit être entre guillemets. Par exemple : _« NetApp1,NetApp2 »\-> 023F_
-* Lorsque vous fixez des annotations aux stockages, commutateurs et ports, la colonne « application » est ignorée.
-* Locataire, secteur_d'activité, entité_commerciale et/ou projet fait une entité commerciale. Comme pour toutes les entités métier, toutes les valeurs peuvent être vides.
+* Si une valeur d’annotation est vide, cette annotation est supprimée de l’objet.  Les annotations héritées ne sont pas affectées.
+* Les valeurs d'annotation de type date doivent être transmises sous forme d'heure Unix en millisecondes.
+* Lors de l'annotation de volumes ou de volumes internes, le nom de l'objet est une combinaison du nom de stockage et du nom de volume utilisant le séparateur « \-> ».  Par exemple : _<Nom de stockage>\-><Nom du volume>_
+* Si un nom d'objet contient une virgule, le nom entier doit être entre guillemets.  Par exemple : _"NetApp1,NetApp2"\->023F_
+* Lors de l'ajout d'annotations aux stockages, aux commutateurs et aux ports, la colonne « Application » sera ignorée.
+* Le locataire, le secteur d'activité, l'unité commerciale et/ou le projet constituent une entité commerciale.  Comme pour toutes les entités commerciales, n’importe laquelle des valeurs peut être vide.
 
 
-Les types d'objet suivants peuvent être annotés.
+Les types d’objets suivants peuvent être annotés.
 
 |===
 
 
-| TYPE D'OBJET | NOM OU TOUCHE 
+| TYPE D'OBJET | NOM OU CLÉ 
 
 
-| Hôte | id\-><ID> ou <Nom> ou <IP> 
+| Hôte | id\-><id> ou <Nom> ou <IP> 
 
 
-| VM | id\-><ID> ou <Nom> 
+| Machine virtuelle | id\-><id> ou <Nom> 
 
 
-| Poolde stockage | id\-><ID> ou <Nom du stockage>\-><Nom du pool de stockage> 
+| Pool de stockage | id\-><id> ou <Nom de stockage>\-><Nom du pool de stockage> 
 
 
-| Volume interne | id\-><ID> ou <Nom du stockage>\-><Nom du volume interne> 
+| Volume interne | id\-><id> ou <Nom de stockage>\-><Nom du volume interne> 
 
 
-| Volumétrie | id\-><ID> ou <Nom du stockage>\-><Nom du volume> 
+| Volume | id\-><id> ou <Nom de stockage>\-><Nom du volume> 
 
 
-| Stockage | id\-><ID> ou <Nom> ou <IP> 
+| Stockage | id\-><id> ou <Nom> ou <IP> 
 
 
-| Commutateur | id\-><ID> ou <Nom> ou <IP> 
+| Changer | id\-><id> ou <Nom> ou <IP> 
 
 
-| Port | id\-><ID> ou <WWN> 
+| Port | id\-><id> ou <WWN> 
 
 
-| Qtree | id\-><ID> ou <Nom du stockage>\-><Nom du volume interne>\-><Nom du qtree> 
+| Qtree | id\-><id> ou <Nom de stockage>\-><Nom du volume interne>\-><Nom Qtree> 
 
 
-| Partagez | id\-><ID> ou <Nom du stockage>\-><Nom du volume interne>\-><Nom du partage>\-><Protocole>[\-><Nom du qtree (facultatif en cas de qtree par défaut)>] 
+| Partager | id\-><id> ou <Nom de stockage>\-><Nom du volume interne>\-><Nom de partage>\-><Protocole>[\-><Nom Qtree (facultatif en cas de Qtree par défaut)>] 
 |===

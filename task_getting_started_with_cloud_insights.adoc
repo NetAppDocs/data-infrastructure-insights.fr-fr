@@ -1,52 +1,52 @@
 ---
 sidebar: sidebar 
 permalink: task_getting_started_with_cloud_insights.html 
-summary: Mise en route avec Data Infrastructure Insights. 
+summary: Premiers pas avec Data Infrastructure Insights. 
 keywords: invite, roles, data collector, acquisition unit, AU 
 ---
-= Début de la collecte des données
+= Commencer à collecter des données
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Une fois que vous vous êtes inscrit à Data Infrastructure Insights et que vous vous connectez pour la première fois à votre environnement, vous suivrez les étapes suivantes pour commencer à collecter et à gérer les données.
+Après vous être inscrit à Data Infrastructure Insights et connecté à votre environnement pour la première fois, vous serez guidé à travers les étapes suivantes afin de commencer à collecter et à gérer les données.
 
-Les collecteurs de données détectent les informations provenant de vos sources de données, telles que les périphériques de stockage, les commutateurs réseau et les machines virtuelles. Les informations recueillies sont utilisées à des fins d'analyse, de validation, de surveillance et de dépannage.
+Les collecteurs de données découvrent des informations à partir de vos sources de données, telles que les périphériques de stockage, les commutateurs réseau et les machines virtuelles.  Les informations recueillies sont utilisées à des fins d’analyse, de validation, de surveillance et de dépannage.
 
-Data Infrastructure Insights dispose de trois types de collecteurs de données :
+Data Infrastructure Insights propose trois types de collecteurs de données :
 
-* Infrastructure (périphériques de stockage, commutateurs de réseau, infrastructure de calcul)
+* Infrastructure (périphériques de stockage, commutateurs réseau, infrastructure de calcul)
 * Systèmes d'exploitation (tels que VMware ou Windows)
 * Services (tels que Kafka)
 
 
-Sélectionnez votre premier collecteur de données parmi les fournisseurs et modèles pris en charge disponibles. Vous pouvez facilement ajouter des collecteurs de données supplémentaires ultérieurement.
+Sélectionnez votre premier collecteur de données parmi les fournisseurs et modèles pris en charge disponibles.  Vous pouvez facilement ajouter des collecteurs de données supplémentaires ultérieurement.
 
 
 
 == Installer une unité d'acquisition
 
-Si vous avez sélectionné un collecteur de données _Infrastructure_, une unité d'acquisition est nécessaire pour injecter des données dans les informations de l'infrastructure de données. Vous devrez télécharger et installer le logiciel acquisition Unit sur un serveur ou une machine virtuelle du centre de données à partir duquel vous allez recueillir. Une unité d'acquisition unique peut être utilisée pour plusieurs collecteurs de données.
+Si vous avez sélectionné un collecteur de données _Infrastructure_, une unité d'acquisition est requise pour injecter des données dans Data Infrastructure Insights.  Vous devrez télécharger et installer le logiciel de l'unité d'acquisition sur un serveur ou une machine virtuelle du centre de données à partir duquel vous effectuerez la collecte.  Une seule unité d’acquisition peut être utilisée pour plusieurs collecteurs de données.
 
-image:NewLinuxAUInstall.png["Instructions Linux au"]
+image:NewLinuxAUInstall.png["Instructions AU Linux"]
 
-* Suivez les link:task_configure_acquisition_unit.html["instructions"]instructions affichées pour installer votre unité d'acquisition. Une fois le logiciel de l'unité d'acquisition installé, le bouton Continuer s'affiche et vous pouvez passer à l'étape suivante.
-
-
-image:NewAUDetected.png["Nouvelle au détectée"]
-
-Vous pouvez configurer des unités d'acquisition supplémentaires ultérieurement, si nécessaire. Par exemple, différentes unités d'acquisition peuvent collecter des informations provenant de data centers situés dans différentes régions.
+* Suivez lelink:task_configure_acquisition_unit.html["instructions"] affiché pour installer votre unité d'acquisition.  Une fois le logiciel de l’unité d’acquisition installé, le bouton Continuer s’affiche et vous pouvez passer à l’étape suivante.
 
 
+image:NewAUDetected.png["Nouvelle AU détectée"]
 
-== Configurer Data Collector - Infrastructure
+Vous pouvez configurer des unités d'acquisition supplémentaires ultérieurement si nécessaire.  Par exemple, vous souhaiterez peut-être que différentes unités d’acquisition collectent des informations à partir de centres de données situés dans différentes régions.
 
-Pour les collecteurs de données _Infrastructure_, on vous demandera de remplir les champs du collecteur de données présentés :
+
+
+== Configurer le collecteur de données - Infrastructure
+
+Pour les collecteurs de données _Infrastructure_, il vous sera demandé de remplir les champs du collecteur de données présentés :
 
 * Donnez au collecteur de données un nom unique et significatif.
-* Saisissez les informations d'identification (nom d'utilisateur et mot de passe) pour vous connecter au périphérique, le cas échéant.
-* Remplissez tous les autres champs obligatoires des sections _Configuration_ et _Advanced Configuration_.
+* Saisissez les informations d’identification (nom d’utilisateur et mot de passe) pour vous connecter à l’appareil, le cas échéant.
+* Remplissez tous les autres champs obligatoires dans les sections _Configuration_ et _Configuration avancée_.
 * Cliquez sur *Ajouter un collecteur* pour enregistrer le collecteur de données.
 
 
@@ -54,66 +54,66 @@ Vous pourrez configurer des collecteurs de données supplémentaires ultérieure
 
 
 
-== Configurer Data Collector - systèmes d'exploitation et services
+== Configurer le collecteur de données – Systèmes d'exploitation et services
 
 
 
-=== Système d'exploitation :
+=== Système opérateur:
 
-Pour les collecteurs de données _Operating System_, choisissez une plate-forme (Linux, Windows) pour installer un agent Data Infrastructure Insights. Vous devez disposer d'au moins un agent pour collecter des données auprès des Services. L'agent collecte également des données de l'hôte lui-même, pour une utilisation dans Data Infrastructure Insights. Ces données sont classées comme des données de « nœud » dans des widgets, etc
+Pour les collecteurs de données _Système d'exploitation_, choisissez une plate-forme (Linux, Windows) pour installer un agent Data Infrastructure Insights .  Vous devez disposer d’au moins un agent pour collecter les données des Services.  L'agent collecte également des données de l'hôte lui-même, pour les utiliser dans Data Infrastructure Insights.  Ces données sont classées comme données « Nœud » dans les widgets, etc.
 
-* Ouvrez un terminal ou une fenêtre de commande sur l'hôte de l'agent ou le VM, puis collez la commande affichée pour installer l'agent.
-* Une fois l'installation terminée, cliquez sur *Terminer l'installation*.
-
-
+* Ouvrez un terminal ou une fenêtre de commande sur l’hôte de l’agent ou la machine virtuelle et collez la commande affichée pour installer l’agent.
+* Une fois l’installation terminée, cliquez sur *Terminer l’installation*.
 
 
-=== Services :
 
-Pour les collecteurs de données _Service_, cliquez sur une vignette pour ouvrir la page d'instructions pour ce service.
 
-* Choisissez une plate-forme et une clé d'accès Agent.
-* Si aucun agent n'est installé sur cette plate-forme, suivez les instructions d'installation de l'agent.
-* Cliquez sur *Continuer* pour ouvrir la page d'instructions du collecteur de données.
+=== Services:
+
+Pour les collecteurs de données _Service_, cliquez sur une tuile pour ouvrir la page d'instructions pour ce service.
+
+* Choisissez une plateforme et une clé d’accès d’agent.
+* Si vous n'avez pas d'agent installé sur cette plateforme, suivez les instructions pour installer l'agent.
+* Cliquez sur *Continuer* pour ouvrir la page d’instructions du collecteur de données.
 * Suivez les instructions pour configurer le collecteur de données.
-* Une fois la configuration terminée, cliquez sur *Terminer l'installation*.
+* Une fois la configuration terminée, cliquez sur *Terminer la configuration*.
 
 
 
 
-== Ajouter tableaux de bord
+== Ajouter des tableaux de bord
 
-En fonction du type de collecteur de données initial que vous avez sélectionné pour configurer (stockage, commutateur, etc.), un ou plusieurs tableaux de bord pertinents seront importés. Par exemple, si vous avez configuré un collecteur de données de stockage, un ensemble de tableaux de bord liés au stockage sera importé et un sera défini comme votre page d'accueil Data Infrastructure Insights. Vous pouvez modifier la page d'accueil à partir de la liste *tableaux de bord > Afficher tous les tableaux de bord*.
+Selon le type de collecteur de données initial que vous avez sélectionné pour configurer (stockage, commutateur, etc.), un ou plusieurs tableaux de bord pertinents seront importés.  Par exemple, si vous avez configuré un collecteur de données de stockage, un ensemble de tableaux de bord liés au stockage sera importé et l'un d'eux sera défini comme page d'accueil de Data Infrastructure Insights .  Vous pouvez modifier la page d'accueil à partir de la liste *Tableaux de bord > Afficher tous les tableaux de bord*.
 
-Vous pouvez importer d'autres tableaux de bord ultérieurement, ou link:concept_dashboards_overview.html["créez la vôtre"].
+Vous pouvez importer des tableaux de bord supplémentaires ultérieurement, oulink:concept_dashboards_overview.html["créez le vôtre"] .
 
 
 
-== Ce n'est pas plus compliqué que cela
+== C'est tout ce qu'il y a à dire.
 
-Une fois le processus de configuration initial terminé, votre environnement commence à collecter des données.
+Une fois le processus de configuration initiale terminé, votre environnement commencera à collecter des données.
 
-Si le processus de configuration initial est interrompu (par exemple, si vous fermez la fenêtre du navigateur), vous devez suivre les étapes manuellement :
+Si votre processus de configuration initiale est interrompu (par exemple, si vous fermez la fenêtre du navigateur), vous devrez suivre les étapes manuellement :
 
-* Choisissez un Data Collector
+* Choisissez un collecteur de données
 * Installez un agent ou une unité d'acquisition si vous y êtes invité
-* Configurer le Data Collector
+* Configurer le collecteur de données
 
 
 
 
 == Définitions utiles
 
-Les définitions suivantes peuvent être utiles lorsque vous parlez des collecteurs de données ou des fonctionnalités Data Infrastructure Insights :
+Les définitions suivantes peuvent être utiles lorsque l'on parle des collecteurs de données ou des fonctionnalités de Data Infrastructure Insights :
 
-* Cycle de vie du collecteur : un collecteur appartient à l'un des États suivants dans son cycle de vie :
+* Cycle de vie du collecteur : Un collecteur appartiendra à l’un des états suivants dans son cycle de vie :
 +
-** *Aperçu* : disponible à une capacité limitée ou à un public limité. link:concept_preview_features.html["Aperçu des fonctions"] Et les collecteurs de données devraient devenir GA après la période de prévisualisation. Les périodes d'aperçu varient en fonction de l'audience ou de la fonctionnalité.
-** *GA* : une fonctionnalité ou un collecteur de données généralement disponible pour tous les clients, en fonction de l'édition ou du jeu de fonctions.
-** *Obsolète* : s'applique aux collecteurs de données qui ne sont, ou sont censés devenir, plus viables sur le plan fonctionnel. Les collecteurs de données obsolètes sont souvent remplacés par de nouveaux collecteurs de données mis à jour de manière fonctionnelle.
-** *Supprimé* : un collecteur de données qui a été supprimé et n'est plus disponible.
+** *Aperçu* : Disponible dans une capacité limitée ou pour un public limité. link:concept_preview_features.html["Fonctionnalités d'aperçu"] et les collecteurs de données devraient devenir GA après la période de prévisualisation.  Les périodes d'aperçu varient en fonction du public ou des fonctionnalités.
+** *GA* : une fonctionnalité ou un collecteur de données généralement disponible pour tous les clients, en fonction de l'édition ou de l'ensemble de fonctionnalités.
+** *Obsolète* : s'applique aux collecteurs de données qui ne sont plus, ou ne devraient plus devenir, fonctionnellement viables.  Les collecteurs de données obsolètes sont souvent remplacés par des collecteurs de données plus récents et fonctionnellement mis à jour.
+** *Supprimé* : un collecteur de données qui a été supprimé et n'est plus disponible.
 
 
-* Unité d'acquisition : ordinateur dédié à l'hébergement de collecteurs de données, généralement une machine virtuelle. Cet ordinateur se trouve généralement dans le même centre de données/VPC que les éléments surveillés.
-* Source de données : module de communication avec une pile matérielle ou logicielle. Il se compose d'une configuration et d'un code qui s'exécutent sur l'ordinateur au pour communiquer avec le périphérique.
+* Unité d'acquisition : un ordinateur dédié à l'hébergement des collecteurs de données, généralement une machine virtuelle.  Cet ordinateur est généralement situé dans le même centre de données / VPC que les éléments surveillés.
+* Source de données : un module permettant de communiquer avec une pile matérielle ou logicielle.  Il s'agit d'une configuration et d'un code qui s'exécutent sur l'ordinateur AU pour communiquer avec l'appareil.
 

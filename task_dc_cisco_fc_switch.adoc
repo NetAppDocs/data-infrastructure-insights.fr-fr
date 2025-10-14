@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_cisco_fc_switch.html 
 keywords: data collector, cisco, FC, cisco FC 
-summary: Configuration du collecteur de données du commutateur Fablic Cisco MDS. 
+summary: Configuration du collecteur de données du commutateur Cisco MDS Fablic. 
 ---
 = Collecteur de données des commutateurs Cisco MDS Fabric
 :hardbreaks:
@@ -10,28 +10,28 @@ summary: Configuration du collecteur de données du commutateur Fablic Cisco MDS
 
 
 [role="lead"]
-Les informations d'infrastructure de données utilisent le collecteur de données de commutateurs de structure MDS Cisco pour découvrir l'inventaire des commutateurs de structure MDS Cisco ainsi que de plusieurs commutateurs FCoE Cisco Nexus sur lesquels le service FC est activé.
+Data Infrastructure Insights utilise le collecteur de données Cisco MDS Fabric Switches pour découvrir l'inventaire des commutateurs Cisco MDS Fabric ainsi qu'une variété de commutateurs Cisco Nexus FCoE sur lesquels le service FC est activé.
 
-De plus, vous pouvez découvrir de nombreux modèles de périphériques Cisco fonctionnant en mode NPV avec ce collecteur de données.
+De plus, vous pouvez découvrir de nombreux modèles d'appareils Cisco fonctionnant en mode NPV avec ce collecteur de données.
 
 
 
 == Terminologie
 
-Les informations d'inventaire suivantes sont acquises à partir du collecteur de données du commutateur FC Cisco. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d’inventaire suivantes à partir du collecteur de données du commutateur Cisco FC.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
-| Terme du fournisseur/modèle | Terme informations exploitables sur l'infrastructure de données 
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
 
 
-| Commutateur | Commutateur 
+| Changer | Changer 
 
 
 | Port | Port 
 
 
-| VSAN | Structure 
+| VSAN | Tissu 
 
 
 | Zone | Zone 
@@ -40,21 +40,21 @@ Les informations d'inventaire suivantes sont acquises à partir du collecteur de
 | Commutateur logique | Commutateur logique 
 
 
-| Entrée de serveur de noms | Entrée de serveur de noms 
+| Entrée du serveur de noms | Entrée du serveur de noms 
 
 
-| Zone IVR (Inter-VSAN Routing) | Zone IVR 
+| Zone de routage inter-VSAN (IVR) | Zone IVR 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-* Adresse IP d'un commutateur dans la structure ou sur des commutateurs individuels
-* Découverte de châssis, pour activer la découverte de structure
+* Une adresse IP d'un commutateur dans la structure ou de commutateurs individuels
+* Découverte du châssis, pour permettre la découverte de la structure
 * Si vous utilisez SNMP V2, chaîne de communauté en lecture seule
-* Le port 161 est utilisé pour accéder au périphérique
+* Le port 161 est utilisé pour accéder à l'appareil
 
 
 
@@ -66,16 +66,16 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| IP du commutateur Cisco | Adresse IP ou nom de domaine complet du commutateur 
+| Commutateur IP Cisco | Adresse IP ou nom de domaine complet du commutateur 
 
 
-| Version SNMP | Sélectionnez V1, V2 ou V3. V2 ou ultérieur est requis pour l'acquisition de performances. 
+| Version SNMP | Sélectionnez V1, V2 ou V3.  La version V2 ou ultérieure est requise pour l'acquisition des performances. 
 
 
-| Chaîne de communauté SNMP | Chaîne de communauté en lecture seule SNMP utilisée pour accéder au commutateur (non applicable pour SNMP v3) 
+| Chaîne de communauté SNMP | Chaîne de communauté SNMP en lecture seule utilisée pour accéder au commutateur (non applicable pour SNMP v3) 
 
 
-| Nom d'utilisateur | Nom d'utilisateur du commutateur (SNMP v3 uniquement) 
+| Nom d'utilisateur | Nom d'utilisateur pour le commutateur (SNMP v3 uniquement) 
 
 
 | Mot de passe | Mot de passe utilisé pour le commutateur (SNMPv3 uniquement) 
@@ -89,61 +89,61 @@ Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent n
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire (40 minutes par défaut) 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les interrogations d'inventaire (par défaut 40 minutes) 
 
 
-| Protocole d'autorisation SNMP | Protocole d'authentification SNMP (SNMPv3 uniquement) 
+| Protocole d'authentification SNMP | Protocole d'authentification SNMP (SNMPv3 uniquement) 
 
 
-| Protocole de confidentialité SNMP | Protocole SNMP Privacy (SNMPv3 uniquement) 
+| Protocole de confidentialité SNMP | Protocole de confidentialité SNMP (SNMPv3 uniquement) 
 
 
 | Mot de passe de confidentialité SNMP | Mot de passe de confidentialité SNMP 
 
 
-| Nouvelles tentatives SNMP | Nombre de tentatives SNMP 
+| Nouvelles tentatives SNMP | Nombre de tentatives de nouvelle tentative SNMP 
 
 
-| Délai d'expiration SNMP (ms) | SNMP timeout (5000 ms par défaut) 
+| Délai d'expiration SNMP (ms) | Délai d'expiration SNMP (par défaut 5000 ms) 
 
 
-| Activer le recouvrement | Sélectionnez pour activer le recouvrement. Si vous activez le recouvrement, vous devez également activer les notifications SNMP. 
+| Activer le piégeage | Sélectionnez pour activer le piégeage.  Si vous activez le piégeage, vous devez également activer les notifications SNMP. 
 
 
-| Temps minimum entre les recouvrements (s) | Temps minimum entre les tentatives d'acquisition déclenchées par des interruptions (par défaut 10 secondes) 
+| Temps minimum entre les pièges (sec) | Temps minimum entre les tentatives d'acquisition déclenchées par des traps (par défaut 10 secondes) 
 
 
-| Découvrez tous les commutateurs Fabric | Sélectionnez pour découvrir tous les commutateurs de la structure 
+| Découvrez tous les commutateurs Fabric | Sélectionnez pour découvrir tous les commutateurs du fabric 
 
 
-| Périphériques exclus | Liste des adresses IP des périphériques à exclure de l'interrogation, séparées par des virgules 
+| Appareils exclus | Liste séparée par des virgules des adresses IP des appareils à exclure de l'interrogation 
 
 
-| Appareils inclus | Liste des adresses IP des périphériques à inclure dans l'interrogation, séparées par des virgules 
+| Appareils inclus | Liste séparée par des virgules des adresses IP des appareils à inclure dans l'interrogation 
 
 
-| Vérifiez le type de périphérique | Sélectionnez pour accepter uniquement les périphériques qui se annoncent explicitement comme périphériques Cisco 
+| Vérifier le type d'appareil | Sélectionnez cette option pour accepter uniquement les appareils qui s'annoncent explicitement comme des appareils Cisco 
 
 
-| Premier type d'alias | Fournissez une première préférence pour la résolution de l'alias. Choisissez parmi les options suivantes : *Device Alais* il s'agit d'un nom convivial pour un WWN de port (PWWN) qui peut être utilisé dans toutes les commandes de configuration, si nécessaire. Tous les commutateurs de la gamme Cisco MDS 9000 prennent en charge les services d'alias de périphérique distribués (alias de périphérique). *Aucun* ne signale aucun alias. *Port Description* Description pour aider à identifier le port dans une liste de ports. *Alias de zone (tous)* Nom convivial pour un port qui ne peut être utilisé que pour la configuration active. Il s'agit de la valeur par défaut. 
+| Premier type d'alias | Fournir une première préférence pour la résolution de l'alias.  Choisissez parmi les options suivantes : *Device Alais* Il s'agit d'un nom convivial pour un WWN de port (pWWN) qui peut être utilisé dans toutes les commandes de configuration, selon les besoins.  Tous les commutateurs de la famille Cisco MDS 9000 prennent en charge les services d'alias de périphériques distribués (alias de périphériques).  *Aucun* Ne signalez aucun alias.  *Description du port* Une description pour aider à identifier le port dans une liste de ports.  *Alias ​​de zone (tous)* Un nom convivial pour un port qui peut être utilisé uniquement pour la configuration active. C'est la valeur par défaut. 
 
 
-| Deuxième type d'alias | Fournissez une deuxième préférence pour la résolution de l'alias 
+| Deuxième type d'alias | Fournir une deuxième préférence pour la résolution de l'alias 
 
 
-| Troisième type d'alias | Fournissez une troisième préférence pour la résolution de l'alias 
+| Troisième type d'alias | Fournir une troisième préférence pour la résolution de l'alias 
 
 
-| Activez la prise en charge du mode proxy SNAP | Sélectionnez si votre commutateur Cisco utilise SANTap en mode proxy. Si vous utilisez EMC RecoverPoint, vous utilisez probablement SANTap. 
+| Activer la prise en charge du mode proxy SANTap | Sélectionnez si votre commutateur Cisco utilise SANTap en mode proxy.  Si vous utilisez EMC RecoverPoint, vous utilisez probablement SANTap. 
 
 
-| Intervalle d'interrogation des performances (s) | Intervalle entre les sondages de performance (par défaut 300 secondes) 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performance (par défaut 300 secondes) 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -151,22 +151,22 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| Erreur : échec de détection du châssis - aucun commutateur n'a été détecté | • Ping sur le périphérique avec l'adresse IP configurée • connexion au périphérique à l'aide de l'interface graphique de Cisco Device Manager • connexion au périphérique à l'aide de l'interface CLI • essayez d'exécuter SNMP Walk 
+| Erreur : Échec de la détection du châssis – aucun commutateur n'a été détecté | • Envoyez une requête ping à l'appareil avec l'adresse IP configurée • Connectez-vous à l'appareil à l'aide de l'interface graphique utilisateur Cisco Device Manager • Connectez-vous à l'appareil à l'aide de la CLI • Essayez d'exécuter la marche SNMP 
 
 
-| Erreur : le périphérique n'est pas un commutateur Cisco MDS | • Assurez-vous que l'adresse IP de la source de données configurée pour le périphérique est correcte • connexion au périphérique à l'aide de l'interface utilisateur graphique de Cisco Device Manager • connexion au périphérique à l'aide de l'interface CLI 
+| Erreur : le périphérique n'est pas un commutateur Cisco MDS | • Assurez-vous que l'adresse IP de la source de données configurée pour l'appareil est correcte. • Connectez-vous à l'appareil à l'aide de l'interface graphique utilisateur Cisco Device Manager. • Connectez-vous à l'appareil à l'aide de l'interface de ligne de commande. 
 
 
-| Erreur : Data Infrastructure Insights ne peut pas obtenir le WWN du commutateur. | Il ne peut pas s'agir d'un commutateur FC ou FCoE, et ne sera donc pas pris en charge. Assurez-vous que l'IP/FQDN configuré dans la source de données est véritablement un commutateur FC/FCoE. 
+| Erreur : Data Infrastructure Insights ne parvient pas à obtenir le WWN du commutateur. | Il se peut qu'il ne s'agisse pas d'un commutateur FC ou FCoE et qu'il ne soit donc pas pris en charge.  Assurez-vous que l’IP/FQDN configuré dans la source de données est vraiment un commutateur FC/FCoE. 
 
 
-| Erreur : plusieurs nœuds connectés au port de commutation NPV ont été détectés | Désactiver l'acquisition directe du commutateur NPV 
+| Erreur : plusieurs nœuds connectés au port du commutateur NPV ont été détectés | Désactiver l'acquisition directe du commutateur NPV 
 
 
-| Erreur : impossible de se connecter au commutateur | • Assurez-vous que le périphérique EST ACTIVÉ • Vérifiez l'adresse IP et le port d'écoute • Ping sur le périphérique • connexion au périphérique à l'aide de l'interface utilisateur graphique de Cisco Device Manager • connexion au périphérique à l'aide de l'interface CLI • Exécuter la fonction SNMP Walk 
+| Erreur : impossible de se connecter au commutateur | • Assurez-vous que l'appareil est en marche • Vérifiez l'adresse IP et le port d'écoute • Envoyez une requête ping à l'appareil • Connectez-vous à l'appareil à l'aide de l'interface graphique utilisateur Cisco Device Manager • Connectez-vous à l'appareil à l'aide de la CLI • Exécutez la marche SNMP 
 |===
 
 
@@ -174,9 +174,9 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| Erreur : l'acquisition des performances n'est pas prise en charge par SNMP v1 | • Modifier la source de données et désactiver les performances du commutateur • Modifier la source de données et la configuration du commutateur pour utiliser SNMP v2 ou supérieur 
+| Erreur : l’acquisition des performances n’est pas prise en charge par SNMP v1 | • Modifier la source de données et désactiver les performances du commutateur • Modifier la source de données et la configuration du commutateur pour utiliser SNMP v2 ou supérieur 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

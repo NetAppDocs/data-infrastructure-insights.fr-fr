@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_asset_page_overview.html 
-summary: 'Les pages ASSET peuvent être affichées pour la plupart des types d"objet.' 
+summary: Les pages d’actifs peuvent être affichées pour la plupart des types d’objets. 
 keywords: asset page, objects, landing page, Virtual machine, VM, Storage Virtual Machine, SVM, Volume, Internal volume, Host, Hypervisor, pool, Storage, Datastore, Application, node, Qtree, Disk, VMDK, Port, Switch, Fabric, refresh 
 ---
-= Présentation de la page de ressources
+= Présentation de la page des ressources
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,88 +14,88 @@ keywords: asset page, objects, landing page, Virtual machine, VM, Storage Virtua
 
 
 [role="lead"]
-Les pages d'accueil des ressources résument l'état actuel d'une ressource et contiennent des liens vers des informations supplémentaires sur la ressource et ses ressources associées.
+Les pages de destination des actifs résument l'état actuel d'un actif et contiennent des liens vers des informations supplémentaires sur l'actif et ses actifs associés.
 
-Les pages d'accueil vous donnent une vue d'une page de l'objet, avec des informations de résumé, de performances et de ressources associées.
+Les pages de destination vous offrent une vue d'une seule page de l'objet, avec des informations sur le résumé, les performances et les ressources associées.
 
-image:lp_new_design.png["Nouveau design LP"]
-
-
-
-== Résumé
-
-En haut d'une page d'accueil se trouve la section Synthèse expansible, qui inclut plusieurs graphiques sparkline affichant des tendances de données récentes pour des éléments tels que le débit ou la latence, ainsi que des informations et des attributs d'objet, et tous les moniteurs susceptibles d'alerter l'objet.
-
-La section Résumé s'affiche également et vous permet de modifier les annotations affectées à la ressource.
+image:lp_new_design.png["nouveau design LP"]
 
 
 
-== Section performances
+== Section Sommaire
 
-La section Performance affiche les données de performances de l'objet. Sélectionnez _Settings_ pour ajouter des graphiques supplémentaires à l'affichage, tels que débit ou capacité, ou sélectionnez des ressources corrélées ou contribuant pour tracer leurs données avec celles de l'objet. Les périphériques susceptibles de provoquer des conflits sont également répertoriés dans la section performances. Les données des graphiques sont actualisées automatiquement lorsque les collecteurs de données interrogent et que les données mises à jour sont acquises.
+En haut d'une page de destination se trouve la section Résumé extensible, qui comprend plusieurs graphiques sparkline affichant les tendances récentes des données pour des éléments tels que le débit ou la latence, ainsi que les informations et les attributs de l'objet, et tous les moniteurs pouvant alerter pour l'objet.
 
-Vous pouvez sélectionner le <<performance-metric-definitions,metrics>> que vous souhaitez afficher dans le graphique de performances pour la période sélectionnée. Cliquez sur le menu déroulant _Settings_ et choisissez parmi les mesures répertoriées.
+La section Résumé s'affiche également et vous permet de modifier les annotations attribuées à l'actif.
 
-Outre les données de performances, toutes les alertes qui sont ou étaient actives dans la plage horaire de page sélectionnée s'affichent également.
 
-image:lp_alert_example.png["exemple d'alerte sur une page d'accueil"]
 
-Vous pouvez choisir parmi les périphériques suivants qui peuvent être répertoriés dans la section performances :
+== Section Performance
 
-* Meilleure corrélation
+La section Performances affiche les données de performances de l'objet.  Sélectionnez _Paramètres_ pour ajouter des graphiques supplémentaires à l'affichage comme Débit ou Capacité, ou sélectionnez des ressources corrélées ou contributives pour représenter leurs données avec celles de l'objet.  Les périphériques susceptibles de provoquer des conflits seront également répertoriés dans la section Performances.  Les données des graphiques s'actualisent automatiquement à mesure que les collecteurs de données interrogent et que les données mises à jour sont acquises.
+
+Vous pouvez sélectionner le<<performance-metric-definitions,métrique>> vous souhaitez afficher le graphique des performances pour la période sélectionnée.  Cliquez sur le menu déroulant _Paramètres_ et choisissez parmi les mesures répertoriées.
+
+En plus des données de performances, toutes les alertes qui sont ou étaient actives dans la plage horaire de la page sélectionnée seront également affichées.
+
+image:lp_alert_example.png["exemple d'alerte sur une page de destination"]
+
+Vous pouvez choisir parmi les appareils suivants qui peuvent être répertoriés dans la section Performances :
+
+* Corrélation supérieure
 +
-Indique les ressources dont la corrélation est élevée (pourcentage) avec un ou plusieurs metrics de performance à l'ressource de base.
+Affiche les actifs qui ont une forte corrélation (pourcentage) avec une ou plusieurs mesures de performance par rapport à l'actif de base.
 
 * Principaux contributeurs
 +
-Affiche les actifs qui contribuent (pourcentage) à l'actif de base.
+Affiche les actifs qui contribuent (en pourcentage) à l'actif de base.
 
-* Top change
+* Principaux changements
 +
-Ressources liées aux modifications récentes.
+Actifs liés aux changements récents.
 
-* Contentions de charge de travail
+* Conflits de charge de travail
 +
-Indique les ressources qui affectent ou sont affectées par d'autres ressources partagées, telles que les hôtes, les réseaux et le stockage. Ces ressources sont parfois appelées _greedy_ et _dégraded_.
+Affiche les ressources qui ont un impact ou sont impactées par d’autres ressources partagées, telles que les hôtes, les réseaux et le stockage.  On les appelle parfois ressources _gourmandes_ et _dégradées_.
 
 
 
 
 
-== Ressources supplémentaires
+== Section Ressources supplémentaires
 
-La section Ressources supplémentaires affiche des tableaux de données pour les ressources liées au type d'objet actuel. Vous pouvez développer et réduire ces tables afin de vous concentrer sur des ressources spécifiques. Sélectionnez l'icône en forme d'engrenage pour afficher temporairement des mesures ou des attributs supplémentaires dans un tableau.
+La section Ressources supplémentaires affiche des tableaux de données pour les ressources liées au type d’objet actuel.  Vous pouvez développer et réduire ces tableaux afin de vous concentrer sur des ressources spécifiques.  Sélectionnez l’icône d’engrenage pour afficher temporairement des mesures ou des attributs supplémentaires dans un tableau.
 
 
 
 == Ajouter des widgets personnalisés
 
-Vous pouvez ajouter vos propres widgets à n'importe quelle page de ressources. Les widgets que vous ajoutez apparaîtront sur les pages de contenu pour tous les objets de ce type. Par exemple, l'ajout d'un widget personnalisé à une page d'actifs de stockage affichera ce widget sur les pages d'actifs de toutes les ressources de stockage.
+Vous pouvez ajouter vos propres widgets à n’importe quelle page d’actif.  Les widgets que vous ajoutez apparaîtront sur les pages d’actifs pour tous les objets de ce type.  Par exemple, l'ajout d'un widget personnalisé à une page de ressource de stockage affichera ce widget sur les pages de ressources pour toutes les ressources de stockage.
 
-Les widgets personnalisés sont placés au bas d'une page d'accueil, sous les sections performances et ressources.
+Les widgets personnalisés sont placés au bas d'une page de destination, sous les sections Performances et Ressources.
 
 
 
-== Types de pages de biens
+== Types de pages d'actifs
 
-Data Infrastructure Insights fournit des pages de ressources pour les ressources suivantes :
+Data Infrastructure Insights fournit des pages d’actifs pour les actifs suivants :
 
-* Ordinateur virtuel
-* Storage Virtual machine (SVM)
-* Volumétrie
+* Machine virtuelle
+* Machine virtuelle de stockage (SVM)
+* Volume
 * Volume interne
-* Hôte (hyperviseur compris)
-* Pool de stockage
+* Hôte (y compris l'hyperviseur)
+* Piscine de stockage
 * Stockage
-* Datastore
-* Client supplémentaire
+* Magasin de données
+* Application
 * Nœud de stockage
 * Qtree
 * Disque
 * VMDK
 * Port
-* Commutateur
-* Structure
+* Changer
+* Tissu
 * Hôte
 * Zone
 
@@ -104,33 +104,33 @@ Data Infrastructure Insights fournit des pages de ressources pour les ressources
 
 == Modification de la plage horaire des données affichées
 
-Par défaut, une page d'inventaire affiche les 3 dernières heures de données. Cependant, vous pouvez modifier le segment de temps des données affichées à l'aide d'une option située sur chaque page d'inventaire, quel que soit le type d'actif. Pour modifier la plage horaire, cliquez sur la plage horaire affichée dans la barre supérieure et choisissez parmi les segments de temps suivants :
+Par défaut, une page d'actif affiche les 3 dernières heures de données ; cependant, vous pouvez modifier le segment temporel des données affichées en utilisant une option située sur chaque page d'actif, quel que soit le type d'actif.  Pour modifier la plage horaire, cliquez sur la plage horaire affichée dans la barre supérieure et choisissez parmi les segments horaires suivants :
 
-* Dernières 15 minutes
-* Dernières 30 minutes
-* Dernières 60 minutes
-* Dernières 2 heures
-* Les 3 dernières heures (il s'agit de la valeur par défaut)
-* Dernières 6 heures
-* Dernières 12 heures
+* Les 15 dernières minutes
+* Les 30 dernières minutes
+* Les 60 dernières minutes
+* Les 2 dernières heures
+* 3 dernières heures (c'est la valeur par défaut)
+* Les 6 dernières heures
+* Les 12 dernières heures
 * Dernières 24 heures
-* 2 derniers jours
-* 3 derniers jours
-* 7 derniers jours
-* 14 derniers jours
-* 30 derniers jours
+* Les 2 derniers jours
+* Les 3 derniers jours
+* Les 7 derniers jours
+* Les 14 derniers jours
+* Les 30 derniers jours
 * Plage horaire personnalisée
 
 
-La plage de temps personnalisée vous permet de sélectionner jusqu'à 31 jours consécutifs. Vous pouvez également définir l'heure de début et l'heure de fin de la journée pour cette plage. L'heure de début par défaut est 12:00 AM le premier jour sélectionné et l'heure de fin par défaut est 11:59 PM le dernier jour sélectionné. Cliquez sur appliquer pour appliquer la plage horaire personnalisée à la page ressource.
+La plage horaire personnalisée vous permet de sélectionner jusqu'à 31 jours consécutifs.  Vous pouvez également définir l’heure de début et l’heure de fin de la journée pour cette plage.  L'heure de début par défaut est 00h00 le premier jour sélectionné et l'heure de fin par défaut est 23h59 le dernier jour sélectionné.  Cliquez sur Appliquer pour appliquer la plage horaire personnalisée à la page de l'actif.
 
-Les informations de la page sont automatiquement actualisées en fonction de la plage horaire sélectionnée. La fréquence de rafraîchissement actuelle s'affiche dans le coin supérieur droit de la section Résumé, ainsi que dans les tableaux ou widgets pertinents de la page.
+Les informations sur la page s'actualisent automatiquement en fonction de la plage horaire sélectionnée.  Le taux de rafraîchissement actuel est affiché dans le coin supérieur droit de la section Résumé ainsi que sur tous les tableaux ou widgets pertinents de la page.
 
 
 
 == Définitions des mesures de performance
 
-La section Performance peut afficher plusieurs mesures en fonction de la période sélectionnée pour l'actif. Chaque mesure est affichée dans son propre graphique de performances. Vous pouvez ajouter ou supprimer des mesures et des ressources associées dans les graphiques en fonction des données que vous souhaitez voir ; les mesures que vous pouvez choisir varient en fonction du type d'actif.
+La section Performance peut afficher plusieurs mesures en fonction de la période sélectionnée pour l'actif.  Chaque métrique est affichée dans son propre graphique de performances.  Vous pouvez ajouter ou supprimer des métriques et des actifs associés des graphiques en fonction des données que vous souhaitez voir ; les métriques parmi lesquelles vous pouvez choisir varient en fonction du type d'actif.
 
 |===
 
@@ -138,101 +138,101 @@ La section Performance peut afficher plusieurs mesures en fonction de la périod
 | *Métrique* | *Description* 
 
 
-| BB crédit zéro Rx, Tx | Nombre de fois que le nombre de crédits de la mémoire tampon de réception/transmission est passé à zéro pendant la période d'échantillonnage. Cette mesure représente le nombre de fois que le port connecté a dû cesser de transmettre car ce port était en dehors des crédits à fournir. 
+| Crédit BB zéro Rx, Tx | Nombre de fois où le nombre de crédits de tampon à tampon de réception/transmission est passé à zéro pendant la période d'échantillonnage.  Cette mesure représente le nombre de fois où le port connecté a dû arrêter de transmettre parce que ce port n'avait plus de crédits à fournir. 
 
 
-| BB crédit zéro durée Tx | Temps en millisecondes pendant lequel le crédit BB de transmission était égal à zéro pendant l'intervalle d'échantillonnage. 
+| Crédit BB à durée zéro Tx | Durée en millisecondes pendant laquelle le crédit BB de transmission était nul pendant l'intervalle d'échantillonnage. 
 
 
-| Taux d'accès au cache (total, lecture, écriture) % | Pourcentage de demandes ayant des résultats dans le cache. Plus le nombre d'accès au volume est élevé, plus les performances sont élevées. Cette colonne est vide pour les matrices de stockage qui ne collectent pas les informations d'accès au cache. 
+| Taux de réussite du cache (total, lecture, écriture) % | Pourcentage de requêtes aboutissant à des hits dans le cache.  Plus le nombre de hits par rapport aux accès au volume est élevé, meilleures sont les performances.  Cette colonne est vide pour les baies de stockage qui ne collectent pas d'informations sur les hits de cache. 
 
 
-| Utilisation du cache (total) % | Pourcentage total de demandes de cache qui entraînent des taux d'accès au cache 
+| Utilisation du cache (total) % | Pourcentage total de requêtes de cache aboutissant à des hits de cache 
 
 
-| Discards de classe 3 | Nombre de cartes de transport de données Fibre Channel classe 3. 
+| Rejets de classe 3 | Nombre de rejets de transport de données Fibre Channel de classe 3. 
 
 
-| Taux d'utilisation du processeur (total) % | Quantité de ressources CPU utilisées activement, en pourcentage du total disponible (sur l'ensemble des processeurs virtuels). 
+| Utilisation du processeur (total) % | Quantité de ressources CPU activement utilisées, en pourcentage du total disponible (sur tous les CPU virtuels). 
 
 
-| Erreur CRC | Nombre d'images avec vérifications cycliques de redondance non valides (CRCS) détectées par le port pendant la période d'échantillonnage 
+| Erreur CRC | Nombre de trames avec des contrôles de redondance cyclique (CRC) non valides détectées par le port pendant la période d'échantillonnage 
 
 
-| Fréquence d'image | Vitesse d'image de transmission en images par seconde (FPS) 
+| Fréquence d'images | Fréquence d'images transmise en images par seconde (FPS) 
 
 
-| Taille moyenne des trames (Rx, Tx) | Rapport entre le trafic et la taille de la trame. Cette mesure vous permet de déterminer s'il existe des cadres en hauteur dans le tissu. 
+| Taille moyenne de la trame (Rx, Tx) | Rapport entre le trafic et la taille de la trame.  Cette mesure vous permet d'identifier s'il existe des trames en surplomb dans la structure. 
 
 
-| Taille du châssis trop longue | Nombre de trames de transmission de données Fibre Channel trop longues. 
+| Taille du cadre trop longue | Nombre de trames de transmission de données Fibre Channel trop longues. 
 
 
 | Taille du cadre trop courte | Nombre de trames de transmission de données Fibre Channel trop courtes. 
 
 
-| Densité des E/S (Total, lecture, écriture) | Nombre d'IOPS divisé par la capacité utilisée (tel qu'acquise lors de l'enquête d'inventaire la plus récente de la source de données) pour le volume, le volume interne ou l'élément de stockage. Mesures réalisées en nombre d'opérations d'E/S par seconde et par To. 
+| Densité d'E/S (totale, lecture, écriture) | Nombre d'IOPS divisé par la capacité utilisée (telle qu'acquise à partir de l'inventaire le plus récent de la source de données) pour l'élément Volume, Volume interne ou Stockage.  Mesuré en nombre d'opérations d'E/S par seconde par To. 
 
 
-| IOPS (total, lecture, écriture) | Nombre de demandes de service d'E/S en lecture/écriture qui passent par le canal d'E/S ou une partie de ce canal par unité de temps (mesuré en E/S par seconde) 
+| IOPS (total, lecture, écriture) | Nombre de demandes de service d'E/S en lecture/écriture passant par le canal d'E/S ou une partie de ce canal par unité de temps (mesuré en E/S par seconde) 
 
 
-| Débit IP (total, lecture, écriture) | Total : taux agrégé auquel les données IP ont été transmises et reçues en mégaoctets par seconde. 
+| Débit IP (total, lecture, écriture) | Total : débit agrégé auquel les données IP ont été transmises et reçues en mégaoctets par seconde. 
 
 
-| Débit IP (réception) : | Taux moyen de réception des données IP en mégaoctets par seconde. 
+| Lire : Débit IP (réception) : | Débit moyen auquel les données IP ont été reçues en mégaoctets par seconde. 
 
 
-| Écriture : débit IP (transmission) : | Vitesse moyenne à laquelle les données IP ont été transmises en mégaoctets par seconde. 
+| Écriture : Débit IP (transmission) : | Débit moyen auquel les données IP ont été transmises en mégaoctets par seconde. 
 
 
-| Latence (total, lecture, écriture) | Latence (R&W) : vitesse à laquelle les données sont lues ou écrites sur les machines virtuelles dans un délai fixe. La valeur est mesurée en mégaoctets par seconde. 
+| Latence (totale, lecture, écriture) | Latence (R&W) : taux auquel les données sont lues ou écrites sur les machines virtuelles dans un laps de temps fixe.  La valeur est mesurée en mégaoctets par seconde. 
 
 
-| Latence : | Temps de réponse moyen provenant des ordinateurs virtuels dans un magasin de données. 
+| Latence: | Temps de réponse moyen des machines virtuelles dans un magasin de données. 
 
 
-| Latence principale : | Le temps de réponse le plus élevé des ordinateurs virtuels dans un datastore. 
+| Latence maximale : | Le temps de réponse le plus élevé des machines virtuelles dans un magasin de données. 
 
 
-| Échec de la liaison | Nombre d'échecs de liaison détectés par le port pendant la période d'échantillonnage. 
+| Échec de la liaison | Nombre de défaillances de liaison détectées par le port pendant la période d'échantillonnage. 
 
 
-| Link reset Rx, Tx | Nombre de réinitialisations de liaison de réception ou de transmission pendant la période d'échantillonnage. Cette mesure représente le nombre de réinitialisations de liaison émises par le port connecté à ce port. 
+| Réinitialisation du lien Rx, Tx | Nombre de réinitialisations de liaison de réception ou de transmission pendant la période d'échantillonnage.  Cette métrique représente le nombre de réinitialisations de lien émises par le port connecté à ce port. 
 
 
-| Utilisation de la mémoire (totale) % | Seuil de mémoire utilisé par l'hôte. 
+| Utilisation de la mémoire (totale) % | Seuil pour la mémoire utilisée par l'hôte. 
 
 
-| R/W partiel (total) % | Nombre total de fois qu'une opération de lecture/écriture franchit une limite de bande sur un module de disque dans un LUN RAID 5, RAID 1/0 ou RAID 0 en général, les croisements de bandes ne sont pas bénéfiques, car chacun nécessite une E/S supplémentaire Un pourcentage faible indique une taille d'élément de bande efficace et indique un alignement incorrect d'un volume (ou d'une LUN NetApp). Pour CLARiiON, cette valeur correspond au nombre de croisements de bandes divisé par le nombre total d'IOPS. 
+| R/W partiel (total) % | Nombre total de fois qu'une opération de lecture/écriture franchit une limite de bande sur n'importe quel module de disque dans un LUN RAID 5, RAID 1/0 ou RAID 0. En général, les croisements de bande ne sont pas bénéfiques, car chacun nécessite une E/S supplémentaire.  Un faible pourcentage indique une taille d'élément de bande efficace et indique un alignement incorrect d'un volume (ou d'un LUN NetApp ).  Pour CLARiiON, cette valeur correspond au nombre de croisements de bandes divisé par le nombre total d'IOPS. 
 
 
-| Erreurs de port | Rapport des erreurs de port sur la période d'échantillonnage/période donnée. 
+| Erreurs de port | Rapport des erreurs de port sur la période d'échantillonnage/la durée donnée. 
 
 
-| Décompte des pertes de signal | Nombre d'erreurs de perte de signal. Si une erreur de perte de signal se produit, il n'y a pas de connexion électrique et il existe un problème physique. 
+| Nombre de pertes de signal | Nombre d'erreurs de perte de signal.  Si une erreur de perte de signal se produit, il n’y a pas de connexion électrique et un problème physique existe. 
 
 
-| Taux de swap (taux total, taux d'entrée, taux de sortie) | Vitesse à laquelle la mémoire est échangée en entrée, en sortie ou les deux du disque vers la mémoire active pendant la période d'échantillonnage. Ce compteur s'applique aux machines virtuelles. 
+| Taux de swap (taux total, taux d'entrée, taux de sortie) | Taux auquel la mémoire est échangée vers l'intérieur, vers l'extérieur ou les deux du disque vers la mémoire active pendant la période d'échantillonnage.  Ce compteur s'applique aux machines virtuelles. 
 
 
-| Synchroniser le nombre de pertes | Nombre d'erreurs de perte de synchronisation. Si une erreur de perte de synchronisation se produit, le matériel ne peut pas détecter le trafic ou le verrouiller. Il est possible que tous les équipements n'utilisent pas le même débit de données, ou que les câbles optiques ou les connexions physiques soient de mauvaise qualité. Le port doit resynchroniser après chaque erreur, ce qui a un impact sur la performance du système. Mesurée en Ko/s. 
+| Nombre de pertes de synchronisation | Nombre d'erreurs de perte de synchronisation.  Si une erreur de perte de synchronisation se produit, le matériel ne peut pas comprendre le trafic ni s'y verrouiller.  Il se peut que tous les équipements n’utilisent pas le même débit de données, ou que les connexions optiques ou physiques soient de mauvaise qualité.  Le port doit se resynchroniser après chaque erreur de ce type, ce qui affecte les performances du système.  Mesuré en Ko/sec. 
 
 
-| Débit (total, lecture, écriture) | Vitesse à laquelle les données sont transmises, reçues ou les deux en un temps fixe en réponse aux demandes de service d'E/S (mesurée en Mo par seconde). 
+| Débit (total, lecture, écriture) | Débit auquel les données sont transmises, reçues ou les deux dans un laps de temps fixe en réponse aux demandes de service d'E/S (mesuré en Mo par seconde). 
 
 
-| Délai d'expiration des trames - Tx | Nombre de trames de transmission rejetées causées par le délai d'attente. 
+| Délai d'expiration des trames de rejet - Tx | Nombre de trames de transmission rejetées en raison d'un dépassement de délai. 
 
 
-| Débit de trafic (total, lecture, écriture) | Trafic transmis, reçu ou les deux reçu pendant la période d'échantillonnage, en mébioctets par seconde. 
+| Taux de trafic (total, lecture, écriture) | Trafic transmis, reçu ou les deux reçus pendant la période d'échantillonnage, en mébioctets par seconde. 
 
 
-| Utilisation du trafic (total, lecture, écriture) | Rapport entre le trafic reçu/transmis/total et la capacité de réception/transmission/totale pendant la période d'échantillonnage. 
+| Utilisation du trafic (total, lecture, écriture) | Rapport entre le trafic reçu/transmis/total et la capacité reçue/transmise/totale, pendant la période d'échantillonnage. 
 
 
-| Taux d'utilisation (total, lecture, écriture) % | Pourcentage de bande passante disponible utilisée pour la transmission (Tx) et la réception (Rx). 
+| Utilisation (totale, lecture, écriture) % | Pourcentage de bande passante disponible utilisée pour la transmission (Tx) et la réception (Rx). 
 
 
-| Écriture en attente (total) | Nombre de demandes de service d'écriture d'E/S en attente. 
+| Écriture en attente (total) | Nombre de demandes de service d'E/S d'écriture en attente. 
 |===

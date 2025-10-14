@@ -1,58 +1,62 @@
 ---
 sidebar: sidebar 
 permalink: concept_asset_expert_view_section.html 
-summary: 'La section vue Expert d"une page de ressources est un outil puissant pour le dépannage ou la surveillance.' 
-keywords: asset page, expert view, metrics, greedy, degraded, correlated, contributors, chart, refresh 
+summary: La section Performances d’une page d’actif est un outil puissant pour le dépannage ou la surveillance. 
+keywords: asset page, expert view, metrics, greedy, degraded, correlated, contributors, chart, refresh, performance 
 ---
-= Vue expert
+= Section Performance
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-La section vue Expert d'une page de ressources vous permet d'afficher un exemple de performance pour l'actif de base en fonction de n'importe quel nombre de mesures applicables dans le contexte d'une période déterminée dans le tableau de performances et de toutes les ressources associées. Les données des graphiques sont actualisées automatiquement lorsque les collecteurs de données interrogent et que les données mises à jour sont acquises.
+La section Performances d'une page d'actif ou d'un panneau coulissant vous permet d'afficher un échantillon de performances pour l'actif de base en fonction de n'importe quel nombre de mesures applicables dans le contexte d'une période choisie dans le graphique de performances et de tous les actifs qui y sont liés.  Les données des graphiques s'actualisent automatiquement à mesure que les collecteurs de données interrogent et que les données mises à jour sont acquises.
 
 
 
-== Utilisation de la section vue avancée
+== Utilisation de la section Performance
 
-Voici un exemple de section Expert View d'une page des ressources de stockage :
+Voici un exemple de la section Performances dans une page de ressource de stockage :
 
-image:Expert_View_2021.png["Exemple d'affichage expert"]
+image:asset_page_performance_section.png["Section Performance"]
 
-Vous pouvez sélectionner les mesures que vous souhaitez afficher dans le tableau de performances pour la période sélectionnée. Cliquez sur la liste déroulante _Display Metrics_ et choisissez parmi les mesures répertoriées.
+Vous pouvez sélectionner les mesures que vous souhaitez afficher dans le graphique de performances pour la période sélectionnée.  Cliquez sur le menu déroulant _Afficher les métriques_ et choisissez parmi les métriques répertoriées.
 
-La section *Ressources* indique le nom de l'actif de base et la couleur représentant l'actif de base dans le tableau de performances. Si la section *en haut corrélé* ne contient pas de ressource que vous souhaitez afficher dans le graphique de performances, vous pouvez utiliser la case *Rechercher les ressources* de la section *Ressources supplémentaires* pour localiser le bien et l'ajouter au graphique de performances. Au fur et à mesure que vous ajoutez des ressources, elles apparaissent dans la section autres ressources.
+La section *Ressources* affiche le nom de l'actif de base et la couleur représentant l'actif de base dans le graphique de performances.  Si la section *Top Correlated* ne contient pas un actif que vous souhaitez afficher dans le graphique de performance, vous pouvez utiliser la case *Rechercher des actifs* dans la section *Ressources supplémentaires* pour localiser l'actif et l'ajouter au graphique de performance.  Au fur et à mesure que vous ajoutez des ressources, elles apparaissent dans la section Ressources supplémentaires.
 
-Également dans la section Ressources, le cas échéant, sont les ressources liées à la ressource de base dans les catégories suivantes :
+Sont également indiqués dans la section Ressources, le cas échéant, tous les actifs liés à l'actif de base dans les catégories suivantes :
 
-* Meilleure corrélation
+* Corrélation supérieure
 +
-Indique les ressources dont la corrélation est élevée (pourcentage) avec un ou plusieurs metrics de performance à l'ressource de base.
+Affiche les actifs qui ont une forte corrélation (pourcentage) avec une ou plusieurs mesures de performance par rapport à l'actif de base.
 
 * Principaux contributeurs
 +
-Affiche les actifs qui contribuent (pourcentage) à l'actif de base.
+Affiche les actifs qui contribuent (en pourcentage) à l'actif de base.
 
-* Contentions de charge de travail
+* Conflits de charge de travail
 +
-Indique les ressources qui affectent ou sont affectées par d'autres ressources partagées, telles que les hôtes, les réseaux et le stockage. Ces ressources sont parfois appelées _greedy_ et _dégraded_.
+Affiche les ressources qui ont un impact ou sont impactées par d’autres ressources partagées, telles que les hôtes, les réseaux et le stockage.  On les appelle parfois ressources _gourmandes_ et _dégradées_.
 
 
 
 
 
-== Alertes dans la vue Expert
+== Alertes dans la section Performance
 
-Les alertes sont également affichées dans la section vue Expert d'une page d'accueil de ressource, indiquant l'heure et la durée de l'alerte ainsi que la condition de surveillance qui l'a déclenchée.
+Les alertes sont également affichées dans la section Performances de la page de destination d'un actif, indiquant l'heure et la durée de l'alerte ainsi que la condition de surveillance qui l'a déclenchée.  Passez la souris sur un indicateur d’alerte pour afficher les détails de l’alerte.
 
-image:Alerts_In_Expert_View.png["Alertes dans la vue Expert"]
+image:asset_page_alert_section.png["Alertes dans la section performances"]
 
 
 
-== Définition des mesures dans la vue Expert
+== Définitions des mesures de performance
 
-La section vue Expert d'une page ressource affiche plusieurs mesures en fonction de la période sélectionnée pour l'actif. Chaque mesure est affichée dans son propre graphique de performances. Vous pouvez ajouter ou supprimer des mesures et des ressources associées dans les graphiques en fonction des données que vous souhaitez consulter. Les mesures que vous pouvez choisir varient en fonction du type d'actif.
+La section Performances d’une page d’actif affiche plusieurs mesures en fonction de la période sélectionnée pour l’actif.  Chaque métrique est affichée dans son propre graphique de performances.  Vous pouvez ajouter ou supprimer des métriques et des ressources associées des graphiques en fonction des données que vous souhaitez voir.  Les mesures que vous pouvez choisir varient en fonction du type d’actif.
 
 |===
 
@@ -60,157 +64,157 @@ La section vue Expert d'une page ressource affiche plusieurs mesures en fonction
 | *Métrique* | *Description* 
 
 
-| BB crédit zéro Rx, Tx | Nombre de fois que le nombre de crédits de la mémoire tampon de réception/transmission est passé à zéro pendant la période d'échantillonnage. Cette mesure représente le nombre de fois que le port connecté a dû cesser de transmettre car ce port était en dehors des crédits à fournir. 
+| Crédit BB zéro Rx, Tx | Nombre de fois où le nombre de crédits de tampon à tampon de réception/transmission est passé à zéro pendant la période d'échantillonnage.  Cette mesure représente le nombre de fois où le port connecté a dû arrêter de transmettre parce que ce port n'avait plus de crédits à fournir. 
 
 
-| BB crédit zéro durée Tx | Temps en millisecondes pendant lequel le crédit BB de transmission était égal à zéro pendant l'intervalle d'échantillonnage. 
+| Crédit BB à durée zéro Tx | Durée en millisecondes pendant laquelle le crédit BB de transmission était nul pendant l'intervalle d'échantillonnage. 
 
 
-| Taux d'accès au cache (total, lecture, écriture) % | Pourcentage de demandes ayant des résultats dans le cache. Plus le nombre d'accès au volume est élevé, plus les performances sont élevées. Cette colonne est vide pour les matrices de stockage qui ne collectent pas les informations d'accès au cache. 
+| Taux de réussite du cache (total, lecture, écriture) % | Pourcentage de requêtes aboutissant à des hits dans le cache.  Plus le nombre de hits par rapport aux accès au volume est élevé, meilleures sont les performances.  Cette colonne est vide pour les baies de stockage qui ne collectent pas d'informations sur les hits de cache. 
 
 
-| Utilisation du cache (total) % | Pourcentage total de demandes de cache qui entraînent des taux d'accès au cache 
+| Utilisation du cache (total) % | Pourcentage total de requêtes de cache aboutissant à des hits de cache 
 
 
-| Discards de classe 3 | Nombre de cartes de transport de données Fibre Channel classe 3. 
+| Rejets de classe 3 | Nombre de rejets de transport de données Fibre Channel de classe 3. 
 
 
-| Taux d'utilisation du processeur (total) % | Quantité de ressources CPU utilisées activement, en pourcentage du total disponible (sur l'ensemble des processeurs virtuels). 
+| Utilisation du processeur (total) % | Quantité de ressources CPU activement utilisées, en pourcentage du total disponible (sur tous les CPU virtuels). 
 
 
-| Erreur CRC | Nombre d'images avec vérifications cycliques de redondance non valides (CRCS) détectées par le port pendant la période d'échantillonnage 
+| Erreur CRC | Nombre de trames avec des contrôles de redondance cyclique (CRC) non valides détectées par le port pendant la période d'échantillonnage 
 
 
-| Fréquence d'image | Vitesse d'image de transmission en images par seconde (FPS) 
+| Fréquence d'images | Fréquence d'images transmise en images par seconde (FPS) 
 
 
-| Taille moyenne des trames (Rx, Tx) | Rapport entre le trafic et la taille de la trame. Cette mesure vous permet de déterminer s'il existe des cadres en hauteur dans le tissu. 
+| Taille moyenne de la trame (Rx, Tx) | Rapport entre le trafic et la taille de la trame.  Cette mesure vous permet d'identifier s'il existe des trames en surplomb dans la structure. 
 
 
-| Taille du châssis trop longue | Nombre de trames de transmission de données Fibre Channel trop longues. 
+| Taille du cadre trop longue | Nombre de trames de transmission de données Fibre Channel trop longues. 
 
 
 | Taille du cadre trop courte | Nombre de trames de transmission de données Fibre Channel trop courtes. 
 
 
-| Densité des E/S (Total, lecture, écriture) | Nombre d'IOPS divisé par la capacité utilisée (tel qu'acquise lors de l'enquête d'inventaire la plus récente de la source de données) pour le volume, le volume interne ou l'élément de stockage. Mesures réalisées en nombre d'opérations d'E/S par seconde et par To. 
+| Densité d'E/S (totale, lecture, écriture) | Nombre d'IOPS divisé par la capacité utilisée (telle qu'acquise à partir de l'inventaire le plus récent de la source de données) pour l'élément Volume, Volume interne ou Stockage.  Mesuré en nombre d'opérations d'E/S par seconde par To. 
 
 
-| IOPS (total, lecture, écriture) | Nombre de demandes de service d'E/S en lecture/écriture qui passent par le canal d'E/S ou une partie de ce canal par unité de temps (mesuré en E/S par seconde) 
+| IOPS (total, lecture, écriture) | Nombre de demandes de service d'E/S en lecture/écriture passant par le canal d'E/S ou une partie de ce canal par unité de temps (mesuré en E/S par seconde) 
 
 
-| Débit IP (total, lecture, écriture) | Total : taux agrégé auquel les données IP ont été transmises et reçues en mégaoctets par seconde. 
+| Débit IP (total, lecture, écriture) | Total : débit agrégé auquel les données IP ont été transmises et reçues en mégaoctets par seconde. 
 
 
-| Débit IP (réception) : | Taux moyen de réception des données IP en mégaoctets par seconde. 
+| Lire : Débit IP (réception) : | Débit moyen auquel les données IP ont été reçues en mégaoctets par seconde. 
 
 
-| Écriture : débit IP (transmission) : | Vitesse moyenne à laquelle les données IP ont été transmises en mégaoctets par seconde. 
+| Écriture : Débit IP (transmission) : | Débit moyen auquel les données IP ont été transmises en mégaoctets par seconde. 
 
 
-| Latence (total, lecture, écriture) | Latence (R&W) : vitesse à laquelle les données sont lues ou écrites sur les machines virtuelles dans un délai fixe. La valeur est mesurée en mégaoctets par seconde. 
+| Latence (totale, lecture, écriture) | Latence (R&W) : taux auquel les données sont lues ou écrites sur les machines virtuelles dans un laps de temps fixe.  La valeur est mesurée en mégaoctets par seconde. 
 
 
-| Latence : | Temps de réponse moyen provenant des ordinateurs virtuels dans un magasin de données. 
+| Latence: | Temps de réponse moyen des machines virtuelles dans un magasin de données. 
 
 
-| Latence principale : | Le temps de réponse le plus élevé des ordinateurs virtuels dans un datastore. 
+| Latence maximale : | Le temps de réponse le plus élevé des machines virtuelles dans un magasin de données. 
 
 
-| Échec de la liaison | Nombre d'échecs de liaison détectés par le port pendant la période d'échantillonnage. 
+| Échec de la liaison | Nombre de défaillances de liaison détectées par le port pendant la période d'échantillonnage. 
 
 
-| Link reset Rx, Tx | Nombre de réinitialisations de liaison de réception ou de transmission pendant la période d'échantillonnage. Cette mesure représente le nombre de réinitialisations de liaison émises par le port connecté à ce port. 
+| Réinitialisation du lien Rx, Tx | Nombre de réinitialisations de liaison de réception ou de transmission pendant la période d'échantillonnage.  Cette métrique représente le nombre de réinitialisations de lien émises par le port connecté à ce port. 
 
 
-| Utilisation de la mémoire (totale) % | Seuil de mémoire utilisé par l'hôte. 
+| Utilisation de la mémoire (totale) % | Seuil pour la mémoire utilisée par l'hôte. 
 
 
-| R/W partiel (total) % | Nombre total de fois qu'une opération de lecture/écriture franchit une limite de bande sur un module de disque dans un LUN RAID 5, RAID 1/0 ou RAID 0 en général, les croisements de bandes ne sont pas bénéfiques, car chacun nécessite une E/S supplémentaire Un pourcentage faible indique une taille d'élément de bande efficace et indique un alignement incorrect d'un volume (ou d'une LUN NetApp). Pour CLARiiON, cette valeur correspond au nombre de croisements de bandes divisé par le nombre total d'IOPS. 
+| R/W partiel (total) % | Nombre total de fois qu'une opération de lecture/écriture franchit une limite de bande sur n'importe quel module de disque dans un LUN RAID 5, RAID 1/0 ou RAID 0. En général, les croisements de bande ne sont pas bénéfiques, car chacun nécessite une E/S supplémentaire.  Un faible pourcentage indique une taille d'élément de bande efficace et indique un alignement incorrect d'un volume (ou d'un LUN NetApp ).  Pour CLARiiON, cette valeur correspond au nombre de croisements de bandes divisé par le nombre total d'IOPS. 
 
 
-| Erreurs de port | Rapport des erreurs de port sur la période d'échantillonnage/période donnée. 
+| Erreurs de port | Rapport des erreurs de port sur la période d'échantillonnage/la durée donnée. 
 
 
-| Décompte des pertes de signal | Nombre d'erreurs de perte de signal. Si une erreur de perte de signal se produit, il n'y a pas de connexion électrique et il existe un problème physique. 
+| Nombre de pertes de signal | Nombre d'erreurs de perte de signal.  Si une erreur de perte de signal se produit, il n’y a pas de connexion électrique et un problème physique existe. 
 
 
-| Taux de swap (taux total, taux d'entrée, taux de sortie) | Vitesse à laquelle la mémoire est échangée en entrée, en sortie ou les deux du disque vers la mémoire active pendant la période d'échantillonnage. Ce compteur s'applique aux machines virtuelles. 
+| Taux de swap (taux total, taux d'entrée, taux de sortie) | Taux auquel la mémoire est échangée vers l'intérieur, vers l'extérieur ou les deux du disque vers la mémoire active pendant la période d'échantillonnage.  Ce compteur s'applique aux machines virtuelles. 
 
 
-| Synchroniser le nombre de pertes | Nombre d'erreurs de perte de synchronisation. Si une erreur de perte de synchronisation se produit, le matériel ne peut pas détecter le trafic ou le verrouiller. Il est possible que tous les équipements n'utilisent pas le même débit de données, ou que les câbles optiques ou les connexions physiques soient de mauvaise qualité. Le port doit resynchroniser après chaque erreur, ce qui a un impact sur la performance du système. Mesurée en Ko/s. 
+| Nombre de pertes de synchronisation | Nombre d'erreurs de perte de synchronisation.  Si une erreur de perte de synchronisation se produit, le matériel ne peut pas comprendre le trafic ni s'y verrouiller.  Il se peut que tous les équipements n’utilisent pas le même débit de données, ou que les connexions optiques ou physiques soient de mauvaise qualité.  Le port doit se resynchroniser après chaque erreur de ce type, ce qui affecte les performances du système.  Mesuré en Ko/sec. 
 
 
-| Débit (total, lecture, écriture) | Vitesse à laquelle les données sont transmises, reçues ou les deux en un temps fixe en réponse aux demandes de service d'E/S (mesurée en Mo par seconde). 
+| Débit (total, lecture, écriture) | Débit auquel les données sont transmises, reçues ou les deux dans un laps de temps fixe en réponse aux demandes de service d'E/S (mesuré en Mo par seconde). 
 
 
-| Délai d'expiration des trames - Tx | Nombre de trames de transmission rejetées causées par le délai d'attente. 
+| Délai d'expiration des trames de rejet - Tx | Nombre de trames de transmission rejetées en raison d'un dépassement de délai. 
 
 
-| Débit de trafic (total, lecture, écriture) | Trafic transmis, reçu ou les deux reçu pendant la période d'échantillonnage, en mébioctets par seconde. 
+| Taux de trafic (total, lecture, écriture) | Trafic transmis, reçu ou les deux reçus pendant la période d'échantillonnage, en mébioctets par seconde. 
 
 
-| Utilisation du trafic (total, lecture, écriture) | Rapport entre le trafic reçu/transmis/total et la capacité de réception/transmission/totale pendant la période d'échantillonnage. 
+| Utilisation du trafic (total, lecture, écriture) | Rapport entre le trafic reçu/transmis/total et la capacité reçue/transmise/totale, pendant la période d'échantillonnage. 
 
 
-| Taux d'utilisation (total, lecture, écriture) % | Pourcentage de bande passante disponible utilisée pour la transmission (Tx) et la réception (Rx). 
+| Utilisation (totale, lecture, écriture) % | Pourcentage de bande passante disponible utilisée pour la transmission (Tx) et la réception (Rx). 
 
 
-| Écriture en attente (total) | Nombre de demandes de service d'écriture d'E/S en attente. 
+| Écriture en attente (total) | Nombre de demandes de service d'E/S d'écriture en attente. 
 |===
 
 
-== Utilisation de la section vue avancée
+== Utilisation de la section Performance
 
-La section vue Expert vous permet d'afficher les graphiques de performances d'une ressource en fonction de n'importe quel nombre de mesures applicables au cours d'une période donnée et d'ajouter des ressources associées pour comparer et comparer les performances des actifs et des actifs associés sur différentes périodes.
+La section Performance vous permet d'afficher les graphiques de performances d'un actif en fonction de n'importe quel nombre de mesures applicables au cours d'une période choisie, et d'ajouter des actifs associés pour comparer et contraster les performances de l'actif et de l'actif associé sur différentes périodes.
 
 .Étapes
-. Recherchez une page de ressources en procédant de l'une des façons suivantes :
+. Localisez une page de ressource en effectuant l’une des opérations suivantes :
 +
 ** Recherchez et sélectionnez un actif spécifique.
-** Sélectionnez une ressource dans un widget du tableau de bord.
-** Rechercher un ensemble d'actifs et en sélectionner un dans la liste des résultats.
+** Sélectionnez un actif à partir d’un widget de tableau de bord.
+** Recherchez un ensemble d’actifs et sélectionnez-en un dans la liste des résultats.
 +
-La page ASSET s'affiche. Par défaut, le graphique de performances affiche deux mesures pour la période sélectionnée pour la page d'actifs. Par exemple, pour un stockage, le graphique de performances indique la latence et le nombre d'IOPS total par défaut. La section Ressources affiche le nom de la ressource et une section Ressources supplémentaires, qui vous permet de rechercher des ressources. En fonction de l'actif, vous pouvez également voir des actifs dans les sections Top corrélée, Top Contributor, greedy et Degraded. S'il n'y a pas de biens pertinents pour ces sections, ils ne sont pas affichés.
+La page des ressources s'affiche.  Par défaut, le graphique de performances affiche deux mesures pour la période sélectionnée pour la page d'actif.  Par exemple, pour un stockage, le graphique des performances affiche la latence et le nombre total d'IOPS par défaut.  La section Ressources affiche le nom de la ressource et une section Ressources supplémentaires, qui vous permet de rechercher des ressources.  Selon l'actif, vous pouvez également voir des actifs dans les sections Top corrélés, Top contributeurs, Gourmands et Dégradés.  S'il n'y a pas d'actifs pertinents pour ces sections, ils ne sont pas affichés.
 
 
 
-. Vous pouvez ajouter un graphique de performances pour une mesure en cliquant sur *Afficher les mesures* et en sélectionnant les mesures que vous souhaitez afficher.
+. Vous pouvez ajouter un graphique de performances pour une métrique en cliquant sur l'icône d'engrenage *Paramètres* et en sélectionnant les métriques que vous souhaitez afficher.
 +
-Un graphique distinct s'affiche pour chaque mesure sélectionnée. Le graphique affiche les données de la période sélectionnée. Vous pouvez modifier la période en cliquant sur une autre période dans le coin supérieur droit de la page des ressources ou en zoomant sur n'importe quel graphique.
-
-+
-Cliquez sur *Afficher les mesures* pour désélectionner n'importe quel graphique. Le tableau de performances de la mesure est supprimé de la vue Expert.
-
-. Vous pouvez positionner votre curseur sur le graphique et modifier les données de mesure affichées pour ce graphique en cliquant sur l'une des options suivantes, selon l'actif :
-+
-** Lecture, écriture ou Total
-** TX, Rx ou Total
-+
-Total est la valeur par défaut.
+Un graphique distinct est affiché pour chaque métrique sélectionnée.  Le graphique affiche les données pour la période sélectionnée.  Vous pouvez modifier la période en cliquant sur une autre période dans le coin supérieur droit de la page de l'actif ou en zoomant sur n'importe quel graphique.
 
 +
-Vous pouvez faire glisser votre curseur sur les points de données du graphique pour voir comment la valeur de la mesure change au cours de la période sélectionnée.
+Cliquez sur *Paramètres* pour désélectionner un graphique.  Le graphique de performance de la métrique est supprimé de la section Performances.
 
-
-
-. Dans la section Ressources, vous pouvez ajouter les ressources associées aux graphiques de performances :
+. Vous pouvez positionner votre curseur sur le graphique et modifier les données métriques qui s'affichent pour ce graphique en cliquant sur l'un des éléments suivants, en fonction de l'actif :
 +
-** Vous pouvez sélectionner un actif associé dans les sections *meilleurs contributeurs*, *meilleurs contributeurs*, *plus gourmand* et *dégradé* pour ajouter des données de cet actif au tableau de performances pour chaque mesure sélectionnée.
+** Lecture, écriture ou total
+** Tx, Rx ou Total
 +
-Après avoir sélectionné l'actif, un bloc de couleurs apparaît à côté de l'actif pour indiquer la couleur de ses points de données dans le graphique.
+Le total est la valeur par défaut.
 
-
-
-. Cliquez sur *Masquer les ressources* pour masquer le volet des ressources supplémentaires. Cliquez sur *Ressources* pour afficher le volet.
 +
-** Pour chaque ressource affichée, vous pouvez cliquer sur le nom de la ressource pour afficher sa page de ressource, ou cliquer sur le pourcentage que la ressource met en corrélation ou contribue à la ressource de base pour afficher plus d'informations sur la relation de cette ressource avec l'actif de base.
+Vous pouvez faire glisser votre curseur sur les points de données du graphique pour voir comment la valeur de la métrique change au cours de la période sélectionnée.
+
+
+
+. Dans la section Ressources, vous pouvez ajouter tous les actifs associés aux graphiques de performances :
 +
-Par exemple, si vous cliquez sur le pourcentage lié en regard d'une ressource en corrélation supérieure, un message d'information comparant le type de corrélation dont dispose la ressource avec la ressource de base s'affiche.
-
-** Si la section supérieure corrélée ne contient pas d'actif que vous souhaitez afficher dans un graphique de performances à des fins de comparaison, vous pouvez utiliser la zone Rechercher les ressources de la section Ressources supplémentaires pour localiser d'autres ressources.
-
-
+** Vous pouvez sélectionner un actif associé dans les sections *Meilleurs corrélés*, *Meilleurs contributeurs*, *Gourmands* et *Dégradés* pour ajouter des données de cet actif au graphique de performances pour chaque métrique sélectionnée.
++
+Après avoir sélectionné l'actif, un bloc de couleur apparaît à côté de l'actif pour indiquer la couleur de ses points de données dans le graphique.
 
 
-Une fois que vous avez sélectionné une ressource, elle s'affiche dans la section Ressources supplémentaires. Lorsque vous ne souhaitez plus afficher les informations sur la ressource, cliquez sur l'icône de la corbeille pour la supprimer.
+
+. Cliquez sur *Masquer les ressources* pour masquer le volet des ressources supplémentaires.  Cliquez sur *Ressources* pour afficher le volet.
++
+** Pour tout actif affiché, vous pouvez cliquer sur le nom de l'actif pour afficher sa page d'actif, ou vous pouvez cliquer sur le pourcentage auquel l'actif est corrélé ou contribue à l'actif de base pour afficher plus d'informations sur la relation de l'actif avec l'actif de base.
++
+Par exemple, cliquer sur le pourcentage lié à côté d'un actif fortement corrélé affiche un message d'information comparant le type de corrélation de cet actif avec l'actif de base.
+
+** Si la section Top corrélé ne contient pas un actif que vous souhaitez afficher dans un graphique de performances à des fins de comparaison, vous pouvez utiliser la zone Rechercher des actifs dans la section Ressources supplémentaires pour localiser d'autres actifs.
+
+
+
+
+Après avoir sélectionné un actif, il s’affiche dans la section des ressources supplémentaires.  Lorsque vous ne souhaitez plus afficher les informations sur l'actif, cliquez sur l'icône de la corbeille pour le supprimer.

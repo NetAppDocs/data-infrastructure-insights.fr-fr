@@ -16,7 +16,7 @@ Data Infrastructure Insights utilise le collecteur de données HP Enterprise All
 
 == Terminologie
 
-Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir de ce collecteur de données. Pour chaque type de ressource acquis par Data Infrastructure Insights, la terminologie la plus courante est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès de ce collecteur de données.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===
@@ -26,29 +26,29 @@ Data Infrastructure Insights acquiert les informations d'inventaire suivantes à
 | Disque physique | Disque 
 
 
-| System de stockage | Stockage 
+| Système de stockage | Stockage 
 
 
 | Nœud contrôleur | Nœud de stockage 
 
 
-| Groupe de provisionnement commun | Pool de stockage 
+| Groupe de provisionnement commun | Piscine de stockage 
 
 
-| Volume virtuel | Volumétrie 
+| Volume virtuel | Volume 
 |===
-Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
 
 
-== De formation
+== Exigences
 
-Les éléments suivants sont nécessaires pour configurer ce collecteur de données :
+Les éléments suivants sont requis pour configurer ce collecteur de données :
 
 * Adresse IP ou FQDN du cluster InServ
 * Pour l'inventaire, nom d'utilisateur et mot de passe en lecture seule pour le serveur StoreServ
-* Pour des performances optimales, consultez le nom d'utilisateur en lecture-écriture et le mot de passe du serveur StoreServ
-* Exigences relatives au port : 22 (collecte des inventaires), 5988 ou 5989 (collecte des performances) [Remarque : les performances sont prises en charge pour StoreServ OS 3.x+]
+* Pour des performances optimales, lisez et écrivez le nom d'utilisateur et le mot de passe sur le serveur StoreServ.
+* Configuration requise pour les ports : 22 (collecte d’inventaire), 5988 ou 5989 (collecte de performances) [Remarque : les performances sont prises en charge pour StoreServ OS 3.x+]
 * Pour la collecte des performances, confirmez que SMI-S est activé en vous connectant à la baie via SSH.
 
 
@@ -70,10 +70,10 @@ Les éléments suivants sont nécessaires pour configurer ce collecteur de donn�
 | Mot de passe | Mot de passe utilisé pour le serveur StoreServ 
 
 
-| Nom d'utilisateur SMI-S. | Nom d'utilisateur pour l'hôte SMI-S Provider 
+| Nom d'utilisateur SMI-S | Nom d'utilisateur pour l'hôte du fournisseur SMI-S 
 
 
-| Mot de passe SMI-S. | Mot de passe utilisé pour l'hôte SMI-S Provider 
+| Mot de passe SMI-S | Mot de passe utilisé pour l'hôte du fournisseur SMI-S 
 |===
 
 
@@ -84,22 +84,22 @@ Les éléments suivants sont nécessaires pour configurer ce collecteur de donn�
 | Champ | Description 
 
 
-| Intervalle d'interrogation des stocks (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est 40 minutes. 
+| Intervalle d'interrogation d'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 40 minutes. 
 
 
-| Connectivité SMI-S. | Protocole utilisé pour la connexion au fournisseur SMI-S. 
+| Connectivité SMI-S | Protocole utilisé pour se connecter au fournisseur SMI-S 
 
 
-| Remplacer le port par défaut SMI-S. | Si ce champ est vide, utilisez le port par défaut de SMI-S Connectivity, sinon entrez le port de connexion à utiliser 
+| Remplacer le port par défaut SMI-S | Si vide, utilisez le port par défaut de SMI-S Connectivity, sinon entrez le port de connexion à utiliser 
 
 
-| Intervalle d'interrogation des performances (s) | Intervalle entre les sondages de performances. La valeur par défaut est 300 secondes. 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performance. La valeur par défaut est de 300 secondes. 
 |===
 
 
 == Dépannage
 
-Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur de données :
+Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
@@ -107,10 +107,10 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| la commande « showsys » ne renvoie aucun résultat. | Exécutez "showsys" et "showversion -a" à partir de la ligne de commande et vérifiez si la version est prise en charge par la baie. 
+| La commande « showsys » ne renvoie aucun résultat. | Exécutez « showsys » et « showversion -a » à partir de la ligne de commande et vérifiez si la version est prise en charge par la baie. 
 |===
 
 
@@ -118,15 +118,15 @@ Certaines choses à essayer si vous rencontrez des problèmes avec ce collecteur
 
 [cols="2*"]
 |===
-| Problème : | Essayer : 
+| Problème: | Essayez ceci: 
 
 
-| Échec de la connexion ou de la connexion. Échec de l'initialisation du fournisseur. | Un nom de tableau numérique peut causer des problèmes avec le serveur SMI-S. Essayez de changer le nom de la matrice. 
+| Échec de la connexion ou de l'ouverture de session.  L'initialisation du fournisseur a échoué. | Un nom de tableau entièrement numérique peut entraîner des problèmes avec le serveur SMI-S.  Essayez de changer le nom du tableau. 
 
 
-| L'utilisateur SMI-S configuré ne possède aucun domaine | Accordez des privilèges de domaine appropriés à l'utilisateur SMI-S configuré 
+| L'utilisateur SMI-S configuré n'a aucun domaine | Accorder les privilèges de domaine appropriés à l'utilisateur SMI-S configuré 
 
 
-| Data Infrastructure Insights indique qu'il ne peut pas se connecter au service SMI-S. | Vérifiez qu'il n'y a pas de pare-feu entre ci au et la matrice qui bloquera l'EC au de créer des connexions TCP à 5988 ou 5989. Une fois cela terminé, et si vous avez confirmé qu'il n'y a pas de pare-feu, vous devez utiliser SSH pour la baie et utiliser la commande « showcim » pour confirmer. Vérifiez que : * le service est activé * HTTPS est activé * le port HTTPS devrait être 5989 si tous ces éléments sont ainsi, vous pouvez essayer de "stopcim" puis un "startcim" pour redémarrer le CIM (c.-à-d. Service SMI-S). 
+| Data Infrastructure Insights indique qu'il ne peut pas se connecter/se connecter au service SMI-S. | Confirmez qu'il n'y a pas de pare-feu entre le CI AU et la baie qui empêcherait le CI AU d'établir des connexions TCP vers 5988 ou 5989.  Une fois cela fait, et si vous avez confirmé qu'il n'y a pas de pare-feu, vous devez vous connecter en SSH à la baie et utiliser la commande « showcim » pour confirmer.  Vérifiez que : * Le service est activé * HTTPS est activé * Le port HTTPS doit être 5989 Si tout cela est le cas, vous pouvez essayer de faire « stopcim » puis « startcim » pour redémarrer le CIM (c'est-à-dire le service SMI-S). 
 |===
-Des informations supplémentaires sont disponibles sur la link:concept_requesting_support.html["Assistance"] page ou dans le link:reference_data_collector_support_matrix.html["Matrice de prise en charge du Data Collector"].
+Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .
