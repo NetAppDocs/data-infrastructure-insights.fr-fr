@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_create_monitor.html 
 keywords: monitors, alerts, log, metric, system-defined, system, metric, 
-summary: 'Créez des moniteurs pour alerter sur les seuils de performance ou d"inventaire, ainsi que sur les conditions de métrique ou de journal.' 
+summary: 'Créez des moniteurs de métriques et de journaux personnalisés pour suivre de manière proactive les performances de l"infrastructure, les seuils de capacité et les événements critiques avec des alertes et des notifications automatisées.' 
 ---
 = Alertes avec moniteurs
 :hardbreaks:
@@ -67,8 +67,19 @@ image:MonitorMetricFilter.png["Filtrage des métriques"]
 
 Lorsque vous travaillez avec des données d'intégration (Kubernetes, ONTAP Advanced Data, etc.), le filtrage des métriques supprime les points de données individuels/non appariés de la série de données tracées, contrairement aux données d'infrastructure (stockage, VM, ports, etc.) où les filtres fonctionnent sur la valeur agrégée de la série de données et suppriment potentiellement l'objet entier du graphique.
 
+Les moniteurs de métriques s'appliquent aux objets d'inventaire tels que le stockage, le commutateur, l'hôte, la machine virtuelle, etc., ainsi qu'aux métriques d'intégration telles que les données ONTAP Advanced ou Kubernetes. Lors de la surveillance des objets d'inventaire, notez que vous ne pouvez pas sélectionner une méthode « Grouper par ». Cependant, le regroupement est autorisé lors de la surveillance des données d'intégration.
 
-TIP: Pour créer un moniteur multi-conditions (par exemple, IOPS > X et latence > Y), définissez la première condition comme seuil et la deuxième condition comme filtre.
+
+
+==== Moniteurs multi-conditions
+
+Vous pouvez choisir d’affiner davantage votre surveillance métrique en ajoutant une deuxième condition. Développez simplement l’invite « + Ajouter une condition de métrique secondaire » et configurez la condition supplémentaire.
+
+image:multi-condition_monitor_second_condition.png["définir la deuxième condition"]
+
+Le moniteur émettra une alerte si les deux conditions sont remplies.
+
+Notez que vous ne pouvez utiliser qu'un « ET » pour une deuxième condition ; vous ne pouvez pas choisir d'alerter sur une condition OU sur l'autre.
 
 
 

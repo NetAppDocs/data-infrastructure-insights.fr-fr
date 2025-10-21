@@ -32,6 +32,7 @@ Les exigences suivantes sont requises pour configurer et utiliser ce collecteur 
 
 * ONTAP version 9.14.1 ou supérieure.
 * Exigences du port : 443
+* Notez que les métriques Fpolicy ne sont pas prises en charge dans le collecteur ONTAP REST (les collecteurs de données Workload Security utilisent les serveurs FPolicy et les métriques FPolicy vous permettent de surveiller l'activité de collecte de données Workload Security). Pour prendre en charge les mesures Fpolicy, utilisez le link:task_dc_na_cdot.html["Gestion des données ONTAP"] collectionneur.
 
 
 
