@@ -12776,7 +12776,6 @@
   <block id="83e49813b50f1fc5e03ffde57c985102" category="paragraph">Notez que les alertes qui restent actives pendant plus de 24 heures seront visibles dans la liste Alertes et modifications une fois toutes les 24 heures. Vous remarquerez donc peut-être la même alerte répertoriée plusieurs fois. Chacune de ces alertes aura le même ID d'alerte, la même heure de début, etc., et aura le statut « Alerte » jusqu'à ce que l'alerte soit résolue.</block>
   <block id="079090a1dc96bbd4e45426ceeedd592f" category="summary">Créez des moniteurs de métriques et de journaux personnalisés pour suivre de manière proactive les performances de l'infrastructure, les seuils de capacité et les événements critiques avec des alertes et des notifications automatisées.</block>
   <block id="883d09869adb0b8fae6c4387af23b6d4" category="paragraph">Configurez des moniteurs pour suivre les seuils de performances, consigner les événements et les anomalies sur l’ensemble de vos ressources d’infrastructure. Créez des alertes personnalisées pour des mesures telles que la latence d'écriture des nœuds, la capacité de stockage ou les performances des applications, et recevez des notifications lorsque ces conditions sont remplies.</block>
-  <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">Les moniteurs de métriques s'appliquent aux objets d'inventaire tels que le stockage, le commutateur, l'hôte, la machine virtuelle, etc., ainsi qu'aux métriques d'intégration telles que les données ONTAP Advanced ou Kubernetes. Lors de la surveillance des objets d'inventaire, notez que vous ne pouvez pas sélectionner une méthode « Grouper par ». Cependant, le regroupement est autorisé lors de la surveillance des données d'intégration.</block>
   <block id="70b37ea4cf45e401178bb71faa1e50fe" category="section-title">Moniteurs multi-conditions</block>
   <block id="6e8d7620a4a0bc7614ae9936242cc79e" category="paragraph">Vous pouvez choisir d’affiner davantage votre surveillance métrique en ajoutant une deuxième condition. Développez simplement l’invite « + Ajouter une condition de métrique secondaire » et configurez la condition supplémentaire.</block>
   <block id="c7c9e436435c4770e86c98098336f9a2" category="inline-image-macro">définir la deuxième condition</block>
@@ -12786,4 +12785,16 @@
   <block id="f5efcf93de96054f67b29d58662ad5c6" category="list-text">Pour l'intervalle d'occurrence, choisissez _En continu_ pour une période de _15 minutes_.</block>
   <block id="95e94216ef8b85a76727809c3dfcbcc0" category="inline-link-macro">Gestion des données ONTAP</block>
   <block id="2520cfbb37bc8bbd2fc91278c73eb838" category="list-text">Notez que les métriques Fpolicy ne sont pas prises en charge dans le collecteur ONTAP REST (les collecteurs de données Workload Security utilisent les serveurs FPolicy et les métriques FPolicy vous permettent de surveiller l'activité de collecte de données Workload Security). Pour prendre en charge les mesures Fpolicy, utilisez le <block ref="5887f651a571af9233df120cb7d32347" category="inline-link-macro-rx"></block> collectionneur.</block>
+  <block id="b2422fa602be830d9f1a2469dd70ca20" category="inline-link-macro">NetApp ONTAP AFX</block>
+  <block id="83cd27100a931554f0e05219011edf39" category="cell"><block ref="83cd27100a931554f0e05219011edf39" category="inline-link-macro-rx"></block></block>
+  <block id="14ec544dd26342f2315dc51923b34e66" category="summary">Collecteur ONTAP AFX</block>
+  <block id="aaab7580be4232835e9f12e5691f118f" category="doc">Collecteur de données NetApp ONTAP AFX</block>
+  <block id="e395c9addcba424f5bda562994dfecbe" category="cell">Volume/ FlexVol/ FlexGroup</block>
+  <block id="1574b47ca9477a3fc7635017b8f4ca0b" category="cell">Qtree/FlexTree</block>
+  <block id="16aac8a4d65f63c39da98362e32e250d" category="cell">Qtree (type : Explixit/Par défaut)</block>
+  <block id="84ace9fb8e132c96d1dfcd31447efedc" category="cell">Godet S3</block>
+  <block id="1143dbaa613581e6f7e9245d88a5a30d" category="cell">Qtree (type : Bucket)</block>
+  <block id="26beb8e28a6498b161cc513e4d05c9f5" category="cell">StoragePod/StorageAvailabilityZone</block>
+  <block id="474d2ef9225b003245e9f5a40297e1e8" category="cell">SVM (machine virtuelle de stockage)</block>
+  <block id="07ab2cfb4a15dea7a3c4679e886966f3" category="sidebar">ONTAP AFX</block>
 </blocks>

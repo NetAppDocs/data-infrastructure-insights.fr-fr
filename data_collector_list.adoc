@@ -247,6 +247,9 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 | link:task_dc_na_ontap_rest.html["Collecteur NetApp ONTAP REST"] | Infrastructure 
 
 
+| link:task_dc_na_ontap_afx.html["NetApp ONTAP AFX"] | Infrastructure 
+
+
 | link:task_dc_na_ontap_all_san_array.html["Collecteur NetApp ONTAP ASA r2 (All-SAN Array)"] | Infrastructure 
 
 
