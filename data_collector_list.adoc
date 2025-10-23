@@ -1,12 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: data_collector_list.html 
-summary: Liste des collecteurs de données pris en charge. 
+summary: 'Liste de référence alphabétique de tous les collecteurs de données pris en charge par Data Infrastructure Insights, organisés par types d"infrastructure et de service.' 
 keywords: data collector, vendor, infrastructure, integration, service 
 ---
-= Liste des collecteurs de données Data Infrastructure Insights
+= Liste de référence des collecteurs de données Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -218,9 +222,6 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 
 
 | link:task_dc_na_cloud_volumes_ontap.html["NetApp Cloud Volumes ONTAP"] | Infrastructure 
-
-
-| link:task_dc_na_cloud_volumes.html["Services NetApp Cloud Volumes pour AWS"] | Infrastructure 
 
 
 | link:task_dc_na_cloud_connection.html["Connexion au cloud NetApp pour ONTAP 9.9+"] | Infrastructure 

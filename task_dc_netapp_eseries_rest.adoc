@@ -10,13 +10,13 @@ summary: Configuration du collecteur de données REST NetApp E-Series.
 
 
 [role="lead"]
-Le collecteur de données REST NetApp E-Series collecte les données d'inventaire et de performances.  Le collecteur prend en charge le firmware 7.x+ en utilisant les mêmes configurations et en signalant les mêmes données.  Le collecteur REST surveille l'état de chiffrement des pools de stockage ainsi que l'état de chiffrement des disques et volumes associés, et il fournit l'utilisation du processeur du nœud de stockage comme compteurs de performances - fonctionnalité non fournie dans l'ancien collecteur SANtricity E-Series.
+Le collecteur de données REST NetApp E-Series collecte les données d'inventaire, de journaux et de performances. Le collecteur prend en charge le firmware 7.x+ en utilisant les mêmes configurations et en signalant les mêmes données.  Le collecteur REST surveille l'état de chiffrement des pools de stockage, des disques et des volumes, l'utilisation du processeur du nœud de stockage ainsi que les fonctionnalités de journaux non fournies dans l'ancien collecteur SANtricity E-Series.
 
 
 
 == Terminologie
 
-Cloud Insight acquiert les informations d'inventaire suivantes à partir de NetApp E-Series, à l'aide de REST.  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
+Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès de NetApp E-Series, à l'aide de REST. Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour cet actif est indiquée. Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
 [cols="2*"]
 |===

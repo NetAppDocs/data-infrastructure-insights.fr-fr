@@ -67,6 +67,8 @@ image:MonitorMetricFilter.png["Filtrage des métriques"]
 
 Lorsque vous travaillez avec des données d'intégration (Kubernetes, ONTAP Advanced Data, etc.), le filtrage des métriques supprime les points de données individuels/non appariés de la série de données tracées, contrairement aux données d'infrastructure (stockage, VM, ports, etc.) où les filtres fonctionnent sur la valeur agrégée de la série de données et suppriment potentiellement l'objet entier du graphique.
 
+Les moniteurs de métriques s'appliquent aux objets d'inventaire tels que le stockage, le commutateur, l'hôte, la machine virtuelle, etc., ainsi qu'aux métriques d'intégration telles que les données ONTAP Advanced ou Kubernetes. Lors de la surveillance des objets d'inventaire, notez que vous ne pouvez pas sélectionner une méthode « Grouper par ». Cependant, le regroupement est autorisé lors de la surveillance des données d'intégration.
+
 
 
 ==== Moniteurs multi-conditions
