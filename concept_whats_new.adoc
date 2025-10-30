@@ -18,6 +18,27 @@ NetApp améliore et optimise continuellement ses produits et services.  Voici qu
 
 
 
+== Novembre 2025
+
+
+
+=== Configurez votre page d'accueil personnalisée
+
+Rationalisez votre flux de travail de surveillance quotidien en définissant _n'importe quelle_ page Data Infrastructure Insights comme page d'accueil personnalisée. Chaque utilisateur peut sélectionner une page d'accueil différente pour se concentrer sur ce qui est important pour lui : un tableau de bord essentiel, des alertes, l'état de l'infrastructure, la sécurité des charges de travail, ou plus encore.
+
+image:home_page_set.png["Définition d'une page d'accueil, largeur=300"]
+
+
+
+=== Restez organisé grâce au regroupement automatique des tableaux de bord
+
+Transformez votre expérience de tableau de bord grâce à un regroupement intelligent qui organise automatiquement les tableaux de bord importés de la galerie en catégories logiques. La nouvelle fonctionnalité de regroupement simplifie l'importation des tableaux de bord et place chaque tableau de bord dans le groupe approprié en fonction de sa fonction et de sa pertinence pour votre environnement.
+
+image:dashboard_gallery_groups.png["groupes de galeries lors de l'importation, largeur=500"]
+
+'''
+
+
 == Octobre 2025
 
 
