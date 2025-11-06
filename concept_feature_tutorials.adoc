@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_feature_tutorials.html 
-summary: Data Infrastructure Insights propose des tutoriels pour vous montrer comment effectuer de nombreuses tâches. 
+summary: Des tutoriels vidéo étape par étape vous aident à maîtriser les fonctionnalités de Data Infrastructure Insights telles que les tableaux de bord, les requêtes, la surveillance et le dépannage. 
 keywords: onboarding, getting started, video, tutorial, resolution, dashboard, query, troubleshooting 
 ---
-= Tutoriels sur les fonctionnalités
+= Premiers pas avec les tutoriels vidéo
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 [role="lead"]
-Data Infrastructure Insights regorge de fonctionnalités utiles qui vous permettent de résoudre rapidement et facilement les problèmes et de fournir des informations sur votre environnement d'entreprise.  Recherchez facilement des données grâce à des requêtes puissantes, visualisez les données dans des tableaux de bord et envoyez des alertes par e-mail pour les seuils de données que vous définissez.
+Apprenez efficacement les Data Infrastructure Insights grâce à nos tutoriels fonctionnels comprenant des guides vidéo étape par étape et une liste de contrôle de progression.  Maîtrisez des compétences essentielles telles que la création de tableaux de bord, la construction de requêtes, la mise en place de la surveillance et le dépannage grâce à des tutoriels pratiques conçus pour vous rendre rapidement productif.
 
 
 
@@ -38,3 +38,19 @@ NOTE: Vous pouvez consulter les tutoriels dans l'ordre de votre choix, autant de
 === Rejeter la liste de contrôle
 
 La liste de contrôle de démarrage s'affiche jusqu'à ce que vous cliquiez sur le lien _Ne plus afficher_ en bas de la liste de contrôle.  Même après avoir ignoré la liste de contrôle, les didacticiels sont toujours disponibles sur chaque page Data Infrastructure Insights appropriée jusqu'à ce que vous les ignoriez tous à partir de la barre d'en-tête du message.
+
+
+
+== Tutoriels vidéo
+
+Visionnez les vidéos suivantes pour en savoir plus.
+
+link:https://media.netapp.com/video-detail/248621bd-6619-5dc8-9718-5d78d0fd21da/turn-raw-data-into-actionable-insights["Transformer les données brutes en informations exploitables"^]
+
+link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8/create-powerful-dashboards-with-netapp["Créez des tableaux de bord performants avec NetApp"^]
+
+link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["Dépannage simplifié avec VM Analyzer"^]
+
+link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Explorez et analysez les données à l'aide de requêtes dans Data Infrastructure Insights"^]
+
+link:https://media.netapp.com/video-detail/43497a8e-f648-56b7-9bc7-8d5d4274510f/proactive-infrastructure-monitoring-with-alerts-and-monitors["Surveillance proactive de l'infrastructure avec alertes et moniteurs"^]

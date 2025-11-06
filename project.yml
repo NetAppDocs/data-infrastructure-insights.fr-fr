@@ -31,6 +31,8 @@ sidebar:
       entries:
       - title: Aperçu
         url: "/task_getting_started_with_cloud_insights.html"
+      - title: Tutoriels sur les fonctionnalités
+        url: "/concept_feature_tutorials.html"
       - title: Exigences relatives à l'unité d'acquisition
         url: "/concept_acquisition_unit_requirements.html"
       - title: Configuration d'une unité d'acquisition

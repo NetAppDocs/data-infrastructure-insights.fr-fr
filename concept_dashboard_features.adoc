@@ -216,48 +216,43 @@ image:ObjectsReturnedByFilters.png["Objets renvoyés par les filtres"]
 
 
 
-== Regroupement et agrégation
+== Regroupement, identification et agrégation
 
 
 
 === Regroupement (enroulement)
 
-Les données affichées dans un widget sont regroupées (parfois appelées cumulées) à partir des points de données sous-jacents collectés lors de l'acquisition.  Par exemple, si vous disposez d'un widget de graphique linéaire affichant les IOPS de stockage au fil du temps, vous souhaiterez peut-être voir une ligne distincte pour chacun de vos centres de données, pour une comparaison rapide.  Vous pouvez choisir de regrouper ces données de plusieurs manières :
+Les données affichées dans un widget sont regroupées (parfois appelées cumulées) à partir des points de données sous-jacents collectés lors de l'acquisition. Par exemple, si vous disposez d'un widget de graphique linéaire affichant les IOPS de stockage au fil du temps, vous souhaiterez peut-être voir une ligne distincte pour chacun de vos centres de données, pour une comparaison rapide. Dans le champ « Grouper par », sélectionnez le type d’objet lui-même pour afficher les lignes, zones, barres, colonnes, etc. (selon le type de widget) individuelles pour chaque objet.  Vous pouvez choisir de regrouper les données selon n'importe quel attribut disponible dans la liste pour cet objet.  Par exemple, lors de la consultation des données d'un volume interne, vous pouvez souhaiter regrouper les données par nom de stockage.
+
+Pour afficher les données consolidées, supprimez tout attribut Group By, le regroupement s'effectuant par défaut par « Tous ».
+
+Vous pouvez choisir d'agréger ces données de plusieurs manières :
 
 * *Moyenne* : affiche chaque ligne comme la _moyenne_ des données sous-jacentes.
 * *Maximum* : affiche chaque ligne comme le _maximum_ des données sous-jacentes.
 * *Minimum* : affiche chaque ligne comme le _minimum_ des données sous-jacentes.
 * *Somme* : affiche chaque ligne comme la _somme_ des données sous-jacentes.
-* *Count* : affiche un _compte_ d'objets ayant signalé des données dans le laps de temps spécifié.  Vous pouvez choisir la _fenêtre temporelle entière_ telle que déterminée par la plage horaire du tableau de bord.
 
 
-.Étapes
-Pour définir la méthode de regroupement, procédez comme suit.
-
-. Dans la requête de votre widget, choisissez un type d'actif et une métrique (par exemple, _Stockage_) et une métrique (telle que _Performance IOPS Total_).
-. Pour *Groupe*, choisissez une méthode de cumul (par exemple, _Moyenne_) et sélectionnez les attributs ou les mesures selon lesquels cumuler les données (par exemple, _Centre de données_).
-+
-Le widget se met à jour automatiquement et affiche les données de chacun de vos centres de données.
-
-
-
-Vous pouvez également choisir de regrouper _toutes_ les données sous-jacentes dans le graphique ou le tableau.  Dans ce cas, vous obtiendrez une seule ligne pour chaque requête dans le widget, qui affichera la moyenne, le minimum, le maximum, la somme ou le nombre de la ou des métriques choisies pour tous les actifs sous-jacents.
-
-Cliquer sur la légende de n'importe quel widget dont les données sont regroupées par « Tous » ouvre une page de requête affichant les résultats de la première requête utilisée dans le widget.
+Lors de la consultation du tableau de bord, la sélection de la légende d'un widget dont les données sont regroupées par « Tous » ouvre une page de requête affichant les résultats de la première requête utilisée dans le widget.
 
 Si vous avez défini un filtre pour la requête, les données sont regroupées en fonction des données filtrées.
 
-Notez que lorsque vous choisissez de regrouper un widget par n'importe quel champ (par exemple, _Modèle_), vous devrez toujours filtrer par ce champ afin d'afficher correctement les données de ce champ sur le graphique ou le tableau.
+
+
+=== Identification des données personnalisées
+
+Lorsque vous créez ou modifiez un widget basé sur vos propres données personnalisées, ces données peuvent ne pas être correctement représentées dans le widget sans attribut d'identification.  Si DII ne parvient pas à identifier l'objet que vous avez sélectionné pour votre widget, il vous présentera un lien _Configuration avancée_ dans la zone « Grouper par ».  Développez cette section pour sélectionner l'attribut qui vous permettra d'identifier vos données.
+
+image:unmodeled_data_identify_by.png["identifier par liste déroulante les données inconnues"]
 
 
 
 === Agrégation de données
 
-Vous pouvez aligner davantage vos graphiques de séries chronologiques (lignes, zones, etc.) en regroupant les points de données dans des tranches de minutes, d'heures ou de jours avant que ces données ne soient ensuite regroupées par attribut (si choisi).  Vous pouvez choisir d'agréger des points de données en fonction de leur _Moyenne, Maximum, Minimum, Somme_ ou _Nombre_.
+Vous pouvez affiner davantage vos graphiques en regroupant les points de données par intervalles de minutes, d'heures ou de jours avant que ces données ne soient ensuite agrégées par attribut (si cette option est choisie). Vous pouvez choisir d'agréger des points de données en fonction de leur _Moyenne, Maximum, Minimum, Somme_ ou _Nombre_.
 
 Un petit intervalle combiné à une longue plage de temps peut entraîner un avertissement « L'intervalle d'agrégation a généré trop de points de données ».  Vous pourriez voir cela si vous avez un petit intervalle et augmentez la période du tableau de bord à 7 jours.  Dans ce cas, Insight augmentera temporairement l'intervalle d'agrégation jusqu'à ce que vous sélectionniez une période plus petite.
-
-Vous pouvez également agréger des données dans le widget de graphique à barres et le widget à valeur unique.
 
 La plupart des compteurs d'actifs s'agrègent sur _Moyenne_ par défaut.  Certains compteurs s'agrègent sur _Max, Min_ ou _Sum_ par défaut.  Par exemple, les erreurs de port sont regroupées par défaut sur _Sum_, tandis que les IOPS de stockage sont regroupées sur _Average_.
 
