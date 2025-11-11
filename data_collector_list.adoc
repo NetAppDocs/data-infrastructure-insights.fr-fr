@@ -173,9 +173,6 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 | link:task_dc_ibm_cs.html["Série IBM CS"] | Infrastructure 
 
 
-| link:task_dc_ibm_powervm.html["IBM PowerVM"] | Infrastructure 
-
-
 | link:task_dc_ibm_svc.html["Contrôleur de volume SAN IBM (SVC)"] | Infrastructure 
 
 
