@@ -2,15 +2,19 @@
 sidebar: sidebar 
 permalink: task_cs_add_agent.html 
 keywords: agent, Workload Security, installation, Cloud Secure 
-summary: 'Ajout d"agents de sécurité de la charge de travail' 
+summary: 'Les agents de sécurité des charges de travail surveillent l"activité des utilisateurs et détectent les menaces de sécurité dans votre environnement de stockage.' 
 ---
-= Installation de l'agent de sécurité de la charge de travail
+= Déployer des agents de sécurité de charge de travail
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Workload Security (anciennement Cloud Secure) collecte les données d’activité des utilisateurs à l’aide d’un ou plusieurs agents.  Les agents se connectent aux appareils de votre locataire et collectent des données qui sont envoyées à la couche SaaS Workload Security pour analyse.  Voirlink:concept_cs_agent_requirements.html["Exigences relatives aux agents"] pour configurer une machine virtuelle agent.
+Les agents de sécurité des charges de travail sont essentiels pour surveiller l'activité des utilisateurs et détecter les menaces potentielles à la sécurité de votre infrastructure de stockage. Ce guide fournit des instructions étape par étape pour déployer des agents dans votre environnement. Avant de commencer, assurez-vous que votre serveur d'agent répond aux exigences suivantes : link:concept_cs_agent_requirements.html["exigences système"].
 
 
 
@@ -22,8 +26,23 @@ Workload Security (anciennement Cloud Secure) collecte les données d’activit�
 
 
 
-NOTE: Les changements globaux peuvent avoir un impact potentiel sur vos systèmes ONTAP . Il est fortement recommandé d'effectuer des modifications affectant un grand nombre de collecteurs de données pendant les heures creuses.
 
+== Meilleures pratiques
+
+Gardez les points suivants à l'esprit avant de configurer votre agent Workload Security.
+
+[cols="1,3"]
+|===
+
+
+| Pause et reprise | Pause : Supprime les politiques fpolicies d' ONTAP. Généralement utilisé lorsque les clients effectuent des opérations de maintenance prolongées pouvant prendre beaucoup de temps, comme le redémarrage des machines virtuelles d'agents ou le remplacement du stockage. Résumé : Ajoute à nouveau fpolicies à ONTAP. 
+
+
+| Épingler et désépingler | Unpin récupère immédiatement la dernière version (si disponible) et met à jour l'agent et le collecteur. Durant cette mise à niveau, fpolicies se déconnectera puis se reconnectera. Cette fonctionnalité est conçue pour les clients qui souhaitent contrôler le calendrier des mises à jour automatiques. 
+
+
+| Approche recommandée | Pour les configurations importantes, il est conseillé d'utiliser Pin et Unpin plutôt que de mettre en pause les collecteurs. Il n'est pas nécessaire de faire une pause et de reprendre pendant l'utilisation de unpin et unpin. Les clients peuvent conserver leurs agents et collecteurs épinglés et, dès réception d'une notification par e-mail concernant une nouvelle version, disposent d'un délai de 30 jours pour mettre à jour sélectivement leurs agents un par un. Cette approche minimise l'impact de la latence sur les politiques fpolicies et offre un meilleur contrôle sur le processus de mise à niveau. 
+|===
 
 
 == Étapes pour installer l'agent
@@ -34,7 +53,7 @@ NOTE: Les changements globaux peuvent avoir un impact potentiel sur vos système
 Le système affiche la page Ajouter un agent :
 
 +
-image:Add-agent-1.png["Ajout d'un agent de sécurité de charge de travail"]
+image::Add-agent-1.png[Ajout d'un agent de sécurité de charge de travail]
 
 . Vérifiez que le serveur d’agent répond à la configuration système minimale requise.
 . Pour vérifier que le serveur d’agent exécute une version prise en charge de Linux, cliquez sur _Versions prises en charge (i)_.
@@ -46,7 +65,7 @@ image:CloudSecureAgentWithProxy_Instructions.png["Remarque sur l'installation de
 . Exécutez la commande d’installation dans une fenêtre de terminal.
 . Le système affiche le message suivant lorsque l'installation se termine avec succès :
 +
-image:new-agent-detect.png["Message pour l'installation réussie de l'agent"]
+image::new-agent-detect.png[Message pour l'installation réussie de l'agent]
 
 
 
