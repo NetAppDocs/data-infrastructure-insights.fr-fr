@@ -38,10 +38,10 @@ Gardez les points suivants à l'esprit avant de configurer votre agent Workload 
 | Pause et reprise | Pause : Supprime les politiques fpolicies d' ONTAP. Généralement utilisé lorsque les clients effectuent des opérations de maintenance prolongées pouvant prendre beaucoup de temps, comme le redémarrage des machines virtuelles d'agents ou le remplacement du stockage. Résumé : Ajoute à nouveau fpolicies à ONTAP. 
 
 
-| Épingler et désépingler | Unpin récupère immédiatement la dernière version (si disponible) et met à jour l'agent et le collecteur. Durant cette mise à niveau, fpolicies se déconnectera puis se reconnectera. Cette fonctionnalité est conçue pour les clients qui souhaitent contrôler le calendrier des mises à jour automatiques. 
+| Épingler et désépingler | Unpin récupère immédiatement la dernière version (si disponible) et met à jour l'agent et le collecteur. Durant cette mise à niveau, fpolicies se déconnectera puis se reconnectera. Cette fonctionnalité est conçue pour les clients qui souhaitent contrôler le calendrier des mises à jour automatiques. Voir ci-dessous pour<<pinning-an-agent-at-the-current-version,Instructions pour épingler/déépingler>> . 
 
 
-| Approche recommandée | Pour les configurations importantes, il est conseillé d'utiliser Pin et Unpin plutôt que de mettre en pause les collecteurs. Il n'est pas nécessaire de faire une pause et de reprendre pendant l'utilisation de unpin et unpin. Les clients peuvent conserver leurs agents et collecteurs épinglés et, dès réception d'une notification par e-mail concernant une nouvelle version, disposent d'un délai de 30 jours pour mettre à jour sélectivement leurs agents un par un. Cette approche minimise l'impact de la latence sur les politiques fpolicies et offre un meilleur contrôle sur le processus de mise à niveau. 
+| Approche recommandée | Pour les configurations importantes, il est conseillé d'utiliser Pin et Unpin plutôt que de mettre en pause les collecteurs. Il n'est pas nécessaire de faire une pause et de reprendre pendant l'utilisation de l'épinglage et du désépinglage. Les clients peuvent conserver leurs agents et collecteurs épinglés et, dès réception d'une notification par e-mail concernant une nouvelle version, disposent d'un délai de 30 jours pour mettre à jour sélectivement leurs agents un par un. Cette approche minimise l'impact de la latence sur les politiques fpolicies et offre un meilleur contrôle sur le processus de mise à niveau. 
 |===
 
 
