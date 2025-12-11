@@ -35,8 +35,12 @@ Le collecteur de données ONTAP SVM permet à Workload Security de surveiller le
 * SVM comporte plusieurs sous-types.  Parmi ceux-ci, seuls _default_, _sync_source_ et _sync_destination_ sont pris en charge.
 * Un agentlink:task_cs_add_agent.html["doit être configuré"] avant de pouvoir configurer les collecteurs de données.
 * Assurez-vous que vous disposez d'un connecteur d'annuaire utilisateur correctement configuré, sinon les événements afficheront les noms d'utilisateur codés et non le nom réel de l'utilisateur (tel que stocké dans Active Directory) dans la page « Analyse forensique des activités ».
-* • ONTAP Persistent Store est pris en charge à partir de la version 9.14.1.
+* ONTAP Persistent Store est pris en charge à partir de la version 9.14.1.
 * Pour des performances optimales, vous devez configurer le serveur FPolicy pour qu'il soit sur le même sous-réseau que le système de stockage.
+
+
+[[fpolicy-best-practices]]
+* Pour connaître les meilleures pratiques et recommandations complètes concernant la configuration de la stratégie FPolicy de sécurité des charges de travail, consultez le document suivant :link:https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/DII_Storage_Workload_Security__Fpolicy_Best_Practice_and_Recommendations["Article de la base de connaissances sur les meilleures pratiques FPolicy"^] .
 * Vous devez ajouter un SVM en utilisant l’une des deux méthodes suivantes :
 +
 ** En utilisant l'adresse IP du cluster, le nom SVM et le nom d'utilisateur et le mot de passe de gestion du cluster.  *_C'est la méthode recommandée._*
@@ -47,7 +51,7 @@ Le collecteur de données ONTAP SVM permet à Workload Security de surveiller le
 ** En utilisant l'adresse IP, le nom d'utilisateur et le mot de passe de gestion du serveur virtuel SVM
 ** Si vous ne pouvez pas ou ne souhaitez pas utiliser le nom d'utilisateur et le mot de passe complets de gestion du cluster/SVM de l'administrateur, vous pouvez créer un utilisateur personnalisé avec des privilèges moindres comme mentionné dans le<<a-note-about-permissions,« Une note sur les autorisations »>> section ci-dessous.  Cet utilisateur personnalisé peut être créé pour l'accès SVM ou Cluster.
 +
-*** o Vous pouvez également utiliser un utilisateur AD avec un rôle qui dispose au moins des autorisations de csrole comme mentionné dans la section « Remarque sur les autorisations » ci-dessous.  Se référer également à lalink:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["Documentation ONTAP"] .
+*** Vous pouvez également utiliser un utilisateur AD disposant d'un rôle possédant au moins les autorisations du rôle csrole, comme indiqué dans la section « Remarque concernant les autorisations » ci-dessous.  Voir également lelink:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["Documentation ONTAP"] .
 
 
 
