@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: reporting_publishing_annotations.html 
+summary: Apprenez comment publier et dépublier des annotations à utiliser dans les rapports. 
+keywords: reporting, annotations, publish, unpublish, data warehouse, dwh 
+---
+= Publication et dépublication d'annotations pour les rapports
+:allow-uri-read: 
+
+
+
+
+== Publication et dépublication d'annotations pour les rapports
+
+[role="lead"]
+Apprenez comment publier des annotations pour les utiliser dans les rapports et l'entrepôt de données, et comment les dépublier correctement lorsqu'elles ne sont plus nécessaires.
+
+
+
+== Publication d'annotations pour les rapports
+
+Une fois que vous avez créé des annotations dans Data Infrastructure Insights, vous pouvez les publier pour les utiliser dans la génération de rapports.
+
+
+
+=== Étapes pour publier des annotations
+
+. Accédez à la page *Observabilité > Enrichir > Annotations* et sélectionnez l'onglet _Annotations pour la génération de rapports_.
+. Repérez l'annotation que vous souhaitez publier.
+. Sélectionnez l'annotation et choisissez _Publier dans les rapports_.  Vous pouvez également choisir de l'appliquer aux données historiques, ce qui permettra d'utiliser l'annotation lors de l'exécution de rapports d'historique.
+. Une fois publiée, l'annotation devient disponible pour être utilisée dans la création de rapports.
+. Les annotations sont publiées pour être utilisées dans les rapports après la prochaine exécution ETL.
+
+
+[NOTE]
+====
+Tous les rapports faisant référence à cette annotation utiliseront les valeurs publiées.  Si vous modifiez une annotation après sa publication, vous devrez peut-être la republier pour que ces modifications soient prises en compte dans les rapports.
+
+====
+
+
+== Supprimer les annotations pour le rapport
+
+Il peut arriver que vous ayez besoin de supprimer ou de dépublier des annotations, afin qu'elles ne soient plus utilisées dans la génération de rapports.  Par exemple, une annotation peut ne plus être nécessaire, ou elle peut contenir des informations obsolètes qui ne devraient pas figurer dans les rapports.
+
+
+
+=== Étapes pour dépublier les annotations
+
+Avant de dépublier une annotation, sachez que cette action aura un impact sur tous les rapports existants qui utilisent cette annotation.  Les rapports peuvent nécessiter une modification ou l'intervention de services professionnels pour supprimer les références aux annotations.
+
+. Dans l'interface utilisateur de Data Infrastructure Insights , accédez à l'onglet _Annotations pour la création de rapports_.
+. Repérez l'annotation que vous souhaitez dépublier.
+. Pour chaque objet sur lequel l'annotation est publiée, désélectionnez l'annotation et sélectionnez _Enregistrer_.
+. Supprimez toutes les requêtes ou règles qui font encore référence à l'annotation afin de vous assurer qu'elle n'est pas marquée comme « en cours d'utilisation ».
+. Les annotations ne seront pas publiées après la prochaine exécution ETL.
+. Une fois l'ETL terminé, l'annotation peut être supprimée de la liste des annotations si elle n'est plus nécessaire côté locataire.
+
+
+[IMPORTANT]
+====
+Les annotations continueront d'apparaître dans l'entrepôt de données jusqu'à ce qu'elles soient correctement dépubliées.  Le simple fait de supprimer une annotation de la page Annotations sans la dépublier au préalable laissera des données obsolètes susceptibles d'apparaître dans les rapports existants.  Suivez les étapes de dépublication ci-dessus pour garantir la suppression complète.
+
+====
+
+
+== Impact sur les rapports existants
+
+La suppression ou la dépublication d'annotations peut nécessiter des modifications des rapports existants qui font référence à ces annotations. Considérez ce qui suit :
+
+* Les rapports qui utilisent l'annotation comme filtre ou dimension devront être mis à jour.
+* Si une annotation est supprimée sans mettre à jour les rapports dépendants, ces rapports peuvent renvoyer des erreurs ou des résultats inattendus.
+* Des services professionnels peuvent être nécessaires pour aider à la correction des rapports dans des situations complexes.
+
+
+Il est recommandé de vérifier tous les rapports qui dépendent d'une annotation avant de la dépublier.
