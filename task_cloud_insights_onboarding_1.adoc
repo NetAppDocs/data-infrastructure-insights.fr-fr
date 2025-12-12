@@ -43,9 +43,9 @@ Accédez à *Analyse et contrôle > Observabilité* pour en savoir plus sur Data
 
 == Démarrez votre essai gratuit de Data Infrastructure Insights
 
-Si c'est la première fois que vous vous connectez à Data Infrastructure Insights, sous l'offre Data Infrastructure Insights , cliquez sur *Démarrer l'essai gratuit*.  Data Infrastructure Insights vous guidera dans la création du locataire de votre entreprise, y compris la sélection de la région dans laquelle vous souhaitez que votre locataire réside.
+Si c'est la première fois que vous vous connectez à Data Infrastructure Insights, découvrez tout ce que Data Infrastructure Insights a à offrir, et lorsque vous serez _prêt à commencer_, cliquez sur *Demander un essai* et remplissez vos informations.
 
-image:trial_region_selector.png["Sélection de la région dans laquelle héberger votre locataire Data Infrastructure Insights"]
+Dans le cadre de la configuration de votre locataire d'essai, vous choisirez la région dans laquelle héberger votre locataire, et si vous souhaitez que votre locataire soit hébergé sur AWS ou Azure.
 
 Une fois la création de votre locataire terminée, utilisez vos informations d'identification de console pour vous connecter et démarrer votre essai gratuit de 30 jours de Data Infrastructure Insights.  Au cours de cet essai, vous pouvez découvrir les fonctionnalités offertes par Data Infrastructure Insights .
 

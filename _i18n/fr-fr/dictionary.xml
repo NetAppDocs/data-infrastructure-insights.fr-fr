@@ -6986,9 +6986,6 @@
   <block id="a46b8a484704b65f978247cb9b3901aa" category="paragraph">Entrez votre adresse email et votre mot de passe.  Vous serez ensuite redirigé vers la page des offres cloud de NetApp.</block>
   <block id="4ec4e4954d48db50650c5ec49007cf27" category="paragraph">Accédez à *Analyse et contrôle &gt; Observabilité* pour en savoir plus sur Data Infrastructure Insights et/ou demander une démonstration.</block>
   <block id="eeecd13aa136e65aaedc64374c7415bc" category="section-title">Démarrez votre essai gratuit de Data Infrastructure Insights</block>
-  <block id="f596c7c5f04ed4be7cad8a6bac5f0b64" category="paragraph">Si c'est la première fois que vous vous connectez à Data Infrastructure Insights, sous l'offre Data Infrastructure Insights , cliquez sur *Démarrer l'essai gratuit*.  Data Infrastructure Insights vous guidera dans la création du locataire de votre entreprise, y compris la sélection de la région dans laquelle vous souhaitez que votre locataire réside.</block>
-  <block id="d6fc6f290827ae120b8547b3660afe0e" category="inline-image-macro">Sélection de la région dans laquelle héberger votre locataire Data Infrastructure Insights</block>
-  <block id="0959e45a1edcdcaa7f540365665b3986" category="paragraph"><block ref="0959e45a1edcdcaa7f540365665b3986" category="inline-image-macro-rx" type="image"></block></block>
   <block id="13d2916279db639fea18a00088e8cb21" category="paragraph">Une fois la création de votre locataire terminée, utilisez vos informations d'identification de console pour vous connecter et démarrer votre essai gratuit de 30 jours de Data Infrastructure Insights.  Au cours de cet essai, vous pouvez découvrir les fonctionnalités offertes par Data Infrastructure Insights .</block>
   <block id="3b1f676d06286548e11b332567f42bbd" category="inline-link-macro">démarrez votre abonnement</block>
   <block id="b48d78927dd619cab2e6b7fde5ffb6b1" category="paragraph">Pendant l'essai gratuit, vous pouvez<block ref="822a67eb96671d13fff372a75b259713" category="inline-link-macro-rx"></block> à Data Infrastructure Insights à tout moment.  Lorsque vous êtes abonné, vous pouvez utiliser les fonctionnalités de Data Infrastructure Insights en fonction de votre abonnement actuel.</block>
@@ -11834,128 +11831,7 @@
   <block id="ae4768c261eca8a6c88e3f5101e586e5" category="summary">Configurez l’opérateur de surveillance NetApp Kubernetes à l’aide des options AgentConfiguration.</block>
   <block id="9c64a0e0a0e22cc18b7137e967889926" category="doc">Options de configuration de l'opérateur de surveillance Kubernetes</block>
   <block id="a2c6fd0b23854404c386430346919db8" category="paragraph">Le <block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> Offre de nombreuses options de personnalisation via le fichier AgentConfiguration. Vous pouvez configurer les limites de ressources, les intervalles de collecte, les paramètres de proxy, les tolérances et les paramètres spécifiques aux composants afin d'optimiser la surveillance de votre environnement Kubernetes. Utilisez ces options pour personnaliser Telegraf, Kube-State-Metrics, la collecte des journaux, le mappage des charges de travail, la gestion des modifications et d'autres composants de surveillance.</block>
-  <block id="2d18be6c8402f4ca0cb26ce68adc0564" category="paragraph">Le tableau ci-dessous répertorie les options possibles pour le fichier _AgentConfiguration_ :</block>
-  <block id="b33aed8f3134996703dc39f9a7c95783" category="cell">agent</block>
-  <block id="4e49d105e5ecfd95da78eb980f698488" category="cell">Options de configuration communes à tous les composants que l'opérateur peut installer.  Celles-ci peuvent être considérées comme des options « globales ».</block>
-  <block id="286bec770910c4da609323e21222e283" category="cell">dockerRepo</block>
-  <block id="ea55ba51f0b69383ec5bb89cabada638" category="cell">Une substitution DockerRepo permet d'extraire les images des référentiels Docker privés du client plutôt que du référentiel Docker Data Infrastructure Insights . Le référentiel Docker Data Infrastructure Insights est utilisé par défaut.</block>
-  <block id="994be3a18bf7e0a16ab2be2d5c1643ae" category="cell">dockerImagePullSecret</block>
-  <block id="8e8bb119221ff93e3f93bea9ae89444f" category="cell">Facultatif : un secret pour le référentiel privé du client.</block>
-  <block id="343d28c140c3f5ce20a1ac3f8f7dae2c" category="cell">nom du cluster</block>
-  <block id="82b5c50bc4616a08a16b907f9dd29573" category="cell">Champ de texte libre identifiant de manière unique un cluster parmi tous les clusters clients. Ce champ doit être unique pour un locataire Data Infrastructure Insights . La valeur par défaut correspond au champ « Nom du cluster » saisi par le client dans l'interface utilisateur.</block>
-  <block id="5c7af4a6b686285084e62f255503c141" category="cell">Format proxy : proxy : serveur : port : nom d'utilisateur : mot de passe : noProxy : isTelegrafProxyEnabled : isAuProxyEnabled : isFluentbitProxyEnabled : isCollectorProxyEnabled :</block>
-  <block id="f8ac74d8a3668ddf89efeb8e806ca908" category="cell">Facultatif pour définir un proxy.  Il s’agit généralement du mandataire d’entreprise du client.</block>
-  <block id="0c8011c6947aae43789eb8972c306e85" category="cell">Options de configuration permettant de personnaliser l'installation de Telegraf de l'opérateur</block>
-  <block id="fe071453b5b9af9d9a481afb504f78cb" category="cell">intervalle de collection</block>
-  <block id="43087b2e6dfc2a4eecd03be4305fb0cb" category="cell">Intervalle de collecte des métriques, en secondes (Max = 60 s)</block>
-  <block id="2129471bf14899d19206e2b1aa6c00ca" category="cell">dsCpuLimit</block>
-  <block id="718918f6bff9fdd2a6292afbe4549d0b" category="cell">Limite de CPU pour Telegraf DS</block>
-  <block id="5eeea2f6351dff2df3a80bcff5cdd5be" category="cell">dsMemLimit</block>
-  <block id="bf35f5b9d6933443b78e7cd6b5b24039" category="cell">Limite de mémoire pour Telegraf DS</block>
-  <block id="32baad7599efdd63fc7dd0ebd6fb0462" category="cell">dsCpuRequest</block>
-  <block id="fb50fe579fe2186737910f4faafbfae2" category="cell">Demande de CPU pour Telegraf DS</block>
-  <block id="4fd630053ba42e53bf847444b5857abf" category="cell">dsMemRequest</block>
-  <block id="03a9d404d5e9073d007d6e38a710ebb1" category="cell">Demande de mémoire pour telegraf ds</block>
-  <block id="00edda16a430ed1a43f73b6b6f8e5230" category="cell">Limite rsCpu</block>
-  <block id="be5f478627c9d3676f638d423c9b320b" category="cell">Limite de CPU pour Telegraf RS</block>
-  <block id="19db0dd97225788d8cd2ac82554de9d3" category="cell">rsMemLimit</block>
-  <block id="7ad3bdf2f332902d109247d0c3970fb4" category="cell">Limite de mémoire pour Telegraf RS</block>
-  <block id="1be922c4a70261e6656d70f9cc86dde2" category="cell">rsCpuRequest</block>
-  <block id="76b9e3aaffb44c3c4a7084bd7430088d" category="cell">Demande de CPU pour Telegraf RS</block>
-  <block id="b3e9404f7fb1acb7c3d66e587a4c411b" category="cell">rsMemRequest</block>
-  <block id="dce1fa2cb47347aa09d7dceac624c5f7" category="cell">Demande de mémoire pour telegraf rs</block>
-  <block id="6fd605953233d5564943f85815683d62" category="cell">exécuterPrivileged</block>
-  <block id="03d93e1826c4b75f5882487510637b6a" category="cell">Exécutez le conteneur _telegraf-mountstats-poller_ de Telegraf DaemonSet en mode privilégié.  Définissez cette option sur vrai si SELinux est activé sur vos nœuds Kubernetes.</block>
-  <block id="324bdfa0e3afdc96a6b7ec1a6d383285" category="cell">exécuterDsPrivileged</block>
-  <block id="853d5e0ee500d0a29752a0f7c287f08d" category="cell">Définissez runDsPrivileged sur true pour exécuter le conteneur Telegraf du DaemonSet en mode privilégié.</block>
-  <block id="986b07451fa1766c43f2eead1470731c" category="cell">taille du lot</block>
-  <block id="f73038607dbfd988c8ed06aa707b67b6" category="inline-link-macro">Documentation de configuration de Telegraf</block>
-  <block id="4a686d41d5d06d7af488bce13a4b6b1c" category="cell">Voir<block ref="1220f98ff4e67fb30a54b092e87489e7" category="inline-link-macro-rx"></block></block>
-  <block id="977c5d665ca82fa3d9d007ab47991cab" category="cell">limite de tampon</block>
-  <block id="3d5beabcc75357b9f0517b37a51d848b" category="cell">intervalle rond</block>
-  <block id="0457354b493031778121a8634e49db5e" category="cell">collectionJitter</block>
-  <block id="e2794d8f12719281eff5601251c8a680" category="cell">précision</block>
-  <block id="43a58acb58cbbbfc1abb27f189ec375c" category="cell">intervalle de rinçage</block>
-  <block id="e177bfc26cdd2bb790365e538eef32a6" category="cell">flushJitter</block>
-  <block id="8bdbcdcecbcc5e3e45877e3a15ebe124" category="cell">délai d'expiration de sortie</block>
-  <block id="bb0a12c3834207119851374142a76ac0" category="cell">dsTolérations</block>
-  <block id="77e9ea38d66b01840eaf712dab598ce0" category="cell">telegraf-ds tolérances supplémentaires.</block>
-  <block id="569d3e422e1e57a8d8f17b102bb10bfc" category="cell">rsTolérances</block>
-  <block id="0a1cb9f6e7c89d89c765fdd1efa6183b" category="cell">telegraf-rs tolérances supplémentaires.</block>
-  <block id="6b0d087c4bacdd4357f49c495293bdde" category="cell">ignorer les processeurs après les agrégateurs</block>
-  <block id="412ea2434c00799606f268b4aa2b35dc" category="cell">non protégé</block>
-  <block id="9091b3fb9f4d43844af8dc0a973c67e0" category="inline-link-macro">problème connu de Telegraf</block>
-  <block id="d466d69e5a5f62e5d6773f7d399fe086" category="cell">Voir ceci <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block> . Le paramètre _non protégé_ demandera à l'opérateur de surveillance Kubernetes d'exécuter Telegraf avec le <block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block> drapeau.</block>
-  <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify</block>
-  <block id="3008cd3125cccc003fa13335717e556e" category="cell">Si Telegraf ne parvient pas à vérifier le certificat en raison d'un manque de SAN IP, essayez d'activer l'option Ignorer la vérification.</block>
-  <block id="81beb48dd63a014bf8c446eeeb319a2e" category="cell">Options de configuration permettant de personnaliser l'installation des métriques d'état du kube de l'opérateur</block>
-  <block id="8804d25db5f16b9db006116b6edf45bc" category="cell">Limite du processeur</block>
-  <block id="8b673d5f702e58efd947465ead5c9647" category="cell">Limite de CPU pour le déploiement de kube-state-metrics</block>
-  <block id="65a010afe1e2186ecb5c9ef8cf978e2d" category="cell">limite de mémoire</block>
-  <block id="e49ddab01d68c08aeef7fdff59e6def6" category="cell">Limite de mémoire pour le déploiement de kube-state-metrics</block>
-  <block id="664e65ce2a5a996437f898217e74c9dd" category="cell">demande de processeur</block>
-  <block id="3237c3bd0df775b78c9dafaf3c9bf9e6" category="cell">Demande de CPU pour le déploiement des métriques d'état Kube</block>
-  <block id="c8f947b6b972e9866cc682a82d5ec34a" category="cell">demande de mémoire</block>
-  <block id="03dd8511b379b0b92595299b980d36e4" category="cell">Demande de mémoire pour le déploiement des métriques d'état Kube</block>
-  <block id="55b558c7ef820e6e00e5993b9e55d93b" category="cell">ressources</block>
-  <block id="3b720d9649ae501d73e8f8c4a7a15348" category="cell">une liste de ressources à capturer, séparées par des virgules. Exemple : cronjobs,daemonsets,deployments,ingresses,jobs,namespaces,nodes,persistentvolumeclaims, persistentvolumes,pods,replicasets,resourcequotas,services,statefulsets</block>
-  <block id="d6c26478ca41a23cc9741a4e92576269" category="cell">tolérances</block>
-  <block id="c511c601aee805f46f3767063104cdd8" category="cell">tolérances supplémentaires de kube-state-metrics.</block>
-  <block id="c84711fe6ad5fa23070462b2086412e2" category="cell">une liste séparée par des virgules de ressources pour lesquelles kube-state-metrics doit capturer les étiquettes +++ exemple : cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++</block>
-  <block id="d795ec2d0a164433572a8d5d91b8fae0" category="cell">Options de configuration permettant de personnaliser la collecte des journaux et l'installation de l'opérateur</block>
-  <block id="031104420a282e1bdb63e280c40a4938" category="cell">lireDeLaTête</block>
-  <block id="d7ff51440723c6bba696ef19f757a8af" category="cell">vrai/faux, le bit fluide doit lire le journal depuis la tête</block>
-  <block id="90272dda245ae1fb3cf197e91a8689dc" category="cell">temps mort</block>
-  <block id="6136e8e4f59c6ebf3a47733e15cd8f8f" category="cell">délai d'attente, en secondes</block>
-  <block id="a28f540659f42fa52be34b45558bb6c6" category="cell">Mode DNS</block>
-  <block id="5c0864cc25dbf397d47948de9ac342f1" category="cell">TCP/UDP, mode pour DNS</block>
-  <block id="7e7b391c65060e4613a7fb96bfd2ef31" category="cell">tolérances de bits fluides</block>
-  <block id="035bf5f67349238f72eae5d508efac99" category="cell">tolérances supplémentaires fluent-bit-ds.</block>
-  <block id="8776d1f0ee4232b1c2ff5bc38e4b2603" category="cell">tolérances de l'exportateur d'événements</block>
-  <block id="bac5ce71f32beb834c27a988cad33543" category="cell">tolérances supplémentaires de l'exportateur d'événements.</block>
-  <block id="b6544593f70ff0a8915cbd1f9aabb49f" category="cell">exportateur d'événements-maxEventAgeSeconds</block>
-  <block id="ec57a05c2326d433af7b24b3adb77f1a" category="cell">exportateur d'événements âge maximal de l'événement.  Voir<block ref="6708727d05fa40eed58ce8404e60b4a3" category="inline-link-rx"></block></block>
-  <block id="8edfed76354af11279c58c2d91948eda" category="cell">chemin du journal du conteneur fluent-bit</block>
-  <block id="3150c73f1d1522f3b831f0d591077194" category="cell">Par défaut, le DaemonSet Fluentbit montera les chemins d'hôte /var/log et /var/lib/docker/containers pour accéder/lire les journaux du conteneur Kubernetes.  Si Kubernetes a été configuré pour placer les journaux de conteneur dans un emplacement autre que celui par défaut, utilisez cette option pour modifier le DaemonSet Fluentbit afin de monter le chemin autre que celui par défaut.</block>
-  <block id="6f70b1b29646b4f3864aa8abbbca1c59" category="cell">carte de charge de travail</block>
-  <block id="f39ed19a7c5e5e2b0cff68ee1bedc0ef" category="cell">Options de configuration permettant de personnaliser la collecte et l'installation de la carte de charge de travail de l'opérateur.</block>
-  <block id="27f8013ee549a9c4b57f90e2187cfe5f" category="cell">Limite de CPU pour Net Observer DS</block>
-  <block id="579e696b8054af08af33dfd55dfad78b" category="cell">limite de mémoire pour l'observateur réseau ds</block>
-  <block id="967cc12aa2f5f95e9e26d28fae3bd7b3" category="cell">Demande de CPU pour l'observateur réseau ds</block>
-  <block id="0ae1bca85ce414d0f1862e84b9f66acc" category="cell">demande de mémoire pour l'observateur réseau ds</block>
-  <block id="1de805c2687b2c30b46a937270519488" category="cell">metricAggregationInterval</block>
-  <block id="8d5efaeb90931394d0afdcc8d00b6b90" category="cell">intervalle d'agrégation des métriques, en secondes</block>
-  <block id="c561450e999b4dfedfdbbc8b48e36db7" category="cell">bpfPollInterval</block>
-  <block id="a75c6546b06d6f58867213c5349a5f15" category="cell">Intervalle d'interrogation BPF, en secondes</block>
-  <block id="3b7c5615013c6b42362845591653e503" category="cell">activer DNSLookup</block>
-  <block id="1d2b775d8b166dda0a22ca0ffa3f537c" category="cell">vrai/faux, activer la recherche DNS</block>
-  <block id="287ab13fa00dc2700e0567bc50f5a663" category="cell">l4-tolérances</block>
-  <block id="bef6178937f26cf5776d5c67e6c1d23c" category="cell">tolérances supplémentaires net-observer-l4-ds.</block>
-  <block id="e04813a849ce9da2afe9f3bfcaf85f0e" category="cell">true/false - Définissez runPrivileged sur true si SELinux est activé sur vos nœuds Kubernetes.</block>
-  <block id="78835e1c315b219e4c62fc613fdfd311" category="cell">gestion du changement</block>
-  <block id="02b609b32da65dbc17b9446c8542f3dd" category="cell">Options de configuration pour la gestion et l'analyse des changements Kubernetes</block>
-  <block id="75f551b07991fea9589bce25b6abb363" category="cell">Limite de CPU pour change-observer-watch-rs</block>
-  <block id="6e753299d008aca89690ad5b5c6b784f" category="cell">Limite de mémoire pour change-observer-watch-rs</block>
-  <block id="582e83d73d36aa6674624867468704da" category="cell">Demande CPU pour change-observer-watch-rs</block>
-  <block id="d73c96f8e69fcf08ffd440cc16f573af" category="cell">demande de modification de membre-observateur-watch-rs</block>
-  <block id="f7b8b6cbce2f95ef7109d41adce08b69" category="cell">workloadFailureDeclarationIntervalSeconds</block>
-  <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">Intervalle après lequel un déploiement infructueux d'une charge de travail sera marqué comme ayant échoué, en secondes</block>
-  <block id="fded60399ef22b3b04bd3856d344233b" category="cell">charge de travailDeployAggrIntervalSeconds</block>
-  <block id="f5d43bfb3eaf806884e4936fc4453865" category="cell">Fréquence à laquelle les déploiements de charges de travail sont combinés et envoyés, en secondes</block>
-  <block id="fb937d63289578595fb05fc626554661" category="cell">nonWorkloadDeployAggrIntervalSeconds</block>
-  <block id="e4685d20c866cca50df5bea5e4230497" category="cell">Fréquence à laquelle les déploiements hors charge de travail sont combinés et envoyés, en secondes</block>
-  <block id="6d53bc2f7711e2d9a24631defb23b18f" category="cell">termesÀRédiger</block>
-  <block id="532aa006f97c495d1734618405645779" category="cell">Un ensemble d'expressions régulières utilisées dans les noms d'environnement et les cartes de données dont la valeur sera expurgée Exemples de termes : « pwd », « password », « token », « apikey », « api-key », « jwt »</block>
-  <block id="44011a6b8af68cc46d2d0dfb669fd887" category="cell">types supplémentaires à surveiller</block>
-  <block id="ac3fd52049b8a2c3ba2e8b8a5eff74e0" category="cell">Une liste séparée par des virgules de types supplémentaires à surveiller à partir de l'ensemble par défaut de types surveillés par le collecteur</block>
-  <block id="20e3bce2d07b4e6d70959f7793b18bc9" category="cell">types à ignorer de la surveillance</block>
-  <block id="003936f0b815c468a99ed57f900f3d8a" category="cell">Une liste séparée par des virgules de types à ignorer de l'observation à partir de l'ensemble par défaut de types surveillés par le collecteur</block>
-  <block id="eee9690c1174453d706353a8a678c8a1" category="cell">logRecordAggrIntervalSeconds</block>
-  <block id="284d60e68534479175e5c3f018cecc45" category="cell">Fréquence à laquelle les enregistrements de journaux sont envoyés au CI depuis le collecteur</block>
-  <block id="73f0200abaec8d804a671e6ce4dac861" category="cell">tolérances de montre</block>
-  <block id="bab1b701df004b067b068da86a62e2cf" category="cell">change-observer-watch-ds tolérances supplémentaires.  Format abrégé sur une seule ligne uniquement.  Exemple : « {key : taint1, operator : Exists, effect : NoSchedule}, {key : taint2, operator : Exists, effect : NoExecute} »</block>
   <block id="349a396fe021418ac0edbee3b447f4d5" category="section-title">Exemple de fichier AgentConfiguration</block>
-  <block id="05275b3b3aecea67df39f7c8383f0251" category="paragraph">Vous trouverez ci-dessous un exemple de fichier _AgentConfiguration_.</block>
   <block id="d16d9bd2acb667a5f9b107ea67afbca8" category="summary">Dépannage des collecteurs de données Workload Security</block>
   <block id="f9d23cdace7f417c3e782c1bc693dd56" category="doc">Dépannage du collecteur de données ONTAP SVM</block>
   <block id="cd340fe1a6cf5e3a42e4f1d2eae63efb" category="paragraph">Workload Security utilise des collecteurs de données pour collecter les données d'accès aux fichiers et aux utilisateurs à partir des appareils.  Vous trouverez ici des conseils pour résoudre les problèmes liés à ce collecteur.</block>
@@ -12801,4 +12677,7 @@
   <block id="c77b295eb8d3480880ff044a7823cdd9" category="list-text">Si une annotation est supprimée sans mettre à jour les rapports dépendants, ces rapports peuvent renvoyer des erreurs ou des résultats inattendus.</block>
   <block id="3da85052d2ffffd1cb6352186fe0393a" category="list-text">Des services professionnels peuvent être nécessaires pour aider à la correction des rapports dans des situations complexes.</block>
   <block id="4f9b9c5804f57ab98a1eb0bbdc93ee28" category="paragraph">Il est recommandé de vérifier tous les rapports qui dépendent d'une annotation avant de la dépublier.</block>
+  <block id="84782b0fddf642f36f6d0ca7585d8709" category="paragraph">Si c'est la première fois que vous vous connectez à Data Infrastructure Insights, découvrez tout ce que Data Infrastructure Insights a à offrir, et lorsque vous serez _prêt à commencer_, cliquez sur *Demander un essai* et remplissez vos informations.</block>
+  <block id="513dc3996a984c81efa261ee7da82ea7" category="paragraph">Dans le cadre de la configuration de votre locataire d'essai, vous choisirez la région dans laquelle héberger votre locataire, et si vous souhaitez que votre locataire soit hébergé sur AWS ou Azure.</block>
+  <block id="29ecb4e96ebb9048c6e2055bd8edfec9" category="paragraph">Vous trouverez ci-dessous un exemple de fichier _AgentConfiguration_, avec la description de chaque option.</block>
 </blocks>
