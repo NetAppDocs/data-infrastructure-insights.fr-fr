@@ -18,6 +18,35 @@ NetApp améliore et optimise continuellement ses produits et services.  Voici qu
 
 
 
+== Décembre 2025
+
+
+
+=== Contrôler l'accès aux requêtes avec des requêtes partagées
+
+Partagez les requêtes que vous créez grâce à des contrôles d'autorisation précis. Choisissez le mode Visionneuse en lecture seule pour empêcher les modifications ou le mode Édition pour autoriser les modifications. Les requêtes privées sont accessibles aux créateurs, tandis que les requêtes partagées peuvent être utilisées dans les règles d'annotation ou dupliquées pour des cas d'utilisation spécifiques, vous offrant un contrôle total sur la manière dont les requêtes sont utilisées et modifiées au sein de votre organisation.
+
+image:query_sharing_dialog.png["Définition des autorisations sur une requête, largeur=200"]
+
+De plus, les utilisateurs ayant le rôle _Invité_ peuvent désormais créer et gérer leurs propres requêtes privées.
+
+
+
+=== Un meilleur filtrage lors de la gestion des moniteurs
+
+Le filtrage des listes et des groupes de surveillance a été amélioré pour ajouter la prise en charge des caractères génériques, les filtres multiples, la fonctionnalité d'inclusion/exclusion, et plus encore.
+
+image:monitor_list_filters.png["Nouveau filtrage du moniteur, largeur=500"]
+
+
+
+=== Visualisations de tableau de bord plus claires
+
+La conception améliorée du tableau de bord vous permet de voir ce qui compte le plus. Amélioration de la clarté visuelle grâce à des bordures ombrées qui séparent les widgets et à la suppression des lignes de séparation pour réduire l'encombrement et vous permettre de vous concentrer sur l'analyse de vos données. Ces améliorations créent une expérience de tableau de bord plus claire et plus intuitive, permettant de repérer plus rapidement et plus facilement les tendances et les anomalies.
+
+'''
+
+
 == Novembre 2025
 
 

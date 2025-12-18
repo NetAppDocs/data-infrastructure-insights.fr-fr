@@ -47,7 +47,7 @@ Si c'est la première fois que vous vous connectez à Data Infrastructure Insigh
 
 Dans le cadre de la configuration de votre locataire d'essai, vous choisirez la région dans laquelle héberger votre locataire, et si vous souhaitez que votre locataire soit hébergé sur AWS ou Azure.
 
-Une fois la création de votre locataire terminée, utilisez vos informations d'identification de console pour vous connecter et démarrer votre essai gratuit de 30 jours de Data Infrastructure Insights.  Au cours de cet essai, vous pouvez découvrir les fonctionnalités offertes par Data Infrastructure Insights .
+Une fois la création de votre locataire terminée, utilisez vos informations d'identification de console pour vous connecter et démarrer votre essai gratuit de 30 jours de Data Infrastructure Insights. Au cours de cet essai, vous pouvez découvrir les fonctionnalités offertes par Data Infrastructure Insights .
 
 Pendant l'essai gratuit, vous pouvezlink:concept_subscribing_to_cloud_insights.html["démarrez votre abonnement"] à Data Infrastructure Insights à tout moment.  Lorsque vous êtes abonné, vous pouvez utiliser les fonctionnalités de Data Infrastructure Insights en fonction de votre abonnement actuel.
 
@@ -55,7 +55,7 @@ Pendant l'essai gratuit, vous pouvezlink:concept_subscribing_to_cloud_insights.h
 
 == Sign in et c'est parti
 
-Une fois votre locataire créé, vous pouvez à tout moment vous connecter simplement au portail de la NetApp Console et accéder aulink:https://services.cloud.netapp.com["Services cloud"] page et sélectionnez *Accéder à Data Infrastructure Insights*.
+Une fois votre locataire créé, vous pouvez à tout moment vous connecter au portail NetApp BlueXP et accéder à link:https://services.cloud.netapp.com["Services cloud"] page et sélectionnez *Accéder à Data Infrastructure Insights*.
 
 Vous pouvez également ouvrir un navigateur directement sur l'URL de votre locataire Data Infrastructure Insights , par exemple :
 
