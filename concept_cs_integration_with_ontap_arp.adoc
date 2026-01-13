@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_integration_with_ontap_arp.html 
-summary: 'Workload Security s"intègre à ONTAP Autonomous Ransomware Protection pour améliorer la détection des ransomwares.' 
+summary: 'Améliorez la détection des attaques en intégrant Workload Security à ONTAP Autonomous Protection pour une analyse corrélée, des réponses automatisées et des capacités d"enquête médico-légale.' 
 keywords: ransomware, ARP, Protection, Security 
 ---
 = Intégration avec la protection autonome contre les ransomwares ONTAP
@@ -10,7 +10,7 @@ keywords: ransomware, ARP, Protection, Security
 
 
 [role="lead"]
-La fonctionnalité de protection autonome contre les ransomwares (ARP) ONTAP utilise l'analyse de la charge de travail dans les environnements NAS (NFS et SMB) pour détecter et avertir de manière proactive de toute activité anormale dans le fichier qui pourrait indiquer une attaque de ransomware.
+La fonction de protection autonome ONTAP utilise l'analyse de la charge de travail dans les environnements NAS (NFS et SMB) pour détecter et signaler de manière proactive toute activité anormale dans les fichiers pouvant indiquer des attaques malveillantes ou des modifications de données non autorisées.
 
 Des détails supplémentaires et des exigences de licence concernant ARP peuvent être trouvéslink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ici"] .
 
@@ -62,7 +62,7 @@ Un exemple d’alerte générée en raison d’un événement ARP est présenté
 
 image:CS_Ransomware_Example_1.png["Section supérieure de l'alerte Ransomware"] image:CS_Ransomware_Example_2.png["Section supérieure de l'alerte Ransomware"] image:CS_Ransomware_Example_3.png["Section supérieure de l'alerte Ransomware"]
 
-Une bannière de confiance élevée indique que l'attaque a montré un comportement de ransomware ainsi que des activités de cryptage de fichiers.  Le graphique des fichiers chiffrés indique l’horodatage auquel l’activité de chiffrement du volume a été détectée par la solution ARP.
+Un bandeau de confiance élevée indique que l'attaque a démontré un comportement de falsification de fichiers ainsi que des activités de chiffrement de fichiers. Le graphique des fichiers chiffrés indique l'horodatage auquel l'activité de chiffrement du volume a été détectée par la solution ARP.
 
 
 

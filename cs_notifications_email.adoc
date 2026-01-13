@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: cs_notifications_email.html 
-summary: 'Ajout d"adresses e-mail pour les notifications d"alertes de sécurité de charge de travail.' 
+summary: 'Configurez les notifications par e-mail pour recevoir en temps réel des alertes concernant les attaques potentielles, les avertissements de sécurité et l"état de santé de l"agent/collecteur de données.' 
 keywords: email, notifications, alerts, warnings, attacks 
 ---
 = Configuration des notifications par e-mail pour les alertes, les avertissements et l'état de santé de l'agent/collecteur de sources de données
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Pour configurer les destinataires des alertes de sécurité de la charge de travail, cliquez sur *Admin > Notifications* et saisissez une adresse e-mail dans la ou les sections appropriées pour chaque destinataire.
+Les notifications par e-mail vous permettent de rester informé des attaques potentielles, des alertes de sécurité et des problèmes de santé de l'infrastructure dès leur apparition. Configurez les adresses e-mail des destinataires dans les paramètres Admin > Notifications pour recevoir des alertes en temps réel adaptées aux responsabilités de chaque destinataire.
 
 
 
@@ -33,7 +37,7 @@ Gardez à l’esprit les points suivants :
 * Les alertes de santé ne seront envoyées qu'après que l'agent/collecteur aura cessé de signaler pendant au moins une heure.
 * Une seule notification par e-mail est envoyée aux destinataires prévus au cours d'une période donnée de 24 heures, même si l'agent ou le collecteur de données est déconnecté pendant une durée plus longue.
 * En cas de défaillance d'un Agent, une seule alerte sera envoyée (pas une par collecteur).  L'e-mail comprendra une liste de tous les SVM concernés.
-* L'échec de la collecte d'Active Directory est signalé comme un avertissement ; il n'a aucun impact sur la détection des ransomwares.
+* L'échec de la collecte Active Directory est signalé comme un avertissement ; il n'a pas d'incidence sur la détection des menaces.
 * La liste de configuration de mise en route inclut désormais une nouvelle phase _Configurer les notifications par e-mail_.
 
 

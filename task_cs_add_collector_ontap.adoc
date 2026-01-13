@@ -7,6 +7,10 @@ summary: Ajout de collecteurs de données
 = Configuration du collecteur de données NetApp ONTAP
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

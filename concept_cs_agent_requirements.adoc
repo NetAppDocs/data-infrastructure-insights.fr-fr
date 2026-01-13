@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_agent_requirements.html 
-summary: Le serveur ou la machine virtuelle que vous utilisez comme agent doit répondre aux exigences minimales 
+summary: 'Assurez-vous que votre environnement de déploiement de l"agent de sécurité des charges de travail respecte les exigences minimales en matière de système d"exploitation, de processeur, de mémoire et d"espace disque pour des performances et une collecte de données optimales.' 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
 = Exigences relatives à l'agent de sécurité de la charge de travail

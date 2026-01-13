@@ -2,15 +2,19 @@
 sidebar: sidebar 
 permalink: task_config_cs_incloud.html 
 keywords: Cloud, Storage, AWS, Cloud Volumes, Cloud ONTAP, firewall, VPC, Subnet,  cloud secure 
-summary: 'Workload Security utilise des collecteurs de données pour collecter les données d"accès aux fichiers et aux utilisateurs à partir des appareils.' 
+summary: 'Configurez les collecteurs de données Workload Security pour Cloud Volumes ONTAP et Amazon FSx for NetApp ONTAP afin de surveiller l"accès aux fichiers, l"activité des utilisateurs et de détecter les menaces sur votre infrastructure de stockage cloud.' 
 ---
 = Configuration du collecteur Cloud Volumes ONTAP et Amazon FSx for NetApp ONTAP
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Workload Security utilise des collecteurs de données pour collecter les données d'accès aux fichiers et aux utilisateurs à partir des appareils.
+Surveillez l'accès aux fichiers et aux utilisateurs sur votre infrastructure de stockage cloud en configurant les collecteurs de données Workload Security pour Cloud Volumes ONTAP et Amazon FSx for NetApp ONTAP. Ce guide fournit des instructions étape par étape pour déployer des agents dans AWS et les connecter à vos instances de stockage cloud.
 
 
 

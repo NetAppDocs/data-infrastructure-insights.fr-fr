@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: cs_alert_data.html 
-keywords: alert, attack, ransomware, activity, security, abnormal 
+keywords: alert, attack, ransomware, activity, security, abnormal, tampering 
 summary: Workload Security crée des alertes en cas d’activité anormale de l’utilisateur ou d’attaque potentielle.  La page Alertes répertorie ces activités pour une enquête rapide et facile. 
 ---
 = Alertes
@@ -14,7 +14,7 @@ summary: Workload Security crée des alertes en cas d’activité anormale de l�
 
 
 [role="lead"]
-La page Alertes de sécurité de la charge de travail affiche une chronologie des attaques et/ou des avertissements récents et vous permet d'afficher les détails de chaque problème.
+La page « Alertes de sécurité des charges de travail » fournit une chronologie complète des menaces et avertissements détectés, ainsi que des outils d'investigation détaillés. Consultez les détails des alertes, gérez les mises à jour de statut, filtrez par critères et suivez les activités des utilisateurs pour enquêter efficacement sur les incidents de sécurité et y répondre.
 
 image:CloudSecureAlertsListPage.png["Liste des alertes"]
 
@@ -102,9 +102,9 @@ Vous pouvez cliquer sur un lien d’alerte sur la page de liste des alertes pour
 
 Cette section affiche des détails sur l'utilisateur impliqué dans l'attaque potentielle, y compris un graphique de l'activité principale de l'utilisateur.
 
-Page d'alertes (cet exemple montre une attaque potentielle de ransomware) :image:RansomwareAlertExample.png["Exemple d'alerte de ransomware"]
+Page d'alertes (cet exemple illustre une potentielle attaque par falsification de fichiers) : image:RansomwareAlertExample.png["Exemple d'alerte de falsification de fichier"]
 
-Page de détails (cet exemple montre une attaque potentielle par ransomware) :image:RansomwareDetailPageExample.png["Exemple de page de détails sur les ransomwares"]
+Page de détails (cet exemple illustre une attaque potentielle par falsification de fichiers) : image:RansomwareDetailPageExample.png["Exemple de page de détails sur la falsification de fichiers"]
 
 
 
@@ -112,7 +112,7 @@ Page de détails (cet exemple montre une attaque potentielle par ransomware) :i
 
 Workload Security protège vos données en prenant automatiquement un instantané lorsqu'une activité malveillante est détectée, garantissant ainsi que vos données sont sauvegardées en toute sécurité.
 
-Vous pouvez définirlink:cs_automated_response_policies.html["politiques de réponse automatisées"] qui prennent un instantané lorsqu'une attaque de ransomware ou une autre activité anormale de l'utilisateur est détectée.  Vous pouvez également prendre un instantané manuellement à partir de la page d’alerte.
+Vous pouvez définir link:cs_automated_response_policies.html["politiques de réponse automatisées"] qui prennent un instantané lorsqu'une attaque par falsification de fichiers ou toute autre activité anormale de l'utilisateur est détectée. Vous pouvez également prendre une capture d'écran manuellement depuis la page d'alerte.
 
 Capture d'écran automatique prise :image:AlertActionsAutomaticExample.png["Écran d'action d'alerte, 1000"]
 

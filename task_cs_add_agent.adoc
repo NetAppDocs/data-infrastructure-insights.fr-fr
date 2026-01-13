@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_cs_add_agent.html 
 keywords: agent, Workload Security, installation, Cloud Secure 
-summary: 'Les agents de sécurité des charges de travail surveillent l"activité des utilisateurs et détectent les menaces de sécurité dans votre environnement de stockage.' 
+summary: 'Déployez des agents de sécurité des charges de travail pour surveiller l"activité des utilisateurs, détecter les menaces de sécurité et protéger votre infrastructure de stockage.' 
 ---
 = Déployer des agents de sécurité de charge de travail
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Les agents de sécurité des charges de travail surveillent l"activit�
 
 
 [role="lead"]
-Les agents de sécurité des charges de travail sont essentiels pour surveiller l'activité des utilisateurs et détecter les menaces potentielles à la sécurité de votre infrastructure de stockage. Ce guide fournit des instructions étape par étape pour déployer des agents dans votre environnement. Avant de commencer, assurez-vous que votre serveur d'agent répond aux exigences suivantes : link:concept_cs_agent_requirements.html["exigences système"].
+Les agents de sécurité des charges de travail sont essentiels pour surveiller l'activité des utilisateurs et détecter les menaces potentielles à la sécurité de votre infrastructure de stockage. Ce guide fournit des instructions d'installation étape par étape, les meilleures pratiques pour la gestion des agents (y compris les fonctionnalités de pause/reprise et d'épinglage/désépinglage) et les exigences de configuration post-déploiement. Avant de commencer, assurez-vous que votre serveur d'agent répond aux exigences suivantes : link:concept_cs_agent_requirements.html["exigences système"].
 
 
 

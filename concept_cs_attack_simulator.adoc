@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept_cs_attack_simulator.html 
 keywords: ransomware, simulation, simulator, restrict, attack 
-summary: 'À l"aide d"un script, vous pouvez simuler une attaque de ransomware pour tester ou démontrer la sécurité de la charge de travail.' 
+summary: 'Testez et validez les capacités de détection de la sécurité des charges de travail en simulant des attaques à l"aide du script de simulation inclus afin de vérifier la génération d"alertes et les politiques de réponse.' 
 ---
-= Sécurité des charges de travail : simulation d'une attaque
+= Sécurité des charges de travail : simulation de falsification anormale de fichiers
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: 'À l"aide d"un script, vous pouvez simuler une attaque de ransomware p
 
 
 [role="lead"]
-Vous pouvez utiliser les instructions de cette page pour simuler une attaque afin de tester ou de démontrer la sécurité de la charge de travail à l'aide du script de simulation de ransomware inclus.
+Vous pouvez utiliser les instructions de cette page pour simuler une falsification de fichiers à des fins de test ou de démonstration de la sécurité des charges de travail à l'aide du script de simulation de falsification de fichiers inclus.
 
 
 
 == Choses à noter avant de commencer
 
-* Le script de simulation de ransomware ne fonctionne que sur Linux.  Le script de simulation doit également générer des alertes de haute confiance dans le cas où l'utilisateur a intégré ONTAP ARP à Workload Security.
+* Le script de simulation de falsification de fichiers fonctionne uniquement sous Linux. Le script de simulation doit également générer des alertes à haute fiabilité dans le cas où l'utilisateur aurait intégré ONTAP ARP à Workload Security.
 * Workload Security détectera les événements et les alertes générés avec NFS 4.1 uniquement si la version ONTAP est 9.15 ou supérieure.
 * Le script est fourni avec les fichiers d’installation de l’agent Workload Security.  Il est disponible sur toute machine sur laquelle un agent Workload Security est installé.
 * Vous pouvez exécuter le script sur la machine de l’agent Workload Security elle-même ; il n’est pas nécessaire de préparer une autre machine Linux.  Cependant, si vous préférez exécuter le script sur un autre système, copiez simplement le script et exécutez-le là-bas.
@@ -158,7 +158,7 @@ Si vous avez mis le collecteur en pause avant de suivre ces étapes, assurez-vou
 
 Avant de créer les fichiers, vous devez d’abord arrêter oulink:task_add_collector_svm.html#play-pause-data-collector["mettre en pause le collecteur de données"] traitement.
 
-Pour générer une alerte Ransomware, vous pouvez exécuter le script inclus qui simulera une alerte ransomware dans Workload Security.
+Pour générer une alerte de falsification de fichier, vous pouvez exécuter le script inclus qui simulera une alerte de falsification de fichier dans Workload Security.
 
 
 
@@ -196,7 +196,7 @@ Remarque : si toutes les conditions suivantes sont remplies, une alerte de haut
 . Le collecteur de données de sécurité de la charge de travail est ajouté en mode Cluster.
 
 
-Workload Security détecte les modèles de ransomware en fonction du comportement de l'utilisateur tandis ONTAP ARP détecte l'activité de ransomware en fonction des activités de chiffrement dans les fichiers.
+Workload Security détecte les schémas de falsification de fichiers en fonction du comportement de l'utilisateur, tandis ONTAP ARP détecte les activités de falsification de fichiers en fonction des activités de chiffrement dans les fichiers.
 
 Si les conditions sont remplies, Workload Security marque les alertes comme alerte de haute confiance.
 
@@ -212,6 +212,6 @@ image:ws_high_confidence_alert_detail.png["Exemple d'alerte de haute confiance, 
 
 == Déclenchement de l'alerte plusieurs fois
 
-Workload Security apprend le comportement de l'utilisateur et ne génère pas d'alertes en cas d'attaques de ransomware répétées dans les 24 heures pour le même utilisateur.
+Workload Security analyse le comportement des utilisateurs et ne génère pas d'alertes en cas d'attaques répétées de falsification de fichiers survenant dans un délai de 24 heures pour un même utilisateur.
 
 Pour générer une nouvelle alerte avec un utilisateur différent, veuillez suivre à nouveau les mêmes étapes (création de données de test puis cryptage des données de test).

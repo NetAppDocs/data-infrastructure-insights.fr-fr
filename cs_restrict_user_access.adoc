@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: cs_restrict_user_access.html 
 keywords: alert, snapshot,  attack 
-summary: 'Avec Workload Security, vous pouvez restreindre l"accès des utilisateurs en cas de suspicion de sabotage' 
+summary: 'Bloquez immédiatement les attaques détectées en restreignant automatiquement ou manuellement l"accès des utilisateurs compromis, afin d"empêcher d"autres dommages aux systèmes de fichiers sur plusieurs volumes de stockage.' 
 ---
-= Blocage de l'accès des utilisateurs
+= Bloquer l'accès des utilisateurs pour stopper les attaques
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,7 @@ summary: 'Avec Workload Security, vous pouvez restreindre l"accès des utilisate
 
 
 [role="lead"]
-Une fois qu'une attaque est détectée, Workload Security peut arrêter l'attaque en bloquant l'accès de l'utilisateur au système de fichiers.  L'accès peut être bloqué automatiquement, à l'aide de politiques de réponse automatisées ou manuellement à partir des pages d'alerte ou de détails de l'utilisateur.
-
-Lorsque vous bloquez l'accès d'un utilisateur, vous devez définir une période de blocage.  Une fois la période sélectionnée terminée, l'accès de l'utilisateur est automatiquement restauré.  Le blocage d'accès est pris en charge pour les protocoles SMB et NFS.
+Interrompez immédiatement les attaques détectées en bloquant l'accès des utilisateurs compromis afin d'empêcher toute nouvelle atteinte aux données ou toute exfiltration de données. La sécurité des charges de travail permet à la fois le blocage automatique via des politiques de réponse automatisées et l'intervention manuelle à partir des pages d'alerte ou de détails de l'utilisateur, vous offrant ainsi un contrôle flexible sur votre réponse de sécurité. Les restrictions d'accès s'appliquent automatiquement à tous les volumes de stockage surveillés et sont limitées dans le temps pour la restauration automatique.
 
 L'utilisateur est directement bloqué pour SMB et l'adresse IP des machines hôtes à l'origine de l'attaque sera bloquée pour NFS.  Ces adresses IP de machine ne pourront pas accéder aux machines virtuelles de stockage (SVM) surveillées par Workload Security.
 
