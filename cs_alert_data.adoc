@@ -28,7 +28,7 @@ Les éléments suivants sont affichés pour chaque alerte :
 
 *Attaques potentielles :*
 
-* Le type d'attaque potentielle (par exemple, Ransomware ou Sabotage)
+* Le type d’attaque potentielle (par exemple, falsification de fichiers ou sabotage)
 * La date et l'heure auxquelles l'attaque potentielle a été _détectée_
 * Le _Statut_ de l'alerte :
 +
@@ -75,13 +75,13 @@ Vous pouvez filtrer les alertes selon les critères suivants :
 
 == La page Détails de l'alerte
 
-Vous pouvez cliquer sur un lien d’alerte sur la page de liste des alertes pour ouvrir une page de détails de l’alerte.  Les détails de l’alerte peuvent varier en fonction du type d’attaque ou d’alerte.  Par exemple, une page de détails d’attaque de ransomware peut afficher les informations suivantes :
+Vous pouvez cliquer sur un lien d'alerte sur la page de la liste des alertes pour ouvrir une page de détails pour l'alerte. Les détails de l'alerte peuvent varier selon le type d'attaque ou d'alerte. Par exemple, une page de détails sur une attaque par falsification de fichiers peut afficher les informations suivantes :
 
 
 
 === Section récapitulative :
 
-* Type d'attaque (ransomware, sabotage) et identifiant d'alerte (attribué par Workload Security)
+* Type d'attaque (falsification de fichiers, sabotage) et ID d'alerte (attribué par la sécurité des charges de travail)
 * Date et heure de détection de l'attaque
 * Action entreprise (par exemple, un instantané automatique a été pris).  L'heure de l'instantané est indiquée immédiatement sous la section récapitulative))
 * Statut (Nouveau, En cours, etc.)
