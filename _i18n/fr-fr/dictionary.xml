@@ -717,9 +717,6 @@
   <block id="8901b7a1034f6e31fa7c2f5929bdd211" category="paragraph"><block ref="8901b7a1034f6e31fa7c2f5929bdd211" category="inline-image-macro-rx" type="image"></block></block>
   <block id="36aed75d347e158fecfc525dc1d66a22" category="section-title">Déclenchement de l'alerte plusieurs fois</block>
   <block id="7000a55791f1de1983f9adc601ad2e4e" category="paragraph">Pour générer une nouvelle alerte avec un utilisateur différent, veuillez suivre à nouveau les mêmes étapes (création de données de test puis cryptage des données de test).</block>
-  <block id="2723c4d559ff96bb42870d86c109708e" category="doc">Vérificateur de taux d'événements SVM (Guide de dimensionnement des agents)</block>
-  <block id="0a2bd44573247d8e7748ce7d2d2a4b8f" category="paragraph">Le vérificateur de taux d'événements est utilisé pour vérifier le taux d'événements combiné NFS/SMB dans le SVM avant d'installer un collecteur de données ONTAP SVM, pour voir combien de SVM une machine agent pourra surveiller.  Utilisez le vérificateur de taux d’événements comme guide de dimensionnement pour vous aider à planifier votre environnement de sécurité.</block>
-  <block id="40202f910a40e1ff8a02506c288b507e" category="paragraph">Un agent peut prendre en charge jusqu'à un maximum de 50 collecteurs de données.</block>
   <block id="3b31c3fb3c507b79d3f86f2b1e3392f5" category="section-title">Exigences:</block>
   <block id="70087224b93e8179deda7438fae8e843" category="list-text">IP de cluster</block>
   <block id="baf16fe3173b840f1197987b16b3a8fc" category="list-text">Nom d'utilisateur et mot de passe de l'administrateur du cluster</block>
@@ -6853,7 +6850,6 @@
   <block id="7a69a2fce9a9acb9c8a84936863c1330" category="paragraph">Notez que si de nouveaux volumes, etc. sont créés sur ONTAP alors que le collecteur est en pause, Workload Security ne collectera pas les données et ces volumes, etc. ne seront pas reflétés dans les tableaux de bord ou les tables.</block>
   <block id="14fe64769d4df689f51e13f60c5ec439" category="admonition">Un collecteur ne peut pas être mis en pause s'il a des utilisateurs restreints.  Restaurez l'accès utilisateur avant de suspendre le collecteur.</block>
   <block id="0d55775dbf06cf5596fe0f5c3363f19a" category="list-text">La purge des instantanés ne se produira pas selon les paramètres configurés sur un collecteur en pause.</block>
-  <block id="f8b4c5607366d38cf806b0860c9cc5e4" category="list-text">Les événements EMS (comme ONTAP ARP) ne seront pas traités sur un collecteur en pause.  Cela signifie que si ONTAP identifie une attaque de ransomware, Data Infrastructure Insights Workload Security ne pourra pas acquérir cet événement.</block>
   <block id="7e41836b686c17a31fd348a24ad244d1" category="list-text">Les e-mails de notifications de santé ne seront PAS envoyés pour un collecteur en pause.</block>
   <block id="3683774ed8a4e1ec359bda17c740e07d" category="list-text">Les actions manuelles ou automatiques (telles que le snapshot ou le blocage d'utilisateur) ne seront pas prises en charge sur un collecteur en pause.</block>
   <block id="fa80f305470263b5f75374e020afeacd" category="list-text">Lors des mises à niveau de l'agent ou du collecteur, des redémarrages/redémarrages de la machine virtuelle de l'agent ou du redémarrage du service de l'agent, un collecteur en pause restera dans l'état _Paused_.</block>
@@ -12697,4 +12693,12 @@
   <block id="ec054c68e1c4c037a34f69b34cbcf8ae" category="list-text">Le type d’attaque potentielle (par exemple, falsification de fichiers ou sabotage)</block>
   <block id="5d6d5d308daaaae7ed88d035f629ea81" category="paragraph">Vous pouvez cliquer sur un lien d'alerte sur la page de la liste des alertes pour ouvrir une page de détails pour l'alerte. Les détails de l'alerte peuvent varier selon le type d'attaque ou d'alerte. Par exemple, une page de détails sur une attaque par falsification de fichiers peut afficher les informations suivantes :</block>
   <block id="a93ee3ea015fa995d5cf6a3a088e6f7b" category="list-text">Type d'attaque (falsification de fichiers, sabotage) et ID d'alerte (attribué par la sécurité des charges de travail)</block>
+  <block id="f8bdbc77da683d1b2ca16732bb4d002a" category="doc">Vérificateur de taux d'événements : Guide de dimensionnement des agents</block>
+  <block id="bada0c7fb23bdf61ed978484adc0aca1" category="paragraph">Déterminez la taille optimale des machines Agent en mesurant les débits d'événements NFS et SMB générés par vos SVM avant de déployer les collecteurs de données. Le script Event Rate Checker vous aide à comprendre les limites de capacité (maximum 50 collecteurs de données par Agent) et garantit que votre infrastructure Agent peut gérer le volume d'événements attendu pour une détection fiable des menaces.</block>
+  <block id="0c71d53cc58e4ed316ec358109fe1aa2" category="section-title">Points à noter pour ONTAP Multi Admin Verify (MAV)</block>
+  <block id="808c106d880adde347d6a92e2e5ff7d0" category="paragraph">Certaines fonctionnalités, telles que la création et la suppression d'instantanés ou le blocage des utilisateurs (SMB), peuvent ne pas fonctionner en fonction des commandes MAV ajoutées dans votre version de ONTAP.</block>
+  <block id="65616ef887eaf295f980029948d91e79" category="paragraph">Suivez les étapes ci-dessous pour ajouter des exclusions à vos commandes MAV afin de permettre à Workload Security de créer ou de supprimer des instantanés et de bloquer des utilisateurs.</block>
+  <block id="87f1c49b01ac2f7b86716ee6218bc5f6" category="paragraph">Commandes pour autoriser la création et la suppression d'instantanés :</block>
+  <block id="7842bb93d1b19afc39c751d0dddcf4ac" category="paragraph">Commande pour autoriser le blocage des utilisateurs :</block>
+  <block id="6a1af23a5137b0b5dbe87d4b59b0deeb" category="list-text">Les événements EMS (comme ONTAP ARP) ne seront pas traités sur un collecteur suspendu. Cela signifie que si ONTAP identifie une attaque de falsification de fichier, Data Infrastructure Insights Workload Security ne pourra pas acquérir cet événement.</block>
 </blocks>

@@ -4,7 +4,7 @@ permalink: concept_cs_event_rate_checker.html
 summary: 'Utilisez l"outil de vérification du taux d"événements SVM pour mesurer les taux d"événements NFS/SMB et déterminer la taille optimale de l"agent avant de déployer les collecteurs de données Workload Security.' 
 keywords: event, checker, rate, sizing, cloud secure 
 ---
-= Vérificateur de taux d'événements SVM (Guide de dimensionnement des agents)
+= Vérificateur de taux d'événements : Guide de dimensionnement des agents
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,7 @@ keywords: event, checker, rate, sizing, cloud secure
 
 
 [role="lead"]
-Le vérificateur de taux d'événements est utilisé pour vérifier le taux d'événements combiné NFS/SMB dans le SVM avant d'installer un collecteur de données ONTAP SVM, pour voir combien de SVM une machine agent pourra surveiller.  Utilisez le vérificateur de taux d’événements comme guide de dimensionnement pour vous aider à planifier votre environnement de sécurité.
-
-Un agent peut prendre en charge jusqu'à un maximum de 50 collecteurs de données.
+Déterminez la taille optimale des machines Agent en mesurant les débits d'événements NFS et SMB générés par vos SVM avant de déployer les collecteurs de données. Le script Event Rate Checker vous aide à comprendre les limites de capacité (maximum 50 collecteurs de données par Agent) et garantit que votre infrastructure Agent peut gérer le volume d'événements attendu pour une détection fiable des menaces.
 
 
 

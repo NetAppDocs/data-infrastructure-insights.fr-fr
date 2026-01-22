@@ -112,6 +112,23 @@ image:ws_test_connection_success_example.png["Message de réussite « Test de c
 
 
 
+== Points à noter pour ONTAP Multi Admin Verify (MAV)
+
+Certaines fonctionnalités, telles que la création et la suppression d'instantanés ou le blocage des utilisateurs (SMB), peuvent ne pas fonctionner en fonction des commandes MAV ajoutées dans votre version de ONTAP.
+
+Suivez les étapes ci-dessous pour ajouter des exclusions à vos commandes MAV afin de permettre à Workload Security de créer ou de supprimer des instantanés et de bloquer des utilisateurs.
+
+Commandes pour autoriser la création et la suppression d'instantanés :
+
+....
+multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !*cloudsecure_*"
+multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !*cloudsecure_*"
+....
+Commande pour autoriser le blocage des utilisateurs :
+
+ multi-admin-verify rule delete -operation set
+
+
 == Conditions préalables au blocage de l'accès utilisateur
 
 Gardez à l’esprit les points suivants pourlink:cs_restrict_user_access.html["Blocage de l'accès utilisateur"] :
@@ -318,7 +335,7 @@ NOTE: Un collecteur ne peut pas être mis en pause s'il a des utilisateurs restr
 Gardez à l’esprit les points suivants :
 
 * La purge des instantanés ne se produira pas selon les paramètres configurés sur un collecteur en pause.
-* Les événements EMS (comme ONTAP ARP) ne seront pas traités sur un collecteur en pause.  Cela signifie que si ONTAP identifie une attaque de ransomware, Data Infrastructure Insights Workload Security ne pourra pas acquérir cet événement.
+* Les événements EMS (comme ONTAP ARP) ne seront pas traités sur un collecteur suspendu. Cela signifie que si ONTAP identifie une attaque de falsification de fichier, Data Infrastructure Insights Workload Security ne pourra pas acquérir cet événement.
 * Les e-mails de notifications de santé ne seront PAS envoyés pour un collecteur en pause.
 * Les actions manuelles ou automatiques (telles que le snapshot ou le blocage d'utilisateur) ne seront pas prises en charge sur un collecteur en pause.
 * Lors des mises à niveau de l'agent ou du collecteur, des redémarrages/redémarrages de la machine virtuelle de l'agent ou du redémarrage du service de l'agent, un collecteur en pause restera dans l'état _Paused_.
