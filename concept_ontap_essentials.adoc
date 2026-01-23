@@ -7,6 +7,10 @@ keywords: dashboard, widget, ontap, overview, insight
 = ONTAP Essentials
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -72,9 +76,9 @@ image:DataProtectionDashboard_ClusterList.png["Liste des groupes de protection d
 
 == Sécurité
 
-Le tableau de bord de sécurité vous donne une vue instantanée de votre situation de sécurité actuelle, en affichant des graphiques pour le chiffrement du volume matériel et logiciel, l'état anti-ransomware et les méthodes d'authentification du cluster.  Les critères de sécurité sont évalués sur la base des recommandations définies dans lelink:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["* Guide de renforcement de la sécurité NetApp pour ONTAP 9*"] .
+Le tableau de bord de sécurité vous offre une vue instantanée de votre situation de sécurité actuelle, affichant des graphiques pour le chiffrement du volume matériel et logiciel, l'état de la protection contre la falsification des fichiers et les méthodes d'authentification du cluster. Les critères de sécurité sont évalués sur la base des recommandations définies dans le link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["* Guide de renforcement de la sécurité NetApp pour ONTAP 9*"].
 
-Sélectionnez l’un des nombres de chiffrement ou d’anti-ransomware pour plonger dans votre environnement.
+Sélectionnez l'un des comptes de chiffrement ou de protection contre la falsification de fichiers pour explorer votre environnement.
 
 image:OE_SecurityDashboard.png["Tableau de bord de sécurité ONTAP Essentials"]
 

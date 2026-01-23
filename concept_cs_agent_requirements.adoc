@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_agent_requirements.html 
-summary: 'Assurez-vous que votre environnement de déploiement de l"agent de sécurité des charges de travail respecte les exigences minimales en matière de système d"exploitation, de processeur, de mémoire et d"espace disque pour des performances et une collecte de données optimales.' 
+summary: 'Les agents Workload Security nécessitent des spécifications particulières en matière de système d"exploitation, de processeur, de mémoire et d"espace disque pour surveiller efficacement l"accès aux fichiers et détecter les menaces de sécurité dans votre infrastructure de stockage.' 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
 = Exigences relatives à l'agent de sécurité de la charge de travail
@@ -14,7 +14,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 
 
 [role="lead"]
-Vous devezlink:task_cs_add_agent.html["installer un agent de sécurité de charge de travail"] afin d'acquérir des informations auprès de vos collecteurs de données. Avant d'installer l'agent, assurez-vous que votre environnement répond aux exigences du système d'exploitation, du processeur, de la mémoire et de l'espace disque.
+Déployez les agents de sécurité des charges de travail sur des serveurs dédiés répondant aux exigences minimales en matière de système d'exploitation, de processeur, de mémoire et d'espace disque afin de garantir des performances optimales de surveillance et de détection des menaces. Ce guide spécifie la configuration matérielle et réseau requise avant link:task_cs_add_agent.html["installation de votre Workload Security Agent"], notamment les distributions Linux prises en charge, les règles de connectivité réseau et les recommandations de dimensionnement du système.
 
 [cols="36,60"]
 |===

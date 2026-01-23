@@ -1,18 +1,22 @@
 ---
 sidebar: sidebar 
 permalink: concept_querying_assets.html 
-summary: Présentation des requêtes 
+summary: 'Interrogez les ressources d"inventaire et les indicateurs d"intégration pour surveiller, dépanner et analyser les performances de l"ensemble de votre infrastructure, y compris les ressources de stockage, de calcul et de réseau.' 
 keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, Host, Internal Volume, iSCSI, Network, Portal, Path, Port, Qtree, Quota, Share, Storage, Node, Pool, SVM, Switch, Tape, VMDK, Virtual Machine, VM, Volume, Zone, Member 
 ---
-= Ressources utilisées dans les requêtes
+= Interrogation des assets et des métriques
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Les requêtes vous permettent de surveiller et de dépanner votre réseau en recherchant les ressources et les mesures de votre locataire à un niveau granulaire en fonction de critères sélectionnés par l'utilisateur (par exemple, des annotations).
+Interrogez les ressources physiques et virtuelles de votre infrastructure pour surveiller les performances, résoudre les problèmes et effectuer des recherches précises selon des critères personnalisés comme des annotations. Data Infrastructure Insights permet d’interroger différents types de ressources — des baies de stockage et hôtes aux applications et machines virtuelles — ainsi que d’intégrer des indicateurs provenant de Kubernetes, Docker et ONTAP Advanced Data pour une visibilité complète.
 
-Notez que les règles d'annotation, qui attribuent automatiquement des annotations aux ressources, _nécessitent_ une requête.
+Notez que les règles d'annotation, qui attribuent automatiquement des annotations aux ressources, nécessitent une requête partagée avec tout le monde. Voir ci-dessous pour plus d'informations sur le partage des requêtes.
 
 Vous pouvez interroger les actifs d'inventaire physiques ou virtuels (et leurs métriques associées) sur votre locataire, ou les métriques fournies avec l'intégration telle que Kubernetes ou ONTAP Advanced Data.
 
@@ -20,34 +24,7 @@ Vous pouvez interroger les actifs d'inventaire physiques ou virtuels (et leurs m
 
 == Actifs d'inventaire
 
-Les types d'actifs suivants peuvent être utilisés dans les requêtes, les widgets de tableau de bord et les pages de destination d'actifs personnalisés.  Les champs et compteurs disponibles pour les filtres, les expressions et l'affichage varient selon les types d'actifs.  Tous les actifs ne peuvent pas être utilisés dans tous les types de widgets.
-
-* Application
-* Magasin de données
-* Disque
-* Tissu
-* Dispositif générique
-* Hôte
-* Volume interne
-* Session iSCSI
-* Portail réseau iSCSI
-* Chemin
-* Port
-* Qtree
-* Quota
-* Partager
-* Stockage
-* Nœud de stockage
-* Piscine de stockage
-* Machine virtuelle de stockage (SVM)
-* Changer
-* Ruban adhésif
-* VMDK
-* Machine virtuelle
-* Volume
-* Zone
-* Membre de la zone
-
+Tous les types d'actifs d'inventaire (également appelés infrastructure) (stockage, switch, VM, Application, etc.) peuvent être utilisés dans les requêtes, les widgets de tableau de bord et les pages d'accueil personnalisées des actifs. Les champs et compteurs disponibles pour les filtres, les expressions et l'affichage varient selon les types d'actifs.
 
 
 
@@ -56,3 +33,14 @@ Les types d'actifs suivants peuvent être utilisés dans les requêtes, les widg
 Outre l'interrogation des actifs d'inventaire et de leurs mesures de performances associées, vous pouvez également interroger les mesures de *données d'intégration*, telles que celles générées par Kubernetes ou Docker, ou fournies avec ONTAP Advanced Metrics.
 
 image:QueryPageFilter.png["Exemple de filtre de requête d'intégration"]
+
+
+
+== Partage de requêtes
+
+Contrôlez l'accès à vos requêtes en choisissant qui peut les consulter et les modifier. Par défaut, les nouvelles requêtes sont privées et visibles uniquement par vous, et vous pouvez choisir de les partager avec des utilisateurs spécifiques ou avec l'ensemble de votre organisation grâce à des niveaux d'autorisation flexibles (lecture seule ou modification).
+
+Vous pouvez choisir de partager la requête avec Everyone ou avec certains utilisateurs, avec des autorisations de modification ou de lecture seule.
+
+
+NOTE: Les utilisateurs disposant de l'autorisation Account Owner peuvent voir toutes les requêtes, quel que soit le paramètre de confidentialité.

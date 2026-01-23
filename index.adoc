@@ -25,7 +25,7 @@ Data Infrastructure Insights fournit une surveillance multicloud hybride, vous o
 * Optimiser l'utilisation des ressources
 * Tableaux de bord intégrés ou personnalisables avec des filtres avancés pour minimiser le bruit d'affichage afin de répondre aux questions
 * Découvrez l'état de santé de vos opérations de stockage ONTAP 
-* Protégez votre actif commercial le plus précieux – les données – contre les attaques de rançongiciel ou de destruction de données
+* Protégez votre atout commercial le plus précieux – les données – contre la falsification de fichiers ou les attaques de destruction de données
 
 
 '''
