@@ -14,6 +14,56 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Avant de pouvoir commencer à travailler avec Data Infrastructure Insights, vous devez vous inscrire sur le portail * NetApp Console*.  Si vous disposez déjà d'une connexion à la NetApp Console , vous pouvez démarrer un essai gratuit de Data Infrastructure Insights en quelques étapes rapides.
+Avant de pouvoir utiliser Data Infrastructure Insights, vous devez vous inscrire sur le portail NetApp Console. Si vous possédez déjà un identifiant NetApp Console, vous pouvez démarrer un essai gratuit de Data Infrastructure Insights en quelques étapes rapides.
 
-Ces instructions sont en cours de mise à jour. Veuillez consulter cette page ultérieurement.
+
+
+== Création de votre compte NetApp Console
+
+Pour commencer à utiliser les services cloud de NetApp, rendez-vous sur link:https://console.netapp.com/["* NetApp Console*"^] et cliquez sur *Commencer*.
+
+* Si vous n'êtes pas encore inscrit, sélectionnez *Sign Up*
+* Saisissez une adresse e-mail professionnelle valide et choisissez un mot de passe.
+* Entrez le nom de votre entreprise et votre nom complet.
+* Acceptez les conditions générales et sélectionnez *Continue*.
+* Console vous guidera tout au long de son processus de démarrage.
+
+
+
+
+=== Que se passe-t-il si j'ai déjà un identifiant NetApp Console ?
+
+Une fois que vous avez un compte NetApp Console, il vous suffit de choisir *Se connecter* sur la page du portail link:https://console.netapp.com/["NetApp Console"].
+
+Sélectionnez votre organisation dans le menu déroulant en haut de l'écran.
+
+Dans le menu principal en haut à gauche, sélectionnez *Governance > Data Infrastructure Insights*.
+
+
+
+== Démarrage de votre essai gratuit Data Infrastructure Insights
+
+Lorsque vous êtes prêt à commencer, sélectionnez *Démarrer l'essai gratuit de 30 jours*. Choisissez la région dans laquelle héberger votre site et suivez les autres instructions.
+
+Veuillez noter que vous devez disposer du rôle "Org Admin" pour pouvoir créer le site DII.
+
+Console vous informe lorsque votre site Data Infrastructure Insights (DII) est prêt pour l'intégration. Sélectionnez le bouton *Start onboarding* pour configurer votre site.
+
+Si à tout moment vous quittez le processus d'intégration avant qu'il ne soit terminé, il vous suffit de vous reconnecter à Console pour *Finish onboarding*.
+
+Une fois l'intégration terminée, Console vous informe que votre tenant est prêt à l'emploi. Sélectionnez Launch Data Infrastructure Insights* pour commencer. Notez que certaines données seront immédiatement disponibles (inventaire, etc.), tandis que d'autres peuvent nécessiter un délai d'acquisition avant d'être exploitables (surveillance des performances, etc.).
+
+
+
+== Déconnexion
+
+Pour vous déconnecter de Data Infrastructure Insights, cliquez sur votre *Nom d'utilisateur* et sélectionnez *Déconnexion*.
+
+
+NOTE: Se déconnecter de Data Infrastructure Insights vous déconnecte de Console. Vous serez également déconnecté des autres services Cloud NetApp qui utilisent la connexion Console.
+
+
+
+=== Délai d'inactivité
+
+Par défaut, Console déconnectera un utilisateur s'il n'y a aucune activité pendant six heures (360 minutes). Quelle que soit l'activité, les utilisateurs seront déconnectés après sept jours.

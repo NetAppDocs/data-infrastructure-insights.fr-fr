@@ -67,13 +67,13 @@ Voici les exigences pour la configuration de cette source de données :
 | Champ | Description 
 
 
-| Adresse IP de l'hôte StorageGRID | Adresse IP virtuelle de gestion de l'appliance StorageGRID 
+| Adresse IP de l'hôte StorageGRID | Adresse IP de gestion du StorageGRID (Grid Manager) 
 
 
-| Nom d'utilisateur | Nom utilisé pour se connecter à l'appliance StorageGRID 
+| Nom d'utilisateur | Nom utilisé pour se connecter à StorageGRID (Grid Manager) 
 
 
-| Mot de passe | Mot de passe utilisé pour se connecter à l'appliance StorageGRID 
+| Mot de passe | Mot de passe utilisé pour se connecter à StorageGRID (Grid Manager) 
 |===
 
 
