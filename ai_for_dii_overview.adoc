@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: ai_for_dii_overview.html 
+keywords: ai, 
+summary: 'Vous pouvez utiliser l"assistant IA de DII pour synthétiser vos données, explorer des insights, résoudre des problèmes et planifier vos ressources.' 
+---
+= Data Infrastructure Insights Assistant IA
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L’*assistant IA Data Infrastructure Insights* est conçu pour vous aider à exploiter plus efficacement vos données d’infrastructure. Il peut vous aider à analyser des informations, à découvrir des insights, à résoudre des défis opérationnels et à prendre des décisions éclairées concernant vos ressources.
+
+[NOTE]
+====
+L'assistant IA de DII est disponible en version d'essai limitée. link:/concept_preview_features.html["Apprendre encore plus"] à propos des fonctionnalités en avant-première de Data Infrastructure Insights.
+
+L'assistant IA est disponible pour les locataires DII déployés sur AWS uniquement.
+
+====
+image:ai_assistant_sample_question.png["Exemple de question d'AI Assistant"]
+
+
+
+== Découvrez le nouveau partenaire intelligent de votre infrastructure
+
+L'Assistant IA transforme la façon dont vous interagissez avec vos données, transformant des requêtes complexes en conversations simples. Découvrez instantanément des schémas cachés, accélérez le dépannage et prenez des décisions fondées sur les données en toute confiance. Obtenez des réponses instantanées à des questions comme :
+
+* Comment puis-je configurer un moniteur pour qu'il alerte en cas de latence inacceptable persistante ?
+* Quels sont les principaux pools de stockage présentant le taux d'utilisation le plus élevé dans l'environnement ?
+* Combien d'alertes ont été générées au cours de la dernière heure ?
+* Quels sont les types de journaux les plus couramment collectés ?
+* Quels hôtes présentent le taux d'utilisation du processeur le plus élevé ?
+* Quels types d'actifs sont disponibles pour la surveillance dans l'environnement?
+* Existe-t-il des alertes critiques actuellement actives ?
+* Quel est l'état de santé général des systèmes de stockage ?
+* Quelles machines virtuelles consomment le plus de mémoire ?
+* Combien de moniteurs sont configurés dans le système ?
+
+
+
+
+== Avant d'utiliser l'assistant IA
+
+* L'assistant IA est conçu pour vous aider. Bien qu'il s'efforce d'être précis, il est fortement recommandé de vérifier ses résultats avec une supervision humaine pour de meilleurs résultats.
+* Pour votre sécurité et celle de vos collègues, veuillez ne pas saisir d'informations personnellement identifiables (PII).
+* Pour contribuer à la sécurité de vos données, veuillez ne pas saisir d'informations sensibles ou d'information confidentielle.
+* Lisez le link:https://www.netapp.com/pdf.html?item=/media/71584-netapp-data-processing-addendum.pdf["NetApp Data Processing Addendum relatif au traitement des données"] et le link:https://www.netapp.com/company/legal/privacy-policy/["Politique de confidentialité NetApp"].
+
+
+
+
+== L'assistant IA travaille avec vous
+
+L'assistant IA de DII peut vous aider à répondre à des questions concernant les données de votre infrastructure informatique. Pour ce faire efficacement, il doit comprendre votre demande ainsi que quelles données spécifiques sont nécessaires pour répondre à votre demande.
+
+Le système DII contient différents types de données, notamment :
+
+* Télémétrie des ressources (hôtes, stockage, VMs, etc.)
+* Métriques du lac de données (Kubernetes, NetApp Storage, VMware)
+* Journaux provenant de différents systèmes
+* Alertes pouvant indiquer des anomalies
+
+
+Pour une expérience optimale, fournissez à l'assistant des informations spécifiques concernant :
+
+* Le type de données que vous souhaitez analyser (par exemple, des actifs, des indicateurs ou des systèmes spécifiques),
+* La période qui vous intéresse, et
+* Tout type de problème spécifique qui vous préoccupe (problèmes de performance, problèmes de capacité, erreurs, etc.)
+
+
+
+
+== Accès à l'assistant
+
+Pour appeler l'assistant IA DII, sélectionnez simplement l'icône de hibou dans le coin inférieur de l'écran. Un utilisateur avec le rôle « Owner » doit accepter les conditions générales avant que tout utilisateur puisse utiliser l'assistant IA sur votre tenant.
+
+image:ai_assistant_icon.png["dii_ai_assistant_icon"]

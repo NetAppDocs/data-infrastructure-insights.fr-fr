@@ -18,6 +18,66 @@ NetApp améliore et optimise continuellement ses produits et services.  Voici qu
 
 
 
+== Février 2026
+
+
+
+=== Réponses intelligentes instantanées concernant votre infrastructure
+
+Découvrez le nouvel allié intelligent de votre infrastructure : le *Data Infrastructure Insights AI Assistant* transforme la façon dont vous interagissez avec vos données, en convertissant des requêtes complexes en conversations simples. Décelez instantanément des schémas cachés, accélérez le dépannage et prenez des décisions fondées sur les données en toute confiance. Obtenez des réponses instantanées à des questions telles que :
+
+* Comment puis-je configurer un moniteur pour qu'il alerte en cas de latence inacceptable persistante ?
+* Quels sont les principaux pools de stockage présentant le taux d'utilisation le plus élevé dans l'environnement ?
+* Combien d'alertes ont été générées au cours de la dernière heure ?
+
+
+L'aperçu de l'assistant IA de DII est désormais disponible pour la plupart des clients dont le service est hébergé sur les régions AWS ; la région Azure sera bientôt disponible. link:concept_preview_features.html["Apprendre encore plus"] à propos des fonctionnalités en préversion de Data Infrastructure Insights. image:ai_assistant_icon.png["icône d’assistant IA"]
+
+
+
+=== Améliorations de la surveillance
+
+
+
+==== Personnalisez les moniteurs système plus rapidement, sans duplication
+
+Modifiez directement les moniteurs système par défaut selon vos besoins—changez les noms, les filtres et les regroupements en un seul endroit. Plus besoin de créer des moniteurs en double pour de simples ajustements. Une bannière pratique vous rappelle quels moniteurs ont été personnalisés, maintenant une visibilité complète sur votre configuration de surveillance.
+
+
+
+==== Rationalisez la gestion des moniteurs grâce aux actions groupées
+
+Gérez plusieurs moniteurs simultanément grâce aux actions groupées. Ajustez rapidement les paramètres de Health Monitoring pour des groupes de moniteurs, ce qui vous fait gagner du temps et réduit la complexité. Mettez à jour votre stratégie de surveillance en quelques secondes, pas en quelques minutes.
+
+
+
+==== Concentrez vos scores de santé d'infrastructure sur ce qui compte le plus
+
+Excluez des objets spécifiques de vos scores d'intégrité de l'infrastructure pour maintenir la précision et la pertinence. Lorsque vous consultez votre tableau de bord d'intégrité de l'infrastructure, supprimez instantanément les objets que vous souhaitez déprioriser sans modifier la configuration du moniteur. Cela concentre vos alertes sur les éléments d'infrastructure qui soutiennent vos priorités métier.
+
+image:health_monitoring_exclude_object.png["exclure l'objet de la surveillance de l'état de santé"]
+
+
+
+=== Prise en charge du système d'exploitation
+
+Les systèmes d'exploitation Linux suivants sont actuellement pris en charge avec Data Infrastructure Insights link:concept_acquisition_unit_requirements.html["Unités d'acquisition"]:
+
+* AlmaLinux 9.5 et 10
+* Centos (64 bits) : Stream 9
+* Debian (64-bit) : 11 à 13
+* OpenSUSE Leap 15.2 à 15.6, 16
+* Oracle Enterprise Linux (64-bit) : 8.10, 9.2, 9.4, 9.6, 10
+* Red Hat (64-bit) : 8.10, 9.2, 9.4, 9.6, 10
+* Rocky 9.2 à 9.6
+* SUSE Linux Enterprise Server 15 SP4 à 15 SP7, 16
+* Ubuntu Server : 20.04, 22.04, 24.04 LTS
+* SELinux sur les plateformes ci-dessus
+
+
+'''
+
+
 == Décembre 2025
 
 
