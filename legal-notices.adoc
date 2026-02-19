@@ -47,6 +47,4 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 Les fichiers d'avis fournissent des informations sur les droits d'auteur et les licences tiers utilisés dans les logiciels NetApp .
 
-link:media/DII_ON-PREM_Notice_Nov2025.pdf["Avis concernant Data Infrastructure Insights (anciennement Cloud Insights), fenêtre=_blank"]
-
-link:media/DII_WS_Notice_Nov2025.pdf["Avis relatif à la sécurité des charges de travail (anciennement Cloud Secure), fenêtre=_blank"]
+link:media/DII_Notice_Feb_2026.pdf["Avis concernant Data Infrastructure Insights (including Workload Security), window=_blank"]
