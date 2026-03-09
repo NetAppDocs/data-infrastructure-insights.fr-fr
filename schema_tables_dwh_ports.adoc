@@ -1,0 +1,351 @@
+---
+sidebar: sidebar 
+permalink: schema_tables_dwh_ports.html 
+summary: Tables et relations du schéma de la base de données dwh_ports 
+keywords: dwh, data warehouse, schema, reporting 
+---
+= Référence du schéma de base de données pour dwh_ports
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cette référence fournit des informations détaillées sur le schéma de la base de données dwh_ports, notamment la structure des tables, les définitions des champs, les types de données et les relations.
+
+
+
+== Tables et vues
+
+
+
+=== cardinaux
+
+[cols="1,1,2"]
+|===
+| Champ | Type | Description 
+
+
+| chiffre | Entier | Un nombre compris entre 0 et 99 
+|===
+'''
+
+
+=== dimension_de_l'appareil_connecté
+
+*Clé primaire :* tk
+
+[cols="1,1,2"]
+|===
+| Champ | Type | Description 
+
+
+| tk | Entier | Clé technique 
+
+
+| nom | Chaîne | Nom de l'appareil 
+
+
+| fabricant | Chaîne | Fabricant de l'appareil 
+
+
+| modèle | Chaîne | Modèle de l'appareil 
+
+
+| type | Chaîne | Type de l'appareil 
+
+
+| micrologiciel | Chaîne | Version du firmware en cours d'exécution sur l'appareil 
+
+
+| id | Long | L'identifiant de l'appareil 
+
+
+| dernière | Chaîne | Dernier drapeau 
+|===
+*Relations*
+
+* ports_fact (un-à-plusieurs)
+
+
+'''
+
+
+=== dimension de date
+
+[cols="1,1,2"]
+|===
+| Champ | Type | Description 
+
+
+| tk | Entier | Clé technique 
+
+
+| fullDate | DateTimeOffset | Date complète 
+
+
+| dayInMonth | Octet | Jour du mois 
+
+
+| dayInYear | Entier | Jour de l'année 
+
+
+| dateYear | Entier | Année 
+
+
+| yearLabel | Chaîne | Étiquette de l'année 
+
+
+| monthNum | Octet | Numéro du mois 
+
+
+| monthLabel | Chaîne | Étiquette du mois 
+
+
+| dayInWeekNum | Octet | Numéro du jour de la semaine 
+
+
+| trimestre | Octet | Trimestre 
+
+
+| quarterLabel | Chaîne | Étiquette de trimestre 
+
+
+| dayInQuarter | Entier | Jour dans le trimestre 
+
+
+| repQuarter | Octet | Trimestre représentatif 
+
+
+| repMonth | Octet | Mois représentatif 
+
+
+| repWeek | Octet | Semaine représentative 
+
+
+| repDay | Octet | Journée représentative 
+
+
+| repMonthOrLatest | Octet | Mois représentatif ou le plus récent 
+
+
+| sspFlag | Octet | Drapeau SSP 
+
+
+| dernière | Chaîne | Dernier drapeau 
+
+
+| avenir | Chaîne | Drapeau futur 
+|===
+*Relations*
+
+* ports_fact (un-à-plusieurs)
+
+
+'''
+
+
+=== port_dimension
+
+[cols="1,1,2"]
+|===
+| Champ | Type | Description 
+
+
+| tk | Entier | Clé technique 
+
+
+| wwn | Chaîne | World Wide Name 
+
+
+| nom | Chaîne | Nom du port 
+
+
+| gbicType | Chaîne | Type de GBIC 
+
+
+| type | Chaîne | Type de port 
+
+
+| vitesse | Chaîne | Vitesse du port 
+
+
+| isGenerated | Chaîne | Drapeau généré 
+
+
+| url | Chaîne | URL de référence 
+
+
+| id | Long | Identifiant unique 
+
+
+| dernière | Chaîne | Dernier drapeau 
+
+
+| dateTk | Entier | Clé technique de date 
+|===
+*Relations*
+
+* ports_fact (un-à-plusieurs)
+
+
+'''
+
+
+=== ports_fact
+
+*Clé primaire :* tk
+
+[cols="1,1,2"]
+|===
+| Champ | Type | Description 
+
+
+| tk | Entier | Clé technique 
+
+
+| dateTk | Entier | Clé technique de date 
+
+
+| switchTk | Entier | Basculer la clé technique 
+
+
+| connectedDeviceTk | Entier | Clé technique de l'appareil connecté 
+
+
+| portTk | Entier | Clé technique du port 
+
+
+| fabric | Chaîne | Nom du fabric ou WWN 
+
+
+| vitesse | Chaîne | Vitesse du port 
+
+
+| connectivityType | Chaîne | Type de connectivité 
+
+
+| type | Chaîne | Type de port 
+
+
+| statut | Chaîne | État du port 
+|===
+*Relations*
+
+* dimension_périphérique_connecté (plusieurs-à-un)
+* port_dimension (plusieurs-à-un)
+* date_dimension (plusieurs-à-un)
+* switch_dimension (plusieurs-à-un)
+
+
+'''
+
+
+=== ports_fact_current
+
+[cols="1,1,2"]
+|===
+| Champ | Type | Description 
+
+
+| tk | Entier | Clé technique 
+
+
+| dateTk | Entier | Clé technique de date 
+
+
+| switchTk | Entier | Basculer la clé technique 
+
+
+| connectedDeviceTk | Entier | Clé technique de l'appareil connecté 
+
+
+| portTk | Entier | Clé technique du port 
+
+
+| fabric | Chaîne | Nom du fabric ou WWN 
+
+
+| vitesse | Chaîne | Vitesse du port 
+
+
+| connectivityType | Chaîne | Type de connectivité 
+
+
+| type | Chaîne | Type de port 
+
+
+| statut | Chaîne | État du port 
+|===
+'''
+
+
+=== switch_dimension
+
+[cols="1,1,2"]
+|===
+| Champ | Type | Description 
+
+
+| tk | Entier | Clé technique 
+
+
+| wwn | Chaîne | World Wide Name 
+
+
+| nom | Chaîne | Nom du commutateur 
+
+
+| identifiant | Chaîne | Identifiant de commutateur 
+
+
+| ip | Chaîne | adresse IP 
+
+
+| modèle | Chaîne | Modèle de commutateur 
+
+
+| fabricant | Chaîne | Fabricant 
+
+
+| micrologiciel | Chaîne | Version du micrologiciel 
+
+
+| serialNumber | Chaîne | Numéro de série 
+
+
+| valeur actuelle nette | Chaîne | indicateur de mode NPV 
+
+
+| isGenerated | Chaîne | Drapeau généré 
+
+
+| type | Chaîne | Type de commutateur 
+
+
+| url | Chaîne | URL de référence 
+
+
+| id | Long | Identifiant unique 
+
+
+| dernière | Chaîne | Dernier drapeau 
+
+
+| dateTk | Entier | Clé technique de date 
+
+
+| dataCenter | Chaîne | Emplacement du centre de données 
+
+
+| switchLevel | Chaîne | Niveau de commutation 
+|===
+*Relations*
+
+* ports_fact (un-à-plusieurs)
+
+
+'''

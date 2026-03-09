@@ -17,3 +17,10 @@ keywords: coming soon, preview,
 Data Infrastructure Insights met en évidence les nouvelles fonctionnalités et fonctionnalités de manière _Aperçu_.  Les fonctionnalités d'aperçu sont disponibles dans des environnements limités ou à une capacité limitée.
 
 Si vous souhaitez prévisualiser une ou plusieurs de ces fonctionnalités, contactez votre équipe commerciale NetApp pour plus d'informations.
+
+
+
+== Aperçus actuels :
+
+* link:ai_for_dii_overview.html["Data Infrastructure Insights Assistant IA"] aperçu.
+

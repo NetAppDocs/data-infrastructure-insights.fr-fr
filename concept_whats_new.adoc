@@ -24,14 +24,16 @@ NetApp améliore et optimise continuellement ses produits et services.  Voici qu
 
 === Réponses intelligentes instantanées concernant votre infrastructure
 
-Découvrez le nouvel allié intelligent de votre infrastructure : le *Data Infrastructure Insights AI Assistant* transforme la façon dont vous interagissez avec vos données, en convertissant des requêtes complexes en conversations simples. Décelez instantanément des schémas cachés, accélérez le dépannage et prenez des décisions fondées sur les données en toute confiance. Obtenez des réponses instantanées à des questions telles que :
+Découvrez le nouvel allié intelligent de votre infrastructure : le link:ai_for_dii_overview.html["*Data Infrastructure Insights Assistant IA d'analyse des infrastructures de données*"] transforme la façon dont vous interagissez avec vos données, transformant les requêtes complexes en conversations simples. Identifiez instantanément des schémas cachés, accélérez le dépannage et prenez des décisions fondées sur les données en toute confiance. Obtenez des réponses instantanées à des questions telles que :
 
 * Comment puis-je configurer un moniteur pour qu'il alerte en cas de latence inacceptable persistante ?
 * Quels sont les principaux pools de stockage présentant le taux d'utilisation le plus élevé dans l'environnement ?
 * Combien d'alertes ont été générées au cours de la dernière heure ?
 
 
-L'aperçu de l'assistant IA de DII est désormais disponible pour la plupart des clients dont le service est hébergé sur les régions AWS ; la région Azure sera bientôt disponible. link:concept_preview_features.html["Apprendre encore plus"] à propos des fonctionnalités en préversion de Data Infrastructure Insights. image:ai_assistant_icon.png["icône d’assistant IA"]
+L'aperçu de l'assistant IA de DII est désormais disponible pour la plupart des clients dont le service est hébergé sur les régions AWS ; la région Azure sera bientôt disponible. link:concept_preview_features.html["Apprendre encore plus"] à propos des fonctionnalités en avant-première de Data Infrastructure Insights.
+
+image:ai_assistant_icon.png["icône d’assistant IA"]
 
 
 

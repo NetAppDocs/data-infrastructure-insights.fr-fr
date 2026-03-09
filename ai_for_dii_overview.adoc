@@ -18,7 +18,7 @@ L’*assistant IA Data Infrastructure Insights* est conçu pour vous aider à ex
 
 [NOTE]
 ====
-L'assistant IA de DII est disponible en version d'essai limitée. link:/concept_preview_features.html["Apprendre encore plus"] à propos des fonctionnalités en avant-première de Data Infrastructure Insights.
+L'assistant IA de DII est disponible en version d'essai limitée. link:concept_preview_features.html["Apprendre encore plus"] à propos des fonctionnalités en avant-première de Data Infrastructure Insights.
 
 L'assistant IA est disponible pour les locataires DII déployés sur AWS uniquement.
 
