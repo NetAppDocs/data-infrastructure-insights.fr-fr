@@ -284,6 +284,9 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 | link:task_config_telegraf_redis.html["Redis"] | Service 
 
 
+| lien:task_dc_redhat_openshift virtualization.html[Red Hat OpenShift Virtualization ] | Infrastructure 
+
+
 | link:task_config_telegraf_rethinkdb.html["Repenser la base de données"] | Service 
 
 
