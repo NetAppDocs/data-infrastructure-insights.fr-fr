@@ -47,9 +47,6 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 | link:task_dc_ms_azure.html["Machines virtuelles et VHD Azure"] | Infrastructure 
 
 
-| link:task_dc_brocade_bna.html["Conseiller réseau Brocade (BNA)"] | Infrastructure 
-
-
 | link:task_dc_brocade_fc_switch.html["Commutateurs Fibre Channel Brocade"] | Infrastructure 
 
 
@@ -126,9 +123,6 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 
 
 | link:task_config_telegraf_flink.html["Flink"] | Service 
-
-
-| link:task_dc_fujitsu_eternus.html["Fujitsu ETERNUS DX"] | Infrastructure 
 
 
 | link:task_dc_google_cloud.html["Google Compute et Stockage"] | Infrastructure 
@@ -221,12 +215,6 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 | link:task_dc_na_cloud_volumes_ontap.html["NetApp Cloud Volumes ONTAP"] | Infrastructure 
 
 
-| link:task_dc_na_cloud_connection.html["Connexion au cloud NetApp pour ONTAP 9.9+"] | Infrastructure 
-
-
-| link:task_dc_na_7mode.html["NetApp Data ONTAP 7-Mode"] | Infrastructure 
-
-
 | link:task_dc_na_eseries.html["NetApp Série E"] | Infrastructure 
 
 
@@ -282,6 +270,9 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 
 
 | link:task_config_telegraf_puppetagent.html["Agent marionnette"] | Service 
+
+
+| link:task_dc_pure_flashblade.html["Pure FlashBlade"] | Infrastructure 
 
 
 | link:task_dc_pure_flasharray.html["Baie Flash Pure Storage"] | Infrastructure 
