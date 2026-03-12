@@ -7,6 +7,10 @@ summary: 'L"API Data Infrastructure Insights permet l"intégration avec d"autres
 = API Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -77,7 +81,7 @@ Consultez les pages Swagger pour des exemples spécifiques à l'API que vous sou
 
 L'API Data Infrastructure Insights est basée sur des catégories et contient actuellement les types suivants :
 
-* Le type ASSETS contient des API d'actifs, de requêtes et de recherche.
+* Le type ASSETS contient les API d'actif, de requête et de recherche. Les attributs et les métriques d'actif DII sont parfois appelés « odata ». Les API pour ceux-ci sont généralement accessibles via /rest/v1/asset ou /rest/v1/query. Voir le <<api-documentation-swagger,Documentation de l'API Swagger>> pour plus d'informations.
 +
 ** Actifs : énumérer les objets de niveau supérieur et récupérer un objet spécifique ou une hiérarchie d’objets.
 ** Requête : récupérez et gérez les requêtes Data Infrastructure Insights .
@@ -86,13 +90,13 @@ L'API Data Infrastructure Insights est basée sur des catégories et contient ac
 
 
 * Le type COLLECTE DE DONNÉES est utilisé pour récupérer et gérer les collecteurs de données.
-* Le type d'INGESTION DE DONNÉES est utilisé pour récupérer et gérer les données d'ingestion et les métriques personnalisées, telles que celles des agents Telegraf
+* Le type DATA INGESTION est utilisé pour récupérer et gérer les données d’ingestion et les métriques personnalisées, telles que celles provenant des agents Telegraf. Celles-ci sont parfois appelées « datalake » ou « lake » métriques. Les API pour celles-ci sont généralement accessibles via /rest/v1/lake. Voir le <<api-documentation-swagger,Documentation de l'API Swagger>> pour plus d’informations.
 * L'INGESTION DE JOURNAUX est utilisée pour récupérer et gérer les données de journaux
 
 
 Des types et/ou API supplémentaires peuvent devenir disponibles au fil du temps.  Vous pouvez trouver les dernières informations sur l'API dans lelink:#api-documentation-swagger["Documentation de l'API Swagger"] .
 
-Notez que les types d’API auxquels un utilisateur a accès dépendent également de lalink:concept_user_roles.html["Rôle de l'utilisateur"] ils ont dans chaque ensemble de fonctionnalités Data Infrastructure Insights (surveillance, sécurité de la charge de travail, reporting).
+Notez que les types d'API auxquels un utilisateur a accès dépendent également du link:concept_user_roles.html["Rôle de l'utilisateur"] dont il dispose dans chaque ensemble de fonctionnalités Data Infrastructure Insights (Observabilité, Sécurité des charges de travail, Rapports).
 
 
 

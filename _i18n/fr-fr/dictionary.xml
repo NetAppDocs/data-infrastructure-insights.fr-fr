@@ -34,18 +34,15 @@
   <block id="302f46075983be9c47bafd103c8fbf36" category="paragraph">Consultez les pages Swagger pour des exemples spécifiques à l'API que vous souhaitez utiliser.</block>
   <block id="45268bdcc9ffe3a5807e75085e768efb" category="section-title">Type d'API</block>
   <block id="14b84a3791e7a10fe4d65ea9a7ff7363" category="paragraph">L'API Data Infrastructure Insights est basée sur des catégories et contient actuellement les types suivants :</block>
-  <block id="16d532fd527f8b9de1c866f621fb7569" category="list-text">Le type ASSETS contient des API d'actifs, de requêtes et de recherche.</block>
   <block id="bf9403ca9242451b7ef055feae5711bb" category="list-text">Actifs : énumérer les objets de niveau supérieur et récupérer un objet spécifique ou une hiérarchie d’objets.</block>
   <block id="90782e54bcf29265124126b5b3be24ad" category="list-text">Requête : récupérez et gérez les requêtes Data Infrastructure Insights .</block>
   <block id="c9de14b5a5af8684e29a00e86f5ea9f1" category="list-text">Importer : importer des annotations ou des applications et les affecter à des objets</block>
   <block id="cfce3085ae85f2087671061798f85476" category="list-text">Recherche : localisez un objet spécifique sans connaître l'ID unique ou le nom complet de l'objet.</block>
   <block id="c7ff46f17aacbcc8f9caba752c2fd410" category="list-text">Le type COLLECTE DE DONNÉES est utilisé pour récupérer et gérer les collecteurs de données.</block>
-  <block id="c13a40ffc26f5f762f6de126cf232cf5" category="list-text">Le type d'INGESTION DE DONNÉES est utilisé pour récupérer et gérer les données d'ingestion et les métriques personnalisées, telles que celles des agents Telegraf</block>
   <block id="e2838ba9f29d27f412035bd037388732" category="list-text">L'INGESTION DE JOURNAUX est utilisée pour récupérer et gérer les données de journaux</block>
   <block id="c99f25325f86d3f0c79c43f7e35c908e" category="inline-link-macro">Documentation de l'API Swagger</block>
   <block id="133f61531451649a036c6c806600058c" category="paragraph">Des types et/ou API supplémentaires peuvent devenir disponibles au fil du temps.  Vous pouvez trouver les dernières informations sur l'API dans le<block ref="26737cef142923769504b229d3be204d" category="inline-link-macro-rx"></block> .</block>
   <block id="7bc31a95e4a1ee6f8948af20440df0c6" category="inline-link-macro">Rôle de l'utilisateur</block>
-  <block id="63c9291ffc47b71cb537e7ecab415dab" category="paragraph">Notez que les types d’API auxquels un utilisateur a accès dépendent également de la<block ref="ead2141fb682d81a2f0b1deca7bb95c5" category="inline-link-macro-rx"></block> ils ont dans chaque ensemble de fonctionnalités Data Infrastructure Insights (surveillance, sécurité de la charge de travail, reporting).</block>
   <block id="f62c375c71b04a523593c5019e4aa100" category="section-title">Parcours d'inventaire</block>
   <block id="475ea4ca6d29c1eb379b49090f81aea7" category="paragraph">Cette section décrit comment parcourir une hiérarchie d'objets Data Infrastructure Insights .</block>
   <block id="c22744ffcc9ee65a97cb166bcf41b4f4" category="section-title">Objets de niveau supérieur</block>
@@ -14547,4 +14544,7 @@
   <block id="dd0f9294fa313d494966ae16cbe89435" category="paragraph">L'assistant IA Data Infrastructure Insights est disponible en avant-première et inclut désormais les améliorations suivantes :</block>
   <block id="e609c64ff8e8c15f1ce845903ca2db7e" category="list-text">Disponibilité de la région Azure : Pour les clients dont le site DII est hébergé sur Azure, le DII Assistant est désormais prêt à vous aider.</block>
   <block id="056a97d89a4b6d30acf8e9b86d3ed172" category="list-text">Jusqu'à 7 jours de données : L'Assistant peut désormais accéder à jusqu'à 7 jours de métriques haute résolution, permettant une analyse de données et des insights plus larges.</block>
+  <block id="e43d8f702818ecf5597859f98ff1e993" category="list-text">Le type ASSETS contient les API d'actif, de requête et de recherche. Les attributs et les métriques d'actif DII sont parfois appelés « odata ». Les API pour ceux-ci sont généralement accessibles via /rest/v1/asset ou /rest/v1/query. Voir le <block ref="622b990b99495c7072e19eb08becc13e" category="inline-xref-macro-rx"></block> pour plus d'informations.</block>
+  <block id="627c6b105244e1b95d64a8f71c382473" category="list-text">Le type DATA INGESTION est utilisé pour récupérer et gérer les données d’ingestion et les métriques personnalisées, telles que celles provenant des agents Telegraf. Celles-ci sont parfois appelées « datalake » ou « lake » métriques. Les API pour celles-ci sont généralement accessibles via /rest/v1/lake. Voir le <block ref="622b990b99495c7072e19eb08becc13e" category="inline-xref-macro-rx"></block> pour plus d’informations.</block>
+  <block id="d14a20e4ad37ea89f3a29854e5a1934c" category="paragraph">Notez que les types d'API auxquels un utilisateur a accès dépendent également du <block ref="ead2141fb682d81a2f0b1deca7bb95c5" category="inline-link-macro-rx"></block> dont il dispose dans chaque ensemble de fonctionnalités Data Infrastructure Insights (Observabilité, Sécurité des charges de travail, Rapports).</block>
 </blocks>
