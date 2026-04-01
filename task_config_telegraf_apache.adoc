@@ -7,10 +7,17 @@ summary: Configuration du collecteur de données Apache
 = Collecteur de données Apache
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Ce collecteur de données permet la collecte de données à partir des serveurs Apache sur votre locataire.
+
+
+NOTE: Ce collector est obsolète. Il ne sera plus disponible à partir de janvier 2027.
 
 .Prérequis
 * Votre serveur HTTP Apache doit être configuré et fonctionner correctement.

@@ -233,9 +233,6 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 | link:task_dc_na_ontap_rest.html["Collecteur NetApp ONTAP REST"] | Infrastructure 
 
 
-| link:task_dc_na_ontap_afx.html["NetApp ONTAP AFX"] | Infrastructure 
-
-
 | link:task_dc_na_ontap_all_san_array.html["Collecteur NetApp ONTAP ASA r2 (All-SAN Array)"] | Infrastructure 
 
 
@@ -272,13 +269,16 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 | link:task_config_telegraf_puppetagent.html["Agent marionnette"] | Service 
 
 
-| link:task_dc_pure_flashblade.html["Pure FlashBlade"] | Infrastructure 
-
-
 | link:task_dc_pure_flasharray.html["Baie Flash Pure Storage"] | Infrastructure 
 
 
+| link:task_dc_pure_flashblade.html["Pure Storage FlashBlade"] | Infrastructure 
+
+
 | link:task_dc_redhat_virtualization.html["Virtualisation Red Hat"] | Infrastructure 
+
+
+| link:task_dc_redhat_openshift_virtualization.html["Red Hat OpenShift Virtualization"] | Infrastructure 
 
 
 | link:task_config_telegraf_redis.html["Redis"] | Service 

@@ -14,7 +14,7 @@ summary: Configuration du collecteur de données Red Hat Virtualization.
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur de données Red Hat Virtualization pour collecter des données d'inventaire à partir de charges de travail Linux et Microsoft Windows virtualisées.
+Le collecteur de données DII pour Red Hat Virtualization prend également en charge le projet open source oVirt, et Oracle Linux Virtualization Manager. Ce collecteur de données communique via une API REST avec l’interface HTTPS du poste de gestion.
 
 
 
@@ -47,9 +47,9 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 == Exigences
 
-* Adresse IP du serveur RHEV sur le port 443 via l'API REST
+* Adresse IP/nom d'hôte du serveur RHV/oVirt/OLVM sur le port 443 via l'API REST
 * Nom d'utilisateur et mot de passe en lecture seule
-* RHEV Version 3.0+
+* RHV Version 3.0+/Ovirt 4.0+/OLVM 4.0+
 
 
 
@@ -61,13 +61,13 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 | Champ | Description 
 
 
-| Adresse IP du serveur RHEV | Adresse IP du système de stockage 
+| Adresse IP du serveur RHV/Ovirt/OLVM | Adresse IP de la station de gestion 
 
 
-| Nom d'utilisateur | Nom d'utilisateur avec privilèges d'administrateur 
+| Nom d'utilisateur | Nom d'utilisateur 
 
 
-| Mot de passe pour le compte privilégié administrateur | Mot de passe 
+| Mot de passe | Mot de passe 
 |===
 
 
@@ -82,6 +82,12 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 | Intervalle d'interrogation de l'inventaire (min) | La valeur par défaut est de 20 minutes. 
+
+
+| Performances de la machine virtuelle | Activer la collecte des performances 
+
+
+| Intervalle d'interrogation des performances (sec) | La valeur par défaut est 900 
 |===
 
 

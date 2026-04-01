@@ -7,6 +7,10 @@ summary: Configuration du collecteur de données VMware.
 = Configuration du collecteur de données VMware VSphere
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

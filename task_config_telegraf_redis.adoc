@@ -7,10 +7,17 @@ summary: Configuration du collecteur de données Redis
 = Collecteur de données Redis
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Redis.  Redis est un magasin de structures de données open source en mémoire utilisé comme base de données, cache et courtier de messages, prenant en charge les structures de données suivantes : chaînes, hachages, listes, ensembles, etc.
+
+
+NOTE: Ce collector est obsolète. Il ne sera plus disponible à partir de janvier 2027.
 
 
 

@@ -7,10 +7,17 @@ summary: Configuration du collecteur de données Hadoop
 = Collecteur de données Hadoop
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Hadoop.
+
+
+NOTE: Ce collector est obsolète. Il ne sera plus disponible à partir de janvier 2027.
 
 
 

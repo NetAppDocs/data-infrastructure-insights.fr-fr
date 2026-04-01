@@ -7,10 +7,17 @@ summary: Configuration du collecteur de données Flink
 = Collecteur de données Flink
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques de Flink.
+
+
+NOTE: Ce collector est obsolète. Il ne sera plus disponible à partir de janvier 2027.
 
 
 

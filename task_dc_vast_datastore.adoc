@@ -7,6 +7,10 @@ summary: Configuration du collecteur de données de stockage VAST Data DataStore
 = Collecteur de données VAST DataStore
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
