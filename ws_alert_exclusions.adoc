@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: ws_alert_exclusions.html 
+keywords: workload security, cloud secure, include list, allowed, file types, ransomware, tampering, exclusion, alerts 
+summary: 'Ajoutez les extensions de fichiers à une liste d"exclusion d"alertes pour réduire l"alerte.' 
+---
+= Exclusions d'alerte
+:allow-uri-read: 
+
+
+[role="lead"]
+Si une tentative de falsification de fichier est détectée pour une extension de fichier connue et que des alertes sont générées sur l'écran des alertes, cette extension peut être ajoutée à une liste d'exclusions d'alertes afin d'éviter les alertes inutiles. Cette liste peut également être considérée comme une liste de types de fichiers autorisés, car Workload Security permettra à ces fichiers de contourner les alertes de falsification.
+
+Accédez à *Sécurité des charges de travail > Politiques* et allez dans l’onglet _Exclusions d’alerte_.
+
+image:ws_alert_exclusions_list.png["Types de fichiers autorisés à être exclus des alertes"]
+
+Une fois ajouté à la liste des types de fichiers autorisés, aucun avertissement de tentative de falsification de fichiers ne sera généré pour ce type de fichier. Notez que la politique d'exclusion des alertes s'applique uniquement à la détection de falsification de fichiers.
+
+Par exemple, si un fichier nommé _test.txt_ est renommé en _test.txt.abc_ et que Workload Security détecte une tentative de falsification de fichier en raison de l’extension _.abc_, cette extension peut être ajoutée à la liste des types de fichiers autorisés. Après avoir été ajoutée à la liste, les attaques de falsification de fichiers ne seront plus générées contre les fichiers avec l’extension _.abc_.
+
+Les types de fichiers autorisés peuvent être des correspondances exactes (par exemple, « .abc ») ou des expressions (par exemple, « *.type », « .type* » ou « .*type* »). Les expressions de types « .a*c », « .p*f » ne sont pas prises en charge.
+
+Les attributs supplémentaires « Défini par » et « Date de définition » ont été introduits à des fins d'audit. Les types de fichiers existants seront migrés vers le nouveau format avec la valeur « migrée » pour ces deux attributs.
