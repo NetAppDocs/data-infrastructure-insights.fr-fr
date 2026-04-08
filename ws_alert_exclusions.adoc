@@ -9,16 +9,31 @@ summary: 'Ajoutez les extensions de fichiers à une liste d"exclusion d"alertes 
 
 
 [role="lead"]
-Si une tentative de falsification de fichier est détectée pour une extension de fichier connue et que des alertes sont générées sur l'écran des alertes, cette extension peut être ajoutée à une liste d'exclusions d'alertes afin d'éviter les alertes inutiles. Cette liste peut également être considérée comme une liste de types de fichiers autorisés, car Workload Security permettra à ces fichiers de contourner les alertes de falsification.
+L'exclusion d'alertes vous permet de désactiver la génération d'alertes pour certains types de fichiers, utilisateurs et chemins de répertoires. Utilisez cette fonction pour réduire les faux positifs en excluant les activités connues et attendues qui pourraient autrement correspondre aux modèles d'alerte.
 
-Accédez à *Sécurité des charges de travail > Politiques* et allez dans l’onglet _Exclusions d’alerte_.
+L'exclusion des alertes est configurée par locataire et comprend les éléments suivants :
 
-image:ws_alert_exclusions_list.png["Types de fichiers autorisés à être exclus des alertes"]
+. Types de fichiers : supprimer les alertes de falsification de fichiers sur certains link:ws_allowed_file_types.html["extensions de fichiers"]
+. Utilisateurs : supprimer les alertes déclenchées par les utilisateurs sélectionnés.
+. Chemins : supprimer les alertes d’activité sur les chemins de répertoire sélectionnés (jusqu’à quatre niveaux de répertoire, en commençant par le chemin de jonction).
 
-Une fois ajouté à la liste des types de fichiers autorisés, aucun avertissement de tentative de falsification de fichiers ne sera généré pour ce type de fichier. Notez que la politique d'exclusion des alertes s'applique uniquement à la détection de falsification de fichiers.
 
-Par exemple, si un fichier nommé _test.txt_ est renommé en _test.txt.abc_ et que Workload Security détecte une tentative de falsification de fichier en raison de l’extension _.abc_, cette extension peut être ajoutée à la liste des types de fichiers autorisés. Après avoir été ajoutée à la liste, les attaques de falsification de fichiers ne seront plus générées contre les fichiers avec l’extension _.abc_.
+L'exclusion des types de fichiers (également connue sous le nom de « politiques de types de fichiers autorisés ») a été mise à jour et décrite dans link:ws_allowed_file_types.html["Types de fichiers autorisés"].
 
-Les types de fichiers autorisés peuvent être des correspondances exactes (par exemple, « .abc ») ou des expressions (par exemple, « *.type », « .type* » ou « .*type* »). Les expressions de types « .a*c », « .p*f » ne sont pas prises en charge.
+La liste d'exclusion des utilisateurs est prise en charge par la saisie semi-automatique, permettant aux administrateurs de sélectionner les utilisateurs à exclure des alertes.
 
-Les attributs supplémentaires « Défini par » et « Date de définition » ont été introduits à des fins d'audit. Les types de fichiers existants seront migrés vers le nouveau format avec la valeur « migrée » pour ces deux attributs.
+L'exclusion de répertoire prend en charge jusqu'à quatre niveaux de chemins de répertoire, en commençant par le chemin de jonction.
+
+Il est possible d'ajouter ou de supprimer des utilisateurs individuels et des chemins d'accès à la liste d'exclusion correspondante. Chaque entrée de chaque liste contient l'information de la date et de l'auteur de son ajout à la liste, et ces informations seront utilisées à des fins d'audit.
+
+
+
+== Gérer les exclusions et l’audit
+
+* Les administrateurs peuvent ajouter ou supprimer des extensions de fichiers, des utilisateurs individuels ou des chemins à tout moment.
+* Chaque entrée d'exclusion enregistre le nom de l'administrateur qui l'a définie et la date à laquelle elle a été définie. Ces informations sont conservées à des fins d'audit.
+
+
+image:ws_alert_exclusions_users.png[""]
+
+image:ws_alert_exclusions_paths.png[""]
