@@ -11,14 +11,14 @@ summary: 'Ajoutez les extensions de fichiers à une liste d"exclusion d"alertes 
 [role="lead"]
 L'exclusion d'alertes vous permet de désactiver la génération d'alertes pour certains types de fichiers, utilisateurs et chemins de répertoires. Utilisez cette fonction pour réduire les faux positifs en excluant les activités connues et attendues qui pourraient autrement correspondre aux modèles d'alerte.
 
+Accédez à *Sécurité des charges de travail > Politiques* et sélectionnez l'onglet *Exclusions d'alertes*.
+
 L'exclusion des alertes est configurée par locataire et comprend les éléments suivants :
 
-. Types de fichiers : supprimer les alertes de falsification de fichiers sur certains link:ws_allowed_file_types.html["extensions de fichiers"]
+. Types de fichiers : supprimer les alertes de falsification de fichiers sur certains <<allowed-file-types,Types de fichiers autorisés>>
 . Utilisateurs : supprimer les alertes déclenchées par les utilisateurs sélectionnés.
 . Chemins : supprimer les alertes d’activité sur les chemins de répertoire sélectionnés (jusqu’à quatre niveaux de répertoire, en commençant par le chemin de jonction).
 
-
-L'exclusion des types de fichiers (également connue sous le nom de « politiques de types de fichiers autorisés ») a été mise à jour et décrite dans link:ws_allowed_file_types.html["Types de fichiers autorisés"].
 
 La liste d'exclusion des utilisateurs est prise en charge par la saisie semi-automatique, permettant aux administrateurs de sélectionner les utilisateurs à exclure des alertes.
 
@@ -37,3 +37,19 @@ Il est possible d'ajouter ou de supprimer des utilisateurs individuels et des ch
 image:ws_alert_exclusions_users.png[""]
 
 image:ws_alert_exclusions_paths.png[""]
+
+
+
+== Types de fichiers autorisés
+
+Les extensions de fichiers peuvent être ajoutées à une liste de _types de fichiers autorisés_ afin d'éviter les alertes inutiles.
+
+Sélectionnez *+Type de fichier* pour ajouter des types de fichiers à la liste des types de fichiers autorisés pour l’alerte.
+
+image:ws_allowed_file_types.png["Ajouter les types de fichiers autorisés"]
+
+Une fois ajouté à la liste des _types de fichiers autorisés_, aucune alerte d'attaque par falsification de fichiers ne sera générée pour ce type de fichier autorisé. Notez que la politique relative aux _Types de fichiers autorisés_ ne s'applique qu'à la détection des falsifications de fichiers.
+
+Par exemple, si un fichier nommé _test.txt_ est renommé en _test.txt.abc_ et que Workload Security détecte une attaque de ransomware en raison de l’extension _.abc_, cette extension peut être ajoutée à la liste des _types de fichiers autorisés_. Après avoir été ajoutée à la liste, les attaques de ransomware ne seront plus générées contre les fichiers avec l’extension _.abc_.
+
+Les types de fichiers autorisés peuvent être des correspondances exactes (par exemple, « .abc ») ou des expressions (par exemple, ++.*type++, ++.type*++ ou ++.*type*++). Les expressions de types .a*c, .p*f ne sont pas prises en charge.
