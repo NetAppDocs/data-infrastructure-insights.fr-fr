@@ -3830,8 +3830,6 @@
   <block id="8b71307bde3e4b16765dbb61a626d4d2" category="cell">Infrastructures</block>
   <block id="d0dbaa8b32b0761ae3d382c5f69eec7e" category="inline-link-macro">Amazon FSx for NetApp ONTAP</block>
   <block id="29528f054166735f3e8a10f7fc97f3dd" category="cell"><block ref="29528f054166735f3e8a10f7fc97f3dd" category="inline-link-macro-rx"></block></block>
-  <block id="dd57e20cd92616b296702d64e87157c5" category="inline-link-macro">Apache</block>
-  <block id="cdabe8157e2d526c86c5a9f42bb64196" category="cell"><block ref="cdabe8157e2d526c86c5a9f42bb64196" category="inline-link-macro-rx"></block></block>
   <block id="c2ba7e785c49050f48da9aacc45c2b85" category="cell">Service</block>
   <block id="5b84ca419c785f62e8188c3f45b8c047" category="inline-link-macro">Azure NetApp Files</block>
   <block id="c570274e8fb013719523945c6aff02f1" category="cell"><block ref="c570274e8fb013719523945c6aff02f1" category="inline-link-macro-rx"></block></block>
@@ -3843,12 +3841,6 @@
   <block id="882354c20e5e22e1c581f6c0c24ef8f3" category="cell"><block ref="882354c20e5e22e1c581f6c0c24ef8f3" category="inline-link-macro-rx"></block></block>
   <block id="751c56d4bc32408c8b9a749fde003348" category="inline-link-macro">Commutateurs Cisco MDS Fabric</block>
   <block id="2f3138d0aac5600187c6f65f57b477fb" category="cell"><block ref="2f3138d0aac5600187c6f65f57b477fb" category="inline-link-macro-rx"></block></block>
-  <block id="945c02f6d5f273e491007dc000803f2b" category="inline-link-macro">Consul</block>
-  <block id="92776125f8fcfc83b8be3669f03e1d65" category="cell"><block ref="92776125f8fcfc83b8be3669f03e1d65" category="inline-link-macro-rx"></block></block>
-  <block id="a7208c8a668149dcf89f029181253a3a" category="inline-link-macro">Couchbase</block>
-  <block id="d55c8cd95cdac92d4c178b4fd279818f" category="cell"><block ref="d55c8cd95cdac92d4c178b4fd279818f" category="inline-link-macro-rx"></block></block>
-  <block id="910171730f703b2a74781b9a60f4d722" category="inline-link-macro">CouchDB</block>
-  <block id="ffc3a04dc6c4bfb92811e130a88c26ac" category="cell"><block ref="ffc3a04dc6c4bfb92811e130a88c26ac" category="inline-link-macro-rx"></block></block>
   <block id="fed2b89570c5c27f515afdba0f485a51" category="inline-link-macro">Cohesity SmartFiles</block>
   <block id="114e1ad704707526c811f7952ae68dac" category="cell"><block ref="114e1ad704707526c811f7952ae68dac" category="inline-link-macro-rx"></block></block>
   <block id="89ca80bcecfdda81a3f7dd5bbeade8e0" category="inline-link-macro">Domaine de données Dell EMC</block>
@@ -3883,20 +3875,10 @@
   <block id="ea3c92725757cbb010390789bba2f55f" category="cell"><block ref="ea3c92725757cbb010390789bba2f55f" category="inline-link-macro-rx"></block></block>
   <block id="469e8e26b0503dd087b56d4f4b5dd4ee" category="inline-link-macro">Série Dell XC</block>
   <block id="00fa997499e236483733c1406625ee4f" category="cell"><block ref="00fa997499e236483733c1406625ee4f" category="inline-link-macro-rx"></block></block>
-  <block id="ae9d27f42457beac1bfe6e70497a90b5" category="inline-link-macro">Docker</block>
-  <block id="653e8a033ab3b5f6f67f2ce35d708714" category="cell"><block ref="653e8a033ab3b5f6f67f2ce35d708714" category="inline-link-macro-rx"></block></block>
-  <block id="192764775ba7120e77ee75a73096a928" category="inline-link-macro">Elasticsearch</block>
-  <block id="3a1038b8fbe1e88b4f3c1b247da07798" category="cell"><block ref="3a1038b8fbe1e88b4f3c1b247da07798" category="inline-link-macro-rx"></block></block>
-  <block id="39ba7675313c799c9b706c8928b535f6" category="inline-link-macro">Flink</block>
-  <block id="f1161d8aad902843d64ca7e6b3db0f14" category="cell"><block ref="f1161d8aad902843d64ca7e6b3db0f14" category="inline-link-macro-rx"></block></block>
   <block id="12087a5da9bcdb90a9ac3a7931c38b46" category="inline-link-macro">Google Compute et Stockage</block>
   <block id="8e0a555918ddd0d3171e923d8ec8927b" category="cell"><block ref="8e0a555918ddd0d3171e923d8ec8927b" category="inline-link-macro-rx"></block></block>
   <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp Volumes</block>
   <block id="3b2e5f3c488708db173b7fd97e0aec26" category="cell"><block ref="3b2e5f3c488708db173b7fd97e0aec26" category="inline-link-macro-rx"></block></block>
-  <block id="acb8200ee9d222d44b844f3f6ab17edd" category="inline-link-macro">Hadoop</block>
-  <block id="80158babf2e718b60d89ecb491c7d72d" category="cell"><block ref="80158babf2e718b60d89ecb491c7d72d" category="inline-link-macro-rx"></block></block>
-  <block id="f0a62e21e31a88d32ac29f1de37f4040" category="inline-link-macro">HAProxy</block>
-  <block id="923c2b7b6bf8434f014fa9867397df18" category="cell"><block ref="923c2b7b6bf8434f014fa9867397df18" category="inline-link-macro-rx"></block></block>
   <block id="62dd5c1e27983ad17b7254c4cc306f53" category="inline-link-macro">Plateforme de contenu Hitachi (HCP)</block>
   <block id="8e139263b721acc0c596309c52dfbf3f" category="cell"><block ref="8e139263b721acc0c596309c52dfbf3f" category="inline-link-macro-rx"></block></block>
   <block id="f7baa79dfa525f00a6e9ea9201563d3f" category="inline-link-macro">Suite de commandes Hitachi Vantara</block>
@@ -3925,28 +3907,14 @@
   <block id="aefade54e98cd7371f59451e66e87772" category="cell"><block ref="aefade54e98cd7371f59451e66e87772" category="inline-link-macro-rx"></block></block>
   <block id="7bb9ab9ce759d6128f8287d6341a6cc7" category="inline-link-macro">Infinidat InfiniBox</block>
   <block id="9f81139458ddf1ff4b43e369e44bccf1" category="cell"><block ref="9f81139458ddf1ff4b43e369e44bccf1" category="inline-link-macro-rx"></block></block>
-  <block id="223066c3f7784272f091f021b3219e37" category="inline-link-macro">Java</block>
-  <block id="f19051436c1e47891328604e2b4136f4" category="cell"><block ref="f19051436c1e47891328604e2b4136f4" category="inline-link-macro-rx"></block></block>
-  <block id="7e1a6b1b3e5bead0d381dda0b3e60144" category="inline-link-macro">Kafka</block>
-  <block id="fdcc9e9c235185bfe7c27a319b11562d" category="cell"><block ref="fdcc9e9c235185bfe7c27a319b11562d" category="inline-link-macro-rx"></block></block>
-  <block id="c9d4149e950dd13f5d01136a3b3dc2ad" category="inline-link-macro">Capacité</block>
-  <block id="7acb3e28f57b502428d14c300b1b0a35" category="cell"><block ref="7acb3e28f57b502428d14c300b1b0a35" category="inline-link-macro-rx"></block></block>
-  <block id="00a674292851f68b1b3f085a4bff1de6" category="inline-link-macro">Kibana</block>
-  <block id="48047e4c3f58331228bccfbfdf20f816" category="cell"><block ref="48047e4c3f58331228bccfbfdf20f816" category="inline-link-macro-rx"></block></block>
   <block id="b00f8bc92c87c005a66b8f84aa943f22" category="inline-link-macro">Kubernetes</block>
   <block id="c74bfaee9dd9d6bc97968a50b9386641" category="cell"><block ref="c74bfaee9dd9d6bc97968a50b9386641" category="inline-link-macro-rx"></block></block>
   <block id="9c213cb7b5d19c2f29b16c443a8abfd6" category="inline-link-macro">Série Lenovo HX</block>
   <block id="cb794264bdd8eabce9d96fe3669eb8ba" category="cell"><block ref="cb794264bdd8eabce9d96fe3669eb8ba" category="inline-link-macro-rx"></block></block>
-  <block id="fa836c8f852703c79e684718602d15f3" category="inline-link-macro">Memcached</block>
-  <block id="126d3fe0d1082a69b5d94b09b5bc3c76" category="cell"><block ref="126d3fe0d1082a69b5d94b09b5bc3c76" category="inline-link-macro-rx"></block></block>
   <block id="b10bdb60d29ba046adcdfada8800a230" category="inline-link-macro">Azure NetApp Files</block>
   <block id="5896ee18dcf26df71e901a9e205503e0" category="cell"><block ref="5896ee18dcf26df71e901a9e205503e0" category="inline-link-macro-rx"></block></block>
   <block id="6f1a3043874f52a650659582deddb01d" category="inline-link-macro">Microsoft Hyper-V</block>
   <block id="28a188dda210d6eebb45f569e96ce7b9" category="cell"><block ref="28a188dda210d6eebb45f569e96ce7b9" category="inline-link-macro-rx"></block></block>
-  <block id="0962588ff732485386c4aa04082a9722" category="inline-link-macro">MongoDB</block>
-  <block id="56577342da99ae2000bb389a5006c3f7" category="cell"><block ref="56577342da99ae2000bb389a5006c3f7" category="inline-link-macro-rx"></block></block>
-  <block id="270085566d6200c501fde2aada153de2" category="inline-link-macro">MySQL</block>
-  <block id="4d9746bceefe2b6bd2586d1c3e4d2733" category="cell"><block ref="4d9746bceefe2b6bd2586d1c3e4d2733" category="inline-link-macro-rx"></block></block>
   <block id="b988e43525055930d8d214d3116d4c04" category="inline-link-macro">NetApp Cloud Volumes ONTAP</block>
   <block id="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="cell"><block ref="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="inline-link-macro-rx"></block></block>
   <block id="0311befd4f8a4eb64d5f02957a8b1d99" category="inline-link-macro">NetApp Série E</block>
@@ -3969,30 +3937,14 @@
   <block id="57040b5a97b9c3f914160c530c365368" category="cell"><block ref="57040b5a97b9c3f914160c530c365368" category="inline-link-macro-rx"></block></block>
   <block id="8124f78b3dc0adc61f125a212506e7c5" category="inline-link-macro">NetApp StorageGRID</block>
   <block id="bccb4b0afd740bce8564f30b1575abc3" category="cell"><block ref="bccb4b0afd740bce8564f30b1575abc3" category="inline-link-macro-rx"></block></block>
-  <block id="2ce86ca668360cd5a4aa994b023607f3" category="inline-link-macro">Netstat</block>
-  <block id="e83beef99ed3a882a508ed6758b0623f" category="cell"><block ref="e83beef99ed3a882a508ed6758b0623f" category="inline-link-macro-rx"></block></block>
-  <block id="2791ea973ba9d17f5ed1e60cab074d80" category="inline-link-macro">Nginx</block>
-  <block id="10ed695aba947068c6448f4978433b94" category="cell"><block ref="10ed695aba947068c6448f4978433b94" category="inline-link-macro-rx"></block></block>
-  <block id="afa2c3f8ad15d9cebdd7a4ec402fef17" category="inline-link-macro">Nœud</block>
-  <block id="d4df4178129288e74d306d474f41121d" category="cell"><block ref="d4df4178129288e74d306d474f41121d" category="inline-link-macro-rx"></block></block>
   <block id="c7a56e9ede426bcb6ef8adebfa167f5b" category="inline-link-macro">Série Nutanix NX</block>
   <block id="9935d13e4384b8045cffd7789defe14c" category="cell"><block ref="9935d13e4384b8045cffd7789defe14c" category="inline-link-macro-rx"></block></block>
-  <block id="a1b8b82e2c6dab4ba2762641402e6184" category="inline-link-macro">OpenZFS</block>
-  <block id="f5a800ee25a815f4c8c0d66efcf7438d" category="cell"><block ref="f5a800ee25a815f4c8c0d66efcf7438d" category="inline-link-macro-rx"></block></block>
   <block id="a2c92312bc8a9e692141bc61305782f3" category="inline-link-macro">Appareil de stockage Oracle ZFS</block>
   <block id="1200463c4d08a49769827a1407d750e3" category="cell"><block ref="1200463c4d08a49769827a1407d750e3" category="inline-link-macro-rx"></block></block>
-  <block id="20a028628edbb3462400721ddac09b9f" category="inline-link-macro">PostgreSQL</block>
-  <block id="a99e7bf172e9f9cad573a6eccf1f6b3b" category="cell"><block ref="a99e7bf172e9f9cad573a6eccf1f6b3b" category="inline-link-macro-rx"></block></block>
-  <block id="c56cf944a36c7c467f5b32e38638dde8" category="inline-link-macro">Agent marionnette</block>
-  <block id="797515f3104ba80d886d48d24d2aab59" category="cell"><block ref="797515f3104ba80d886d48d24d2aab59" category="inline-link-macro-rx"></block></block>
   <block id="071bddc95331ea2a83a84067c9ea3dc0" category="inline-link-macro">Baie Flash Pure Storage</block>
   <block id="1d29dde92dfd9ff8aa72e5cff1570a88" category="cell"><block ref="1d29dde92dfd9ff8aa72e5cff1570a88" category="inline-link-macro-rx"></block></block>
   <block id="f1e6b16c09bc292a11105dad6f4b2535" category="inline-link-macro">Virtualisation Red Hat</block>
   <block id="18870213d2b666f7b3e3e4922f4a98dd" category="cell"><block ref="18870213d2b666f7b3e3e4922f4a98dd" category="inline-link-macro-rx"></block></block>
-  <block id="f18b7f183f4e2ffd054a4b8637eb8724" category="inline-link-macro">Redis</block>
-  <block id="8f645d4f33d73ca131939a5353f98b16" category="cell"><block ref="8f645d4f33d73ca131939a5353f98b16" category="inline-link-macro-rx"></block></block>
-  <block id="6ddfc154397b4f05bf5f59d9b7edcb8e" category="inline-link-macro">Repenser la base de données</block>
-  <block id="b41f4fbf577e2b28e9db4c12eb10170c" category="cell"><block ref="b41f4fbf577e2b28e9db4c12eb10170c" category="inline-link-macro-rx"></block></block>
   <block id="dd7cb846f0c18d2c70eb7fb867bb16dd" category="inline-link-macro">RHEL et CentOS</block>
   <block id="e6b9c6f19de5724debafb44fc09ed89a" category="cell"><block ref="948fe3d28a4982dcd7133abf332f6f3c" category="inline-link-macro-rx"></block></block>
   <block id="d270a242787fdce58a1a0b666e5deafd" category="inline-link-macro">Stockage Rubrik CDM</block>
@@ -4005,8 +3957,6 @@
   <block id="18751bc06b492c14cf67d2591909671a" category="cell"><block ref="18751bc06b492c14cf67d2591909671a" category="inline-link-macro-rx"></block></block>
   <block id="630fa195499141eb0b6a3bd30e6b23b9" category="inline-link-macro">Windows</block>
   <block id="380d7094b74149f5b3436c1d1fad9e76" category="cell"><block ref="380d7094b74149f5b3436c1d1fad9e76" category="inline-link-macro-rx"></block></block>
-  <block id="eaa7024d6bed491bbaada5e2818c012a" category="inline-link-macro">Gardien de zoo</block>
-  <block id="e00d8ef6824afbc3eb164b885bda2e98" category="cell"><block ref="e00d8ef6824afbc3eb164b885bda2e98" category="inline-link-macro-rx"></block></block>
   <block id="b33554a1697b5000df418d400a57bdd1" category="doc">Configuration et périphériques pris en charge</block>
   <block id="c20c853d46783b4e2e2c99d4f7100988" category="paragraph">Cette FAQ répond aux questions courantes sur la configuration de Data Infrastructure Insights et les appareils pris en charge.</block>
   <block id="afeb548cda0a56b9f61559376e4c221d" category="section-title">Est-ce que Data Infrastructure Insights apporte des modifications à mon environnement ?</block>
@@ -7159,280 +7109,7 @@
   <block id="006f752e44410388cadd8f8a37ce069f" category="inline-link-macro">configuration de l'agent</block>
   <block id="e7367bd1ec175ef5c58d982c52bc4348" category="inline-link-macro">serveurTLSBootstrap</block>
   <block id="eb693e07b3c7e38a77aa691eee254db7" category="cell">Cela se produit si le kubelet utilise des certificats auto-signés et/ou si le certificat spécifié n'inclut pas le &lt;kubelet_IP&gt; dans la liste _Subject Alternative Name_ des certificats.  Pour résoudre ce problème, l'utilisateur peut modifier le<block ref="1ff2a3d734af6ebdb77c417baa3479b1" category="inline-link-macro-rx"></block> , et définissez _telegraf:insecureK8sSkipVerify_ sur _true_.  Cela configurera le plugin d'entrée Telegraf pour ignorer la vérification.  Alternativement, l'utilisateur peut configurer le kubelet pour<block ref="9ed8afe3c99331fa3d23c13414b98aba" category="inline-link-macro-rx"></block> , ce qui déclenchera une demande de certificat à partir de l'API « certificates.k8s.io ».</block>
-  <block id="1914b55914b6ee44bc0dcd84cc7caeb3" category="summary">Configuration du collecteur de données Apache</block>
-  <block id="a2c447b19901c50472d86c46b78e4269" category="doc">Collecteur de données Apache</block>
-  <block id="8c8f719781e45e8796bf00085394a1ca" category="paragraph">Ce collecteur de données permet la collecte de données à partir des serveurs Apache sur votre locataire.</block>
-  <block id="1194c1f585884540788ba8946023cc33" category="list-text">Votre serveur HTTP Apache doit être configuré et fonctionner correctement.</block>
-  <block id="6b1dbef46026830edbb8a38bb35f7c07" category="list-text">Vous devez disposer des autorisations sudo ou administrateur sur votre hôte/VM d'agent</block>
-  <block id="c16390c8cf2123acd316f38a743628ab" category="list-text">En règle générale, le module Apache _mod_status_ est configuré pour exposer une page à l'emplacement '/server-status?auto' du serveur Apache.  L'option _ExtendedStatus_ doit être activée pour collecter tous les champs disponibles.  Pour plus d'informations sur la configuration de votre serveur, consultez la documentation du module Apache :<block ref="7174f93683616a9a4040d970e3c6eb19" category="inline-link-rx"></block></block>
-  <block id="b0896396e0f3a7aa981b2ef8957b9208" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Apache.</block>
-  <block id="db3b3ca5f6c31a760f5aa49a9a809802" category="inline-image-macro">Configuration d'Apache</block>
-  <block id="5ec6fd62051ccff5584535e6108b55ba" category="paragraph"><block ref="5ec6fd62051ccff5584535e6108b55ba" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ed6e8b2146d5bd121cfea083307611f3" category="paragraph">Le plugin de Telegraf pour le serveur HTTP d'Apache s'appuie sur le module « mod_status » pour être activé.  Lorsque cette option est activée, le serveur HTTP d'Apache exposera un point de terminaison HTML qui peut être visualisé sur votre navigateur ou récupéré pour l'extraction de l'état de toute la configuration du serveur HTTP d'Apache.</block>
-  <block id="427a02dad880facfe9fb816312194295" category="section-title">Compatibilité:</block>
-  <block id="8461c6dd6dfb26c96b75667840908e25" category="paragraph">La configuration a été développée sur la version 2.4.38 du serveur HTTP d'Apache.</block>
-  <block id="5e35671340e6c9c7b25787ff637f0d95" category="section-title">Activation de mod_status :</block>
-  <block id="0f3bcff634f4d3862c37ca9068d609a1" category="paragraph">L'activation et l'exposition des modules « mod_status » impliquent deux étapes :</block>
-  <block id="efb59b39eb3bfe8e4da0936bb46519fc" category="list-text">Module d'activation</block>
-  <block id="3b817156f776bb94b972cf7a91ba3184" category="list-text">Exposer les statistiques du module</block>
-  <block id="27c3a633e4b056a5469dc8064c89f668" category="section-title">Module d'activation :</block>
-  <block id="44371abdc5e441e96423652f2b9d834b" category="paragraph">Le chargement des modules est contrôlé par le fichier de configuration sous '/usr/local/apache/conf/httpd.conf'.  Modifiez le fichier de configuration et décommentez les lignes suivantes :</block>
-  <block id="5096c93091356730cc76dca2451a6d0c" category="section-title">Exposer les statistiques du module :</block>
-  <block id="553822327e85ab49367d681e24c3df28" category="paragraph">L'exposition de « mod_status » est contrôlée par le fichier de configuration sous « /usr/local/apache2/conf/extra/httpd-info.conf ».  Assurez-vous d’avoir les éléments suivants dans ce fichier de configuration (au moins, d’autres directives seront présentes) :</block>
-  <block id="bc34f8d241b1e1bccaf9d0575c5b92b3" category="inline-link-macro">Documentation Apache</block>
-  <block id="7727bb6b0739435252f5c813bbbdb290" category="paragraph">Pour des instructions détaillées sur le module « mod_status », consultez le<block ref="1384449c324b5981491fad302f32d968" category="inline-link-macro-rx"></block></block>
-  <block id="e9713ae04a02a810d6f33dd956f42794" category="cell">Apache</block>
-  <block id="f69f559468f0eeb001c1c4ac7e03ba16" category="cell">Serveur d'espace de noms</block>
-  <block id="aaba4d734bb5c6c1cd828a66a204028f" category="cell">Nœud IP Nom du nœud Port Génération de configuration du serveur parent Génération MPM du serveur parent La disponibilité du serveur s'arrête</block>
-  <block id="af40aea2350db56f2ccf87bd2e878384" category="cell">Travailleurs occupés Octets par requête Octets par seconde CPU Enfants CPU système Enfants Charge CPU utilisateur CPU système CPU utilisateur Connexions asynchrones Fermeture des connexions asynchrones Maintien en activité des connexions asynchrones Écriture des connexions Durée totale par requête Travailleurs inactifs Charge moyenne (dernier 1 min) Charge moyenne (derniers 15 min) Charge moyenne (derniers 5 min) Processus Requêtes par seconde Accès totaux Durée totale Total Ko Tableau de bord Fermeture Tableau de bord Recherches DNS Tableau de bord Fin Tableau de bord Nettoyage d'inactivité Tableau de bord Maintien en activité Tableau de bord Journalisation Tableau de bord Ouverture Tableau de bord Lecture Tableau de bord Envoi Tableau de bord Démarrage Tableau de bord Attente</block>
-  <block id="1da80b1336c0c9594d16e3d3dab10d20" category="summary">Configuration du collecteur de données Consul</block>
-  <block id="c4079b6998dfb2e5f02a35b303e1acce" category="doc">Collecteur de données consulaires</block>
-  <block id="95ae5733481d5e944eb9c76463e035e8" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques auprès de Consul.</block>
-  <block id="6ed4f0f0b93d3def9b1fe51a22e44d7a" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Consul.</block>
-  <block id="90b5256380802f2feaca144a438190c3" category="inline-link-macro">installer un agent</block>
-  <block id="44c442d3e78a8d192000c14c74f3d018" category="paragraph">Si vous n'avez pas configuré d'agent pour la collecte, vous êtes invité à<block ref="a1b69a79c96be75135c991d76ebf15bb" category="inline-link-macro-rx"></block> sur votre locataire.</block>
-  <block id="bfd9f9769236435b451e6625d2b38cd5" category="paragraph">Si vous avez déjà configuré un agent, sélectionnez le système d'exploitation ou la plateforme approprié et cliquez sur *Continuer*.</block>
-  <block id="bddbdda6ad83151063cda71734d4faf4" category="list-text">Suivez les instructions de l’écran de configuration du Consul pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.</block>
-  <block id="488f9e22c68fcc3e89060d2f5f537744" category="inline-link-macro">Documentation du consul</block>
-  <block id="a47b0fae235ee24589e1075c2fe0daeb" category="paragraph">Des informations peuvent être trouvées dans le<block ref="209f85ad7011f70864ffdec527911e92" category="inline-link-macro-rx"></block> .</block>
-  <block id="058912364976efe3be18dc926c430355" category="section-title">Objets et compteurs pour consul</block>
-  <block id="52668346d353c3e6fdee1d0c1b711981" category="cell">Consul</block>
-  <block id="24a1a9023bf78f02042ebc02aae1acda" category="cell">Nœud de service d'identification de vérification d'espace de noms</block>
-  <block id="4cbed0b534c83a56e07762ba4b9a62f4" category="cell">IP du nœud OS du nœud UUID du nœud Nom du nœud Nom du service Nom de vérification ID du service Statut</block>
-  <block id="701fda79498070ea91a9c98bbdd1dd4e" category="cell">Avertissement de dépassement critique</block>
-  <block id="8250aff5bf291c0fd6c60d86a94af326" category="summary">Configuration du collecteur de données Couchbase</block>
-  <block id="c85700224d4de4029d47e8f7419f121a" category="doc">Collecteur de données Couchbase</block>
-  <block id="c636deef9a34de19dc92f69ff80b6569" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Couchbase.</block>
-  <block id="80502f098bcf776c1d9ceec1ba9d636a" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Couchbase.</block>
-  <block id="d7712cfab308e47f5bb1445e9fbcb070" category="inline-image-macro">Configuration de Couchbase</block>
-  <block id="64fffda04d6b10150c8c8726100e6239" category="paragraph"><block ref="64fffda04d6b10150c8c8726100e6239" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="41bdcd289793051395a360769595211c" category="inline-link-macro">Documentation de Couchbase</block>
-  <block id="f2b2ffbd53b392b14604a492426ea7ac" category="paragraph">Des informations peuvent être trouvées dans le<block ref="6a0d18e0abc795e5bc07d2ebcfb2d123" category="inline-link-macro-rx"></block> .</block>
-  <block id="c3a20296fdda109e5a387244bb33fbf6" category="cell">Nœud Couchbase</block>
-  <block id="e4ef366ae6be226c757b37e27fcb263c" category="cell">Espace de noms Cluster Couchbase Node Nom d'hôte</block>
-  <block id="8439f36077726e546877845c0ee98c4a" category="cell">Nom du nœud IP du nœud</block>
-  <block id="5c89437098c8abb0c4893d4e1c655f2c" category="cell">Mémoire libre Mémoire totale</block>
-  <block id="a852fa80ca1bc5024319d7b5d7d84b6d" category="cell">Seau Couchbase</block>
-  <block id="d62c713a51121af573c0ef402ab3a282" category="cell">Cluster de compartiments d'espace de noms</block>
-  <block id="4e6556682c31b5913aa78d687bb53082" category="cell">Données utilisées Récupérations de données Disque utilisé Nombre d'éléments Mémoire utilisée Opérations par seconde Quota utilisé</block>
-  <block id="170ac79db4abf3af53c36b5ba23d297a" category="summary">Configuration du collecteur de données CouchDB</block>
-  <block id="1aa7fb61fdaf60c81a318c790c7e545e" category="doc">Collecteur de données CouchDB</block>
-  <block id="c259e9eefdbf037435516cfb262f6880" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de CouchDB.</block>
-  <block id="c3dba9c80e9fa5a82c71abb7fa5cf37f" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez CouchDB.</block>
-  <block id="9d3601e78c51a4b184d2fe86128539e4" category="inline-image-macro">Configuration de CouchDB</block>
-  <block id="61d7e3da551b2e4c1549750fbb518e22" category="paragraph"><block ref="61d7e3da551b2e4c1549750fbb518e22" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8a7006055e2291f0b9e46ee915f0ad0c" category="inline-link-macro">Documentation de CouchDB</block>
-  <block id="bc781ab763b71df7b975bbfe7c860bba" category="paragraph">Des informations peuvent être trouvées dans le<block ref="3147fac008aa304c440ef0d367c93828" category="inline-link-macro-rx"></block> .</block>
-  <block id="dea8b0c01ac3c8f22d85423d187ec3d2" category="cell">CouchDB</block>
-  <block id="64f2993184c14c565d6ba3100a20ca05" category="cell">Authentification Cache Hits Authentification Cache Miss Lectures de base de données Écritures de base de données Bases de données Ouvrir Ouvrir Fichiers OS Durée maximale de la requête Durée minimale de la requête Méthodes de requête HTTP Copier Méthodes de requête HTTP Supprimer Méthodes de requête HTTP Obtenir Méthodes de requête HTTP En-tête Méthodes de requête HTTP Publier Méthodes de requête HTTP Mettre Codes d'état 200 Codes d'état 201 Codes d'état 202 Codes d'état 301 Codes d'état 304 Codes d'état 400 Codes d'état 401 Codes d'état 403 Codes d'état 404 Codes d'état 405 Codes d'état 409 Codes d'état 412 Codes d'état 500</block>
-  <block id="0982f7ddf38c72531e91321d3b4e198e" category="summary">Configuration du collecteur de données Docker</block>
-  <block id="d80788e8d22d139775039533ead6bae8" category="doc">Collecteur de données Docker</block>
-  <block id="7ab1583e1a436a4f564958859dce5c00" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Docker.</block>
-  <block id="9ee6c12aac4505f529c285b136202ce5" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Docker.</block>
-  <block id="0f4a5a5b8072d8e43816253b9197d0f1" category="list-text">Suivez les instructions de l’écran de configuration Docker pour configurer le collecteur de données.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.</block>
-  <block id="4ed4e51db0aa02d2ed7e8fb292cc39c8" category="inline-image-macro">Configuration de Docker</block>
-  <block id="ee96e45eed0143814810825fc37d2fa8" category="paragraph"><block ref="ee96e45eed0143814810825fc37d2fa8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2622d06a8a5a13f122149c79381978f8" category="paragraph">Le plugin d'entrée Telegraf pour Docker collecte des métriques via un socket UNIX spécifié ou un point de terminaison TCP.</block>
-  <block id="df9c715f20aaf58fb3926cc02b08ec53" category="section-title">Compatibilité</block>
-  <block id="047938f8b934d1717dddfdf0dbb9f6bc" category="paragraph">La configuration a été développée sur la version Docker 1.12.6.</block>
-  <block id="0eb08f5b635663822078f16d3fc578db" category="section-title">Installation</block>
-  <block id="43d4b6a220eea649b1a53bac845809d2" category="section-title">Accéder à Docker via un socket UNIX</block>
-  <block id="ce07d3c38928e864e20e82c242ae0f98" category="paragraph">Si l'agent Telegraf s'exécute sur baremetal, ajoutez l'utilisateur Unix telegraf au groupe Unix docker en exécutant ce qui suit :</block>
-  <block id="0c38156add26ac675264862ed09bc25d" category="paragraph">Si l'agent Telegraf s'exécute dans un pod Kubernetes, exposez le socket Docker Unix en mappant le socket dans le pod en tant que volume, puis en montant ce volume sur /var/run/docker.sock.  Par exemple, ajoutez ce qui suit au PodSpec :</block>
-  <block id="69821e3ecac0b5542b2dfa0b6083a7be" category="paragraph">Ensuite, ajoutez les éléments suivants au conteneur :</block>
-  <block id="8016b54c78dd0d99ee6acbd78462da90" category="paragraph">Notez que le programme d’installation de Data Infrastructure Insights fourni pour la plateforme Kubernetes prend en charge ce mappage automatiquement.</block>
-  <block id="73553149828f2c198e9e7df4807e33bf" category="section-title">Accéder à Docker via un point de terminaison TCP</block>
-  <block id="b4f5dd84e7c731654efa53663ef21180" category="paragraph">Par défaut, Docker utilise le port 2375 pour l’accès non chiffré et le port 2376 pour l’accès chiffré.</block>
-  <block id="681992b8581f6d4247af5523a14d0ce4" category="cell">Moteur Docker</block>
-  <block id="f4a3b0c461a1d83562753ce679c373cc" category="cell">Espace de noms Docker Engine</block>
-  <block id="8ab71e8b7ccb8786b890c85e686d1dbf" category="cell">Nom du nœud IP du nœud UUID du nœud Système d'exploitation du nœud Cluster Kubernetes Version Docker Unité</block>
-  <block id="efb21860adb0899b80a09ed3d53daca5" category="cell">Conteneurs de mémoire Conteneurs Conteneurs en pause Conteneurs en cours d'exécution CPU arrêtés Routines Go Images Événements d'écoute utilisés Descripteurs de fichiers Données Données disponibles Données totales utilisées Métadonnées Métadonnées disponibles Métadonnées totales utilisées Taille de bloc du pool</block>
-  <block id="c4d05fe785e9118926263f1d8d731968" category="cell">Conteneur Docker</block>
-  <block id="ef6673f2b613d194f98744f7a7d34b5d" category="cell">Espace de noms Nom du conteneur Moteur Docker</block>
-  <block id="85251df3c314f73ff378bbb53d0cbb1f" category="cell">Hachage du conteneur Kubernetes Ports du conteneur Kubernetes Nombre de redémarrages du conteneur Kubernetes Chemin du message de fin du conteneur Kubernetes Politique de message de fin du conteneur Kubernetes Période de grâce de fin du pod Kubernetes Image du conteneur État du conteneur Version du conteneur Nom du nœud Chemin du journal du conteneur Kubernetes Nom du conteneur Kubernetes Type Docker Kubernetes Nom du pod Kubernetes Espace de noms du pod Kubernetes UID du pod Kubernetes ID du sandbox Kubernetes IP du nœud UUID du nœud Version Docker Configuration E/S Kubernetes vue Source de la configuration E/S Kubernetes OpenShift IO SCC Description Kubernetes Nom d'affichage Kubernetes Balises OpenShift Service Kompose Modèle de pod Contrôleur de hachage Révision du hachage Génération du modèle de pod Licence Date de build du schéma Nom du schéma de licence URL du schéma URL du VCS du schéma Fournisseur du schéma Version du schéma Schéma Responsable de la version du schéma Pod client Kubernetes StatefulSet Nom du pod Tenant Architecture de la console Web URL source faisant autorité Date de build Hôte de build RH Distribution des composants RH Portée Installation Résumé de l'exécution de la version Désinstaller Référence VCS Type VCS Fournisseur Version État de santé ID du conteneur</block>
-  <block id="5ff8370214b985307753a0ff9465c15b" category="cell">Mémoire active, anonyme, fichier actif, cache, limite hiérarchique, mémoire inactive, anonyme, fichier inactif, limite de mémoire, fichier mappé, mémoire, utilisation maximale, erreur de page, erreur majeure de page, mémoire paginée, mémoire paginée, mémoire sortante, taille de l'ensemble résident, mémoire, taille de l'ensemble résident, énorme mémoire, mémoire anonyme active totale, fichier actif, mémoire cache totale, mémoire anonyme inactive totale, fichier inactif, mémoire, fichier mappé, mémoire, erreur de page, erreur majeure de page, mémoire paginée, mémoire sortante, mémoire, taille de l'ensemble résident, mémoire, taille de l'ensemble résident, énorme mémoire, mémoire non supprimable, utilisation de la mémoire non supprimable, pourcentage d'utilisation de la mémoire, code de sortie, OOM, PID tué, commencé à la série d'échecs.</block>
-  <block id="213eaa882abd038ecefb94d1c9ad53dd" category="cell">Bloc d'E/S du conteneur Docker</block>
-  <block id="b6c8eb0e1f3a075790a46177f5f664a9" category="cell">Espace de noms Nom du conteneur Appareil Moteur Docker</block>
-  <block id="a8ca9934ba37964ab75dc00b1fa3e8fe" category="cell">Hachage du conteneur Kubernetes Ports du conteneur Kubernetes Nombre de redémarrages du conteneur Kubernetes Chemin du message de fin du conteneur Kubernetes Politique de message de fin du conteneur Kubernetes Période de grâce de fin du pod Kubernetes Image du conteneur État du conteneur Version du conteneur Nom du nœud Chemin du journal du conteneur Kubernetes Nom du conteneur Kubernetes Type Docker Kubernetes Nom du pod Kubernetes Espace de noms du pod Kubernetes UID du pod Kubernetes ID du sandbox Kubernetes IP du nœud UUID du nœud Version Docker Configuration Kubernetes vue Source de la configuration Kubernetes OpenShift SCC Description Kubernetes Nom d'affichage Kubernetes Balises OpenShift Schéma Version du schéma Modèle de pod Contrôleur de hachage Révision Génération du modèle de pod de hachage Service Kompose Date de build du schéma Licence du schéma Nom du schéma Fournisseur de schéma Pod client Kubernetes StatefulSet Nom du pod Tenant Console Web Date de build Licence Fournisseur Architecture URL source faisant autorité Hôte de build RH Distribution des composants RH Portée Installation Responsable Publication Résumé de l'exécution Désinstallation Référence VCS Type VCS Version URL du schéma Schéma URL VCS Version du schéma ID du conteneur</block>
-  <block id="34792b46d5f4d118993b97dc65a3ed9b" category="cell">Octets de service d'E/S récursifs asynchrones Octets de service d'E/S récursifs en lecture Octets de service d'E/S récursifs en synchronisation Octets de service d'E/S récursifs Total d'octets de service d'E/S récursifs en écriture Octets de service d'E/S récursifs asynchrones avec service d'E/S récursifs en lecture Octets de service d'E/S récursifs en synchronisation avec service d'E/S récursifs Total d'E/S récursifs en écriture</block>
-  <block id="c19b7a0868fcc8b657cf119904c8f4ee" category="cell">Réseau de conteneurs Docker</block>
-  <block id="831c5d0c57dec418323ed2d160458d81" category="cell">Espace de noms Conteneur Nom Réseau Moteur Docker</block>
-  <block id="6fcf9c483cfa3017433456584bcd7f8f" category="cell">Image du conteneur État du conteneur Version du conteneur Nom du nœud IP du nœud UUID du nœud Système d'exploitation du nœud Cluster K8s Version Docker ID du conteneur</block>
-  <block id="3fcbd1f352221dab310964db15bbae4d" category="cell">RX Octets RX supprimés Erreurs RX Paquets RX TX Octets TX supprimés Erreurs TX Paquets TX</block>
-  <block id="e11e2314917505f9b82d06bdd3c6e4b2" category="cell">Processeur du conteneur Docker</block>
-  <block id="722c21d9c801a7b062bf40cd7bd5ae06" category="cell">Espace de noms Nom du conteneur CPU Moteur Docker</block>
-  <block id="51accef59e0d9b09555ad4a6b152e847" category="cell">Hachage du conteneur Kubernetes Ports du conteneur Kubernetes Nombre de redémarrages du conteneur Kubernetes Chemin du message de fin du conteneur Kubernetes Politique de message de fin du conteneur Kubernetes Période de grâce de fin du pod Kubernetes Configuration Kubernetes vue Source de la configuration Kubernetes Image conteneur SCC OpenShift État du conteneur Version du conteneur Nom du nœud Chemin du journal du conteneur Kubernetes Nom du conteneur Kubernetes Type Docker Kubernetes Nom du pod Kubernetes Espace de noms du pod Kubernetes UID du pod Kubernetes ID du sandbox Kubernetes IP du nœud UUID du nœud Système d'exploitation du nœud Cluster Kubernetes Version Docker Description Kubernetes Nom d'affichage Kubernetes Balises OpenShift Version du schéma Modèle de pod Contrôleur de hachage Révision Génération du modèle de pod de hachage Service Kompose Date de build du schéma Licence du schéma Nom du schéma Fournisseur de schéma Pod client Kubernetes StatefulSet Nom du pod Tenant Date de build de la console Web Licence Fournisseur Architecture URL source faisant autorité Hôte de build RH Distribution des composants RH Portée Installer Responsable de la publication Résumé de l'exécution Désinstaller Référence VCS Type VCS Version Schéma URL Schéma URL VCS Version ID du conteneur</block>
-  <block id="01515237e5a51a70ac5f1a57ab2c74a5" category="cell">Périodes de limitation Périodes de limitation Durée de limitation Utilisation en mode noyau Utilisation en mode utilisateur Pourcentage d'utilisation Utilisation du système Total</block>
-  <block id="4031806f96c482bc76bbf0a4187237a1" category="cell">Je ne vois pas mes métriques Docker dans Data Infrastructure Insights après avoir suivi les instructions sur la page de configuration.</block>
-  <block id="905bf4f9d8189256f8247dcef263d5cb" category="cell">Vérifiez les journaux de l'agent Telegraf pour voir s'il signale l'erreur suivante : E!  Erreur dans le plugin [inputs.docker] : l'autorisation a été refusée lors de la tentative de connexion au socket du démon Docker. Si c'est le cas, prenez les mesures nécessaires pour fournir à l'agent Telegraf l'accès au socket Docker Unix comme spécifié ci-dessus.</block>
-  <block id="29f2c433c8324679db838494d114ace0" category="summary">Configuration du collecteur de données Elasticsearch</block>
-  <block id="b254328dbad8d7bef169a1d38f1b1bec" category="doc">Collecteur de données Elasticsearch</block>
-  <block id="a052d0784224035ede1bb9a2623993e6" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir d'Elasticsearch.</block>
-  <block id="c22bbce40f7866184fc5238e4cf0526d" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Elasticsearch.</block>
-  <block id="8dc7af6f97dac4ac46d66b12e0c86974" category="inline-image-macro">Configuration d'Elasticsearch</block>
-  <block id="5b3344ac5bf291f59c070db863943014" category="paragraph"><block ref="5b3344ac5bf291f59c070db863943014" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7423bcb1039be167bcf002d43ee6670e" category="inline-link-macro">Documentation d'Elasticsearch</block>
-  <block id="1cd7a99f1b7abd82e5c52da438eb8098" category="paragraph">Des informations peuvent être trouvées dans le<block ref="bcfb5ea01b37890a7134cc470707e795" category="inline-link-macro-rx"></block> .</block>
-  <block id="824ae3473df67a0ffcc2e7213c8155ab" category="cell">Cluster Elasticsearch</block>
-  <block id="b47ef76054c94c60d8ded4d3bf1ca5ae" category="cell">Cluster d'espace de noms</block>
-  <block id="89fc526a8bc54d6b35b9f537497ad12b" category="cell">Nœud IP Nom du nœud Statut du cluster</block>
-  <block id="dc74b66d0fe6a965e5a23640119f3c60" category="cell">Nœud Elasticsearch</block>
-  <block id="673731fc48d3aeb518baecf281fb2c22" category="cell">Espace de noms Cluster ID du nœud ES IP du nœud ES Nœud ES</block>
-  <block id="ca7086c6ed2859db76f290c9cc1ed037" category="cell">ID de zone</block>
-  <block id="f23d43a2f8827bf71755047f9233d1d7" category="summary">Configuration du collecteur de données Flink</block>
-  <block id="760f80f90fb384d40bb66a9f0b4823fd" category="doc">Collecteur de données Flink</block>
-  <block id="f02b243a6c4f4340ac08b1de80e1c9c0" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques de Flink.</block>
-  <block id="b9edb2d8cbff35711b7021f32a2692dd" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Flink.</block>
-  <block id="c1a584a645c5a21efa505b7deca25b2b" category="inline-image-macro">Configuration Flink</block>
-  <block id="2462dee15f2229ca8b824af60aa5037f" category="paragraph"><block ref="2462dee15f2229ca8b824af60aa5037f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="88f3c1a97fbc332ad9adb7ff5179d0f5" category="paragraph">Un déploiement Flink complet implique les composants suivants :</block>
-  <block id="5ec659a1960f3ec4bb0ed146c2fe29e8" category="paragraph">JobManager : le système principal de Flink.  Coordonne une série de gestionnaires de tâches.  Dans une configuration haute disponibilité, le système aura plus d'un JobManager.  Gestionnaire des tâches : c'est ici que les opérateurs Flink sont exécutés.  Le plugin Flink est basé sur le plugin Jolokia de Telegraf.  En tant qu'exigence de collecte d'informations à partir de tous les composants Flink, JMX doit être configuré et exposé via Jolokia sur tous les composants.</block>
-  <block id="56b6a44368589d2180398c17050693ba" category="paragraph">La configuration a été développée par rapport à la version 1.7.0 de Flink.</block>
-  <block id="74f1c760151734cb26fb8795538faefc" category="section-title">Agent Jar Jolokia</block>
-  <block id="788386447f3336a53e1c2ce1bfe69253" category="inline-link-macro">Agent Jolokia 1.6.0</block>
-  <block id="12b5a09ab5184ab662baeccbd4410892" category="paragraph">Pour tous les composants individuels, une version du fichier jar de l'agent Jolokia doit être téléchargée.  La version testée était<block ref="adb2184741946d946bb10cd791c6089f" category="inline-link-macro-rx"></block> .</block>
-  <block id="0fafe075396c21ab32ba5bed2f6b04cb" category="paragraph">Les instructions ci-dessous supposent que le fichier jar téléchargé (jolokia-jvm-1.6.0-agent.jar) est placé sous l'emplacement « /opt/flink/lib/ ».</block>
-  <block id="d6625a003ca97117da4294ef2332bec8" category="section-title">Gestionnaire de tâches</block>
-  <block id="ac48db67fd50d761b0cc801e21516f81" category="paragraph">Pour configurer JobManager afin d'exposer l'API Jolokia, vous pouvez configurer la variable d'environnement suivante sur vos nœuds, puis redémarrer JobManager :</block>
-  <block id="be858081216aea340977594f6274fe6e" category="paragraph">Vous pouvez choisir un port différent pour Jolokia (8778).  Si vous disposez d'une IP interne sur laquelle verrouiller Jolokia, vous pouvez remplacer le « catch all » 0.0.0.0 par votre propre IP.  Notez que cette IP doit être accessible depuis le plugin Telegraf.</block>
-  <block id="dad4668bc0b8e79cd460bf9f0e0a9700" category="section-title">Gestionnaire de tâches</block>
-  <block id="239187f7984607b4dbabb4a154679050" category="paragraph">Pour configurer les gestionnaires de tâches afin d'exposer l'API Jolokia, vous pouvez configurer la variable d'environnement suivante sur vos nœuds, puis redémarrer le gestionnaire de tâches :</block>
-  <block id="fed9c829468f01ad78cb54dd7cce7c1e" category="cell">Gestionnaire de tâches Flink</block>
-  <block id="cc4f08bdf048f36eae4a37c7b9b75ba1" category="cell">Serveur d'espace de noms de cluster</block>
-  <block id="4a6c9bd53c6d064a543027eaa563c583" category="cell">Nom du nœud ID du gestionnaire de tâches IP du nœud</block>
-  <block id="4fd8a1981a5b46d96897012d9e9b9168" category="cell">Segments de mémoire réseau disponibles Segments de mémoire réseau totaux Nombre de nettoyages PS (nettoyage de la mémoire) Temps de nettoyage PS (nettoyage de la mémoire) Nombre de nettoyages PS (nettoyage de la mémoire) Temps de nettoyage PS (nettoyage de la mémoire) Mémoire du tas engagée Mémoire du tas d'initialisation Mémoire du tas max. utilisée Nombre de threads Nombre de threads du démon Nombre maximal de threads Nombre total de threads démarrés</block>
-  <block id="e5bcf79e43b1cb79fa38d8773f5c9876" category="cell">Flink Job</block>
-  <block id="846a72770c317ead4062aedae5f893c8" category="cell">ID de tâche du serveur d'espace de noms de cluster</block>
-  <block id="6a2c2989b258eae68f76754fa5d41c6f" category="cell">Nom du nœud Nom du travail IP du nœud Dernier point de contrôle Chemin externe Heure de redémarrage</block>
-  <block id="5cada8907c93eaad28b0ddd4ec957602" category="cell">Temps d'arrêt Redémarrages complets Alignement du dernier point de contrôle Mise en mémoire tampon Durée du dernier point de contrôle Taille du dernier point de contrôle Nombre de points de contrôle terminés Nombre de points de contrôle échoués Nombre de points de contrôle en cours Nombre de points de contrôle Temps de disponibilité</block>
-  <block id="3d7a81a763fb0e456c06be07d13566ea" category="cell">Gestionnaire de tâches Flink</block>
-  <block id="97f03473b1053f9ddc2ebac96e570fbf" category="cell">Nombre de nettoyages PS MarkSweep pour la collecte des déchets Temps de nettoyage PS MarkSweep Nombre de nettoyages PS pour la collecte des déchets Temps de nettoyage PS pour la collecte des déchets Mémoire du tas engagée Mémoire du tas d'initialisation Mémoire maximale du tas utilisée Nombre de gestionnaires de tâches enregistrés Nombre de tâches en cours d'exécution Emplacements de tâches disponibles Nombre total de threads Nombre de threads du démon Nombre maximal de threads Nombre total de threads démarrés</block>
-  <block id="4c6db84f5a8ecb130c48fbe482bd0407" category="cell">Tâche Flink</block>
-  <block id="d14c367e94317a3e6e27568781bb8c3c" category="cell">Espace de noms du cluster ID de travail ID de tâche</block>
-  <block id="5843feb1d224110026d8762d7faffc66" category="cell">Nom du nœud du serveur Nom du travail Index des sous-tâches ID de tentative de tâche Numéro de tentative de tâche Nom de la tâche ID du gestionnaire de tâches IP du nœud Filigrane d'entrée actuel</block>
-  <block id="fd3f7cc527e3ec659d722c45c30e0117" category="cell">Tampons dans le pool Utilisation Tampons dans la file d'attente Longueur Tampons en sortie du pool Utilisation Tampons en sortie Longueur de la file d'attente Nombre Tampons en local Nombre Tampons en local par seconde Nombre Tampons en local Taux par seconde Nombre Tampons en distant Nombre Tampons en distant par seconde Nombre Tampons en distant Taux par seconde Nombre Tampons en sortie Nombre Tampons en sortie par seconde Nombre Tampons en sortie par seconde Nombre Octets en local Nombre Octets en local par seconde Nombre Octets en local par seconde Nombre Octets en local par seconde Nombre Octets en distant Nombre Octets en distant par seconde Nombre Octets en distant par seconde Nombre Octets en sortie Nombre Octets en sortie par seconde Nombre Octets en sortie par seconde Nombre Enregistrements en entrée Nombre Enregistrements en entrée par seconde Nombre Enregistrements en entrée par seconde Nombre Enregistrements en sortie Nombre Enregistrements en sortie par seconde Nombre Enregistrements en sortie par seconde Nombre Enregistrements en sortie par seconde Nombre Enregistrements en sortie par seconde</block>
-  <block id="612f6074a0c92f40ddbce389e1bcf2fc" category="cell">Opérateur de tâche Flink</block>
-  <block id="efa07c862dd433cfd3278ef665cd62bf" category="cell">Espace de noms du cluster ID de travail ID d'opérateur ID de tâche</block>
-  <block id="2aa96940f26ed9cf171b1aba30346ffa" category="cell">Nom du nœud du serveur Nom du travail Nom de l'opérateur Index des sous-tâches ID de tentative de tâche Numéro de tentative de tâche Nom de la tâche ID du gestionnaire de tâches IP du nœud</block>
-  <block id="36492bf47ea19332301e1b80a8878538" category="cell">Filigrane d'entrée actuel Filigrane de sortie actuel Nombre d'enregistrements entrants Nombre d'enregistrements entrants par seconde Nombre d'enregistrements entrants par seconde Taux Nombre d'enregistrements sortants Nombre d'enregistrements sortants par seconde Taux Nombre d'enregistrements en retard abandonnés Partitions affectées Octets Taux de consommation Latence de validation Latence de validation moyenne Taux de validation maximal Validations échouées Validations réussies Taux de fermeture de connexion Nombre de connexions Taux de création de connexion Nombre Latence de récupération Latence de récupération moyenne Taux de récupération maximal Taille de récupération Taille moyenne de récupération maximale Délai de limitation de récupération Temps de limitation de récupération moyen Taux de pulsation maximal Taux d'octets entrants Rapport E/S Temps E/S moyen (ns) Rapport d'attente E/S Temps d'attente E/S moyen (ns) Taux de jointure Heure de jointure moyenne Il y a le dernier battement de cœur Taux E/S réseau Taux d'octets sortants Taux de consommation d'enregistrements Retard d'enregistrements Max Enregistrements par requête Taux de requête moyen Taille de requête Taille moyenne de requête maximale Taux de réponse Taux de sélection Taux de synchronisation Temps de synchronisation Temps de réponse moyen du battement de cœur Max Temps de jointure max Temps de synchronisation max</block>
-  <block id="13b9b5c6c0fb1445ca79a2155f4dc602" category="summary">Configuration du collecteur de données Hadoop</block>
-  <block id="38af629ca8cce22e7b7e641b96f8197b" category="doc">Collecteur de données Hadoop</block>
-  <block id="41c6db2c8c29025e6e8a1b8f52dbea6e" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Hadoop.</block>
-  <block id="65f4403a1570898156c13c0053e0d957" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Hadoop.</block>
-  <block id="e844ff1ebc3eef465aed7960b58160c3" category="inline-image-macro">Configuration Hadoop</block>
-  <block id="026b451ea6f45b0c92de7f54611efaf2" category="paragraph"><block ref="47353d83abd9981302d8e2ae7057d5b3" category="inline-image-macro-rx" type="image"></block> <block ref="7afda35c9e63e32c054b3ad27f5a4ccb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f420dce044ac00b84abcfafd6e9f994a" category="paragraph">Un déploiement Hadoop complet implique les composants suivants :</block>
-  <block id="d713d040466c91cefd2167bcebd60062" category="list-text">NameNode : le système principal du système de fichiers distribué Hadoop (HDFS).  Coordonne une série de DataNodes.</block>
-  <block id="da8ea8d009db4b0c889dc3686a8d9638" category="list-text">NameNode secondaire : un basculement à chaud pour le NameNode principal.  Dans Hadoop, la promotion vers NameNode ne se produit pas automatiquement.  Le NameNode secondaire collecte les informations du NameNode pour être prêt à être promu en cas de besoin.</block>
-  <block id="a4c57bdec853ab95919855b4747bfa32" category="list-text">DataNode : propriétaire actuel des données.</block>
-  <block id="9c600745fb11557034d343ea8107d75a" category="list-text">ResourceManager : le système de calcul principal (Yarn).  Coordonne une série de NodeManagers.</block>
-  <block id="39f4bb6feff48cfe7b9520c7318f9767" category="list-text">NodeManager : la ressource pour le calcul.  Emplacement réel d'exécution des applications.</block>
-  <block id="f95e602d74c2ca81c1416dbb467a0df7" category="list-text">JobHistoryServer : responsable du traitement de toutes les demandes liées à l'historique des tâches.</block>
-  <block id="c1917bdd072d470e050bd2c06f83e344" category="paragraph">Le plugin Hadoop est basé sur le plugin Jolokia de Telegraf.  En tant qu'exigence de collecte d'informations à partir de tous les composants Hadoop, JMX doit être configuré et exposé via Jolokia sur tous les composants.</block>
-  <block id="0f37fe3dfe5894ca54f816b3a822ab75" category="paragraph">La configuration a été développée sur la version Hadoop 2.9.2.</block>
-  <block id="cdd86f53b4b8b0d623b6a8ee7a48c7bc" category="paragraph">Les instructions ci-dessous supposent que le fichier jar téléchargé (jolokia-jvm-1.6.0-agent.jar) est placé sous l'emplacement « /opt/hadoop/lib/ ».</block>
-  <block id="32b6eea89ffa772d5a299a3fa2ae0f4e" category="section-title">NomNode</block>
-  <block id="232e93d6785b24d7d392240ca50f3ae2" category="paragraph">Pour configurer NameNode afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh :</block>
-  <block id="9bc82d5913c313160e8e66d24078bba0" category="section-title">Nom du nœud secondaire</block>
-  <block id="f18509f1fb2f9a71f232159773b2fd87" category="paragraph">Pour configurer le NameNode secondaire afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh :</block>
-  <block id="315104928eaa5842590c6ce58545354d" category="section-title">Nœud de données</block>
-  <block id="45fef23823b56451d4fe53fc6c8d98c7" category="paragraph">Pour configurer les DataNodes afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh :</block>
-  <block id="ed760e01ef8cb789b502ad1c9a3829a2" category="section-title">Gestionnaire de ressources</block>
-  <block id="b475783ddb9124cc9510e5e42cf8e80f" category="paragraph">Pour configurer le ResourceManager afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh :</block>
-  <block id="1acfb853dd9d284090a1f6804f68d238" category="section-title">Gestionnaire de nœuds</block>
-  <block id="08dc29be4fde03fbd2b992b1227f2990" category="paragraph">Pour configurer les NodeManagers afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh :</block>
-  <block id="ff3d03ec141ab7e4f5faa0c83687126c" category="section-title">Serveur d'historique des tâches</block>
-  <block id="4087664a919c61abae79b6d518148613" category="paragraph">Pour configurer le JobHistoryServer afin d'exposer l'API Jolokia, vous pouvez configurer les éléments suivants dans &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh :</block>
-  <block id="bfa0ceac01bc6e1226697171b0d5b352" category="cell">Nom du nœud secondaire Hadoop</block>
-  <block id="fe1a99e660c022ae82cc4f285f9c1fae" category="cell">Nom du nœud IP du nœud Informations de compilation Version</block>
-  <block id="7c1a0861b825b536f9d829a1bb1e2d51" category="cell">Gestionnaire de nœuds Hadoop</block>
-  <block id="df6174495390f87b029379629c6f2b33" category="cell">Gestionnaire de ressources Hadoop</block>
-  <block id="569b69985a3ba9860b112ed47851e6f3" category="cell">Nœud de données Hadoop</block>
-  <block id="8751de48b6635b7a5598ab69137093dc" category="cell">Nom du nœud IP du nœud ID du cluster Version</block>
-  <block id="5a0c1fdf2f2b483f386886e066dfae1b" category="cell">Nom du nœud Hadoop</block>
-  <block id="637b504f65b25d54361a662bf71a4164" category="cell">Nom du nœud IP du nœud ID de transaction Dernière heure d'écriture depuis le dernier chargement Modifications État HA État du système de fichiers ID du pool de blocs ID du cluster Informations de compilation Nombre de versions distinctes Version</block>
-  <block id="0460c951ea9c38503a35b138121da86c" category="cell">Serveur d'historique des tâches Hadoop</block>
-  <block id="3af2b23a1e0e5c8f8f71ba7f0645e753" category="summary">Configuration du collecteur de données HAProxy</block>
-  <block id="d7f6334a8fd2ef6e012df8e7d1bc1840" category="doc">Collecteur de données HAProxy</block>
-  <block id="b433045739b63e44c767aaa4ea1d5681" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de HAProxy.</block>
-  <block id="419697cbdba3ded9f042d2b7a045a7be" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez HAProxy.</block>
-  <block id="6c1dacdba2adca5cfa22ff19b2d327fe" category="inline-image-macro">Configuration de HAProxy</block>
-  <block id="00f9d91055267fed1b468bf28bbfbb04" category="paragraph"><block ref="00f9d91055267fed1b468bf28bbfbb04" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cb69e07b7e1dc3bc5864b07b79bba857" category="paragraph">Le plugin de Telegraf pour HAProxy repose sur l'activation de HAProxy Stats.  Il s'agit d'une configuration intégrée à HAProxy, mais elle n'est pas activée par défaut.  Lorsqu'il est activé, HAProxy exposera un point de terminaison HTML qui peut être visualisé sur votre navigateur ou récupéré pour l'extraction de l'état de toutes les configurations HAProxy.</block>
-  <block id="4be336e5cd4f5bf12e0746a849c25857" category="paragraph">La configuration a été développée par rapport à la version HAProxy 1.9.4.</block>
-  <block id="0c3983f3904b2dc8bf6ac988603783d3" category="section-title">Installation :</block>
-  <block id="376c8f5141386640268a2d2c2187ca53" category="paragraph">Pour activer les statistiques, modifiez votre fichier de configuration haproxy et ajoutez les lignes suivantes après la section « defaults », en utilisant votre propre nom d'utilisateur/mot de passe et/ou URL haproxy :</block>
-  <block id="06e964df53203dd063d51650b2e750c1" category="paragraph">Voici un exemple simplifié de fichier de configuration avec les statistiques activées :</block>
-  <block id="c3236962a66f7a46e03d64979b9d1600" category="inline-link-macro">Documentation HAProxy</block>
-  <block id="b4ba6dee394cc6642974efbba5297a9a" category="paragraph">Pour des instructions complètes et à jour, consultez le<block ref="5a379a5f4fc2aff325e2186c5a680899" category="inline-link-macro-rx"></block> .</block>
-  <block id="cd1ff811c7eb5c250dc81f6a5286cf43" category="cell">Interface HAProxy</block>
-  <block id="8dea80f14c6104c5733a52c154ef935e" category="cell">Proxy d'adresse d'espace de noms</block>
-  <block id="c45e1928ae65186fbbe90a9be80ee483" category="cell">Nœud IP Nom du nœud ID proxy Mode ID de processus Limite de débit de sessions ID du serveur Limite de sessions Statut</block>
-  <block id="958c01b1efd28326ab76cd02bbd1597e" category="cell">Octets entrants Octets sortants Accès au cache Recherches dans le cache Compression Octets contournés Compression Octets entrants Compression Octets sortants Réponses Taux de connexion Taux de connexion Nombre maximal de connexions Nombre total de requêtes refusées par la règle de connexion Requêtes refusées par des problèmes de sécurité Réponses refusées par des problèmes de sécurité Requêtes refusées par la règle de session Erreurs de requêtes Réponses Réponses 1xx Réponses 2xx Réponses 3xx Réponses 4xx Réponses 5xx Autres requêtes Sessions interceptées Taux Sessions Taux Max Requêtes Taux Requêtes Taux Max Requêtes Total Sessions Sessions Max Sessions Total Requêtes Réécritures</block>
-  <block id="dada9c5c3057d3996c71c414bb95f293" category="cell">Serveur HAProxy</block>
-  <block id="b79b9d688e7feb386a427ddee600bf90" category="cell">Serveur proxy d'adresse d'espace de noms</block>
-  <block id="5576d0777cc9aa03fb396cdae277dc93" category="cell">Nœud IP Nom du nœud Heure de fin de vérification Configuration de chute Vérification de la valeur d'intégrité Vérification de la configuration de montée Statut ID proxy Heure de la dernière modification Heure de la dernière session Mode ID de processus ID du serveur Statut Poids</block>
-  <block id="7eb59f1dcd9a062c8263f5e4b2ebeb69" category="cell">Serveurs actifs Serveurs de sauvegarde Octets entrants Octets sortants Vérifications échouées Abandons de vérification Client Connexions Temps moyen de connexion Temps d'arrêt Total des réponses refusées Erreurs de connexion Erreurs de réponse Réponses 1xx Réponses 2xx Réponses 3xx Réponses 4xx Réponses 5xx Autre serveur sélectionné File d'attente totale File d'attente actuelle Temps moyen maximal de la file d'attente Sessions par seconde Sessions par seconde Temps de réponse maximal de réutilisation de connexion Moyenne Sessions Sessions Transfert de serveur max. Abandons Sessions Total des sessions Temps total Moyenne des requêtes Redispatches Requêtes Nouvelles tentatives Requêtes Réécritures</block>
-  <block id="f7e484ed281631da8383d690f4eddd80" category="cell">Backend HAProxy</block>
-  <block id="97147057d2a68260221e7116c41c9222" category="cell">Nœud IP Nom du nœud ID proxy Heure de la dernière modification Heure de la dernière session Mode ID du processus ID du serveur Limite de sessions Statut Poids</block>
-  <block id="9a0ea7807c7dd21ed7a14f4f90d3e5ba" category="cell">Serveurs actifs Serveurs de sauvegarde Octets entrants Octets sortants Accès au cache Consultations dans le cache Vérifications Abandons client Compression Octets contournés Compression Octets entrants Compression Octets sortants Réponses Connexions Temps moyen de connexion Temps d'arrêt Total des requêtes refusées pour des raisons de sécurité Réponses refusées pour des raisons de sécurité Erreurs de connexion Erreurs de réponse Réponses 1xx Réponses 2xx Réponses 3xx Réponses 4xx Réponses 5xx Autre serveur sélectionné File d'attente totale File d'attente actuelle Temps moyen de file d'attente Sessions par seconde Sessions par seconde Nombre maximal de requêtes Réutilisation totale des connexions Temps de réponse moyen Sessions Sessions Nombre maximal d'abandons de transfert de serveur Sessions Total des sessions Temps total Moyenne des requêtes Redispatches Requêtes Nouvelles tentatives Requêtes Réécritures</block>
-  <block id="3ed1623d8dee972d71ef8f8f97d1e7b7" category="summary">Configuration du collecteur de données JVM</block>
-  <block id="83940d42e25b16f92792429af8696c02" category="doc">Collecteur de données JVM</block>
-  <block id="ae66f07e640486b639a49dbc44b0f921" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de JVM.</block>
-  <block id="2f646a2871ea4aa3befe55d29f178062" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez JVM.</block>
-  <block id="cfc15582c99f2d93d641ceef808c0dea" category="inline-image-macro">Configuration JVM</block>
-  <block id="a1a11aab15942415d5fa3dbff92e14bd" category="paragraph"><block ref="a1a11aab15942415d5fa3dbff92e14bd" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1d4d54ae01b1b207ad71b19545e065d0" category="inline-link-macro">Documentation JVM</block>
-  <block id="a6915e59acb56cb585cb472961b7fcf4" category="paragraph">Des informations peuvent être trouvées dans<block ref="d6ec76238b83ccbfb02cd8a51ed9fed7" category="inline-link-macro-rx"></block> .</block>
-  <block id="18b5a217c4dad25662d3a05edb0e39d7" category="cell">JVM</block>
-  <block id="ba34515ac828f8372a3b624324d6c279" category="cell">Espace de noms JVM</block>
-  <block id="803c4a5e4b5f34cadc25972b0c14aa04" category="cell">Architecture du système d'exploitation Nom du système d'exploitation Version du système d'exploitation Spécification d'exécution Fournisseur de spécifications d'exécution Version de spécification d'exécution Temps de disponibilité Nom de la machine virtuelle d'exécution Fournisseur de la machine virtuelle d'exécution Version de la machine virtuelle d'exécution Nom du nœud IP du nœud</block>
-  <block id="a53a32f48009c614f61507a6499dfbf6" category="cell">Classe chargée Classe chargée Classe totale déchargée Tas de mémoire Mémoire engagée Tas de mémoire d'initialisation Mémoire utilisée maximale du tas de mémoire utilisée Mémoire non engagée Mémoire non engagée Mémoire non utilisée du tas Mémoire maximale non utilisée du tas Objets en attente de finalisation Processeurs du système d'exploitation disponibles Taille de la mémoire virtuelle engagée du système d'exploitation Taille de la mémoire physique libre du système d'exploitation Taille de l'espace d'échange libre du système d'exploitation Nombre maximal de descripteurs de fichiers du système d'exploitation Nombre de descripteurs de fichiers ouverts du système d'exploitation Charge CPU du processeur du système d'exploitation Temps CPU du processeur du système d'exploitation Charge CPU système du système d'exploitation Charge moyenne du système d'exploitation Taille totale de la mémoire physique du système d'exploitation Taille totale de l'espace d'échange du système d'exploitation Nombre de démons de threads Nombre de pics de threads Nombre de threads Nombre total de threads démarrés Nombre de copies de collecte du ramasse-miettes Heure de collecte des copies du ramasse-miettes Nombre de collectes de marquage-balayage du ramasse-miettes Heure de collecte du marquage-balayage du ramasse-miettes Nombre de collectes de l'ancienne génération G1 du ramasse-miettes Heure de collecte de l'ancienne génération G1 du ramasse-miettes Nombre de collectes de la jeune génération G1 du ramasse-miettes Heure de collecte du marquage-balayage du ramasse-miettes Collecteur de miettes simultané Nombre de collectes de marquage-balayage du ramasse-miettes Collecteur de miettes simultané Temps de collecte par balayage et marquage Nombre de collectes parallèles par le garbage collector Temps de collecte par balayage et marquage Nombre de collectes parallèles par le garbage collector Temps de collecte par balayage et marquage Nombre de collectes parallèles par le garbage collector Temps de collecte par balayage et marquage</block>
-  <block id="dc1e65eec84ecdddd9d944665f004c81" category="summary">Configuration du collecteur de données Kafka</block>
-  <block id="20c91ea30ac10f88575658fade0888da" category="doc">Collecteur de données Kafka</block>
-  <block id="08fd5faf42e95d6a9885f4e6ca1171bc" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Kafka.</block>
-  <block id="e71ca37de84258d54f5428c43e7d7278" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Kafka.</block>
-  <block id="a57380b3846ffa1f0e4bfb5181cdd4cc" category="inline-image-macro">Configuration de Kafka</block>
-  <block id="581191fc8057a11baa82fdf0c8a4684d" category="paragraph"><block ref="581191fc8057a11baa82fdf0c8a4684d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="13369c33358db64680a157cf34f27d9c" category="paragraph">Le plugin Kafka est basé sur le plugin Jolokia de Telegraf.  En tant qu'exigence de collecte d'informations auprès de tous les courtiers Kafka, JMX doit être configuré et exposé via Jolokia sur tous les composants.</block>
-  <block id="85d4881f2910a8efd14957d8ea3ad22f" category="paragraph">La configuration a été développée sur la version 0.11.0.2 de Kafka.</block>
-  <block id="c550ee824967bc436f44d06626836b46" category="section-title">Mise en place</block>
-  <block id="842dbc10bf2936a69101c9ada487cfb9" category="paragraph">Toutes les instructions ci-dessous supposent que votre emplacement d'installation pour Kafka est « /opt/kafka ».  Vous pouvez adapter les instructions ci-dessous pour refléter votre emplacement d'installation.</block>
-  <block id="56f18825a76309ae6391073aeb14f1b3" category="inline-link-macro">téléchargé</block>
-  <block id="b4492a410e1a2bd30cdf9f247f446872" category="paragraph">Une version du fichier jar de l'agent Jolokia doit être<block ref="03eda4c0436e65ce27568c6a2dfc2a07" category="inline-link-macro-rx"></block> .  La version testée était l'agent Jolokia 1.6.0.</block>
-  <block id="9494328c2f532a3a7698d443b58084c9" category="paragraph">Les instructions ci-dessous supposent que le fichier jar téléchargé (jolokia-jvm-1.6.0-agent.jar) est placé sous l'emplacement « /opt/kafka/libs/ ».</block>
-  <block id="c85a72d841365870905b8d39edf7008f" category="section-title">Courtiers Kafka</block>
-  <block id="952eb44621cfe8be5bf3ffac42243da9" category="paragraph">Pour configurer Kafka Brokers afin d'exposer l'API Jolokia, vous pouvez ajouter ce qui suit dans &lt;KAFKA_HOME&gt;/bin/kafka-server-start.sh, juste avant l'appel 'kafka-run-class.sh' :</block>
-  <block id="c7a51c522cf686cccad4634633637a98" category="paragraph">Notez que l'exemple ci-dessus utilise « hostname -I » pour configurer la variable d'environnement « RMI_HOSTNAME ».  Dans le cas de machines à plusieurs IP, cela devra être modifié pour collecter l'IP qui vous intéresse pour les connexions RMI.</block>
-  <block id="a2ca14d29d006aa3bc52960c80f3ec10" category="paragraph">Vous pouvez choisir un port différent pour JMX (9999 ci-dessus) et Jolokia (8778).  Si vous disposez d'une IP interne sur laquelle verrouiller Jolokia, vous pouvez remplacer le « catch all » 0.0.0.0 par votre propre IP.  Notez que cette IP doit être accessible depuis le plugin Telegraf.  Vous pouvez utiliser l'option '-Dcom.sun.management.jmxremote.authenticate=false' si vous ne souhaitez pas vous authentifier.  Utilisez-le à vos propres risques.</block>
-  <block id="edea81abf1b2e3f44366dbd2866631eb" category="cell">Courtier Kafka</block>
-  <block id="80d610f6ec2e0d70bb310ea6b21d8e09" category="cell">Courtier d'espace de noms de cluster</block>
-  <block id="18906ecb044421552f4c94c742621646" category="summary">configuration des condensateurs</block>
-  <block id="d3761f3a03696694e546430b624f3542" category="doc">Collecteur de données Kapacitor</block>
-  <block id="78972009c6082dcaba24ce5ccddab4c6" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques auprès d'influxdata Kapacitor.</block>
-  <block id="34328c30b9aeceaed8fcff2dfe3eec30" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Kapacitor.</block>
-  <block id="6501fa3c86462ded7187a4c119d46e5b" category="inline-image-macro">Configuration du condensateur</block>
-  <block id="dbf6b5b2cdedf021b5f438c1d0d94f55" category="paragraph"><block ref="dbf6b5b2cdedf021b5f438c1d0d94f55" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e711cd4bbd4573cce8f56f9019ee69f5" category="inline-link">Documentation du kapacitor</block>
-  <block id="613c0ccc72426c675ba16888b7beb75b" category="paragraph">Les informations de configuration peuvent être trouvées dans le<block ref="4a1162f0f136a577fb8e0c35cb055638" category="inline-link-rx"></block></block>
-  <block id="497031794414a552435f90151ac3b54b" category="cell">Objet</block>
-  <block id="e2da36de4fe1aaf514aaef4ecca2c8ec" category="cell">Identifiants</block>
   <block id="496e790e66d36d3bfbadd9eca21b9d6b" category="cell">Capacité</block>
-  <block id="8aff22b7ab299e63ad122521b8cce856" category="cell">Espace de noms Nom du nœud IP du nœud</block>
-  <block id="3f6d224a7b20e18c557bf21bfe5ede71" category="cell">Architecture du système d'exploitation Nom du système d'exploitation Version du système d'exploitation Spécification d'exécution Fournisseur de spécifications d'exécution Spécification d'exécution Version Temps de disponibilité Capacité Version Nom de la machine virtuelle d'exécution Fournisseur de la machine virtuelle d'exécution Version de la machine virtuelle d'exécution</block>
-  <block id="1d3092a2cd5069209f6c8a3a894f204c" category="cell">Octets alloués Buck Hachage Système Libérations GC Système GCC PU Fraction Allocation du tas Tas inactif Utilisation du tas Objets du tas Tas libéré Système du tas Dernier GC (ns) Recherches Mallocs Mcache en cours d'utilisation Mcache Système Mspan en cours d'utilisation Mspan Système Prochain GC (ns) Nombre GC Autre Pause système Total (ns) Pile en cours d'utilisation Pile Système Octets système Total des octets alloués Temps d'exécution moyen (ns) Erreurs</block>
-  <block id="f675ac1ea34754aba3279d7f93746721" category="summary">Configuration du collecteur de données Kibana</block>
-  <block id="d6678652208f4e26109690d4ab6151e5" category="doc">Collecteur de données Kibana</block>
-  <block id="52a546bca78abda47f87fe032f0c6025" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Kibana.</block>
-  <block id="710ec696cccefe4c3faa1d7ebf8fca87" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Kibana.</block>
-  <block id="ed9f8d76b0ccacc02aa67a13d6c1e9a8" category="inline-image-macro">Configuration de Kibana</block>
-  <block id="18785da9c6be5397773e5c495dcc23f4" category="paragraph"><block ref="18785da9c6be5397773e5c495dcc23f4" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3c84e442bbf213b7d0e5047d09d7aef4" category="inline-link-macro">Documentation de Kibana</block>
-  <block id="a8bdbad6177ca64d397d863b68fe3fe9" category="paragraph">Des informations peuvent être trouvées dans le<block ref="07c833901243190735d960ff17f32792" category="inline-link-macro-rx"></block> .</block>
-  <block id="5228fdd6f613af63fc73ee7c02ef8fb5" category="cell">Kibana</block>
-  <block id="22591bcc5e32570096ba46abc2143b90" category="cell">Adresse de l'espace de noms</block>
-  <block id="a78ce0ccaaa47b18906f1de5d019d817" category="cell">Nœud IP Nom du nœud Version État</block>
-  <block id="159dbe63e44af239ee60fabff2752f0e" category="cell">Connexions simultanées Tas Tas max. utilisé Requêtes par seconde Temps de réponse Temps de réponse moyen Temps de disponibilité maximal</block>
   <block id="8c362b737d9d3a6fff5acfc29aaa5225" category="summary">Collecteur de données pour Kubernetes</block>
   <block id="3ce5067a26bb6509b15cfb6487590ed5" category="doc">Collecteur de données : Kubernetes</block>
   <block id="6ffb121d702031b943827f26c164c756" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter les métriques Kubernetes Pod, Node et Container.</block>
@@ -7454,147 +7131,7 @@
   <block id="8a971d74114c901e6e49ec38adf35b17" category="list-text">Mesures des tâches cron</block>
   <block id="9184717578be39d9d8ce4dc4caf1561d" category="list-text">Indicateurs d'emploi</block>
   <block id="e68008fca3fcb96a93c82b9cf703aee3" category="list-text">Mesures des quotas de ressources</block>
-  <block id="d500a402a0f4d5ab2dedb2c5a7ec2eaf" category="summary">Configuration du collecteur de données Memcached</block>
-  <block id="0f5c57f0abc7ee69be3379cf9f5ede78" category="doc">Collecteur de données Memcached</block>
-  <block id="0bcc6251db330c98836511cffac20f00" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Memcached.</block>
-  <block id="589728f32967406f1fdbd032c3fe018d" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Memcached.</block>
-  <block id="198cd654ded33685760b4676e579ff66" category="inline-image-macro">Configuration de Memcached</block>
-  <block id="a986c1bc689361d60658b48c116b9bda" category="paragraph"><block ref="a986c1bc689361d60658b48c116b9bda" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e26124564f900a300b66ae6ad54d0791" category="inline-link-macro">Wiki Memcached</block>
-  <block id="275cfcf9eff65ee82ad249d1a35cadfb" category="paragraph">Des informations peuvent être trouvées dans le<block ref="5ded07e322e421e6ecffb5f41bada1c9" category="inline-link-macro-rx"></block> .</block>
-  <block id="05894ba2c918dd33592bf1bd21c347f6" category="cell">Memcached</block>
-  <block id="f3149829d80f1010c9764cf219626e96" category="cell">IP du nœud Nom du nœud</block>
-  <block id="05345376e590de98cc623cdd4392065e" category="cell">Acceptation des connexions Requêtes d'authentification traitées Authentifications échouées Octets utilisés Octets lus (par seconde) Octets écrits (par seconde) CAS Badval Succès CAS Échecs CAS Demandes de vidage (par seconde) Demandes d'obtention (par seconde) Demandes de définition (par seconde) Demandes tactiles (par seconde) Rendements de connexion (par seconde) Structures de connexion Connexions ouvertes Éléments stockés actuels Demandes de diminution Succès (par seconde) Demandes de diminution Échecs (par seconde) Demandes de suppression Succès (par seconde) Demandes de suppression Échecs (par seconde) Éléments expulsés Expulsions valides Éléments expirés Obtenir Succès (par seconde) Obtenir Échecs (par seconde) Octets de hachage utilisés Le hachage est en expansion Niveau de puissance de hachage Augmentation des requêtes Succès (par seconde) Augmentation des requêtes Échecs (par seconde) Serveur Nombre max. d'octets Écoute désactivée Nombre de threads de travail récupérés Nombre total de connexions ouvertes Nombre total d'éléments stockés Touch Succès Touch Échecs Temps de disponibilité du serveur</block>
-  <block id="3e647ef93d862cebdd7fa80573f126aa" category="summary">Configuration du collecteur de données MongoDB</block>
-  <block id="53e70a8dd3a918a24f705909a168c35c" category="doc">Collecteur de données MongoDB</block>
-  <block id="8590f6cbb7236f138392505cbefbc1b8" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de MongoDB.</block>
-  <block id="c71f6654a45927e285ab22a697438b43" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez MongoDB.</block>
-  <block id="06dc92e8ae707ce9c6046e102df5a214" category="inline-image-macro">Configuration de MongoDB</block>
-  <block id="0f54e55841a24b143c2104aab4935f7b" category="paragraph"><block ref="0f54e55841a24b143c2104aab4935f7b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="38d4b2dc2b4a57b1ac9fd3ffb91a1e4e" category="inline-link-macro">Documentation de MongoDB</block>
-  <block id="6d44425175e1033dd7e44ad93e6c1716" category="paragraph">Des informations peuvent être trouvées dans le<block ref="03dc511ffabb03f2ed77b5dbe821f120" category="inline-link-macro-rx"></block> .</block>
-  <block id="206e3718af092fd1d12f80cae771ccac" category="cell">MongoDB</block>
-  <block id="7c33c5b9bc17f5cdef2a6e9af34ec2ba" category="cell">Nom d'hôte de l'espace de noms</block>
-  <block id="03a2f43be2bb9fe29ee41afceec0ffcd" category="cell">Base de données MongoDB</block>
-  <block id="53de6191c5a3773a175198e9140b6c2b" category="cell">Nom d'hôte de l'espace de noms Nom de la base de données</block>
-  <block id="d5712dd84650ff1cb4915da1c121ffbb" category="paragraph">Des informations peuvent être trouvées à partir du<block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> page.</block>
-  <block id="4c35289465431b7541002dd365bad198" category="summary">Configuration du collecteur de données MySQL</block>
-  <block id="d1f43c925400e37adcd15285deaac430" category="doc">Collecteur de données MySQL</block>
-  <block id="dab29b360fb10ec7c8ac636229bf61b4" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de MySQL.</block>
-  <block id="53a22ff7bf05343afd43baa85e5c7883" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez MySQL.</block>
-  <block id="cfe3b09f39613d05db4ca7532b374386" category="inline-image-macro">Configuration MySQL</block>
-  <block id="acd86359b435b0d32d73a66fa03be887" category="paragraph"><block ref="acd86359b435b0d32d73a66fa03be887" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0281cf739776a9c6b7c6cb01c1accf40" category="inline-link-macro">Documentation MySQL</block>
-  <block id="6292388c6e8693ea6c73e72a49ab4655" category="paragraph">Des informations peuvent être trouvées dans le<block ref="4319c63c14adb8b966feb7239cf0a2bb" category="inline-link-macro-rx"></block> .</block>
-  <block id="62a004b95946bb97541afa471dcca73a" category="cell">MySQL</block>
-  <block id="7b13a5e1284d961b045ce256aaf8121b" category="cell">Espace de noms du serveur MySQL</block>
-  <block id="aa0de5a29cbb206ae9a2819913271064" category="cell">Clients abandonnés (par seconde) Connexions abandonnées (par seconde) Octets RX (par seconde) Octets TX (par seconde) Commandes Admin (par seconde) Commandes Alter Event Commandes Alter Function Commandes Alter Instance Commandes Alter Procedure Commandes Alter Server Commandes Alter Table Commandes Alter Tablespace Commandes Alter User Commandes Analyze Commandes Assign To Keycache Commandes Begin Commandes Binlog Commandes Call Procedure Commandes Change DB Commandes Change Master Commandes Change Repl Filter Commandes Check Commandes Checksum Commandes Commit Commandes Create DB Commandes Create Event Commandes Create Function Commandes Create Index Commandes Create Procedure Commandes Create Server Commandes Create Table Commandes Create Trigger Commandes Create UDF Commandes Create User Commandes Create View Commandes Dealloc Erreurs de connexion SQL Accept Create Tmp Disk Tables Erreurs différées Commandes Flush Handler Commit Innodb Buffer Pool Octets Données Blocs de clés non vidés Requêtes de lecture de clé Requêtes d'écriture de clé Écritures de clé Temps d'exécution maximal Dépassement du nombre maximal de connexions utilisées Fichiers ouverts Performances Schéma Comptes perdus Nombre de déclarations préparées Qcache Blocs gratuits Requêtes Questions Sélectionner une jointure complète Sélectionner une jointure de plage complète Sélectionner une vérification de plage Sélectionner une analyse Verrous de table Immédiat</block>
-  <block id="57e45a1f550d7e2a276b57b6bca05dca" category="summary">Configuration du collecteur de données Netstat</block>
-  <block id="38fe3e3fc1af1752c621d2c58ca1d537" category="doc">Collecteur de données Netstat</block>
-  <block id="19bc3a53e6ad865e0a7fd9e242445840" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter les métriques Netstat.</block>
-  <block id="3d0738af358079dc547755789be4774a" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Netstat.</block>
-  <block id="fbe4c8006ab6084c9caa4749e31a48b2" category="inline-image-macro">Configuration de Windows Netstat</block>
-  <block id="3b600482a8cf2d80423a46534f251590" category="paragraph"><block ref="3b600482a8cf2d80423a46534f251590" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5640ddf22fd2c345be7dd9bb71023b38" category="cell">Netstat</block>
-  <block id="c3e78df51911e54e9bf950f6adb83f17" category="cell">Nœud UUID</block>
-  <block id="3dc395f34d5747fa5d58e08302ab67fd" category="summary">Configuration du collecteur de données Nginx</block>
-  <block id="21a6c8824057335f8e9dc232584c6ea0" category="doc">Collecteur de données Nginx</block>
-  <block id="32619dd6aa6fdd5629ada6963279423c" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Nginx.</block>
-  <block id="993b018a6d59665db1ee4e45e62026f4" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Nginx.</block>
-  <block id="e7e86cae130886a78274ae9b77db6f35" category="inline-image-macro">Configuration de Linux Nginx</block>
-  <block id="de93697b48f7103f9289abf65ca587b4" category="paragraph"><block ref="f310f9809260b458b5b99732eb2d720e" category="inline-image-macro-rx" type="image"></block> <block ref="884ba5b9c64ace436091d4a7d4619c6c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ed8b6bdc341556c944fb012aca6b84d4" category="inline-link-macro">module d'état http_stub</block>
-  <block id="6d1ee9bcac1552cb3e77bfff99ff625e" category="paragraph">La collecte de métriques Nginx nécessite que Nginx<block ref="9b25bbc6607a95e9c0486769f8ad1d09" category="inline-link-macro-rx"></block> être activé.</block>
-  <block id="3cbf4d6ad75e10ca79741aee2213bd64" category="inline-link-macro">Documentation Nginx</block>
-  <block id="55c28d13135e5d996f9471516e4d7523" category="paragraph">Des informations complémentaires peuvent être trouvées dans le<block ref="f61e491fe5dc644cc25aa0f3a87b7491" category="inline-link-macro-rx"></block> .</block>
-  <block id="62e0b5b350c9e3d2c19aa801d9442ba9" category="cell">Nginx</block>
-  <block id="b5044973d8a3d9239bbbeaeeee9db4a5" category="cell">IP du nœud Nom du nœud Port</block>
-  <block id="359d1921d88a2e1a27105eb5a262c103" category="cell">Accepte les demandes de lecture traitées actives en attente d'écriture</block>
-  <block id="43b4fe530611e0a29d40ae51f1110192" category="doc">Collecte de données de nœuds</block>
-  <block id="c3aac04f96a07803fc2b8fcce4a7e8b4" category="paragraph">Data Infrastructure Insights collecte les métriques du nœud sur lequel vous installez un agent.</block>
-  <block id="baaf023f6d75d85198bf4906a1760b9a" category="list-text">Dans *Observabilité &gt; Collecteurs*, choisissez un système d’exploitation/une plateforme.  Notez que l’installation de n’importe quel collecteur de données d’intégration (Kubernetes, Docker, Apache, etc.) configurera également la collecte de données de nœud.</block>
-  <block id="5f6ce12582c69bad9341e28467c0c0d0" category="list-text">Suivez les instructions pour configurer l'agent.  Les instructions varient en fonction du type de système d’exploitation ou de plate-forme que vous utilisez pour collecter des données.</block>
-  <block id="c166791fe89a8eb17ee0a37ad809ba2b" category="paragraph">Les objets suivants et leurs compteurs sont collectés en tant que métriques de nœud :</block>
-  <block id="1f8c535824144ce794fd8ac5fdcfe9f1" category="cell">Système de fichiers Node</block>
-  <block id="8fcdaf1e82ebe454e557f94d0676e94b" category="cell">Type de chemin d'accès du périphérique UUID du nœud</block>
-  <block id="1f887fd15f6189f871338dd33033cd43" category="cell">IP du nœud Nom du nœud Mode du système d'exploitation du nœud</block>
-  <block id="ad06ad8b4ea618930277691a7ca85b8a" category="cell">Inodes libres Inodes libres Total des inodes utilisés Total utilisé Total utilisé</block>
-  <block id="995a8be8130452c3880f8f3a8efb892f" category="cell">Disque de nœud</block>
-  <block id="8d31b98bd62df2c8e71a8ccda6950620" category="cell">Disque UUID du nœud</block>
-  <block id="395504c5fc3cdba387d8e31a83c56f88" category="cell">IP du nœud Nom du nœud Système d'exploitation du nœud</block>
-  <block id="504e0980cd10557e0d0eeeadb727d763" category="cell">Temps d'E/S Total des IOPS en cours Octets lus (par seconde) Temps de lecture Total des lectures (par seconde) Temps d'E/S pondéré Total des octets d'écriture (par seconde) Temps d'écriture Total des écritures (par seconde) Longueur actuelle de la file d'attente du disque Temps d'écriture Temps de lecture Temps d'E/S</block>
-  <block id="9560e0d605d2cc7aa05155382b767318" category="cell">Nœud CPU</block>
-  <block id="7f0dc83c5502913a601c96af73494913" category="cell">UUID du nœud CPU</block>
-  <block id="19e5a412b9d9ce58d147c936a5bf221e" category="cell">Utilisation du processeur système Utilisation du processeur utilisateur Utilisation du processeur inactif Utilisation du processeur du processeur Utilisation du processeur d'interruption Utilisation du processeur DPC</block>
   <block id="6c3a6944a808a7c0bbb6788dbec54a9f" category="cell">Nœud</block>
-  <block id="16d2c29487805cc97063b63f5f00c68e" category="cell">Temps de démarrage du noyau Changements de contexte du noyau (par seconde) Entropie du noyau disponible Interruptions du noyau (par seconde) Processus du noyau forkés (par seconde) Mémoire Mémoire active disponible Mémoire totale disponible Mémoire tamponnée Mémoire en cache Limite de validation Mémoire validée en tant que mémoire Mémoire sale Mémoire libre élevée Mémoire libre élevée Mémoire totale énorme Taille de page Mémoire Grandes pages Mémoire libre Grandes pages Mémoire totale faible Mémoire libre faible Mémoire totale Mémoire mappée Tables de pages Mémoire Mémoire partagée Mémoire en bloc Swap Mémoire en cache Swap Mémoire libre Swap Mémoire totale Mémoire totale utilisée Mémoire totale utilisée Mémoire Vmalloc Bloc de mémoire Vmalloc Mémoire totale Vmalloc Mémoire utilisée Mémoire câblée Écriture différée Mémoire totale Écriture différée Mémoire temporaire Défauts de cache Demande de mémoire Défauts de page mémoire Pages mémoire Mémoire non paginée Mémoire paginée Cache Mémoire principale Cache de secours Mémoire normale Cache de secours Réserve de mémoire Défauts de transition Processus Processus bloqués Processus morts Processus inactifs Processus de pagination Processus en cours d'exécution Processus en veille Processus arrêtés Nombre total de processus Nombre total de threads Processus inconnus Processus zombies Longueur de la file d'attente du processeur Swap libre Swap Total Swap utilisé Total Swap utilisé Swap entrant Swap sortant Temps de disponibilité du système Nombre système CPU Nombre système Utilisateurs Appels système</block>
-  <block id="695c8433fb0290581bae584e00feeee4" category="cell">Réseau de nœuds</block>
-  <block id="0a7c391bbf4a5a2942fabe6c508c95eb" category="cell">UUID du nœud d'interface réseau</block>
-  <block id="7e497ea07b0bb26a9fccfea169adadb5" category="cell">Nom du nœud IP du nœud Système d'exploitation du nœud</block>
-  <block id="228775e556bb7d0b1893a0069479cc55" category="cell">Octets reçus Octets envoyés Paquets sortants Paquets rejetés Erreurs sortantes Paquets reçus Paquets rejetés Erreurs reçues Paquets reçus Paquets envoyés</block>
-  <block id="620f85b913de46972f8dc2d9791d0335" category="inline-link-macro">Configuration d'un agent</block>
-  <block id="11e9a60bae5c09e0b15ee77e596f4b30" category="paragraph">Les informations de configuration et de dépannage sont disponibles sur le<block ref="253f1bddd94d888bccb7868889c4eaa6" category="inline-link-macro-rx"></block> page.</block>
-  <block id="83fbc11c171008ea835730f7922a6417" category="summary">Configuration du collecteur de données OpenZFS</block>
-  <block id="280698a257edec445fc9d2a3c41f9089" category="doc">Collecteur de données OpenZFS</block>
-  <block id="1e170cb26cedac0836068d22c877bb0f" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir d'OpenZFS.</block>
-  <block id="5888b2a0267a27f9f34b34863d7a8110" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez OpenZFS.</block>
-  <block id="c5ea32057bfe11187d339d524ccea393" category="inline-image-macro">Configuration Linux OpenZFS</block>
-  <block id="252ab915aaf37678f2c31259844d9830" category="paragraph"><block ref="252ab915aaf37678f2c31259844d9830" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b016f6d8b58fbc57dff98ba0460cd713" category="inline-link-macro">Documentation OpenZFS</block>
-  <block id="5f9f2125ea94bc8ee63a894e33ebaf33" category="paragraph">Des informations complémentaires peuvent être trouvées dans le<block ref="0ee1b5ccb1dd9edb24ef60d421e0c18a" category="inline-link-macro-rx"></block> .</block>
-  <block id="a1151f371f1db5ddea0adcadbc49738e" category="summary">Configuration du collecteur de données PostgreSQL</block>
-  <block id="28279ca1d2fa23440d64e252b10c2f2e" category="doc">Collecteur de données PostgreSQL</block>
-  <block id="117290c72445e956fad0857c0390badb" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de PostgreSQL.</block>
-  <block id="0ba3615a02f45b8a7b485192d849f02b" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez PostgreSQL.</block>
-  <block id="9efde47a7f6913de0fa15c50384c3916" category="inline-image-macro">Configuration de PostgreSQL</block>
-  <block id="ee807d599c86ec0cddb65a95252754a9" category="paragraph"><block ref="ee807d599c86ec0cddb65a95252754a9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="939acd793e013bec3f238716d1e5a1e9" category="inline-link-macro">Documentation PostgreSQL</block>
-  <block id="5d213cdd76206e521a99ee763867f286" category="paragraph">Des informations peuvent être trouvées dans le<block ref="3b5af5b1f584ca750656ee54bcf2acd9" category="inline-link-macro-rx"></block> .</block>
-  <block id="b3cba72c5eaf0e9b001ad474d3a7f104" category="cell">Serveur PostgreSQL</block>
-  <block id="9eb39642e01cf00ecfb6933ae0d8c91e" category="cell">Serveur de base de données d'espace de noms</block>
-  <block id="416d97bf6aa220146cd29e24d4f5ae1f" category="cell">Tampons alloués Tampons backend Tampons de synchronisation de fichiers backend Tampons de point de contrôle Points de contrôle propres Temps de synchronisation Points de contrôle Temps d'écriture Points de contrôle Requêtes Points de contrôle chronométrés Max Écrit Propre</block>
-  <block id="f9fa8e4ec8d4dfd8388984164c7cfd07" category="cell">Base de données PostgreSQL</block>
-  <block id="47587388fb25edfeb337d39473d4183f" category="cell">Base de données OID Nom du nœud IP du nœud</block>
-  <block id="03ccb35e4244ef1cc7ff8662031b0a7f" category="cell">Blocs Temps de lecture Blocs Temps d'écriture Blocs Hits Blocs Lectures Conflits Blocs Interblocs Numéro de client Fichiers temporaires Octets Numéro de fichiers temporaires Lignes Lignes supprimées Lignes extraites Lignes insérées Lignes renvoyées Transactions mises à jour Transactions validées Annulées</block>
-  <block id="4bfbaf73f806e0f2e37658d94bd02b1d" category="summary">Configuration du collecteur de données Puppet</block>
-  <block id="4f3343312b305965c29f8f14046d895c" category="doc">Collecteur de données d'agent de marionnettes</block>
-  <block id="8ff544ec5ab30cadc928412e34e62a4c" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Puppet Agent.</block>
-  <block id="8a8e72cdfe9e0062f257b6b3af0a66fc" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Puppet.</block>
-  <block id="f28ce6829aadfe8650a22f9c6a697a20" category="inline-image-macro">Configuration de la marionnette</block>
-  <block id="f02b842ccd15155934dc65921239d4f0" category="paragraph"><block ref="f02b842ccd15155934dc65921239d4f0" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4c6265f8b688769e31b9b757f9e54749" category="inline-link">Documentation des marionnettes</block>
-  <block id="1554b3e5df91d78952d35aa9c0ee325f" category="paragraph">Des informations peuvent être trouvées dans le<block ref="114b9d35c3c72b635a83707f2087ecd5" category="inline-link-rx"></block></block>
-  <block id="774594156e74c09914941ef11ed2caa5" category="cell">Agent marionnette</block>
-  <block id="ff5f20e069b5c2643ec78dffe736ccad" category="cell">UUID du nœud d'espace de noms</block>
-  <block id="2d6d04c4d20bee58922505cce875cd62" category="cell">Nom du nœud Emplacement IP du nœud Version Chaîne de configuration Version Puppet</block>
-  <block id="61bb9c3d200381413da5b615c1c8f827" category="cell">Modifications Total des événements Échecs Succès Ressources Total Ressources modifiées Ressources échouées Échec du redémarrage des ressources Ressources désynchronisées Ressources redémarrées Ressources planifiées Ressources ignorées Temps total Heure d'ancrage Heure de récupération de la configuration Heure cron Heure d'exécution Heure du fichier Heure du compartiment de fichiers Heure de la dernière exécution Heure du package Heure de planification Heure du service Heure de la clé Sshauthorized Heure totale Utilisateur</block>
-  <block id="4002c18c39606cdbd9ec7cf8e2a090ad" category="summary">Configuration du collecteur de données Redis</block>
-  <block id="001dce6e76a3b3b754db59e538750dd8" category="doc">Collecteur de données Redis</block>
-  <block id="cb98f2921297df26dc76aef2918b37f6" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques à partir de Redis.  Redis est un magasin de structures de données open source en mémoire utilisé comme base de données, cache et courtier de messages, prenant en charge les structures de données suivantes : chaînes, hachages, listes, ensembles, etc.</block>
-  <block id="3c9d727e041ea1596d9e67f7568b3d4b" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez Redis.</block>
-  <block id="602c395372ffc11185f0cc2291099c7f" category="inline-image-macro">Configuration du collecteur de données Redis</block>
-  <block id="5c452c3f36884795da26d34b96db691c" category="paragraph"><block ref="5c452c3f36884795da26d34b96db691c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6f6c7e0bd9df07afbd8f27f303fba934" category="inline-link-macro">Documentation Redis</block>
-  <block id="ae042fc4879ccb38022624b37b7c15bd" category="paragraph">Des informations peuvent être trouvées dans le<block ref="f84fd6d9d2467b4d3f4dd370ee4175c5" category="inline-link-macro-rx"></block> .</block>
-  <block id="e111446745a1825b862f8727ae63bce4" category="cell">Redis</block>
-  <block id="9d2537f158357c95ae162019d658de08" category="doc">Collecteur de données RethinkDB</block>
-  <block id="eb261bdf6f30b5b4dea4bc6dd944a8a9" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques de RethinkDB.</block>
-  <block id="5ccd9dd8e50ca94f3cd4db51f6b42c50" category="list-text">Depuis *Observabilité &gt; Collecteurs*, cliquez sur *+Collecteur de données*.  Choisissez RethinkDB.</block>
-  <block id="10e1e1205ffd97adbe671ede9a7d4f2d" category="inline-image-macro">Configuration du collecteur de données RethinkDB</block>
-  <block id="dd379e6631df8e94fe26188b06220cf7" category="paragraph"><block ref="dd379e6631df8e94fe26188b06220cf7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7fc41d1df644e11b26a2696444f69499" category="inline-link-macro">Documentation de RethinkDB</block>
-  <block id="61c63e4b6fa084c1807e368faaf150e4" category="paragraph">Des informations peuvent être trouvées dans le<block ref="02af3cecada50a802d68e28a6a325991" category="inline-link-macro-rx"></block> .</block>
-  <block id="689738a624a7f72a8b98c8ed8f1ab58b" category="summary">Configuration du collecteur de données Apache Zookeeper</block>
-  <block id="b640a79fa52794aecc8878f82be8c28e" category="doc">Collecteur de données Zookeeper</block>
-  <block id="ac08612fe2f5491fd7994b41201ac8e1" category="paragraph">Data Infrastructure Insights utilise ce collecteur de données pour collecter des métriques d'Apache Zookeeper.</block>
-  <block id="6f449010e727da85fc5dba4dc0566129" category="list-text">Depuis *Admin &gt; Collecteurs de données*, cliquez sur *+Collecteur de données*.  Choisissez Apache Zookeeper.</block>
-  <block id="8429b9b7552e9131928dae7613de806c" category="inline-image-macro">Configuration du gardien de zoo</block>
-  <block id="95e6ebb37419864b276c313f8f6c3cbb" category="paragraph"><block ref="95e6ebb37419864b276c313f8f6c3cbb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="fb4ac192a5f039c2e2c335ba5ced3583" category="inline-link-macro">Gardien de zoo</block>
-  <block id="c3a641e09298ba4de1409a1510576930" category="paragraph">Au minimum, vous devez autoriser les commandes du serveur Zookeeper à quatre lettres _mntr_, _srvr_ et _stat_.  Vous pouvez activer ces commandes en utilisant le format suivant : _4lw.commands.whitelist=mntr, srvr, stat_ dans le fichier _zoo.cfg_.  Il se peut que d'autres commandes de quatre lettres soient requises dans votre configuration.  Voir le<block ref="228947e8a732f5af21701eca589dabd2" category="inline-link-macro-rx"></block> documentation pour plus d'informations.</block>
-  <block id="acbfb3e07bc6528e76ff58b9441ce7e6" category="cell">Gardien de zoo</block>
-  <block id="30cda581f57d507b5c4e7230009bb6ff" category="cell">État Nœud IP Nom du nœud Port</block>
-  <block id="263026a1c82c98e0f26e5963c3c57811" category="cell">Taille approximative des données Latence moyenne Nombre d'éphémères Nombre maximal de descripteurs de fichiers Latence maximale Latence minimale Nombre de connexions actives Nombre de descripteurs de fichiers ouverts Requêtes en attente Nombre de surveillance Nombre de nœuds Z</block>
   <block id="dee5cfb5319806eabd9b28296b26207a" category="summary">Configuration du collecteur d'annuaires utilisateurs Active Directory de Workload Security</block>
   <block id="0352c19ca21d40072aea36bf372abc1d" category="doc">Configuration d'un collecteur d'annuaires utilisateurs Active Directory (AD)</block>
   <block id="8dccebe9a8725eed9d49bcce51664895" category="paragraph">Workload Security peut être configuré pour collecter les attributs utilisateur à partir des serveurs Active Directory.</block>
@@ -12285,21 +11822,6 @@
   <block id="d30973809f2e4238b7eb2bac9241674c" category="sidebar">Pur</block>
   <block id="38d38399d4a7514463d665125ae50a4a" category="sidebar">Rubrique CDM</block>
   <block id="56079badd056a19303cc26e6a4fcc7e0" category="sidebar">VMware</block>
-  <block id="8683de0aa24eead7d9ee8d3fdaa00cbc" category="sidebar">Référence du collecteur de données - Services</block>
-  <block id="d81d51c42424446940b4de6d28139a2d" category="sidebar">Hôte/Nœud</block>
-  <block id="6cc02b1b7e5213c9f46103a566d9d0a3" category="sidebar">ActiveMQ</block>
-  <block id="7dd3b0205c0cae0eb0b77da34529a5c5" category="sidebar">Couchbase</block>
-  <block id="c5fd214cdd0d2b3b4272e73b022ba5c2" category="sidebar">Docker</block>
-  <block id="45e23a169652aaf95ce80da844f3df0d" category="sidebar">Elasticsearch</block>
-  <block id="4438f9fa6205bdb2a850e66c2d313d01" category="sidebar">Flink</block>
-  <block id="53eb3dcfbb4c210bcd4fe1a985d7c946" category="sidebar">Hadoop</block>
-  <block id="6a812150273423f1f875479281529d1a" category="sidebar">HAProxy</block>
-  <block id="d52387880e1ea22817a72d3759213819" category="sidebar">Java</block>
-  <block id="51be25b0145a0beca811de24a62b5cb4" category="sidebar">Kafka</block>
-  <block id="8b3ef428de31f1ca27980c8b919c862a" category="sidebar">OpenZFS</block>
-  <block id="399bd1ee587245ecac6f39beaa99886f" category="sidebar">PostgreSQL</block>
-  <block id="14590850b4107a6f92feb1af739b82eb" category="sidebar">Fantoche</block>
-  <block id="15ec8934d96530d4c5f4a3b0f701f745" category="sidebar">Repenser la base de données</block>
   <block id="b6c4679bc199e5db8f88b60803f5ca85" category="section-title">Remarque sur les alertes à long terme</block>
   <block id="83e49813b50f1fc5e03ffde57c985102" category="paragraph">Notez que les alertes qui restent actives pendant plus de 24 heures seront visibles dans la liste Alertes et modifications une fois toutes les 24 heures. Vous remarquerez donc peut-être la même alerte répertoriée plusieurs fois. Chacune de ces alertes aura le même ID d'alerte, la même heure de début, etc., et aura le statut « Alerte » jusqu'à ce que l'alerte soit résolue.</block>
   <block id="079090a1dc96bbd4e45426ceeedd592f" category="summary">Créez des moniteurs de métriques et de journaux personnalisés pour suivre de manière proactive les performances de l'infrastructure, les seuils de capacité et les événements critiques avec des alertes et des notifications automatisées.</block>
@@ -14469,7 +13991,6 @@
   <block id="6b27f70000f03c5a24fb70b6ed340d8e" category="cell"><block ref="6b27f70000f03c5a24fb70b6ed340d8e" category="inline-link-macro-rx"></block></block>
   <block id="079cdcfd43abfa5548c437b1a50427fb" category="inline-link-macro">Red Hat OpenShift Virtualization</block>
   <block id="bd6345d055b68904ea42423102195045" category="cell"><block ref="bd6345d055b68904ea42423102195045" category="inline-link-macro-rx"></block></block>
-  <block id="d818fc83532d27c308cb47649bd5ec02" category="admonition">Ce collector est obsolète. Il ne sera plus disponible à partir de janvier 2027.</block>
   <block id="faf4a8391186fe75061a56efa03cbe77" category="paragraph">Ce collecteur de données recueille les informations d'inventaire des systèmes de stockage à déduplication DELL EMC Data Domain. Pour configurer ce collecteur de données, vous devez suivre des instructions de configuration spécifiques et des recommandations d'utilisation.</block>
   <block id="8dfbd1afa40d818910ea903f9d52f6ec" category="summary">Configuration du collecteur de données Red Hat OpenShift Virtualization.</block>
   <block id="50993793783c5f33ae8f736a95dca1b9" category="doc">Collecteur de données Red Hat OpenShift Virtualization</block>
@@ -14498,20 +14019,23 @@
   <block id="aa4f2113791c12393a66ffe706420102" category="list-text">Utilisateurs : supprimer les alertes déclenchées par les utilisateurs sélectionnés.</block>
   <block id="ecfbace61ab4dd6175d43a276330b05d" category="list-text">Chemins : supprimer les alertes d’activité sur les chemins de répertoire sélectionnés (jusqu’à quatre niveaux de répertoire, en commençant par le chemin de jonction).</block>
   <block id="099aaf46fa32549a39916446ecf1fe7e" category="inline-link-macro">Types de fichiers autorisés</block>
-  <block id="70c2babfc037807dc9d1d94e48e6b818" category="paragraph">La liste d'exclusion des utilisateurs est prise en charge par la saisie semi-automatique, permettant aux administrateurs de sélectionner les utilisateurs à exclure des alertes.</block>
-  <block id="ab217818a7f8d6405dd619210434e25f" category="paragraph">L'exclusion de répertoire prend en charge jusqu'à quatre niveaux de chemins de répertoire, en commençant par le chemin de jonction.</block>
   <block id="33b828c8fb435b67f3a4a321adbc89c1" category="paragraph">Il est possible d'ajouter ou de supprimer des utilisateurs individuels et des chemins d'accès à la liste d'exclusion correspondante. Chaque entrée de chaque liste contient l'information de la date et de l'auteur de son ajout à la liste, et ces informations seront utilisées à des fins d'audit.</block>
   <block id="b2bc711706213f5680535c284278fd8a" category="section-title">Gérer les exclusions et l’audit</block>
   <block id="4cc0f970741fc7eef05a2f6890f15228" category="list-text">Les administrateurs peuvent ajouter ou supprimer des extensions de fichiers, des utilisateurs individuels ou des chemins à tout moment.</block>
-  <block id="49a160591030eb82ba36b624f5514398" category="list-text">Chaque entrée d'exclusion enregistre le nom de l'administrateur qui l'a définie et la date à laquelle elle a été définie. Ces informations sont conservées à des fins d'audit.</block>
   <block id="430f66c61c1d6e05ef92945c7107306f" category="paragraph"><block ref="430f66c61c1d6e05ef92945c7107306f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4d06e3dd77aaee13a5d969e19fc7acf6" category="paragraph"><block ref="4d06e3dd77aaee13a5d969e19fc7acf6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="147e7f8d7d8064d51ff49f93c07adfeb" category="paragraph">Accédez à *Sécurité des charges de travail &gt; Politiques* et sélectionnez l'onglet *Exclusions d'alertes*.</block>
   <block id="9bf079c262098280af19e475b460e655" category="list-text">Types de fichiers : supprimer les alertes de falsification de fichiers sur certains <block ref="e9fd5a7947ff579f7dabe8508e9cb8cd" category="inline-xref-macro-rx"></block></block>
-  <block id="3596850f01f0deb9d5aecf72b1462619" category="paragraph">Les extensions de fichiers peuvent être ajoutées à une liste de _types de fichiers autorisés_ afin d'éviter les alertes inutiles.</block>
-  <block id="c6b621c33fa4f966db8e8fc0013ade5e" category="paragraph">Sélectionnez *+Type de fichier* pour ajouter des types de fichiers à la liste des types de fichiers autorisés pour l’alerte.</block>
-  <block id="a29d1a88246db4532c1e6dec57fad276" category="inline-image-macro">Ajouter les types de fichiers autorisés</block>
-  <block id="e805eed5e1733a26a8b20a94b4a681d5" category="paragraph"><block ref="e805eed5e1733a26a8b20a94b4a681d5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="492f463a35ea215d77ae021c64cddb64" category="paragraph">Par exemple, si un fichier nommé _test.txt_ est renommé en _test.txt.abc_ et que Workload Security détecte une attaque de ransomware en raison de l’extension _.abc_, cette extension peut être ajoutée à la liste des _types de fichiers autorisés_. Après avoir été ajoutée à la liste, les attaques de ransomware ne seront plus générées contre les fichiers avec l’extension _.abc_.</block>
   <block id="318685a1827ca5f4280e59d71f7d1438" category="paragraph">Les types de fichiers autorisés peuvent être des correspondances exactes (par exemple, « .abc ») ou des expressions (par exemple, ++.*type++, ++.type*++ ou ++.*type*++). Les expressions de types .a*c, .p*f ne sont pas prises en charge.</block>
+  <block id="664ba14b3efcf7d6e7a9409a24223a79" category="paragraph">Veuillez noter que seule l'alerte relative à l'événement est supprimée ; les événements eux-mêmes sont toujours enregistrés et peuvent être consultés.</block>
+  <block id="d01a003326568eee4579a0b14096808a" category="list-text">Chaque entrée d'exclusion consigne le nom de l'administrateur qui l'a créée et la date de sa création. Ces informations sont conservées à des fins d'audit.</block>
+  <block id="502a3077dba0d1ad6f92723157947eb2" category="section-title">Utilisateurs et chemins d'accès</block>
+  <block id="fbe64a9bdbefe7d8e246dbe4db973fd6" category="list-text">Liste d'exclusion des utilisateurs : Ajoutez les utilisateurs à exclure des alertes.</block>
+  <block id="7f21f675f8b42bfe63a9f7bf4d897cb0" category="list-text">Liste d'exclusion de répertoires : Prend en charge jusqu'à quatre niveaux de chemins de répertoires, en commençant par le chemin de jonction.</block>
+  <block id="f12b42eece54a56ffab836a42eb37488" category="section-title">Types de fichiers</block>
+  <block id="137e136f6b4d96d6452fec8d0ed99197" category="paragraph">Une fois ajouté à la liste des types de fichiers, aucun avertissement de tentative de falsification de fichier ne sera généré pour ce type de fichier autorisé. Notez que la politique relative aux types de fichiers s'applique uniquement à la détection de falsification de fichiers.</block>
+  <block id="b3e41e2fae7745b697dbed9b6f854aa1" category="inline-image-macro">Liste des types de fichiers</block>
+  <block id="28460fbd00b73b7255d03888d8c1d8e5" category="paragraph"><block ref="28460fbd00b73b7255d03888d8c1d8e5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3720ff11b9d0e04f7fd96e22ff7a745f" category="paragraph">Les attributs supplémentaires « Défini par » et « Date de définition » ont été introduits à des fins d'audit. Les types de fichiers existants seront migrés vers le nouveau format avec la valeur « migrée » pour ces deux attributs.</block>
 </blocks>

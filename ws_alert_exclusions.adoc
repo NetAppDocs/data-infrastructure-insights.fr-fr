@@ -11,6 +11,8 @@ summary: 'Ajoutez les extensions de fichiers à une liste d"exclusion d"alertes 
 [role="lead"]
 L'exclusion d'alertes vous permet de désactiver la génération d'alertes pour certains types de fichiers, utilisateurs et chemins de répertoires. Utilisez cette fonction pour réduire les faux positifs en excluant les activités connues et attendues qui pourraient autrement correspondre aux modèles d'alerte.
 
+Veuillez noter que seule l'alerte relative à l'événement est supprimée ; les événements eux-mêmes sont toujours enregistrés et peuvent être consultés.
+
 Accédez à *Sécurité des charges de travail > Politiques* et sélectionnez l'onglet *Exclusions d'alertes*.
 
 L'exclusion des alertes est configurée par locataire et comprend les éléments suivants :
@@ -20,36 +22,38 @@ L'exclusion des alertes est configurée par locataire et comprend les éléments
 . Chemins : supprimer les alertes d’activité sur les chemins de répertoire sélectionnés (jusqu’à quatre niveaux de répertoire, en commençant par le chemin de jonction).
 
 
-La liste d'exclusion des utilisateurs est prise en charge par la saisie semi-automatique, permettant aux administrateurs de sélectionner les utilisateurs à exclure des alertes.
-
-L'exclusion de répertoire prend en charge jusqu'à quatre niveaux de chemins de répertoire, en commençant par le chemin de jonction.
-
-Il est possible d'ajouter ou de supprimer des utilisateurs individuels et des chemins d'accès à la liste d'exclusion correspondante. Chaque entrée de chaque liste contient l'information de la date et de l'auteur de son ajout à la liste, et ces informations seront utilisées à des fins d'audit.
-
 
 
 == Gérer les exclusions et l’audit
 
 * Les administrateurs peuvent ajouter ou supprimer des extensions de fichiers, des utilisateurs individuels ou des chemins à tout moment.
-* Chaque entrée d'exclusion enregistre le nom de l'administrateur qui l'a définie et la date à laquelle elle a été définie. Ces informations sont conservées à des fins d'audit.
+* Chaque entrée d'exclusion consigne le nom de l'administrateur qui l'a créée et la date de sa création. Ces informations sont conservées à des fins d'audit.
+
+
+
+
+== Utilisateurs et chemins d'accès
+
+* Liste d'exclusion des utilisateurs : Ajoutez les utilisateurs à exclure des alertes.
+* Liste d'exclusion de répertoires : Prend en charge jusqu'à quatre niveaux de chemins de répertoires, en commençant par le chemin de jonction.
 
 
 image:ws_alert_exclusions_users.png[""]
 
 image:ws_alert_exclusions_paths.png[""]
 
+Il est possible d'ajouter ou de supprimer des utilisateurs individuels et des chemins d'accès à la liste d'exclusion correspondante. Chaque entrée de chaque liste contient l'information de la date et de l'auteur de son ajout à la liste, et ces informations seront utilisées à des fins d'audit.
 
 
-== Types de fichiers autorisés
 
-Les extensions de fichiers peuvent être ajoutées à une liste de _types de fichiers autorisés_ afin d'éviter les alertes inutiles.
+== Types de fichiers
 
-Sélectionnez *+Type de fichier* pour ajouter des types de fichiers à la liste des types de fichiers autorisés pour l’alerte.
+Une fois ajouté à la liste des types de fichiers, aucun avertissement de tentative de falsification de fichier ne sera généré pour ce type de fichier autorisé. Notez que la politique relative aux types de fichiers s'applique uniquement à la détection de falsification de fichiers.
 
-image:ws_allowed_file_types.png["Ajouter les types de fichiers autorisés"]
-
-Une fois ajouté à la liste des _types de fichiers autorisés_, aucune alerte d'attaque par falsification de fichiers ne sera générée pour ce type de fichier autorisé. Notez que la politique relative aux _Types de fichiers autorisés_ ne s'applique qu'à la détection des falsifications de fichiers.
+image:ws_file_types_list.png["Liste des types de fichiers"]
 
 Par exemple, si un fichier nommé _test.txt_ est renommé en _test.txt.abc_ et que Workload Security détecte une attaque de ransomware en raison de l’extension _.abc_, cette extension peut être ajoutée à la liste des _types de fichiers autorisés_. Après avoir été ajoutée à la liste, les attaques de ransomware ne seront plus générées contre les fichiers avec l’extension _.abc_.
 
 Les types de fichiers autorisés peuvent être des correspondances exactes (par exemple, « .abc ») ou des expressions (par exemple, ++.*type++, ++.type*++ ou ++.*type*++). Les expressions de types .a*c, .p*f ne sont pas prises en charge.
+
+Les attributs supplémentaires « Défini par » et « Date de définition » ont été introduits à des fins d'audit. Les types de fichiers existants seront migrés vers le nouveau format avec la valeur « migrée » pour ces deux attributs.
