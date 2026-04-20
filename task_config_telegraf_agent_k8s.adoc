@@ -72,6 +72,9 @@ image:KubernetesModifyDeploymentScreen.png["Modifier les options de déploiement
 Vous pouvez mettre à niveau l'opérateur de surveillance Kubernetes via la page Collecteurs Kubernetes DII.  Cliquez sur le menu à côté du cluster que vous souhaitez mettre à niveau et sélectionnez _Mettre à niveau_.  L'opérateur vérifiera les signatures d'image, effectuera un instantané de votre installation actuelle et effectuera la mise à niveau.  Dans quelques minutes, vous devriez voir l'état de l'opérateur progresser de « Mise à niveau en cours » à « Dernière mise à jour ».  Si vous rencontrez une erreur, vous pouvez sélectionner le statut d'erreur pour plus de détails et vous référer au tableau de dépannage des mises à niveau par bouton-poussoir ci-dessous.
 
 
+NOTE: La mise à jour par bouton-poussoir n'est pas disponible pour les versions opérateur antérieures à 1.2057.0. Veuillez suivre les instructions de mise à jour manuelle ci-dessous pour passer à la dernière version. Après cela, les futures mises à jour pourront être effectuées à l'aide de la fonction de mise à jour par bouton-poussoir.
+
+
 
 ==== Mises à niveau par simple pression d'un bouton avec des référentiels privés
 
