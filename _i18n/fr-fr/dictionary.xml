@@ -1906,7 +1906,6 @@
   <block id="8e2e894a8f2d0c798eda10b04a6aae2c" category="inline-link-macro">Enregistrement de l'assistance aux services de données cloud</block>
   <block id="960807b3a38d77ca1916570b1732dda1" category="inline-xref">activer le support</block>
   <block id="801ef9b405d4e49db3e3da2aa073e5f6" category="admonition">Vous devez vous inscrire pour pouvoir<block ref="5dae4a2b8da6e9eee160d72287b835e3" category="inline-xref-macro-rx"></block> pour les produits NetApp Cloud.  Pour vous inscrire, rendez-vous sur le site de NetApp<block ref="c5b01460a42d58b3ab6bc662dda87194" category="inline-link-macro-rx"></block> .</block>
-  <block id="1674a792a0bf779b22729331c5646696" category="paragraph">Il est fortement recommandé de cocher la case pour autoriser un ingénieur de support NetApp à accéder à votre locataire Data Infrastructure Insights pendant votre session de support.  Cela permettra à l'ingénieur de résoudre le problème et de vous aider à le résoudre rapidement.  Lorsque votre problème est résolu ou que votre session d'assistance est terminée, vous pouvez décocher la case.</block>
   <block id="26bf81182a5b7a20da27b311cdf97f3d" category="paragraph">Vous pouvez demander de l’aide par l’une des méthodes suivantes.  Vous devez disposer d'un abonnement Data Infrastructure Insights actif pour utiliser ces options d'assistance :</block>
   <block id="e145a699aa519b4431527a84030fe1fd" category="inline-link-macro">*Téléphone*</block>
   <block id="d509e88fe0d420e546f838c2bf3149e4" category="list-text"><block ref="d509e88fe0d420e546f838c2bf3149e4" category="inline-link-macro-rx"></block></block>
@@ -14038,4 +14037,57 @@
   <block id="b3e41e2fae7745b697dbed9b6f854aa1" category="inline-image-macro">Liste des types de fichiers</block>
   <block id="28460fbd00b73b7255d03888d8c1d8e5" category="paragraph"><block ref="28460fbd00b73b7255d03888d8c1d8e5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3720ff11b9d0e04f7fd96e22ff7a745f" category="paragraph">Les attributs supplémentaires « Défini par » et « Date de définition » ont été introduits à des fins d'audit. Les types de fichiers existants seront migrés vers le nouveau format avec la valeur « migrée » pour ces deux attributs.</block>
+  <block id="50910271cc7ffda5c5f9d1e0841741da" category="paragraph">Il est fortement recommandé de cocher la case permettant à un NetApp Support Engineer d'accéder à votre site Data Infrastructure Insights pendant votre session d'assistance. Cela permettra à l'ingénieur de diagnostiquer le problème et de vous aider à le résoudre rapidement. Pendant que le Support Engineer a accès à votre site, il pourra effectuer toutes les fonctions de niveau administrateur.</block>
+  <block id="4568a4a8282d9407a4d8fa1b8e3256db" category="paragraph">Lorsque votre problème est résolu ou que votre session d'assistance est terminée, vous pouvez décocher la case.</block>
+  <block id="fc7d05f9009e90b92a15aad926bca249" category="section-title">Avril 2026</block>
+  <block id="7a62dee07c327e2cb645ca3b768833e5" category="section-title">DII connaît votre environnement mieux que jamais</block>
+  <block id="03f3540edfca404eee2edf4a846ae64c" category="paragraph">Nous avons amélioré la façon dont l'IA de Data Infrastructure Insights comprend votre configuration. Elle s'appuie désormais sur un contexte plus riche concernant votre utilisation actuelle du service, la configuration et les tendances de performance avant de répondre. Le résultat est des recommandations initiales qui reflètent votre environnement plutôt qu’un point de départ générique, avec moins de suivis nécessaires pour obtenir une réponse utile.</block>
+  <block id="9bbfda6f09499778d37c749e10e5cd09" category="paragraph">Par exemple, accédez à un périphérique de stockage et l'Assistant IA vous fournira en un clic des réponses à des questions telles que :</block>
+  <block id="5048355a939962882b19e9978c6de9b4" category="list-text">Quelle est l'évolution du taux d'utilisation de cette capacité de stockage, et quels StoragePools consomment le plus d'espace ?</block>
+  <block id="bd0fc56b14454f1ee18d759d4af08ed3" category="list-text">Pouvez-vous me montrer l'évolution du taux d'utilisation de cet appareil au cours des dernières 24 heures ?</block>
+  <block id="aa7271070bccbdb553337d1d11a546e3" category="list-text">Quels volumes occupent le plus d'espace sur ce stockage ?</block>
+  <block id="d166bd4cdca169a67a613a26fe8770ce" category="paragraph">'''nt1.png[Gestion des unités de widget de tableau]</block>
+  <block id="3d2f1005746d7db51821bc629f7d4407" category="paragraph">Page de détails pour une potentielle attaque de ransomware : -Vue « Écran » : Les widgets de tableau affichent l’objet/le groupement sur le côté gauche et les données de l’objet (attributs/métriques) sur le côté droit.</block>
+  <block id="af730d8a2733a784c669eb49b4d22282" category="paragraph">+ <block ref="d39f912f84d3b7c6330ea5e1e4443c8f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e81234c807cc73fff59051e85698456e" category="paragraph">Widget valeur avec mise en forme] <block ref="ea343c0c42e5fd6968847a90104062ca" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="460cdd4165472896cc30053fb384c428" category="summary">Événements d'audit dans Workload Security</block>
+  <block id="7fb266e1b99b0df47eb66e941859d665" category="doc">Événements de sécurité de la charge de travail d'audit</block>
+  <block id="fd353ad75bcbf126fad9d6e35df7010e" category="paragraph">Identifiez les modifications, qu'elles soient prévues (pour le suivi) ou inattendues (pour le dépannage). Consultez l'historique des événements du système Workload Security et des activités des utilisateurs.</block>
+  <block id="b314a4439b8566362801e323965bf155" category="paragraph">Pour consulter la page d'audit, cliquez sur Admin &gt; Audit dans le menu. La page d'audit s'affiche alors, présentant les détails suivants pour chaque entrée d'audit :</block>
+  <block id="7067e58a52148d6e3da60108b4cb4632" category="list-text">Heure - Date et heure de l'événement ou de l'activité</block>
+  <block id="dcf0e3103586dbddc36cc5f26dd6d51b" category="list-text">Utilisateur - L'utilisateur qui a initié l'activité</block>
+  <block id="592d7521568335e69f92257bfd22601a" category="list-text">Rôle - Le rôle de l'utilisateur dans Workload Security (invité, utilisateur, administrateur)</block>
+  <block id="d458ab911d522e4254ae9cdb7ea03d01" category="list-text">IP - L'adresse IP associée à l'événement</block>
+  <block id="cee813c8d86d250fd1721645d6a49210" category="list-text">Action - Type d'activité, par exemple Connexion, Création, Mise à jour</block>
+  <block id="b778dd43a738838d7aedce9b33722775" category="list-text">Catégorie - La catégorie d'activité.</block>
+  <block id="bb69c620668e5f23beee0ab1f6d31feb" category="list-text">Détails - Détails de l'activité</block>
+  <block id="c55f7a21d0556f5e2a47dfadc3db35eb" category="list-text">Type d'application - Type d'application auditée : Observability OU Workload Security. À utiliser pour filtrer uniquement les audits de Workload Security.</block>
+  <block id="d3c127671fefcc305b5b0cd625930c99" category="paragraph">Les événements de sécurité des charges de travail audités comprennent, sans toutefois s'y limiter, les suivants :</block>
+  <block id="b981e0dae483c1a14d3b270f0e8d681d" category="list-text">Modifications des politiques de sécurité des charges de travail.</block>
+  <block id="a91253205277455090eab8c5a3e473f7" category="list-text">Création de nouveaux collecteurs de sources de données (DSC).</block>
+  <block id="8de59a86651a9ded38a04188020fc715" category="list-text">Modification des DSC.</block>
+  <block id="19ad19904ebcc391059146b35ba84e48" category="list-text">Création d'agents.</block>
+  <block id="142aa86c9595fdc63ca5a62c72da36c2" category="list-text">Tâches de gestion des utilisateurs.</block>
+  <block id="57cf5599ed02e41c904c5aec9626eb8e" category="list-text">Tâches liées aux jetons API.</block>
+  <block id="dc765b359c5775d41944b793d09a3932" category="list-text">Vous pouvez modifier l'ordre de tri des entrées en ordre croissant (flèche vers le haut) ou décroissant (flèche vers le bas) en cliquant sur la flèche dans l'en-tête de colonne. Par défaut, le tableau affiche les entrées par ordre chronologique décroissant.</block>
+  <block id="41c36fad069bf8a1082e9771d559d08a" category="cell">renvoie BOS-PRD12-S12, BOS-PRD23-S12, et ainsi de suite</block>
+  <block id="029951cc57b3f3a2cda102ab83d0abd6" category="cell">comme pour None ci-dessus, mais vous pouvez également utiliser ce formulaire pour rechercher des valeurs NULL dans des champs de texte uniquement</block>
+  <block id="ccfa30aa0938ab67a7679bbea544264c" category="cell">renvoie les résultats contenant la chaîne littérale exacte NetApp*</block>
+  <block id="19cd526896c693b10dc83f3dfdd95e21" category="paragraph">Les événements et actions audités par Workload Security peuvent être classés dans les grandes catégories suivantes :</block>
+  <block id="db050c29be972955f848d2d9d2dd72e1" category="list-text">Compte utilisateur : connexion, déconnexion, changement de rôle, etc.</block>
+  <block id="1d2e077cee83d150598faec15ea17c00" category="list-text">Agent : créer, supprimer, mettre à niveau, épingler, désépingler, etc.</block>
+  <block id="2bc80cebb4c3b4f2d3dd432b71a86e5a" category="paragraph">Exemples : _L’agent Agent-Boston-1 a été supprimé._ _Mise à niveau de l’agent vers la version 1.760.0 lancée par une opération groupée._</block>
+  <block id="6b85b8fcb108efd5eab030cd4d4c1ae2" category="list-text">Collecteur de répertoires de données/utilisateurs : ajouter, supprimer, modifier, mettre à niveau, reporter/reprendre, changer d’agent, redémarrer, etc.</block>
+  <block id="4174f8c445719b2709668eee5bb25e3f" category="paragraph">Exemples : _Collecteur de données Collector-Boston1 supprimé, type ONTAP SVM_ _Agent : Agent-Boston-1, Cluster IP 10.193.88.36, SVM demoGroupShares2_ _Collector ONTAP SVM mise à niveau vers la version 1.417.0 initiée par une opération groupée_</block>
+  <block id="2fc86cef217040ea0a462d14ed05d456" category="list-text">Politiques de réponse automatisée : ajouter, mettre à jour, supprimer, activer, désactiver, etc.</block>
+  <block id="05ddd33845ee9d48f9f00fecb4f05c26" category="paragraph">Exemple : _La politique d'attaque automatisée Policy-Boston1 a été mise à jour._ Propriétés Devices mises à jour, ancienne valeur : [Device(name=svm_boston1, dataSourceId=39fb3b9c-9dd4-4961-bc27-23eb0b6f9ab7)], nouvelle valeur : [Device(name=demoGroupShares2, dataSourceId=5b9f5b74-4533-4852-909d-8886582a4359)]_</block>
+  <block id="fe9b88cc6db0265d6416e971d1310fa9" category="list-text">Blocage/déblocage des utilisateurs : blocage et déblocage automatisés ou manuels des utilisateurs.</block>
+  <block id="284fec9bfe780248e6008075cd114b78" category="paragraph">Exemple : _Blocage initié pour l’utilisateur Safwan Langley dans le cadre d’une réponse automatisée pour une durée de 2 heures_</block>
+  <block id="37cfc303a71404ba535148a7f3a71dc8" category="list-text">Clé API : ajouter, supprimer, etc.</block>
+  <block id="79ab318c3ccfe5611271096aff6f6cc1" category="paragraph">Exemple : _Le jeton d’accès à l’API Workload Security JPick-SWS a été créé_</block>
+  <block id="4235fac9f067231cbf0cf4321c23e71c" category="list-text">Notification : changement d'adresse e-mail, etc.</block>
+  <block id="5bdbcf91442b859f44c25dd16160394f" category="paragraph">Exemple : _Destinataire ci-alerts-notifications-dl créé_</block>
+  <block id="dde532224b6de8f2bcf14526c241e11e" category="paragraph">Vous pouvez exporter les résultats de votre affichage Audit vers un fichier .CSV, ce qui vous permettra d'analyser les données ou de les importer dans une autre application. Étapes 1. Sur la page Audit, définissez la période souhaitée et tous les filtres que vous souhaitez. Workload Security exportera uniquement les entrées Audit correspondant aux filtres et à la période que vous avez définis. 2. Cliquez sur le bouton Export en haut à droite du tableau. Les événements Audit affichés seront exportés vers un fichier .CSV, jusqu'à un maximum de 10 000 lignes.</block>
+  <block id="e63e4cacc359b740fa0bc5ab6ea0ba8d" category="paragraph">La durée de conservation des données d'audit par Workload Security dépend de votre abonnement :</block>
+  <block id="db33137206c4f6b3edeb7dda117f05dd" category="sidebar">Affichage des événements d'audit</block>
 </blocks>

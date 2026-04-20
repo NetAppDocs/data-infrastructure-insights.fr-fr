@@ -105,7 +105,9 @@ Outre les options d'auto-assistance ci-dessus, si vous disposez d'un abonnement 
 
 NOTE: Vous devez vous inscrire pour pouvoir<<activating-support-entitlement,activer le support>> pour les produits NetApp Cloud.  Pour vous inscrire, rendez-vous sur le site de NetApplink:https://register.netapp.com["Enregistrement de l'assistance aux services de données cloud"] .
 
-Il est fortement recommandé de cocher la case pour autoriser un ingénieur de support NetApp à accéder à votre locataire Data Infrastructure Insights pendant votre session de support.  Cela permettra à l'ingénieur de résoudre le problème et de vous aider à le résoudre rapidement.  Lorsque votre problème est résolu ou que votre session d'assistance est terminée, vous pouvez décocher la case.
+Il est fortement recommandé de cocher la case permettant à un NetApp Support Engineer d'accéder à votre site Data Infrastructure Insights pendant votre session d'assistance. Cela permettra à l'ingénieur de diagnostiquer le problème et de vous aider à le résoudre rapidement. Pendant que le Support Engineer a accès à votre site, il pourra effectuer toutes les fonctions de niveau administrateur.
+
+Lorsque votre problème est résolu ou que votre session d'assistance est terminée, vous pouvez décocher la case.
 
 Vous pouvez demander de l’aide par l’une des méthodes suivantes.  Vous devez disposer d'un abonnement Data Infrastructure Insights actif pour utiliser ces options d'assistance :
 

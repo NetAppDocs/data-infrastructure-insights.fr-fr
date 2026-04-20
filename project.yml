@@ -273,6 +273,8 @@ sidebar:
       url: "/concept_cs_attack_simulator.html"
     - title: Notifications par e-mail
       url: "/cs_notifications_email.html"
+    - title: Affichage des événements d'audit
+      url: "/ws_audit_events.html"
     - title: Notifications Webhook
       entries:
       - title: Créer des Webhooks
