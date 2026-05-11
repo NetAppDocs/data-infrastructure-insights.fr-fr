@@ -7,6 +7,10 @@ summary: 'Device Resolution vous aide à suivre avec précision les performances
 = Règles de résolution des appareils
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -33,7 +37,7 @@ Lorsque vous créez des règles, vous commencez par identifier la source d'infor
 Vous créez des règles dans l’onglet Règles de résolution automatique.  Les étapes suivantes décrivent le processus de création de règles.
 
 .Procédure
-. Cliquez sur *Gérer > Résolution du périphérique*
+. Cliquez sur *Observability > Enrich > Device Resolution*
 . Dans l'onglet *Règles de résolution automatique*, cliquez sur *+ Règle d'hôte* ou *+ Règle de bande*.
 +
 L'écran *Règle de résolution* s'affiche.
@@ -105,13 +109,19 @@ Les résultats de l'exécution de la règle sont affichés dans l'onglet *FC ide
 
 
 
+=== Règles de pause et de reprise
+
+Pour interrompre l'exécution d'une règle, sélectionnez « Pause » dans le menu latéral de la règle, ou sélectionnez plusieurs règles et choisissez « Pause » dans le menu déroulant « Actions groupées ». Vous pouvez reprendre l'exécution des règles de la même manière.
+
+
+
 == Démarrage d'une mise à jour automatique de la résolution de l'appareil
 
 Une mise à jour de résolution de périphérique valide les modifications manuelles qui ont été ajoutées depuis la dernière exécution de résolution automatique complète du périphérique.  L'exécution d'une mise à jour peut être utilisée pour valider et exécuter uniquement les nouvelles entrées manuelles apportées à la configuration de résolution du périphérique.  Aucune exécution de résolution complète de l'appareil n'est effectuée.
 
 .Procédure
 . Connectez-vous à l'interface Web de Data Infrastructure Insights .
-. Cliquez sur *Gérer > Résolution du périphérique*
+. Cliquez sur *Observability > Enrich > Device Resolution*
 . Dans l'écran *Résolution de l'appareil*, cliquez sur la flèche vers le bas du bouton *Exécuter AR*.
 . Cliquez sur *Mettre à jour* pour démarrer la mise à jour.
 
@@ -130,7 +140,7 @@ NOTE: Si votre source ne contient qu'une partie d'un nom d'hôte ou de périphé
 
 .Procédure
 . Connectez-vous à l'interface Web de Data Infrastructure Insights .
-. Cliquez sur *Gérer > Résolution du périphérique*
+. Cliquez sur *Observability > Enrich > Device Resolution*
 . Cliquez sur l'onglet *Identification Fibre Channel*.
 +
 Le système affiche les périphériques ainsi que leur état de résolution.
