@@ -35,7 +35,7 @@ L'exclusion des alertes est configurée par locataire et comprend les éléments
 == Utilisateurs et chemins d'accès
 
 * Liste d'exclusion des utilisateurs : Ajoutez les utilisateurs à exclure des alertes.
-* Liste d'exclusion de répertoires : Prend en charge jusqu'à quatre niveaux de chemins de répertoires, en commençant par le chemin de jonction.
+* Liste d'exclusion de répertoires : Prend en charge jusqu'à quatre niveaux de chemins de répertoires, en commençant par le chemin de jonction. Tous les sous-répertoires et fichiers sous ce chemin seront exclus de la génération d'alertes. Les caractères génériques dans les chemins de répertoires ne sont pas pris en charge.
 
 
 image:ws_alert_exclusions_users.png[""]
