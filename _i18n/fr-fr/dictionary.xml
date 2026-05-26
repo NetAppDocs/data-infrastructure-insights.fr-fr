@@ -3706,8 +3706,6 @@
   <block id="df6a21f670066b82b5409a049dec0efe" category="doc">Politiques de réponse automatisées</block>
   <block id="e5da02c738b911c42fb0a45a5b76c8d9" category="paragraph">Les politiques de réponse déclenchent des actions telles que la prise d’un instantané ou la restriction de l’accès des utilisateurs en cas d’attaque ou de comportement anormal des utilisateurs.</block>
   <block id="8816114441548a7f4d390de764f25ad9" category="paragraph">Vous pouvez définir des politiques sur des appareils spécifiques ou sur tous les appareils.  Pour définir une politique de réponse, sélectionnez *Admin &gt; Politiques de réponse automatisées* et cliquez sur le bouton *+Politique* approprié.  Vous pouvez créer des politiques pour les attaques ou pour les avertissements.</block>
-  <block id="29d142bb0759eaeb3b47bf1809087cc7" category="inline-image-macro">Ajouter une boîte de dialogue de politique d'attaque affichant la liste déroulante des webhooks</block>
-  <block id="9c3cfe368d37e834800103686eba11c1" category="paragraph"><block ref="9c3cfe368d37e834800103686eba11c1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10519a96ebde07deba902eb606bf97ff" category="paragraph">Vous devez enregistrer la politique sous un nom unique.</block>
   <block id="168e31fead9fc72274b5723b0c86d27f" category="paragraph">Pour désactiver une action de réponse automatisée (par exemple, Prendre un instantané), décochez simplement l'action et enregistrez la politique.</block>
   <block id="3218ac0e5f26253bd8724ab98d8f5e02" category="inline-link-macro">Page de détails de l'alerte</block>
@@ -14094,4 +14092,6 @@
   <block id="9372fa792b7b3d019662b44dd2963355" category="section-title">Règles de pause et de reprise</block>
   <block id="716da8f41fd22d5cd56ad74991f757ba" category="paragraph">Pour interrompre l'exécution d'une règle, sélectionnez « Pause » dans le menu latéral de la règle, ou sélectionnez plusieurs règles et choisissez « Pause » dans le menu déroulant « Actions groupées ». Vous pouvez reprendre l'exécution des règles de la même manière.</block>
   <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">Liste d'exclusion de répertoires : Prend en charge jusqu'à quatre niveaux de chemins de répertoires, en commençant par le chemin de jonction. Tous les sous-répertoires et fichiers sous ce chemin seront exclus de la génération d'alertes. Les caractères génériques dans les chemins de répertoires ne sont pas pris en charge.</block>
+  <block id="fc6be75876bcdad138173b62e9ab5c17" category="inline-image-macro">Ajouter une boîte de dialogue de stratégie d'attaque affichant une liste déroulante de webhook, largeur=300</block>
+  <block id="7cb01fa627551da61643f2eab2af39fb" category="paragraph"><block ref="7cb01fa627551da61643f2eab2af39fb" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

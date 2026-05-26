@@ -18,7 +18,7 @@ Les politiques de réponse déclenchent des actions telles que la prise d’un i
 
 Vous pouvez définir des politiques sur des appareils spécifiques ou sur tous les appareils.  Pour définir une politique de réponse, sélectionnez *Admin > Politiques de réponse automatisées* et cliquez sur le bouton *+Politique* approprié.  Vous pouvez créer des politiques pour les attaques ou pour les avertissements.
 
-image:ws_add_attack_policy.png["Ajouter une boîte de dialogue de politique d'attaque affichant la liste déroulante des webhooks"]
+image:ws_add_attack_policy.png["Ajouter une boîte de dialogue de stratégie d'attaque affichant une liste déroulante de webhook, largeur=300"]
 
 Vous devez enregistrer la politique sous un nom unique.
 
