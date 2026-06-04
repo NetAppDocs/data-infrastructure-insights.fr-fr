@@ -16,13 +16,6 @@ summary: 'Vous pouvez utiliser l"assistant IA de DII pour synthétiser vos donn�
 [role="lead"]
 L’*assistant IA Data Infrastructure Insights* est conçu pour vous aider à exploiter plus efficacement vos données d’infrastructure. Il peut vous aider à analyser des informations, à découvrir des insights, à résoudre des défis opérationnels et à prendre des décisions éclairées concernant vos ressources.
 
-[NOTE]
-====
-L'assistant IA de DII est disponible en version d'essai limitée. link:concept_preview_features.html["Apprendre encore plus"] à propos des fonctionnalités en avant-première de Data Infrastructure Insights.
-
-L'assistant IA est disponible pour les locataires DII déployés sur AWS uniquement.
-
-====
 image:ai_assistant_sample_question.png["Exemple de question d'AI Assistant"]
 
 
@@ -76,8 +69,14 @@ Pour une expérience optimale, fournissez à l'assistant des informations spéci
 
 
 
+== Discutez naturellement
+
+L’assistant IA prend désormais en charge plus d’une douzaine de langues, permettant à votre équipe de communiquer naturellement dans sa langue préférée. Voir la liste complète link:https://platform.claude.com/docs/en/build-with-claude/multilingual-support["ici"].
+
+
+
 == Accès à l'assistant
 
-Pour appeler l'assistant IA DII, sélectionnez simplement l'icône de hibou dans le coin inférieur de l'écran. Un utilisateur avec le rôle « Owner » doit accepter les conditions générales avant que tout utilisateur puisse utiliser l'assistant IA sur votre tenant.
+Pour appeler l'assistant IA de DII, sélectionnez simplement l'icône de hibou dans le coin inférieur de l'écran. Un utilisateur disposant du rôle « Owner » ou « Admin » doit accepter les conditions générales avant que tout utilisateur puisse utiliser l'assistant IA sur votre tenant.
 
 image:ai_assistant_icon.png["dii_ai_assistant_icon"]
