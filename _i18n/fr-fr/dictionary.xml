@@ -13990,8 +13990,6 @@
   <block id="6fd44ae5a42d6b33248d329cbbddaa88" category="paragraph">Le collecteur DII Red Hat OpenShift Virtualization tentera de découvrir les charges de travail de calcul OSV exécutées sur un environnement OpenShift Virtualization - ce collecteur ne découvrira pas tous les pods OpenShift. Il s'agit d'un collecteur basé sur une API REST HTTPS. Il est recommandé de créer un collecteur par cluster OSV.</block>
   <block id="0e2f53883090c3b63a953261cdb19325" category="paragraph">L'approche d'authentification pour ce collecteur est un jeton d'authentification lié à un compte de service. Pour créer à la fois le compte utilisateur et le jeton :</block>
   <block id="f2c430952fd20f76b24810e2e6f8dace" category="paragraph">Exécutez ces 3 commandes et surveillez toute erreur.</block>
-  <block id="8a8ad6f9b43737bda614d744a8286cc4" category="paragraph">Une fois les commandes terminées :</block>
-  <block id="9fb84dc506591e78ff3f6f8ac2f00e6e" category="paragraph">Cela créera un jeton lié à votre utilisateur.</block>
   <block id="0cf40b0b5f29b2928f214370b73c4fac" category="paragraph">Enfin, vous pouvez également demander à votre administrateur OSV d'exécuter :</block>
   <block id="7af44018c8c76e698e986a0c0db08e5f" category="paragraph">Cette commande renverra le nom d'hôte ou l'adresse IP pour la gestion. Chaque collecteur DII OSV doit être configuré pour pointer vers l'adresse IP ou le nom d'hôte pour la gestion OSV.</block>
   <block id="e62768229563f11ca5fd49a1482ae7a8" category="list-text">Adresse IP du serveur Red Hat OpenShift Virtualization sur le port 443 via l'API REST</block>
@@ -14109,4 +14107,18 @@
   <block id="0c57b296d9e6f421b799470406b41595" category="paragraph">Le menu de navigation DII a un tout nouveau look, correspondant désormais aux couleurs et au comportement de Console pour une expérience plus unifiée. Le menu principal, auparavant statique, sera réduit par défaut pour offrir un espace de travail plus ciblé et une utilisation plus efficace de l’espace à l’écran. Il suffit de cliquer sur l’icône hamburger (☰) dans le coin supérieur gauche pour y accéder.</block>
   <block id="638f6b8d99e1422bc23e131d2c84c24d" category="section-title">Élargissez la visibilité des appareils grâce à l'assistance intelligente de l'IA</block>
   <block id="8cc9ca78507aef920c11566fc08c38ca" category="paragraph">Accélérez l'intégration de nouveaux appareils grâce à l'identification des appareils alimentée par l'IA. Data Infrastructure Insights analyse votre environnement et suggère des règles de résolution automatique des appareils, vous aidant à identifier et gérer plus d'appareils rapidement. Il vous suffit de vérifier et d'approuver les règles générées par l'IA et Data Infrastructure Insights s'occupe du reste, améliorant la visibilité et la gestion des appareils dans l'ensemble de votre infrastructure.</block>
+  <block id="b60f27931c3ae71e254e2b744656329e" category="inline-link-macro">Qumulo REST</block>
+  <block id="d5f6f6770076a4cff24cf687c1f3ce72" category="cell"><block ref="d5f6f6770076a4cff24cf687c1f3ce72" category="inline-link-macro-rx"></block></block>
+  <block id="e11d6c7f4644f952faf6dce5c4b295ad" category="summary">Configuration du collecteur de données REST Qumulo.</block>
+  <block id="d3b9d1ab118852a73d2b9221ede10370" category="doc">Collecteur de données REST Qumulo</block>
+  <block id="a7236bb9d36106126af2861383d145e2" category="paragraph">Data Infrastructure Insights utilise ce collecteur pour acquérir des données d'inventaire et de performance à partir du stockage Qumulo.</block>
+  <block id="b23a87bcdf03ab57cf9c989bf91c2e39" category="list-text">Adresse IP / Nom de domaine pleinement qualifié du cluster Qumulo</block>
+  <block id="6b163e0e6c238a01d0ce91c0c83e4f0c" category="cell">Adresse IP de Qumulo</block>
+  <block id="0a4db5a5d79afd66b50465ed8b623a2d" category="cell">L'adresse IP ou le nom de domaine complet (FQDN) du stockage Qumulo</block>
+  <block id="b011dcc2f56365d26e263f3ed75cdfa7" category="cell">Nom d'utilisateur pour le Qumulo</block>
+  <block id="f37b44ac7ba2560a5f36f58586dc6502" category="cell">Mot de passe utilisé pour le Qumulo</block>
+  <block id="77c91f11c388cc00f02f729cfee3aa51" category="cell">Intervalle entre les interrogations d'inventaire. La valeur par défaut est 30.</block>
+  <block id="10c51e7fed3d0622297f012b6ed375ff" category="cell">Intervalle entre les relevés de performance. La valeur par défaut est de 5.</block>
+  <block id="d08016e5c5be3fa70d21f77cdf152be2" category="paragraph">Une fois les commandes terminées, exécutez :</block>
+  <block id="6d0f6de7ebc4523de6bfdcd599b62bf1" category="paragraph">Cela créera un jeton lié à votre utilisateur. Remarque : il est recommandé de définir la durée de validité du jeton. Notez que la collecte de données échouera avec une erreur « Échec de la connexion » après l’expiration du jeton.</block>
 </blocks>

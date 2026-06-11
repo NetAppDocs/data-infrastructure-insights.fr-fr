@@ -209,6 +209,9 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 | link:task_dc_pure_flashblade.html["Pure Storage FlashBlade"] | Infrastructure 
 
 
+| link:task_dc_qumulo_rest.html["Qumulo REST"] | Infrastructure 
+
+
 | link:task_dc_redhat_virtualization.html["Virtualisation Red Hat"] | Infrastructure 
 
 

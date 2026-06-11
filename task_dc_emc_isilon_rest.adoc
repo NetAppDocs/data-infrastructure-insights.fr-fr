@@ -7,6 +7,10 @@ summary: Configuration du collecteur de données REST Dell EMC Isilon / PowerSca
 = Collecteur de données REST Dell EMC Isilon / PowerScale
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

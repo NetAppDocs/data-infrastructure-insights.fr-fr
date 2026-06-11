@@ -25,10 +25,10 @@ oc adm policy add-cluster-role-to-user cluster-monitoring-view -z acq-readonly-c
 ....
 Exécutez ces 3 commandes et surveillez toute erreur.
 
-Une fois les commandes terminées :
+Une fois les commandes terminées, exécutez :
 
- oc sa new-token acq-readonly-cluster-user
-Cela créera un jeton lié à votre utilisateur.
+ oc create token acq-readonly-cluster-user --duration=8760h
+Cela créera un jeton lié à votre utilisateur. Remarque : il est recommandé de définir la durée de validité du jeton. Notez que la collecte de données échouera avec une erreur « Échec de la connexion » après l’expiration du jeton.
 
 Enfin, vous pouvez également demander à votre administrateur OSV d'exécuter :
 
