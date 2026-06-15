@@ -34,15 +34,6 @@ Data Infrastructure Insights acquiert les informations d’inventaire suivantes 
 
 
 | Nœud | Nœud de stockage 
-
-
-| Système de fichiers OneFS | Volume interne 
-
-
-| Système de fichiers OneFS | Piscine de stockage 
-
-
-| Qtree | Qtree 
 |===
 Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 
@@ -54,7 +45,7 @@ Vous avez besoin des informations suivantes pour configurer ce collecteur de don
 
 * Un compte utilisateur et un mot de passe.  Ce compte n'a PAS besoin d'être administrateur/root, mais vous DEVEZ accorder un nombre substantiel de privilèges en lecture seule à votre compte de service - voir le tableau ci-dessous
 * Adresse IP / Nom de domaine pleinement qualifié du cluster Qumulo
-* Accès HTTPS au port 8080
+* Accès HTTPS au port 8000
 
 
 
@@ -83,7 +74,7 @@ Vous avez besoin des informations suivantes pour configurer ce collecteur de don
 | Champ | Description 
 
 
-| Port HTTPS | La valeur par défaut est 8080. 
+| Port HTTPS | La valeur par défaut est de 8000. 
 
 
 | Intervalle d'interrogation d'inventaire (min) | Intervalle entre les interrogations d'inventaire. La valeur par défaut est 30. 
