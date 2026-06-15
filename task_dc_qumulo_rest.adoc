@@ -43,7 +43,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 Vous avez besoin des informations suivantes pour configurer ce collecteur de données :
 
-* Un compte utilisateur et un mot de passe.  Ce compte n'a PAS besoin d'être administrateur/root, mais vous DEVEZ accorder un nombre substantiel de privilèges en lecture seule à votre compte de service - voir le tableau ci-dessous
+* Un compte utilisateur et un mot de passe avec au moins les droits de lecture.
 * Adresse IP / Nom de domaine pleinement qualifié du cluster Qumulo
 * Accès HTTPS au port 8000
 

@@ -14123,4 +14123,5 @@
   <block id="6d0f6de7ebc4523de6bfdcd599b62bf1" category="paragraph">Cela créera un jeton lié à votre utilisateur. Remarque : il est recommandé de définir la durée de validité du jeton. Notez que la collecte de données échouera avec une erreur « Échec de la connexion » après l’expiration du jeton.</block>
   <block id="90e0071503be9324e2266cfd3368d18a" category="list-text">Accès HTTPS au port 8000</block>
   <block id="bdda6785fe5c26b462fa0a87d4327560" category="cell">La valeur par défaut est de 8000.</block>
+  <block id="606930ccd6550cc24fe845f69572c586" category="list-text">Un compte utilisateur et un mot de passe avec au moins les droits de lecture.</block>
 </blocks>
