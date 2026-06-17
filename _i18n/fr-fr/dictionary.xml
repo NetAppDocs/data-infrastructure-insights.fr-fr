@@ -14124,4 +14124,6 @@
   <block id="90e0071503be9324e2266cfd3368d18a" category="list-text">Accès HTTPS au port 8000</block>
   <block id="bdda6785fe5c26b462fa0a87d4327560" category="cell">La valeur par défaut est de 8000.</block>
   <block id="606930ccd6550cc24fe845f69572c586" category="list-text">Un compte utilisateur et un mot de passe avec au moins les droits de lecture.</block>
+  <block id="38fbce916138020848ac3b594a6648d0" category="section-title">Partagez des mises à jour importantes avec les messages de connexion</block>
+  <block id="7260908f665e8b3c02f0fce13c7ea541" category="paragraph">Tenez votre équipe informée et alignée grâce à des messages de connexion personnalisables. Communiquez des annonces importantes, des calendriers de maintenance ou des mises à jour de politiques directement aux utilisateurs lorsqu'ils se connectent. Avec la prise en charge du markdown, vous pouvez formater les messages pour plus de clarté et garantir que les informations critiques atteignent chaque utilisateur DII. Les comptes disposant de privilèges d'administrateur peuvent trouver la configuration dans le menu Admin sous Notifications.</block>
 </blocks>
