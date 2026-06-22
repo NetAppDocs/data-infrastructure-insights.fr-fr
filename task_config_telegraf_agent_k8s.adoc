@@ -296,7 +296,7 @@ Modifiez _AgentConfiguration_ dans _operator-config.yaml_ pour refléter le nouv
 agent:
   ...
   # An optional docker registry where you want docker images to be pulled from as compared to CI's docker registry
-  # Please see documentation link here: link:task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository
+  # Please see documentation link here: link:task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository[Using a custom or private docker repository]
   dockerRepo: your.docker.repo/long/path/to/test
   # Optional: A docker image pull secret that maybe needed for your private docker registry
   dockerImagePullSecret: docker-secret-name
@@ -426,7 +426,7 @@ Quelques éléments à essayer si vous rencontrez des problèmes lors de la conf
 | J'ai rencontré des problèmes lors du déploiement de l'opérateur et j'utilise PSP/PSA. | 1. Modifiez l'agent à l'aide de la commande suivante : kubectl -n <name-space> edit agent 2.  Marquer « security-policy-enabled » comme « faux ».  Cela désactivera les politiques de sécurité des pods et l'admission de sécurité des pods et permettra à l'opérateur de se déployer.  Confirmez en utilisant les commandes suivantes : kubectl get psp (devrait indiquer que la politique de sécurité du pod a été supprimée) kubectl get all -n <namespace> | grep -i psp (devrait indiquer que rien n'est trouvé) 
 
 
-| Erreurs « ImagePullBackoff » observées | Ces erreurs peuvent être observées si vous disposez d’un référentiel Docker personnalisé ou privé et que vous n’avez pas encore configuré l’opérateur de surveillance Kubernetes pour le reconnaître correctement. <<using-a-custom-or-private-docker-repository,En savoir plus>> à propos de la configuration pour un référentiel personnalisé/privé. 
+| Erreurs « ImagePullBackoff » observées | Ces erreurs peuvent survenir si vous utilisez un dépôt Docker personnalisé ou privé et que vous n'avez pas encore configuré l'opérateur de surveillance Kubernetes pour le reconnaître correctement. <<Utiliser un référentiel Docker personnalisé ou privé,En savoir plus>> à propos de la configuration pour un dépôt personnalisé/privé. 
 
 
 | J'ai un problème avec mon déploiement d'opérateur de surveillance et la documentation actuelle ne m'aide pas à le résoudre.  a| 

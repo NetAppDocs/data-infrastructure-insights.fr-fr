@@ -2,11 +2,15 @@
 sidebar: sidebar 
 permalink: task_webhook_example_pagerduty.html 
 keywords: webhook, notification, PagerDuty, integration 
-summary: 'Créer un webhook pour alerter sur les seuils de performance ou d"inventaire pour Pagerduty' 
+summary: 'Créez un webhook pour alerter sur les seuils de performance ou d"inventaire pour PagerDuty' 
 ---
 = Exemple de webhook pour PagerDuty
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -20,18 +24,27 @@ NOTE: Cette page fait référence à des instructions de tiers, qui peuvent êtr
 == Configuration de PagerDuty :
 
 . Dans PagerDuty, accédez à *Services > Répertoire des services* et cliquez sur le bouton *+Nouveau service*
-. Saisissez un _Nom_ et sélectionnez _Utiliser directement notre API_.  Cliquez sur _Ajouter un service_.
+. Saisissez un _nom_ et une _description_ pertinente. Cliquez sur _Suivant_.
 +
-image:Webhooks_PagerDutyScreen1.png["Écran Pagerduty"]
+image:webhook-pagerduty-1.png["PagerDuty écran, largeur=500"]
 
-. Cliquez sur l'onglet _Intégrations_ pour voir la *Clé d'intégration*.  Vous aurez besoin de cette clé lorsque vous créerez le webhook Data Infrastructure Insights ci-dessous.
-
-
-. Accédez à *Incidents* ou *Services* pour afficher les alertes.
+. Sur l'écran suivant, sélectionnez une politique d'escalade existante ou générez-en une nouvelle. Cliquez sur _Suivant_.
 +
-image:Webhooks_PagerDutyScreen2.png["Écran Pagerduty"]
+image:webhook-pagerduty-2.png["Attribution d'une politique d'escalade, width=500"]
+
+. Sélectionnez les fonctionnalités AIOps souhaitées. Cliquez sur _Suivant_.
++
+image:webhook-pagerduty-3.png["écran de sélection du service aiops, largeur=500"]
+
+. Sélectionnez la ou les intégrations que vous souhaitez utiliser pour envoyer les alertes à PagerDuty. Pour DII, utilisez l’intégration Events API V2.
++
+image:webhook-pagerduty-4.png["PagerDuty écran de sélection des intégrations, largeur=500"]
 
 
+
+Sur l'écran de configuration de l'intégration, notez la *Clé d'intégration*. Vous aurez besoin de cette clé lorsque vous créerez le webhook Data Infrastructure Insights ci-dessous.
+
++ image:webhook-pagerduty-5.png["Copie de la clé d'intégration, width=500"]
 
 
 
@@ -40,8 +53,6 @@ image:Webhooks_PagerDutyScreen2.png["Écran Pagerduty"]
 . Dans Data Infrastructure Insights, accédez à *Admin > Notifications* et sélectionnez l'onglet *Webhooks*.  Cliquez sur *+Webhook* pour créer un nouveau webhook.
 . Donnez au webhook un nom significatif, tel que « Déclencheur PagerDuty ».  Vous utiliserez ce webhook pour les événements de niveau critique et d’avertissement.
 . Dans la liste déroulante _Type de modèle_, sélectionnez *PagerDuty*.
-
-
 . Créez un secret de paramètre personnalisé nommé _routingKey_ et définissez la valeur sur la valeur PagerDuty _Integration Key_ ci-dessus.
 +
 image:Webhooks_Custom_Secret_Routing_Key.png["Définition de la clé de routage"]

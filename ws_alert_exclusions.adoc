@@ -17,7 +17,7 @@ Accédez à *Sécurité des charges de travail > Politiques* et sélectionnez l'
 
 L'exclusion des alertes est configurée par locataire et comprend les éléments suivants :
 
-. Types de fichiers : supprimer les alertes de falsification de fichiers sur certains <<allowed-file-types,Types de fichiers autorisés>>
+. Types de fichiers : supprimer les alertes de falsification de fichiers sur certains <<file-types,Types de fichiers autorisés>>
 . Utilisateurs : supprimer les alertes déclenchées par les utilisateurs sélectionnés.
 . Chemins : supprimer les alertes d’activité sur les chemins de répertoire sélectionnés (jusqu’à quatre niveaux de répertoire, en commençant par le chemin de jonction).
 
@@ -38,9 +38,9 @@ L'exclusion des alertes est configurée par locataire et comprend les éléments
 * Liste d'exclusion de répertoires : Prend en charge jusqu'à quatre niveaux de chemins de répertoires, en commençant par le chemin de jonction. Tous les sous-répertoires et fichiers sous ce chemin seront exclus de la génération d'alertes. Les caractères génériques dans les chemins de répertoires ne sont pas pris en charge.
 
 
-image:ws_alert_exclusions_users.png[""]
+image:ws_alert_exclusions_users.png["Utilisateurs exclus des alertes"]
 
-image:ws_alert_exclusions_paths.png[""]
+image:ws_alert_exclusions_paths.png["Chemins d'exclusion des alertes"]
 
 Il est possible d'ajouter ou de supprimer des utilisateurs individuels et des chemins d'accès à la liste d'exclusion correspondante. Chaque entrée de chaque liste contient l'information de la date et de l'auteur de son ajout à la liste, et ces informations seront utilisées à des fins d'audit.
 

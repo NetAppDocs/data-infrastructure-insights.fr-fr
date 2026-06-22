@@ -13,6 +13,7 @@ keywords: workload security, audit, events
 :imagesdir: ./media/
 
 
+[role="lead"]
 Identifiez les modifications, qu'elles soient prévues (pour le suivi) ou inattendues (pour le dépannage). Consultez l'historique des événements du système Workload Security et des activités des utilisateurs.
 
 

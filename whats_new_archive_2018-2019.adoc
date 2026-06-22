@@ -771,7 +771,7 @@ Notez que le collecteur de données HCI acquiert uniquement auprès du centre vi
 
 === Nouveau collecteur de données de service : Kapacitor
 
-* link:task_config_telegraf_kapacitor.html["Capacité"]a été ajouté en tant que collecteur de données pour les services.
+* Kapacitor a été ajouté en tant que collecteur de données pour les services.
 
 
 

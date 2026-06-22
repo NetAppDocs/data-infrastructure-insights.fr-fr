@@ -93,7 +93,7 @@ sidebar:
         url: "/concept_log_explorer.html"
       - title: Identification des appareils inactifs
         url: "/task_identify_inactive_devices.html"
-    - title: Moniteurs et alertes
+    - title: Surveillance, alertes et notifications
       entries:
       - title: Création de moniteurs
         url: "/task_create_monitor.html"
@@ -117,6 +117,8 @@ sidebar:
           url: "/task_webhook_example_slack.html"
         - title: Exemple de webhook - Équipes
           url: "/task_webhook_example_teams.html"
+      - title: Message de connexion
+        url: "/login_message_popup.html"
     - title: Travailler avec des annotations
       entries:
       - title: Définition des annotations

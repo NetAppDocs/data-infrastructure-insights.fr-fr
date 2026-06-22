@@ -7,6 +7,10 @@ summary: 'Configuration du collecteur d"annuaires utilisateurs LDAP de Workload 
 = Configuration d'un collecteur de serveur d'annuaire LDAP
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -126,7 +130,7 @@ Vous pouvez valider les autorisations utilisateur et les définitions d’attrib
  ldapsearch -D "uid=john ,cn=users,cn=accounts,dc=dorp,dc=company,dc=com" -W -x -LLL -o ldif-wrap=no -b "cn=accounts,dc=dorp,dc=company,dc=com" -H ldap://vmwipaapp08.dorp.company.com
 * Utilisez LDAP Explorer pour naviguer dans une base de données LDAP, afficher les propriétés et les attributs des objets, afficher les autorisations, afficher le schéma d'un objet, exécuter des recherches sophistiquées que vous pouvez enregistrer et réexécuter.
 +
-** Installer LDAP Explorer(http://ldaptool.sourceforge.net/[] ) ou Java LDAP Explorer(http://jxplorer.org/[] ) sur n'importe quelle machine Windows pouvant se connecter au serveur LDAP.
+** Installez link:http://ldaptool.sourceforge.net/["Explorateur LDAP"] ou link:http://jxplorer.org/["Explorateur LDAP Java"] sur n'importe quelle machine Windows pouvant se connecter au serveur LDAP.
 ** Connectez-vous au serveur LDAP en utilisant le nom d'utilisateur/mot de passe du serveur d'annuaire LDAP.
 
 

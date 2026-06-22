@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: login_message_popup.html 
+summary: Définissez un message contextuel du jour pour tous les utilisateurs. 
+keywords: notifications, pop-up, banner, motd, message, login 
+---
+= Configuration d'un message de connexion
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez configurer un message qui s'affichera sous forme de fenêtre contextuelle pour tous les utilisateurs lors de leur connexion. Vous pouvez choisir de l'afficher uniquement lors de la prochaine connexion ou pour toutes les connexions suivantes.
+
+Un administrateur peut configurer le message dans Admin > Notifications, dans l’onglet « Login Banner ».
+
+Le message prend en charge le Markdown de base, vous pouvez donc appliquer des mises en forme telles que le gras, l’italique, les tableaux, etc.
+
+Choisissez si les utilisateurs voient le message uniquement lors de leur prochaine connexion ou à chaque connexion ultérieure.
+
+image:login_banner_settings.png["paramètres de la bannière de connexion"]
+
+Veuillez noter que l'utilisateur doit confirmer la réception du message de connexion pour pouvoir le fermer. Une fois fermé, les fenêtres contextuelles supplémentaires (What's New updates, mises à jour des conditions d'utilisation, etc.) s'afficheront.

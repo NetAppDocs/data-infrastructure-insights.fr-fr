@@ -161,4 +161,48 @@ Data Infrastructure Insights exécute le processus de résolution de l’hôte d
 
 Lorsque des règles applicables sont rencontrées, les noms des règles sont affichés dans la colonne Règles et identifiés comme manuels.
 
-En rapport:link:task_device_resolution_fibre_channel.html["Résolution du périphérique Fibre Channel"] link:task_device_resolution_ip.html["Résolution du périphérique IP"] link:task_device_resolution_preferences.html["Définition des préférences de résolution de l'appareil"]
+
+
+== Génération de règles assistée par l'IA
+
+Vous pouvez aussi éliminer les approximations grâce à l'identification des appareils par l'IA pour créer des règles rapidement et facilement. Il vous suffit d'exécuter le générateur de règles assisté par IA pour analyser votre environnement et obtenir des suggestions de règles de résolution d'appareils, ce qui vous permet d'identifier et de gérer un plus grand nombre d'appareils plus rapidement.
+
+
+
+=== Commencer
+
+Pour commencer à utiliser l'IA pour générer des règles de résolution, un administrateur doit d'abord activer les règles générées par l'IA.
+
+image:ahr_ai_get_started.png["Commencez à générer des règles d'IA, largeur=400"]
+
+L'assistant IA vous indiquera le pourcentage de vos périphériques Fibre Channel non identifiés et vous invitera à l'autoriser à générer des règles. Sélectionnez « Let's Go! ».
+
+image:ahr_ai_lets_go.png["Sélectionnez « Let’s Go » pour générer des règles, width=400"]
+
+Vous devez confirmer vos noms de domaine avant d’activer les règles générées par l’IA. Vous devez inclure tous vos domaines pour permettre une identification efficace.
+
+
+
+=== Vérifier la progression
+
+DII créera périodiquement une notification lorsque des appareils supplémentaires seront disponibles pour une identification possible. Si un point vert apparaît sur l'icône de cloche en haut à droite de la page, sélectionnez-la pour afficher la notification.
+
+image:ahr_ai_notification.png["cloche de notification, width=400"]
+
+Utilisez l'icône de cloche pour vérifier également l'état de la génération des règles, ce qui peut prendre de quelques secondes à plusieurs minutes, selon la complexité de votre environnement.
+
+Les règles générées par l'IA afficheront un badge « Généré par l'IA » dans la liste.
+
+image:ahr_ai_badge.png["Badge de règle généré par IA, largeur=400"]
+
+
+
+=== Reprendre et continuer
+
+Les règles générées par l'IA sont par défaut à l'état _Pause_. Vous devez examiner chaque règle et la mettre en _Reprise_ avant qu'elle n'identifie les appareils.
+
+
+
+== En rapport :
+
+link:task_device_resolution_fibre_channel.html["Résolution du périphérique Fibre Channel"] link:task_device_resolution_ip.html["Résolution du périphérique IP"] link:task_device_resolution_preferences.html["Définition des préférences de résolution de l'appareil"]
