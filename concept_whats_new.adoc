@@ -40,24 +40,6 @@ Accélérez l'intégration de nouveaux appareils grâce à l'identification des 
 
 
 
-=== Partagez des mises à jour importantes avec les messages de connexion
-
-Tenez votre équipe informée et alignée grâce à des messages de connexion personnalisables. Communiquez des annonces importantes, des calendriers de maintenance ou des mises à jour de politiques directement aux utilisateurs lorsqu'ils se connectent. Avec la prise en charge du markdown, vous pouvez formater les messages pour plus de clarté et garantir que les informations critiques atteignent chaque utilisateur DII. Les comptes disposant de privilèges d'administrateur peuvent trouver la configuration dans le menu Admin sous Notifications.
-
-
-
-=== Plus d'espace de travail, moins d'encombrement
-
-Le menu de navigation DII a un tout nouveau look, correspondant désormais aux couleurs et au comportement de Console pour une expérience plus unifiée. Le menu principal, auparavant statique, sera réduit par défaut pour offrir un espace de travail plus ciblé et une utilisation plus efficace de l’espace à l’écran. Il suffit de cliquer sur l’icône hamburger (☰) dans le coin supérieur gauche pour y accéder.
-
-
-
-=== Élargissez la visibilité des appareils grâce à l'assistance intelligente de l'IA
-
-Accélérez l'intégration de nouveaux appareils grâce à l'identification des appareils alimentée par l'IA. Data Infrastructure Insights analyse votre environnement et suggère des règles de résolution automatique des appareils, vous aidant à identifier et gérer plus d'appareils rapidement. Il vous suffit de vérifier et d'approuver les règles générées par l'IA et Data Infrastructure Insights s'occupe du reste, améliorant la visibilité et la gestion des appareils dans l'ensemble de votre infrastructure.
-
-
-
 === Un assistant IA plus intelligent pour les équipes internationales
 
 L’assistant IA prend désormais en charge plus d’une douzaine de langues, permettant à votre équipe de communiquer naturellement dans sa langue préférée. Voir la liste complète link:https://platform.claude.com/docs/en/build-with-claude/multilingual-support["ici"^].
