@@ -281,6 +281,11 @@ Performances et carte du réseau
 * ci-net-observer
 
 
+Analyse du changement
+
+* ci-k8s-change-observer
+
+
 Poussez l'image Docker de l'opérateur vers votre référentiel Docker privé/local/d'entreprise conformément à vos politiques d'entreprise.  Assurez-vous que les balises d’image et les chemins d’accès aux répertoires de ces images dans votre référentiel sont cohérents avec ceux du référentiel Data Infrastructure Insights .
 
 Modifiez le déploiement de l'opérateur de surveillance dans operator-deployment.yaml et modifiez toutes les références d'image pour utiliser votre référentiel Docker privé.
@@ -534,5 +539,8 @@ Remarque : pour que ces paramètres soient persistants après chaque redémarra
 
 
 | Je rencontre l'erreur suivante dans les pods Fluent-bit et le pod ne peut pas démarrer : [2026/01/12 20:20:32] [error] [sqldb] error=unable to open database file [2026/01/12 20:20:32] [error] [input:tail:tail.0] db: could not create 'in_tail_files' table [2026/01/12 20:20:32] [error] [input:tail:tail.0] could not open/create database [2026/01/12 20:20:32] [error] failed initialize input tail.0 [2026/01/12 20:20:32] [error] [engine] input initialization failed | Assurez-vous que le répertoire hôte dans lequel le fichier DB réside dispose des permissions de lecture/écriture appropriées. Plus précisément, le répertoire hôte doit accorder des permissions de lecture/écriture aux utilisateurs non-root. L'emplacement par défaut du fichier DB est /var/log/ sauf si cela est remplacé par l'option fluent-bit-dbFile _agentconfiguration_. Si SELinux est activé, essayez de définir l'option fluent-bit-seLinuxOptionsType agentconfiguration sur 'spc_t'. 
+
+
+| Je vois des messages d'erreur de Telegraf ressemblant à ce qui suit, mais Telegraf démarre et fonctionne : E! [inputs.kubernetes] Erreur dans le plugin : https://<IP>>:<port>>/pods[]statut HTTP 403 Forbidden | Ces messages peuvent s'afficher si vous utilisez une version de Kubernetes antérieure à 1.33. La ressource RBAC « nodes/pods » utilisée par telegraf n'existe pas sur ces versions. Consultez la section « For Kubernetes versions < 1.33 » du fichier operator-additional-permissions.yaml pour connaître les ressources RBAC requises sur les versions antérieures. 
 |===
 Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .
