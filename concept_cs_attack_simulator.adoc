@@ -154,9 +154,7 @@ Si vous avez mis le collecteur en pause avant de suivre ces étapes, assurez-vou
 
 
 
-== Générez les fichiers d'exemple par programmation :
-
-Avant de créer les fichiers, vous devez d’abord arrêter oulink:task_add_collector_svm.html#play-pause-data-collector["mettre en pause le collecteur de données"] traitement.
+== Générer une alerte de falsification de fichier
 
 Pour générer une alerte de falsification de fichier, vous pouvez exécuter le script inclus qui simulera une alerte de falsification de fichier dans Workload Security.
 
