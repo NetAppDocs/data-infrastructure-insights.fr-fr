@@ -8645,26 +8645,6 @@
   <block id="992a67d3dca96bca02f3f0f78e2a1cfd" category="cell">Mot de passe pour le serveur de gestion XtremIO</block>
   <block id="a93bcb5a82072c389a3b8a73489512f7" category="cell">Port TCP</block>
   <block id="0787e82546099bff5ac87c0c5d9ce7a3" category="cell">Port TCP utilisé pour se connecter au serveur de gestion XTremIO.  La valeur par défaut est 443.</block>
-  <block id="9fa4e650cd8691fa4e931e43145e4dfd" category="summary">Configuration du collecteur de données Fujitsu Eternus.</block>
-  <block id="76bbf6e63b5bbafbef5f94b1231bc156" category="doc">Collecteur de données Fujitsu Eternus</block>
-  <block id="27baee321a480862e914c0713eed63ca" category="paragraph">Le collecteur de données Fujitsu Eternus acquiert les données d'inventaire à l'aide d'un accès de niveau administrateur au système de stockage.</block>
-  <block id="356a176551e40cab7b2346474eb8414b" category="paragraph">Data Infrastructure Insights acquiert les informations d'inventaire suivantes à partir du stockage Fujitsu Eternus.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :</block>
-  <block id="9f66700a9e61cc8f9d73ebf3758934dc" category="cell">Pool mince, pool de niveaux flexible, groupe de raid</block>
-  <block id="9a2dd0553643575c114f67eb5af46be9" category="cell">Volume standard, volume de données Snap (SDV), volume de pool de données Snap (SDPV), volume de provisionnement léger (TPV), volume de niveau flexible (FTV), volume de répartition large (WSV)</block>
-  <block id="7d023b2b798bae1346a6818191492724" category="cell">Adaptateur de canal</block>
-  <block id="895e3cd28422f162dfb0a18d997e89c7" category="paragraph">Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.</block>
-  <block id="9d597b15876cd2c5bb9b786f0f4e5ef4" category="list-text">Une adresse IP du stockage Eternus, qui ne peut pas être délimitée par des virgules</block>
-  <block id="46614f5e8cdddc2a44a95b7ec777cc30" category="list-text">Nom d'utilisateur et mot de passe de niveau administration SSH</block>
-  <block id="ab557c35881f71a55e4fafded4111238" category="list-text">Port 22</block>
-  <block id="3cfd8b82a08186322b61ebdaff18da99" category="list-text">Assurez-vous que le défilement de la page est désactivé (clienv-show-more-scroll disable)</block>
-  <block id="3073eb22ff046851d2773f6b9b9cccd5" category="cell">Adresse IP du stockage Eternus</block>
-  <block id="4fa315e5b29dfdb8f82f1868c0a1de5f" category="cell">Adresse IP du stockage Eternus</block>
-  <block id="e071ed8c236cffb19cf488375af0496c" category="cell">Nom d'utilisateur pour le stockage Eternus</block>
-  <block id="1dc2d051123dfeb19bf13ffe4f1c7781" category="cell">Mot de passe pour le stockage Eternus</block>
-  <block id="883febd6f18d92fba02f341c896a50d2" category="cell">« Erreur lors de la récupération des données » avec les messages d'erreur « Erreur de recherche d'invite CLI » ou « Erreur de recherche d'invite à la fin des résultats du shell »</block>
-  <block id="1e1dcdf0229ed6e4040c2ded250c7477" category="cell">Probablement causé par : le système de stockage a activé le défilement des pages.  Solution possible : * Essayez de désactiver le défilement des pages en exécutant la commande suivante : set clienv-show-more -scroll disable</block>
-  <block id="bdaf6ab402ed62b6993826e531f83a19" category="cell">« Erreur de connexion » avec les messages d'erreur « Échec de l'instanciation d'une connexion SSH au stockage » ou « Échec de l'instanciation d'une connexion à VirtualCenter »</block>
-  <block id="f5e86717b7f98bd7a5fa01557cb08665" category="cell">Causes probables : * Informations d’identification incorrectes.  * Adresse IP incorrecte.  * Problème de réseau.  * Le stockage peut être en panne ou ne pas répondre.  Solutions possibles : * Vérifier les informations d’identification et l’adresse IP saisies.  * Essayez de communiquer avec le stockage à l'aide du client SSH.</block>
   <block id="2af1bc57f00c07afe945f9aa64a9712f" category="summary">Configurer le collecteur de données Google Compute</block>
   <block id="ed3cd63dd0baae2764478daf8451ac08" category="doc">Collecteur de données NetApp Google Compute</block>
   <block id="962baa7c5b677a19767f3eb25401b9a3" category="paragraph">Ce collecteur de données prend en charge la collecte d'inventaire et de performances à partir des configurations de la plate-forme cloud Google Compute.  Ce collecteur cherchera à découvrir toutes les ressources de calcul au sein de tous les projets au sein d'une organisation Google.  Si vous souhaitez découvrir plusieurs organisations Google avec Data Infrastructure Insights, vous devrez déployer un collecteur Data Infrastructure Insights par organisation.</block>
@@ -11758,7 +11738,6 @@
   <block id="305d795c0691186d2df68b4fc20ac11c" category="sidebar">Fichier VNX (Celerra)</block>
   <block id="0d72e0c9bde5708a77d39a52ce138dbe" category="sidebar">VNX unifié</block>
   <block id="0f299b4c65ffefdf8b00e0b3345bf685" category="sidebar">XtremIO</block>
-  <block id="053f42c6bae3432cae270ea978f7e638" category="sidebar">Fujitsu</block>
   <block id="8b36e9207c24c76e6719268e49201d94" category="sidebar">Google</block>
   <block id="44cf206eca8a23c81576d1e81a632654" category="sidebar">HP Entreprise</block>
   <block id="dc20128ad51d4736f32ce4774255be05" category="sidebar">HP Alletra 9000 et Primera</block>
@@ -14162,4 +14141,16 @@
   <block id="25a317566de430ddfd2c6f4b3fdea612" category="list-text">ci-k8s-change-observer</block>
   <block id="9da5aa79f5375ccea3c84723b5759557" category="cell">Je vois des messages d'erreur de Telegraf ressemblant à ce qui suit, mais Telegraf démarre et fonctionne : E! [inputs.kubernetes] Erreur dans le plugin :<block ref="6d1752bb8ee46f6164f07ea885d5c072" category="inline-link-rx"></block>statut HTTP 403 Forbidden</block>
   <block id="51635ff11969666db6bdeaf0c68d58b0" category="cell">Ces messages peuvent s'afficher si vous utilisez une version de Kubernetes antérieure à 1.33. La ressource RBAC « nodes/pods » utilisée par telegraf n'existe pas sur ces versions. Consultez la section « For Kubernetes versions &lt; 1.33 » du fichier operator-additional-permissions.yaml pour connaître les ressources RBAC requises sur les versions antérieures.</block>
+  <block id="55c55b1241c0ea96ea6cef65b10a23e4" category="inline-link-macro">Promox Virtual Environment</block>
+  <block id="9ddb2ce85d3b0c6085884776fe61a596" category="cell"><block ref="9ddb2ce85d3b0c6085884776fe61a596" category="inline-link-macro-rx"></block></block>
+  <block id="66036899193ada3425c77162bf9d742c" category="summary">Configuration du collecteur de données Promox Virtual Environment.</block>
+  <block id="dc8f767a3f6e8f9b98077b7e9a688c5d" category="paragraph">Le collecteur DII Promox Virtual Environment collecte les données d'inventaire. Il s'agit d'un collecteur basé sur une API REST HTTPS.</block>
+  <block id="b720c5170acbb344b34398a9ed4fec4b" category="cell">Nom d'hôte ou adresse IP</block>
+  <block id="32d285f157ad1acefe9dbe844cee7acf" category="cell">Nom d’hôte ou adresse IP du système de stockage</block>
+  <block id="606bae1c220a7cd73cdc71a447b328fd" category="cell">ID du jeton API</block>
+  <block id="1a07b6dc4baf1e102f15f62b2aa13efc" category="cell">Jeton API requis pour l'accès</block>
+  <block id="9ae9995c158c8b32609b8fd098fa5ff5" category="cell">Secret du jeton API</block>
+  <block id="923e5171366e1120624f5ea15d195544" category="cell">Secret associé au jeton ci-dessus</block>
+  <block id="07d3835e20364558e54bb222fac4e80c" category="cell">Port utilisé pour la communication HTTPS (par défaut 8006)</block>
+  <block id="c0dcddaaad9648f13d2e54741430ea94" category="sidebar">Promox VE</block>
 </blocks>

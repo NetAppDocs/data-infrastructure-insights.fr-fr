@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task_dc_promox_ve.html 
+keywords: data collector, Promox VirtVirtual Environmentalization 
+summary: Configuration du collecteur de données Promox Virtual Environment. 
+---
+= Collecteur de données Red Hat OpenShift Virtualization
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le collecteur DII Promox Virtual Environment collecte les données d'inventaire. Il s'agit d'un collecteur basé sur une API REST HTTPS.
+
+
+
+== Terminologie
+
+Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour l’actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
+
+[cols="2*"]
+|===
+| Terme du fournisseur/modèle | Data Infrastructure Insights 
+
+
+| Disque | Disque virtuel 
+
+
+| Hôte | Hôte 
+
+
+| Machine virtuelle | Machine virtuelle 
+
+
+| Domaine de stockage | Magasin de données 
+
+
+| Unité logique | LUN 
+|===
+Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
+
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Nom d'hôte ou adresse IP | Nom d’hôte ou adresse IP du système de stockage 
+
+
+| ID du jeton API | Jeton API requis pour l'accès 
+
+
+| Secret du jeton API | Secret associé au jeton ci-dessus 
+|===
+
+
+== Configuration avancée
+
+[cols="2*"]
+|===
+| Champ | Description 
+
+
+| Port de communication HTTPS | Port utilisé pour la communication HTTPS (par défaut 8006) 
+
+
+| Intervalle d'interrogation de l'inventaire (min) | La valeur par défaut est de 20 minutes. 
+|===
+
+
+== Dépannage
+
+Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .
