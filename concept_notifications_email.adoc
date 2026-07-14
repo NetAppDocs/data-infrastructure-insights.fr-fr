@@ -19,6 +19,7 @@ image:Notifications_email_list.png["Notifications par e-mail"]
 
 
 
+[[subscription-notification-recipients]]
 == Destinataires des notifications d'abonnement
 
 Pour configurer les destinataires des notifications d'événements liés à l'abonnement, accédez à la section « Destinataires des notifications d'abonnement ».  Vous pouvez choisir de recevoir des notifications par e-mail pour les événements liés à l'abonnement à tout ou partie des destinataires suivants :
@@ -58,6 +59,7 @@ Pour garantir que vos destinataires reçoivent les notifications de Data Infrast
 ====
 
 
+[[global-recipient-list-for-alerts]]
 == Liste globale des destinataires des alertes
 
 Les notifications par courrier électronique des alertes sont envoyées à la liste des destinataires des alertes pour chaque action sur l'alerte.  Vous pouvez choisir d'envoyer des notifications d'alerte à une liste de destinataires globale.
@@ -71,6 +73,7 @@ NOTE: Les notifications du collecteur de données ONTAP ont priorité sur toutes
 
 
 
+[[editing-notifications-for-ontap]]
 == Modification des notifications pour ONTAP
 
 Vous pouvez modifier les notifications pour les clusters ONTAP en sélectionnant _Modifier les notifications_ dans la liste déroulante supérieure droite d'une page de destination de stockage.

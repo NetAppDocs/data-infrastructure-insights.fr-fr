@@ -22,6 +22,7 @@ image:lp_new_design.png["nouveau design LP"]
 
 
 
+[[summary-section]]
 == Section Sommaire
 
 En haut d'une page de destination se trouve la section Résumé extensible, qui comprend plusieurs graphiques sparkline affichant les tendances récentes des données pour des éléments tels que le débit ou la latence, ainsi que les informations et les attributs de l'objet, et tous les moniteurs pouvant alerter pour l'objet.
@@ -30,6 +31,7 @@ La section Résumé s'affiche également et vous permet de modifier les annotati
 
 
 
+[[performance-section]]
 == Section Performance
 
 La section Performances affiche les données de performances de l'objet.  Sélectionnez _Paramètres_ pour ajouter des graphiques supplémentaires à l'affichage comme Débit ou Capacité, ou sélectionnez des ressources corrélées ou contributives pour représenter leurs données avec celles de l'objet.  Les périphériques susceptibles de provoquer des conflits seront également répertoriés dans la section Performances.  Les données des graphiques s'actualisent automatiquement à mesure que les collecteurs de données interrogent et que les données mises à jour sont acquises.
@@ -62,12 +64,14 @@ Affiche les ressources qui ont un impact ou sont impactées par d’autres resso
 
 
 
+[[additional-resources-section]]
 == Section Ressources supplémentaires
 
 La section Ressources supplémentaires affiche des tableaux de données pour les ressources liées au type d’objet actuel.  Vous pouvez développer et réduire ces tableaux afin de vous concentrer sur des ressources spécifiques.  Sélectionnez l’icône d’engrenage pour afficher temporairement des mesures ou des attributs supplémentaires dans un tableau.
 
 
 
+[[add-custom-widgets]]
 == Ajouter des widgets personnalisés
 
 Vous pouvez ajouter vos propres widgets à n’importe quelle page d’actif.  Les widgets que vous ajoutez apparaîtront sur les pages d’actifs pour tous les objets de ce type.  Par exemple, l'ajout d'un widget personnalisé à une page de ressource de stockage affichera ce widget sur les pages de ressources pour toutes les ressources de stockage.
@@ -76,6 +80,7 @@ Les widgets personnalisés sont placés au bas d'une page de destination, sous l
 
 
 
+[[types-of-asset-pages]]
 == Types de pages d'actifs
 
 Data Infrastructure Insights fournit des pages d’actifs pour les actifs suivants :
@@ -102,6 +107,7 @@ Data Infrastructure Insights fournit des pages d’actifs pour les actifs suivan
 
 
 
+[[changing-the-time-range-of-displayed-data]]
 == Modification de la plage horaire des données affichées
 
 Par défaut, une page d'actif affiche les 3 dernières heures de données ; cependant, vous pouvez modifier le segment temporel des données affichées en utilisant une option située sur chaque page d'actif, quel que soit le type d'actif.  Pour modifier la plage horaire, cliquez sur la plage horaire affichée dans la barre supérieure et choisissez parmi les segments horaires suivants :
@@ -128,6 +134,7 @@ Les informations sur la page s'actualisent automatiquement en fonction de la pla
 
 
 
+[[performance-metric-definitions]]
 == Définitions des mesures de performance
 
 La section Performance peut afficher plusieurs mesures en fonction de la période sélectionnée pour l'actif.  Chaque métrique est affichée dans son propre graphique de performances.  Vous pouvez ajouter ou supprimer des métriques et des actifs associés des graphiques en fonction des données que vous souhaitez voir ; les métriques parmi lesquelles vous pouvez choisir varient en fonction du type d'actif.

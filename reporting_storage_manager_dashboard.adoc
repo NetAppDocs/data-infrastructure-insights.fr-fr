@@ -17,6 +17,7 @@ NOTE: La fonctionnalité de reporting est disponible dans Data Infrastructure In
 
 
 
+[[summary]]
 == Résumé
 
 La sélection de *Tableau de bord du gestionnaire de stockage* dans le contenu de l'équipe vous fournit plusieurs rapports qui fournissent des informations sur votre trafic et votre stockage.
@@ -31,6 +32,7 @@ Ce composant affiche la capacité de stockage utilisée par rapport à la capaci
 
 
 
+[[storage-tiers-capacity]]
 === Capacité des niveaux de stockage
 
 Ce composant affiche la capacité du niveau utilisée par rapport à la capacité allouée au niveau, ce qui indique comment la capacité utilisée augmente ou diminue sur une période de 12 mois et combien de mois restent avant la pleine capacité.  L'utilisation de la capacité est affichée avec des valeurs fournies pour l'utilisation réelle, la prévision d'utilisation et un objectif de capacité, que vous pouvez configurer.  Lorsque la capacité utilisée prévue, basée sur la date de projection d'utilisation future, dépasse la capacité cible, une alerte (cercle rouge continu) apparaît à côté d'un niveau.
@@ -39,6 +41,7 @@ Vous pouvez cliquer sur n'importe quel niveau pour afficher le rapport Détails 
 
 
 
+[[daily-storage-traffic]]
 === Trafic de stockage quotidien
 
 Ce composant montre les performances de l'environnement, s'il y a une croissance importante, des changements ou des problèmes potentiels par rapport aux six mois précédents.  Il montre également le trafic moyen par rapport au trafic des sept jours précédents et du jour précédent.  Vous pouvez visualiser toutes les anomalies dans la façon dont l'infrastructure fonctionne, car elle fournit des informations qui mettent en évidence les variations cycliques (sept jours précédents) et saisonnières (six mois précédents).
@@ -47,6 +50,7 @@ Vous pouvez cliquer sur le titre (Trafic de stockage quotidien) pour afficher le
 
 
 
+[[data-centers-time-to-full]]
 === Les centres de données sont sur le point d'être saturés
 
 Ce composant affiche tous les centres de données par rapport à tous les niveaux et la capacité restante dans chaque centre de données pour chaque niveau de stockage en fonction des taux de croissance prévus.  Le niveau de capacité du niveau est indiqué en bleu ; plus la couleur est foncée, moins il reste de temps au niveau de l'emplacement avant d'être plein.
@@ -55,6 +59,7 @@ Vous pouvez cliquer sur une section d'un niveau pour afficher le rapport Détail
 
 
 
+[[top-10-applications]]
 === Top 10 des applications
 
 Ce composant affiche les 10 principales applications en fonction de la capacité utilisée.  Quelle que soit la manière dont le niveau organise les données, cette zone affiche la capacité actuellement utilisée et la part de l'infrastructure.  Vous pouvez visualiser la gamme d'expériences utilisateur au cours des sept jours précédents pour voir si les consommateurs bénéficient de temps de réponse acceptables (ou, plus important encore, inacceptables).
@@ -63,6 +68,7 @@ Cette zone affiche également les tendances, qui indiquent si les applications a
 
 
 
+[[storage-tiers-daily-performance]]
 === Performances quotidiennes des niveaux de stockage
 
 Ce composant affiche un résumé des performances du niveau en termes de temps de réponse et d'IOPS pour les sept jours précédents.  Ces performances sont comparées à un SLO, que vous pouvez configurer, ce qui vous permet de voir s'il existe une opportunité de consolider les niveaux, de réaligner les charges de travail fournies à partir de ces niveaux ou d'identifier des problèmes avec des niveaux particuliers.  Lorsque le temps de réponse médian ou le nombre d'IOPS médian est hors de la plage SLO acceptable, une alerte (cercle rouge continu) apparaît à côté d'un niveau.
@@ -71,6 +77,7 @@ Vous pouvez cliquer sur un nom de niveau pour afficher le rapport Détails de la
 
 
 
+[[orphaned-capacity]]
 === Capacité orpheline
 
 Ce composant affiche la capacité orpheline totale et la capacité orpheline par niveau, en la comparant aux plages acceptables pour la capacité totale utilisable et en affichant la capacité réelle qui est orpheline.  La capacité orpheline est définie par la configuration et par les performances.  Le stockage orphelin par configuration décrit une situation dans laquelle un stockage est alloué à un hôte.  Cependant, la configuration n'a pas été effectuée correctement et l'hôte ne peut pas accéder au stockage.  Orphelin en raison des performances, c'est lorsque le stockage est correctement configuré pour être accessible par un hôte.  Cependant, il n’y a eu aucun trafic de stockage.

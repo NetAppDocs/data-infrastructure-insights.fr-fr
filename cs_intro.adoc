@@ -14,6 +14,7 @@ Data Infrastructure Insights Storage Workload Security (anciennement Cloud Secur
 
 
 
+[[visibility]]
 == Visibilité
 
 Bénéficiez d'une visibilité et d'un contrôle centralisés de l'accès des utilisateurs à vos données d'entreprise critiques stockées sur site ou dans le cloud.
@@ -22,6 +23,7 @@ Remplacez les outils et les processus manuels qui ne parviennent pas à fournir 
 
 
 
+[[protection]]
 == Protection
 
 Protégez les données de l’organisation contre toute utilisation abusive par des utilisateurs malveillants ou compromis grâce à l’apprentissage automatique avancé et à la détection des anomalies.
@@ -30,6 +32,7 @@ Vous alerte de tout accès anormal aux données grâce à l'apprentissage automa
 
 
 
+[[compliance]]
 == Conformité
 
 Assurez la conformité de l'entreprise en auditant l'accès des utilisateurs à vos données d'entreprise critiques stockées sur site ou dans le cloud.

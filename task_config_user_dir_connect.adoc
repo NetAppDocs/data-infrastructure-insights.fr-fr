@@ -111,6 +111,7 @@ Cliquez sur Inclure les attributs facultatifs pour ajouter l’un des attributs 
 |===
 
 
+[[testing-your-user-directory-collector-configuration]]
 == Test de la configuration de votre collecteur d'annuaires utilisateurs
 
 Vous pouvez valider les autorisations utilisateur et les définitions d’attributs LDAP à l’aide des procédures suivantes :
@@ -131,6 +132,7 @@ image:cs_ADExample.png["Connexion AD"]
 
 
 
+[[troubleshooting-user-directory-collector-configuration-errors]]
 == Dépannage des erreurs de configuration du collecteur d'annuaires utilisateurs
 
 Le tableau suivant décrit les problèmes connus et les résolutions qui peuvent survenir lors de la configuration du collecteur :

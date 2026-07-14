@@ -76,6 +76,7 @@ Le tableau suivant présente les fonctions disponibles pour chaque rôle de repo
 |===
 
 
+[[setting-reporting-cognos-email-preferences]]
 == Définition des préférences de courrier électronique pour les rapports (Cognos)
 
 
@@ -83,6 +84,7 @@ NOTE: Si vous modifiez vos préférences de messagerie utilisateur dans Data Inf
 
 
 
+[[what-steps-should-i-take-to-prepare-my-existing-environment-for-enabling-sso]]
 === Quelles étapes dois-je suivre pour préparer mon environnement existant à l’activation de SSO ?
 
 Pour garantir la conservation de vos rapports, migrez tous les rapports de _Mon contenu_ vers _Contenu d'équipe_ en suivant les étapes suivantes.  Vous devez effectuer cette opération avant d'activer l'authentification unique sur votre locataire :

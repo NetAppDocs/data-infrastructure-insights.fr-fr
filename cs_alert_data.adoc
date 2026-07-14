@@ -20,6 +20,7 @@ image:CloudSecureAlertsListPage.png["Liste des alertes"]
 
 
 
+[[alert]]
 == Alerte
 
 La liste des alertes affiche un graphique indiquant le nombre total d'attaques potentielles et/ou d'avertissements qui ont été émis dans la période sélectionnée, suivi d'une liste des attaques et/ou des avertissements qui se sont produits dans cette période.  Vous pouvez modifier la plage horaire en ajustant les curseurs d'heure de début et d'heure de fin dans le graphique.
@@ -61,6 +62,7 @@ image:CloudSecureChangeAlertStatus.png["Modifier le statut d'alerte"]
 
 
 
+[[filter-options]]
 == Options de filtrage
 
 Vous pouvez filtrer les alertes selon les critères suivants :
@@ -73,12 +75,14 @@ Vous pouvez filtrer les alertes selon les critères suivants :
 
 
 
+[[the-alert-details-page]]
 == La page Détails de l'alerte
 
 Vous pouvez cliquer sur un lien d'alerte sur la page de la liste des alertes pour ouvrir une page de détails pour l'alerte. Les détails de l'alerte peuvent varier selon le type d'attaque ou d'alerte. Par exemple, une page de détails sur une attaque par falsification de fichiers peut afficher les informations suivantes :
 
 
 
+[[summary-section]]
 === Section récapitulative :
 
 * Type d'attaque (falsification de fichiers, sabotage) et ID d'alerte (attribué par la sécurité des charges de travail)
@@ -89,6 +93,7 @@ Vous pouvez cliquer sur un lien d'alerte sur la page de la liste des alertes pou
 
 
 
+[[attack-results-section]]
 === Section Résultats d'attaque :
 
 * Nombre de volumes et de fichiers affectés
@@ -98,6 +103,7 @@ Vous pouvez cliquer sur un lien d'alerte sur la page de la liste des alertes pou
 
 
 
+[[related-users-section]]
 === Section Utilisateurs associés :
 
 Cette section affiche des détails sur l'utilisateur impliqué dans l'attaque potentielle, y compris un graphique de l'activité principale de l'utilisateur.
@@ -108,6 +114,7 @@ Page de détails (cet exemple illustre une attaque potentielle par falsification
 
 
 
+[[take-a-snapshot-action]]
 == _Prendre un instantané_ Action
 
 Workload Security protège vos données en prenant automatiquement un instantané lorsqu'une activité malveillante est détectée, garantissant ainsi que vos données sont sauvegardées en toute sécurité.
@@ -120,18 +127,21 @@ Instantané manuel :image:AlertActionsExample.png["Écran d'action d'alerte, 10
 
 
 
+[[alert-notifications]]
 == Notifications d'alerte
 
 Les notifications par courrier électronique des alertes sont envoyées à une liste de destinataires d'alertes pour chaque action sur l'alerte.  Pour configurer les destinataires des alertes, cliquez sur *Admin > Notifications* et saisissez une adresse e-mail pour chaque destinataire.
 
 
 
+[[retention-policy]]
 == Politique de conservation
 
 Les alertes et avertissements sont conservés pendant 13 mois.  Les alertes et avertissements datant de plus de 13 mois seront supprimés.  Si l’environnement Workload Security est supprimé, toutes les données associées à l’environnement sont également supprimées.
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 |===

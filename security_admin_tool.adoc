@@ -18,18 +18,21 @@ Les mots de passe chiffrés de la source de données sont stockés dans Data Inf
 
 
 
+[[upgrade-and-installation-considerations]]
 == Considérations relatives à la mise à niveau et à l'installation
 
 Lorsque votre système Insight contient des configurations de sécurité non par défaut (c'est-à-dire que vous avez réinitialisé les mots de passe), vous devez sauvegarder vos configurations de sécurité.  L'installation d'un nouveau logiciel, ou dans certains cas la mise à niveau d'un logiciel, rétablit votre système à une configuration de sécurité par défaut.  Lorsque votre système revient à la configuration par défaut, vous devez restaurer la configuration non par défaut pour que le système fonctionne correctement.
 
 
 
+[[managing-security-on-the-acquisition-unit]]
 == Gestion de la sécurité sur l'unité d'acquisition
 
 L'outil SecurityAdmin vous permet de gérer les options de sécurité pour Data Infrastructure Insights et est exécuté sur le système de l'unité d'acquisition.  La gestion de la sécurité comprend la gestion des clés et des mots de passe, l’enregistrement et la restauration des configurations de sécurité que vous créez ou la restauration des configurations aux paramètres par défaut.
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 * Vous devez disposer de privilèges d'administrateur sur le système AU pour installer le logiciel Acquisition Unit (qui inclut l'outil SecurityAdmin).
@@ -44,6 +47,7 @@ Linux - /bin/oci-securityadmin.sh
 ....
 
 
+[[using-the-securityadmin-tool]]
 == Utilisation de l'outil SecurityAdmin
 
 Démarrez l'outil SecurityAdmin en mode interactif (-i).
@@ -126,6 +130,7 @@ Choisissez l’option que vous souhaitez configurer et suivez les instructions.
 
 
 
+[[specifying-a-user-to-run-the-tool]]
 == Spécifier un utilisateur pour exécuter l'outil
 
 Si vous êtes dans un environnement contrôlé et soucieux de la sécurité, vous n'avez peut-être pas le groupe _cisys_, mais vous souhaiterez peut-être néanmoins que des utilisateurs spécifiques exécutent l'outil SecurityAdmin.
@@ -148,6 +153,7 @@ Si l'utilisateur et/ou le groupe spécifié n'existent pas, ils seront créés. 
 
 
 
+[[updating-or-removing-proxy]]
 == Mise à jour ou suppression du proxy
 
 L'outil SecurityAdmin peut être utilisé pour définir ou supprimer les informations de proxy pour l'unité d'acquisition en exécutant l'outil avec le paramètre _-pr_ :
@@ -194,6 +200,7 @@ Pour mettre à jour un proxy, la commande est
  ./securityadmin -pr -upr <arg>
 
 
+[[external-key-retrieval]]
 == Récupération de clés externes
 
 Si vous fournissez un script shell UNIX, il peut être exécuté par l'unité d'acquisition pour récupérer la *clé privée* et la *clé publique* de votre système de gestion de clés.
@@ -226,6 +233,7 @@ Le script doit être enregistré auprès de l'unité d'acquisition à l'aide de 
 |===
 
 
+[[encrypting-a-password-for-use-in-api]]
 == Crypter un mot de passe à utiliser dans l'API
 
 L'option 8 vous permet de crypter un mot de passe, que vous pouvez ensuite transmettre à un collecteur de données via l'API.

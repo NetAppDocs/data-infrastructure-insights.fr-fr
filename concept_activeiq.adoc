@@ -27,6 +27,7 @@ image:AIQ_Summary_Example.png["Résumé de la page de stockage"]
 
 
 
+[[opening-the-digital-advisor-page]]
 == Ouverture de la page du Digital Advisor
 
 Lorsque vous cliquez sur le lien vers une page Digital Advisor , si vous n'êtes pas actuellement connecté à votre compte Digital Advisor , vous devez effectuer les étapes suivantes pour afficher la page Digital Advisor du nœud de stockage.
@@ -37,12 +38,14 @@ Lorsque vous cliquez sur le lien vers une page Digital Advisor , si vous n'êtes
 
 
 
+[[querying-for-risks]]
 == Interrogation sur les risques
 
 Dans Data Infrastructure Insights, vous pouvez ajouter la colonne *monitoring.count* à une requête de stockage ou de nœud de stockage.  Si le résultat renvoyé inclut les systèmes de stockage surveillés par Digital Advisor, la colonne monitoring.count affichera le nombre de risques pour le système de stockage ou le nœud.
 
 
 
+[[dashboards]]
 == Tableaux de bord
 
 Vous pouvez créer des widgets (par exemple, des graphiques à secteurs, des widgets de tableau, des widgets à barres, à colonnes, à nuages ​​de points et à valeur unique) afin de visualiser les risques liés aux objets pour le stockage et les nœuds de stockage pour les systèmes NetApp Clustered Data ONTAP surveillés par Digital Advisor.  « Risques d'objet » peut être sélectionné comme colonne ou métrique dans ces widgets où le stockage ou le nœud de stockage est l'objet de concentration.

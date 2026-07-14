@@ -18,6 +18,7 @@ Déterminez la taille optimale des machines Agent en mesurant les débits d'év�
 
 
 
+[[requirements]]
 == Exigences:
 
 * IP de cluster
@@ -80,6 +81,7 @@ Voir lelink:concept_cs_agent_requirements.html["Exigences relatives aux agents"]
 
 
 
+[[example]]
 == Exemple
 
 Disons que nous avons trois SVMS générant des taux d’événements de 100, 200 et 300 événements par seconde, respectivement.
@@ -141,6 +143,7 @@ Overall svm audit_svm is generating 300 events/sec
  [root@ci-cs-data agent]#
 
 
+[[troubleshooting]]
 == Dépannage
 
 |===

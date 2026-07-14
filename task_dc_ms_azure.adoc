@@ -14,6 +14,7 @@ Data Infrastructure Insights utilise le collecteur de données de calcul Azure p
 
 
 
+[[requirements]]
 == Exigences
 
 Vous avez besoin des informations suivantes pour configurer ce collecteur de données.
@@ -32,11 +33,12 @@ Une fois le compte correctement configuré et l’application enregistrée dans 
 
 
 
+[[configuration]]
 == Configuration
 
 Saisissez les données dans les champs du collecteur de données conformément au tableau ci-dessous :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -54,9 +56,10 @@ Saisissez les données dans les champs du collecteur de données conformément a
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -74,6 +77,7 @@ Saisissez les données dans les champs du collecteur de données conformément a
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

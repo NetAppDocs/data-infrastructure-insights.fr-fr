@@ -23,6 +23,7 @@ Vous pouvez générer des rapports dans différents formats, notamment HTML, PDF
 
 
 
+[[navigating-to-pre-defined-reports]]
 == Accéder aux rapports prédéfinis
 
 Lorsque vous ouvrez le portail de rapports, le dossier _Team Content_ est le point de départ pour sélectionner le type d'informations dont vous avez besoin dans les rapports Data Infrastructure Insights .
@@ -35,18 +36,21 @@ image:Reporting_Menu.png["Menu de rapports"] image:Reporting_Team_Content.png["C
 
 
 
+[[using-predefined-reports-to-answer-common-questions]]
 == Utiliser des rapports prédéfinis pour répondre aux questions courantes
 
 Les rapports prédéfinis suivants sont disponibles dans *Contenu de l'équipe > Rapports*.
 
 
 
+[[application-service-level-capacity-and-performance]]
 === Capacité et performances du niveau de service des applications
 
 Le rapport Capacité et performances du niveau de service des applications fournit un aperçu de haut niveau de vos applications.  Vous pouvez utiliser ces informations pour la planification de la capacité ou pour un plan de migration.
 
 
 
+[[chargeback]]
 === Rétrofacturation
 
 Le rapport de rétrofacturation fournit des informations sur la rétrofacturation et la responsabilité de la capacité de stockage par hôtes, applications et entités commerciales, et inclut des données actuelles et historiques.
@@ -55,60 +59,70 @@ Pour éviter le double comptage, n'incluez pas les serveurs ESX, surveillez uniq
 
 
 
+[[data-sources]]
 === Sources de données
 
 Le rapport Sources de données affiche toutes les sources de données installées sur votre site, l'état de la source de données (succès/échec) et les messages d'état.  Le rapport fournit des informations sur la manière de commencer à résoudre les problèmes liés aux sources de données.  Les sources de données défaillantes ont un impact sur la précision des rapports et sur la convivialité générale du produit.
 
 
 
+[[esx-vs-vm-performance]]
 === Performances ESX vs VM
 
 Le rapport Performances ESX vs VM fournit une comparaison des serveurs et des machines virtuelles ESX, indiquant les IOP moyens et de pointe, le débit, la latence et les utilisations des serveurs et des machines virtuelles ESX.  Pour éviter le double comptage, excluez les serveurs ESX ; incluez uniquement les machines virtuelles.  Une version mise à jour de ce rapport est disponible sur le NetApp Storage Automation Store.
 
 
 
+[[fabric-summary]]
 === Résumé du tissu
 
 Le rapport récapitulatif de la structure identifie les commutateurs et les informations sur les commutateurs, notamment le nombre de ports, les versions du micrologiciel et l'état de la licence.  Le rapport n'inclut pas les ports de commutation NPV.
 
 
 
+[[host-hbas]]
 === HBA hôtes
 
 Le rapport HBA hôtes fournit une vue d'ensemble des hôtes de l'environnement et indique le fournisseur, le modèle et la version du micrologiciel des HBA, ainsi que le niveau du micrologiciel des commutateurs auxquels ils sont connectés.  Ce rapport peut être utilisé pour analyser la compatibilité du micrologiciel lors de la planification d'une mise à niveau du micrologiciel pour un commutateur ou un HBA.
 
 
 
+[[host-service-level-capacity-and-performance]]
 === Capacité et performances du niveau de service de l'hôte
 
 Le rapport Capacité et performances du niveau de service de l'hôte fournit un aperçu de l'utilisation du stockage par hôte pour les applications en mode bloc uniquement.
 
 
 
+[[host-summary]]
 === Résumé de l'hôte
 
 Le rapport récapitulatif de l'hôte fournit un aperçu de l'utilisation du stockage par chaque hôte sélectionné avec des informations pour les hôtes Fibre Channel et iSCSI.  Le rapport vous permet de comparer les ports et les chemins, la capacité Fibre Channel et ISCSI, ainsi que le nombre de violations.
 
 
 
+[[license-details]]
 === Détails de la licence
 
 Le rapport Détails de la licence indique la quantité de ressources pour lesquelles vous disposez d'une licence sur tous les sites disposant de licences actives.  Le rapport montre également une somme de la quantité réelle sur tous les sites avec des licences actives.  La sommation peut inclure des chevauchements de baies de stockage gérées par plusieurs serveurs.
 
 
 
+[[mapped-but-not-masked-volumes]]
 === Volumes cartographiés mais non masqués
 
 Le rapport Volumes mappés mais non masqués répertorie les volumes dont le numéro d'unité logique (LUN) a été mappé pour être utilisé par un hôte particulier, mais n'est pas masqué pour cet hôte.  Dans certains cas, il peut s'agir de LUN mis hors service qui ont été démasqués.  Les volumes non masqués sont accessibles par n’importe quel hôte, ce qui les rend vulnérables à la corruption des données.
 
 
 
+[[netapp-capacity-and-performance]]
 === Capacité et performances de NetApp
 
 Le rapport Capacité et performances NetApp fournit des données globales sur la capacité allouée, utilisée et engagée avec des données de tendance et de performances pour la capacité NetApp .
 
 
 
+[[scorecard]]
 === Tableau de bord
 
 Le rapport Scorecard fournit un résumé et un état général de tous les actifs acquis par Data Infrastructure Insights.  Le statut est indiqué par des drapeaux verts, jaunes et rouges :
@@ -122,54 +136,63 @@ Tous les champs du rapport sont décrits dans le dictionnaire de données fourni
 
 
 
+[[storage-summary]]
 === Résumé du stockage
 
 Le rapport Résumé du stockage fournit un résumé global des données de capacité utilisées et inutilisées pour les pools de stockage bruts, alloués et les volumes.  Ce rapport fournit un aperçu de tout le stockage découvert.
 
 
 
+[[vm-capacity-and-performance]]
 === Capacité et performances des machines virtuelles
 
 Décrit l’environnement de la machine virtuelle (VM) et son utilisation de la capacité.  Les outils VM doivent être activés pour afficher certaines données, par exemple lorsque les VM ont été mises hors tension.
 
 
 
+[[vm-paths]]
 === Chemins de VM
 
 Le rapport Chemins d'accès VM fournit des données sur la capacité du magasin de données et des mesures de performances pour savoir quelle machine virtuelle s'exécute sur quel hôte, quels hôtes accèdent à quels volumes partagés, quel est le chemin d'accès actif et ce qui comprend l'allocation et l'utilisation de la capacité.
 
 
 
+[[hds-capacity-by-thin-pool]]
 === Capacité HDS par Thin Pool
 
 Le rapport Capacité HDS par pool mince indique la quantité de capacité utilisable sur un pool de stockage provisionné de manière dynamique.
 
 
 
+[[netapp-capacity-by-aggregate]]
 === Capacité NetApp par agrégat
 
 Le rapport NetApp Capacity by Aggregate affiche l'espace total brut, total, utilisé, disponible et engagé des agrégats.
 
 
 
+[[symmetrix-capacity-by-thick-array]]
 === Capacité Symmetrix par réseau épais
 
 Le rapport Capacité Symmetrix par réseau épais affiche la capacité brute, la capacité utilisable, la capacité libre, la capacité mappée, masquée et la capacité libre totale.
 
 
 
+[[symmetrix-capacity-by-thin-pool]]
 === Capacité Symmetrix par Thin Pool
 
 Le rapport Capacité Symmetrix par Thin Pool affiche la capacité brute, la capacité utilisable, la capacité utilisée, la capacité libre, le pourcentage utilisé, la capacité souscrite et le taux d'abonnement.
 
 
 
+[[xiv-capacity-by-array]]
 === XIV Capacité par baie
 
 Le rapport XIV Capacité par baie affiche la capacité utilisée et inutilisée de la baie.
 
 
 
+[[xiv-capacity-by-pool]]
 === XIV Capacité par piscine
 
 Le rapport XIV Capacité par pool affiche la capacité utilisée et inutilisée des pools de stockage.

@@ -29,6 +29,7 @@ Les étapes de ce guide peuvent également être appliquées aux systèmes de st
 
 
 
+[[creating-a-query-to-identify-netapp-root-aggregates]]
 == Création d'une requête pour identifier les agrégats racines NetApp
 
 Les requêtes fournissent une recherche à un niveau granulaire, en fonction de critères sélectionnés par l'utilisateur.  L’utilisation d’une requête vous permet de rechercher des volumes internes sur votre locataire qui contiennent l’agrégat racine NetApp .
@@ -54,6 +55,7 @@ Comme mentionné précédemment, il peut s’agir d’un processus itératif et 
 
 
 
+[[create-an-annotation-for-the-root-volumes-returned-by-your-queries]]
 == Créez une annotation pour les volumes racines renvoyés par vos requêtes
 
 Les annotations sont des notes spécialisées que vous attribuez à vos ressources, vous permettant de filtrer les ressources par leurs annotations.  L'annotation que vous créez sera utilisée pour identifier les agrégats racines NetApp sur votre locataire et garantir qu'ils ne sont pas inclus dans un rapport spécifique.
@@ -75,6 +77,7 @@ Vous devez avoir identifié tous les agrégats racines que vous souhaitez exclur
 
 
 
+[[create-an-annotation-rule-to-automate-excluding-specific-aggregates-from-your-io-density-report]]
 == Créez une règle d'annotation pour automatiser l'exclusion d'agrégats spécifiques de votre rapport de densité d'E/S
 
 Au lieu d'appliquer manuellement des annotations à des ressources individuelles, vous pouvez appliquer automatiquement des annotations à plusieurs ressources à l'aide de règles d'annotation.  Les règles d'annotation sont basées sur les requêtes que vous créez et lorsqu'elles sont exécutées sur le système, elles ajoutent de nouveaux actifs aux ensembles d'actifs existants.  Lorsque ces ensembles d’actifs sont exclus d’un rapport, les nouveaux actifs sont également automatiquement exclus.

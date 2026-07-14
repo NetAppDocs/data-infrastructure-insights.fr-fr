@@ -14,9 +14,10 @@ Ce collecteur de données prend en charge la collecte d'inventaire à partir des
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -31,9 +32,10 @@ Ce collecteur de données prend en charge la collecte d'inventaire à partir des
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -75,6 +77,7 @@ Ce collecteur de données prend en charge la collecte d'inventaire à partir des
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

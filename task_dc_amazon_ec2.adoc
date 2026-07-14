@@ -14,6 +14,7 @@ Data Infrastructure Insights utilise le collecteur de données Amazon EC2 pour a
 
 
 
+[[requirements]]
 == Exigences
 
 Pour collecter des données à partir des appareils Amazon EC2, vous devez disposer des informations suivantes :
@@ -33,11 +34,12 @@ Les clés d'accès se composent d'un ID de clé d'accès (par exemple, AKIAIOSFO
 
 
 
+[[configuration]]
 == Configuration
 
 Saisissez les données dans les champs du collecteur de données conformément au tableau ci-dessous :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -58,9 +60,10 @@ Saisissez les données dans les champs du collecteur de données conformément a
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -87,6 +90,7 @@ Saisissez les données dans les champs du collecteur de données conformément a
 |===
 
 
+[[iam-access-key]]
 == Clé d'accès IAM
 
 Les clés d’accès sont des informations d’identification à long terme pour un utilisateur IAM ou l’utilisateur racine du compte AWS.  Les clés d'accès sont utilisées pour signer des requêtes programmatiques à l'AWS CLI ou à l'API AWS (directement ou à l'aide du SDK AWS).
@@ -95,6 +99,7 @@ Les clés d'accès se composent de deux parties : un identifiant de clé d'acc�
 
 
 
+[[iam-role]]
 == Rôle IAM
 
 Lorsque vous utilisez l’authentification _IAM Role_ (par opposition à l’authentification par clé d’accès IAM), vous devez vous assurer que le rôle que vous créez ou spécifiez dispose des autorisations appropriées nécessaires pour accéder à vos ressources.
@@ -111,6 +116,7 @@ Remarque : le rôle IAM ne peut être utilisé que lorsque l’unité d’acqui
 
 
 
+[[mapping-amazon-tags-to-data-infrastructure-insights-annotations]]
 == Mappage des balises Amazon aux annotations Data Infrastructure Insights
 
 Le collecteur de données Amazon EC2 inclut une option qui vous permet de renseigner les annotations Data Infrastructure Insights avec des balises configurées sur EC2.  Les annotations doivent être nommées exactement comme les balises EC2.  Data Infrastructure Insights renseignera toujours les annotations de type texte portant le même nom et fera de son mieux pour renseigner les annotations d'autres types (nombre, booléen, etc.).  Si votre annotation est d'un type différent et que le collecteur de données ne parvient pas à la renseigner, il peut être nécessaire de supprimer l'annotation et de la recréer en tant que type de texte.
@@ -119,12 +125,14 @@ Notez qu'AWS est sensible à la casse, tandis que Data Infrastructure Insights n
 
 
 
+[[include-extra-regions]]
 == Inclure des régions supplémentaires
 
 Dans la section *Configuration avancée* d'AWS Data Collector, vous pouvez définir le champ *Inclure des régions supplémentaires* pour inclure des régions supplémentaires, séparées par une virgule ou un point-virgule.  Par défaut, ce champ est défini sur *_us-.*_*, qui collecte toutes les régions AWS américaines.  Pour collecter sur _toutes_ les régions, définissez ce champ sur *_.*_*.  Si le champ *Inclure des régions supplémentaires* est vide, le collecteur de données collectera les données sur les actifs spécifiés dans le champ *Région AWS* comme spécifié dans la section *Configuration*.
 
 
 
+[[collecting-from-aws-child-accounts]]
 == Collecte à partir des comptes enfants AWS
 
 Data Infrastructure Insights prend en charge la collecte de comptes enfants pour AWS au sein d'un seul collecteur de données AWS.  La configuration de cette collection est effectuée dans l'environnement AWS :
@@ -147,6 +155,7 @@ link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.h
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

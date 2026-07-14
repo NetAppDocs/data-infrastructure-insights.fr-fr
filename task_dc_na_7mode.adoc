@@ -14,6 +14,7 @@ Pour les systèmes de stockage utilisant le logiciel Data ONTAP fonctionnant en 
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les informations d’inventaire suivantes à partir du collecteur de données NetApp en mode 7.  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
@@ -21,7 +22,7 @@ Data Infrastructure Insights acquiert les informations d’inventaire suivantes 
 
 NOTE: Ce collecteur de données estlink:task_getting_started_with_cloud_insights.html#useful-definitions["obsolète"] .
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -50,6 +51,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[requirements]]
 == Exigences
 
 Vous avez besoin des éléments suivants pour configurer et utiliser ce collecteur de données :
@@ -71,9 +73,10 @@ Vous avez besoin des éléments suivants pour configurer et utiliser ce collecte
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -97,9 +100,10 @@ Vous avez besoin des éléments suivants pour configurer et utiliser ce collecte
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -117,6 +121,7 @@ Vous avez besoin des éléments suivants pour configurer et utiliser ce collecte
 |===
 
 
+[[storage-systems-connection]]
 == Connexion des systèmes de stockage
 
 Au lieu d'utiliser l'utilisateur administratif par défaut pour ce collecteur de données, vous pouvez configurer un utilisateur avec des droits administratifs directement sur les systèmes de stockage NetApp afin que ce collecteur de données puisse acquérir des données à partir des systèmes de stockage NetApp .
@@ -156,15 +161,17 @@ Pour acquérir une source de données 7-Mode avec succès et ne générer aucun 
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
+[[inventory]]
 === Inventaire
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problème: | Essayez ceci: 
 

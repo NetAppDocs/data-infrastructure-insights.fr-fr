@@ -17,11 +17,12 @@ NOTE: Dell EMC ECS est mesuré à un taux différent entre les To bruts et les u
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données ECS.  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -41,6 +42,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[requirements]]
 == Exigences
 
 * Une adresse IP ou un nom d'hôte du cluster ECS
@@ -50,9 +52,10 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -70,9 +73,10 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -81,15 +85,17 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
+[[inventory]]
 === Inventaire
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problème: | Essayez ceci: 
 
@@ -98,9 +104,10 @@ Quelques éléments à essayer si vous rencontrez des problèmes avec ce collect
 |===
 
 
+[[performance]]
 === Performances
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problème: | Essayez ceci: 
 

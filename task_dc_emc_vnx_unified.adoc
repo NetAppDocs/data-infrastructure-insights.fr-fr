@@ -14,11 +14,12 @@ Pour la configuration, le collecteur de données Dell EMC VNX Unified (SSH) néc
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès de ce collecteur de données.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -57,6 +58,7 @@ Data Infrastructure Insights acquiert les informations d’inventaire suivantes 
 |===
 
 
+[[requirements]]
 == Exigences
 
 Vous avez besoin des éléments suivants pour configurer le collecteur de données VNX (SSH) :
@@ -68,9 +70,10 @@ Vous avez besoin des éléments suivants pour configurer le collecteur de donné
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -85,9 +88,10 @@ Vous avez besoin des éléments suivants pour configurer le collecteur de donné
 |===
 
 
+[[advanced-configiration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -99,6 +103,7 @@ Vous avez besoin des éléments suivants pour configurer le collecteur de donné
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

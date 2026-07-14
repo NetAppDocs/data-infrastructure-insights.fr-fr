@@ -20,6 +20,7 @@ image:san_analyzer_example_with_panel.png["Carte topologique SAN Analyzer d'un s
 
 
 
+[[explore-connections-among-your-assets]]
 == Explorez les connexions entre vos actifs
 
 Sélectionnez *Observabilité > Analyser > Analyseur SAN* pour afficher l'analyseur SAN.  Définissez un filtre pour l'application, l'hôte, la structure et/ou le stockage.  La carte des objets s'affiche, montrant les objets connectés.  Passez la souris sur un objet pour afficher les mesures de trafic pour ces connexions.
@@ -45,6 +46,7 @@ image:san_analyzer_iscsi_traffic.png["Trafic iSCSI mis en évidence"]
 
 
 
+[[troubleshooting-tips]]
 == Conseils de dépannage
 
 Quelques solutions à essayer si vous rencontrez des problèmes :

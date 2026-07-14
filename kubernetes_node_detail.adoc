@@ -16,6 +16,7 @@ image:KubernetesNodeFiltering.png["Page de détails du nœud Kubernetes affichan
 
 
 
+[[exploring-the-nodes-pods-and-persistent-volumes]]
 == Exploration des pods et des volumes persistants du nœud
 
 Data Infrastructure Insights offre une visibilité sur le stockage back-end de vos environnements Kubernetes, vous donnant un aperçu de vos pods Kubernetes et de vos volumes persistants (PV).  Vous pouvez suivre les compteurs PV tels que les IOPS, la latence et le débit de l'utilisation d'un seul Pod via un compteur PV jusqu'à un PV et jusqu'au périphérique de stockage back-end.
@@ -33,6 +34,7 @@ Notez que pour profiter de ces nouvelles tables, il est recommandé de désinsta
 
 
 
+[[kubernetes-node-to-vm-links]]
 == Liens entre le nœud Kubernetes et la VM
 
 Sur une page de nœud Kubernetes, vous pouvez cliquer pour ouvrir la page de la machine virtuelle du nœud.  La page VM inclut également un lien vers le nœud lui-même.

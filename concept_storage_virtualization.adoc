@@ -14,6 +14,7 @@ Data Infrastructure Insights peut faire la différence entre une baie de stockag
 
 
 
+[[virtualization-in-a-table-widget]]
 === Virtualisation dans un widget de table
 
 L’un des moyens les plus simples de commencer à examiner votre virtualisation de stockage est de créer un widget de tableau de bord affichant le type virtualisé.  Lors de la création de la requête pour le widget, ajoutez simplement « virtualizedType » à votre regroupement ou filtre.
@@ -26,6 +27,7 @@ image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["Tableau pré
 
 
 
+[[landing-pages-show-virtualized-information]]
 === Les pages de destination affichent des informations virtualisées
 
 Sur une page de destination de stockage, de volume, de volume interne ou de disque, vous pouvez voir les informations de virtualisation pertinentes.  Par exemple, en regardant la page de destination de stockage ci-dessous, vous pouvez voir qu'il s'agit d'un stockage virtuel et quel système de stockage backend s'applique.  Tous les tableaux pertinents sur les pages de destination afficheront également des informations de virtualisation, le cas échéant.
@@ -34,6 +36,7 @@ image:StorageVirtualization_StorageSummary.png["Page de destination de stockage 
 
 
 
+[[existing-landing-pages-and-dashboards]]
 === Pages de destination et tableaux de bord existants
 
 Sachez que si vous disposez actuellement de pages de destination ou de tableaux de bord personnalisés sur votre locataire, ceux-ci n'afficheront pas automatiquement toutes les informations de virtualisation par défaut.  Cependant, vous pouvez _revenir aux valeurs par défaut_ de n'importe quel tableau de bord ou page de destination personnalisé (vous devrez réimplémenter vos personnalisations) ou modifier les widgets concernés pour inclure les attributs ou les mesures de virtualisation souhaités.

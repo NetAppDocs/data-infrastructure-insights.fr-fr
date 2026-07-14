@@ -29,6 +29,7 @@ Le cas échéant, vous pouvez cliquer sur un lien d’alerte pour afficher l’a
 
 
 
+[[topology]]
 == Topologie
 
 Sur certaines pages d'actifs, la section récapitulative contient un lien permettant d'afficher la topologie de l'actif et ses connexions.

@@ -24,6 +24,7 @@ S'il existe quatre SVM, dont une configurée pour SMB, une configurée pour NFS 
 
 
 
+[[prerequisites-for-user-access-blocking]]
 == Conditions préalables au blocage de l'accès utilisateur
 
 Les informations d’identification au niveau du cluster sont nécessaires pour que cette fonctionnalité fonctionne.
@@ -45,6 +46,7 @@ Assurez-vous de consulter la section Autorisations dulink:task_add_collector_svm
 
 
 
+[[how-to-enable-the-feature]]
 == Comment activer la fonctionnalité ?
 
 * Dans Sécurité de la charge de travail, accédez à *Sécurité de la charge de travail > Politiques > Politiques de réponse automatisée*.  Choisissez *+Politique d'attaque*.
@@ -53,6 +55,7 @@ Assurez-vous de consulter la section Autorisations dulink:task_add_collector_svm
 
 
 
+[[how-to-set-up-automatic-user-access-blocking]]
 == Comment configurer le blocage automatique de l'accès des utilisateurs ?
 
 * Créez une nouvelle politique d’attaque ou modifiez une politique d’attaque existante.
@@ -64,6 +67,7 @@ Assurez-vous de consulter la section Autorisations dulink:task_add_collector_svm
 
 
 
+[[how-to-know-if-there-are-blocked-users-in-the-system]]
 == Comment savoir s'il y a des utilisateurs bloqués dans le système ?
 
 * Dans la page des listes d'alertes, une bannière en haut de l'écran sera affichée au cas où un utilisateur serait bloqué.
@@ -73,6 +77,7 @@ Assurez-vous de consulter la section Autorisations dulink:task_add_collector_svm
 
 
 
+[[restrict-and-manage-user-access-manually]]
 == Restreindre et gérer manuellement l'accès des utilisateurs
 
 * Vous pouvez accéder aux détails de l'alerte ou à l'écran des détails de l'utilisateur, puis bloquer ou restaurer manuellement un utilisateur à partir de ces écrans.
@@ -80,12 +85,14 @@ Assurez-vous de consulter la section Autorisations dulink:task_add_collector_svm
 
 
 
+[[user-access-limitation-history]]
 == Historique des limitations d'accès des utilisateurs
 
 Dans la page des détails de l'alerte et des détails de l'utilisateur, dans le panneau utilisateur, vous pouvez afficher un audit de l'historique des limitations d'accès de l'utilisateur : heure, action (bloquer, débloquer), durée, action entreprise par, manuel/automatique et adresses IP affectées pour NFS.
 
 
 
+[[how-to-disable-the-feature]]
 == Comment désactiver la fonctionnalité ?
 
 À tout moment, vous pouvez désactiver la fonctionnalité.  S'il y a des utilisateurs restreints dans le système, vous devez d'abord restaurer leur accès.
@@ -98,6 +105,7 @@ La fonctionnalité sera masquée sur toutes les pages.
 
 
 
+[[manually-restore-ips-for-nfs]]
 == Restaurer manuellement les adresses IP pour NFS
 
 Utilisez les étapes suivantes pour restaurer manuellement toutes les adresses IP d' ONTAP si votre essai de Workload Security expire ou si l'agent/collecteur est en panne.
@@ -143,6 +151,7 @@ svm2         test            3       cifs,    0.0.0.0/0             any
 
 
 
+[[manually-restore-users-for-smb]]
 == Restaurer manuellement les utilisateurs pour SMB
 
 Utilisez les étapes suivantes pour restaurer manuellement tous les utilisateurs d' ONTAP si votre essai de Workload Security expire ou si l'agent/collecteur est en panne.
@@ -181,6 +190,7 @@ Aucune entrée ne doit être affichée pour les utilisateurs précédemment bloq
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 |===

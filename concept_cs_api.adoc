@@ -24,6 +24,7 @@ Conditions requises pour l'accès à l'API :
 
 
 
+[[api-documentation-swagger]]
 == Documentation de l'API (Swagger)
 
 Les dernières informations sur l'API sont disponibles en vous connectant à Workload Security et en accédant à *Admin > Accès API*.  Cliquez sur le lien *Documentation API*.  La documentation de l'API est basée sur Swagger, qui fournit une brève description et des informations d'utilisation de l'API et vous permet de l'essayer sur votre locataire.
@@ -33,6 +34,7 @@ NOTE: Si vous appelez l'API Forensics Activity, utilisez l'API cloudsecure_foren
 
 
 
+[[api-access-tokens]]
 == Jetons d'accès API
 
 Avant d’utiliser l’API Workload Security, vous devez créer un ou plusieurs *jetons d’accès API*.  Les jetons d’accès accordent des autorisations de lecture.  Vous pouvez également définir l’expiration de chaque jeton d’accès.
@@ -65,6 +67,7 @@ Des informations détaillées peuvent être trouvées dans le lien _Documentatio
 
 
 
+[[script-to-extract-data-via-the-api]]
 == Script pour extraire des données via l'API
 
 Les agents Workload Security incluent un script d'exportation pour faciliter les appels parallèles à l'API v2 en divisant la plage horaire demandée en lots plus petits.

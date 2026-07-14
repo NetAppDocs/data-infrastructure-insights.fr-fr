@@ -21,6 +21,7 @@ NOTE: Cette documentation fait référence à la fonctionnalité de création de
 
 
 
+[[odata]]
 == Odata
 
 L'API de reporting Data Infrastructure Insights suit lalink:https://www.odata.org/["OData v4"] (Open Data Protocol) norme pour l'interrogation de la base de données Reporting.  Pour plus d'informations ou pour en savoir plus, consultezlink:https://www.odata.org/getting-started/basic-tutorial/["ce tutoriel"] sur OData.
@@ -29,6 +30,7 @@ Toutes les requêtes commenceront par l'URL _\https://< Data Infrastructure Insi
 
 
 
+[[generating-an-apikey]]
 == Générer une clé API
 
 En savoir plus surlink:API_Overview.html["API d' Data Infrastructure Insights"] .
@@ -48,6 +50,7 @@ Les clés API sont utiles pour<<synchronous-or-asynchronous,_Sync_ ou _Async_>> 
 
 
 
+[[direct-query-of-tables]]
 == Requête directe des tables
 
 Avec la clé API en place, les requêtes directes sur la base de données de rapports sont désormais possibles.  Les URL longues peuvent être simplifiées en \https://.../odata/ à des fins d'affichage plutôt qu'en \https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata/ complet
@@ -63,6 +66,7 @@ Essayez des requêtes simples comme
 
 
 
+[[rest-api-examples]]
 == Exemples d'API REST
 
 L'URL pour tous les appels est _\https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata_.
@@ -107,6 +111,7 @@ Résultat:
 ....
 
 
+[[helpful-hints]]
 == Conseils utiles
 
 Gardez les points suivants à l’esprit lorsque vous travaillez avec des requêtes d’API de création de rapports.
@@ -133,6 +138,7 @@ Votre clé API sera spécifique à votre environnement Data Infrastructure Insig
 
 
 
+[[synchronous-or-asynchronous]]
 == Synchrone ou asynchrone ?
 
 Par défaut, une commande API fonctionnera en mode _synchrone_, ce qui signifie que vous envoyez la requête et la réponse est renvoyée immédiatement.  Cependant, il arrive parfois qu'une requête prenne beaucoup de temps à s'exécuter, ce qui peut entraîner l'expiration de la requête.  Pour contourner ce problème, vous pouvez exécuter une requête de manière _asynchrone_.  En mode asynchrone, la requête renverra une URL via laquelle l'exécution pourra être surveillée.  L'URL renverra le résultat lorsqu'il sera prêt.

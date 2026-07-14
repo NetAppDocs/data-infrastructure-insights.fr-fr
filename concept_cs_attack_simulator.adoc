@@ -18,6 +18,7 @@ Vous pouvez utiliser les instructions de cette page pour simuler une falsificati
 
 
 
+[[things-to-note-before-you-begin]]
 == Choses à noter avant de commencer
 
 * Le script de simulation de falsification de fichiers fonctionne uniquement sous Linux. Le script de simulation doit également générer des alertes à haute fiabilité dans le cas où l'utilisateur aurait intégré ONTAP ARP à Workload Security.
@@ -30,6 +31,7 @@ Vous pouvez utiliser les instructions de cette page pour simuler une falsificati
 
 
 
+[[guidelines]]
 == Directives :
 
 Ce script doit être exécuté sur une SVM contenant un dossier avec un nombre substantiel de fichiers à chiffrer, idéalement 100 ou plus, y compris les fichiers dans les sous-dossiers.  Assurez-vous que les fichiers ne sont pas vides.
@@ -38,10 +40,12 @@ Pour générer l'alerte, mettez temporairement le collecteur en pause avant la c
 
 
 
+[[steps]]
 == Mesures:
 
 
 
+[[prepare-the-system]]
 === Préparez le système :
 
 Tout d’abord, montez le volume cible sur la machine.  Vous pouvez monter une exportation NFS ou CIFS.
@@ -81,6 +85,7 @@ Ensuite, configurez un collecteur de données :
 
 
 
+[[generate-the-sample-files-programmatically]]
 == Générez les fichiers d'exemple par programmation :
 
 Avant de créer les fichiers, vous devez d’abord arrêter oulink:task_add_collector_svm.html#play-pause-data-collector["mettre en pause le collecteur de données"] traitement.
@@ -91,6 +96,7 @@ Si vous choisissez de créer les fichiers par programmation, vous pouvez utilise
 
 
 
+[[shell]]
 === Coquille:
 
 . Connectez-vous à la boîte Agent.
@@ -104,6 +110,7 @@ Si vous choisissez de créer les fichiers par programmation, vous pouvez utilise
 
 
 
+[[python]]
 === Python:
 
 
@@ -148,18 +155,21 @@ Si vous choisissez de créer les fichiers par programmation, vous pouvez utilise
 
 
 
+[[resume-the-collector]]
 == Reprendre le collecteur
 
 Si vous avez mis le collecteur en pause avant de suivre ces étapes, assurez-vous de reprendre le collecteur une fois les fichiers d'exemple créés.
 
 
 
+[[generate-file-tampering-alert]]
 == Générer une alerte de falsification de fichier
 
 Pour générer une alerte de falsification de fichier, vous pouvez exécuter le script inclus qui simulera une alerte de falsification de fichier dans Workload Security.
 
 
 
+[[shell]]
 === Coquille:
 
 . Copiez le script du répertoire d’installation de l’agent (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/simulate_attack.sh) vers l’emplacement de montage cible.
@@ -171,6 +181,7 @@ Pour générer une alerte de falsification de fichier, vous pouvez exécuter le 
 
 
 
+[[python]]
 === Python:
 
 . Copiez le script du répertoire d’installation de l’agent (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/python/simulate_attack.py) vers l’emplacement de montage cible.
@@ -183,6 +194,7 @@ Pour générer une alerte de falsification de fichier, vous pouvez exécuter le 
 
 
 
+[[generate-an-alert-in-workload-security]]
 == Générer une alerte dans Workload Security
 
 Une fois l’exécution du script du simulateur terminée, une alerte s’affichera sur l’interface Web dans quelques minutes.
@@ -208,6 +220,7 @@ image:ws_high_confidence_alert_detail.png["Exemple d'alerte de haute confiance, 
 
 
 
+[[triggering-alert-multiple-times]]
 == Déclenchement de l'alerte plusieurs fois
 
 Workload Security analyse le comportement des utilisateurs et ne génère pas d'alertes en cas d'attaques répétées de falsification de fichiers survenant dans un délai de 24 heures pour un même utilisateur.

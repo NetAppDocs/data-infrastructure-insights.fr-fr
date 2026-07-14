@@ -18,6 +18,7 @@ La page Entités médico-légales fournit des informations détaillées sur l’
 
 
 
+[[examining-entity-information]]
 == Examen des informations sur l'entité
 
 Cliquez sur *Forensics > Activity Forensics* et cliquez sur l'onglet _Entities_ pour accéder à la page Entités.

@@ -18,6 +18,7 @@ Créez et gérez des entités commerciales pour votre environnement d'entreprise
 
 
 
+[[creating-a-business-entity]]
 == Création d'une entité commerciale
 
 Pour créer une entité commerciale, procédez comme suit :
@@ -39,6 +40,7 @@ NOTE: Les valeurs sélectionnées doivent constituer une entité commerciale tot
 
 
 
+[[applying-a-business-entity-to-an-object]]
 == Application d'une entité métier à un objet
 
 Le moyen le plus simple d’appliquer une entité commerciale à un ou plusieurs objets est d’utiliser une requête.
@@ -59,6 +61,7 @@ NOTE: Un objet ne peut avoir qu’une seule entité commerciale associée.
 
 
 
+[[removing-a-business-entity-from-an-object]]
 == Suppression d'une entité commerciale d'un objet
 
 Pour supprimer une entité commerciale d'un ou plusieurs objets, recherchez et sélectionnez le ou les objets, cliquez sur *Actions en masse* et sélectionnez _Supprimer l'annotation_.  Sélectionnez l’annotation Entité commerciale et cliquez sur *Supprimer*.

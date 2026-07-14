@@ -18,6 +18,7 @@ Vous créez des règles de résolution de périphérique pour identifier les hô
 
 
 
+[[creating-device-resolution-rules]]
 == Création de règles de résolution de périphérique
 
 Lorsque vous créez des règles, vous commencez par identifier la source d'informations sur laquelle la règle s'exécute, la méthode utilisée pour extraire les informations et si la recherche DNS est appliquée aux résultats de la règle.
@@ -109,12 +110,14 @@ Les résultats de l'exécution de la règle sont affichés dans l'onglet *FC ide
 
 
 
+[[pausing-and-resuming-rules]]
 === Règles de pause et de reprise
 
 Pour interrompre l'exécution d'une règle, sélectionnez « Pause » dans le menu latéral de la règle, ou sélectionnez plusieurs règles et choisissez « Pause » dans le menu déroulant « Actions groupées ». Vous pouvez reprendre l'exécution des règles de la même manière.
 
 
 
+[[starting-an-automatic-device-resolution-update]]
 == Démarrage d'une mise à jour automatique de la résolution de l'appareil
 
 Une mise à jour de résolution de périphérique valide les modifications manuelles qui ont été ajoutées depuis la dernière exécution de résolution automatique complète du périphérique.  L'exécution d'une mise à jour peut être utilisée pour valider et exécuter uniquement les nouvelles entrées manuelles apportées à la configuration de résolution du périphérique.  Aucune exécution de résolution complète de l'appareil n'est effectuée.
@@ -128,6 +131,7 @@ Une mise à jour de résolution de périphérique valide les modifications manue
 
 
 
+[[rule-assisted-manual-identification]]
 == Identification manuelle assistée par des règles
 
 Cette fonctionnalité est utilisée pour les cas particuliers où vous souhaitez exécuter une règle spécifique ou une liste de règles (avec ou sans réorganisation unique) pour résoudre les hôtes, les périphériques de stockage et les périphériques de bande inconnus.
@@ -163,12 +167,14 @@ Lorsque des règles applicables sont rencontrées, les noms des règles sont aff
 
 
 
+[[ai-assisted-rule-generation]]
 == Génération de règles assistée par l'IA
 
 Vous pouvez aussi éliminer les approximations grâce à l'identification des appareils par l'IA pour créer des règles rapidement et facilement. Il vous suffit d'exécuter le générateur de règles assisté par IA pour analyser votre environnement et obtenir des suggestions de règles de résolution d'appareils, ce qui vous permet d'identifier et de gérer un plus grand nombre d'appareils plus rapidement.
 
 
 
+[[get-started]]
 === Commencer
 
 Pour commencer à utiliser l'IA pour générer des règles de résolution, un administrateur doit d'abord activer les règles générées par l'IA.
@@ -183,6 +189,7 @@ Vous devez confirmer vos noms de domaine avant d’activer les règles généré
 
 
 
+[[check-progress]]
 === Vérifier la progression
 
 DII créera périodiquement une notification lorsque des appareils supplémentaires seront disponibles pour une identification possible. Si un point vert apparaît sur l'icône de cloche en haut à droite de la page, sélectionnez-la pour afficher la notification.
@@ -197,12 +204,14 @@ image:ahr_ai_badge.png["Badge de règle généré par IA, largeur=400"]
 
 
 
+[[resume-and-go]]
 === Reprendre et continuer
 
 Les règles générées par l'IA sont par défaut à l'état _Pause_. Vous devez examiner chaque règle et la mettre en _Reprise_ avant qu'elle n'identifie les appareils.
 
 
 
+[[related]]
 == En rapport :
 
 link:task_device_resolution_fibre_channel.html["Résolution du périphérique Fibre Channel"] link:task_device_resolution_ip.html["Résolution du périphérique IP"] link:task_device_resolution_preferences.html["Définition des préférences de résolution de l'appareil"]

@@ -20,6 +20,7 @@ Pour la configuration, le collecteur de données nécessite une adresse IP/FQDN 
 
 
 
+[[requirements]]
 == Exigences
 
 * Une adresse IP/nom de domaine complet du serveur Unisphere
@@ -29,9 +30,10 @@ Pour la configuration, le collecteur de données nécessite une adresse IP/FQDN 
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -49,9 +51,10 @@ Pour la configuration, le collecteur de données nécessite une adresse IP/FQDN 
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -72,15 +75,17 @@ Pour la configuration, le collecteur de données nécessite une adresse IP/FQDN 
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
+[[inventory]]
 === Inventaire
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problème: | Essayez ceci: 
 

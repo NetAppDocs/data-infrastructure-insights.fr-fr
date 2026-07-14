@@ -20,6 +20,7 @@ Data Infrastructure Insights Workload Security s'intègre à ONTAP pour recevoir
 
 
 
+[[prerequisites]]
 == Prérequis
 
 * Version minimale ONTAP : 9.13.0.
@@ -30,6 +31,7 @@ image:WS_Access_Denied_Enable_in_Collector.png["Activer l'accès refusé dans la
 
 
 
+[[user-permissions-required]]
 == Autorisations utilisateur requises
 
 Si le collecteur de données est ajouté à l’aide des informations d’identification d’administration du cluster, aucune nouvelle autorisation n’est nécessaire.
@@ -46,6 +48,7 @@ En savoir plus sur la configuration d'autreslink:task_add_collector_svm.html["Au
 
 
 
+[[access-denied-events]]
 == Événements d'accès refusé
 
 Une fois les événements acquis à partir du système ONTAP , la page Forensics de sécurité de la charge de travail affichera les événements d'accès refusé.  En plus des informations affichées, vous pouvez afficher les autorisations utilisateur manquantes pour une opération particulière en ajoutant la colonne _Activité souhaitée_ au tableau à partir de l'icône d'engrenage.

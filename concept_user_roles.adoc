@@ -14,6 +14,7 @@ Data Infrastructure Insights fournit jusqu'à quatre rôles de compte utilisateu
 
 
 
+[[permission-levels]]
 == Niveaux d'autorisation
 
 Vous utilisez un compte disposant de privilèges d’administrateur pour créer ou modifier des comptes d’utilisateurs.  À chaque compte utilisateur est attribué un rôle pour chaque fonctionnalité Data Infrastructure Insights parmi les niveaux d’autorisation suivants.
@@ -37,6 +38,7 @@ La meilleure pratique consiste à limiter le nombre d’utilisateurs disposant d
 
 
 
+[[data-infrastructure-insights-permissions-by-user-role]]
 === Data Infrastructure Insights : autorisations par rôle d'utilisateur
 
 Le tableau suivant présente les autorisations Data Infrastructure Insights accordées à chaque rôle d’utilisateur.
@@ -122,6 +124,7 @@ Le tableau suivant présente les autorisations Data Infrastructure Insights acco
 
 
 
+[[creating-accounts-by-inviting-users]]
 == Créer des comptes en invitant des utilisateurs
 
 La création d'un nouveau compte utilisateur s'effectue via la NetApp Console.  Un utilisateur peut répondre à l’invitation envoyée par e-mail, mais si l’utilisateur n’a pas de compte avec Console, il doit s’inscrire pour pouvoir accepter l’invitation.
@@ -164,6 +167,7 @@ L'invitation est envoyée à l'utilisateur.  Les utilisateurs auront 14 jours po
 
 
 
+[[modifying-an-existing-users-role]]
 == Modifier le rôle d'un utilisateur existant
 
 Pour modifier le rôle d'un utilisateur existant, y compris l'ajouter en tant que *propriétaire de compte secondaire*, suivez ces étapes.
@@ -176,6 +180,7 @@ Pour modifier le rôle d'un utilisateur existant, y compris l'ajouter en tant qu
 
 
 
+[[to-assign-a-secondary-account-owner]]
 === Pour attribuer un propriétaire de compte secondaire
 
 Vous devez être connecté en tant que propriétaire de compte pour Observability afin d'attribuer le rôle de propriétaire de compte à un autre utilisateur.
@@ -192,6 +197,7 @@ Vous pouvez avoir autant de propriétaires de compte que vous le souhaitez, mais
 
 
 
+[[deleting-users]]
 == Suppression d'utilisateurs
 
 Un utilisateur avec le rôle Administrateur peut supprimer un utilisateur (par exemple, une personne qui ne fait plus partie de l'entreprise) en cliquant sur le nom de l'utilisateur et en cliquant sur _Supprimer l'utilisateur_ dans la boîte de dialogue.  L'utilisateur sera supprimé de l'environnement Data Infrastructure Insights .
@@ -200,10 +206,12 @@ Notez que tous les tableaux de bord, requêtes, etc. créés par l'utilisateur r
 
 
 
+[[single-sign-on-sso-and-identity-federation]]
 == Authentification unique (SSO) et fédération d'identité
 
 
 
+[[what-is-identity-federation]]
 === Qu'est-ce que la Fédération d'Identité ?
 
 Avec la Fédération des identités :
@@ -226,6 +234,7 @@ Dans le diagramme ci-dessus, lorsqu'un utilisateur accède à Data Infrastructur
 
 
 
+[[enabling-identity-federation]]
 === Activation de la fédération d'identité
 
 La console utilise Auth0 pour implémenter la fédération d’identité et s’intégrer à des services tels que Active Directory Federation Services (ADFS) et Microsoft Azure Active Directory (AD).  Pour configurer la fédération d'identité, consultez lelink:https://services.cloud.netapp.com/misc/federation-support["Instructions de la Fédération"] .
@@ -241,6 +250,7 @@ Pour ce problème ou tout autre problème de fédération, vous pouvez ouvrir un
 
 
 
+[[single-sign-on-sso-user-auto-provisioning]]
 === Provisionnement automatique des utilisateurs par authentification unique (SSO)
 
 En plus d'inviter des utilisateurs, les administrateurs peuvent activer l'accès *Single Sign-On (SSO) User Auto-Provisioning* à Data Infrastructure Insights pour tous les utilisateurs de leur domaine d'entreprise, sans avoir à les inviter individuellement.  Avec SSO activé, tout utilisateur disposant de la même adresse e-mail de domaine peut se connecter à Data Infrastructure Insights à l'aide de ses informations d'identification d'entreprise.
@@ -266,6 +276,7 @@ Cependant, n'activez pas _SSO User Auto-Provisioning_ si l'une de ces conditions
 
 
 
+[[restricting-access-by-domain]]
 == Restreindre l'accès par domaine
 
 Data Infrastructure Insights peut restreindre l'accès des utilisateurs aux seuls domaines que vous spécifiez.  Sur la page *Admin > Gestion des utilisateurs*, sélectionnez « Restreindre les domaines ».

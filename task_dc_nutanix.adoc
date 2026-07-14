@@ -2,23 +2,28 @@
 sidebar: sidebar 
 permalink: task_dc_nutanix.html 
 keywords: data collector, Nutanix, NX Series 
-summary: Configuration du collecteur de données Nutanix. 
+summary: Configuration du collecteur de données Nutanix NX. 
 ---
 = Collecteur de données Nutanix NX
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights utilise le collecteur de données Nutanix pour découvrir les données d'inventaire et de performances des systèmes de stockage Nutanix NX.
+Data Infrastructure Insights utilise le collecteur de données Nutanix NX pour découvrir les données d'inventaire et de performance des systèmes de stockage Nutanix NX.
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès du collecteur de données Nutanix.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -38,6 +43,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[requirements]]
 == Exigences
 
 * L'adresse IP des services de données externes pour le cluster
@@ -47,9 +53,10 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -64,9 +71,10 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -81,6 +89,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

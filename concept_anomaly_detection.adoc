@@ -19,12 +19,14 @@ image:anomaly_detection_expert_view.png["graphique montrant l'anomalie détecté
 
 
 
+[[what-is-anomaly-detection]]
 == Qu'est-ce que la détection d'anomalies ?
 
 Une anomalie se produit lorsque la valeur moyenne d'une mesure est éloignée d'un certain nombre d'écarts types de la moyenne pondérée de cette mesure pour les semaines précédentes, les semaines récentes ayant plus de poids que les semaines précédentes.  Data Infrastructure Insights offre la possibilité de surveiller les données et d'alerter lorsque des anomalies sont détectées.  Vous avez le choix de définir les niveaux de « sensibilité » de détection.  Par exemple, une sensibilité plus élevée serait obtenue lorsque la valeur moyenne présente moins d'écarts types par rapport à la moyenne, ce qui entraînerait la génération d'un plus grand nombre d'alertes.  À l’inverse, une sensibilité plus faible = plus d’écarts types par rapport à la moyenne = moins d’alertes.
 
 
 
+[[anomaly-detection-monitoring-differs-from-threshold-monitoring]]
 === La surveillance de la détection des anomalies diffère de la surveillance des seuils.
 
 * *La surveillance basée sur des seuils* fonctionne lorsque vous avez des seuils prédéfinis pour des mesures spécifiques.  En d’autres termes, lorsque vous avez une compréhension claire de ce qui est attendu (c’est-à-dire dans une fourchette normale).
@@ -39,6 +41,7 @@ image:ADMonitor_blurb.png["Les moniteurs de détection d'anomalies sont utiles l
 
 
 
+[[when-would-i-need-anomaly-detection]]
 == Quand aurais-je besoin de la détection d’anomalies ?
 
 La surveillance de la détection des anomalies peut fournir des alertes utiles dans de nombreuses situations, notamment les suivantes :
@@ -50,6 +53,7 @@ La surveillance de la détection des anomalies peut fournir des alertes utiles d
 
 
 
+[[creating-an-anomaly-detection-monitor]]
 == Création d'un moniteur de détection d'anomalies
 
 Pour alerter sur les anomalies, créez un moniteur en accédant à *Observabilité > Alertes > +Moniteur*.  Sélectionnez _Anomaly Detection Monitor_ comme type de moniteur.
@@ -79,6 +83,7 @@ NOTE: Lorsqu'un moniteur est créé, DII examine toutes les données existantes 
 
 
 
+[[viewing-the-anomalies]]
 == Visualisation des anomalies
 
 Sur une page de destination d'alerte, les alertes déclenchées lorsque des anomalies sont détectées afficheront une bande en surbrillance dans le graphique, à partir du moment où la métrique a dépassé les limites prévues jusqu'au moment où elle est revenue à l'intérieur de ces limites.

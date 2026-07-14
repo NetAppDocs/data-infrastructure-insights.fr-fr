@@ -29,6 +29,7 @@ Après avoir défini une application, elle peut être affectée à des actifs.
 
 
 
+[[assigning-applications-to-assets]]
 == Affectation d'applications à des actifs
 
 Cette procédure attribue l’application à un hôte à titre d’exemple.  Vous pouvez attribuer un hôte, une machine virtuelle, un volume ou des volumes internes à une application.

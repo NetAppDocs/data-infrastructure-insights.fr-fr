@@ -20,6 +20,7 @@ Si vous souhaitez prévisualiser une ou plusieurs de ces fonctionnalités, conta
 
 
 
+[[current-previews]]
 == Aperçus actuels :
 
 * link:ai_for_dii_overview.html["Data Infrastructure Insights Assistant IA"] aperçu.

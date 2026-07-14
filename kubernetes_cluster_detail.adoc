@@ -16,12 +16,14 @@ image:Kubernetes_Detail_Page_new.png["Page de détails du cluster"]
 
 
 
+[[namespace-node-and-pod-counts]]
 == Nombre d'espaces de noms, de nœuds et de pods
 
 Les comptes en haut de la page vous indiquent le nombre total d'espaces de noms, de nœuds et de pods dans le cluster, ainsi que le nombre de popds actuellement en alerte et en attente.
 
 
 
+[[shared-resources-and-saturation]]
 == Ressources partagées et saturation
 
 En haut à droite de la page de détails se trouve la saturation de votre cluster sous forme de pourcentage actuel ainsi qu'un graphique montrant la tendance récente au fil du temps.  La saturation du cluster correspond à la saturation la plus élevée du processeur, de la mémoire ou du stockage à chaque instant.
@@ -32,6 +34,7 @@ Les appareils les plus utilisés sont indiqués dans un tableau en bas.  Cliquez
 
 
 
+[[namespaces]]
 == Espaces de noms
 
 L'onglet Espaces de noms affiche une liste de tous les espaces de noms de votre environnement Kubernetes, indiquant l'utilisation du processeur et de la mémoire ainsi qu'un nombre de charges de travail dans chaque espace de noms.  Cliquez sur les liens Nom pour explorer chaque espace de noms.
@@ -40,6 +43,7 @@ image:Kubernetes_Namespace_tab_new.png["liste des espaces de noms actuels dans v
 
 
 
+[[workloads]]
 == Charges de travail
 
 De même, l’onglet Charges de travail affiche une liste des charges de travail dans chaque espace de noms, indiquant à nouveau l’utilisation du processeur et de la mémoire.  En cliquant sur les liens de l'espace de noms, vous accédez à chacun d'eux.
@@ -48,6 +52,7 @@ image:Kubernetes_Workloads_tab_new.png["liste des espaces de noms actuels dans v
 
 
 
+[[the-cluster-wheel]]
 == La « roue » du cluster
 
 image:Kubernetes_Wheel_Section.png["Roue de cluster"]
@@ -74,6 +79,7 @@ image:Kubernetes_Capacity_Info.png["Capacité et allocation des nœuds"]
 
 
 
+[[a-note-about-the-gauges]]
 == Une note sur les jauges
 
 Les jauges de mémoire et de processeur affichent trois couleurs, car elles indiquent la capacité utilisée par rapport à la capacité allouable et à la capacité totale.

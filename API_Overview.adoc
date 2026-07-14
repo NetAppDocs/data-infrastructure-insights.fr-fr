@@ -20,6 +20,7 @@ Vos Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights
 
 
 
+[[requirements-for-api-access]]
 == Conditions requises pour l'accès à l'API
 
 * Un modèle de jeton d'accès API est utilisé pour accorder l'accès.
@@ -28,6 +29,7 @@ Vos Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights
 
 
 
+[[api-documentation-swagger]]
 == Documentation de l'API (Swagger)
 
 Les dernières informations sur l'API sont disponibles en vous connectant à Data Infrastructure Insights et en accédant à *Admin > Accès API*.  Cliquez sur le lien *Documentation API*.
@@ -40,6 +42,7 @@ image:API_Swagger_Example.png["Exemple d'API Swagger"]
 
 
 
+[[api-access-tokens]]
 == Jetons d'accès API
 
 Avant d'utiliser l'API Data Infrastructure Insights , vous devez créer un ou plusieurs *jetons d'accès API*.  Les jetons d'accès sont utilisés pour des types d'API spécifiés et peuvent accorder des autorisations de lecture et/ou d'écriture.  Vous pouvez également définir l’expiration de chaque jeton d’accès.  Toutes les API sous les types spécifiés sont valides pour le jeton d'accès.  Chaque jeton est dépourvu de nom d'utilisateur ou de mot de passe.
@@ -77,6 +80,7 @@ Consultez les pages Swagger pour des exemples spécifiques à l'API que vous sou
 
 
 
+[[api-type]]
 == Type d'API
 
 L'API Data Infrastructure Insights est basée sur des catégories et contient actuellement les types suivants :
@@ -100,12 +104,14 @@ Notez que les types d'API auxquels un utilisateur a accès dépendent également
 
 
 
+[[inventory-traversal]]
 == Parcours d'inventaire
 
 Cette section décrit comment parcourir une hiérarchie d'objets Data Infrastructure Insights .
 
 
 
+[[top-level-objects]]
 === Objets de niveau supérieur
 
 Les objets individuels sont identifiés dans les requêtes par une URL unique (appelée « self » en JSON) et nécessitent la connaissance du type d'objet et de son identifiant interne. Pour certains objets de niveau supérieur (hôtes, stockages, etc.), l'API REST donne accès à la collection complète.
@@ -118,6 +124,7 @@ Par exemple, pour récupérer tous les stockages d'un locataire nommé _mysite.c
  https://mysite.c01.cloudinsights.netapp.com/rest/v1/assets/storages
 
 
+[[children-and-related-objects]]
 === Enfants et objets apparentés
 
 Les objets de niveau supérieur, tels que le stockage, peuvent être utilisés pour accéder à d'autres enfants et objets associés.  Par exemple, pour récupérer tous les disques d'un stockage spécifique, concaténez l'URL « self » du stockage avec « /disks », par exemple :
@@ -125,6 +132,7 @@ Les objets de niveau supérieur, tels que le stockage, peuvent être utilisés p
  https://<tenant>/rest/v1/assets/storages/4537/disks
 
 
+[[expands]]
 == S'agrandit
 
 De nombreuses commandes API prennent en charge le paramètre *expand*, qui fournit des détails supplémentaires sur l'objet ou les URL des objets associés.
@@ -147,6 +155,7 @@ Pour décourager cela, les demandes de collections de niveau supérieur ne peuve
 
 
 
+[[performance-data]]
 == Données de performance
 
 Les données de performances sont collectées sur de nombreux appareils sous forme d’échantillons distincts.  Toutes les heures (par défaut), Data Infrastructure Insights regroupe et résume les échantillons de performances.
@@ -188,6 +197,7 @@ Des résumés de performances sont disponibles pour ces types de compteurs :
 
 
 
+[[object-performance-metrics]]
 == Mesures de performance des objets
 
 L'API peut renvoyer des métriques détaillées pour les objets de votre locataire, par exemple :
@@ -200,6 +210,7 @@ Voir lelink:#api-documentation-swagger["Documentation de l'API Swagger"] pour ob
 
 
 
+[[performance-history-data]]
 == Données d'historique des performances
 
 Les données d'historique sont présentées dans les données de performances sous la forme d'une liste de paires de cartes d'horodatage et de compteur.
@@ -215,12 +226,14 @@ image:DiskPerformanceExample.png["Performances du disque JSON"]
 
 
 
+[[objects-with-capacity-attributes]]
 == Objets avec attributs de capacité
 
 Les objets avec des attributs de capacité utilisent des types de données de base et CapacityItem pour la représentation.
 
 
 
+[[capacityitem]]
 === CapacitéArticle
 
 CapacityItem est une unité logique unique de capacité.  Il a une « valeur » et un « seuil élevé » dans les unités définies par son objet parent.  Il prend également en charge une carte de répartition facultative qui explique comment la valeur de capacité est construite.  Par exemple, la capacité totale d’un pool de stockage de 100 To serait un CapacityItem avec une valeur de 100.  La répartition peut montrer 60 To alloués aux « données » et 40 To aux « instantanés ».
@@ -233,6 +246,7 @@ image:StoragePoolCapacity.png["Exemple de capacité de pool de stockage"]
 
 
 
+[[using-search-to-look-up-objects]]
 == Utiliser la recherche pour rechercher des objets
 
 L'API de recherche est un point d'entrée simple vers le système.  Le seul paramètre d'entrée de l'API est une chaîne de forme libre et le JSON résultant contient une liste catégorisée de résultats.  Les types sont des types d'actifs différents de l'inventaire, tels que les stockages, les hôtes, les magasins de données, etc.  Chaque type contiendrait une liste d’objets du type correspondant aux critères de recherche.
@@ -243,6 +257,7 @@ L'API RESTful de Cloud Insight est un point d'intégration principal qui permet 
 
 
 
+[[disabling-or-revoking-an-api-token]]
 == Désactiver ou révoquer un jeton API
 
 Pour désactiver temporairement un jeton API, sur la page de liste des jetons API, cliquez sur le menu « trois points » pour l'API et sélectionnez _Désactiver_.  Vous pouvez réactiver le jeton à tout moment en utilisant le même menu et en sélectionnant _Activer_.
@@ -253,6 +268,7 @@ image:API_Disable_Token.png["Désactiver ou révoquer un jeton API"]
 
 
 
+[[rotating-expired-api-access-tokens]]
 == Rotation des jetons d'accès API expirés
 
 Les jetons d'accès API ont une date d'expiration.  Lorsqu'un jeton d'accès API expire, les utilisateurs doivent générer un nouveau jeton (de type _Data Ingestion_ avec des autorisations de lecture/écriture) et reconfigurer Telegraf pour utiliser le jeton nouvellement généré au lieu du jeton expiré.  Les étapes ci-dessous détaillent comment procéder.

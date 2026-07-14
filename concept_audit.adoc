@@ -18,6 +18,7 @@ Pour identifier les modifications attendues (pour le suivi) ou inattendues (pour
 
 
 
+[[viewing-audited-events]]
 == Affichage des événements audités
 
 Pour afficher la page Audit, cliquez sur *Admin > Audit* dans le menu.  La page Audit s'affiche, fournissant les détails suivants pour chaque entrée d'audit :
@@ -33,6 +34,7 @@ Pour afficher la page Audit, cliquez sur *Admin > Audit* dans le menu.  La page 
 
 
 
+[[displaying-audit-entries]]
 == Affichage des entrées d'audit
 
 Il existe plusieurs façons différentes d’afficher les entrées d’audit :
@@ -50,6 +52,7 @@ image:Audit_Filters.png["Filtres d'audit"]
 
 
 
+[[more-on-filtering]]
 === En savoir plus sur le filtrage
 
 Vous pouvez utiliser l’un des éléments suivants pour affiner votre filtre :
@@ -84,6 +87,7 @@ Si vous placez une chaîne de filtre entre guillemets doubles, Insight traite to
 
 
 
+[[audited-events-and-actions]]
 == Événements et actions audités
 
 Les événements et actions audités par Data Infrastructure Insights peuvent être classés dans les grands domaines suivants :
@@ -121,6 +125,7 @@ Exemple : Destinataire _ci-alerts-notifications-dl_ créé
 
 
 
+[[exporting-audit-events]]
 == Exportation des événements d'audit
 
 Vous pouvez exporter les résultats de votre affichage d'audit vers un fichier .CSV, ce qui vous permettra d'analyser les données ou de les importer dans une autre application.
@@ -134,6 +139,7 @@ Les événements d'audit affichés seront exportés vers un fichier .CSV, jusqu'
 
 
 
+[[retention-of-audit-data]]
 == Conservation des données d'audit
 
 La durée pendant laquelle Data Infrastructure Insights conserve les données d'audit dépend de votre abonnement :
@@ -148,6 +154,7 @@ Les entrées d'audit plus anciennes que la durée de conservation sont automatiq
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Vous trouverez ici des suggestions pour résoudre les problèmes liés à Audit.

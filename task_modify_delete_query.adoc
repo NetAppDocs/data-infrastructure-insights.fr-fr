@@ -14,6 +14,7 @@ Vous pouvez modifier les critères associés à une requête lorsque vous souhai
 
 
 
+[[modifying-a-query]]
 == Modifier une requête
 
 .Étapes
@@ -35,6 +36,7 @@ Une fois que vous avez effectué toutes les modifications nécessaires, effectue
 
 
 
+[[deleting-a-query]]
 == Suppression d'une requête
 
 Pour supprimer une requête, cliquez sur *Requêtes* et sélectionnez *Afficher toutes les requêtes*, puis effectuez l'une des opérations suivantes :

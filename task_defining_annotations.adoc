@@ -31,6 +31,7 @@ Par exemple, si un actif est loué et que le bail expire dans les deux mois, vou
 
 
 
+[[default-annotation-types]]
 == Types d'annotations par défaut
 
 Data Infrastructure Insights fournit certains types d’annotations par défaut.  Ces annotations peuvent être utilisées pour filtrer ou regrouper des données.
@@ -86,6 +87,7 @@ NOTE: Alias, Centre de données, Chaud, Niveau de service, Coucher de soleil, Ni
 
 
 
+[[creating-custom-annotations]]
 == Créer des annotations personnalisées
 
 À l’aide d’annotations, vous pouvez ajouter des données personnalisées spécifiques à votre entreprise qui correspondent aux besoins de votre entreprise aux actifs.  Bien que Data Infrastructure Insights fournisse un ensemble d'annotations par défaut, vous souhaiterez peut-être afficher les données d'autres manières.  Les données des annotations personnalisées complètent les données de l'appareil déjà collectées, telles que le fabricant de stockage, les volumes numériques et les statistiques de performances.  Les données que vous ajoutez à l’aide d’annotations ne sont pas découvertes par Data Infrastructure Insights.

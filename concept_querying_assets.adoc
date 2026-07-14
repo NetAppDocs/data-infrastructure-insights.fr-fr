@@ -22,12 +22,14 @@ Vous pouvez interroger les actifs d'inventaire physiques ou virtuels (et leurs m
 
 
 
+[[inventory-assets]]
 == Actifs d'inventaire
 
 Tous les types d'actifs d'inventaire (également appelés infrastructure) (stockage, switch, VM, Application, etc.) peuvent être utilisés dans les requêtes, les widgets de tableau de bord et les pages d'accueil personnalisées des actifs. Les champs et compteurs disponibles pour les filtres, les expressions et l'affichage varient selon les types d'actifs.
 
 
 
+[[integration-metrics]]
 == Mesures d'intégration
 
 Outre l'interrogation des actifs d'inventaire et de leurs mesures de performances associées, vous pouvez également interroger les mesures de *données d'intégration*, telles que celles générées par Kubernetes ou Docker, ou fournies avec ONTAP Advanced Metrics.
@@ -36,6 +38,7 @@ image:QueryPageFilter.png["Exemple de filtre de requête d'intégration"]
 
 
 
+[[sharing-queries]]
 == Partage de requêtes
 
 Contrôlez l'accès à vos requêtes en choisissant qui peut les consulter et les modifier. Par défaut, les nouvelles requêtes sont privées et visibles uniquement par vous, et vous pouvez choisir de les partager avec des utilisateurs spécifiques ou avec l'ensemble de votre organisation grâce à des niveaux d'autorisation flexibles (lecture seule ou modification).

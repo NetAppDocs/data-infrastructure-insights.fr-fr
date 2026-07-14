@@ -14,15 +14,17 @@ Ce collecteur de données acquiert l'inventaire
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert l'inventaire auprès de ce collecteur.
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -43,9 +45,10 @@ Data Infrastructure Insights acquiert l'inventaire auprès de ce collecteur.
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 

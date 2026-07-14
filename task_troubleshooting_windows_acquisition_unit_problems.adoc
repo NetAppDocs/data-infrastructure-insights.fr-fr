@@ -49,6 +49,7 @@ Vous trouverez ici des suggestions pour résoudre les problèmes liés aux unit�
 |===
 
 
+[[considerations-about-proxies-and-firewalls]]
 == Considérations sur les proxys et les pare-feu
 
 Si votre organisation nécessite l'utilisation d'un proxy pour l'accès à Internet, vous devrez peut-être comprendre le comportement du proxy de votre organisation et rechercher certaines exceptions pour que Data Infrastructure Insights fonctionne.  Gardez à l’esprit les points suivants :
@@ -64,6 +65,7 @@ Votre unité d'acquisition Data Infrastructure Insights , ainsi que vos interact
 
 
 
+[[viewing-proxy-endpoints]]
 === Affichage des points de terminaison proxy
 
 Vous pouvez afficher vos points de terminaison proxy en cliquant sur le lien *Paramètres proxy* lors du choix d'un collecteur de données lors de l'intégration, ou sur le lien sous _Paramètres proxy_ sur la page *Aide > Assistance*.  Un tableau comme celui-ci s’affiche.  Si vous disposez de Workload Security dans votre environnement, les URL des points de terminaison configurés seront également affichées dans cette liste.
@@ -72,6 +74,7 @@ image:ProxyEndpoints_NewTable.png["Tableau des points de terminaison proxy"]
 
 
 
+[[resources]]
 == Ressources
 
 Des conseils de dépannage supplémentaires peuvent être trouvés dans lelink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["Base de connaissances NetApp"] (connexion d'assistance requise).

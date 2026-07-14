@@ -14,6 +14,7 @@ Par défaut, lorsqu'une nouvelle version d'un agent ou d'un collecteur Workload 
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 . Vérifiez dans Swagger que les catégories d’API nommées « cloudsecure_installers.agent » et « cloudsecure_installers.collector » sont disponibles.  Dans le cas contraire, la prise en charge de l’installation manuelle de l’agent n’est pas activée.  Veuillez contacter le support NetApp pour activer la fonctionnalité.
@@ -25,6 +26,7 @@ image:ws_manual_install_APIs.png["API d'installation manuelle"]
 
 
 
+[[installing-a-new-agent]]
 == Installation d'un nouvel agent
 
 . Créez un nouveau jeton d’accès à l’API Workload Security.
@@ -197,6 +199,7 @@ image:ws_agentsPageShowingConnected.png["Interface utilisateur affichant les age
 
 
 
+[[installing-a-new-data-collector]]
 == Installation d'un nouveau collecteur de données.
 
 Remarque : ce document contient des instructions pour l’installation du « collecteur de données ONTAP SVM ».  Les mêmes étapes s'appliquent au « collecteur de données Cloud Volumes ONTAP » et au « collecteur de données Amazon FSx for NetApp ONTAP ».
@@ -289,6 +292,7 @@ image:ws_collectorPageList.png["Page de liste de l'interface utilisateur afficha
 
 
 
+[[installing-a-new-user-directory-collector]]
 == Installation d'un nouveau collecteur d'annuaires utilisateurs
 
 Remarque : dans ce document, nous avons mentionné les étapes d’installation d’un collecteur LDAP.  Les mêmes étapes s’appliquent pour l’installation d’un collecteur AD.
@@ -401,6 +405,7 @@ image:ws_LDAP_collector_list.png["Liste des collecteurs LDAP dans l'interface ut
 
 
 
+[[upgrading-an-agent]]
 == Mise à niveau d'un agent
 
 Une notification par e-mail sera envoyée lorsqu'une nouvelle version de l'agent/collecteur sera disponible.
@@ -487,6 +492,7 @@ image:ws_agentsPageShowingConnected.png["Interface utilisateur montrant les agen
 
 
 
+[[upgrading-collectors]]
 == Mise à niveau des collecteurs
 
 Remarque : les étapes de mise à niveau sont les mêmes pour tous les types de collecteurs.  Nous allons démontrer la mise à niveau du collecteur «ONTAP SVM » dans ce document.
@@ -570,6 +576,7 @@ Répétez les étapes ci-dessus pour mettre à niveau d’autres types de collec
 
 
 
+[[commons-issues-and-fixes]]
 == Problèmes et correctifs communs.
 
 . Erreur AGENT014

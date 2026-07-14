@@ -18,6 +18,7 @@ Apprenez efficacement les Data Infrastructure Insights grâce à nos tutoriels f
 
 
 
+[[checklist-and-video-tutorials]]
 == Liste de contrôle et didacticiels vidéo
 
 La *liste de contrôle de démarrage* affichée sur votre locataire Data Infrastructure Insights contient une liste de plusieurs tâches et concepts utiles.  La sélection d’un élément dans la liste de contrôle vous amène à la page Data Infrastructure Insights appropriée pour ce concept.  Par exemple, cliquer sur l'élément _Créer un tableau de bord_ ouvre la page *Tableaux de bord* de Data Infrastructure Insights .
@@ -35,12 +36,14 @@ NOTE: Vous pouvez consulter les tutoriels dans l'ordre de votre choix, autant de
 
 
 
+[[dismissing-the-checklist]]
 === Rejeter la liste de contrôle
 
 La liste de contrôle de démarrage s'affiche jusqu'à ce que vous cliquiez sur le lien _Ne plus afficher_ en bas de la liste de contrôle.  Même après avoir ignoré la liste de contrôle, les didacticiels sont toujours disponibles sur chaque page Data Infrastructure Insights appropriée jusqu'à ce que vous les ignoriez tous à partir de la barre d'en-tête du message.
 
 
 
+[[video-tutorials]]
 == Tutoriels vidéo
 
 Visionnez les vidéos suivantes pour en savoir plus.

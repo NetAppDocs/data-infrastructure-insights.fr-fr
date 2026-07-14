@@ -24,12 +24,14 @@ Data Infrastructure Insights fournit un certain nombre delink:task_system_monito
 
 
 
+[[security-best-practice]]
 == Meilleures pratiques de sécurité
 
 Les alertes Data Infrastructure Insights sont conçues pour mettre en évidence les points de données et les tendances de votre locataire, et Data Infrastructure Insights vous permet de saisir n'importe quelle adresse e-mail valide comme destinataire d'alerte.  Si vous travaillez dans un environnement sécurisé, soyez particulièrement attentif à qui reçoit la notification ou a accès à l’alerte.
 
 
 
+[[metric-or-log-monitor]]
 == Moniteur métrique ou journal ?
 
 . Dans le menu Data Infrastructure Insights , cliquez sur *Alertes > Gérer les moniteurs*
@@ -56,6 +58,7 @@ Après avoir choisi votre type de moniteur, la boîte de dialogue Configuration 
 
 
 
+[[metric-monitor]]
 === Moniteur métrique
 
 . Dans la liste déroulante, recherchez et choisissez un type d’objet et une métrique à surveiller.
@@ -112,6 +115,7 @@ Vous pouvez choisir comment une alerte de surveillance métrique est résolue.  
 
 
 
+[[log-monitor]]
 === Moniteur de journal
 
 Lors de la création d'un *Moniteur de journaux*, choisissez d'abord le journal à surveiller dans la liste des journaux disponibles.  Vous pouvez ensuite filtrer en fonction des attributs disponibles comme ci-dessus.  Vous pouvez également choisir un ou plusieurs attributs « Grouper par ».
@@ -142,6 +146,7 @@ image:Monitor_log_monitor_resolution.png["Résolution d'alerte"]
 
 
 
+[[anomaly-detection-monitor]]
 === Moniteur de détection d'anomalies
 
 . Dans la liste déroulante, recherchez et choisissez un type d’objet et une métrique à surveiller.
@@ -169,6 +174,7 @@ image:AnomalyDetectionMonitorDefineConditions.png["Définir les conditions pour 
 
 
 
+[[select-notification-type-and-recipients]]
 === Sélectionnez le type de notification et les destinataires
 
 Dans la section _Configurer les notifications d'équipe_, vous pouvez choisir d'alerter votre équipe par e-mail ou par Webhook.
@@ -192,6 +198,7 @@ NOTE: Les notifications du collecteur de données ONTAP ont priorité sur toutes
 
 
 
+[[setting-corrective-actions-or-additional-information]]
 === Définition d'actions correctives ou d'informations supplémentaires
 
 Vous pouvez ajouter une description facultative ainsi que des informations supplémentaires et/ou des actions correctives en remplissant la section *Ajouter une description d'alerte*.  La description peut contenir jusqu'à 1024 caractères et sera envoyée avec l'alerte.  Le champ Informations/Actions correctives peut contenir jusqu'à 67 000 caractères et sera affiché dans la section récapitulative de la page de destination de l'alerte.
@@ -204,6 +211,7 @@ image:Monitors_Alert_Description.png["Actions correctives d'alerte et descriptio
 
 
 
+[[save-your-monitor]]
 === Sauvegardez votre moniteur
 
 . Si vous le souhaitez, vous pouvez ajouter une description du moniteur.
@@ -215,6 +223,7 @@ Votre nouveau moniteur est ajouté à la liste des moniteurs actifs.
 
 
 
+[[monitor-list]]
 == Liste des moniteurs
 
 La page Moniteur répertorie les moniteurs actuellement configurés, affichant les éléments suivants :
@@ -233,6 +242,7 @@ Si un moniteur n'est plus nécessaire, vous pouvez le supprimer en sélectionnan
 
 
 
+[[monitor-groups]]
 == Groupes de surveillance
 
 Le regroupement vous permet d'afficher et de gérer les moniteurs associés.  Par exemple, vous pouvez disposer d'un groupe de surveillance dédié au stockage sur votre locataire ou de surveillances pertinentes pour une certaine liste de destinataires.
@@ -252,12 +262,14 @@ NOTE: Les moniteurs personnalisés peuvent être suspendus, repris, supprimés o
 
 
 
+[[suspended-monitors]]
 === Moniteurs suspendus
 
 Ce groupe ne sera affiché que si Data Infrastructure Insights a suspendu un ou plusieurs moniteurs.  Un moniteur peut être suspendu s'il génère des alertes excessives ou continues.  Si le moniteur est un moniteur personnalisé, modifiez les conditions pour empêcher l'alerte continue, puis reprenez le moniteur.  Le moniteur sera supprimé du groupe Moniteurs suspendus lorsque le problème à l’origine de la suspension sera résolu.
 
 
 
+[[system-defined-monitors]]
 === Moniteurs définis par le système
 
 Ces groupes afficheront les moniteurs fournis par Data Infrastructure Insights, à condition que votre environnement contienne les périphériques et/ou la disponibilité des journaux requis par les moniteurs.
@@ -268,6 +280,7 @@ Les moniteurs système peuvent inclure des moniteurs pour l'infrastructure ONTAP
 
 
 
+[[custom-monitor-groups]]
 === Groupes de moniteurs personnalisés
 
 Vous pouvez créer vos propres groupes pour contenir des moniteurs en fonction de vos besoins.  Par exemple, vous souhaiterez peut-être un groupe pour tous vos moniteurs liés au stockage.
@@ -298,6 +311,7 @@ image:Monitors_PauseGroup.png["Mettre un groupe en pause"]
 
 
 
+[[system-defined-monitors]]
 == Moniteurs définis par le système
 
 Data Infrastructure Insights comprend un certain nombre de moniteurs définis par le système pour les métriques et les journaux.  Les moniteurs système disponibles dépendent des collecteurs de données présents sur votre locataire.  De ce fait, les moniteurs disponibles dans Data Infrastructure Insights peuvent changer à mesure que des collecteurs de données sont ajoutés ou que leurs configurations sont modifiées.
@@ -306,6 +320,7 @@ Voir lelink:task_system_monitors.html["Moniteurs définis par le système"] page
 
 
 
+[[more-information]]
 === Plus d'informations
 
 * link:task_view_and_manage_alerts.html["Affichage et suppression des alertes"]

@@ -66,6 +66,7 @@ La recherche n'est pas sensible à la casse.
 
 
 
+[[search-using-indexed-terms]]
 == Rechercher à l'aide de termes indexés
 
 Les recherches qui correspondent à davantage de termes indexés génèrent des scores plus élevés.

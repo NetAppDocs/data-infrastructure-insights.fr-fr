@@ -14,6 +14,7 @@ Data Infrastructure Insights conserve les données pendant des périodes allant 
 
 
 
+[[data-retention]]
 == Conservation des données
 
 Data Infrastructure Insights conserve les données pendant une durée déterminée par votre type d'abonnement.
@@ -31,12 +32,14 @@ Pour obtenir des informations détaillées sur les fonctionnalités et les optio
 
 
 
+[[downsampling-of-data]]
 == Sous-échantillonnage des données
 
 *Le sous-échantillonnage* fournit une approximation statistique de vos données dans des graphiques, vous offrant un aperçu efficace des données sans avoir à afficher chaque point de données, tout en conservant une vue précise de vos données collectées.
 
 
 
+[[why-is-downsampling-needed]]
 === Pourquoi le sous-échantillonnage est-il nécessaire ?
 
 Étant donné qu'une grande quantité de traitement est nécessaire pour préparer les données à afficher dans des graphiques et des diagrammes, afin de permettre aux graphiques de s'afficher rapidement et efficacement, les données peuvent être sous-échantillonnées d'une manière qui conserve la forme globale d'un graphique sans avoir besoin de traiter chaque point de données pour ce graphique.
@@ -45,6 +48,7 @@ Remarque : aucune donnée réelle n’est perdue lors du sous-échantillonnage.
 
 
 
+[[how-downsampling-works]]
 === Comment fonctionne le sous-échantillonnage
 
 Les données sont sous-échantillonnées dans les conditions suivantes :
@@ -76,6 +80,7 @@ NOTE: En raison de la manière dont les données sont approximées pour le sous-
 
 
 
+[[violations-on-downsampled-charts]]
 === Violations sur les graphiques sous-échantillonnés
 
 Lorsque vous consultez des graphiques sous-échantillonnés, sachez que les violations ne sont pas affichées.  Pour voir les violations, vous pouvez faire l’une des deux choses suivantes :

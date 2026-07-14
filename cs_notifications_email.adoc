@@ -18,6 +18,7 @@ Les notifications par e-mail vous permettent de rester informé des attaques pot
 
 
 
+[[potential-attack-alerts-and-warnings]]
 == Alertes et avertissements d'attaque potentielle
 
 Pour envoyer des notifications d'alerte d'attaque potentielle, saisissez les adresses e-mail des destinataires dans la section _Envoyer des alertes d'attaque potentielle_.  Des notifications par courrier électronique sont envoyées à la liste des destinataires de l'alerte pour chaque action sur l'alerte.
@@ -26,6 +27,7 @@ Pour envoyer des notifications d'avertissement, saisissez les adresses e-mail de
 
 
 
+[[agent-and-data-collector-health-monitoring]]
 == Surveillance de la santé des agents et des collecteurs de données
 
 Vous pouvez surveiller la santé des agents et des sources de données via des notifications.
@@ -43,6 +45,7 @@ Gardez à l’esprit les points suivants :
 
 
 
+[[receiving-agent-and-data-collector-upgrade-notifications]]
 == Notifications de mise à niveau de l'agent récepteur et du collecteur de données
 
 * Saisissez les identifiants de messagerie dans les « Alertes de santé de collecte de données ».
@@ -52,6 +55,7 @@ Gardez à l’esprit les points suivants :
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 |===

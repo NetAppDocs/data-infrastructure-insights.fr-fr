@@ -18,11 +18,12 @@ Le collecteur de données pour VMware vSphere collecte les informations de perfo
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès du collecteur de données VMware vSphere.  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour l’actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -48,6 +49,7 @@ Il s'agit uniquement de mappages de terminologie courants et ils peuvent ne pas 
 
 
 
+[[requirements]]
 == Exigences
 
 Les informations suivantes sont requises pour configurer ce collecteur de données :
@@ -67,9 +69,10 @@ Les informations suivantes sont requises pour configurer ce collecteur de donné
 
 
 
+[[setup-and-connection]]
 == Installation et connexion
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -81,9 +84,10 @@ Les informations suivantes sont requises pour configurer ce collecteur de donné
 |===
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -98,14 +102,13 @@ Les informations suivantes sont requises pour configurer ce collecteur de donné
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
 Dans l'écran de configuration avancée, cochez la case *Performances VM* pour collecter les données de performances.  La collecte d'inventaire est activée par défaut.  Les champs suivants peuvent être configurés :
 
-[cols="2*"]
+[cols="50,50"]
 |===
-
-
 | Champ | Description 
 
 
@@ -131,6 +134,7 @@ Dans l'écran de configuration avancée, cochez la case *Performances VM* pour c
 |===
 
 
+[[mapping-vmware-tags-to-data-infrastructure-insights-annotations]]
 == Mappage des balises VMware aux annotations Data Infrastructure Insights
 
 Le collecteur de données VMware vous permet de renseigner les annotations Data Infrastructure Insights avec des balises configurées sur VMware.  Le nom de l'annotation DII doit être identique au nom de la *catégorie* VMware ; la balise est ensuite appliquée comme valeur d'annotation d'une annotation DII du même nom que la catégorie.  Data Infrastructure Insights renseignera toujours les annotations de type texte portant le même nom et fera de son mieux pour renseigner les annotations d'autres types (nombre, booléen, etc.).  Si votre annotation est d'un type différent et que le collecteur de données ne parvient pas à la renseigner, il peut être nécessaire de supprimer l'annotation et de la recréer en tant que type de texte.
@@ -146,15 +150,17 @@ Gardez à l’esprit les points suivants :
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
+[[inventory]]
 === Inventaire
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problème: | Essayez ceci: 
 

@@ -16,6 +16,7 @@ image:Device_Resolution_IP.png["Résolution du périphérique IP"]
 
 
 
+[[adding-ip-devices-manually]]
 == Ajout manuel de périphériques IP
 
 Vous pouvez ajouter manuellement un périphérique IP à Data Infrastructure Insights à l'aide de la fonction d'ajout manuel disponible dans l'écran Identification IP.
@@ -36,6 +37,7 @@ L'appareil que vous saisissez est ajouté à la liste des appareils dans l'ongle
 
 
 
+[[importing-ip-device-identification-from-a-csv-file]]
 == Importation de l'identification du périphérique IP à partir d'un fichier .CSV
 
 Vous pouvez importer manuellement les identifications de périphériques IP dans la fonction Résolution de périphérique à l'aide d'une liste d'identifications de périphériques dans un fichier .CSV.
@@ -63,6 +65,7 @@ NOTE: En tant que meilleure pratique, il est recommandé d'exporter d'abord les 
 
 
 
+[[exporting-ip-device-identification-to-a-csv-file]]
 == Exportation de l'identification du périphérique IP vers un fichier .CSV
 
 Vous pouvez exporter les identifications de périphériques IP existantes vers un fichier .CSV à partir de la fonctionnalité de résolution de périphérique de Data Infrastructure Insights .  Vous souhaiterez peut-être exporter une identification d'appareil afin de pouvoir la modifier, puis la réimporter dans Data Infrastructure Insights où elle sera ensuite utilisée pour identifier les appareils similaires à ceux correspondant à l'origine à l'identification exportée.

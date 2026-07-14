@@ -25,6 +25,7 @@ Sélectionnez votre premier collecteur de données parmi les fournisseurs et mod
 
 
 
+[[install-an-acquisition-unit]]
 == Installer une unité d'acquisition
 
 Si vous avez sélectionné un collecteur de données _Infrastructure_, une unité d'acquisition est requise pour injecter des données dans Data Infrastructure Insights.  Vous devrez télécharger et installer le logiciel de l'unité d'acquisition sur un serveur ou une machine virtuelle du centre de données à partir duquel vous effectuerez la collecte.  Une seule unité d’acquisition peut être utilisée pour plusieurs collecteurs de données.
@@ -40,6 +41,7 @@ Vous pouvez configurer des unités d'acquisition supplémentaires ultérieuremen
 
 
 
+[[configure-the-data-collector-infrastructure]]
 == Configurer le collecteur de données - Infrastructure
 
 Pour les collecteurs de données _Infrastructure_, il vous sera demandé de remplir les champs du collecteur de données présentés :
@@ -54,10 +56,12 @@ Vous pourrez configurer des collecteurs de données supplémentaires ultérieure
 
 
 
+[[configure-the-data-collector-operating-systems-and-services]]
 == Configurer le collecteur de données – Systèmes d'exploitation et services
 
 
 
+[[operating-system]]
 === Système opérateur:
 
 Pour les collecteurs de données _Système d'exploitation_, choisissez une plate-forme (Linux, Windows) pour installer un agent Data Infrastructure Insights .  Vous devez disposer d’au moins un agent pour collecter les données des Services.  L'agent collecte également des données de l'hôte lui-même, pour les utiliser dans Data Infrastructure Insights.  Ces données sont classées comme données « Nœud » dans les widgets, etc.
@@ -68,6 +72,7 @@ Pour les collecteurs de données _Système d'exploitation_, choisissez une plate
 
 
 
+[[services]]
 === Services:
 
 Pour les collecteurs de données _Service_, cliquez sur une tuile pour ouvrir la page d'instructions pour ce service.
@@ -81,6 +86,7 @@ Pour les collecteurs de données _Service_, cliquez sur une tuile pour ouvrir la
 
 
 
+[[add-dashboards]]
 == Ajouter des tableaux de bord
 
 Selon le type de collecteur de données initial que vous avez sélectionné pour configurer (stockage, commutateur, etc.), un ou plusieurs tableaux de bord pertinents seront importés.  Par exemple, si vous avez configuré un collecteur de données de stockage, un ensemble de tableaux de bord liés au stockage sera importé et l'un d'eux sera défini comme page d'accueil de Data Infrastructure Insights .  Vous pouvez modifier la page d'accueil à partir de la liste *Tableaux de bord > Afficher tous les tableaux de bord*.
@@ -89,6 +95,7 @@ Vous pouvez importer des tableaux de bord supplémentaires ultérieurement, ouli
 
 
 
+[[thats-all-there-is-to-it]]
 == C'est tout ce qu'il y a à dire.
 
 Une fois le processus de configuration initiale terminé, votre environnement commencera à collecter des données.
@@ -102,6 +109,7 @@ Si votre processus de configuration initiale est interrompu (par exemple, si vou
 
 
 
+[[useful-definitions]]
 == Définitions utiles
 
 Les définitions suivantes peuvent être utiles lorsque l'on parle des collecteurs de données ou des fonctionnalités de Data Infrastructure Insights :

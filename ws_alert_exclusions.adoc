@@ -24,6 +24,7 @@ L'exclusion des alertes est configurée par locataire et comprend les éléments
 
 
 
+[[manage-exclusions-and-auditing]]
 == Gérer les exclusions et l’audit
 
 * Les administrateurs peuvent ajouter ou supprimer des extensions de fichiers, des utilisateurs individuels ou des chemins à tout moment.
@@ -32,6 +33,7 @@ L'exclusion des alertes est configurée par locataire et comprend les éléments
 
 
 
+[[users-and-paths]]
 == Utilisateurs et chemins d'accès
 
 * Liste d'exclusion des utilisateurs : Ajoutez les utilisateurs à exclure des alertes.
@@ -46,6 +48,7 @@ Il est possible d'ajouter ou de supprimer des utilisateurs individuels et des ch
 
 
 
+[[file-types]]
 == Types de fichiers
 
 Une fois ajouté à la liste des types de fichiers, aucun avertissement de tentative de falsification de fichier ne sera généré pour ce type de fichier autorisé. Notez que la politique relative aux types de fichiers s'applique uniquement à la détection de falsification de fichiers.

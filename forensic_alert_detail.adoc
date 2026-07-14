@@ -14,6 +14,7 @@ Cliquer sur le synopsis d’une alerte ouvre la page fournissant des information
 
 
 
+[[alert-details-page-displays-user]]
 == La page Détails de l'alerte affiche l'utilisateur
 
 Les détails de l'alerte fournissent des informations sur l'alerte sélectionnée dans la page Alertes.
@@ -55,6 +56,7 @@ Les détails de l'alerte fournissent des informations sur l'alerte sélectionné
 
 
 
+[[related-user]]
 === Utilisateur associé
 
 * Nom d'utilisateur et titre
@@ -67,6 +69,7 @@ Les détails de l'alerte fournissent des informations sur l'alerte sélectionné
 
 
 
+[[activity]]
 === Activité
 
 Affiche l'activité de l'utilisateur au cours des 7 derniers jours et le dernier emplacement à partir duquel l'utilisateur a accédé.

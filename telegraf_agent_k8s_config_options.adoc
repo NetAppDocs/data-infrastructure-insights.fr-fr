@@ -18,6 +18,7 @@ Le link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator[
 
 
 
+[[sample-agentconfiguration-file]]
 == Exemple de fichier AgentConfiguration
 
 Vous trouverez ci-dessous un exemple de fichier _AgentConfiguration_, avec la description de chaque option.

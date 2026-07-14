@@ -35,6 +35,7 @@ Une liste de tous les collecteurs de données installés s'affiche.  La liste fo
 
 
 
+[[controlling-data-collector-polling]]
 == Contrôler l'interrogation du collecteur de données
 
 Après avoir apporté une modification à un collecteur de données, vous souhaiterez peut-être qu'il interroge immédiatement pour vérifier vos modifications, ou vous souhaiterez peut-être reporter la collecte de données sur un collecteur de données d'un, trois ou cinq jours pendant que vous travaillez sur un problème.
@@ -51,6 +52,7 @@ Les actions en masse peuvent être effectuées simultanément sur plusieurs coll
 
 
 
+[[editing-data-collector-information]]
 == Modification des informations du collecteur de données
 
 Vous pouvez modifier les informations de configuration du collecteur de données existant.
@@ -83,6 +85,7 @@ Lors de la modification de plusieurs collecteurs de données, le bouton *Tester 
 
 
 
+[[cloning-data-collectors]]
 == Clonage de collecteurs de données
 
 À l’aide de la fonction de clonage, vous pouvez rapidement ajouter une source de données possédant les mêmes informations d’identification et attributs qu’une autre source de données.  Le clonage vous permet de configurer facilement plusieurs instances du même type d'appareil.
@@ -104,6 +107,7 @@ L'opération de clonage copie tous les autres attributs et paramètres pour cré
 
 
 
+[[performing-bulk-actions-on-data-collectors]]
 == Exécution d'actions en masse sur les collecteurs de données
 
 Vous pouvez modifier simultanément certaines informations pour plusieurs collecteurs de données.  Cette fonctionnalité vous permet de lancer un sondage, de reporter le sondage et de reprendre le sondage sur plusieurs collecteurs de données.  De plus, vous pouvez supprimer plusieurs collecteurs de données.

@@ -14,9 +14,10 @@ Data Infrastructure Insights utilise ce collecteur de données pour découvrir l
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -31,9 +32,10 @@ Data Infrastructure Insights utilise ce collecteur de données pour découvrir l
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -48,6 +50,7 @@ Data Infrastructure Insights utilise ce collecteur de données pour découvrir l
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

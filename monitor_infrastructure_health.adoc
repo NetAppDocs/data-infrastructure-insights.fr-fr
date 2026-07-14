@@ -18,6 +18,7 @@ Data Infrastructure Insights fournit une surveillance complète de l'état de l'
 
 
 
+[[the-infrastructure-health-dashboard]]
 == Le tableau de bord de l'état de santé des infrastructures
 
 
@@ -31,6 +32,7 @@ Par défaut, les scores de santé sont regroupés par centre de données ; vous
 
 
 
+[[configure-monitors-to-use-for-infrastructure-health]]
 == Configurer les moniteurs à utiliser pour la santé de l'infrastructure
 
 Les scores de santé sont déterminés par des alertes configurées pour être incluses dans les calculs de santé du système.
@@ -47,6 +49,7 @@ image:infra_health_monitor_advanced_config.png["surveiller la configuration avan
 
 
 
+[[health-scores-explained]]
 == Les scores de santé expliqués
 
 Les scores sont présentés sur une échelle de 0 à 100, 100 correspondant à une santé complète. Les objets d'infrastructure surveillés qui rencontrent actuellement ou récemment des problèmes réduiront ce score en fonction des moyennes pondérées suivantes :

@@ -32,10 +32,12 @@ image:LogExplorer_QueryForFailed.png["Exemple de requête montrant le filtre"]
 
 
 
+[[filtering]]
 == Filtration
 
 
 
+[[include-exclude]]
 === Inclure / Exclure
 
 Lors du filtrage des journaux, vous pouvez choisir d'*inclure* (c'est-à-dire « Filtrer sur ») ou d'*exclure* les chaînes que vous saisissez.  Les chaînes exclues sont affichées dans le filtre complété comme « PAS <chaîne> ».
@@ -49,6 +51,7 @@ NOTE: À tout moment, vous pouvez cliquer sur _Créer un moniteur de journal_ po
 
 
 
+[[advanced-filtering]]
 === Filtrage avancé
 
 Lorsque vous filtrez des valeurs de texte ou de liste dans des requêtes ou des widgets de tableau de bord, lorsque vous commencez à saisir, vous avez la possibilité de créer un *filtre générique* basé sur le texte actuel.  La sélection de cette option renverra tous les résultats correspondant à l’expression générique.  Vous pouvez également créer des expressions en utilisant NOT, AND ou OR, ou vous pouvez sélectionner l'option « Aucun » pour filtrer les valeurs nulles.
@@ -112,6 +115,7 @@ Vous pouvez combiner un filtre simple avec un filtre de requête avancé ; le f
 
 
 
+[[the-chart-legend]]
 === La légende du graphique
 
 La _Légende_ sous le graphique réserve également quelques surprises.  Pour chaque résultat (basé sur le filtre actuel) affiché dans la légende, vous avez la possibilité d'afficher uniquement les résultats de cette ligne (Ajouter un filtre) ou d'afficher tous les résultats NON pour cette ligne (Ajouter un filtre d'exclusion).  Le graphique et la liste des entrées de journal sont mis à jour pour afficher les résultats en fonction de votre sélection.  Pour supprimer ce filtrage, ouvrez à nouveau la légende et sélectionnez le [X] pour effacer le filtre basé sur la légende.
@@ -120,6 +124,7 @@ image:Log_Advanced_Query_Legend.png["Requête avancée Légen affichant « Ajou
 
 
 
+[[log-details]]
 == Détails du journal
 
 Cliquer n’importe où dans une entrée de journal dans la liste ouvrira un volet de détails pour cette entrée.  Ici, vous pouvez explorer plus d'informations sur l'événement.
@@ -132,6 +137,7 @@ image:LogExplorer_DetailPane.png["Volet de détails des entrées de journal"]
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Vous trouverez ici des suggestions pour résoudre les problèmes liés aux requêtes de journal.

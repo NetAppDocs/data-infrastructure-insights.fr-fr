@@ -14,6 +14,7 @@ Si vous avez sélectionné l’approche d’expression régulière comme straté
 
 
 
+[[formatting-regular-expressions]]
 == Formatage des expressions régulières
 
 Lors de la création d'expressions régulières pour la résolution automatique de Data Infrastructure Insights , vous pouvez configurer le format de sortie en saisissant des valeurs dans un champ nommé _FORMAT_.
@@ -52,10 +53,12 @@ Les traits d’union entre les variables fournissent un exemple de texte constan
 
 
 
+[[examples]]
 == Exemples
 
 
 
+[[example-1-showing-zone-names]]
 === Exemple 1 montrant les noms de zone
 
 Dans cet exemple, vous utilisez l’expression régulière pour extraire un nom d’hôte du nom de zone.  Vous pouvez créer une expression régulière si vous avez quelque chose de similaire aux noms de zone suivants :
@@ -86,6 +89,7 @@ L'expression régulière peut être décomposée en ses composants :
 
 
 
+[[example-2]]
 === Exemple 2
 
 Dans cet exemple, passez au premier trait de soulignement « _ », puis faites correspondre E et tout ce qui suit jusqu'au deuxième « _ », puis ignorez tout ce qui suit.
@@ -98,6 +102,7 @@ Dans cet exemple, passez au premier trait de soulignement « _ », puis faites c
 
 
 
+[[example-3]]
 === Exemple 3
 
 Les parenthèses « ( ) » autour de la dernière section de l’expression régulière (ci-dessous) identifient quelle partie est le nom d’hôte.  Si vous vouliez que VSAN3 soit le nom d'hôte, ce serait : [a-zA-Z0-9]+_([a-zA-Z0-9]+).*
@@ -110,6 +115,7 @@ Les parenthèses « ( ) » autour de la dernière section de l’expression r�
 
 
 
+[[example-4-showing-a-more-complicated-naming-pattern]]
 === Exemple 4 montrant un modèle de dénomination plus complexe
 
 Vous pouvez créer une expression régulière si vous avez quelque chose de similaire aux noms de zone suivants :
@@ -139,6 +145,7 @@ En d’autres termes, la combinaison .* indique n’importe quel caractère, n�
 
 
 
+[[example-5-showing-zone-names-without-a-pattern]]
 === Exemple 5 montrant des noms de zone sans modèle
 
 Vous pouvez créer une expression régulière si vous avez quelque chose de similaire aux noms de zone suivants :
@@ -163,6 +170,7 @@ L'expression régulière peut être décomposée en ses composants :
 
 
 
+[[example-6-showing-computer-names-with-a-pattern]]
 === Exemple 6 montrant des noms d'ordinateurs avec un modèle
 
 Vous pouvez créer une expression régulière si vous avez quelque chose de similaire aux noms de zone suivants :
@@ -201,6 +209,7 @@ Le résultat de ceci amènerait donc la variable \1 à contenir n'importe quelle
 
 
 
+[[example-7]]
 === Exemple 7
 
 *Zone :* monNomOrdinateur123_HBA1_Symm1_FA1
@@ -211,6 +220,7 @@ Le résultat de ceci amènerait donc la variable \1 à contenir n'importe quelle
 
 
 
+[[example-8]]
 === Exemple 8
 
 Cet exemple trouve tout ce qui se trouve avant le premier _.
@@ -225,6 +235,7 @@ Exp régulière : (.*?)_.*
 
 
 
+[[example-9]]
 === Exemple 9
 
 Cet exemple trouve tout ce qui se trouve après le 1er _ et jusqu'au deuxième _.
@@ -237,6 +248,7 @@ Cet exemple trouve tout ce qui se trouve après le 1er _ et jusqu'au deuxième _
 
 
 
+[[example-10]]
 === Exemple 10
 
 Cet exemple extrait « MyComputerName123 » des exemples de zone.
@@ -253,6 +265,7 @@ Storage3_Switch3_MyComputerName123T_A3_FC3
 
 
 
+[[example-11]]
 === Exemple 11
 
 *Zone :* Storage1_Switch1_MyComputerName123A_A1_FC1
@@ -263,6 +276,7 @@ Storage3_Switch3_MyComputerName123T_A3_FC3
 
 
 
+[[example-12]]
 === Exemple 12
 
 Le ^ (circonflexe ou caret) *à l'intérieur des crochets* nie l'expression, par exemple, [^Ff] signifie tout sauf F majuscule ou minuscule, et [^az] signifie tout sauf les minuscules a à z, et dans le cas ci-dessus, tout sauf le _.  L'instruction de format ajoute le « - » au nom de l'hôte de sortie.
@@ -275,6 +289,7 @@ Le ^ (circonflexe ou caret) *à l'intérieur des crochets* nie l'expression, par
 
 
 
+[[example-13]]
 === Exemple 13
 
 Dans cet exemple, l'alias de stockage est délimité par « \" et l'expression doit utiliser « \\" pour définir qu'il y a réellement des « \" utilisés dans la chaîne, et qu'ils ne font pas partie de l'expression elle-même.
@@ -287,6 +302,7 @@ Dans cet exemple, l'alias de stockage est délimité par « \" et l'expression 
 
 
 
+[[example-14]]
 === Exemple 14
 
 Cet exemple extrait « PD-RV-W-AD-2 » des exemples de zone.
@@ -299,6 +315,7 @@ Cet exemple extrait « PD-RV-W-AD-2 » des exemples de zone.
 
 
 
+[[example-15]]
 === Exemple 15
 
 Le paramètre de format dans ce cas ajoute le « US-BV- » au nom d'hôte.

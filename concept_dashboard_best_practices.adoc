@@ -18,6 +18,7 @@ Conseils et astuces pour vous aider à tirer le meilleur parti des puissantes fo
 
 
 
+[[finding-the-right-metric]]
 == Trouver la bonne métrique
 
 Data Infrastructure Insights acquiert des compteurs et des mesures à l’aide de noms qui diffèrent parfois d’un collecteur de données à l’autre.
@@ -64,6 +65,7 @@ Cette liste n'est pas exhaustive.  Ce ne sont que des exemples de termes de rech
 
 
 
+[[finding-the-right-assets]]
 == Trouver les bons actifs
 
 Les ressources que vous pouvez référencer dans les filtres et les recherches de widgets varient d'un type de ressource à l'autre.
@@ -96,6 +98,7 @@ Cette liste n’est pas exhaustive.
 
 
 
+[[scatter-plot-example-knowing-your-axis]]
 == Exemple de nuage de points : connaître votre axe
 
 La modification de l'ordre des compteurs dans un widget de nuage de points modifie les axes sur lesquels les données sont affichées.

@@ -14,11 +14,12 @@ Ce collecteur de données acquiert des données d'inventaire et de performances 
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les données d'inventaire et de performances du collecteur de données ONTAP .  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour l’actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -45,12 +46,14 @@ Data Infrastructure Insights acquiert les données d'inventaire et de performanc
 |===
 
 
+[[ontap-data-management-terminology]]
 == Terminologie de la gestion des données ONTAP
 
 Les conditions suivantes s'appliquent aux objets ou références que vous pourriez trouver sur les pages de destination des ressources de stockage ONTAP Data Management.  Bon nombre de ces termes s’appliquent également à d’autres collecteurs de données.
 
 
 
+[[storage]]
 === Stockage
 
 * Modèle – Une liste délimitée par des virgules des noms de modèles de nœuds uniques et discrets au sein de ce cluster.  Si tous les nœuds des clusters sont du même type de modèle, un seul nom de modèle apparaîtra.
@@ -65,6 +68,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[storage-pool]]
 === Piscine de stockage
 
 * Stockage – sur quelle baie de stockage ce pool réside.  Obligatoire.
@@ -81,6 +85,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[storage-node]]
 === Nœud de stockage
 
 * Stockage – à quelle baie de stockage ce nœud fait partie.  Obligatoire.
@@ -99,6 +104,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[requirements]]
 == Exigences
 
 Les exigences suivantes sont requises pour configurer et utiliser ce collecteur de données :
@@ -121,15 +127,17 @@ Les exigences suivantes sont requises pour configurer et utiliser ce collecteur 
 
 
 
+[[permission-requirements-for-collecting-ontap-switch-metrics]]
 === Exigences d'autorisation pour la collecte des métriques de commutation ONTAP
 
 Data Infrastructure Insights a la capacité de collecter des données de commutation de cluster ONTAP en tant qu'option dans le collecteur<<advanced-configuration,Configuration avancée>> paramètres.  En plus d'activer cette fonctionnalité sur le collecteur Data Infrastructure Insights , vous devez également *configurer le système ONTAP * lui-même pour fournirlink:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informations sur le commutateur"] , et assurer le bon<<a-note-about-permissions,autorisations>> sont définis afin de permettre l'envoi des données du commutateur à Data Infrastructure Insights.
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -144,9 +152,10 @@ Data Infrastructure Insights a la capacité de collecter des données de commuta
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -185,6 +194,7 @@ Data Infrastructure Insights a la capacité de collecter des données de commuta
 |===
 
 
+[[ontap-power-metrics]]
 == Mesures de puissance ONTAP
 
 Plusieurs modèles ONTAP fournissent des mesures de puissance pour Data Infrastructure Insights qui peuvent être utilisées pour la surveillance ou l'alerte.
@@ -202,6 +212,7 @@ FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/ AFF 8020 FAS/ AFF 8040 FAS/ AFF 806
 
 
 
+[[a-note-about-permissions]]
 == Remarque sur les autorisations
 
 Étant donné qu'un certain nombre de tableaux de bord ONTAP de Data Infrastructure Insights s'appuient sur des compteurs ONTAP avancés, vous devez activer la *Collecte de données de compteur avancée* dans la section Configuration avancée du collecteur de données.
@@ -254,15 +265,17 @@ NOTE: Si le contrôle d'accès ONTAP n'est pas correctement défini, les appels 
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
+[[inventory]]
 === Inventaire
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problème: | Essayez ceci: 
 
@@ -292,9 +305,10 @@ Quelques éléments à essayer si vous rencontrez des problèmes avec ce collect
 |===
 
 
+[[performance]]
 === Performances
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problème: | Essayez ceci: 
 

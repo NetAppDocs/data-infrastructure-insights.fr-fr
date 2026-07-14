@@ -47,6 +47,7 @@ Remarque : l'agent Workload Security peut être installé sur la même machine 
 |===
 
 
+[[additional-recommendations]]
 == Recommandations supplémentaires
 
 * Il est fortement recommandé de synchroniser l'heure sur le système ONTAP et sur la machine Agent à l'aide du *Network Time Protocol (NTP)* ou du *Simple Network Time Protocol (SNTP)*.
@@ -54,6 +55,7 @@ Remarque : l'agent Workload Security peut être installé sur la même machine 
 
 
 
+[[cloud-network-access-rules]]
 == Règles d'accès au réseau cloud
 
 Pour les environnements de sécurité des charges de travail *basés aux États-Unis* :
@@ -94,6 +96,7 @@ Pour les environnements de sécurité des charges de travail *basés sur la rég
 |===
 
 
+[[in-network-rules]]
 == Règles du réseau
 
 [cols="5*"]
@@ -117,6 +120,7 @@ Pour les environnements de sécurité des charges de travail *basés sur la rég
 |===
 
 
+[[system-sizing]]
 == Dimensionnement du système
 
 Voir lelink:concept_cs_event_rate_checker.html["Vérificateur de taux d'événements"] documentation pour obtenir des informations sur le dimensionnement.

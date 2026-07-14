@@ -27,11 +27,12 @@ Pour les clients utilisant le modèle de licence hérité (MU), StorageGRID est 
 ====
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès du collecteur NetApp StorageGRID .  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -49,6 +50,7 @@ Data Infrastructure Insights acquiert les informations d’inventaire suivantes 
 |===
 
 
+[[requirements]]
 == Exigences
 
 Voici les exigences pour la configuration de cette source de données :
@@ -60,9 +62,10 @@ Voici les exigences pour la configuration de cette source de données :
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -77,9 +80,10 @@ Voici les exigences pour la configuration de cette source de données :
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -91,6 +95,7 @@ Voici les exigences pour la configuration de cette source de données :
 |===
 
 
+[[single-sign-on-sso]]
 == Authentification unique (SSO)
 
 Lelink:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"] les versions du micrologiciel ont des versions d'API correspondantes ; l'API 3.0 et les versions plus récentes prennent en charge la connexion par authentification unique (SSO).
@@ -111,6 +116,7 @@ Lelink:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"] les versions du
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

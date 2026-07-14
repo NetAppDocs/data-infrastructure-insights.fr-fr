@@ -14,6 +14,7 @@ Data Infrastructure Insights utilise le collecteur de données Brocade Sphereon/
 
 
 
+[[requirements]]
 == Exigences
 
 Les exigences suivantes doivent être respectées pour configurer ce collecteur de données :
@@ -26,9 +27,10 @@ Les exigences suivantes doivent être respectées pour configurer ce collecteur 
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -49,9 +51,10 @@ Les exigences suivantes doivent être respectées pour configurer ce collecteur 
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -81,6 +84,7 @@ Les exigences suivantes doivent être respectées pour configurer ce collecteur 
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

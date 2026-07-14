@@ -15,10 +15,12 @@ Data Infrastructure Insights comprend un certain nombre de moniteurs définis pa
 
 NOTE: De nombreux moniteurs système sont dans l'état _Paused_ par défaut.  Vous pouvez activer un moniteur système en sélectionnant l’option _Reprendre_ pour le moniteur.  Assurez-vous que _Collecte de données de compteur avancée_ et _Activer la collecte de journaux ONTAP EMS_ sont activés dans le collecteur de données.  Ces options se trouvent dans le collecteur de données ONTAP sous _Configuration avancée_ :image:Enable_Log_Monitor_Collection.png["Activation du compteur avancé et de la collecte des journaux EMS pour ONTAP"]
 
+[[top]]
 toc:[]
 
 
 
+[[monitor-descriptions]]
 == Descriptions des moniteurs
 
 Les moniteurs définis par le système sont composés de mesures et de conditions prédéfinies, ainsi que de descriptions par défaut et d'actions correctives, qui ne peuvent pas être modifiées.  Vous _pouvez_ modifier la liste des destinataires des notifications pour les moniteurs définis par le système.  Pour afficher les métriques, les conditions, la description et les actions correctives, ou pour modifier la liste des destinataires, ouvrez un groupe de moniteurs défini par le système et cliquez sur le nom du moniteur dans la liste.
@@ -36,6 +38,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[metric-monitors]]
 === Moniteurs métriques
 
 |===
@@ -122,6 +125,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[log-monitors]]
 === Moniteurs de journaux
 
 |===
@@ -292,6 +296,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[anti-ransomware-log-monitors]]
 === Moniteurs de journaux anti-ransomware
 
 |===
@@ -330,6 +335,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[fsx-for-netapp-ontap-monitors]]
 === Moniteurs FSx pour NetApp ONTAP
 
 |===
@@ -359,6 +365,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[k8s-monitors]]
 === Moniteurs K8s
 
 |===
@@ -484,6 +491,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[change-log-monitors]]
 === Moniteurs de journaux de modifications
 
 |===
@@ -516,6 +524,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[data-collection-monitors]]
 === Moniteurs de collecte de données
 
 |===
@@ -536,6 +545,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[security-monitors]]
 === Moniteurs de sécurité
 
 |===
@@ -592,6 +602,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[data-protection-monitors]]
 === Contrôleurs de la protection des données
 
 |===
@@ -609,6 +620,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[cloud-volume-cvo-monitors]]
 === Moniteurs de volume de nuages (CVO)
 
 |===
@@ -689,6 +701,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[snapmirror-for-business-continuity-smbc-mediator-log-monitors]]
 === Moniteurs de journaux médiateurs SnapMirror for Business Continuity (SMBC)
 
 |===
@@ -733,6 +746,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[additional-power-heartbeat-and-miscellaneous-system-monitors]]
 === Moniteurs d'alimentation, de pulsation et de système divers supplémentaires
 
 |===
@@ -808,6 +822,7 @@ Vous trouverez ci-dessous les moniteurs système actuellement inclus avec Data I
 
 
 
+[[more-information]]
 == Plus d'informations
 
 * link:task_view_and_manage_alerts.html["Affichage et suppression des alertes"]

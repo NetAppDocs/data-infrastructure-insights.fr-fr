@@ -18,6 +18,7 @@ Vous créez des annotations et les attribuez aux ressources que vous surveillez.
 
 
 
+[[defining-annotations]]
 == Définition des annotations
 
 À l’aide d’annotations, vous pouvez ajouter des données personnalisées spécifiques à votre entreprise qui correspondent aux besoins de votre entreprise aux actifs.  Bien que Data Infrastructure Insights fournisse un ensemble d'annotations par défaut, telles que le cycle de vie de l'actif (anniversaire ou fin de vie), l'emplacement du bâtiment ou du centre de données et le niveau, vous souhaiterez peut-être afficher les données d'autres manières.
@@ -50,6 +51,7 @@ Par exemple, saisissez ce qui suit pour créer une annotation de texte qui défi
 
 
 
+[[manually-assigning-annotations-to-assets]]
 == Attribution manuelle d'annotations aux ressources
 
 L'attribution d'annotations aux ressources vous aide à trier, regrouper et générer des rapports sur les ressources de manière pertinente pour votre entreprise.  Bien que vous puissiez attribuer automatiquement des annotations à des ressources d'un type particulier à l'aide de règles d'annotation, vous pouvez attribuer des annotations à une ressource individuelle à l'aide de sa page de ressource.
@@ -81,12 +83,14 @@ Si vous souhaitez modifier la valeur de l'annotation après l'avoir attribuée, 
 
 
 
+[[assigning-annotations-using-annotation-rules]]
 == Attribution d'annotations à l'aide de règles d'annotation
 
 Pour attribuer automatiquement des annotations aux ressources en fonction de critères que vous définissez, vous configurez des règles d'annotation.  Data Infrastructure Insights attribue les annotations aux ressources en fonction de ces règles.  Data Infrastructure Insights fournit également deux règles d'annotation par défaut, que vous pouvez modifier selon vos besoins ou supprimer si vous ne souhaitez pas les utiliser.
 
 
 
+[[creating-annotation-rules]]
 === Création de règles d'annotation
 
 Au lieu d'appliquer manuellement des annotations à des ressources individuelles, vous pouvez appliquer automatiquement des annotations à plusieurs ressources à l'aide de règles d'annotation.  Les annotations définies manuellement sur les pages d'actifs individuelles ont priorité sur les annotations basées sur des règles lorsque Insight évalue les règles d'annotation.

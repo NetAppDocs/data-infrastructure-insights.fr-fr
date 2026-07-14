@@ -44,6 +44,7 @@ La fonctionnalité de résolution de l'appareil (Gérer > Résolution de l'appar
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 Vous devez savoir comment votre environnement est configuré avant de définir les règles d’identification des périphériques.  Plus vous en savez sur votre environnement, plus il sera facile d’identifier les appareils.
@@ -66,6 +67,7 @@ Dans cet exemple, le plus grand nombre de périphériques est représenté de ma
 
 
 
+[[steps-to-identifying-devices]]
 == Étapes pour identifier les appareils
 
 En règle générale, vous utiliseriez un flux de travail similaire à celui suivant pour identifier les appareils sur votre locataire.  L’identification est un processus itératif et peut nécessiter plusieurs étapes de planification et d’affinement des règles.

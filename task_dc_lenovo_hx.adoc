@@ -14,6 +14,7 @@ Le collecteur de données Lenovo HX acquiert des informations d'inventaire et de
 
 
 
+[[requirements]]
 == Exigences
 
 Les informations suivantes sont requises pour configurer ce collecteur de données :
@@ -25,11 +26,12 @@ Les informations suivantes sont requises pour configurer ce collecteur de donné
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les informations d’inventaire et de performances suivantes auprès du collecteur de données Lenovo HX.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -53,9 +55,10 @@ Data Infrastructure Insights acquiert les informations d’inventaire et de perf
 |===
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -70,9 +73,10 @@ Data Infrastructure Insights acquiert les informations d’inventaire et de perf
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 

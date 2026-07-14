@@ -18,11 +18,12 @@ Le collecteur de données DII pour Red Hat Virtualization prend également en ch
 
 
 
+[[terminology]]
 == Terminologie
 
 Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour l’actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -45,6 +46,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[requirements]]
 == Exigences
 
 * Adresse IP/nom d'hôte du serveur RHV/oVirt/OLVM sur le port 443 via l'API REST
@@ -54,9 +56,10 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -71,9 +74,10 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -91,6 +95,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

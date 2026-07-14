@@ -27,6 +27,7 @@ Le lien _Couverture totale_ affiche une liste du nombre d'appareils identifiés/
 
 
 
+[[adding-a-fibre-channel-device-manually]]
 == Ajout manuel d'un périphérique Fibre Channel
 
 Vous pouvez ajouter manuellement un périphérique Fibre Channel à Data Infrastructure Insights à l'aide de la fonctionnalité _Ajout manuel_ disponible dans l'onglet Identification Fibre Channel de résolution de périphérique.  Ce processus peut être utilisé pour la pré-identification d’un dispositif qui devrait être découvert dans le futur.
@@ -53,6 +54,7 @@ Le périphérique que vous saisissez est ajouté à la liste des périphériques
 
 
 
+[[importing-fibre-channel-device-identification-from-a-csv-file]]
 == Importation de l'identification du périphérique Fibre Channel à partir d'un fichier .CSV
 
 Vous pouvez importer manuellement l'identification du périphérique Fibre Channel dans la résolution de périphérique Data Infrastructure Insights à l'aide d'une liste de périphériques dans un fichier .CSV.
@@ -92,6 +94,7 @@ Les périphériques que vous saisissez sont ajoutés à la liste des périphéri
 
 
 
+[[exporting-fibre-channel-device-identifications-to-a-csv-file]]
 == Exportation des identifications de périphériques Fibre Channel vers un fichier .CSV
 
 Vous pouvez exporter les identifications de périphériques Fibre Channel existantes vers un fichier .CSV à partir de la fonctionnalité de résolution de périphériques Data Infrastructure Insights .  Vous souhaiterez peut-être exporter une identification d'appareil afin de pouvoir la modifier, puis la réimporter dans Data Infrastructure Insights où elle sera ensuite utilisée pour identifier les appareils similaires à ceux correspondant à l'origine à l'identification exportée.

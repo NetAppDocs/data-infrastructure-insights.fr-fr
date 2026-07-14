@@ -37,11 +37,12 @@ Cette commande renverra le nom d'hôte ou l'adresse IP pour la gestion. Chaque c
 
 
 
+[[terminology]]
 == Terminologie
 
 Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour l’actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -64,18 +65,20 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[requirements]]
 == Exigences
 
-* Adresse IP du serveur Red Hat OpenShift Virtualization sur le port 443 via l'API REST
+* Adresse IP du serveur Red Hat OpenShift Virtualization sur le port 6443 via l'API REST
 * Nom d'utilisateur et mot de passe en lecture seule
 * RHEV Version 3.0+
 
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -90,20 +93,22 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
 
-| Port de communication HTTPS | Port utilisé pour la communication HTTPS avec RHOV 
+| Port de communication HTTPS | Port utilisé pour la communication HTTPS avec RHOV. La valeur par défaut est 6443. 
 
 
 | Intervalle d'interrogation de l'inventaire (min) | La valeur par défaut est de 20 minutes. 
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

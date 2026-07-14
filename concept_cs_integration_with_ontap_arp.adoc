@@ -30,6 +30,7 @@ Workload Security reçoit les événements ARP d' ONTAP et entreprend les action
 
 
 
+[[prerequisites]]
 == Prérequis
 
 . Version minimale ONTAP : 9.11.1
@@ -40,6 +41,7 @@ Workload Security reçoit les événements ARP d' ONTAP et entreprend les action
 
 
 
+[[user-permissions-required]]
 == Autorisations utilisateur requises
 
 Si vous utilisez les informations d’identification d’administration de cluster, aucune nouvelle autorisation n’est nécessaire.
@@ -56,6 +58,7 @@ En savoir plus sur la configuration d'autreslink:task_add_collector_svm.html["Au
 
 
 
+[[sample-alert]]
 == Exemple d'alerte
 
 Un exemple d’alerte générée en raison d’un événement ARP est présenté ci-dessous :
@@ -66,12 +69,14 @@ Un bandeau de confiance élevée indique que l'attaque a démontré un comportem
 
 
 
+[[limitations]]
 == Limites
 
 Dans le cas où un SVM n'est pas surveillé par Workload Security, mais qu'il existe des événements ARP générés par ONTAP, les événements seront toujours reçus et affichés par Workload Security.  Cependant, les informations médico-légales liées à l'alerte, ainsi que la cartographie des utilisateurs, ne seront pas capturées ou affichées.
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Les problèmes connus et leurs résolutions sont décrits dans le tableau suivant.

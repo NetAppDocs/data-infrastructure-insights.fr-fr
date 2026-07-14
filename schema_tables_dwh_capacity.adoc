@@ -18,10 +18,12 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 
 
 
+[[tables-and-views]]
 == Tables et vues
 
 
 
+[[applicationdimension]]
 === application_dimension
 
 [cols="1,1,2"]
@@ -63,6 +65,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[applicationgroupbridge]]
 === pont de groupe d'applications
 
 [cols="1,1,2"]
@@ -81,6 +84,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[applicationgroupdimension]]
 === dimension_groupe_application
 
 [cols="1,1,2"]
@@ -113,6 +117,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[businessentitydimension]]
 === business_entity_dimension
 
 [cols="1,1,2"]
@@ -157,6 +162,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[capacitytype]]
 === capacity_type
 
 *Clé primaire :* type
@@ -188,6 +194,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[cardinals]]
 === cardinaux
 
 [cols="1,1,2"]
@@ -200,6 +207,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[chargebackfact]]
 === chargeback_fact
 
 *Clé primaire :* tk, dateTk
@@ -303,6 +311,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[datastoredimension]]
 === datastore_dimension
 
 [cols="1,1,2"]
@@ -344,6 +353,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[datedimension]]
 === dimension de date
 
 [cols="1,1,2"]
@@ -428,6 +438,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[diskgroupcapacityfact]]
 === capacité du groupe de disques
 
 *Clé primaire :* tk, dateTk
@@ -471,6 +482,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[diskgroupcapacityfuturefact]]
 === capacité_future_du_groupe_de_disques_fait
 
 *Clé primaire :* tk, dateTk
@@ -511,6 +523,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[diskgroupdimension]]
 === dimension_groupe_de_disques
 
 [cols="1,1,2"]
@@ -562,6 +575,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[hostdimension]]
 === dimension de l'hôte
 
 [cols="1,1,2"]
@@ -626,6 +640,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[hostgroupbridge]]
 === bridge de groupe d’hôtes
 
 [cols="1,1,2"]
@@ -644,6 +659,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[hostgroupdimension]]
 === dimension du groupe d'hôtes
 
 [cols="1,1,2"]
@@ -675,6 +691,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[internalvolumecapacityfact]]
 === internal_volume_capacity_fact
 
 *Clé primaire :* tk, dateTk
@@ -800,6 +817,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[internalvolumedimension]]
 === dimension_volume_interne
 
 [cols="1,1,2"]
@@ -869,6 +887,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[k8sclusterdimension]]
 === k8s_cluster_dimension
 
 [cols="1,1,2"]
@@ -901,6 +920,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[k8snamespacedimension]]
 === k8s_namespace_dimension
 
 [cols="1,1,2"]
@@ -939,6 +959,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[k8snamespacegroupbridge]]
 === k8s_namespace_group_bridge
 
 [cols="1,1,2"]
@@ -957,6 +978,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[k8snamespacegroupdimension]]
 === k8s_namespace_group_dimension
 
 [cols="1,1,2"]
@@ -989,6 +1011,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[k8snodedimension]]
 === k8s_node_dimension
 
 [cols="1,1,2"]
@@ -1030,6 +1053,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[k8spvdimension]]
 === k8s_pv_dimension
 
 [cols="1,1,2"]
@@ -1074,6 +1098,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[k8spvccapacityfact]]
 === k8s_pvc_capacity_fact
 
 *Clé primaire :* tk, dateTk
@@ -1118,6 +1143,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[k8spvcdimension]]
 === k8s_pvc_dimension
 
 [cols="1,1,2"]
@@ -1162,6 +1188,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[k8sworkloaddimension]]
 === k8s_workload_dimension
 
 [cols="1,1,2"]
@@ -1198,6 +1225,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[qtreecapacityfact]]
 === qtree_capacity_fact
 
 *Clé primaire :* tk, dateTk
@@ -1291,6 +1319,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[qtreedimension]]
 === qtree_dimension
 
 [cols="1,1,2"]
@@ -1338,6 +1367,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[serviceleveldimension]]
 === service_level_dimension
 
 [cols="1,1,2"]
@@ -1377,6 +1407,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[sptimetofill]]
 === sp_time_to_fill
 
 *Clé primaire :* saspFactTk
@@ -1402,6 +1433,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[storageandstoragepoolcapacityfact]]
 === storage_and_storage_pool_capacity_fact
 
 *Clé primaire :* tk, dateTk
@@ -1522,6 +1554,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[storageandstoragepoolcapacityfuturefact]]
 === storage_and_storage_pool_capacity_future_fact
 
 *Clé primaire :* tk, dateTk
@@ -1574,6 +1607,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[storagedimension]]
 === dimension_de_stockage
 
 [cols="1,1,2"]
@@ -1636,6 +1670,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[storagenodecapacityfact]]
 === fait de capacité de nœud de stockage
 
 *Clé primaire :* tk, dateTk
@@ -1685,6 +1720,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[storagenodedimension]]
 === dimension_nœud_de_stockage
 
 [cols="1,1,2"]
@@ -1735,6 +1771,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[storagepooldimension]]
 === dimension_storage_pool
 
 [cols="1,1,2"]
@@ -1804,6 +1841,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[tierdimension]]
 === tier_dimension
 
 [cols="1,1,2"]
@@ -1846,6 +1884,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[vmcapacityfact]]
 === vm_capacity_fact
 
 *Clé primaire :* tk, dateTk
@@ -1948,6 +1987,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[vmdimension]]
 === vm_dimension
 
 [cols="1,1,2"]
@@ -1992,6 +2032,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[volumecapacityfact]]
 === volume_capacity_fact
 
 [cols="1,1,2"]
@@ -2079,6 +2120,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[volumedimension]]
 === volume_dimension
 
 [cols="1,1,2"]
@@ -2147,6 +2189,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[volumefactcurrent]]
 === volume_fact_actuel
 
 *Clé primaire :* volumeId
@@ -2202,6 +2245,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[volumehistorycapacityfact]]
 === volume_history_capacity_fact
 
 *Clé primaire :* tk, dateTk
@@ -2323,6 +2367,7 @@ Cette référence fournit des informations détaillées sur le schéma de la bas
 '''
 
 
+[[volumelastaccessedtime]]
 === volume_last_accessed_time
 
 *Clé primaire :* volumeName, storageIdentifier

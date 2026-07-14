@@ -37,16 +37,19 @@ image:QuerySelectColumns.png["Sélectionner les colonnes"]
 
 
 
+[[see-it-in-action]]
 == Voyez-le en action
 
 link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Explorer et analyser avec des requêtes dans Data Infrastructure Insights (Vidéo)"]
 
 
 
+[[choosing-aggregation-units-conditional-formatting]]
 == Choix de l'agrégation, des unités et de la mise en forme conditionnelle
 
 
 
+[[aggregation-and-units]]
 === Agrégation et unités
 
 Pour les colonnes « valeur », vous pouvez affiner davantage les résultats de votre requête en choisissant la manière dont les valeurs affichées sont agrégées ainsi qu'en sélectionnant les unités dans lesquelles ces valeurs sont affichées.  Ces options se trouvent en sélectionnant le menu « trois points » dans le coin supérieur d'une colonne.
@@ -87,16 +90,19 @@ Renommer une colonne modifie le nom affiché dans la liste des résultats de la 
 
 
 
+[[save]]
 === Enregistrer
 
 Après avoir configuré votre requête pour afficher les résultats souhaités, vous pouvez cliquer sur le bouton *Enregistrer* pour enregistrer la requête pour une utilisation ultérieure.  Donnez-lui un nom significatif et unique.
 
 
 
+[[more-on-filtering]]
 == En savoir plus sur le filtrage
 
 
 
+[[wildcards-and-expressions]]
 === Caractères génériques et expressions
 
 Lorsque vous filtrez des valeurs de texte ou de liste dans des requêtes ou des widgets de tableau de bord, lorsque vous commencez à saisir, vous avez la possibilité de créer un *filtre générique* basé sur le texte actuel.  La sélection de cette option renverra tous les résultats correspondant à l’expression générique.  Vous pouvez également créer des *expressions* en utilisant NOT ou OR, ou vous pouvez sélectionner l'option « Aucun » pour filtrer les valeurs nulles dans le champ.
@@ -111,6 +117,7 @@ Notez que le filtrage par caractères génériques et par expressions fonctionne
 
 
 
+[[refining-filters]]
 === Filtres de raffinage
 
 Vous pouvez utiliser les éléments suivants pour affiner votre filtre :
@@ -142,6 +149,7 @@ Si vous placez une chaîne de filtre entre guillemets doubles, Insight traite to
 
 
 
+[[filtering-for-boolean-values]]
 === Filtrage des valeurs booléennes
 
 Lorsque vous filtrez une valeur booléenne, les choix suivants peuvent vous être proposés pour filtrer :
@@ -154,6 +162,7 @@ Lorsque vous filtrez une valeur booléenne, les choix suivants peuvent vous êtr
 
 
 
+[[what-do-i-do-now-that-i-have-query-results]]
 == Que dois-je faire maintenant que j’ai les résultats de la requête ?
 
 L'interrogation fournit un endroit simple pour ajouter des annotations ou attribuer des applications à des actifs.  Notez que vous ne pouvez attribuer des applications ou des annotations qu'à vos ressources d'inventaire (disque, stockage, etc.).  Les mesures d’intégration ne peuvent pas prendre en charge les annotations ou les affectations d’application.
@@ -164,6 +173,7 @@ image:QueryVolumeBulkActions.png["Exemple d'actions de requête en masse"]
 
 
 
+[[annotation-rules-require-query]]
 == Les règles d'annotation nécessitent une requête
 
 Si vous configurezlink:task_create_annotation_rules.html["Règles d'annotation"] , chaque règle doit avoir une requête sous-jacente avec laquelle travailler.  Mais comme vous l'avez vu ci-dessus, les requêtes peuvent être aussi larges ou aussi étroites que vous le souhaitez.

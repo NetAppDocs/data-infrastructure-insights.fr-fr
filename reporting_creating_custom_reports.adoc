@@ -34,6 +34,7 @@ Avant de concevoir vos rapports, effectuez les tâches suivantes :
 
 
 
+[[report-creation-process]]
 == Processus de création de rapport
 
 Le processus de création de rapports personnalisés (également appelés « ad hoc ») implique plusieurs tâches :
@@ -47,6 +48,7 @@ Le processus de création de rapports personnalisés (également appelés « ad 
 
 
 
+[[planning-the-results-of-your-custom-report]]
 === Planification des résultats de votre rapport personnalisé
 
 Avant d’ouvrir les outils de création de rapport, vous souhaiterez peut-être planifier les résultats que vous souhaitez obtenir du rapport.  Grâce aux outils de création de rapports, vous pouvez créer des rapports facilement et ne pas avoir besoin de beaucoup de planification. Cependant, il est judicieux d'obtenir une idée des exigences du demandeur du rapport.
@@ -72,6 +74,7 @@ Avant d’ouvrir les outils de création de rapport, vous souhaiterez peut-être
 
 
 
+[[tips-for-designing-reports]]
 === Conseils pour la conception de rapports
 
 Plusieurs conseils peuvent être utiles lorsque vous concevez des rapports.
@@ -89,6 +92,7 @@ Pour segmenter les informations pour différents utilisateurs, vous pouvez crée
 
 
 
+[[reporting-data-models]]
 == Modèles de données de reporting
 
 Data Infrastructure Insights comprend plusieurs modèles de données à partir desquels vous pouvez sélectionner des rapports prédéfinis ou créer votre propre rapport personnalisé.
@@ -101,6 +105,7 @@ Chaque modèle de données contient un datamart simple et un datamart avancé :
 
 
 
+[[capacity-data-models]]
 === Modèles de données de capacité
 
 Vous permet de répondre à des questions sur la capacité de stockage, l'utilisation du système de fichiers, la capacité du volume interne, la capacité du port, la capacité du qtree et la capacité de la machine virtuelle (VM).  Le modèle de données de capacité est un conteneur pour plusieurs modèles de données de capacité.  Vous pouvez créer des rapports répondant à différents types de questions à l’aide de ce modèle de données :
@@ -199,6 +204,7 @@ Vous pouvez répondre à des questions similaires aux suivantes avec ce modèle 
 
 
 
+[[chargeback-data-model]]
 === Modèle de données de rétrofacturation
 
 Vous permet de répondre à des questions sur la capacité utilisée et la capacité allouée sur les ressources de stockage (volumes, volumes internes et qtrees).  Ce modèle de données fournit des informations sur la rétrofacturation et la responsabilité de la capacité de stockage par hôtes, applications et entités commerciales, et inclut des données actuelles et historiques.  Les données du rapport peuvent être classées par niveau de service et par niveau de stockage.
@@ -226,6 +232,7 @@ Les rapports utilisant le modèle de données de rétrofacturation peuvent affic
 
 
 
+[[inventory-data-model]]
 === Modèle de données d'inventaire
 
 Vous permet de répondre à des questions sur les ressources d'inventaire, notamment les hôtes, les systèmes de stockage, les commutateurs, les disques, les bandes, les qtrees, les quotas, les machines virtuelles et les serveurs, ainsi que les périphériques génériques.  Le modèle de données d'inventaire comprend plusieurs sous-marchés qui vous permettent d'afficher des informations sur les réplications, les chemins FC, les chemins iSCSI, les chemins NFS et les violations.  Le modèle de données d’inventaire n’inclut pas de données historiques.  Questions auxquelles vous pouvez répondre avec ces données
@@ -247,6 +254,7 @@ Vous permet de répondre à des questions sur les ressources d'inventaire, notam
 
 
 
+[[performance-data-model]]
 === Modèle de données de performance
 
 Vous permet de répondre à des questions sur les performances des volumes, des volumes d'application, des volumes internes, des commutateurs, des applications, des machines virtuelles, des VMDK, des ESX par rapport aux machines virtuelles, des hôtes et des nœuds d'application.  La plupart d'entre eux rapportent des données horaires, quotidiennes ou les deux.  À l’aide de ce modèle de données, vous pouvez créer des rapports qui répondent à plusieurs types de questions de gestion des performances :
@@ -291,6 +299,7 @@ Le modèle de données de performances inclut des informations qui vous aident �
 
 
 
+[[storage-efficiency-data-model]]
 === Modèle de données d'efficacité de stockage
 
 Vous permet de suivre le score d'efficacité du stockage et le potentiel au fil du temps.  Ce modèle de données stocke les mesures non seulement de la capacité provisionnée, mais également de la quantité utilisée ou consommée (la mesure physique).  Par exemple, lorsque le provisionnement léger est activé, Data Infrastructure Insights indique la quantité de capacité extraite du périphérique.  Vous pouvez également utiliser ce modèle pour déterminer l’efficacité lorsque la déduplication est activée.  Vous pouvez répondre à diverses questions en utilisant le datamart Storage Efficiency :
@@ -304,6 +313,7 @@ Vous permet de suivre le score d'efficacité du stockage et le potentiel au fil 
 
 
 
+[[data-model-fact-and-dimension-tables]]
 === Tables de faits et de dimensions du modèle de données
 
 Chaque modèle de données comprend à la fois des tables de faits et de dimensions.
@@ -316,6 +326,7 @@ Chaque modèle de données comprend à la fois des tables de faits et de dimensi
 
 
 
+[[colors-used-in-data-model-elements]]
 === Couleurs utilisées dans les éléments du modèle de données
 
 Les couleurs sur les éléments du modèle de données ont des indications différentes.
@@ -326,6 +337,7 @@ Les couleurs sur les éléments du modèle de données ont des indications diff�
 
 
 
+[[using-multiple-data-models-in-one-report]]
 === Utilisation de plusieurs modèles de données dans un seul rapport
 
 En règle générale, vous utilisez un modèle de données par rapport.  Cependant, vous pouvez rédiger un rapport qui combine des données provenant de plusieurs modèles de données.

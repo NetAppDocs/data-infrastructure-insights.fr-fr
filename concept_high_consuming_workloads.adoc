@@ -14,6 +14,7 @@ Les charges de travail à fort impact peuvent réduire les performances d’autr
 
 
 
+[[terminology]]
 === Terminologie
 
 Lorsqu’on parle de charge de travail ou d’impact sur les ressources, les définitions suivantes sont utiles.
@@ -32,6 +33,7 @@ Une *Contention* se produit lorsque des IOPS sont considérées comme affectant 
 
 
 
+[[high-consuming-workloads]]
 === Charges de travail à forte consommation
 
 Toutes les charges de travail à forte consommation détectées par Data Infrastructure Insights sont affichées dans l'aperçu _Ressources partagées sous stress_.  Accédez à *Observabilité > Informations sur l’infrastructure* pour afficher ces informations.
@@ -48,6 +50,7 @@ image:Insights_Demanding_Workload_Chart.png["Tableau de charge de travail exigea
 
 
 
+[[what-do-i-do-to-resolve-saturation]]
 === Que dois-je faire pour résoudre la saturation ?
 
 Il existe un certain nombre de mesures que vous pouvez prendre pour réduire ou éliminer le risque de saturation de votre locataire.  Voici quelques choses que vous pouvez essayer.

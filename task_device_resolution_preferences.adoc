@@ -14,6 +14,7 @@ L'onglet des préférences de résolution de périphérique vous permet de crée
 
 
 
+[[auto-resolution-schedule]]
 == Planification de résolution automatique
 
 Un programme de résolution automatique peut spécifier quand la résolution automatique du périphérique est exécutée :
@@ -39,6 +40,7 @@ Si vous spécifiez _Manuellement_, la résolution automatique nocturne du périp
 
 
 
+[[dns-processing-options]]
 == Options de traitement DNS
 
 Les options de traitement DNS vous permettent de sélectionner les fonctionnalités suivantes :
@@ -50,6 +52,7 @@ Les options de traitement DNS vous permettent de sélectionner les fonctionnalit
 
 
 
+[[including-or-excluding-specific-storage-and-tape-vendors]]
 === Inclure ou exclure des fournisseurs spécifiques de stockage et de bandes
 
 Vous pouvez inclure ou exclure des fournisseurs de stockage et de bande spécifiques pour une résolution automatique.  Vous souhaiterez peut-être exclure des fournisseurs spécifiques si vous savez, par exemple, qu'un hôte spécifique deviendra un hôte hérité et devra être exclu de votre nouvel environnement.  Vous pouvez également rajouter des fournisseurs que vous avez précédemment exclus mais que vous ne souhaitez plus exclure.

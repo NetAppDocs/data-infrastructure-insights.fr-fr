@@ -18,6 +18,7 @@ Data Infrastructure Insights utilise le collecteur de données Pure Storage Flas
 
 
 
+[[terminology]]
 == Terminologie
 
 Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour l’actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
@@ -48,6 +49,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[requirements]]
 == Exigences
 
 * Adresse IP du système de stockage ou nom de domaine complet
@@ -57,6 +59,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[configuration]]
 == Configuration
 
 [cols="50,50"]
@@ -74,6 +77,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
 [cols="50,50"]
@@ -94,12 +98,14 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
+[[inventory]]
 === Inventaire
 
 [cols="50,50"]

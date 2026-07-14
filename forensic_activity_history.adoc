@@ -18,6 +18,7 @@ La page Toutes les activités vous aide à comprendre les actions effectuées su
 
 
 
+[[examining-all-activity-data]]
 == Examen de toutes les données d'activité
 
 Cliquez sur *Forensics > Forensics d'activité* et cliquez sur l'onglet *Toutes les activités* pour accéder à la page Toutes les activités.  Cette page fournit un aperçu des activités de votre locataire, en mettant en évidence les informations suivantes :
@@ -78,6 +79,7 @@ La méthode _Group by_ par défaut est _Activity forensics_.  Si vous sélection
 
 
 
+[[filtering-forensic-activity-history-data]]
 == Filtrage des données d'historique des activités médico-légales
 
 Il existe deux méthodes que vous pouvez utiliser pour filtrer les données.
@@ -140,6 +142,7 @@ Veuillez noter que tous les champs de filtre sont sensibles à la casse.  Par ex
 
 
 
+[[activity-forensics-filter-examples]]
 == Exemples de filtres d'analyse médico-légale des activités :
 
 |===
@@ -183,22 +186,26 @@ NOTE:
 
 
 
+[[sorting-forensic-activity-history-data]]
 == Tri des données d'historique des activités médico-légales
 
 Vous pouvez trier les données de l'historique des activités par _Heure, Utilisateur, IP source, Activité, _, _Type d'entité_, Dossier de 1er niveau (Racine), Dossier de 2e niveau, Dossier de 3e niveau et Dossier de 4e niveau.  Par défaut, le tableau est trié par ordre décroissant _Time_, ce qui signifie que les données les plus récentes seront affichées en premier.  Le tri est désactivé pour les champs _Device_ et _Protocol_.
 
 
 
+[[user-guide-for-asynchronous-exports]]
 == Guide de l'utilisateur pour les exportations asynchrones
 
 
 
+[[overview]]
 === Aperçu
 
 La fonctionnalité Exportations asynchrones de Storage Workload Security est conçue pour gérer les exportations de données volumineuses.
 
 
 
+[[step-by-step-guide-exporting-data-with-asynchronous-exports]]
 === Guide étape par étape : Exportation de données avec des exportations asynchrones
 
 . *Lancer l'exportation* : Sélectionnez la durée et les filtres souhaités pour l'exportation et cliquez sur le bouton Exporter.
@@ -216,6 +223,7 @@ Un exemple de script permettant d'extraire des données médico-légales via l'A
 
 
 
+[[column-selection-for-all-activity]]
 == Sélection de colonnes pour toutes les activités
 
 Le tableau _Toutes les activités_ affiche les colonnes sélectionnées par défaut.  Pour ajouter, supprimer ou modifier les colonnes, cliquez sur l’icône d’engrenage à droite du tableau et sélectionnez dans la liste des colonnes disponibles.
@@ -224,12 +232,14 @@ image:CloudSecure_ActivitySelection.png["Sélecteur d'activité, largeur = 30 %
 
 
 
+[[activity-history-retention]]
 == Conservation de l'historique des activités
 
 L'historique des activités est conservé pendant 13 mois pour les environnements Workload Security actifs.
 
 
 
+[[applicability-of-filters-in-forensics-page]]
 == Applicabilité des filtres dans la page médico-légale
 
 |===
@@ -252,6 +262,7 @@ L'historique des activités est conservé pendant 13 mois pour les environnement
 |===
 
 
+[[path-search]]
 == Recherche de chemin
 
 Les résultats de recherche avec et sans / seront différents
@@ -284,6 +295,7 @@ Les résultats de recherche avec et sans / seront différents
 |===
 
 
+[[local-root-svm-user-activity-changes]]
 == Modifications de l'activité de l'utilisateur SVM racine local
 
 Si un utilisateur SVM racine local effectue une activité, l'adresse IP du client sur lequel le partage NFS est monté est désormais prise en compte dans le nom d'utilisateur, qui sera affiché sous la forme root@<adresse-ip-du-client> dans les pages d'activité médico-légale et d'activité utilisateur.
@@ -298,6 +310,7 @@ Par exemple:
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 |===

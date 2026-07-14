@@ -14,11 +14,12 @@ Le collecteur de données HP Enterprise Alletra 6000 (anciennement Nimble) prend
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès de ce collecteur.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -47,6 +48,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[requirements]]
 == Exigences
 
 Vous devez disposer des éléments suivants pour collecter les données d’inventaire et de configuration de la baie de stockage :
@@ -65,9 +67,10 @@ Vous devez disposer des éléments suivants pour collecter les données de perfo
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -82,6 +85,7 @@ Vous devez disposer des éléments suivants pour collecter les données de perfo
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
 |===

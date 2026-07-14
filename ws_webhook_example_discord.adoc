@@ -21,6 +21,7 @@ NOTE: Cette page fait référence à des instructions de tiers, qui sont suscept
 
 
 
+[[discord-setup]]
 == Configuration de Discord :
 
 * Dans Discord, sélectionnez le serveur, sous Canaux texte, sélectionnez Modifier le canal (icône en forme d'engrenage)
@@ -30,6 +31,7 @@ NOTE: Cette page fait référence à des instructions de tiers, qui sont suscept
 
 
 
+[[create-workload-security-webhook]]
 == Créer un webhook de sécurité de charge de travail :
 
 . Accédez à Admin > Notifications et sélectionnez l’onglet _Webhooks de sécurité de la charge de travail_.  Cliquez sur « + Webhook » pour créer un nouveau webhook.
@@ -46,6 +48,7 @@ Assurez-vous de réinitialiser le corps du message une fois le test terminé.
 
 
 
+[[notifications-via-webhook]]
 == Notifications via Webhook
 
 Pour notifier les événements via le webhook, accédez à _Sécurité de la charge de travail > Politiques_.  Cliquez sur _+Politique d’attaque_ ou _+Politique d’avertissement_.

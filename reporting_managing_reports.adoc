@@ -20,6 +20,7 @@ IMPORTANT: Avant d'apporter des modifications aux autorisations de création de 
 
 
 
+[[customizing-a-reports-output-format-and-delivery]]
 == Personnalisation du format de sortie et de la livraison d'un rapport
 
 Vous pouvez personnaliser le format et le mode de livraison des rapports.
@@ -41,6 +42,7 @@ image:Reporting_Output_and_Delivery.png["Sortie et livraison du rapport"]
 
 
 
+[[copying-a-report-to-the-clipboard]]
 == Copier un rapport dans le presse-papiers
 
 Utilisez ce processus pour copier un rapport dans le presse-papiers.
@@ -59,6 +61,7 @@ image:Reporting_Copy_To_Clipboard.png["Copier un rapport dans le presse-papiers"
 
 
 
+[[opening-reports-from-the-clipboard]]
 == Ouvrir des rapports depuis le presse-papiers
 
 Vous pouvez ouvrir une spécification de rapport qui a été précédemment copiée dans le presse-papiers.
@@ -80,12 +83,14 @@ image:Reporting_Open_From_Clipboard.png["Ouvrir un rapport depuis le presse-papi
 
 
 
+[[editing-an-existing-report]]
 == Modification d'un rapport existant
 
 Gardez à l'esprit que la modification des fichiers dans leur emplacement par défaut entraîne le risque que ces rapports soient écrasés lors de la prochaine actualisation du catalogue de rapports.  Il est recommandé d'enregistrer le rapport modifié sous un nouveau nom ou de le stocker dans un emplacement autre que celui par défaut.
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Vous trouverez ici des suggestions pour résoudre les problèmes liés aux rapports.

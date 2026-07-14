@@ -18,6 +18,7 @@ La section Performances d'une page d'actif ou d'un panneau coulissant vous perme
 
 
 
+[[using-the-performance-section]]
 == Utilisation de la section Performance
 
 Voici un exemple de la section Performances dans une page de ressource de stockage :
@@ -46,6 +47,7 @@ Affiche les ressources qui ont un impact ou sont impactées par d’autres resso
 
 
 
+[[alerts-in-performance-section]]
 == Alertes dans la section Performance
 
 Les alertes sont également affichées dans la section Performances de la page de destination d'un actif, indiquant l'heure et la durée de l'alerte ainsi que la condition de surveillance qui l'a déclenchée.  Passez la souris sur un indicateur d’alerte pour afficher les détails de l’alerte.
@@ -54,6 +56,7 @@ image:asset_page_alert_section.png["Alertes dans la section performances"]
 
 
 
+[[performance-metric-definitions]]
 == Définitions des mesures de performance
 
 La section Performances d’une page d’actif affiche plusieurs mesures en fonction de la période sélectionnée pour l’actif.  Chaque métrique est affichée dans son propre graphique de performances.  Vous pouvez ajouter ou supprimer des métriques et des ressources associées des graphiques en fonction des données que vous souhaitez voir.  Les mesures que vous pouvez choisir varient en fonction du type d’actif.
@@ -164,6 +167,7 @@ La section Performances d’une page d’actif affiche plusieurs mesures en fonc
 |===
 
 
+[[using-the-performance-section]]
 == Utilisation de la section Performance
 
 La section Performance vous permet d'afficher les graphiques de performances d'un actif en fonction de n'importe quel nombre de mesures applicables au cours d'une période choisie, et d'ajouter des actifs associés pour comparer et contraster les performances de l'actif et de l'actif associé sur différentes périodes.

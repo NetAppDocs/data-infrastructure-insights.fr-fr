@@ -18,6 +18,7 @@ La matrice de prise en charge des collecteurs de données fournit une référenc
 
 
 
+[[hp-enterprise-3par-alletra-9000-primera-storeserv-storage]]
 == Stockage HP Enterprise 3PAR / Alletra 9000 / Primera StoreServ
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -828,6 +829,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[amazon-aws-ec2]]
 == Amazon AWS EC2
 
 Modèles et versions pris en charge par ce collecteur de données : Versions d'API :
@@ -1102,6 +1104,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[amazon-aws-s3]]
 == Amazon AWS S3
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -1265,6 +1268,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[microsoft-azure-netapp-files]]
 == Azure NetApp Files
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -1587,6 +1591,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[brocade-fibre-channel-switches]]
 == Commutateurs Fibre Channel Brocade
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -2162,6 +2167,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[brocade-network-advisor-http]]
 == Conseiller réseau Brocade HTTP
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -2418,6 +2424,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[brocade-fos-rest]]
 == Brocade FOS REST
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -2898,6 +2905,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[cisco-mds-nexus-fabric-switches]]
 == Commutateurs Cisco MDS et Nexus Fabric
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -3412,6 +3420,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[cohesity]]
 == Cohésion
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -3683,6 +3692,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-celerra-ssh]]
 == EMC Celerra (SSH)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -3963,6 +3973,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-clariion-navicli]]
 == EMC CLARiiON (NaviCLI)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -4576,6 +4587,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-data-domain-ssh]]
 == Domaine de données EMC (SSH)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -4929,6 +4941,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-ecs]]
 == CEM ECS
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -5260,6 +5273,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[dell-emc-isilon-powerscale-rest]]
 == Dell EMC Isilon et PowerScale Rest
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -5982,6 +5996,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[dell-emc-isilon-powerscale-cli]]
 == Dell EMC Isilon / PowerScale (CLI)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -6549,6 +6564,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-powerstore-rest]]
 == EMC PowerStore REST
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -7184,6 +7200,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-recoverpoint-http]]
 == EMC RecoverPoint (HTTP)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -7311,6 +7328,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-scaleio-powerflex-rest]]
 == EMC ScaleIO et PowerFlex REST
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -7525,6 +7543,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-symmetrix-cli]]
 == Interface de ligne de commande EMC Symmetrix
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -8388,6 +8407,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[dell-unisphere-rest]]
 == Dell Unisphere REST
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -9111,6 +9131,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-vnx-ssh]]
 == EMC VNX (SSH)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -9796,6 +9817,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-vnxe-unity-unisphere-cli]]
 == EMC VNXe et Unity Unisphere (CLI)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -10390,6 +10412,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-vplex]]
 == EMC VPLEX
 
 |===
@@ -10469,6 +10492,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[emc-xtremio-http]]
 == EMC XtremIO (HTTP)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -11026,6 +11050,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[netapp-e-series]]
 == NetApp Série E
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -11672,6 +11697,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[pure-storage-flashblade-rest]]
 == Stockage pur FlashBlade REST
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -12045,6 +12071,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[google-cloud-compute]]
 == Google Cloud Compute
 
 Modèles et versions pris en charge par ce collecteur de données : Versions d'API :
@@ -12277,6 +12304,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[hds-hcp-https]]
 == HDS HCP (HTTPS)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -12461,6 +12489,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[hicommand-device-manager]]
 == Gestionnaire de périphériques HiCommand
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -13135,6 +13164,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[hitachi-ops-center]]
 == Centre d'opérations Hitachi
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -13822,6 +13852,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[hds-hnas-cli]]
 == HDS HNAS (CLI)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -14108,6 +14139,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[hpe-nimble-alletra-6000-storage]]
 == Stockage HPE Nimble/Alletra 6000
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -14598,6 +14630,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[huawei-oceanstor-resthttps]]
 == Huawei OceanStor (REST/HTTPS)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -15322,6 +15355,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[ibm-cleversafe]]
 == IBM Cleversafe
 
 |===
@@ -15512,6 +15546,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[ibm-ds-8k-dscli]]
 == IBM DS 8K (DSCLI)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -16011,6 +16046,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[ibm-powervm-ssh]]
 == IBM PowerVM (SSH)
 
 |===
@@ -16192,6 +16228,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[ibm-svc-cli]]
 == IBM SVC (CLI)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -16939,6 +16976,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[ibm-xiv-a9000-xivcli]]
 == IBM XIV et A9000 (XIVCLI)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -17171,6 +17209,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[infinidat-infinibox-http]]
 == Infinidat Infinibox (HTTP)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -17520,6 +17559,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[microsoft-azure-compute]]
 == Microsoft Azure Compute
 
 Modèles et versions pris en charge par ce collecteur de données : Versions d'API :
@@ -17776,6 +17816,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[microsoft-hyper-v]]
 == Microsoft Hyper-V
 
 |===
@@ -18257,6 +18298,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[netapp-7-mode]]
 == Mode NetApp 7
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -19239,6 +19281,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[netapp-e-series-rest]]
 == REST NetApp Série E
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -19609,6 +19652,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[amazon-fsx-for-netapp-ontap]]
 == Amazon FSx for NetApp ONTAP
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -20534,6 +20578,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[netapp-clustered-data-ontap-8-1-1]]
 == Data ONTAP en cluster NetApp ONTAP 8.1.1+
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -22289,6 +22334,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[asa]]
 == ASA
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -22917,6 +22963,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[netapp-ontap-rest]]
 == NetApp ONTAP REST
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -23775,6 +23822,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[netapp-solidfire-8-1]]
 == NetApp SolidFire 8.1+
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -24520,6 +24568,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[netapp-storagegrid-https]]
 == NetApp StorageGRID (HTTPS)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -24903,6 +24952,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[nutanix-storage-rest]]
 == Stockage Nutanix (REST)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -25414,6 +25464,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[oracle-zfs-https]]
 == Oracle ZFS (HTTPS)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -25964,6 +26015,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[pure-storage-flasharray-http]]
 == Baie Flash de stockage pure (HTTP)
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -26573,6 +26625,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[red-hat-rhv-rest]]
 == Red Hat RHV (REST)
 
 |===
@@ -26817,6 +26870,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[rubrik-storage]]
 == Stockage Rubrik
 
 Modèles et versions pris en charge par ce collecteur de données : Versions du micrologiciel :
@@ -27159,6 +27213,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[vast-datastore]]
 == Magasin de données VAST
 
 Modèles et versions pris en charge par ce collecteur de données :
@@ -27571,6 +27626,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[netapp-hci-virtual-center]]
 == Centre virtuel NetApp HCI
 
 Modèles et versions pris en charge par ce collecteur de données : Versions d'API :
@@ -28119,6 +28175,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[vmware-cloud-on-aws]]
 == VMware Cloud sur AWS
 
 Modèles et versions pris en charge par ce collecteur de données : Versions d'API :
@@ -28461,6 +28518,7 @@ API de gestion utilisées par ce collecteur de données :
 |===
 
 
+[[vmware-vsphere-web-services]]
 == VMware vSphere (services Web)
 
 Modèles et versions pris en charge par ce collecteur de données : Versions d'API :

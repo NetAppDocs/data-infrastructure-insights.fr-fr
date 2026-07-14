@@ -18,6 +18,7 @@ L'analyse des changements d'infrastructure vous offre une vue tout-en-un des cha
 
 
 
+[[how-does-infrastructure-change-analysis-help]]
 == Comment l’analyse des changements d’infrastructures aide-t-elle ?
 
 Dans n'importe quel environnement, des modifications de vos ressources peuvent survenir en raison de modifications mal configurées, d'une panne de courant, etc. L'analyse des changements vous aide en fournissant un volet unique pour visualiser et corréler l'état de vos ressources avec les pannes ou les modifications planifiées.  Les changements sont calculés à chaque interrogation d'inventaire (suivant la première interrogation sur un nouveau collecteur).
@@ -32,6 +33,7 @@ La sélection d’un élément dans la liste ouvrira un volet coulissant donnant
 
 
 
+[[filtering]]
 == Filtration
 
 Comme pour toutes les fonctionnalités de Cloud Insights, le filtrage de la liste des modifications est intuitif : en haut de la page, vous pouvez filtrer par types d'actifs spécifiques (_Triggered On:type_), et/ou filtrer uniquement les actifs avec des noms spécifiques si vous le souhaitez (_Triggered On:name_), ou ajouter vos propres filtres en sélectionnant le bouton {+].
@@ -44,12 +46,14 @@ image:Change_Analysis_filters_and_status.png["statut et liens rapides vers les a
 
 
 
+[[a-note-about-long-term-alerts]]
 == Remarque sur les alertes à long terme
 
 Notez que les alertes qui restent actives pendant plus de 24 heures seront visibles dans la liste Alertes et modifications une fois toutes les 24 heures. Vous remarquerez donc peut-être la même alerte répertoriée plusieurs fois. Chacune de ces alertes aura le même ID d'alerte, la même heure de début, etc., et aura le statut « Alerte » jusqu'à ce que l'alerte soit résolue.
 
 
 
+[[which-objects-are-analyzed-for-changes]]
 == Quels objets sont analysés pour détecter les modifications ?
 
 Le tableau suivant répertorie les objets et attributs inclus dans l’analyse des changements d’infrastructure.

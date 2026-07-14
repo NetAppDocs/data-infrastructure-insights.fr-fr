@@ -14,9 +14,10 @@ Le collecteur de données IBM XIV et A9000 (CLI) utilise l'interface de ligne de
 
 
 
+[[terminology]]
 == Terminologie
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -34,6 +35,7 @@ Le collecteur de données IBM XIV et A9000 (CLI) utilise l'interface de ligne de
 |===
 
 
+[[requirements]]
 == Exigences
 
 Les exigences suivantes doivent être remplies pour configurer et utiliser ce collecteur de données :
@@ -45,6 +47,7 @@ Les exigences suivantes doivent être remplies pour configurer et utiliser ce co
 
 
 
+[[performance-requirements]]
 == Exigences de performance
 
 Les exigences suivantes sont requises pour la collecte des performances :
@@ -59,9 +62,10 @@ Les exigences suivantes sont requises pour la collecte des performances :
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -82,9 +86,10 @@ Les exigences suivantes sont requises pour la collecte des performances :
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -108,6 +113,7 @@ Les exigences suivantes sont requises pour la collecte des performances :
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

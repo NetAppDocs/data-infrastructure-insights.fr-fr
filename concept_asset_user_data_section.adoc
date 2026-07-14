@@ -14,6 +14,7 @@ La section Données utilisateur d'une page d'actif affiche et vous permet de mod
 
 
 
+[[using-the-user-data-section-to-assign-or-modify-applications]]
 == Utilisation de la section Données utilisateur pour attribuer ou modifier des applications
 
 Vous pouvez affecter des applications exécutées sur votre locataire à certaines ressources (hôte, machines virtuelles, volumes, volumes internes, qtrees et hyperviseurs).  La section Données utilisateur vous permet d'ajouter, de modifier ou de supprimer les applications attribuées à un actif.  Pour tous ces types d’actifs, à l’exception des volumes, vous pouvez attribuer plusieurs applications.
@@ -37,6 +38,7 @@ Pour supprimer une application, déroulez la liste des applications et décochez
 
 
 
+[[using-the-user-data-section-to-assign-or-modify-annotations]]
 == Utilisation de la section Données utilisateur pour attribuer ou modifier des annotations
 
 Lors de la personnalisation de Data Infrastructure Insights pour suivre les données en fonction des besoins de votre entreprise, vous pouvez définir des notes spécialisées appelées annotations et les attribuer à vos ressources.  La section Données utilisateur d'une page d'actif affiche les annotations attribuées à un actif et vous permet également de modifier les annotations attribuées à cet actif.

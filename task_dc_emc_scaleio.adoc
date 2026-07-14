@@ -14,11 +14,12 @@ Le collecteur de données ScaleIO/PowerFlex collecte les informations d'inventai
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les informations d'inventaire suivantes auprès du collecteur de données ScaleIO/PowerFlex.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -41,6 +42,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[requirements]]
 == Exigences
 
 * Accès en lecture seule au compte utilisateur Admin
@@ -49,9 +51,10 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -66,11 +69,12 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
 Cliquez sur la case à cocher Inventaire pour activer la collecte d’inventaire.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -85,6 +89,7 @@ Cliquez sur la case à cocher Inventaire pour activer la collecte d’inventaire
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

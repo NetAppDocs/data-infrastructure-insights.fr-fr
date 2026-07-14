@@ -45,6 +45,7 @@ Lisez ces informations avant d'installer ou de mettre à niveau lelink:task_conf
 |===
 
 
+[[important-things-to-note-before-you-start]]
 == Choses importantes à noter avant de commencer
 
 Si vous courez avec un<<configuring-proxy-support,procuration>> , avoir un<<using-a-custom-or-private-docker-repository,référentiel personnalisé>> , ou utilisent<<openshift-instructions,OpenShift>> , lisez attentivement les sections suivantes.
@@ -53,6 +54,7 @@ Lire aussi à propos de<<autorisations,Autorisations>> .
 
 
 
+[[configuring-proxy-support]]
 === Configuration de la prise en charge du proxy
 
 Il existe deux endroits où vous pouvez utiliser un proxy sur votre locataire afin d’installer NetApp Kubernetes Monitoring Operator.  Il peut s'agir des mêmes systèmes proxy ou de systèmes proxy distincts :
@@ -107,6 +109,7 @@ agent:
 ----
 
 
+[[using-a-custom-or-private-docker-repository]]
 === Utiliser un référentiel Docker personnalisé ou privé
 
 Par défaut, l'opérateur de surveillance NetApp Kubernetes extrait les images de conteneur du référentiel Data Infrastructure Insights .  Si vous disposez d'un cluster Kubernetes utilisé comme cible pour la surveillance et que ce cluster est configuré pour extraire uniquement des images de conteneur à partir d'un référentiel Docker personnalisé ou privé ou d'un registre de conteneurs, vous devez configurer l'accès aux conteneurs nécessaires à l'opérateur de surveillance NetApp Kubernetes.
@@ -155,6 +158,7 @@ agent:
 ----
 
 
+[[openshift-instructions]]
 === Instructions OpenShift
 
 Si vous utilisez OpenShift 4.6 ou une version ultérieure, vous devez modifier AgentConfiguration dans _operator-config.yaml_ pour activer le paramètre _runPrivileged_ :
@@ -167,6 +171,7 @@ Openshift peut implémenter un niveau de sécurité supplémentaire qui peut blo
 
 
 
+[[permissions]]
 === Autorisations
 
 Si le cluster que vous surveillez contient des ressources personnalisées qui n'ont pas de ClusterRole,link:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles["agrégats à visualiser"] , vous devrez accorder manuellement à l'opérateur l'accès à ces ressources pour les surveiller avec les journaux d'événements.

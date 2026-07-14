@@ -21,6 +21,7 @@ IMPORTANT: Les exemples dans ces sections sont fournis à titre explicatif uniqu
 
 
 
+[[creating-a-dashboard]]
 == Créer un tableau de bord
 
 Vous créez un nouveau tableau de bord à l’un des deux endroits suivants :
@@ -31,12 +32,14 @@ Vous créez un nouveau tableau de bord à l’un des deux endroits suivants :
 
 
 
+[[see-it-in-action]]
 == Voyez-le en action
 
 link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8["Créez des tableaux de bord puissants avec NetApp (vidéo),window=read-later"]
 
 
 
+[[dashboard-controls]]
 == Commandes du tableau de bord
 
 L'écran du tableau de bord comporte plusieurs commandes :
@@ -55,6 +58,7 @@ Les widgets peuvent être redimensionnés et déplacés vers différentes positi
 
 
 
+[[widget-types]]
 == Types de widgets
 
 Vous pouvez choisir parmi les types de widgets suivants :
@@ -107,6 +111,7 @@ Pour des explications plus détaillées sur ces fonctionnalités et d’autres f
 
 
 
+[[setting-a-dashboard-as-your-home-page]]
 == Définir un tableau de bord comme page d'accueil
 
 Vous pouvez choisir le tableau de bord à définir comme *page d'accueil* de votre locataire en utilisant l'une des méthodes suivantes :

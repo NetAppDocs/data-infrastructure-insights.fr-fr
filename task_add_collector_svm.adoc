@@ -18,6 +18,7 @@ Le collecteur de données ONTAP SVM permet à Workload Security de surveiller le
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 * Ce collecteur de données est pris en charge avec les éléments suivants :
@@ -79,6 +80,7 @@ Voirlink:concept_cs_agent_requirements.html["Exigences relatives aux agents"] po
 
 
 
+[[test-connectivity-for-data-collectors]]
 == Tester la connectivité pour les collecteurs de données
 
 La fonctionnalité de connectivité de test (introduite en mars 2025) vise à aider les utilisateurs finaux à identifier les causes spécifiques des échecs lors de la configuration des collecteurs de données dans Data Infrastructure Insights (DII) Workload Security.  Cela permet aux utilisateurs de corriger eux-mêmes les problèmes liés à la communication réseau ou aux rôles manquants.
@@ -90,6 +92,7 @@ NOTE: La connectivité de test n'est pas prise en charge pour les collecteurs d'
 
 
 
+[[prerequisites-for-connection-testing]]
 === Conditions préalables aux tests de connexion
 
 * Les informations d’identification au niveau du cluster sont nécessaires pour que cette fonctionnalité fonctionne pleinement.
@@ -104,6 +107,7 @@ Assurez-vous de revoir le<<a-note-about-permissions,Autorisations>> section ci-d
 
 
 
+[[test-the-connection]]
 === Tester la connexion
 
 L'utilisateur peut accéder à la page d'ajout/modification du collecteur, saisir les détails du niveau du cluster (en mode cluster) ou les détails du niveau SVM (en mode SVM) et cliquer sur le bouton *Tester la connexion*.  Workload Security traitera ensuite la demande et affichera un message de réussite ou d’échec approprié.
@@ -112,6 +116,7 @@ image:ws_test_connection_success_example.png["Message de réussite « Test de c
 
 
 
+[[things-to-note-for-ontap-multi-admin-verify-mav]]
 == Points à noter pour ONTAP Multi Admin Verify (MAV)
 
 Certaines fonctionnalités, telles que la création et la suppression d'instantanés ou le blocage des utilisateurs (SMB), peuvent ne pas fonctionner en fonction des commandes MAV ajoutées dans votre version de ONTAP.
@@ -129,6 +134,7 @@ Commande pour autoriser le blocage des utilisateurs :
  multi-admin-verify rule delete -operation set
 
 
+[[prerequisites-for-user-access-blocking]]
 == Conditions préalables au blocage de l'accès utilisateur
 
 Gardez à l’esprit les points suivants pourlink:cs_restrict_user_access.html["Blocage de l'accès utilisateur"] :
@@ -141,10 +147,12 @@ Si vous utilisez un utilisateur personnalisé (par exemple, _csuser_) avec des a
 
 
 
+[[a-note-about-permissions]]
 == Remarque sur les autorisations
 
 
 
+[[permissions-when-adding-via-cluster-management-ip]]
 === Autorisations lors de l'ajout via *Cluster Management IP* :
 
 Si vous ne pouvez pas utiliser l’utilisateur administrateur de gestion de cluster pour autoriser Workload Security à accéder au collecteur de données ONTAP SVM, vous pouvez créer un nouvel utilisateur nommé « csuser » avec les rôles indiqués dans les commandes ci-dessous.  Utilisez le nom d’utilisateur « csuser » et le mot de passe « csuser » lors de la configuration du collecteur de données Workload Security pour utiliser l’adresse IP de gestion de cluster.
@@ -175,6 +183,7 @@ security login create -user-or-group-name csuser -application http -authmethod p
 ....
 
 
+[[permissions-when-adding-via-vserver-management-ip]]
 === Autorisations lors de l'ajout via *Vserver Management IP* :
 
 Si vous ne pouvez pas utiliser l’utilisateur administrateur de gestion de cluster pour autoriser Workload Security à accéder au collecteur de données ONTAP SVM, vous pouvez créer un nouvel utilisateur nommé « csuser » avec les rôles indiqués dans les commandes ci-dessous.  Utilisez le nom d’utilisateur « csuser » et le mot de passe « csuser » lors de la configuration du collecteur de données Workload Security pour utiliser l’adresse IP de gestion du serveur virtuel.
@@ -205,6 +214,7 @@ security login create -user-or-group-name csuser -application http -authmethod p
 ....
 
 
+[[protobuf-mode]]
 === Mode Protobuf
 
 Workload Security configurera le moteur FPolicy en mode protobuf lorsque cette option est activée dans les paramètres _Configuration avancée_ du collecteur.  Le mode Protobuf est pris en charge dans ONTAP version 9.15 et ultérieure.
@@ -221,6 +231,7 @@ Mode serveur virtuel :
  security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
 
 
+[[permissions-for-ontap-autonomous-ransomware-protection-and-ontap-access-denied]]
 === Autorisations pour la protection autonome contre les ransomwares ONTAP et accès ONTAP refusé
 
 Si vous utilisez les informations d’identification d’administration de cluster, aucune nouvelle autorisation n’est nécessaire.
@@ -233,6 +244,7 @@ etlink:concept_cs_integration_with_ontap_arp.html["Intégration avec la protecti
 
 
 
+[[configure-the-data-collector]]
 == Configurer le collecteur de données
 
 .Étapes de configuration
@@ -295,6 +307,7 @@ Le système affiche la page de configuration ONTAP SVM.  Saisissez les données 
 
 
 
+[[recommended-configuration-for-metrocluster]]
 == Configuration recommandée pour MetroCluster
 
 Ce qui suit est recommandé pour MetroCluster:
@@ -308,6 +321,7 @@ Ce qui suit est recommandé pour MetroCluster:
 
 
 
+[[service-policy]]
 == Politique de service
 
 Si vous utilisez la stratégie de service avec ONTAP *version 9.9.1 ou plus récente*, afin de vous connecter au collecteur de sources de données, le service _data-fpolicy-client_ est requis avec le service de données _data-nfs_ et/ou _data-cifs_.
@@ -323,6 +337,7 @@ Dans les versions d' ONTAP antérieures à 9.9.1, _data-fpolicy-client_ n'a pas 
 
 
 
+[[play-pause-data-collector]]
 == Collecteur de données de lecture-pause
 
 Si le collecteur de données est à l'état _En cours d'exécution_, vous pouvez suspendre la collecte.  Ouvrez le menu « trois points » du collecteur et sélectionnez PAUSE.  Pendant que le collecteur est en pause, aucune donnée n'est collectée à partir d' ONTAP et aucune donnée n'est envoyée du collecteur à ONTAP.  Cela signifie qu'aucun événement Fpolicy ne circulera d' ONTAP vers le collecteur de données, et de là vers Data Infrastructure Insights.
@@ -345,6 +360,7 @@ Gardez à l’esprit les points suivants :
 
 
 
+[[persistent-store]]
 == Magasin persistant
 
 Le magasin persistant est pris en charge avec ONTAP 9.14.1 et versions ultérieures.  Notez que les instructions de nom de volume varient d' ONTAP 9.14 à 9.15.
@@ -371,12 +387,14 @@ security login role create -vserver <vservername> -role csrole -cmddirname "job 
 ....
 
 
+[[migrate-collectors]]
 == Migrer les collecteurs
 
 Vous pouvez facilement migrer un collecteur Workload Security d'un agent à un autre, permettant ainsi un équilibrage efficace de la charge des collecteurs entre les agents.
 
 
 
+[[prerequisites]]
 === Prérequis
 
 * L'agent source doit être dans l'état _connecté_.
@@ -391,6 +409,7 @@ Note:
 
 
 
+[[migrate-collector]]
 === Migrer le collecteur
 
 Pour migrer un collecteur, suivez ces étapes :
@@ -408,6 +427,7 @@ image:ws_migrate_collector_to_another_agent.png["migrer un collecteur en choisis
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Voir lelink:troubleshooting_collector_svm.html["Dépannage du collecteur SVM"] page pour des conseils de dépannage.

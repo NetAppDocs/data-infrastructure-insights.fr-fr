@@ -18,6 +18,7 @@ image:workload-map-animated.gif["Exemple de carte de charge de travail"]
 
 
 
+[[pre-requisites]]
 == Prérequis
 
 Avant de pouvoir utiliser la surveillance et la cartographie des performances du réseau Kubernetes, vous devez avoir configuré lelink:task_config_telegraf_agent_k8s.html["Opérateur de surveillance NetApp Kubernetes"] pour activer cette option.  Lors du déploiement de l'opérateur, sélectionnez la case à cocher « Performances et carte du réseau » pour l'activer.  Vous pouvez également activer cette option en accédant à une page de destination Kubernetes et en sélectionnant « Modifier le déploiement ».
@@ -26,6 +27,7 @@ image:ServiceMap_NKMO_Deployment_Options.png["sélection de l'option Carte penda
 
 
 
+[[monitors]]
 == Moniteurs
 
 La carte de charge de travail utiliselink:task_create_monitor.html["moniteurs"] pour obtenir des informations.  Data Infrastructure Insights fournit un certain nombre de moniteurs Kubernetes par défaut (notez que ceux-ci peuvent être _en pause_ par défaut).  Vous pouvez _Reprendre_ (c'est-à-dire activer) les moniteurs que vous souhaitez, ou vous pouvez créer des moniteurs personnalisés pour les objets Kubernetes, que Workload Map utilisera également.
@@ -45,6 +47,7 @@ Vous pouvez créer des alertes de métrique Data Infrastructure Insights sur n�
 
 
 
+[[the-map]]
 == La carte
 
 La carte montre les services/charges de travail et leurs relations entre eux.  Les flèches indiquent les directions de circulation.  Le survol d'une charge de travail affiche des informations récapitulatives pour cette charge de travail, comme vous pouvez le voir dans cet exemple :
@@ -63,6 +66,7 @@ image:ServiceMap_Node_and_Connection_Legend.png["légende indiquant les tailles 
 
 
 
+[[workload-details-and-alerts]]
 == Détails et alertes de charge de travail
 
 Les cercles affichés en couleur indiquent une alerte de niveau d'avertissement ou critique pour la charge de travail.  Passez la souris sur le cercle pour obtenir un résumé du problème ou cliquez sur le cercle pour ouvrir un panneau coulissant avec plus de détails.
@@ -71,6 +75,7 @@ image:Workload_Map_Slideout_with_Alert.png["Détails de la charge de travail cou
 
 
 
+[[finding-and-filtering]]
 == Recherche et filtrage
 
 Comme avec d’autres fonctionnalités de Data Infrastructure Insights , vous pouvez facilement définir des filtres pour vous concentrer sur les objets spécifiques ou les attributs de charge de travail souhaités.
@@ -83,6 +88,7 @@ image:Workload_Map_Find_Highlighting.png["la saisie dans la zone de recherche me
 
 
 
+[[workload-labels]]
 == Étiquettes de charge de travail
 
 Les étiquettes de charge de travail sont nécessaires si vous souhaitez que la carte identifie les types de charges de travail affichées (c'est-à-dire les icônes en forme de cercle).  Les étiquettes sont dérivées comme suit :
@@ -117,6 +123,7 @@ Par exemple, avec un nom DNS résolu de _s3.eu-north-1.amazonaws.com_, le nom r�
 
 
 
+[[dive-deep]]
 == Plongez en profondeur
 
 Un clic droit sur une charge de travail vous présente des options supplémentaires à explorer plus en détail.  Par exemple, à partir d’ici, vous pouvez zoomer pour afficher les connexions pour cette charge de travail.

@@ -20,6 +20,7 @@ image:ai_assistant_sample_question.png["Exemple de question d'AI Assistant"]
 
 
 
+[[meet-your-infrastructures-new-intelligent-partner]]
 == Découvrez le nouveau partenaire intelligent de votre infrastructure
 
 L'Assistant IA transforme la façon dont vous interagissez avec vos données, transformant des requêtes complexes en conversations simples. Découvrez instantanément des schémas cachés, accélérez le dépannage et prenez des décisions fondées sur les données en toute confiance. Obtenez des réponses instantanées à des questions comme :
@@ -38,6 +39,7 @@ L'Assistant IA transforme la façon dont vous interagissez avec vos données, tr
 
 
 
+[[before-using-the-ai-assistant]]
 == Avant d'utiliser l'assistant IA
 
 * L'assistant IA est conçu pour vous aider. Bien qu'il s'efforce d'être précis, il est fortement recommandé de vérifier ses résultats avec une supervision humaine pour de meilleurs résultats.
@@ -48,6 +50,7 @@ L'Assistant IA transforme la façon dont vous interagissez avec vos données, tr
 
 
 
+[[the-ai-assistant-works-with-you]]
 == L'assistant IA travaille avec vous
 
 L'assistant IA de DII peut vous aider à répondre à des questions concernant les données de votre infrastructure informatique. Pour ce faire efficacement, il doit comprendre votre demande ainsi que quelles données spécifiques sont nécessaires pour répondre à votre demande.
@@ -69,12 +72,14 @@ Pour une expérience optimale, fournissez à l'assistant des informations spéci
 
 
 
+[[chat-naturally]]
 == Discutez naturellement
 
 L’assistant IA prend désormais en charge plus d’une douzaine de langues, permettant à votre équipe de communiquer naturellement dans sa langue préférée. Voir la liste complète link:https://platform.claude.com/docs/en/build-with-claude/multilingual-support["ici"].
 
 
 
+[[accessing-the-assistant]]
 == Accès à l'assistant
 
 Pour appeler l'assistant IA de DII, sélectionnez simplement l'icône de hibou dans le coin inférieur de l'écran. Un utilisateur disposant du rôle « Owner » ou « Admin » doit accepter les conditions générales avant que tout utilisateur puisse utiliser l'assistant IA sur votre tenant.

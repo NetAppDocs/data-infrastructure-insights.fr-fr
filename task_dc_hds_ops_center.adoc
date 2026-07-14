@@ -14,11 +14,12 @@ Ce collecteur de données utilise la suite d'applications intégrée de Hitachi 
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les informations d’inventaire suivantes auprès de ce collecteur de données.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -53,6 +54,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[inventory-requirements]]
 == Exigences en matière d'inventaire
 
 Vous devez disposer des éléments suivants pour collecter des données d’inventaire :
@@ -63,6 +65,7 @@ Vous devez disposer des éléments suivants pour collecter des données d’inve
 
 
 
+[[performance-requirements]]
 == Exigences de performance
 
 Les exigences suivantes doivent être respectées pour collecter des données de performance :
@@ -71,9 +74,10 @@ Le module « Analyzer » du HDS Ops Center doit être installé. Les baies de st
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -88,6 +92,7 @@ Le module « Analyzer » du HDS Ops Center doit être installé. Les baies de st
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
 |===

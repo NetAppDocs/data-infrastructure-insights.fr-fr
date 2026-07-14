@@ -25,6 +25,7 @@ La page s'actualise automatiquement en fonction de la plage horaire Data Infrast
 
 
 
+[[filtering]]
 == Filtration
 
 Comme pour toutes les fonctionnalités de Data Infrastructure Insights, le filtrage de la liste des modifications est intuitif : en haut de la page, saisissez ou sélectionnez des valeurs pour votre cluster Kubernetes, votre espace de noms ou votre charge de travail, ou ajoutez vos propres filtres en sélectionnant le bouton {+].
@@ -35,6 +36,7 @@ image:ChangeAnalytitcs_Filtered_Timeline.png["Exemple de chronologie de la charg
 
 
 
+[[quick-status]]
 == Statut rapide
 
 Sous la zone de filtrage se trouvent un certain nombre d’indicateurs de haut niveau.  Sur la gauche se trouve le nombre d'alertes (Avertissement et Critique).  Ce nombre inclut les alertes _Actives_ ainsi que _Résolues_.  Pour voir uniquement les alertes _Actives_, définissez un filtre pour « Statut » et choisissez « Actif ».
@@ -51,6 +53,7 @@ image:ChangeAnalytitcs_ExploreWorkloadAlerts.png["Options d'exploration de la ch
 
 
 
+[[detail-panel]]
 == Panneau de détails
 
 La sélection d’une modification dans la liste ouvre un panneau décrivant la modification plus en détail.  Par exemple, la sélection d'un déploiement ayant échoué affiche un résumé du déploiement, avec les heures de début et de fin, la durée et le lieu où le déploiement a été déclenché, avec des liens pour explorer ces ressources.  Il affiche également la raison de l’échec, les modifications associées et tous les événements associés.

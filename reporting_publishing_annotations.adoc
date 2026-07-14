@@ -10,6 +10,7 @@ keywords: reporting, annotations, publish, unpublish, data warehouse, dwh
 
 
 
+[[publishing-and-unpublishing-annotations-for-reporting]]
 == Publication et dépublication d'annotations pour les rapports
 
 [role="lead"]
@@ -17,12 +18,14 @@ Apprenez comment publier des annotations pour les utiliser dans les rapports et 
 
 
 
+[[publishing-annotations-for-reporting]]
 == Publication d'annotations pour les rapports
 
 Une fois que vous avez créé des annotations dans Data Infrastructure Insights, vous pouvez les publier pour les utiliser dans la génération de rapports.
 
 
 
+[[steps-to-publish-annotations]]
 === Étapes pour publier des annotations
 
 . Accédez à la page *Observabilité > Enrichir > Annotations* et sélectionnez l'onglet _Annotations pour la génération de rapports_.
@@ -39,12 +42,14 @@ Tous les rapports faisant référence à cette annotation utiliseront les valeur
 ====
 
 
+[[unpublishing-annotations-for-reporting]]
 == Supprimer les annotations pour le rapport
 
 Il peut arriver que vous ayez besoin de supprimer ou de dépublier des annotations, afin qu'elles ne soient plus utilisées dans la génération de rapports.  Par exemple, une annotation peut ne plus être nécessaire, ou elle peut contenir des informations obsolètes qui ne devraient pas figurer dans les rapports.
 
 
 
+[[steps-to-unpublish-annotations]]
 === Étapes pour dépublier les annotations
 
 Avant de dépublier une annotation, sachez que cette action aura un impact sur tous les rapports existants qui utilisent cette annotation.  Les rapports peuvent nécessiter une modification ou l'intervention de services professionnels pour supprimer les références aux annotations.
@@ -64,6 +69,7 @@ Les annotations continueront d'apparaître dans l'entrepôt de données jusqu'à
 ====
 
 
+[[impact-on-existing-reports]]
 == Impact sur les rapports existants
 
 La suppression ou la dépublication d'annotations peut nécessiter des modifications des rapports existants qui font référence à ces annotations. Considérez ce qui suit :

@@ -18,6 +18,7 @@ image:Kubernetes_List_Page_new.png["Page de liste Kubernetes"]
 
 
 
+[[cluster-list]]
 === Liste des clusters
 
 La liste des clusters affiche les informations suivantes pour chaque cluster de votre locataire :
@@ -32,6 +33,7 @@ La liste des clusters affiche les informations suivantes pour chaque cluster de 
 
 
 
+[[refining-the-filter]]
 == Affiner le filtre
 
 Lorsque vous filtrez, lorsque vous commencez à taper, vous avez la possibilité de créer un *filtre générique* basé sur le texte actuel.  La sélection de cette option renverra tous les résultats correspondant à l’expression générique.  Vous pouvez également créer des *expressions* en utilisant NOT ou AND, ou vous pouvez sélectionner l'option « Aucun » pour filtrer les valeurs nulles dans le champ.

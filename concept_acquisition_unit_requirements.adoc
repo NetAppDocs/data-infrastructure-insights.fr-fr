@@ -18,6 +18,7 @@ Vous devez installer une unité d'acquisition (AU) afin d'acquérir des informat
 
 
 
+[[requirements]]
 == Exigences
 
 |===
@@ -92,6 +93,7 @@ Votre système de fichiers peut utiliser de l'espace pour son fonctionnement int
 |===
 
 
+[[additional-recommendations]]
 == Recommandations supplémentaires
 
 * Pour un audit et des rapports de données précis, il est fortement recommandé de synchroniser l'heure sur la machine de l'unité d'acquisition à l'aide du *Network Time Protocol (NTP)* ou du *Simple Network Time Protocol (SNTP)*.
@@ -99,6 +101,7 @@ Votre système de fichiers peut utiliser de l'espace pour son fonctionnement int
 
 
 
+[[regarding-sizing]]
 == Concernant le dimensionnement
 
 Vous pouvez démarrer avec une unité d'acquisition Data Infrastructure Insights avec seulement 8 Go de mémoire et 50 Go d'espace disque. Cependant, pour les environnements plus grands, vous devez vous poser les questions suivantes :

@@ -16,6 +16,7 @@ Voir aussilink:task_troubleshooting_linux_acquisition_unit_problems.html["Dépan
 
 
 
+[[login-issues]]
 == Problèmes de connexion
 
 |===
@@ -44,6 +45,7 @@ Voir aussilink:task_troubleshooting_linux_acquisition_unit_problems.html["Dépan
 |===
 
 
+[[other-issues]]
 == Autres questions
 
 |===
@@ -62,6 +64,7 @@ Voir aussilink:task_troubleshooting_linux_acquisition_unit_problems.html["Dépan
 |===
 
 
+[[resources]]
 == Ressources
 
 Des conseils de dépannage supplémentaires peuvent être trouvés dans lelink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["Base de connaissances NetApp"] (connexion d'assistance requise).

@@ -14,6 +14,7 @@ Data Infrastructure Insights utilise le collecteur de données Brocade Enterpris
 
 
 
+[[requirements]]
 == Exigences
 
 * Adresse réseau ou nom de domaine complet pour le serveur EFCM
@@ -25,9 +26,10 @@ Data Infrastructure Insights utilise le collecteur de données Brocade Enterpris
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -42,9 +44,10 @@ Data Infrastructure Insights utilise le collecteur de données Brocade Enterpris
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 

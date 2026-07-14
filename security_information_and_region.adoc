@@ -14,6 +14,7 @@ NetApp prend très au sérieux la sécurité des informations clients.  Voici co
 
 
 
+[[what-information-does-data-infrastructure-insights-store]]
 == Quelles informations Data Infrastructure Insights stocke-t-il ?
 
 Data Infrastructure Insights stocke les informations suivantes :
@@ -59,6 +60,7 @@ De plus, les journaux d'accès à Data Infrastructure Insights sont conservés e
 
 
 
+[[where-is-my-information-stored]]
 == Où sont stockées mes informations ?
 
 Data Infrastructure Insights stocke les informations en fonction de la région dans laquelle votre environnement est créé.
@@ -82,6 +84,7 @@ Les informations suivantes résident aux États-Unis, quelle que soit la région
 
 
 
+[[host-regions]]
 === Régions d'accueil
 
 Les régions hôtes comprennent :
@@ -93,6 +96,7 @@ Les régions hôtes comprennent :
 
 
 
+[[more-information]]
 == Plus d'informations
 
 Vous pouvez en savoir plus sur la confidentialité et la sécurité de NetApp en suivant les liens suivants :

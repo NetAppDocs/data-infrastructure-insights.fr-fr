@@ -14,11 +14,12 @@ Le collecteur de données de l'API NetApp E-Series Legacy Santricity collecte le
 
 
 
+[[terminology]]
 == Terminologie
 
 Cloud Insight acquiert les informations d’inventaire suivantes à partir du collecteur de données NetApp E-Series.  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -44,12 +45,14 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[e-series-terminology-landing-page]]
 == Terminologie de la série E (page de destination)
 
 Les conditions suivantes s'appliquent aux objets ou références que vous pourriez trouver sur les pages de destination des ressources NetApp E-Series.  Bon nombre de ces termes s’appliquent également à d’autres collecteurs de données.
 
 
 
+[[storage]]
 === Stockage
 
 * Modèle – nom du modèle de l’appareil.
@@ -65,6 +68,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[storage-pool]]
 === Piscine de stockage
 
 * Stockage – sur quelle baie de stockage ce pool réside. Obligatoire
@@ -82,6 +86,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[storage-node]]
 === Nœud de stockage
 
 * Stockage – à quelle baie de stockage ce nœud fait partie. Obligatoire
@@ -100,6 +105,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[requirements]]
 == Exigences
 
 * L'adresse IP de chaque contrôleur de la baie
@@ -108,9 +114,10 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -119,9 +126,10 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -133,6 +141,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Des informations complémentaires sur ce collecteur de données peuvent être trouvées à partir dulink:concept_requesting_support.html["Support"] page ou dans lelink:reference_data_collector_support_matrix.html["Matrice de support du collecteur de données"] .

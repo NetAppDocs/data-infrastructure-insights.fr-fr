@@ -14,11 +14,12 @@ Data Infrastructure Insights utilise le collecteur de données Oracle ZFS Storag
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert des informations d'inventaire avec le collecteur de données Oracle ZFS.  Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminologie la plus courante utilisée pour cet actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -47,6 +48,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[requirements]]
 == Exigences
 
 * Noms d'hôte pour le contrôleur ZFS-1 et le contrôleur ZFS-2
@@ -56,6 +58,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 
 
 
+[[required-performance-metrics]]
 == Mesures de performance requises
 
 Les appliances Oracle ZFS offrent aux administrateurs de stockage une grande flexibilité pour capturer les statistiques de performances.  Data Infrastructure Insights s'attend à ce que chaque contrôleur d'une paire à haute disponibilité soit configuré pour capturer les métriques suivantes :
@@ -70,9 +73,10 @@ Si le contrôleur ne parvient pas à capturer tout ou partie de ces éléments, 
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -90,9 +94,10 @@ Si le contrôleur ne parvient pas à capturer tout ou partie de ces éléments, 
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -110,12 +115,14 @@ Si le contrôleur ne parvient pas à capturer tout ou partie de ces éléments, 
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
+[[inventory]]
 === Inventaire
 
 [cols="2a, 2a"]

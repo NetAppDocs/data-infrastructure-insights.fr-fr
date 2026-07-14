@@ -48,6 +48,7 @@ Lorsque vous utilisez Data Infrastructure Insights, si vous voyez une icône de 
 
 
 
+[[trial-edition]]
 == Édition d'essai
 
 Lorsque vous vous inscrivez à Data Infrastructure Insights et que votre environnement est actif, vous bénéficiez d'un essai gratuit de 30 jours de Data Infrastructure Insights.  Au cours de cet essai, vous pouvez explorer les fonctionnalités offertes par Data Infrastructure Insights , dans votre propre environnement.
@@ -61,6 +62,7 @@ NOTE: Si vous avez besoin de temps supplémentaire pour évaluer Data Infrastruc
 
 
 
+[[trial-through-aws-marketplace]]
 === Essai via AWS Marketplace
 
 Vous pouvez également vous inscrire pour un essai gratuit via AWS Marketplace.  L'essai gratuit d'AWS Marketplace vous donne accès à Data Infrastructure Insights pour une période d'essai de 33 jours.
@@ -69,12 +71,14 @@ L'essai gratuit d'AWS Marketplace ne peut pas être prolongé.
 
 
 
+[[what-if-my-trial-has-expired]]
 === Que faire si mon essai a expiré ?
 
 Si votre essai gratuit a expiré et que vous n'êtes pas encore abonné à Data Infrastructure Insights, vous disposerez de fonctionnalités limitées jusqu'à votre abonnement.  L'ingestion de données peut cesser et, après quelques semaines, vos données seront supprimées conformément à notre politique de conservation des données.
 
 
 
+[[what-if-my-subscription-has-expired]]
 == Que faire si mon *abonnement* a expiré ?
 
 Si vous avez un abonnement à Data Infrastructure Insights, mais que cet abonnement a expiré, vous disposerez d'un délai de grâce de cinq jours pour renouveler votre abonnement.  Toutes les fonctionnalités de Data Infrastructure Insights resteront actives pendant cette période de grâce.
@@ -86,6 +90,7 @@ NOTE: Vos données Data Infrastructure Insights restent intactes pendant 30 jour
 
 
 
+[[module-evaluation]]
 == Évaluation du module
 
 Vous pouvez également profiter des *Évaluations de modules*.  Par exemple, si vous êtes déjà abonné à Infrastructure Observability mais que vous ajoutez Kubernetes à votre environnement, vous accéderez automatiquement à une évaluation de 30 jours de Kubernetes Observability, à compter de l'installation de NetApp Kubernetes Monitoring Operator.  Vous ne serez facturé que pour votre utilisation de l'unité gérée par Kubernetes Observability à la fin de la période d'évaluation.
@@ -102,6 +107,7 @@ NOTE: Une _évaluation de module_ n'est pas un _essai_ - nous utilisons le terme
 
 
 
+[[estimator]]
 === Estimateur
 
 Lors d'une évaluation de module, l'utilisation des MU ne vous est pas facturée pour les ressources consommées pour le module, mais vous pouvez ouvrir l'*Estimateur* (sur l'onglet _Résumé_) pour voir comment les MU seront facturées après l'évaluation, ainsi que jouer avec des scénarios « Et si » avec le nombre de MU dont vous pourriez avoir besoin à l'avenir.  Réinitialisez les chiffres en quittant l'estimateur.
@@ -116,14 +122,17 @@ Veuillez noter que les clients ne sont éligibles à une évaluation du module q
 
 
 
+[[subscription-options]]
 == Options d'abonnement
 
 Pour vous abonner, rendez-vous dans *Admin -> Abonnement*.  En plus des boutons *S'abonner*, vous pourrez voir vos collecteurs de données installés et calculer votre comptage estimé.  Pour un environnement typique, vous pouvez cliquer sur le bouton AWS Marketplace en libre-service.  Si votre environnement comprend ou devrait inclure 1 000 unités gérées ou plus, vous êtes éligible à la tarification au volume.
 
 
 
+[[observability-metering]]
 === Mesure de l'observabilité
 
+[[pricing]]
 L'observabilité des Data Infrastructure Insights est mesurée de deux manières :
 
 * Comptage de capacité
@@ -136,6 +145,7 @@ Votre abonnement sera mesuré par l'une de ces méthodes, selon que vous dispose
 
 ==== Comptage de capacité
 
+[[weighted-capacity]]
 Data Infrastructure Insights Observability mesure l'utilisation en fonction du niveau de stockage de votre locataire.  Vous pouvez avoir des stockages qui entrent dans une ou plusieurs de ces catégories :
 
 * Matières premières primaires
@@ -166,6 +176,7 @@ Utilisation des compteurs d'observabilité de l'infrastructure et d'observabilit
 
 
 
+[[workload-security-metering]]
 === Mesure de la sécurité de la charge de travail
 
 La sécurité de la charge de travail est mesurée par Cluster en utilisant la même approche que la mesure de l'observabilité.
@@ -179,12 +190,14 @@ NOTE: L'utilisation des MU des abonnements Workload Security existants est ajust
 
 
 
+[[how-do-i-subscribe]]
 == Comment puis-je m'abonner ?
 
 Si votre nombre d'unités gérées est inférieur à 1 000, vous pouvez vous abonner via NetApp Sales, ou<<self-subscribe-through-aws-marketplace,auto-abonnement>> via AWS Marketplace.
 
 
 
+[[subscribe-through-netapp-sales-direct]]
 === Abonnez-vous directement via NetApp Sales
 
 Si le nombre d'unités gérées prévu est de 1 000 ou plus, cliquez sur le boutonlink:https://www.netapp.com/forms/cloud-insights-contact-us["*Contacter le service commercial*"] bouton pour vous abonner via l'équipe commerciale NetApp .
@@ -193,6 +206,7 @@ Vous devez fournir votre *numéro de série* Data Infrastructure Insights à vot
 
 
 
+[[self-subscribe-through-aws-marketplace]]
 === Auto-abonnez-vous via AWS Marketplace
 
 
@@ -211,6 +225,7 @@ En cas de problème et si le processus d'abonnement ne se termine pas correcteme
 
 
 
+[[view-your-subscription-status]]
 == Afficher le statut de votre abonnement
 
 Une fois votre abonnement actif, vous pouvez consulter l'état de votre abonnement et l'utilisation de l'unité gérée à partir de la page *Admin > Abonnement*.
@@ -232,6 +247,7 @@ image:Subscription_Usage_History.png["Historique d'utilisation de MU"]
 
 
 
+[[view-your-usage-management]]
 == Consultez votre gestion d'utilisation
 
 L'onglet Gestion de l'utilisation affiche un aperçu de l'utilisation de l'unité gérée, ainsi que des onglets décomposant la consommation de l'unité gérée par collecteur ou cluster Kubernetes.
@@ -246,6 +262,7 @@ Si votre utilisation approche ou dépasse votre montant souscrit, vous pouvez r�
 
 
 
+[[what-happens-if-i-exceed-my-subscribed-usage]]
 === Que se passe-t-il si je dépasse mon utilisation souscrite ?
 
 Des avertissements s'affichent lorsque votre utilisation de l'unité gérée dépasse 80 %, 90 % et 100 % du montant total souscrit :
@@ -281,12 +298,14 @@ Une bannière d’erreur s’affiche jusqu’à ce que vous effectuiez l’une d
 |===
 
 
+[[subscribe-directly-and-skip-the-trial]]
 == Abonnez-vous directement et évitez l'essai
 
 Vous pouvez également vous abonner à Data Infrastructure Insights directement depuis le https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["Place de marché AWS"] , sans créer au préalable un environnement d’essai.  Une fois votre abonnement terminé et votre environnement configuré, vous serez immédiatement abonné.
 
 
 
+[[adding-an-entitlement-id]]
 == Ajout d'un identifiant d'autorisation
 
 Si vous possédez un produit NetApp valide fourni avec Data Infrastructure Insights, vous pouvez ajouter ce numéro de série de produit à votre abonnement Data Infrastructure Insights existant.  Par exemple, si vous avez acheté NetApp Astra Control Center, le numéro de série de la licence Astra Control Center peut être utilisé pour identifier l'abonnement dans Data Infrastructure Insights.  Data Infrastructure Insights fait référence à cela comme un _ID d'autorisation_.

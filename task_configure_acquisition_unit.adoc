@@ -21,6 +21,7 @@ En savoir plus sur la sécurité de Data Infrastructure Insightslink:security_ov
 
 
 
+[[adding-a-linux-acquisition-unit]]
 == Ajout d'une unité d'acquisition Linux
 
 .Avant de commencer
@@ -61,6 +62,7 @@ image:NewLinuxAUInstall.png["Instructions AU Linux"]
 
 
 
+[[setting-proxy-environment-variables]]
 === Définition des variables d'environnement proxy
 
 Pour les environnements qui utilisent un proxy, vous devez définir les variables d’environnement du proxy avant d’ajouter l’unité d’acquisition.  Les instructions de configuration du proxy sont fournies dans la boîte de dialogue _Ajouter une unité d'acquisition_.
@@ -76,6 +78,7 @@ Remarque : tenez compte des restrictions sur les caractères spéciaux dans les
 
 
 
+[[proxy-configuration]]
 === Configuration du proxy
 
 L'unité d'acquisition utilise l'authentification bidirectionnelle/mutuelle pour se connecter au serveur Data Infrastructure Insights .  Le certificat client doit être transmis au serveur Data Infrastructure Insights pour être authentifié.  Pour ce faire, le proxy doit être configuré pour transmettre la requête https au serveur Data Infrastructure Insights sans déchiffrer les données.
@@ -100,6 +103,7 @@ Si vous disposez de Workload Security sur votre locataire, les URL de point de t
 
 
 
+[[adding-a-windows-acquisition-unit]]
 == Ajout d'une unité d'acquisition Windows
 
 .Étapes d'installation de l'unité d'acquisition Windows
@@ -133,6 +137,7 @@ image:NewWindowsAUInstall.png["Installation de Windows AU"]
 
 
 
+[[proxy-configuration]]
 === Configuration du proxy
 
 L'unité d'acquisition utilise l'authentification bidirectionnelle/mutuelle pour se connecter au serveur Data Infrastructure Insights .  Le certificat client doit être transmis au serveur Data Infrastructure Insights pour être authentifié.  Pour ce faire, le proxy doit être configuré pour transmettre la requête https au serveur Data Infrastructure Insights sans déchiffrer les données.
@@ -157,6 +162,7 @@ Si vous disposez de Workload Security sur votre locataire, les URL de point de t
 
 
 
+[[uninstalling-an-acquisition-unit]]
 == Désinstallation d'une unité d'acquisition
 
 Pour désinstaller le logiciel de l’unité d’acquisition, procédez comme suit :
@@ -201,6 +207,7 @@ image:AU_for_Device_Resolution.png["AU utilisé pour la résolution de l'apparei
 
 
 
+[[reinstalling-an-acquisition-unit]]
 == Réinstallation d'une unité d'acquisition
 
 Pour réinstaller une unité d'acquisition sur le même serveur/VM, vous devez suivre ces étapes :
@@ -223,6 +230,7 @@ Vous pouvez également sélectionner plusieurs collecteurs de données du même 
 
 
 
+[[viewing-au-details]]
 == Affichage des détails de l'UA
 
 La page de détails de l'unité d'acquisition (AU) fournit des détails utiles sur une AU ainsi que des informations pour aider au dépannage.  La page de détails de l'AU contient les sections suivantes :

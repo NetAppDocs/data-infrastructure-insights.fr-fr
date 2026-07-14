@@ -22,6 +22,7 @@ NOTE: Si vous souhaitez vérifier les fichiers d'installation avant d'installer 
 
 
 
+[[installing-an-agent]]
 == Installation d'un agent
 
 Si vous installez un collecteur de données de service et que vous n'avez pas encore configuré d'agent, vous êtes invité à installer d'abord un agent pour le système d'exploitation approprié.  Cette rubrique fournit des instructions pour l'installation de l'agent Telegraf sur les systèmes d'exploitation suivants :
@@ -51,6 +52,7 @@ NOTE: Si vous utilisez un proxy, lisez les instructions du proxy pour votre plat
 
 
 
+[[log-locations]]
 === Emplacements des journaux
 
 Les messages journaux Telegraf sont redirigés de stdout vers les fichiers journaux suivants par défaut :
@@ -62,6 +64,7 @@ Les messages journaux Telegraf sont redirigés de stdout vers les fichiers journ
 
 
 
+[[windows]]
 === Windows
 
 
@@ -149,6 +152,7 @@ sc.exe delete telegraf
 
 
 
+[[rhel-and-centos]]
 === RHEL et CentOS
 
 
@@ -251,6 +255,7 @@ systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ an
 
 
 
+[[ubuntu-and-debian]]
 === Ubuntu et Debian
 
 
@@ -353,12 +358,15 @@ systemctl stop telegraf (If your operating system is using systemd)
 
 
 
+[[verifying-telegraf-package-checksums]]
+[[verifying-checksums]]
 == Vérification des sommes de contrôle des packages Telegraf
 
 Le programme d'installation de l'agent Data Infrastructure Insights effectue des contrôles d'intégrité, mais certains utilisateurs peuvent souhaiter effectuer leurs propres vérifications avant d'installer le binaire Telegraf téléchargé.  Cela peut être fait en téléchargeant le programme d'installation et en générant une somme de contrôle pour le package téléchargé, puis en comparant la somme de contrôle à la valeur indiquée dans les instructions d'installation.
 
 
 
+[[download-the-installer-package-without-installing]]
 === Téléchargez le package d'installation sans l'installer
 
 Pour effectuer une opération de téléchargement uniquement (par opposition au téléchargement et à l'installation par défaut), les utilisateurs peuvent modifier la commande d'installation de l'agent obtenue à partir de l'interface utilisateur et supprimer l'option « installer ».
@@ -405,6 +413,7 @@ L'extrait d'installation téléchargé et copié à partir de DII vérifie autom
 
 
 
+[[verify-checksum-value]]
 === Vérifier la valeur de la somme de contrôle
 
 Pour générer la valeur de somme de contrôle, exécutez la commande suivante pour votre plate-forme appropriée :
@@ -419,6 +428,7 @@ Pour générer la valeur de somme de contrôle, exécutez la commande suivante p
 
 
 
+[[install-the-downloaded-package]]
 === Installer le package téléchargé
 
 Une fois que tous les artefacts ont été vérifiés de manière satisfaisante, l'installation de l'agent peut être lancée en exécutant :
@@ -431,12 +441,14 @@ Fenêtres:
  .\cloudinsights-windows.ps1 -install
 
 
+[[creating-and-using-api-access-tokens]]
 == Création et utilisation de jetons d'accès API
 
 Pour créer un jeton d'accès API pour l'ingestion de données Telegraf, veuillez effectuer l'une des opérations suivantes :
 
 
 
+[[create-through-the-data-collector-installation-page]]
 === Créer via la page d'installation du collecteur de données
 
 . Accédez à la page d’installation de Data Collector pour la plate-forme que vous souhaitez utiliser (Windows, Linux).
@@ -447,6 +459,7 @@ Pour créer un jeton d'accès API pour l'ingestion de données Telegraf, veuille
 
 
 
+[[manually-create-an-api-access-token]]
 === Créer manuellement un jeton d'accès API
 
 . Accédez à Admin > Accès API.
@@ -466,6 +479,7 @@ Pour utiliser votre jeton d’accès API nouvellement créé, sélectionnez-le d
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Quelques solutions à essayer si vous rencontrez des problèmes lors de la configuration d'un agent :

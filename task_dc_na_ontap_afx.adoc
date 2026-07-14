@@ -18,6 +18,7 @@ Ce collecteur de données acquiert l'inventaire, les journaux EMS et les donnée
 
 
 
+[[requirements]]
 == Exigences
 
 Les exigences suivantes sont requises pour configurer et utiliser ce collecteur de données :
@@ -33,6 +34,7 @@ Les exigences suivantes sont requises pour configurer et utiliser ce collecteur 
 
 
 
+[[a-note-about-permissions]]
 == Remarque sur les autorisations
 
 Étant donné qu'un certain nombre de tableaux de bord ONTAP de Data Infrastructure Insights s'appuient sur des compteurs ONTAP avancés, vous devez conserver l'option *Activer la collecte de données de compteur avancé* activée dans la section Configuration avancée du collecteur de données.
@@ -83,6 +85,7 @@ restUser       http        password      restRole         no     none
 ----
 
 
+[[migration]]
 == Migration
 
 Pour migrer d'un ancien collecteur de données ONTAP (ontapi) vers le nouveau collecteur ONTAP REST, procédez comme suit :
@@ -97,9 +100,10 @@ Vous pouvez utiliser ce même processus pour revenir au collecteur précédent, 
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -114,9 +118,10 @@ Vous pouvez utiliser ce même processus pour revenir au collecteur précédent, 
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -137,11 +142,12 @@ Vous pouvez utiliser ce même processus pour revenir au collecteur précédent, 
 |===
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les données d'inventaire, de journaux et de performances du collecteur de données ONTAP .  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour l’actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -174,12 +180,14 @@ Data Infrastructure Insights acquiert les données d'inventaire, de journaux et 
 |===
 
 
+[[ontap-data-management-terminology]]
 == Terminologie de la gestion des données ONTAP
 
 Les conditions suivantes s'appliquent aux objets ou références que vous pourriez trouver sur les pages de destination des ressources de stockage ONTAP Data Management.  Bon nombre de ces termes s’appliquent également à d’autres collecteurs de données.
 
 
 
+[[storage]]
 === Stockage
 
 * Modèle – Une liste délimitée par des virgules des noms de modèles de nœuds uniques et discrets au sein de ce cluster.  Si tous les nœuds des clusters sont du même type de modèle, un seul nom de modèle apparaîtra.
@@ -194,6 +202,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[storage-pool]]
 === Piscine de stockage
 
 * Stockage – sur quelle baie de stockage ce pool réside.  Obligatoire.
@@ -210,6 +219,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[storage-node]]
 === Nœud de stockage
 
 * Stockage – à quelle baie de stockage ce nœud fait partie.  Obligatoire.
@@ -228,6 +238,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[ontap-power-metrics]]
 == Mesures de puissance ONTAP
 
 Plusieurs modèles ONTAP fournissent des mesures de puissance pour Data Infrastructure Insights qui peuvent être utilisées pour la surveillance ou l'alerte.  Les listes de modèles pris en charge et non pris en charge ci-dessous ne sont pas exhaustives mais devraient fournir quelques indications ; en général, si un modèle appartient à la même famille qu'un modèle de la liste, la prise en charge doit être la même.
@@ -242,11 +253,12 @@ FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/ AFF 8020 FAS/ AFF 8040 FAS/ AFF 806
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problème: | Essayez ceci: 
 

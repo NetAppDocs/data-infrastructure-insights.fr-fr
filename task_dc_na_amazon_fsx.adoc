@@ -17,11 +17,12 @@ NOTE: Ce collecteur Data Infrastructure Insights nécessite un utilisateur ONTAP
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights acquiert les données d'inventaire et de performances du collecteur de données FSx- NetApp .  Pour chaque type d’actif acquis, la terminologie la plus courante utilisée pour l’actif est indiquée.  Lorsque vous consultez ou dépannez ce collecteur de données, gardez à l'esprit la terminologie suivante :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Terme du fournisseur/modèle | Data Infrastructure Insights 
 
@@ -36,12 +37,14 @@ Data Infrastructure Insights acquiert les données d'inventaire et de performanc
 |===
 
 
+[[fsx-netapp-terminology]]
 == Terminologie FSx- NetApp
 
 Les conditions suivantes s'appliquent aux objets ou références que vous pourriez trouver sur les pages de destination des ressources de stockage FSx- NetApp .  Bon nombre de ces termes s’appliquent également à d’autres collecteurs de données.
 
 
 
+[[storage]]
 === Stockage
 
 * Modèle – Une liste délimitée par des virgules des noms de modèles uniques et discrets au sein de ce cluster.
@@ -55,6 +58,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[storage-pool]]
 === Piscine de stockage
 
 * Stockage – sur quelle baie de stockage ce pool réside.  Obligatoire.
@@ -66,6 +70,7 @@ Les conditions suivantes s'appliquent aux objets ou références que vous pourri
 
 
 
+[[requirements]]
 == Exigences
 
 Les exigences suivantes sont requises pour configurer et utiliser ce collecteur de données :
@@ -77,9 +82,10 @@ Les exigences suivantes sont requises pour configurer et utiliser ce collecteur 
 
 
 
+[[configuration]]
 == Configuration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -94,6 +100,7 @@ Les exigences suivantes sont requises pour configurer et utiliser ce collecteur 
 |===
 
 
+[[advanced-metrics]]
 == Mesures avancées
 
 Ce collecteur de données collecte les mesures avancées suivantes à partir du stockage FSx pour NetApp ONTAP :
@@ -115,15 +122,17 @@ Notez que les commandes CLI et API FSx récupèrent certaines valeurs de capacit
 
 
 
+[[troubleshooting]]
 == Dépannage
 
 Quelques éléments à essayer si vous rencontrez des problèmes avec ce collecteur de données :
 
 
 
+[[inventory]]
 === Inventaire
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problème: | Essayez ceci: 
 

@@ -14,6 +14,7 @@ Data Infrastructure Insights utilise le collecteur de données Azure NetApp File
 
 
 
+[[requirements]]
 == Exigences
 
 Vous avez besoin des informations suivantes pour configurer ce collecteur de données.
@@ -32,11 +33,12 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-ser
 
 
 
+[[configuration]]
 == Configuration
 
 Saisissez les données dans les champs du collecteur de données conformément au tableau ci-dessous :
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -54,9 +56,10 @@ Saisissez les données dans les champs du collecteur de données conformément a
 |===
 
 
+[[advanced-configuration]]
 == Configuration avancée
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Champ | Description 
 
@@ -65,6 +68,7 @@ Saisissez les données dans les champs du collecteur de données conformément a
 |===
 
 
+[[troubleshooting]]
 == Dépannage
 
 * Les informations d’identification utilisées par votre collecteur de données ANF doivent avoir accès à tous les abonnements Azure contenant des volumes ANF.
