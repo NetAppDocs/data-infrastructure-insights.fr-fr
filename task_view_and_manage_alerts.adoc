@@ -83,3 +83,32 @@ Si vous disposez d'un moniteur avec une fenêtre de 30 minutes qui détecte qu'u
 Il est possible de configurer un moniteur de telle manière que la condition existe *toujours* sur l'objet surveillé, par exemple, IOPS > 1 ou latence > 0.  Ceux-ci sont souvent créés comme moniteurs « de test » puis oubliés.  Ces moniteurs créent des alertes qui restent ouvertes en permanence sur les objets constitutifs, ce qui peut entraîner des problèmes de stress et de stabilité du système au fil du temps.
 
 Pour éviter cela, Data Infrastructure Insights fermera automatiquement toute alerte « active en permanence » après 7 jours.  Notez que les conditions de surveillance sous-jacentes peuvent (probablement) continuer à exister, provoquant l'émission d'une nouvelle alerte presque immédiatement, mais cette fermeture des alertes « toujours actives » atténue une partie du stress du système qui peut autrement se produire.
+
+
+
+[[maintenance-windows]]
+== Fenêtres de maintenance
+
+Les fenêtres de maintenance vous permettent de supprimer les notifications d'alerte pendant les périodes de maintenance planifiées, vous aidant ainsi à éviter les interruptions inutiles.
+
+Grâce aux fenêtres de maintenance, vous pouvez planifier des périodes de maintenance spécifiques durant lesquelles les notifications d'alerte sont désactivées pour les objets et les indicateurs de votre choix. Par exemple, vous pouvez désactiver les notifications d'alerte déclenchées par certains systèmes de stockage lorsque ces systèmes sont en période de mise à niveau planifiée.
+
+Vous pouvez choisir de supprimer à la fois les alertes et les notifications pendant cette période, ou de supprimer uniquement les notifications tout en continuant à détecter les alertes.
+
+image:Maintenance_Windows_example.png["Exemple de fenêtres de maintenance, width=400"]
+
+
+
+[[creating-a-maintenance-window]]
+=== Création d'une fenêtre de maintenance
+
+Pour créer une fenêtre de maintenance :
+
+. Accédez à *Observability > Alerts > Maintenance Windows* et cliquez sur *+ Maintenance Window*.
+. Saisissez un *nom* pour la fenêtre de maintenance. Pour un résultat optimal, choisissez un nom clair et précis.
+. Sélectionnez le *périphérique de stockage* ou l'*attribut d'objet*.
+. Filtrer pour le ou les *moniteurs*. Les caractères génériques sont acceptés.
+. Sélectionnez l’*Heure de début* et l’*Heure de fin* de la période de maintenance.
+. Choisissez si vous souhaitez supprimer les *alertes et notifications*, ou *uniquement les notifications* (les alertes sont toujours détectées pendant la période concernée).
+. Cliquez sur *Enregistrer* pour créer la fenêtre de maintenance.
+

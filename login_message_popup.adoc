@@ -22,6 +22,6 @@ Le message prend en charge le Markdown de base, vous pouvez donc appliquer des m
 
 Choisissez si les utilisateurs voient le message uniquement lors de leur prochaine connexion ou à chaque connexion ultérieure.
 
-image:login_banner_settings.png["paramètres de la bannière de connexion"]
+image:login_banner_settings.png["Paramètres de la bannière de connexion, largeur=400"]
 
 Veuillez noter que l'utilisateur doit confirmer la réception du message de connexion pour pouvoir le fermer. Une fois fermé, les fenêtres contextuelles supplémentaires (What's New updates, mises à jour des conditions d'utilisation, etc.) s'afficheront.

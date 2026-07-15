@@ -14072,8 +14072,6 @@
   <block id="810bac3bcbfe61628b10fe3df2e0ea96" category="paragraph">Un administrateur peut configurer le message dans Admin &gt; Notifications, dans l’onglet « Login Banner ».</block>
   <block id="22f60aff39394bad553a00e2940bdf11" category="paragraph">Le message prend en charge le Markdown de base, vous pouvez donc appliquer des mises en forme telles que le gras, l’italique, les tableaux, etc.</block>
   <block id="6a46079dd2d659655fc832470519e71a" category="paragraph">Choisissez si les utilisateurs voient le message uniquement lors de leur prochaine connexion ou à chaque connexion ultérieure.</block>
-  <block id="6a5f1dd41e7d3fa22fbd71d29b46cea4" category="inline-image-macro">paramètres de la bannière de connexion</block>
-  <block id="bd6c3bd0a46b9e6da4828acea4a9e315" category="paragraph"><block ref="bd6c3bd0a46b9e6da4828acea4a9e315" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1ef61a1b7e25b910ec7beca0741bd208" category="paragraph">Veuillez noter que l'utilisateur doit confirmer la réception du message de connexion pour pouvoir le fermer. Une fois fermé, les fenêtres contextuelles supplémentaires (What's New updates, mises à jour des conditions d'utilisation, etc.) s'afficheront.</block>
   <block id="38f64824b0d19083b9c439a8b4af41e4" category="admonition">Une fois que vous avez installé un agent sur un serveur ou une machine virtuelle, Data Infrastructure Insights collecte les métriques de ce système en plus de celles provenant des collecteurs de données que vous configurez. Ces métriques sont collectées en tant que métriques « Node ».</block>
   <block id="7fa36585f976625a51b4f3be0f46f0b5" category="cell">Ces erreurs peuvent survenir si vous utilisez un dépôt Docker personnalisé ou privé et que vous n'avez pas encore configuré l'opérateur de surveillance Kubernetes pour le reconnaître correctement. <block ref="2d47cbc88497421e2fe69677ce7d4cef" category="inline-xref-macro-rx"></block> à propos de la configuration pour un dépôt personnalisé/privé.</block>
@@ -14176,4 +14174,29 @@
   <block id="4f23d2244ea630f361d554b54b77bf03" category="list-text">Adresse IP du serveur Red Hat OpenShift Virtualization sur le port 6443 via l'API REST</block>
   <block id="427f91a8692cb3d3ee52ca20ff3b659c" category="cell">Port utilisé pour la communication HTTPS avec RHOV. La valeur par défaut est 6443.</block>
   <block id="635a6e63b01914992d3584137f9e6ba6" category="sidebar">Nutanix AHV</block>
+  <block id="a257f7f4b2f6e07845ce567df142ad00" category="section-title">Juillet 2026</block>
+  <block id="8014692a31dc15996a299cb6c0683d99" category="section-title">Nouvelle page d'accueil de l'assistant IA</block>
+  <block id="217f492cb52cc14d717c54a81afbacfe" category="paragraph">L'assistant IA de DII dispose désormais d'une page d'accueil dédiée, mettant l'analyse intelligente de l'infrastructure au premier plan. Démarrez instantanément de nouvelles conversations, reprenez votre dernière session en un clic ou commencez rapidement avec des suggestions d'invites.</block>
+  <block id="dac1263103d1a0aa0f29eb002af291af" category="inline-image-macro">Tableau de bord AI par défaut, largeur=800</block>
+  <block id="6c78ab210f62dbc85fe22910374ff62b" category="paragraph"><block ref="6c78ab210f62dbc85fe22910374ff62b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7bd22707614b54a5cb3a8b8f12117bb9" category="paragraph">Accédez à la page d'accueil depuis *AI Assistant* dans le menu de navigation ou ouvrez l'AI Assistant depuis n'importe où en utilisant l'icône « étoiles » en haut à gauche.</block>
+  <block id="8946b454436a3b11aac461eaa734adfe" category="inline-image-macro">Menu de navigation de l'assistant IA, largeur=600</block>
+  <block id="2c8265bfd753072f003bc24b1df77111" category="inline-image-macro">Accès à l'assistant IA depuis n'importe où, width=300</block>
+  <block id="9f6f73922ecce265167332ab3cf87f92" category="paragraph"><block ref="f633ce7b4fef8820f87a799ad31a7cb5" category="inline-image-macro-rx" type="image"></block> <block ref="fefcd3a065be75939d8d47b234d9d0c0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="94187d26105df3824bea268e9ae25535" category="inline-image-macro">Paramètres de la bannière de connexion, largeur=400</block>
+  <block id="d1e27aaece77e53fc070c0b0ce490e10" category="paragraph"><block ref="d1e27aaece77e53fc070c0b0ce490e10" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58b6e1ec0b6ec5b4a454251805124640" category="section-title">Fenêtres de maintenance</block>
+  <block id="3f3ec1c35b7249f193c068e0a8c036d3" category="paragraph">Grâce aux fenêtres de maintenance, vous pouvez planifier des périodes de maintenance spécifiques durant lesquelles les notifications d'alerte sont désactivées pour les objets et les indicateurs de votre choix. Par exemple, vous pouvez désactiver les notifications d'alerte déclenchées par certains systèmes de stockage lorsque ces systèmes sont en période de mise à niveau planifiée.</block>
+  <block id="df24d8acd06534f618230d46637d6d1b" category="paragraph">Vous pouvez choisir de supprimer à la fois les alertes et les notifications pendant cette période, ou de supprimer uniquement les notifications tout en continuant à détecter les alertes.</block>
+  <block id="1aed277c750cbbf8c2859dca8664dada" category="inline-image-macro">Exemple de fenêtres de maintenance, width=400</block>
+  <block id="8f42f88b31e1b4f22f40e0ae5ecd38fb" category="paragraph"><block ref="8f42f88b31e1b4f22f40e0ae5ecd38fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="82bc146aadfdab0e3c7443c79b7f4c8b" category="section-title">Création d'une fenêtre de maintenance</block>
+  <block id="4def5c59958a122e22c3d06a018c9ef0" category="paragraph">Pour créer une fenêtre de maintenance :</block>
+  <block id="2b2323dddeb141b098fbcd705e90e359" category="list-text">Accédez à *Observability &gt; Alerts &gt; Maintenance Windows* et cliquez sur *+ Maintenance Window*.</block>
+  <block id="610844a278d3d0601b4bc4c27665563e" category="list-text">Saisissez un *nom* pour la fenêtre de maintenance. Pour un résultat optimal, choisissez un nom clair et précis.</block>
+  <block id="c74ae4bc562a9f2edcf63aa39e8fac31" category="list-text">Sélectionnez le *périphérique de stockage* ou l'*attribut d'objet*.</block>
+  <block id="5760cc9b0c4d4910c5b80c7479b3f2a3" category="list-text">Filtrer pour le ou les *moniteurs*. Les caractères génériques sont acceptés.</block>
+  <block id="ea10176408e9b54a867b0e298e4b4bc2" category="list-text">Sélectionnez l’*Heure de début* et l’*Heure de fin* de la période de maintenance.</block>
+  <block id="de3fd64c52ab8fa6a72c862f6f638fb0" category="list-text">Choisissez si vous souhaitez supprimer les *alertes et notifications*, ou *uniquement les notifications* (les alertes sont toujours détectées pendant la période concernée).</block>
+  <block id="35d71e914a221fd7fa5e2e2d8c813a2a" category="list-text">Cliquez sur *Enregistrer* pour créer la fenêtre de maintenance.</block>
 </blocks>
