@@ -245,4 +245,21 @@ Redémarrez le collecteur une fois les autorisations définies.
 {vider}
 
 '''
+*Problème :* Après l’ajout ou la mise à niveau d’un collecteur de données ONTAP SVM (Sécurité des charges de travail), le locataire affiche une alerte de surprovisionnement ou de dépassement de capacité d’abonnement. La capacité de stockage brute a augmenté alors qu’aucun nouveau matériel n’a été ajouté.
+
+*Essayez ceci :* Le même espace de stockage peut être comptabilisé deux fois : une fois par un collecteur de cluster Observability ONTAP et une autre fois par un collecteur Workload Security SVM sur le même cluster.
+
+Comparez la capacité de stockage brute indiquée par les collecteurs Observability ONTAP et les collecteurs Workload Security SVM. Pour chaque collecteur SVM, vérifiez si son cluster parent est déjà surveillé par un collecteur Observability ONTAP. Si c'est le cas, seule la capacité du cluster doit être prise en compte dans l'utilisation de l'abonnement.
+
+Vérifiez si une migration SVM récente a eu lieu entre les clusters. Après la migration d'une SVM, les indicateurs de capacité peuvent rester associés à l'ancien cluster jusqu'à ce que Workload Security reçoive des informations mises à jour du collecteur.
+
+Assurez-vous que le collecteur de données ONTAP SVM pour le SVM migré est en état d'exécution (RUNNING). Si nécessaire, redémarrez le collecteur afin que Workload Security puisse collecter les métriques correctes de cluster et de capacité après la migration.
+
+Si la capacité du cluster et celle de la SVM apparaissent toutes deux dans le total, il est probable qu'elles soient comptabilisées deux fois. Cela se produit souvent peu après l'ajout, la mise à niveau, le redémarrage d'un collecteur SVM ou la migration d'une SVM entre clusters.
+
+Si votre consommation dépasse toujours votre abonnement, ouvrez un ticket d’assistance NetApp en fournissant les données de consommation avant et après l’alerte, ainsi qu’une liste des collecteurs Observability et SVM avec leur capacité de stockage brute déclarée.
+
+{vider}
+
+'''
 Si vous rencontrez toujours des problèmes, contactez les liens d'assistance mentionnés dans la page *Aide > Assistance*.
