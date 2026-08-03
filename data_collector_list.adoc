@@ -206,7 +206,7 @@ Liste alphabétique des collecteurs de données pris en charge par Data Infrastr
 | link:task_dc_oracle_zfs.html["Appareil de stockage Oracle ZFS"] | Infrastructure 
 
 
-| link:task_dc_promox_ve.html["Promox Virtual Environment"] | Infrastructure 
+| link:task_dc_proxmox_ve.html["Environnement virtuel Proxmox"] | Infrastructure 
 
 
 | link:task_dc_pure_flasharray.html["Baie Flash Pure Storage"] | Infrastructure 

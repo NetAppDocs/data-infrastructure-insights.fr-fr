@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task_dc_promox_ve.html 
-keywords: data collector, Promox VirtVirtual Environmentalization 
-summary: Configuration du collecteur de données Promox Virtual Environment. 
+permalink: task_dc_proxmox_ve.html 
+keywords: data collector, Proxmox Virtual Environment, PVE 
+summary: 'Configuration du collecteur de données de l"environnement virtuel Proxmox.' 
 ---
-= Collecteur de données Red Hat OpenShift Virtualization
+= Collecteur de données Proxmox Virtual Environment
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,9 @@ summary: Configuration du collecteur de données Promox Virtual Environment.
 
 
 [role="lead"]
-Le collecteur DII Promox Virtual Environment collecte les données d'inventaire. Il s'agit d'un collecteur basé sur une API REST HTTPS.
+Le collecteur DII Proxmox Virtual Environment collecte les données d'inventaire et de performance des machines virtuelles PVE (à l'exclusion des conteneurs LXC) et des hôtes/hyperviseurs. Ce collecteur, basé sur une API REST HTTPS, doit communiquer avec l'API REST Proxmox fournie par le service/démon pveproxy, qui écoute sur le port TCP 8006.
+
+Ce collecteur de données utilise l'authentification par utilisateur + jeton. Vous devrez créer un compte de service sur chaque cluster Proxmox, attribuer les autorisations appropriées à l'utilisateur, puis générer un jeton d'API avec ces mêmes droits. Veuillez noter que le jeton d'un utilisateur Proxmox donné ne possède PAS nécessairement les mêmes droits/autorisations que l'utilisateur. DII aura généralement besoin de droits globaux d'Audit/Monitor : si vous créez un compte de service via l'interface utilisateur Proxmox, pour PathPermision commencez à « / », définissez Propagate sur « Oui » et déverrouillez au minimum Datastore Audit, Mapping Audit, Pool Audit, SDN Audit, Sys Audit, VM Audit, VM Monitor. Une fois l'utilisateur créé, vous pouvez alors créer un jeton d'accès pour celui-ci. Il est fortement recommandé de créer le jeton avec une expiration de 0 afin de garantir que le jeton n'expire jamais.
 
 
 
@@ -37,10 +39,7 @@ Pour chaque type d’actif acquis par Data Infrastructure Insights, la terminolo
 | Machine virtuelle | Machine virtuelle 
 
 
-| Domaine de stockage | Magasin de données 
-
-
-| Unité logique | LUN 
+| Stockage | Magasin de données 
 |===
 Remarque : il s’agit uniquement de mappages de terminologie courants et ils peuvent ne pas représenter tous les cas pour ce collecteur de données.
 

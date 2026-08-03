@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_nutanix_ahv.html 
-keywords: data collector, Nutanix, AHV Series 
+keywords: data collector, Nutanix, AHV Series , Acropolis, hypervisor 
 summary: Configuration du collecteur de données Nutanix AHV. 
 ---
 = Collecteur de données Nutanix AHV
@@ -51,10 +51,10 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 == Exigences
 
 * Adresse IP ou nom de domaine pleinement qualifié de Prism Central
-* Nom d'utilisateur et mot de passe Prism Central local ou LDAP (un compte en lecture seule suffit pour l'inventaire et les performances ; Admin n'est pas requis)
+* Nom d'utilisateur et mot de passe Prism Central local ou LDAP (un compte en lecture seule suffit)
 * Port requis : HTTPS 9440
 * Prism Central version pc.2023.x ou ultérieure (API v3) ; pc.7.x ou ultérieure recommandée (API v4)
-* Les indicateurs de performance nécessitent Prism Central avec l'API v4.0.b1 ou ultérieure (pc.7.3+). Sur les versions antérieures, l'inventaire est toujours collecté, mais aucune donnée de performance n'est rapportée.
+* Les indicateurs de performance nécessitent Prism Central avec l'API v4.0.b1 ou ultérieure (pc.7.3+). Sur les versions antérieures, l'inventaire est collecté mais aucune donnée de performance n'est rapportée.
 
 
 
@@ -67,7 +67,7 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 | Champ | Description 
 
 
-| Adresse IP de Prism Central | Adresse IP ou FQDN de l'instance Prism Central 
+| Adresse IP / nom d’hôte Prism Central | Adresse IP ou FQDN de l'instance Prism Central 
 
 
 | Nom d'utilisateur | Nom d'utilisateur Prism Central 
@@ -88,13 +88,13 @@ Remarque : il s’agit uniquement de mappages de terminologie courants et ils p
 | Port TCP | Port TCP utilisé pour la connexion à Prism Central. La valeur par défaut est 9440. 
 
 
-| Intervalle d'interrogation de l'inventaire (min) | Intervalle entre les sondages d'inventaire. La valeur par défaut est de 60 minutes. 
+| Intervalle d'interrogation de l'inventaire (min) | Intervalle entre les interrogations d'inventaire. La valeur par défaut est de 60 minutes. 
 
 
-| Intervalle d'interrogation des performances (sec) | Intervalle entre les sondages de performance. La valeur par défaut est de 300 secondes. 
+| Intervalle d'interrogation des performances (sec) | Intervalle entre les relevés de performance. La valeur par défaut est de 300 secondes. 
 
 
-| Délai d'expiration HTTP (s) | Délai d'expiration de la requête HTTP. La valeur par défaut est de 60 secondes. 
+| Délai d'expiration HTTP (s) | Délai d'expiration de la requête HTTP. La valeur par défaut est 60. 
 
 
 | Nombre de tentatives HTTP | Nombre de tentatives HTTP en cas d'échec temporaire. La valeur par défaut est 3. 
