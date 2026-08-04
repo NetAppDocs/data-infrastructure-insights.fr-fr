@@ -13298,7 +13298,6 @@
   <block id="ecf8fabbb23da2c68f49fe920a05137b" category="list-text">SELinux sur les plateformes ci-dessus</block>
   <block id="3542743c69e8fceb06c77e5e17299c89" category="sidebar">Assistant IA</block>
   <block id="f7836ca926de84b06b0b4bcbe4b8b756" category="inline-link-macro">Avis concernant Data Infrastructure Insights (including Workload Security), window=_blank</block>
-  <block id="135e17e82c7d3d3d83bd8b0737be432e" category="paragraph"><block ref="135e17e82c7d3d3d83bd8b0737be432e" category="inline-link-macro-rx"></block></block>
   <block id="b6b93d34f92b439117e54d9343c7efda" category="section-title">Aperçus actuels :</block>
   <block id="559de301b9b7af9f5b932d860f605701" category="list-text"><block ref="7a32ab5261b86b8c9a5d88b540c79f2d" category="inline-link-macro-rx"></block> aperçu.</block>
   <block id="ca39a60f24fda5dbbda8809fbd3fe717" category="inline-link-macro">*Data Infrastructure Insights Assistant IA d'analyse des infrastructures de données*</block>
@@ -14210,4 +14209,5 @@
   <block id="91a0d06a30de7119cf7ba6773ce38416" category="paragraph">Le collecteur DII Proxmox Virtual Environment collecte les données d'inventaire et de performance des machines virtuelles PVE (à l'exclusion des conteneurs LXC) et des hôtes/hyperviseurs. Ce collecteur, basé sur une API REST HTTPS, doit communiquer avec l'API REST Proxmox fournie par le service/démon pveproxy, qui écoute sur le port TCP 8006.</block>
   <block id="7bd4738e9b2442fc6fa7415e88a3298d" category="paragraph">Ce collecteur de données utilise l'authentification par utilisateur + jeton. Vous devrez créer un compte de service sur chaque cluster Proxmox, attribuer les autorisations appropriées à l'utilisateur, puis générer un jeton d'API avec ces mêmes droits. Veuillez noter que le jeton d'un utilisateur Proxmox donné ne possède PAS nécessairement les mêmes droits/autorisations que l'utilisateur. DII aura généralement besoin de droits globaux d'Audit/Monitor : si vous créez un compte de service via l'interface utilisateur Proxmox, pour PathPermision commencez à « / », définissez Propagate sur « Oui » et déverrouillez au minimum Datastore Audit, Mapping Audit, Pool Audit, SDN Audit, Sys Audit, VM Audit, VM Monitor. Une fois l'utilisateur créé, vous pouvez alors créer un jeton d'accès pour celui-ci. Il est fortement recommandé de créer le jeton avec une expiration de 0 afin de garantir que le jeton n'expire jamais.</block>
   <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
+  <block id="48c0a89dc87860e6c3b42a70bbd13c53" category="paragraph"><block ref="48c0a89dc87860e6c3b42a70bbd13c53" category="inline-link-macro-rx"></block></block>
 </blocks>
