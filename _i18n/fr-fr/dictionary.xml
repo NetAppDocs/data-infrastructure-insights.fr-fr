@@ -14210,4 +14210,19 @@
   <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
   <block id="48c0a89dc87860e6c3b42a70bbd13c53" category="paragraph"><block ref="48c0a89dc87860e6c3b42a70bbd13c53" category="inline-link-macro-rx"></block></block>
   <block id="c84f7a37a2691cf36f1774d52de72e5c" category="cell">Utilisateur autorisé à effectuer des recherches dans l'annuaire. Par exemple : _username@companyname.com_ ou _username@domainname.com_</block>
+  <block id="6327e373cb9d0fbf371b2256065e27ee" category="paragraph">*Problème* : Un ou plusieurs collecteurs de données affichent Dégradé au lieu de En cours d’exécution, même si le service de collecte est opérationnel.</block>
+  <block id="055eb384fa852b687767bb268c418c28" category="paragraph">*À essayer* : SWS signale un état dégradé lorsqu’une ou plusieurs connexions FPolicy sur un nœud sont déconnectées. Il ne s’agit pas d’une panne — le collecteur continue de fonctionner — mais les événements d’audit de ces nœud(s) peuvent être perdus jusqu’au rétablissement de la connectivité.</block>
+  <block id="5871b970a58be1158700074b636e1c5f" category="paragraph">ONTAP établit une connexion de canal de contrôle FPolicy à partir de chaque nœud disposant d'une interface logique de données opérationnelle pour la SVM. Un nœud sans interface logique de données locale ne peut pas se connecter. Voir :</block>
+  <block id="39475af1c92345ffc68386ed4b1a0a0f" category="inline-link-macro">Processus de communication entre le nœud et le serveur FPolicy ONTAP externe</block>
+  <block id="7d7a6ac9f8b0b4a140566200f8cc41c3" category="list-text"><block ref="7d7a6ac9f8b0b4a140566200f8cc41c3" category="inline-link-macro-rx"></block></block>
+  <block id="a8586bcde30f3a7086e92d68b265c18d" category="inline-link-macro">Comment ONTAP FPolicy fonctionne avec des serveurs FPolicy externes</block>
+  <block id="985934cbe9028d56b65bfa3b21aad963" category="list-text"><block ref="985934cbe9028d56b65bfa3b21aad963" category="inline-link-macro-rx"></block></block>
+  <block id="f682e452dc85bb2174061cf42fd8868a" category="inline-link-macro">Exigences, considérations et bonnes pratiques pour la configuration de ONTAP FPolicy</block>
+  <block id="351ae455f2a730183e8897803e2cc1ad" category="list-text"><block ref="351ae455f2a730183e8897803e2cc1ad" category="inline-link-macro-rx"></block></block>
+  <block id="4381f5d310695f16c64a241811aa950c" category="paragraph">Dans l'interface utilisateur, notez quel(s) nœud(s) sont déconnectés, puis vérifiez si ces nœuds ont un LIF de données pour le SVM.</block>
+  <block id="145d6a54d6a8818e67b1777aef9dfd9c" category="inline-link-macro">KB : Serveur Fpolicy non connecté en raison de « no local lif present »</block>
+  <block id="c76035114caecd573a508cd95e8d8d6d" category="list-text">Aucune LIF de données sur le(s) nœud(s) indiqué(s) : ignorez l’état dégradé. ONTAP peut afficher FPolicy comme déconnecté avec le motif « Aucune LIF locale présente pour se connecter au serveur FPolicy » lorsqu’aucune LIF de données locale n’est présente ; cela est attendu. Voir <block ref="17a696575179b878a537e91ff06ec3c2" category="inline-link-macro-rx"></block>. Une future version de SWS arrêtera de marquer le collecteur comme dégradé dans ce cas.</block>
+  <block id="4f6c09f8f53defdd48fed140cd4550f9" category="list-text">LIF de données présente sur le(s) nœud(s) listé(s) : examinez pourquoi FPolicy est déconnecté (LIF hors service / client data-fpolicy manquant, réseau/pare-feu ou redémarrage/basculement temporaire).</block>
+  <block id="10fcc85a32e000abd9a522eb086aa8b9" category="list-text">Remarque : Le programme d’installation de l’agent doit être téléchargé dans un dossier différent de celui contenant l’agent en cours d’exécution.</block>
+  <block id="323d0a1ff366ae52ecb4199bd4c94bcc" category="paragraph">Par exemple, si l'agent s'exécute dans « /test_user/apps », la commande serait :</block>
 </blocks>

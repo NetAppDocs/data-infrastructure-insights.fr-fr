@@ -262,4 +262,24 @@ Si votre consommation dépasse toujours votre abonnement, ouvrez un ticket d’a
 {vider}
 
 '''
+*Problème* : Un ou plusieurs collecteurs de données affichent Dégradé au lieu de En cours d’exécution, même si le service de collecte est opérationnel.
+
+*À essayer* : SWS signale un état dégradé lorsqu’une ou plusieurs connexions FPolicy sur un nœud sont déconnectées. Il ne s’agit pas d’une panne — le collecteur continue de fonctionner — mais les événements d’audit de ces nœud(s) peuvent être perdus jusqu’au rétablissement de la connectivité.
+
+ONTAP établit une connexion de canal de contrôle FPolicy à partir de chaque nœud disposant d'une interface logique de données opérationnelle pour la SVM. Un nœud sans interface logique de données locale ne peut pas se connecter. Voir :
+
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/node-fpolicy-server-communication-process-concept.html["Processus de communication entre le nœud et le serveur FPolicy ONTAP externe"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/fpolicy-external-fpolicy-servers-concept.html["Comment ONTAP FPolicy fonctionne avec des serveurs FPolicy externes"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/requirements-best-practices-fpolicy-concept.html["Exigences, considérations et bonnes pratiques pour la configuration de ONTAP FPolicy"^]
+
+
+Dans l'interface utilisateur, notez quel(s) nœud(s) sont déconnectés, puis vérifiez si ces nœuds ont un LIF de données pour le SVM.
+
+* Aucune LIF de données sur le(s) nœud(s) indiqué(s) : ignorez l’état dégradé. ONTAP peut afficher FPolicy comme déconnecté avec le motif « Aucune LIF locale présente pour se connecter au serveur FPolicy » lorsqu’aucune LIF de données locale n’est présente ; cela est attendu. Voir link:https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/Fpolicy_server_not_connected_due_to_no_local_lif_present_on_one_or_more_nodes["KB : Serveur Fpolicy non connecté en raison de « no local lif present »"^]. Une future version de SWS arrêtera de marquer le collecteur comme dégradé dans ce cas.
+* LIF de données présente sur le(s) nœud(s) listé(s) : examinez pourquoi FPolicy est déconnecté (LIF hors service / client data-fpolicy manquant, réseau/pare-feu ou redémarrage/basculement temporaire).
+
+
+{vider}
+
+'''
 Si vous rencontrez toujours des problèmes, contactez les liens d'assistance mentionnés dans la page *Aide > Assistance*.
