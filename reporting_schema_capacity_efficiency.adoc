@@ -1,0 +1,262 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_capacity_efficiency.html 
+summary: 'Tables de schéma pour l"entrepôt de données Capacity Efficiency' 
+keywords: dwh, data warehouse, schema, reporting, capacity efficiency 
+---
+= Schéma d'efficacité des capacités
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Source : point de terminaison OData *dwh_capacity_efficiency* — Data Infrastructure Insights
+
+Tables trouvées : *3* | Associations : *2*
+
+
+
+[[key-relationships-between-tables]]
+== Relations clés entre les tables
+
+
+
+[[efficiencyfact]]
+=== efficacité_fait
+
+[cols="1,1,1"]
+|===
+| Table référencée (parent) | Colonne FK | PK parent 
+
+
+| link:#entity-date_dimension["dimension de date"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["dimension_de_stockage"] | storageTk | tk 
+|===
+
+
+[[tables-fields]]
+== Tables et champs
+
+PKClé primaire FKClé étrangère NOT NULL Champ obligatoire
+
+
+
+[[datedimension]]
+=== dimension de date
+
+
+
+[[top]]
+=== ↑ haut
+
+Ensemble(s) d'entités : date_dimension
+
+[cols="1,1,1,1"]
+|===
+| Champ | Type | Nullable | Commentaire 
+
+
+| tk | Int32 | Oui | TK de l'objet date. 
+
+
+| fullDate | DateTimeOffset | Oui | Date de l'objet date. 
+
+
+| dayInMonth | Octet | Oui | Jour du mois correspondant à l'objet date. Le premier jour du mois a la valeur 1. 
+
+
+| dayInYear | Int32 | Oui | Jour de l'année correspondant à l'objet date. Le premier jour de l'année a la valeur 1. 
+
+
+| dateYear | Int32 | Oui | Année de l'objet date. 
+
+
+| yearLabel | Chaîne | Oui | Année formatée en chaîne de caractères 
+
+
+| monthNum | Octet | Oui | Mois de l'objet date. Janvier a la valeur 1. 
+
+
+| monthLabel | Chaîne | Oui | Mois formaté en chaîne de caractères 
+
+
+| dayInWeekNum | Octet | Oui | Jour de la semaine correspondant à l'objet date. Dimanche a la valeur 1. 
+
+
+| trimestre | Octet | Oui | Trimestre de l'objet date. Le premier trimestre a la valeur 1. 
+
+
+| quarterLabel | Chaîne | Oui | Trimestre formaté comme chaîne de caractères 
+
+
+| dayInQuarter | Int32 | Oui | Jour du trimestre de l'objet date. Le premier jour du trimestre a la valeur 1. 
+
+
+| repQuarter | Octet | Oui | Indique si cette date est la première date disponible pour son trimestre. 
+
+
+| repMonth | Octet | Oui | Indique si cette date est la première date disponible pour son mois. 
+
+
+| repWeek | Octet | Oui | Indique si cette date est la première date disponible pour sa semaine. 
+
+
+| repDay | Octet | Oui | Indique si cette date est la première date disponible pour ce jour. 
+
+
+| repMonthOrLatest | Octet | Oui | Indique si cette date correspond au repmonth ou à la date la plus récente. Cet indicateur est utilisé par les Datamarts qui fonctionnent avec des reps mensuels. La seule différence étant que, pour le mois en cours, il s'agit de la plus récente. 
+
+
+| sspFlag | Octet | Oui | Indique si cette date est utilisée dans Storage et Storage Pool Datamart. C'est vrai pour les représentants du mois et pour le dernier nombre de jours tel que défini dans la configuration. 
+
+
+| dernière | Chaîne | Oui | Indique si cette date est la dernière date disponible dans le tableau. 
+
+
+| avenir | Chaîne | Oui | Indique si cette date est une date future (projection) ou une date régulière. 
+|===
+
+
+==== Propriétés de navigation (Jointures)
+
+[cols="1,1,1"]
+|===
+| Propriété Nav | Entité liée | Cardinalité / Jointure 
+
+
+| efficacité_fait | link:#entity-efficiency_fact["efficacité_fait"] | beaucoup 
+|===
+
+
+[[efficiencyfact]]
+=== efficacité_fait
+
+
+
+[[top]]
+=== ↑ haut
+
+Ensemble(s) d'entités : efficiency_fact
+
+[cols="1,1,1,1"]
+|===
+| Champ | Type | Nullable | Commentaire 
+
+
+| tk *[PK]* | Int32 | Oui | TK du fait. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["dimension de date"].tk | Int32 | Oui | TK de la date. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["dimension_de_stockage"].tk | Int32 | Oui | TK du stockage où réside la capacité. 
+
+
+| rawCapacityMB | Int64 | Oui | Capacité de stockage brute en Mo. 0 lorsque la technologie est spécifiée (non NULL). 
+
+
+| backendCapacityMB | Int64 | Oui | Capacité totale des LUN backend dans une baie virtuelle, en Mo. 0 lorsque la technologie est spécifiée (non NULL). 
+
+
+| storageTechnology | Chaîne | Oui | Technologies d'efficacité et de protection du stockage telles que la déduplication, le provisionnement fin, les instantanés et le RAID. NULL pour représenter la capacité brute et la capacité backend du stockage (une ligne par stockage). 
+
+
+| gainMB | Int64 | Oui | Capacité gagnée grâce à l'utilisation de la technologie. 0 lorsque la technologie n'est pas spécifiée (NULL). 
+
+
+| lossMB | Int64 | Oui | Perte de capacité due à l'utilisation de cette technologie. 0 lorsque la technologie n'est pas spécifiée (NULL). 
+
+
+| potentialGainMB | Int64 | Oui | Capacité potentielle à gagner en utilisant pleinement la technologie. 0 lorsque la technologie n'est pas spécifiée (NULL). 
+
+
+| perte potentielleMB | Int64 | Oui | Capacité potentielle de perte liée à l'utilisation optimale de la technologie. 0 lorsque la technologie n'est pas spécifiée (NULL). 
+|===
+
+
+==== Propriétés de navigation (Jointures)
+
+[cols="1,1,1"]
+|===
+| Propriété Nav | Entité liée | Cardinalité / Jointure 
+
+
+| dimension_de_stockage | link:#entity-storage_dimension["dimension_de_stockage"] | une JOINTURE : storageTk=link:#entity-storage_dimension["dimension_de_stockage"].tk 
+
+
+| dimension de date | link:#entity-date_dimension["dimension de date"] | une JOINTURE : dateTk=link:#entity-date_dimension["dimension de date"].tk 
+|===
+
+
+[[storagedimension]]
+=== dimension_de_stockage
+
+
+
+[[top]]
+=== ↑ haut
+
+Ensemble(s) d'entités : storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| Champ | Type | Nullable | Commentaire 
+
+
+| tk | Int32 | Oui | TK de cette ligne de baie de stockage. 
+
+
+| nom | Chaîne | Oui | Nom de la baie de stockage. 
+
+
+| identifiant | Chaîne | Oui | Identifiant de l'appareil. 
+
+
+| ip | Chaîne | Oui | Adresse IP de la baie de stockage. 
+
+
+| modèle | Chaîne | Oui | Modèle de la baie de stockage. 
+
+
+| fabricant | Chaîne | Oui | Fabricant de la baie de stockage. 
+
+
+| serialNumber | Chaîne | Oui | Numéro de série de la baie de stockage. 
+
+
+| microcodeVersion | Chaîne | Oui | Version du firmware exécutée sur la baie de stockage. 
+
+
+| famille | Chaîne | Oui | Nom de la famille du système de stockage (par exemple Clariion, Symmetrix etc). 
+
+
+| url | Chaîne | Oui | URL de cet espace de stockage sur Insight Server. 
+
+
+| id | Int64 | Oui | GUID de la baie de stockage dans dwh_inventory.storage. 
+
+
+| dernière | Chaîne | Oui | Indique si cette ligne est la plus récente pour ce stockage. 
+
+
+| dateTk | Int32 | Oui | TK de la date à laquelle cette ligne de tableau de stockage a été créée. 
+
+
+| dataCenter | Chaîne | Oui | dataCenter annotation valeur attribuée à dwh_dimensions.storage_dimension 
+|===
+
+
+==== Propriétés de navigation (Jointures)
+
+[cols="1,1,1"]
+|===
+| Propriété Nav | Entité liée | Cardinalité / Jointure 
+
+
+| efficacité_fait | link:#entity-efficiency_fact["efficacité_fait"] | beaucoup 
+|===

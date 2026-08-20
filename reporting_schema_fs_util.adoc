@@ -1,0 +1,571 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_fs_util.html 
+summary: 'Tables de schéma pour l"entrepôt de données File System Utilization' 
+keywords: dwh, data warehouse, schema, reporting, file system, fs util 
+---
+= Schéma d'utilisation du système de fichiers
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Source : point de terminaison OData *dwh_fs_util* — Data Infrastructure Insights
+
+Tables trouvées : *8* | Associations : *7*
+
+
+
+[[key-relationships-between-tables]]
+== Relations clés entre les tables
+
+
+
+[[fsutilfact]]
+=== fs_util_fact
+
+[cols="1,1,1"]
+|===
+| Table référencée (parent) | Colonne FK | PK parent 
+
+
+| link:#entity-compute_resource_dimension["dimension de ressources de calcul"] | computeResourceTk | tk 
+
+
+| link:#entity-date_dimension["dimension de date"] | dateTk | tk 
+
+
+| link:#entity-file_system_dimension["dimension_du_système_de_fichiers"] | fsTk | tk 
+
+
+| link:#entity-host_dimension["dimension de l'hôte"] | hostTk | tk 
+
+
+| link:#entity-storage_dimension["dimension_de_stockage"] | storageTk | tk 
+
+
+| link:#entity-tier_dimension["tier_dimension"] | tierTk | tk 
+
+
+| link:#entity-vm_dimension["vm_dimension"] | vmTk | tk 
+|===
+
+
+[[tables-fields]]
+== Tables et champs
+
+PKClé primaire FKClé étrangère NOT NULL Champ obligatoire
+
+
+
+[[computeresourcedimension]]
+=== dimension de ressources de calcul
+
+
+
+[[top]]
+=== ↑ haut
+
+Ensemble(s) d'entités : compute_resource_dimension
+
+[cols="1,1,1,1"]
+|===
+| Champ | Type | Nullable | Commentaire 
+
+
+| tk | Int32 | Oui | TK de cette ligne de ressources de calcul. 
+
+
+| identifiant | Chaîne | Oui | Identifiant naturel de la ressources de calcul. 
+
+
+| nom | Chaîne | Oui | nom de la ressource de calcul 
+
+
+| type | Chaîne | Oui | type de ressource. 
+
+
+| domaine | Chaîne | Oui | domaine de ressources de calcul. 
+
+
+| ip | Chaîne | Oui | Liste d'adresses IP, séparées par des virgules, des ressources de calcul. 
+
+
+| système d'exploitation | Chaîne | Oui | Système d'exploitation exécuté sur la ressource de calcul. 
+
+
+| id | Int64 | Oui | GUID de la ressource de calcul dans dwh_inventory.compute_resource 
+
+
+| dernière | Chaîne | Oui | Indique si cette ligne est la plus récente pour cette ressource de calcul. 
+
+
+| dateTk | Int32 | Oui | TK de la date à laquelle cette ligne de ressources de calcul a été créée. 
+|===
+
+
+==== Propriétés de navigation (Jointures)
+
+[cols="1,1,1"]
+|===
+| Propriété Nav | Entité liée | Cardinalité / Jointure 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | beaucoup 
+|===
+
+
+[[datedimension]]
+=== dimension de date
+
+
+
+[[top]]
+=== ↑ haut
+
+Ensemble(s) d'entités : date_dimension
+
+[cols="1,1,1,1"]
+|===
+| Champ | Type | Nullable | Commentaire 
+
+
+| tk | Int32 | Oui | TK de l'objet date. 
+
+
+| fullDate | DateTimeOffset | Oui | Date de l'objet date. 
+
+
+| dayInMonth | Octet | Oui | Jour du mois correspondant à l'objet date. Le premier jour du mois a la valeur 1. 
+
+
+| dayInYear | Int32 | Oui | Jour de l'année correspondant à l'objet date. Le premier jour de l'année a la valeur 1. 
+
+
+| dateYear | Int32 | Oui | Année de l'objet date. 
+
+
+| yearLabel | Chaîne | Oui | Année formatée en chaîne de caractères 
+
+
+| monthNum | Octet | Oui | Mois de l'objet date. Janvier a la valeur 1. 
+
+
+| monthLabel | Chaîne | Oui | Mois formaté en chaîne de caractères 
+
+
+| dayInWeekNum | Octet | Oui | Jour de la semaine correspondant à l'objet date. Dimanche a la valeur 1. 
+
+
+| trimestre | Octet | Oui | Trimestre de l'objet date. Le premier trimestre a la valeur 1. 
+
+
+| quarterLabel | Chaîne | Oui | Trimestre formaté comme chaîne de caractères 
+
+
+| dayInQuarter | Int32 | Oui | Jour du trimestre de l'objet date. Le premier jour du trimestre a la valeur 1. 
+
+
+| repQuarter | Octet | Oui | Indique si cette date est la première date disponible pour son trimestre. 
+
+
+| repMonth | Octet | Oui | Indique si cette date est la première date disponible pour son mois. 
+
+
+| repWeek | Octet | Oui | Indique si cette date est la première date disponible pour sa semaine. 
+
+
+| repDay | Octet | Oui | Indique si cette date est la première date disponible pour ce jour. 
+
+
+| repMonthOrLatest | Octet | Oui | Indique si cette date correspond au repmonth ou à la date la plus récente. Cet indicateur est utilisé par les Datamarts qui fonctionnent avec des reps mensuels. La seule différence étant que, pour le mois en cours, il s'agit de la plus récente. 
+
+
+| sspFlag | Octet | Oui | Indique si cette date est utilisée dans Storage et Storage Pool Datamart. C'est vrai pour les représentants du mois et pour le dernier nombre de jours tel que défini dans la configuration. 
+
+
+| dernière | Chaîne | Oui | Indique si cette date est la dernière date disponible dans le tableau. 
+
+
+| avenir | Chaîne | Oui | Indique si cette date est une date future (projection) ou une date régulière. 
+|===
+
+
+==== Propriétés de navigation (Jointures)
+
+[cols="1,1,1"]
+|===
+| Propriété Nav | Entité liée | Cardinalité / Jointure 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | beaucoup 
+|===
+
+
+[[filesystemdimension]]
+=== dimension_du_système_de_fichiers
+
+
+
+[[top]]
+=== ↑ haut
+
+Ensemble(s) d'entités : file_system_dimension
+
+[cols="1,1,1,1"]
+|===
+| Champ | Type | Nullable | Commentaire 
+
+
+| tk | Int32 | Oui | TK de la dimension. 
+
+
+| computeResourceIdentifier | Chaîne | Oui | Identifiant de la ressource de calcul. Partie de la clé naturelle. 
+
+
+| nom | Chaîne | Oui | Point de montage ou lettre de lecteur. Partie de la clé naturelle. 
+
+
+| emplacement | Chaîne | Oui | Indique l'emplacement des données et leur mode d'accès. Par exemple : local, SAN, NAS. La valeur sera nulle si l'emplacement est inconnu. 
+
+
+| hardwareId | Chaîne | Oui | Identifiant spécifique à l'hôte. Sera défini sur null si inconnu. 
+
+
+| type | Chaîne | Oui | Type de système de fichiers. Par exemple : NTFS, FAT, UFS, UDF, ZFS, ISO 9660, VXFS, etc. Sera défini sur null si inconnu. 
+
+
+| id | Int64 | Oui | GUID du système de fichiers dans dwh_inventory.file_system. 
+
+
+| dernière | Chaîne | Oui | Indique si cette ligne est la plus récente pour ce système de fichiers. 
+
+
+| dateTk | Int32 | Oui | TK de la date à laquelle cette ligne du système de fichiers a été créée. 
+|===
+
+
+==== Propriétés de navigation (Jointures)
+
+[cols="1,1,1"]
+|===
+| Propriété Nav | Entité liée | Cardinalité / Jointure 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | beaucoup 
+|===
+
+
+[[fsutilfact]]
+=== fs_util_fact
+
+
+
+[[top]]
+=== ↑ haut
+
+Ensemble(s) d'entités : fs_util_fact
+
+[cols="1,1,1,1"]
+|===
+| Champ | Type | Nullable | Commentaire 
+
+
+| tk *[PK]* | Int32 | Oui | TK du fait. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["dimension de date"].tk | Int32 | Oui | TK de la date. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["dimension de l'hôte"].tk | Int32 | Oui | TK de l'hôte. 
+
+
+| vmTk *[FK]* →link:#entity-vm_dimension["vm_dimension"].tk | Int32 | Oui | TK de la vm. 
+
+
+| computeResourceTk *[FK]* →link:#entity-compute_resource_dimension["dimension de ressources de calcul"].tk | Int32 | Oui | TK du computeResource. 
+
+
+| fsTk *[FK]* →link:#entity-file_system_dimension["dimension_du_système_de_fichiers"].tk | Int32 | Oui | TK du système de fichiers. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["dimension_de_stockage"].tk | Int32 | Oui | TK du stockage. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["tier_dimension"].tk | Int32 | Oui | TK du tier. 
+
+
+| tailleMB | Int64 | Oui | Taille du système de fichiers en Mo. 
+
+
+| usedMB | Int64 | Oui | Quantité de capacité du système de fichiers utilisée et non disponible. 
+|===
+
+
+==== Propriétés de navigation (Jointures)
+
+[cols="1,1,1"]
+|===
+| Propriété Nav | Entité liée | Cardinalité / Jointure 
+
+
+| dimension_du_système_de_fichiers | link:#entity-file_system_dimension["dimension_du_système_de_fichiers"] | une JOINTURE : fsTk=link:#entity-file_system_dimension["dimension_du_système_de_fichiers"].tk 
+
+
+| dimension_de_stockage | link:#entity-storage_dimension["dimension_de_stockage"] | une JOINTURE : storageTk=link:#entity-storage_dimension["dimension_de_stockage"].tk 
+
+
+| tier_dimension | link:#entity-tier_dimension["tier_dimension"] | une JOIN : tierTk=link:#entity-tier_dimension["tier_dimension"].tk 
+
+
+| dimension de ressources de calcul | link:#entity-compute_resource_dimension["dimension de ressources de calcul"] | une JOINTURE : computeResourceTk=link:#entity-compute_resource_dimension["dimension de ressources de calcul"].tk 
+
+
+| dimension de l'hôte | link:#entity-host_dimension["dimension de l'hôte"] | une JOINTURE : hostTk=link:#entity-host_dimension["dimension de l'hôte"].tk 
+
+
+| vm_dimension | link:#entity-vm_dimension["vm_dimension"] | une JOINTURE : vmTk=link:#entity-vm_dimension["vm_dimension"].tk 
+
+
+| dimension de date | link:#entity-date_dimension["dimension de date"] | une JOINTURE : dateTk=link:#entity-date_dimension["dimension de date"].tk 
+|===
+
+
+[[hostdimension]]
+=== dimension de l'hôte
+
+
+
+[[top]]
+=== ↑ haut
+
+Ensemble(s) d'entités : host_dimension
+
+[cols="1,1,1,1"]
+|===
+| Champ | Type | Nullable | Commentaire 
+
+
+| tk | Int32 | Oui | TK de cette ligne d'hôte. 
+
+
+| nom | Chaîne | Oui | Nom de l'hôte. 
+
+
+| identifiant | Chaîne | Oui | Identifiant de l'appareil. 
+
+
+| ip | Chaîne | Oui | Liste des adresses IP de l’hôte, séparées par des virgules. 
+
+
+| système d'exploitation | Chaîne | Oui | Système d'exploitation en cours d'exécution sur l'hôte. 
+
+
+| modèle | Chaîne | Oui | Numéro de modèle. 
+
+
+| fabricant | Chaîne | Oui | Fabricant de l'hôte. 
+
+
+| url | Chaîne | Oui | URL de cet hôte dans Insight Server. 
+
+
+| id | Int64 | Oui | GUID de l'hôte dans dwh_inventory.host. 
+
+
+| dernière | Chaîne | Oui | Indique si cette ligne est la plus récente pour cet hôte. 
+
+
+| dateTk | Int32 | Oui | TK de la date à laquelle cette ligne d'hôte a été créée. 
+
+
+| dataCenter | Chaîne | Oui | dataCenter valeur d'annotation attribuée à dwh_dimensions.host_dimension 
+|===
+
+
+==== Propriétés de navigation (Jointures)
+
+[cols="1,1,1"]
+|===
+| Propriété Nav | Entité liée | Cardinalité / Jointure 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | beaucoup 
+|===
+
+
+[[storagedimension]]
+=== dimension_de_stockage
+
+
+
+[[top]]
+=== ↑ haut
+
+Ensemble(s) d'entités : storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| Champ | Type | Nullable | Commentaire 
+
+
+| tk | Int32 | Oui | TK de cette ligne de baie de stockage. 
+
+
+| nom | Chaîne | Oui | Nom de la baie de stockage. 
+
+
+| identifiant | Chaîne | Oui | Identifiant de l'appareil. 
+
+
+| ip | Chaîne | Oui | Adresse IP de la baie de stockage. 
+
+
+| modèle | Chaîne | Oui | Modèle de la baie de stockage. 
+
+
+| fabricant | Chaîne | Oui | Fabricant de la baie de stockage. 
+
+
+| serialNumber | Chaîne | Oui | Numéro de série de la baie de stockage. 
+
+
+| microcodeVersion | Chaîne | Oui | Version du firmware exécutée sur la baie de stockage. 
+
+
+| famille | Chaîne | Oui | Nom de la famille du système de stockage (par exemple Clariion, Symmetrix etc). 
+
+
+| url | Chaîne | Oui | URL de cet espace de stockage sur Insight Server. 
+
+
+| id | Int64 | Oui | GUID de la baie de stockage dans dwh_inventory.storage. 
+
+
+| dernière | Chaîne | Oui | Indique si cette ligne est la plus récente pour ce stockage. 
+
+
+| dateTk | Int32 | Oui | TK de la date à laquelle cette ligne de tableau de stockage a été créée. 
+
+
+| dataCenter | Chaîne | Oui | dataCenter annotation valeur attribuée à dwh_dimensions.storage_dimension 
+|===
+
+
+==== Propriétés de navigation (Jointures)
+
+[cols="1,1,1"]
+|===
+| Propriété Nav | Entité liée | Cardinalité / Jointure 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | beaucoup 
+|===
+
+
+[[tierdimension]]
+=== tier_dimension
+
+
+
+[[top]]
+=== ↑ haut
+
+Ensemble(s) d’entités :tier_dimension
+
+[cols="1,1,1,1"]
+|===
+| Champ | Type | Nullable | Commentaire 
+
+
+| tk | Int32 | Oui | TK de cette rangée de niveaux. 
+
+
+| nom | Chaîne | Oui | Nom d’identification du tier. 
+
+
+| séquence | Int32 | Oui | Numéro séquentiel du niveau tel que défini dans dwh_inventory.annotation_value. 
+
+
+| coût | Double | Oui | Coût associé à ce niveau. 
+
+
+| id | Int64 | Oui | GUID du niveau dans dwh_inventory.annotation_value. 
+
+
+| dernière | Chaîne | Oui | Indique si cette ligne est la plus récente pour ce niveau. 
+
+
+| dateTk | Int32 | Oui | TK de la date à laquelle cette ligne de niveau a été créée. 
+|===
+
+
+==== Propriétés de navigation (Jointures)
+
+[cols="1,1,1"]
+|===
+| Propriété Nav | Entité liée | Cardinalité / Jointure 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | beaucoup 
+|===
+
+
+[[vmdimension]]
+=== vm_dimension
+
+
+
+[[top]]
+=== ↑ haut
+
+Ensemble(s) d’entités : vm_dimension
+
+[cols="1,1,1,1"]
+|===
+| Champ | Type | Nullable | Commentaire 
+
+
+| tk | Int32 | Oui | TK de cette ligne de machine virtuelle. 
+
+
+| nom | Chaîne | Oui | Nom de la machine virtuelle. 
+
+
+| naturalKey | Chaîne | Oui | Identifiant naturel de la machine virtuelle. 
+
+
+| système d'exploitation | Chaîne | Oui | Système d'exploitation invité. 
+
+
+| virtualCenterIp | Chaîne | Oui | Adresse IP du centre virtuel de la machine virtuelle. 
+
+
+| ips | Chaîne | Oui | Liste des adresses IP de la machine virtuelle, séparées par des virgules. 
+
+
+| url | Chaîne | Oui | URL de cette machine virtuelle dans Insight Server. 
+
+
+| id | Int64 | Oui | GUID de la machine virtuelle dans dwh_inventory.hv_virtual_machine 
+
+
+| dernière | Chaîne | Oui | Indique si cette ligne est la plus récente pour cette machine virtuelle. 
+
+
+| dateTk | Int32 | Oui | TK de la date à laquelle cette ligne de machine virtuelle a été créée. 
+|===
+
+
+==== Propriétés de navigation (Jointures)
+
+[cols="1,1,1"]
+|===
+| Propriété Nav | Entité liée | Cardinalité / Jointure 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | beaucoup 
+|===
