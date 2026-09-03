@@ -19,6 +19,45 @@ NetApp améliore et optimise continuellement ses produits et services.  Voici qu
 
 
 
+[[september-2026]]
+== Septembre 2026
+
+
+
+[[ai-assistant-visualizations]]
+=== Visualisations d’assistant IA
+
+Transformez instantanément des données complexes en informations graphiques claires. Demandez à l’Assistant IA de créer un tableau de bord et il visualisera la réponse à l’aide de graphiques et de tableaux interactifs, vous aidant à identifier les tendances et à résoudre les problèmes plus rapidement sans création manuelle de graphiques.
+
+image:ai_assistant-column_graph.png["Visualisation de l'assistant IA"]
+
+
+
+[[enhanced-vm-analyzer-filtering]]
+=== Filtrage amélioré de l'analyseur de machine virtuelle
+
+Une nouvelle option dans la vue VM Analyzer permet de masquer les volumes montés sans datastore, offrant ainsi une vue plus claire pour simplifier le dépannage des VMs.
+
+image:vm_analyzer_datastore_only_view.png["curseur de vue réservé au datastore"]
+
+
+
+[[ui-update-user-data-edit-mode]]
+=== Mise à jour de l'interface utilisateur : Mode d'édition des données utilisateur
+
+Préservez l'exactitude des informations relatives aux actifs tout en limitant les risques de modifications accidentelles. Les annotations et les attributs (par exemple, les « Données utilisateur ») s'affichent désormais en mode lecture seule par défaut, ce qui vous permet de consulter les détails avant de choisir le moment où vous souhaitez les modifier.
+
+Modifiez uniquement lorsque nécessaire. Depuis un panneau coulissant, développez les détails de l'actif et sélectionnez l'icône en forme de crayon. La page d'accueil de l'actif s'ouvre en mode Édition, où vous pouvez mettre à jour les informations et sélectionner Enregistrer lorsque vous avez terminé.
+
+Vous pouvez également ouvrir directement la page d'accueil de la ressource et sélectionner Modifier dans le coin supérieur droit.
+
+image:UserDataEdit-Slideout.png["Modifier les données utilisateur dans le panneau latéral - Icône crayon, largeur=400"]
+
+image:UserDataEdit-LP.png["Mode d'édition de la page d'accueil, largeur=200"]
+
+'''
+
+
 [[july-2026]]
 == Juillet 2026
 
