@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_query_assign_multiple_applications.html 
-summary: Utilisez une requête pour attribuer plusieurs applications ou annotations à des objets, ou pour supprimer plusieurs applications ou annotations de ces objets. 
+summary: Gérez efficacement les applications et les annotations sur plusieurs ressources grâce à des opérations groupées basées sur des requêtes pour les attribuer ou les supprimer sans configuration manuelle et individuelle de chaque ressource. 
 keywords: query, queries, application, annotation, multiple 
 ---
 = Affectation ou suppression de plusieurs applications à des actifs
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Vous pouvez attribuer plusieurslink:task_create_application.html["applications"] pour supprimer plusieurs applications des actifs à l'aide d'une requête au lieu de devoir les attribuer ou les supprimer manuellement.
+Optimisez la gestion des ressources en utilisant des requêtes pour effectuer des opérations groupées sur les applications et les annotations. Au lieu de configurer manuellement chaque ressource individuellement, vous pouvez attribuer ou supprimer efficacement plusieurs applications et annotations sur des groupes de ressources en une seule opération.
 
 
 NOTE: Vous pouvez utiliser ces étapes pour ajouter ou supprimerlink:task_defining_annotations.html["annotations"] de la même façon.

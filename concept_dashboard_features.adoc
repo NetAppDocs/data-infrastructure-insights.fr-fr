@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboard_features.html 
-summary: Fonctionnalités et concepts du tableau de bord. 
+summary: Maîtrisez les fonctionnalités avancées des tableaux de bord, notamment la personnalisation des widgets, le filtrage des requêtes, la configuration des variables, les transformations de données et les options de mise en forme pour créer des visualisations puissantes et flexibles. 
 keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll up, grouping, aggregate, aggregation, filter, axis, group by, expressions, timeseries, exact match, theme, visibility, formatting, conditional, hide, collapse, expand 
 ---
 = Fonctionnalités du tableau de bord
@@ -14,7 +14,7 @@ keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll 
 
 
 [role="lead"]
-Les tableaux de bord et les widgets offrent une grande flexibilité dans la façon dont les données sont affichées.  Voici quelques concepts pour vous aider à tirer le meilleur parti de vos tableaux de bord personnalisés.
+Exploitez pleinement le potentiel de vos tableaux de bord grâce à des fonctionnalités avancées et des options de personnalisation. Apprenez à configurer les requêtes des widgets, à appliquer des transformations de données, à utiliser des variables pour le filtrage dynamique et à mettre en œuvre une mise en forme sophistiquée afin de créer des visualisations performantes et adaptées à vos besoins de surveillance d'infrastructure.
 
 toc:[]
 

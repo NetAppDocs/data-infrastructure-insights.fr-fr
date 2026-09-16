@@ -1,20 +1,24 @@
 ---
 sidebar: sidebar 
 permalink: task_view_queries.html 
-summary: Affichage des requêtes créées 
+summary: 'Consultez et gérez vos requêtes enregistrées grâce à des options d"affichage personnalisables, notamment le filtrage, le tri et l"agencement des colonnes, pour une organisation et un accès efficaces aux requêtes.' 
 keywords: query, queries, viewing 
 ---
 = Consultation des requêtes
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Vous pouvez afficher vos requêtes pour surveiller vos actifs et modifier la manière dont vos requêtes affichent les données liées à vos actifs.
+Accédez à vos requêtes enregistrées et gérez-les via l'interface de requêtes, où vous pouvez filtrer, trier et personnaliser l'affichage pour organiser et localiser efficacement les requêtes dont vous avez besoin pour la surveillance et l'analyse des actifs.
 
 .Étapes
 . Connectez-vous à votre locataire Data Infrastructure Insights .
-. Cliquez sur *Requêtes* et sélectionnez *Afficher toutes les requêtes*.  Vous pouvez modifier la façon dont les requêtes s'affichent en effectuant l'une des opérations suivantes :
+. Cliquez sur *Explorer* et sélectionnez *All metric queries*. Vous pouvez modifier l'affichage des requêtes en procédant comme suit :
 . Vous pouvez saisir du texte dans la zone de filtre pour rechercher et afficher des requêtes spécifiques.
 . Vous pouvez modifier l'ordre de tri des colonnes dans le tableau des requêtes en ordre croissant (flèche vers le haut) ou décroissant (flèche vers le bas) en cliquant sur la flèche dans l'en-tête de la colonne.
 . Pour redimensionner une colonne, passez la souris sur l'en-tête de la colonne jusqu'à ce qu'une barre bleue apparaisse.  Placez la souris sur la barre et faites-la glisser vers la droite ou vers la gauche.

@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_create_query.html 
-summary: Les requêtes vous permettent d’identifier rapidement et facilement les actifs et les mesures d’intérêt. 
+summary: 'Créez des requêtes personnalisées pour rechercher, filtrer et analyser vos actifs et indicateurs d"infrastructure grâce à un contrôle précis, un regroupement flexible et un affichage des résultats personnalisable.' 
 keywords: query, queries 
 ---
 = Créer des requêtes
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Les requêtes vous permettent de rechercher les actifs de votre locataire à un niveau granulaire, ce qui vous permet de filtrer les données souhaitées et de trier les résultats à votre guise.
+Créez des requêtes performantes pour explorer vos ressources d'infrastructure avec précision grâce à des options de filtrage, de regroupement et de tri flexibles. Élaborez des recherches ciblées pour identifier des ressources spécifiques, analyser les indicateurs de performance et organiser les résultats selon vos besoins.
 
 Par exemple, vous pouvez créer une requête pour les _volumes_, ajouter un filtre pour rechercher des _stockages_ particuliers associés aux volumes sélectionnés, ajouter un autre filtre pour rechercher une _annotation_ particulière telle que « Niveau 1 » sur les stockages sélectionnés, et enfin ajouter un autre filtre pour rechercher tous les stockages avec _IOPS - Lecture (IO/s)_ supérieur à 25.  Lorsque les résultats sont affichés, vous pouvez ensuite trier les colonnes d’informations associées à la requête par ordre croissant ou décroissant.
 

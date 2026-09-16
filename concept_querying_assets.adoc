@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_querying_assets.html 
-summary: 'Interrogez les ressources d"inventaire et les indicateurs d"intégration pour surveiller, dépanner et analyser les performances de l"ensemble de votre infrastructure, y compris les ressources de stockage, de calcul et de réseau.' 
+summary: 'Interrogez les ressources d"infrastructure physiques et virtuelles ainsi que les indicateurs d"intégration pour surveiller les performances, résoudre les problèmes et créer des vues ciblées de votre environnement à l"aide de critères de recherche précis.' 
 keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, Host, Internal Volume, iSCSI, Network, Portal, Path, Port, Qtree, Quota, Share, Storage, Node, Pool, SVM, Switch, Tape, VMDK, Virtual Machine, VM, Volume, Zone, Member 
 ---
 = Interrogation des assets et des métriques
@@ -14,7 +14,7 @@ keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, 
 
 
 [role="lead"]
-Interrogez les ressources physiques et virtuelles de votre infrastructure pour surveiller les performances, résoudre les problèmes et effectuer des recherches précises selon des critères personnalisés comme des annotations. Data Infrastructure Insights permet d’interroger différents types de ressources — des baies de stockage et hôtes aux applications et machines virtuelles — ainsi que d’intégrer des indicateurs provenant de Kubernetes, Docker et ONTAP Advanced Data pour une visibilité complète.
+Utilisez des requêtes pour rechercher et analyser vos ressources et indicateurs d'infrastructure de manière granulaire. Interrogez les ressources d'inventaire physiques et virtuelles, les données d'intégration de Kubernetes et ONTAP, ainsi que les indicateurs de performance pour surveiller votre environnement, résoudre les problèmes et créer des vues ciblées selon vos critères spécifiques.
 
 Notez que les règles d'annotation, qui attribuent automatiquement des annotations aux ressources, nécessitent une requête partagée avec tout le monde. Voir ci-dessous pour plus d'informations sur le partage des requêtes.
 

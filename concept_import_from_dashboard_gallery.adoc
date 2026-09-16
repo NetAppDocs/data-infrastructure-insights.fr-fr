@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_import_from_dashboard_gallery.html 
-summary: 'Vous pouvez importer des tableaux de bord recommandés pour vous aider à répondre aux questions d"analyse commerciale. Vous pouvez également importer des tableaux de bord personnalisés que vous avez précédemment exportés.' 
+summary: Importez des tableaux de bord prédéfinis depuis la galerie pour obtenir rapidement des informations commerciales, ou importez des tableaux de bord personnalisés que vous avez exportés pour partager des configurations entre locataires. 
 keywords: dashboard, gallery, import, export 
 ---
 = Importation de tableaux de bord
@@ -14,7 +14,7 @@ keywords: dashboard, gallery, import, export
 
 
 [role="lead"]
-Data Infrastructure Insights fournit un certain nombre de tableaux de bord recommandés pour fournir des informations commerciales sur vos données. Chaque tableau de bord contient des widgets conçus pour aider à répondre à une question particulière ou à résoudre un problème particulier lié aux données actuellement collectées sur votre locataire. DII vous permet également d'exporter un tableau de bord utile et de l'importer vers un autre locataire.
+Accédez aux tableaux de bord prédéfinis de la galerie pour obtenir rapidement des informations sur votre infrastructure, ou importez des tableaux de bord personnalisés que vous avez exportés d'autres locataires. Les tableaux de bord de la galerie sont adaptés aux collecteurs de données de votre environnement et conçus pour répondre à des questions métier spécifiques, tandis que les tableaux de bord exportés vous permettent de partager des configurations utiles entre plusieurs locataires.
 
 
 

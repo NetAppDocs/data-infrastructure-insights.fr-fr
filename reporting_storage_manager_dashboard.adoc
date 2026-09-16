@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: reporting_storage_manager_dashboard.html 
-summary: Vous pouvez utiliser le tableau de bord du gestionnaire de stockage pour la gestion quotidienne de vos services de stockage. 
+summary: 'Accédez à des informations centralisées sur la gestion du stockage grâce à des rapports complets sur l"utilisation des capacités, les tendances de performance et les prévisions de ressources pour une gestion proactive des centres de données.' 
 keywords: reporting, cognos, data warehouse, dwh, smd, storage manager dashboard 
 ---
 = Tableau de bord du gestionnaire de stockage
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Le tableau de bord du gestionnaire de stockage vous fournit une visualisation centralisée qui vous permet de comparer et de contraster l'utilisation des ressources au fil du temps par rapport aux plages acceptables et aux jours d'activité précédents.  En affichant uniquement les indicateurs de performance clés de vos services de stockage, vous pouvez prendre des décisions sur la manière de maintenir vos centres de données.
+Le tableau de bord Storage Manager offre une vue d'ensemble centralisée de votre environnement de stockage grâce à des rapports et des visualisations complets. Surveillez l'utilisation de la capacité, suivez l'évolution des performances au fil du temps et comparez les indicateurs actuels aux plages acceptables afin de prendre des décisions éclairées concernant la maintenance de votre centre de données et la planification des ressources.
 
 
 NOTE: La fonctionnalité de reporting est disponible dans Data Infrastructure Insightslink:concept_subscribing_to_cloud_insights.html["Édition Premium"] .

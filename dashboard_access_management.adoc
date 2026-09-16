@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: dashboard_access_management.html 
-summary: Vous déterminez si le tableau de bord que vous créez est public ou privé. 
+summary: 'Contrôlez la visibilité et l"accès aux tableaux de bord grâce à des options de partage flexibles qui vous permettent de les garder privés, de les partager avec des utilisateurs spécifiques ou de les rendre accessibles à l"ensemble de l"organisation.' 
 keywords: dashboard, public, shared, private 
 ---
 = Gestion des accès au tableau de bord
@@ -14,7 +14,7 @@ keywords: dashboard, public, shared, private
 
 
 [role="lead"]
-Data Infrastructure Insights vous offre désormais un meilleur contrôle sur l’accès aux tableaux de bord que vous créez.  Vous choisissez qui peut modifier vos graphiques.  Vous contrôlez l’exposition aux informations potentiellement sensibles.  Garder un tableau de bord privé vous permet de finaliser vos visualisations jusqu'à ce qu'elles soient prêtes à être utilisées par d'autres personnes de votre organisation.
+Contrôlez qui peut consulter et modifier vos tableaux de bord grâce à des options de gestion des accès flexibles. Préservez la confidentialité de vos tableaux de bord pendant leur développement, puis partagez-les avec des utilisateurs spécifiques ou l'ensemble de votre organisation grâce à des autorisations personnalisables de modification ou de lecture seule, afin de protéger les informations sensibles tout en favorisant la collaboration.
 
 image:Dashboard_Sharing_Options.png["options de partage du tableau de bord, largeur = 300"]
 

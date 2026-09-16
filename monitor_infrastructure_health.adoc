@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: monitor_infrastructure_health.html 
 keywords: infra, infrastructure, health, monitor 
-summary: Surveillez l’état de l’infrastructure avec une notation unifiée basée sur les performances, la capacité, la configuration et les alertes de composants pour une résolution proactive des problèmes. 
+summary: 'Obtenez une vue unifiée de l"état de santé de votre environnement de stockage grâce à une surveillance complète qui combine les alertes de performance, de capacité, de configuration et de composants en scores de santé exploitables.' 
 ---
 = Surveiller la santé de l'infrastructure
 :hardbreaks:
@@ -14,15 +14,12 @@ summary: Surveillez l’état de l’infrastructure avec une notation unifiée b
 
 
 [role="lead"]
-Data Infrastructure Insights fournit une surveillance complète de l'état de l'infrastructure qui suit les performances, la capacité, la configuration et l'état des composants de votre environnement de stockage. Les scores de santé sont calculés en fonction des alertes de surveillance dans ces catégories, vous offrant une vue unifiée de la santé du système et permettant une résolution proactive des problèmes.
+Data Infrastructure Insights surveille l'état de santé de votre environnement de stockage en suivant les performances, la capacité, la configuration et l'état des composants. Le système calcule des scores d'état de santé unifiés à partir des alertes de surveillance couvrant ces catégories, offrant une visibilité claire sur l'état du système et permettant une résolution proactive des problèmes.
 
 
 
 [[the-infrastructure-health-dashboard]]
 == Le tableau de bord de l'état de santé des infrastructures
-
-
-NOTE: La surveillance de la santé des infrastructures est unelink:concept_preview_features.html["Aperçu"] fonctionnalité et est sujette à changement.
 
 Accédez à *Observabilité > Analyser* et sélectionnez *Santé de l'infrastructure*. Le tableau de bord fournit un aperçu de l'état de votre système, en fonction des catégories d'alertes et des scores du moniteur, comme expliqué ci-dessous. Définissez des filtres en haut pour affiner le champ de votre enquête.
 

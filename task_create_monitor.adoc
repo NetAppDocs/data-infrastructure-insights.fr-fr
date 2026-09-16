@@ -49,6 +49,8 @@ Lorsque vous ajoutez un nouveau moniteur, vous êtes invité à créer un monite
 +
 ** _Metric_ surveille les alertes sur les déclencheurs liés à l'infrastructure ou aux performances
 ** _Log_ surveille les alertes sur l'activité liée au journal
+** La détection d'anomalies surveille et alerte en cas de changement dans les tendances de vos données
+** _Attribute_ surveille les modifications des attributs d’un objet, par exemple lorsqu’un objet est déplacé vers un nouveau centre de données
 
 
 +
@@ -171,6 +173,17 @@ image:AnomalyDetectionMonitorMetricChoosing.png["Filtrage des métriques pour la
 
 
 image:AnomalyDetectionMonitorDefineConditions.png["Définir les conditions pour déclencher une détection d'anomalie"]
+
+
+
+[[attribute-monitor]]
+=== Moniteur d'attributs
+
+Les moniteurs d'attributs alertent automatiquement votre équipe en cas de déplacement de ressources entre centres de données, de non-chiffrement d'un pool de stockage ou de modification d'attribut. Cela permet de maintenir les configurations de référence et aide à garantir qu’aucun détail ne soit négligé lors des nouveaux déploiements ou des changements.
+
+image:attribute_monitor_in_list.png["Des moniteurs d'attributs sont ajoutés aux types de moniteur"]
+
+Il vous suffit de choisir le type d'objet et de sélectionner les attributs que vous souhaitez surveiller pour les changements.
 
 
 

@@ -420,7 +420,7 @@ Quelques éléments à essayer si vous rencontrez des problèmes lors de la conf
 | J'ai rencontré des problèmes lors du déploiement de l'opérateur et j'utilise PSP/PSA. | 1. Modifiez l'agent à l'aide de la commande suivante : kubectl -n <name-space> edit agent 2.  Marquer « security-policy-enabled » comme « faux ».  Cela désactivera les politiques de sécurité des pods et l'admission de sécurité des pods et permettra à l'opérateur de se déployer.  Confirmez en utilisant les commandes suivantes : kubectl get psp (devrait indiquer que la politique de sécurité du pod a été supprimée) kubectl get all -n <namespace> | grep -i psp (devrait indiquer que rien n'est trouvé) 
 
 
-| Erreurs « ImagePullBackoff » observées | Ces erreurs peuvent survenir si vous utilisez un dépôt Docker personnalisé ou privé et que vous n'avez pas encore configuré l'opérateur de surveillance Kubernetes pour le reconnaître correctement. <<Utiliser un référentiel Docker personnalisé ou privé,En savoir plus>> à propos de la configuration pour un dépôt personnalisé/privé. 
+| Erreurs « ImagePullBackoff » observées | Ces erreurs peuvent survenir si vous utilisez un dépôt Docker personnalisé ou privé et que vous n'avez pas encore configuré l'opérateur de surveillance Kubernetes pour le reconnaître correctement. <<using-a-custom-or-private-docker-repository,En savoir plus>> à propos de la configuration pour un dépôt personnalisé/privé. 
 
 
 | J'ai un problème avec mon déploiement d'opérateur de surveillance et la documentation actuelle ne m'aide pas à le résoudre.  a| 

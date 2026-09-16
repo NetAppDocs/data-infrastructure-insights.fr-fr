@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_modify_delete_query.html 
-summary: Modifier ou supprimer une requête 
+summary: 'Modifiez les requêtes existantes en changeant les critères et les colonnes, avec des options d"enregistrement flexibles pour mettre à jour, renommer ou créer de nouvelles versions, ainsi que des options pour supprimer les requêtes lorsqu"elles ne sont plus nécessaires.' 
 keywords: query, queries, modify, edit, delete, remove 
 ---
 = Modifier ou supprimer une requête
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Vous pouvez modifier les critères associés à une requête lorsque vous souhaitez modifier les critères de recherche des actifs que vous interrogez.
+Gérez efficacement vos requêtes en modifiant les critères de recherche, en ajoutant ou en supprimant des colonnes et en choisissant parmi des options d'enregistrement flexibles. Mettez à jour les requêtes existantes, créez de nouvelles versions ou supprimez les requêtes qui ne sont plus nécessaires afin de maintenir votre bibliothèque de requêtes organisée et à jour.
 
 
 

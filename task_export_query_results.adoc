@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_export_query_results.html 
-summary: 'Comment exporter les résultats d"une requête vers un fichier .csv' 
+summary: 'Exportez les résultats des requêtes, les tableaux de bord, la page d"accueil et d"autres données vers des fichiers .CSV pour l"analyse externe, la création de rapports et l"intégration avec d"autres applications à l"aide du traitement asynchrone.' 
 keywords: query, queries, export, csv 
 ---
 = Exportation des résultats de la requête vers un fichier .CSV
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Vous pouvez exporter les résultats de n'importe quelle requête vers un fichier .CSV, ce qui vous permettra d'analyser les données ou de les importer dans une autre application.
+Exportez les données issues des requêtes, des widgets de tableaux de bord et des tableaux de pages d'accueil vers des fichiers .CSV pour l'analyse externe, la création de rapports et l'intégration avec d'autres applications. Le processus d'exportation asynchrone vous permet de poursuivre votre travail pendant le traitement en arrière-plan de grands ensembles de données.
 
 .Étapes
 . Connectez-vous à Data Infrastructure Insights.

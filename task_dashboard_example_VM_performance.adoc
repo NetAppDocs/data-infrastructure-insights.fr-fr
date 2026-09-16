@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_dashboard_example_VM_performance.html 
-summary: 'Exemple de tableau de bord mettant en évidence les performances d"une machine virtuelle.' 
+summary: Tutoriel étape par étape pour créer un tableau de bord de performance de machine virtuelle avec des tableaux, des graphiques et des widgets qui comparent les indicateurs de la machine virtuelle et du stockage. 
 keywords: dashboard, widget, custom, example, virtual machine, vm, performance 
 ---
 = Exemple de tableau de bord : performances d'une machine virtuelle
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Les opérations informatiques sont aujourd’hui confrontées à de nombreux défis.  On demande aux administrateurs de faire plus avec moins, et avoir une visibilité complète sur vos centres de données dynamiques est indispensable.  Dans cet exemple, nous allons vous montrer comment créer un tableau de bord avec des widgets qui vous donnent des informations opérationnelles sur les performances de la machine virtuelle (VM) sur votre locataire.  En suivant cet exemple et en créant des widgets pour cibler vos besoins spécifiques, vous pouvez effectuer des opérations telles que la visualisation des performances de stockage back-end par rapport aux performances de la machine virtuelle front-end, ou l'affichage de la latence de la machine virtuelle par rapport à la demande d'E/S.
+Apprenez à créer un tableau de bord complet des performances des machines virtuelles grâce à ce tutoriel pas à pas. Vous créerez des widgets qui visualisent les données de performance des VM, comparent les métriques de stockage backend avec les performances frontend des VM et analysent les relations entre la latence des VM et la demande d'E/S pour de meilleures informations opérationnelles.
 
 .À propos de cette tâche
 Ici, nous allons créer un tableau de bord des performances de la machine virtuelle contenant les éléments suivants :

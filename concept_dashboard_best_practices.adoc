@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboard_best_practices.html 
-summary: Bonnes pratiques pour tirer le meilleur parti de vos tableaux de bord 
+summary: Découvrez les meilleures pratiques pour trouver les indicateurs pertinents, filtrer efficacement les ressources et configurer les widgets afin de créer des tableaux de bord performants et instructifs. 
 keywords: dashboard, hints, tips, best practice, widgets, metrics, 
 ---
 = Bonnes pratiques pour les tableaux de bord et les widgets
@@ -14,7 +14,7 @@ keywords: dashboard, hints, tips, best practice, widgets, metrics,
 
 
 [role="lead"]
-Conseils et astuces pour vous aider à tirer le meilleur parti des puissantes fonctionnalités des tableaux de bord et des widgets.
+Maîtrisez la création de tableaux de bord grâce à des stratégies éprouvées pour identifier les bons indicateurs, filtrer efficacement les ressources et configurer les widgets afin d'obtenir une vision optimale. Ces bonnes pratiques vous aident à concevoir des tableaux de bord plus performants qui fournissent des informations exploitables sur l'infrastructure.
 
 
 

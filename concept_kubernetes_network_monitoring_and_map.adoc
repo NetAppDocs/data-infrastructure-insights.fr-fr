@@ -7,10 +7,14 @@ summary: Présente les dépendances et les flux de charge de travail de Kubernet
 = Surveillance et cartographie des performances du réseau Kubernetes
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-La fonctionnalité Kubernetes Network Performance Monitoring and Map simplifie le dépannage en mappant les dépendances entre les services (également appelés charges de travail) et offre une visibilité en temps réel sur les latences et les anomalies des performances du réseau pour identifier les problèmes de performances avant qu'ils n'affectent les utilisateurs.  Cette capacité aide les organisations à réduire les coûts globaux en analysant et en auditant les flux de trafic Kubernetes.
+Data Infrastructure Insights offre une surveillance complète des performances réseau et une cartographie visuelle pour les environnements Kubernetes. Bénéficiez d'une visibilité en temps réel sur les dépendances des charges de travail, les latences réseau et les flux de trafic afin d'identifier de manière proactive les problèmes de performance et d'optimiser les coûts grâce à une analyse détaillée du trafic.
 
 Principales fonctionnalités : • La carte de charge de travail présente les dépendances et les flux de charge de travail de Kubernetes et met en évidence les problèmes de réseau et de performances.  • Surveillez le trafic réseau entre les pods, les charges de travail et les nœuds Kubernetes ; identifiez la source des problèmes de trafic et de latence.  • Réduisez les coûts globaux en analysant le trafic réseau entrant, sortant, interrégional et interzone.
 
