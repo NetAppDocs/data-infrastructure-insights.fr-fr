@@ -7,6 +7,10 @@ summary: 'Installation, désinstallation, configuration de la prise en charge du
 = Configuration des unités d'acquisition
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -89,7 +93,15 @@ La manière la plus simple de procéder consiste à spécifier une configuration
 
 NOTE: L'utilisation d'un astérisque (*) comme caractère générique est courante, mais votre configuration proxy/pare-feu peut utiliser un format différent.  Consultez la documentation de votre proxy pour garantir la spécification correcte des caractères génériques dans votre environnement.
 
+Si vous constatez que votre AU est bloquée lors de la tentative de connexion à DII, essayez d'ajouter ces points de terminaison à votre proxy :
+
+....
+api.bluexp.netapp.com
+netapp-cloud-account.auth0.com
+....
 Vous trouverez plus d'informations sur la configuration du proxy dans le NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Base de connaissances"] .
+
+Les points de terminaison proxy spécifiques de la NetApp Console dont vous pourriez avoir besoin sont répertoriés dans la documentation link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["Administrateur de configuration de la console"].
 
 
 
