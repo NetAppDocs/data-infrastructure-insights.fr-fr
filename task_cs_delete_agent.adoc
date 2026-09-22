@@ -7,41 +7,168 @@ summary: Suppression des agents Workload Security
 = Suppression d'un agent de sécurité de charge de travail
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Lorsque vous supprimez un agent Workload Security, tous les collecteurs de données associés à l'agent doivent d'abord être supprimés.
+Supprimez un Agent lorsque vous mettez hors service son hôte ou que vous regroupez la collecte sur un autre Agent. La suppression d’un Agent entraîne également la suppression de tous les collecteurs qui lui sont encore affectés.
+
+[cols="100%"]
+|===
+| *La suppression d’un Agent supprime ses collecteurs restants* Tout collecteur de données ou User Directory Collector encore affecté à l’Agent est supprimé avec lui, et la configuration ne peut pas être récupérée par la suite. Enregistrez ou déplacez toute configuration dont vous avez encore besoin avant de supprimer l’Agent. 
+|===
+
+
+[[decide-what-you-want-to-keep]]
+== Décidez ce que vous voulez conserver
+
+[cols="37%,63%"]
+|===
+| *Votre objectif* | *Ce qu'il faut faire* 
+
+
+| Continuez à collecter le même stockage à partir d’un autre Agent | Déplacez chaque collecteur vers l'autre Agent avant de supprimer celui-ci. Réaffectez les collecteurs plutôt que de les recréer, afin que la collecte ne soit pas dupliquée. 
+
+
+| Arrêtez complètement la collecte à partir de ce stockage. | Supprimez l'agent. Les collecteurs qui lui sont encore affectés sont supprimés en même temps. 
+
+
+| Reconstruisez l'agent sur un nouvel hôte | Commencez par enregistrer la configuration de chaque collecteur, déployez le nouvel Agent, puis recréez ou déplacez les collecteurs. 
+|===
+
+
+[[before-you-begin]]
+== Avant de commencer
+
+* Connectez-vous en tant qu'administrateur ou propriétaire du compte Data Infrastructure Insights. La suppression d'un agent requiert des droits d'administrateur.
+* Identifiez l'agent par son nom et consultez les collecteurs qui lui sont attribués sur la page des détails de l'agent.
+* Sauvegardez toute configuration de collecteur dont vous avez encore besoin. Les configurations de collecteur supprimées ne peuvent pas être restaurées.
+* Supprimez tous les collecteurs associés à cet agent de toute stratégie d'alerte qui le référence. Un collecteur encore référencé par une stratégie d'alerte empêche la suppression.
+
+
+[cols="100%"]
+|===
+| *Il n'est pas nécessaire de suspendre l'Agent, de le désépingler ni d'attendre une mise à niveau.* La suspension, la reprise, l'épinglage et le désépinglage n'affectent pas la suppression de l'Agent. Les opérations planifiées ou en cours sur l'Agent et le collecteur ne la bloquent pas non plus. 
+|===
+
+
+[[choose-the-procedure-that-matches-your-agent]]
+== Choisissez la procédure qui correspond à votre Agent
+
+La liste des agents affiche l'état de chaque agent. Ce que vous devez faire avant de supprimer dépend du fait que l’agent soit encore connecté ou non.
+
+[cols="21%,62%,17%"]
+|===
+| *Statut d'agent* | *Ce que Workload Security exige* | *Utiliser* 
+
+
+| Connecté | Chaque collecteur de données et collecteur d'annuaire d'utilisateurs doit d'abord être supprimé de l'Agent. L'état du collecteur n'a pas d'importance ; un collecteur arrêté est toujours comptabilisé. | Procédure A 
+
+
+| Non connecté | Il n'est pas nécessaire de supprimer les collecteurs au préalable. Tout collecteur encore affecté est supprimé en même temps que l'Agent. | Procédure B 
+|===
+
+
+[[procedure-a-delete-a-connected-agent]]
+== Procédure A : Supprimer un agent connecté
+
+*1.* Sélectionnez Workload Security ++>++ Collectors ++>++ Agents, puis sélectionnez le nom de l'Agent pour ouvrir ses détails.
+
+*2.* Déplacez ou supprimez tous les collecteurs de données associés à l’Agent. Pour continuer à collecter les données du même stockage, affectez le collecteur à un autre Agent au lieu de le supprimer.
+
+*3.* Déplacez ou supprimez chaque collecteur de répertoire utilisateur répertorié pour l’Agent.
+
+*4.* Retour à Workload Security ++>++ Collectors ++>++ Agents.
+
+*5.* Sélectionnez le menu des options de l'Agent, puis sélectionnez Supprimer.
+
+*6.* Confirmez la suppression dans la boîte de dialogue Supprimer l'agent.
+
+*7.* Désinstallez le logiciel Agent sur son hôte, comme décrit dans « Désinstaller le logiciel Agent ».
+
+image:ws-delete-agent-confirmation.png["Boîte de dialogue de confirmation de suppression d'un agent d'exemple, affichant la commande permettant de désinstaller le logiciel Agent de son hôte.,title=\"Delete Agent confirmation dialog\",width=1007,height=562"]
+
+[cols="100%"]
+|===
+| *Si la boîte de dialogue indique Cannot Delete Agent* Au moins un collecteur de données ou un collecteur d'annuaire utilisateur est toujours associé à cet Agent connecté. Supprimez les collecteurs restants et réessayez. Actualisez d'abord la page Agents si vous venez de les supprimer. 
+|===
+
+
+[[procedure-b-delete-a-retired-or-unreachable-agent]]
+== Procédure B : Supprimer un agent retraité ou injoignable
+
+Utilisez cette procédure lorsque l'hôte de l'agent est mis hors service ou est déjà hors ligne, et que vous n'avez plus besoin des collecteurs qui lui sont affectés.
+
+*1.* Confirmez que vous n'avez plus besoin d'aucun collecteur affecté à cet Agent. Ces collecteurs sont supprimés avec lui.
+
+*2.* Si l'hôte est toujours accessible, désinstallez le logiciel Agent comme décrit dans « Désinstaller le logiciel Agent ».
+
+*3.* Sélectionnez Workload Security ++>++ Collectors ++>++ Agents et attendez que l’Agent affiche Not Connected.
+
+*4.* Sélectionnez le menu des options de l'Agent, puis sélectionnez Supprimer.
+
+*5.* Confirmez la suppression dans la boîte de dialogue Supprimer l'agent.
 
 
 
-[[deleting-an-agent]]
-== Suppression d'un agent
+[[uninstall-the-agent-software]]
+== Désinstallez le logiciel Agent
+
+La suppression d'un agent dans Workload Security supprime sa configuration côté cloud. Elle ne désinstalle pas le logiciel de l'hôte, vous devez donc le désinstaller séparément lorsque vous mettez l'hôte hors service.
+
+*1.* Ouvrez une session de terminal sur l'hôte de l'agent.
+
+*2.* Exécutez la commande de désinstallation et entrez « y » lorsque vous y êtes invité.
+
+[listing]
+----
+sudo cloudsecure-agent-uninstall.sh
+----
+Le programme de désinstallation arrête et désactive le service Agent et supprime le répertoire d'installation. Pour désinstaller sans l'invite de confirmation, ajoutez l'option -n.
 
 
-IMPORTANT: La suppression d’un agent supprime tous les collecteurs de données associés à l’agent.  Si vous prévoyez de configurer les collecteurs de données avec un agent différent, vous devez créer une sauvegarde des configurations du collecteur de données avant de supprimer l'agent.
 
-.Avant de commencer
-. Assurez-vous que tous les collecteurs de données associés à l'agent sont supprimés du portail Workload Security.
-+
-Remarque : ignorez cette étape si tous les collecteurs associés sont à l’état ARRÊTÉ.
+[[verify-the-deletion]]
+== Vérifiez la suppression
+
+* L'agent n'apparaît plus dans Workload Security ++>++ Collectors ++>++ Agents.
+* Les collecteurs qui y étaient affectés ne figurent plus dans les listes de collecteurs.
+* Le service Agent n'est plus présent sur l'hôte si vous avez désinstallé le logiciel.
 
 
 
-.Étapes pour supprimer un agent :
-. Connectez-vous à la machine virtuelle de l’agent via SSH et exécutez la commande suivante.  Lorsque vous y êtes invité, entrez « y » pour continuer.
-+
-....
-sudo /opt/netapp/cloudsecure/agent/install/cloudsecure-agent-uninstall.sh
-Uninstall CloudSecure Agent? [y|N]:
-....
-. Cliquez sur *Sécurité de la charge de travail > Collecteurs > Agents*
-+
-Le système affiche la liste des agents configurés.
 
-. Cliquez sur le menu d’options de l’agent que vous supprimez.
-. Cliquez sur *Supprimer*.
-+
-Le système affiche la page *Supprimer l'agent*.
+[[troubleshooting]]
+== Dépannage
 
-. Cliquez sur *Supprimer* pour confirmer la suppression.
+[cols="39%,61%"]
+|===
+| *Message ou symptôme* | *Cause et résolution* 
 
+
+| Impossible de supprimer l'agent : « Veuillez supprimer tous les collecteurs de données configurés sur ++<++Agent++>++. » | L'agent est connecté et possède toujours au moins un collecteur de données ou un collecteur d'annuaire utilisateur attribué. Déplacez ou supprimez les collecteurs restants, actualisez la page et réessayez. 
+
+
+| "Retirez le ou les périphériques ci-dessous de l’agent de ces stratégies avant de supprimer l’agent." | Un collecteur associé à cet agent est toujours référencé par les stratégies d'alerte mentionnées dans le message. Modifiez chaque stratégie, supprimez ce collecteur, enregistrez la stratégie, puis réessayez la suppression. 
+
+
+| La suppression échoue en raison d'une erreur d'autorisation. | La suppression d'un agent nécessite un administrateur ou un propriétaire de compte. Les autres rôles peuvent accéder à la page des agents mais ne peuvent pas effectuer la suppression. 
+
+
+| L’agent est signalé comme non enregistré. | L'agent a déjà été supprimé ou vous travaillez dans un environnement différent. Actualisez la page Agents et confirmez l'agent et le locataire. 
+
+
+| L'agent a été supprimé de Workload Security, mais il continue de s'exécuter sur l'hôte. | La suppression de l'agent ne désinstalle pas le logiciel. Exécutez la commande de désinstallation sur l'hôte. 
+
+
+| Un collecteur supprimé semble toujours consommer de l'utilisation. | L'utilisation est enregistrée à partir des collecteurs présents lors de chaque intervalle de rapport. Supprimez les Agents et les collecteurs que vous n'utilisez plus, et déplacez les collecteurs au lieu de les recréer afin que les anciens et les nouveaux collecteurs ne se chevauchent pas. 
+|===
+
+
+[[related-information]]
+== Informations connexes
+
+https://docs.netapp.com/us-en/data-infrastructure-insights/task_cs_delete_agent.html["[.souligner"]#Page de documentation actuelle NetApp#]

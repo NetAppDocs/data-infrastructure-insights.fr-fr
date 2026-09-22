@@ -14,32 +14,111 @@ summary: 'Déployez des agents de sécurité des charges de travail et des colle
 
 
 [role="lead"]
-Workload Security vous aide à surveiller l'activité des utilisateurs et à détecter les menaces de sécurité potentielles dans votre environnement de stockage.  Avant de pouvoir commencer la surveillance, vous devez configurer les agents, les collecteurs de données et les services d'annuaire afin d'établir les bases d'une surveillance de sécurité complète.
+Workload Security surveille l'activité des utilisateurs sur votre stockage et détecte les menaces de sécurité potentielles. Un Agent que vous installez dans votre environnement héberge les collecteurs qui recueillent les données d'accès aux fichiers et aux utilisateurs depuis les systèmes de stockage, ainsi que les informations utilisateur provenant des serveurs d'annuaire.
 
-Le système Workload Security utilise un agent pour collecter les données d'accès des systèmes de stockage et les informations utilisateur des serveurs des services d'annuaire.
+Veuillez effectuer les tâches ci-dessous dans l'ordre. Chaque tâche dépend de la précédente, donc un collecteur ne peut être ajouté que lorsque son Agent est connecté, et l'activité ne se résout pas en noms d'utilisateur tant qu'un collecteur d'annuaire n'existe pas.
 
-Vous devez configurer les éléments suivants avant de pouvoir commencer à collecter des données :
 
-[cols="2*"]
+
+[[setup-at-a-glance]]
+== Aperçu de la configuration
+
+[cols="1,2,2"]
+|===
+| Tâche | Ce que cela vous apporte | Où trouver les détails 
+
+
+| *1. Dimensionnez et préparez l’hôte de l’Agent* | Un hôte pris en charge disposant d'une capacité suffisante pour votre taux d'événements. | Exigences relatives à l'agent Workload Security ; vérificateur de taux d'événements 
+
+
+| *2. Déployez l’agent* | Un agent connecté capable d'héberger des collecteurs. | Déployer des agents de sécurité de charge de travail 
+
+
+| *3. Configurer un collecteur d'annuaire utilisateur* | Activité et alertes qui affichent les noms d'utilisateur au lieu des SID. | Collecteur Active Directory ; collecteur LDAP Directory Server 
+
+
+| *4. Configurer le collecteur de données ONTAP SVM* | Événements d'accès aux fichiers et aux utilisateurs provenant de la SVM surveillée. | Configuration du collecteur de données ONTAP SVM 
+
+
+| *5. Vérifiez que les données circulent* | Confirmation que la surveillance fonctionne de bout en bout. | Cette page ; Dépannage du collecteur de données ONTAP SVM 
 |===
 
 
-| Tâche | Informations connexes 
+[[step-1-size-and-prepare-the-agent-host]]
+== Étape 1 - Dimensionner et préparer l’hôte de l’agent
+
+Installez l'agent sur un hôte Linux dédié qui n'exécute aucun autre logiciel applicatif.
+
+* Vérifiez que l'hôte respecte les exigences en matière de système d'exploitation, de processeur, de mémoire et d'espace disque, et attribuez-lui une adresse IP statique. Pour la liste actuelle des versions Linux prises en charge, utilisez la page Linux Versions Supported on the Add Agent.
+* Synchronisez l'heure sur l'hôte de l'agent et sur ONTAP à l'aide de NTP.
+* Dimensionnez pour le taux d'événements maximal avec l'Event Rate Checker avant de décider combien de collecteurs un Agent hébergera. Un Agent prend en charge au maximum 50 collecteurs, tous types confondus, dans la limite de 20 000 événements par seconde.
+* Planifiez les chemins réseau : l’agent atteint la gestion ONTAP sur TCP 443 et le service Workload Security sur TCP 443, et ONTAP se connecte à nouveau à l’agent sur les ports réservés dans la plage TCP 35000-55000.
 
 
-| Configurer un agent  a| 
-link:concept_cs_agent_requirements.html["Exigences relatives aux agents"]
-
-link:task_cs_add_agent.html["Ajouter un agent"]
 
 
+[[step-2-deploy-the-agent]]
+== Étape 2 - Déployer l'agent
 
-| Configurer un connecteur d'annuaire utilisateur | link:task_config_user_dir_connect.html["Ajouter un connecteur d'annuaire utilisateur"] 
+* Connectez-vous en tant qu’administrateur ou propriétaire du compte et sélectionnez *Collecteurs > Agents > +Agent*.
+* Si votre réseau utilise un serveur proxy, configurez les paramètres du proxy avant d'exécuter l'extrait de programme d'installation.
+* Cliquez sur *Copier l'extrait de programme d'installation*. Cet extrait contient une clé unique valable deux heures et pour un seul Agent.
+* Exécutez l'extrait de code sur l'hôte de l'agent, puis retournez dans le navigateur et cliquez sur *Terminer la configuration*.
+* Vérifiez que l’agent affiche *Connecté* dans *Collecteurs > Agents*.
 
 
-| Configurer les collecteurs de données | Cliquez sur *Sécurité de la charge de travail > Collecteurs*. Cliquez sur le collecteur de données que vous souhaitez configurer. Consultez la section « Référence du fournisseur de collecteurs de données » de la documentation pour obtenir des informations sur les collecteurs. 
+
+NOTE: Ouvrez les ports de rappel FPolicy réservés vers l'Agent, y compris dans le pare-feu sur l'hôte de l'Agent. ONTAP ne peut pas transmettre d'événements tant que ce chemin n'est pas ouvert.
 
 
-| Créer des comptes utilisateurs | link:concept_user_roles.html["Gérer les comptes utilisateurs"] 
-|===
-Workload Security peut également s'intégrer à d'autres outils.  Par exemple,link:http://docs.netapp.com/us-en/cloudinsights/CloudInsights_CloudSecure_Splunk_integration_guide.pdf["voir ce guide"] sur l'intégration avec Splunk.
+
+[[step-3-configure-a-user-directory-collector]]
+== Étape 3 - Configurer un collecteur d'annuaire utilisateur
+
+Configurez ce collecteur avant, ou en même temps que, votre premier collecteur ONTAP SVM. Sans celui-ci, Activity Forensics affiche des identifiants encodés (SID) plutôt que des noms d'utilisateur.
+
+* Ajoutez un collecteur pour chaque domaine dont les utilisateurs accèdent aux SVM surveillées, y compris les domaines de confiance.
+* Pour Active Directory, associez le nom d'affichage à `name`, l'ID à `objectsid`, et le nom d'utilisateur à `sAMAccountName`.
+* Pour un serveur d'annuaire LDAP, associez Display Name à `name`, ID à `uidnumber`, et User Name à `uid`.
+* L'activation du protocole SSL sur le serveur d'annuaire n'empêche pas le collecteur. Workload Security accepte le certificat que le serveur présente.
+
+
+
+NOTE: Le test de connexion n'est pas disponible pour les collecteurs d'annuaires utilisateurs. Validez le serveur, le port, le compte de liaison et la base de recherche avec vos outils d'annuaire habituels, puis confirmez que le collecteur atteint l'état *Running*.
+
+
+
+[[step-4-configure-the-ontap-svm-data-collector]]
+== Étape 4 - Configurer le collecteur de données ONTAP SVM
+
+* Choisissez la méthode de connexion. L'adresse IP de gestion du cluster avec le nom de la SVM est recommandée, car le mode SVM ne permet pas d'exécuter les contrôles de fonctionnalité et RBAC.
+* Préparez d'abord le compte ONTAP. Utilisez  `cluster-admin` des informations d'identification, ou créez  `csuser` et  `csrole` avec les privilèges requis. Le test de connexion s'exécute avec ce compte, il ne peut donc pas valider FPolicy ni les fonctionnalités optionnelles tant que les privilèges n'existent pas.
+* Sélectionnez *Collecteurs > +Collecteurs de données*, survolez la vignette NetApp SVM et cliquez sur *+Surveiller*.
+* Saisissez les informations du collecteur et cliquez sur *Tester la connexion* avant d’enregistrer.
+* Résolvez chaque vérification échouée, puis enregistrez le collecteur.
+
+
+
+NOTE: Le test de connexion indique un succès suite à ses vérifications réseau. Les résultats des fonctionnalités sont fournis à titre informatif, veuillez les consulter pour chaque fonctionnalité optionnelle que vous souhaitez utiliser, telles que les snapshots, Access Denied, Autonomous Ransomware Protection, Persistent Store ou le blocage des utilisateurs.
+
+
+
+[[step-5-verify-that-data-is-flowing]]
+== Étape 5 - Vérifiez que les données circulent
+
+* Vérifiez que le collecteur atteint l'état *En cours d'exécution*.
+* Générez une activité réelle du client SMB ou NFS sur la SVM surveillée. Sans E/S client, il n'y a aucun événement.
+* Vérifiez que l'activité apparaît dans *Sécurité des charges de travail > Analyse forensique des activités*.
+* Vérifiez que l'activité affiche bien les noms d'utilisateur et non les SID. Si ce n'est pas le cas, vérifiez le User Directory Collector.
+* Si le collecteur signale une *Error* ou *Degraded*, ouvrez *Status > More detail* et suivez la procédure de dépannage du collecteur de données ONTAP SVM.
+
+
+
+
+[[optional-next-steps]]
+== Étapes suivantes facultatives
+
+* Créez des comptes d'utilisateur pour permettre à d'autres personnes d'accéder à Workload Security. Ceci n'est pas nécessaire pour la collecte de données. Consultez la section Workload Security User Management.
+* Activez les fonctionnalités optionnelles du collecteur. Chacune possède sa propre version d'ONTAP et ses propres exigences en matière d'autorisations.
+* Intégrez Workload Security à d'autres outils, tels que Splunk.
+
