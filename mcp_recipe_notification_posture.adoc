@@ -1,0 +1,150 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_notification_posture.html 
+summary: Utilisez cette recette pour comprendre comment les alertes DII sont acheminées et supprimées sans exposer les adresses des points de terminaison webhook. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Vérifier la posture des notifications
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette recette pour comprendre comment les alertes DII sont acheminées et supprimées sans exposer les adresses des points de terminaison webhook.
+
+
+NOTE: Le DII MCP est une link:concept_preview_features.html["Aperçu"] fonctionnalité et est donc susceptible d'être modifié.
+
+
+
+[[prerequisites]]
+== Prérequis
+
+* Accès aux outils de notification et de fenêtre de maintenance.
+* Type de moniteur, de ressource ou d’intégration facultatif pour affiner l’analyse.
+
+
+
+
+[[tools-used]]
+== Outils utilisés
+
+* +NotificationService_getNotificationRules+
+* +NotificationService_getNotificationRuleById+
+* +NotificationService_getWebhooks+
+* +MaintenanceWindowService_getMaintenanceWindows+
+* +MaintenanceWindowService_getMaintenanceWindowById+
+* Facultatif : +MonitorsService_queryMonitors+
+
+
+
+
+[[starter-prompt]]
+== Invite de démarrage
+
+[]
+====
+Examinez l’état des notifications DII. Récapitulez les règles de notification actives et inactives, la portée du moniteur ou de la ressource de chaque règle, le nombre de cibles de webhook par type d’intégration et les fenêtres de maintenance en cours. Indiquez uniquement les noms des cibles, les types de moteurs et leur statut, jamais les adresses des points de terminaison.
+
+====
+
+
+[[agent-workflow]]
+== Flux de travail de l’agent
+
+. Lister les règles de notification.
+. Classez les règles comme actives, inactives, arrivant à expiration ou sans date d'expiration.
+. Résumez la portée de l'expression de chaque règle :
++
+** Nom ou groupe du moniteur
+** Objet associé
+** Portée générique étendue
+
+
+. Ne récupérez une règle spécifique que lorsque des détails supplémentaires sont nécessaires.
+. Listez les cibles des webhooks et supprimez immédiatement le champ d’adresse du résultat en cours.
+. Regroupez les cibles par type et état du moteur.
+. Répertoriez les fenêtres de maintenance actives.
+. Identifiez les fenêtres de suppression qui chevauchent des ressources importantes ou des périodes exceptionnellement longues.
+. Vous pouvez également comparer les expressions de règle avec les moniteurs disponibles.
+. Signalez la couverture du routage des rapports, les règles générales, les règles inactives et les risques de suppression.
+
+
+
+
+[[security-requirement]]
+== Exigence de sécurité
+
+Les adresses webhook complètes peuvent contenir :
+
+* Parcours de signature Slack ou Teams
+* Clés de routage PagerDuty
+* jetons API
+* Signatures de workflow uniques
+* Identifiants d'intégration personnalisés
+
+
+Ne jamais afficher, citer, résumer, conserver ni transférer le champ d’adresse. Un suffixe masqué est également inutile pour ce flux de travail.
+
+Si un point de terminaison complet apparaît dans une transcription ou un artefact partagé, suivez les étapes de l’incident dans link:mcp_security.html["Sécurité et confidentialité"].
+
+
+
+[[interpretation]]
+== Interprétation
+
+* Une règle inactive peut l'être intentionnellement ; confirmez-en le propriétaire avant de recommander sa suppression.
+* Une expression générique trop large peut générer du bruit dans les notifications ou un routage involontaire.
+* L'état d'une cible peut être nul ou inconnu; ne le signalez pas comme activé.
+* Un résultat positif pour une fenêtre de maintenance vide signifie qu'il n'existe aucune fenêtre correspondante.
+* Une fenêtre de longue durée peut masquer de véritables problèmes même si elle est techniquement active et valide.
+
+
+
+
+[[suggested-output]]
+== Résultat suggéré
+
+. Nombre de règles par statut
+. Portée de la règle et type de destination
+. Nombre de cibles par moteur
+. Fenêtres de maintenance actives
+. Configurations générales, inactives ou ambiguës
+. Avertissements concernant la sécurité et la qualité des données
+
+
+
+
+[[limits-and-privacy]]
+== Limites et confidentialité
+
+* Ne renvoyez pas les adresses, les jetons, les UUID ni les identifiants de ressources privées.
+* Ce flux de travail vérifie la configuration, mais ne teste pas la distribution des messages.
+* Les outils actuels ne créent, ne mettent pas à jour, ne désactivent ni ne suppriment de règles et de cibles.
+
+
+
+
+[[follow-up-prompts]]
+== Messages de relance
+
+[]
+====
+Quelles règles de notification actives possèdent des expressions génériques larges, et à quels groupes de surveillance peuvent-elles correspondre ?
+
+====
+[]
+====
+Indiquez les fenêtres de maintenance actuelles et à venir et expliquez les portées d’alerte qu’elles suppriment.
+
+====
+[]
+====
+Comptez les cibles de notification par type d'intégration et identifiez les cibles dont le statut est inconnu. N'affichez pas les adresses.
+
+====
+link:mcp_recipe_overview.html["Retour aux recettes"]

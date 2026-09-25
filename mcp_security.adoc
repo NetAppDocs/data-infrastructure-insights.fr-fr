@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: mcp_security.html 
+summary: 'Le serveur DII MCP donne à un client d"IA accès au contexte de l"infrastructure du locataire. Traitez ce contexte avec la même précaution que l"interface utilisateur et les API de DII.' 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Sécurité et confidentialité
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le serveur DII MCP donne à un client d'IA accès au contexte de l'infrastructure du locataire. Traitez ce contexte avec la même précaution que l'interface utilisateur et les API de DII.
+
+
+NOTE: Le DII MCP est une link:concept_preview_features.html["Aperçu"] fonctionnalité et est donc susceptible d'être modifié.
+
+
+
+[[least-privilege-access]]
+== Accès au privilège minimal
+
+* Utilisez une identité dédiée à la personne, à l'application ou à l'automatisation qui se connecte à MCP.
+* N’accordez que les autorisations de lecture DII nécessaires aux workflows prévus.
+* Examiner les droits d'accès lorsqu'un utilisateur change de rôle ou de responsabilité opérationnelle.
+* Utilisez une identité de service distincte pour l'automatisation sans surveillance.
+
+
+L'ensemble d'outils DII actuel documenté ici est en lecture seule. L'accès en lecture seule peut néanmoins révéler des noms, une topologie, une configuration, des données de télémétrie et un état opérationnel sensibles.
+
+
+
+[[authentication]]
+== Authentification
+
+Privilégiez l'authentification OAuth interactive ou un autre flux d'authentification de courte durée pris en charge par votre environnement. Si des identifiants non interactifs sont requis :
+
+* Conservez-les dans un gestionnaire de secrets approuvé.
+* Définissez leur périmètre et effectuez une rotation conformément à la politique de l’organisation.
+* Ne les placez jamais dans les fichiers de projet, l'historique du shell, les invites, les captures d'écran ou la documentation.
+
+
+
+
+[[sensitive-fields]]
+== Champs sensibles
+
+Les données DII potentiellement sensibles comprennent :
+
+* Adresses IP, noms d'hôtes, noms de ressources spécifiques au locataire et UUID
+* Topologie et configuration de l'infrastructure
+* Descriptions des alertes et charges utiles des journaux
+* Valeurs de l'utilisateur, du propriétaire, de l'étiquette et de l'annotation
+* Adresses de point de terminaison Webhook
+
+
+Les URL de webhook contiennent généralement des clés de routage, des signatures, des jetons ou des chemins uniques. Ne demandez pas à un agent de vous renvoyer une adresse de webhook complète. Demandez uniquement :
+
+* Nom de la cible
+* Intégration ou type de moteur
+* État activé ou état de livraison
+
+
+Les applications intégrant le serveur MCP doivent masquer les adresses webhook avant d’afficher, de stocker ou de transmettre les résultats de l’outil.
+
+
+
+[[prompt-and-output-hygiene]]
+== Hygiène des invites et des sorties
+
+* Utilisez des identifiants fictifs dans les invites réutilisables et les exemples.
+* Demandez à l'agent d'omettre les adresses IP, les UUID, les adresses de point de terminaison et les charges utiles brutes du journal, sauf si elles sont nécessaires.
+* Résumez les résultats au lieu de recopier de longues réponses brutes.
+* Vérifiez le contenu généré avant de le placer dans des tickets, des canaux de discussion ou des documents externes.
+* Respectez les exigences de l’organisation en matière de traitement des données pour le client d’IA sélectionné.
+
+
+
+
+[[tenant-isolation]]
+== Isolation des locataires
+
+Les résultats MCP sont limités au contexte DII authentifié du locataire. Ne combinez pas les résultats de plusieurs locataires, sauf si le flux de travail et l'autorisation le permettent explicitement.
+
+
+
+[[audit-and-retention]]
+== Audit et rétention
+
+La couverture et la conservation des événements d'audit dépendent du déploiement de DII et du client d'IA connecté. Avant la mise en production, les administrateurs doivent vérifier :
+
+* Si l’authentification MCP et les appels d’outils sont enregistrés
+* Quels arguments de requête et quelles métadonnées de résultat sont conservés
+* Qui peut consulter ces documents
+* Durée pendant laquelle le client IA conserve les invites et les résultats des outils
+
+
+Ne présumez pas que des événements d’audit ou des garanties de conservation spécifiques à MCP existent, sauf s’ils sont documentés pour votre déploiement.
+
+
+
+[[incident-response]]
+== Intervention en cas d'incident
+
+Si un identifiant ou un point de terminaison contenant un identifiant apparaît dans un résultat, une invite, une transcription ou un document publié du MCP :
+
+. Arrêtez de partager le contenu concerné.
+. Révoquez ou renouvelez l'identifiant ou le secret d'intégration.
+. Supprimez la valeur des artefacts stockés lorsque cela est possible.
+. Examinez les enregistrements d'accès et d'audit.
+. Signalez cette exposition via le processus de sécurité de votre organisation.
+
+
+
+
+[[related-documentation]]
+== Documentation associée
+
+* link:mcp_setup.html["Configurer le serveur DII MCP"]
+* link:mcp_concepts.html["Concepts et modèle de données"]
+* link:mcp_recipe_notification_posture.html["Recette de posture de notification"]
+* link:mcp_troubleshooting.html["Dépannage"]
+

@@ -1,0 +1,148 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_storage_health.html 
+summary: Utilisez cette méthode pour hiérarchiser les problèmes de stockage en combinant les alertes actives, l’intention de surveillance, les conseils correctifs, les journaux de plateforme pertinents et le contexte de l’objet. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Évaluer l'état du stockage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette méthode pour hiérarchiser les problèmes de stockage en combinant les alertes actives, l’intention de surveillance, les conseils correctifs, les journaux de plateforme pertinents et le contexte de l’objet.
+
+
+NOTE: Le DII MCP est une link:concept_preview_features.html["Aperçu"] fonctionnalité et est donc susceptible d'être modifié.
+
+
+
+[[prerequisites]]
+== Prérequis
+
+* Une période de 30 jours ou moins.
+* Portée facultative du système de stockage, du cluster, du pool ou du volume.
+* Accès aux outils d’alerte, de surveillance, de journalisation et de gestion des objets.
+
+
+
+
+[[tools-used]]
+== Outils utilisés
+
+* +AlertsService_getMetadata+
+* +AlertsService_queryForAlerts+
+* +AlertsService_getAlertByName+
+* +MonitorsService_getMonitorById+
+* +LogService_getLogTypes+
+* +LogService_getLogTypeMetadata+
+* +LogService_queryLogEvents+
+* +ObjectService_getObjectTypes+
+* +ObjectService_getMetadataForObjectType+
+* +ObjectService_query+
+
+
+
+
+[[starter-prompt]]
+== Invite de démarrage
+
+[]
+====
+Évaluez l'état du stockage au cours des dernières 24 heures. Identifiez les alertes actives critiques et d'avertissement pour les systèmes de stockage, les nœuds, les pools et les volumes. Pour les alertes ayant le plus d'impact, expliquez la condition de surveillance et les recommandations correctives, puis examinez les journaux EMS ou de la plateforme de stockage pertinents autour de l'heure du déclenchement. Distinguez les éléments probants confirmés des causes probables.
+
+====
+
+
+[[agent-workflow]]
+== Flux de travail de l’agent
+
+. Récupérez les métadonnées de l'alerte.
+. Identifiez les champs valides pour la gravité, le statut, la surveillance, l'objet associé et l'heure de déclenchement.
+. Consulter les alertes actives relatives au stockage dans la fenêtre demandée.
+. Classez les alertes à l’aide de :
++
+** Gravité
+** Type d'objet concerné
+** Nombre d'objets affectés
+** Récence et récurrence
+** Impact sur la disponibilité, la protection des données, les performances ou la capacité
+
+
+. Consultez les détails complets des alertes de priorité la plus élevée.
+. Récupérez leurs définitions de surveillance et leurs conseils correctifs.
+. Répertoriez les types de journaux et sélectionnez le flux natif de la plateforme pertinent pour chaque alerte, tel que ONTAP EMS ou les événements StorageGRID.
+. Récupérez les métadonnées du journal, puis interrogez un intervalle restreint autour de l'alerte.
+. Récupérez les attributs ou les métriques de l’objet nécessaires pour confirmer son état actuel.
+. Élaborez un résumé de l’état de santé comprenant les preuves, la cause probable, l’impact et la prochaine vérification.
+
+
+
+
+[[interpretation]]
+== Interprétation
+
+Ne considérez pas un seul signal comme une évaluation complète de l’état de santé :
+
+* Les *alertes* indiquent les conditions détectées.
+* Les *moniteurs* expliquent la règle de détection et l'action corrective prévue.
+* Les *journaux* fournissent le contexte d'événement natif de la plateforme.
+* *Objets et métriques* affichent l’inventaire actuel ou l’état mesuré.
+
+
+Une alerte active peut rester ouverte même après la modification de la condition sous-jacente. Utilisez des données d'objet et de métrique à jour lorsque cela est possible.
+
+
+
+[[suggested-output]]
+== Résultat suggéré
+
+Pour chaque problème prioritaire :
+
+* Ressource affectée
+* Gravité et état d'alerte
+* Temps de déclenchement
+* Surveiller et conditionner
+* Journaux ou métriques de corroboration
+* Éléments de preuve confirmés
+* Cause probable, qualifiée d'inférence
+* Conseils correctifs
+* Confiance et preuves manquantes
+
+
+
+
+[[limits-and-privacy]]
+== Limites et confidentialité
+
+* Restez vigilant et conservez les fenêtres de journalisation en dessous de 30 jours.
+* Utilisez des fenêtres de journalisation étroites pour réduire les événements non liés.
+* Omettez les UUID, les adresses, les annotations et les charges utiles brutes inutiles.
+* Les instructions correctives sont données à titre informatif ; validez les commandes par rapport à la documentation du produit et au processus de modification pertinents.
+
+
+
+
+[[follow-up-prompts]]
+== Messages de relance
+
+[]
+====
+Pour l’alerte `AL-123456`, affichez les instructions du moniteur et les événements EMS associés dans les 30 minutes précédant et suivant le déclenchement.
+
+====
+[]
+====
+Regroupez les alertes de stockage actif par système concerné et zone d'impact. Quel système nécessite une attention prioritaire et pourquoi ?
+
+====
+[]
+====
+Vérifiez si l’alerte de plus haute priorité est toujours prise en charge par les métriques d’objet actuelles.
+
+====
+link:mcp_recipe_overview.html["Retour aux recettes"]

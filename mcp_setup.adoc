@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: mcp_setup.html 
+summary: Utilisez ce guide pour connecter un client d’IA compatible MCP à DII. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Configurer le serveur DII MCP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez ce guide pour connecter un client d’IA compatible MCP à DII.
+
+
+NOTE: Le DII MCP est une link:concept_preview_features.html["Aperçu"] fonctionnalité et est donc susceptible d'être modifié.
+
+
+
+[[before-you-begin]]
+== Avant de commencer
+
+Vous avez besoin de :
+
+* Accès à un locataire DII.
+* Une identité d'utilisateur ou de service DII autorisée à lire les ressources que vous souhaitez interroger.
+* Le point de terminaison MCP distant fourni pour votre environnement DII.
+* Un client MCP qui prend en charge les serveurs HTTP distants et la méthode d'authentification de votre organisation.
+
+
+Les exemples utilisent +<DII_HOST_URL>+ comme espace réservé. Ne collez pas les jetons d'accès dans les fichiers gérés par un système de contrôle de version. Par exemple, l'URL utilisée par Cursor est :
+
+ https://<DII_HOST_URL>/api/v1/mcp
+Consultez les extraits de code spécifiques à votre connexion.
+
+
+
+[[configure-the-mcp-client]]
+== Configurer le client MCP
+
+. Accédez à Admin > API Access et sélectionnez l'onglet « MCP Configuration ».
+. Sélectionnez le client que vous souhaitez configurer.
+. Indiquez un nom significatif et une date d'expiration, puis sélectionnez _Generate Token_.
+. *Copiez l'extrait de code* Vous ne pourrez le copier qu'à cette étape. Le jeton est masqué dans l'extrait, mais il sera correctement collé dans votre application cliente.
+. Dans les paramètres du client, saisissez l’URL correcte de l’hôte DII dans le champ « url ».
+. Enregistrez la configuration.
+
+
+
+IMPORTANT: Ne placez pas de jetons de porteur dans l'historique du shell, les invites, les captures d'écran, les fichiers de projet ou le contrôle de code source.
+
+
+
+[[verify-access]]
+== Vérifier l'accès
+
+Une fois que le client a signalé que le serveur était connecté, vous pouvez commencer à envoyer des requêtes comme suit :
+
+[]
+====
+Veuillez lister les types d'objets DII disponibles. Veuillez lister les types de journaux DII disponibles. Veuillez lister mes unités d'acquisition sans afficher les adresses IP ni les UUID.
+
+====
+La découverte réussie confirme la connectivité, mais ne garantit pas l'accès à toutes les ressources sous-jacentes. Les fonctionnalités, les collecteurs et les autorisations du locataire déterminent les données renvoyées.
+
+
+
+[[credential-safety]]
+== Sécurité des identifiants
+
+* Privilégiez OAuth interactif ou une autre méthode d'authentification à identifiant de courte durée lorsqu'elle est disponible.
+* Utilisez une identité de service dédiée pour les clients sans surveillance.
+* N’insérez pas de jetons dans les invites, les captures d’écran, les exemples, les descriptions de problèmes ou le contrôle de code source.
+* Ne demandez pas à l'agent d'afficher les adresses webhook complètes.
+
+
+Pour plus d'informations, consultez link:mcp_security.html["Sécurité et confidentialité"].
+
+
+
+[[next-steps]]
+== Prochaines étapes
+
+* link:mcp_concepts.html["Comprendre le modèle de données DII"]
+* link:mcp_tools_overview.html["Consultez le guide de référence de l'outil"]
+* link:mcp_recipe_environment_inventory.html["Exécutez la recette d’inventaire de l’environnement"]
+* link:mcp_troubleshooting.html["Résolution des problèmes de connexion et de requête"]
+

@@ -1,0 +1,161 @@
+---
+sidebar: sidebar 
+permalink: mcp_concepts.html 
+summary: Comprendre ces concepts aide un assistant IA à sélectionner les bons outils et à construire des requêtes valides. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Concepts et modèle de données DII MCP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Comprendre ces concepts aide un assistant IA à sélectionner les bons outils et à construire des requêtes valides.
+
+
+NOTE: Le DII MCP est une link:concept_preview_features.html["Aperçu"] fonctionnalité et est donc susceptible d'être modifié.
+
+
+
+[[tenant-scope]]
+== Portée du locataire
+
+Chaque requête DII MCP s'exécute dans le tenant DII et avec les autorisations de l'utilisateur authentifié. Un outil ne peut renvoyer que les données présentes dans ce tenant et visibles par cette identité.
+
+
+
+[[acquisition-units]]
+== Unités d'acquisition
+
+Une unité d'acquisition (UA) est un agent installé à distance qui interroge les sources de données et transmet des données télémétriques à DII. Les enregistrements de l'UA comprennent l'état de la connexion, l'actualisation des rapports, le système d'exploitation, la version et le nombre de sources de données attribuées.
+
+La connexion et le signalement sont des signaux différents. Par exemple, une AU peut accepter une connexion sans avoir d’historique de signalement réussi. Évaluez à la fois l’état et `lastReported` le signalement.
+
+
+
+[[data-sources]]
+== Sources de données
+
+Une source de données, également appelée collecteur, est une connexion configurée à un système d'infrastructure tel qu'une baie de stockage, un commutateur, un hyperviseur ou un service cloud.
+
+Utilisez l’opération de liste pour consulter l’inventaire et l’état. Récupérez une source de données spécifique lorsque vous avez besoin de détails de configuration tels que les packages de collecte, les intervalles d’interrogation ou l’activité récente.
+
+Les types de sources de données pris en charge décrivent le catalogue plus large des collecteurs DII. Ils ne sont pas les mêmes que les collecteurs configurés dans le locataire actuel.
+
+
+
+[[objects]]
+== Objets
+
+Les objets sont des entités d'infrastructure normalisées telles que les systèmes de stockage, les pools, les volumes, les hôtes, les machines virtuelles, les charges de travail Kubernetes et les ressources spécifiques au produit.
+
+Les types d'objets sont dynamiques. Toujours :
+
+. Répertorier les types d'objets.
+. Sélectionnez le type exact.
+. Récupérez les métadonnées pour ce type.
+. Interrogez uniquement les attributs et les métriques déclarés par les métadonnées.
+
+
+
+
+[[attributes-and-metrics]]
+=== Attributs et indicateurs
+
+* Les *attributs* décrivent l'identité, la configuration, la propriété, les étiquettes ou les relations.
+* Les *métriques* sont des mesures qui varient dans le temps, telles que la capacité, la latence, le débit ou l'utilisation.
+* Les *attributs groupables* peuvent segmenter une requête agrégée.
+
+
+Les filtres de métriques sont évalués par rapport aux valeurs de métriques brutes avant l'application de l'agrégation de la fenêtre temporelle demandée.
+
+
+
+[[logs]]
+== Journaux
+
+Les types de journaux représentent des flux d'événements tels que ONTAP EMS, les événements Kubernetes, les événements StorageGRID, les événements VMware et les événements de la plateforme DII.
+
+L'interrogation des journaux privilégie également les métadonnées :
+
+. Liste des types de journaux disponibles.
+. Récupérez les métadonnées pour le type sélectionné.
+. Demandez uniquement des attributs valides.
+. Recherchez des événements ou créez un histogramme du nombre d'événements.
+
+
+
+
+[[monitors-and-alerts]]
+== Surveillance et alertes
+
+Un moniteur définit une condition que DII évalue. Une alerte est un résultat de moniteur spécifique pour un ou plusieurs objets associés.
+
+* Utilisez les outils de surveillance pour examiner l'intention, l'état, le type d'objet et les conseils de correction.
+* Utilisez les métadonnées des alertes avant d’interroger les alertes.
+* Utilisez un nom d’alerte tel que  `AL-123456` ou son UUID pour récupérer une alerte.
+
+
+Le statut et la gravité de l'alerte sont deux dimensions distinctes. Demandez les deux lors de la hiérarchisation des résultats.
+
+
+
+[[maintenance-windows]]
+== Fenêtres de maintenance
+
+Une fenêtre de maintenance supprime les alertes correspondant à une expression pendant une période définie. Un résultat positif vide signifie qu'aucune fenêtre correspondante n'existe ; cela n'indique pas l'absence de données.
+
+
+
+[[notification-rules-and-targets]]
+== Règles et cibles de notification
+
+Les règles de notification acheminent les alertes correspondantes. Les cibles peuvent inclure Slack, Microsoft Teams, PagerDuty ou des intégrations HTTP personnalisées.
+
+Les adresses webhook peuvent contenir des informations confidentielles. Pour les rapports, demandez uniquement le nom de la cible, le type de moteur et l'état. Ne reproduisez jamais l'adresse complète.
+
+
+
+[[metadata-first-query-flow]]
+== Flux de requêtes axé sur les métadonnées
+
+[source, text]
+----
+Discover types
+    → retrieve type metadata
+        → select valid attributes and metrics
+            → query a bounded time range
+                → paginate, group, or retrieve time series
+----
+
+
+[[filters]]
+== Filtres
+
+Les outils de requête DII prennent en charge les conditions et les opérateurs logiques imbriqués :
+
+* Comparaisons `EQ`, `NE`, `GT`, `LT`, `GE`, `LE`
+* Correspondance de modèles `WILDCARD` :
+* Présence: `EXISTS`
+* Logique `and`, `or`, `not`
+
+
+Utilisez le nom de champ exact et le type de valeur compatible déclarés dans les métadonnées. Pour `EXISTS`, omettez une valeur de comparaison lorsque cela est pris en charge par la version du serveur connecté.
+
+
+
+[[time-ranges-and-pagination]]
+== Plages horaires et pagination
+
+* Utilisez des horodatages ISO-8601 avec des décalages explicites ou  `Z`.
+* Veuillez indiquer un fuseau horaire IANA tel que +America/New_York+ ou  `UTC` lorsque cela est nécessaire.
+* Limitez les fenêtres de requête à 30 jours ou moins, sauf si un outil indique une limite inférieure.
+* Les requêtes d’objets et d’alertes utilisent généralement  `limit` et  `offset`.
+* Les requêtes d'événements de journal utilisent un curseur renvoyé pour la page suivante.
+
+
+Pour les erreurs et les étapes de récupération, voir link:mcp_troubleshooting.html["Dépannage"].

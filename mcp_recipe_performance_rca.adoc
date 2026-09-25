@@ -1,0 +1,163 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_performance_rca.html 
+summary: Utilisez cette recette pour analyser un volume lent, un datastore, une machine virtuelle, une charge de travail Kubernetes ou tout autre objet DII en corrélant les indicateurs de performance, les alertes et les journaux de la plateforme. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Dépannage des performances
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette recette pour analyser un volume lent, un datastore, une machine virtuelle, une charge de travail Kubernetes ou tout autre objet DII en corrélant les indicateurs de performance, les alertes et les journaux de la plateforme.
+
+
+NOTE: Le DII MCP est une link:concept_preview_features.html["Aperçu"] fonctionnalité et est donc susceptible d'être modifié.
+
+
+
+[[prerequisites]]
+== Prérequis
+
+* Le nom de la ressource concernée et l’heure approximative de l’incident.
+* Une période de 30 jours ou moins.
+* Une période de comparaison ou une base de référence saine connue, si possible.
+
+
+
+
+[[tools-used]]
+== Outils utilisés
+
+* +ObjectService_getObjectTypes+
+* +ObjectService_getMetadataForObjectType+
+* +ObjectService_query+
+* +ObjectService_queryPerformanceMetricsForObjects+
+* +ObjectService_groupObjects+
+* +AlertsService_getMetadata+
+* +AlertsService_queryForAlerts+
+* +LogService_getLogTypes+
+* +LogService_getLogTypeMetadata+
+* +LogService_queryLogEvents+
+
+
+
+
+[[starter-prompt]]
+== Invite de démarrage
+
+[]
+====
+Analysez pourquoi le volume `example-volume` a été lent entre 09:00 et 11:00 UTC. Identifiez le type d'objet correct et les métriques valides, comparez la latence, les IOPS et le débit pendant la fenêtre d'incident, examinez les alertes actives associées et les journaux de la plateforme, et comparez avec une période saine. Distinguez les preuves des hypothèses et identifiez la prochaine mesure nécessaire.
+
+====
+
+
+[[agent-workflow]]
+== Flux de travail de l’agent
+
+. Résolvez la ressource en un type d'objet et une identité exacts.
+. Récupérez les métadonnées de ce type d'objet.
+. Identifiez les indicateurs valides de latence, d'opérations, de débit, d'utilisation et de capacité.
+. Interrogez les attributs actuels de l'objet afin d'établir son emplacement et ses relations.
+. Récupérer des séries chronologiques sur :
++
+** La fenêtre d'incident
+** Une fenêtre de bon fonctionnement comparable
+
+
+. Alignez les horodatages et les fonctions d'agrégation sur l’ensemble des métriques.
+. Récupérez les alertes relatives à la ressource, concernant le système, l’hôte, le nœud ou le pool de stockage.
+. Sélectionnez les flux de journaux pertinents, récupérez les métadonnées et recherchez dans un intervalle restreint autour des changements de métriques.
+. Testez des hypothèses plausibles :
++
+** Pic de demande
+** Saturation des ressources
+** Erreurs de stockage ou de fabric
+** Pression sur la capacité
+** Contention de l’hôte ou de la machine virtuelle
+** Lacune de collecte
+
+
+. Signalez l’explication la mieux étayée et les alternatives non résolues.
+
+
+
+
+[[evidence-standards]]
+== Normes de preuve
+
+Résultats de l'étiquetage :
+
+* *Observé :* directement renvoyé par un outil.
+* *Corrélés :* signaux indépendants modifiés dans le même intervalle.
+* *Déduit :* une explication plausible qui n’a pas encore été prouvée.
+* *Inconnu :* les preuves requises sont indisponibles.
+
+
+Corrélation n'implique pas causalité. Une alerte simultanée doit être considérée comme un élément à l'appui, et non comme une preuve, tant que le mécanisme n'est pas établi.
+
+
+
+[[metric-guidance]]
+== Recommandations relatives aux métriques
+
+* Utilisez `AVG` pour une analyse générale du comportement, mais examinez `MAX` lorsque de courts pics d'activité sont importants.
+* Utilisez `SUM` uniquement pour les métriques additives.
+* Utilisez  `CHANGE` ou +CHANGE_RATIO+ pour les compteurs ou la croissance lorsque les métadonnées le permettent.
+* Évitez de comparer des séries avec des limites de compartiment ou des unités différentes.
+* Les filtres s'appliquent avant l'agrégation par période.
+
+
+
+
+[[suggested-output]]
+== Résultat suggéré
+
+. Étendue et chronologie de l'incident
+. Preuves métriques
+. Preuves d’alerte et de journalisation
+. Comparaison avec une période saine
+. Explication la plus probable
+. Hypothèses alternatives
+. Confiance et preuves manquantes
+. Vérification suivante recommandée
+
+
+
+
+[[limits-and-privacy]]
+== Limites et confidentialité
+
+* Les fenêtres de séries chronologiques ne peuvent pas dépasser 30 jours.
+* L'outil de performance renvoie un nombre limité de séries; affinez le filtre avant d'augmenter la limite.
+* Omettez les champs bruts sensibles du journal qui ne contribuent pas au diagnostic.
+* Ne proposez pas de mesures correctives perturbatrices sans les valider au moyen des contrôles opérationnels habituels.
+
+
+
+
+[[follow-up-prompts]]
+== Messages de relance
+
+[]
+====
+Comparez la latence maximale et moyenne pendant l'incident à la même heure du jour sain précédent.
+
+====
+[]
+====
+Regroupez les charges de travail connexes par hôte ou pool de stockage et identifiez si le ralentissement était isolé ou partagé.
+
+====
+[]
+====
+Affichez les événements de la plateforme dans les 15 minutes suivant la première augmentation de la latence.
+
+====
+link:mcp_recipe_overview.html["Retour aux recettes"]

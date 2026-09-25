@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_environment_inventory.html 
+summary: 'Utilisez cette recette pour déterminer si les unités d"acquisition et les sources de données configurées de DII sont connectées, transmettent des rapports et collectent les données avec succès.' 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Environnement d’inventaire et état de santé de la collecte
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette recette pour déterminer si les unités d'acquisition et les sources de données configurées de DII sont connectées, transmettent des rapports et collectent les données avec succès.
+
+
+NOTE: Le DII MCP est une link:concept_preview_features.html["Aperçu"] fonctionnalité et est donc susceptible d'être modifié.
+
+
+
+[[prerequisites]]
+== Prérequis
+
+* Accès aux outils de l'unité d'acquisition et du collecteur.
+* Nom facultatif de l’unité d’acquisition ou du collecteur pour affiner l’enquête.
+
+
+
+
+[[tools-used]]
+== Outils utilisés
+
+* +AcquisitionUnitsService_getAcquisitionUnits+
+* +AcquisitionUnitsService_getAcquisitionUnitByUuid+
+* +CollectorService_getDataSources+
+* +CollectorService_getDataSourceById+
+* +CollectorService_getDataSourceTypes+
+
+
+
+
+[[starter-prompt]]
+== Invite de démarrage
+
+[]
+====
+Examinez mon environnement de collecte DII. Récapitulez les unités d’acquisition par état de connexion et fraîcheur du reporting, puis les sources de données configurées par état d’acquisition et fournisseur. Mettez en évidence les unités d’acquisition n’ayant jamais transmis de données, les unités sans collecteur assigné, les collecteurs défaillants et les acquisitions réussies obsolètes. N’affichez pas les adresses IP, les UUID ni les informations d’identification.
+
+====
+
+
+[[agent-workflow]]
+== Flux de travail de l’agent
+
+. Répertoriez toutes les unités d'acquisition.
+. Classifiez chaque AU en utilisant à la fois l’état de la connexion et  `lastReported`.
+. Comptez les sources de données attribuées par unité d’administration.
+. Répertorie toutes les sources de données configurées.
+. Regroupez les collecteurs par statut, fournisseur, modèle et AU.
+. Identifiez :
++
+** UA déconnectées ou avec échec du heartbeat
+** AUs connectées qui n'ont jamais signalé
+** UA sans source de données
+** Collecteurs défaillants
+** Collecteurs sans acquisition réussie
+** Collectionneurs performants dont la dernière acquisition est étonnamment ancienne
+
+
+. Récupérez les détails complets de l'AU ou du collecteur uniquement pour les exceptions.
+. Fournissez un résumé priorisé et indiquez clairement le seuil de fraîcheur utilisé.
+
+
+
+
+[[interpretation]]
+== Interprétation
+
+Utilisez ces distinctions :
+
+* *Connecté et en rapport :* l’AU est connectée et possède une valeur `lastReported` récente.
+* *Connecté mais jamais signalé :* la connectivité existe, mais la transmission réussie des données de télémétrie n’est pas établie.
+* *Échec du heartbeat :* examinez l’hôte AU, le chemin réseau et le service.
+* *Échec du collecteur :* inspectez l’activité d’interrogation récente du collecteur, l’état du package, la configuration et la dernière acquisition réussie.
+* *Aucun collecteur attribué :* cela peut être intentionnel ; vérifiez avant de le considérer comme un défaut.
+
+
+Le catalogue des types de sources de données pris en charge décrit les produits que DII peut collecter. Il ne prouve pas que ces produits sont configurés dans le locataire.
+
+
+
+[[suggested-output]]
+== Résultat suggéré
+
+. Résumé exécutif
+. Nombre d’états des unités d’acquisition
+. Nombre d'états des collecteurs
+. Exceptions classées par impact opérationnel
+. Vérifications recommandées
+. Limitations des données
+
+
+
+
+[[limits-and-privacy]]
+== Limites et confidentialité
+
+* Évitez de renvoyer les UUID d’AU, les adresses IP, les noms d’hôte privés ou les informations d’identification du collecteur.
+* Une valeur d'état à elle seule ne permet pas d'établir la fraîcheur des données.
+* Récupérez la configuration détaillée uniquement pour les exceptions nommées.
+
+
+
+
+[[follow-up-prompts]]
+== Messages de relance
+
+[]
+====
+Examinez le collecteur défaillant nommé `example-array`. Résumez l’activité récente d’interrogation et les échecs des packages de collecte sans afficher les informations d’identification ni les adresses privées.
+
+====
+[]
+====
+Quelles unités d'acquisition n'ont pas transmis de données au cours des 30 dernières minutes et quels collecteurs en dépendent ?
+
+====
+[]
+====
+Comparez les fournisseurs de collecteurs configurés avec le catalogue des types de sources de données pris en charge par DII.
+
+====
+link:mcp_recipe_overview.html["Retour aux recettes"]

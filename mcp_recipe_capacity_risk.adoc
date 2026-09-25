@@ -1,0 +1,154 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_capacity_risk.html 
+summary: Utilisez cette méthode pour identifier les pools de stockage ou les domaines de capacité équivalents qui approchent de la saturation et pour trouver des candidats potentiels au rééquilibrage. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Identifier le risque de capacité
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette méthode pour identifier les pools de stockage ou les domaines de capacité équivalents qui approchent de la saturation et pour trouver des candidats potentiels au rééquilibrage.
+
+
+NOTE: Le DII MCP est une link:concept_preview_features.html["Aperçu"] fonctionnalité et est donc susceptible d'être modifié.
+
+
+
+[[prerequisites]]
+== Prérequis
+
+* Une portée de stockage ou une autorisation permettant de consulter tous les pools de stockage visibles.
+* Une période rétrospective de 30 jours ou moins.
+* Accord sur les seuils d'alerte et les seuils critiques de l'organisation.
+
+
+
+
+[[tools-used]]
+== Outils utilisés
+
+* +ObjectService_getObjectTypes+
+* +ObjectService_getMetadataForObjectType+
+* +ObjectService_query+
+* +ObjectService_groupObjects+
+* +ObjectService_queryPerformanceMetricsForObjects+
+* +AlertsService_getMetadata+
+* +AlertsService_queryForAlerts+
+
+
+
+
+[[starter-prompt]]
+== Invite de démarrage
+
+[]
+====
+Évaluez le risque lié à la capacité de stockage sur les 30 derniers jours. Identifiez le type d’objet et les métadonnées corrects du pool de stockage, puis classez les pools selon le ratio entre la capacité utilisée et la capacité disponible, la capacité libre, la croissance et le temps avant saturation. Identifiez les pools critiques, les pools d’avertissement et les pools de la liste de surveillance, et proposez des candidats au rééquilibrage fondés sur des données probantes. Indiquez les seuils et les fonctions d’agrégation utilisés.
+
+====
+
+
+[[agent-workflow]]
+== Flux de travail de l’agent
+
+. Répertoriez les types d'objets et sélectionnez le type de pool normalisé ou spécifique au produit approprié.
+. Récupérez les métadonnées.
+. Identifier valide :
++
+** Noms des pools et des systèmes de stockage
+** Mesures de capacité totale, utilisée et disponible
+** Métrique du taux d'utilisation
+** Indicateur de délai jusqu’au remplissage complet ou de prévision
+** Attributs de stockage, de niveau, d’emplacement ou de niveau de service regroupables
+
+
+. Interrogez un instantané classé actuel à l’aide d’agrégations compatibles.
+. Récupérez les séries chronologiques des métriques sensibles à la croissance sur la période rétrospective demandée.
+. Lorsque cela est possible, regroupez la capacité par système de stockage, niveau ou emplacement.
+. Interrogez les alertes actives liées à la capacité pour corroboration.
+. Classifiez les risques à l’aide des seuils convenus.
+. Identifiez les sources et destinations potentielles de rééquilibrage en fonction des contraintes de capacité et d’exploitation.
+
+
+
+
+[[example-risk-model]]
+== Exemple de modèle de risque
+
+Utilisez la politique du locataire lorsqu'elle est disponible. Sinon, indiquez ce qui suit comme modèle illustratif :
+
+* *Critique:* taux d’utilisation égal ou supérieur à 90 %, ou délai avant saturation inférieur à 30 jours
+* *Avertissement :* ratio utilisé égal ou supérieur à 80 %, ou délai avant saturation inférieur à 90 jours
+* *À surveiller :* croissance positive soutenue avec un délai d’atteinte de la pleine capacité inférieur à 180 jours
+* *Risque plus faible:* aucune des conditions ci-dessus
+
+
+N’estimez pas le temps nécessaire pour atteindre le niveau maximal à partir de seulement deux échantillons lorsque l’indicateur DII fournit une prévision. En l’absence de prévision, décrivez la tendance sans indiquer de date précise d’épuisement.
+
+
+
+[[rebalance-guidance]]
+== Conseils de rééquilibrage
+
+Une destination n'est pas forcément adaptée simplement parce qu'elle dispose de capacité disponible. Considérez :
+
+* Compatibilité des systèmes de stockage et des protocoles
+* Niveau de service et marge de performance
+* Relations de protection des données et de réplication
+* Contraintes de placement de la charge de travail
+* Provisionnement fin et surallocation
+* Fenêtres de changement opérationnel
+
+
+
+
+[[suggested-output]]
+== Résultat suggéré
+
+. Résumé des risques de capacité
+. Pools critiques et d’avertissement
+. Récit de croissance
+. Alertes de capacité actives
+. Paires source et destination candidates
+. Hypothèses et données manquantes
+
+
+
+
+[[limits-and-privacy]]
+== Limites et confidentialité
+
+* Les fenêtres d'analyse d'objets ne peuvent excéder 30 jours par appel. Pour les tendances à plus long terme, utilisez des fenêtres consécutives non chevauchantes.
+* Les filtres s'appliquent aux valeurs brutes des métriques avant l'agrégation.
+* Regroupez uniquement par les attributs marqués comme regroupables dans les métadonnées.
+* Les valeurs de capacité peuvent utiliser des unités différentes; normalisez-les avant de les comparer.
+
+
+
+
+[[follow-up-prompts]]
+== Messages de relance
+
+[]
+====
+Afficher l’évolution de la capacité utilisée sur 30 jours pour les cinq pools présentant le risque le plus élevé.
+
+====
+[]
+====
+Regroupez la capacité des pools par système de stockage et identifiez les systèmes disposant à la fois d’un pool critique et d’une destination viable à moindre risque.
+
+====
+[]
+====
+Corrélez les pools présentant le risque le plus élevé avec les systèmes actifs de surveillance et d’alerte de capacité.
+
+====
+link:mcp_recipe_overview.html["Retour aux recettes"]

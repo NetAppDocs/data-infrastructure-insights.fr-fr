@@ -1,0 +1,162 @@
+---
+sidebar: sidebar 
+permalink: mcp_troubleshooting.html 
+summary: 'Solutions courantes pour les problèmes de connexion au serveur MCP, les erreurs d"authentification, les rejets de requêtes et la limitation du débit de l"API.' 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Dépannage de DII MCP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+
+NOTE: Le DII MCP est une link:concept_preview_features.html["Aperçu"] fonctionnalité et est donc susceptible d'être modifié.
+
+
+
+[[the-server-does-not-connect]]
+== Le serveur ne se connecte pas
+
+Vérifier :
+
+. L'URL configurée correspond au point de terminaison fourni pour votre environnement DII.
+. Le client prend en charge les serveurs HTTP MCP distants et le flux d'authentification requis.
+. Authentification terminée avec succès.
+. La politique réseau autorise l'accès au point de terminaison.
+. L'identité connectée peut accéder au locataire DII.
+
+
+Redémarrez ou rechargez le serveur MCP après avoir modifié la configuration du client.
+
+
+
+[[authentication-is-required]]
+== L'authentification est requise
+
+Finalisez la procédure de connexion du client, puis réessayez la requête initiale. Si une identité de service est utilisée, vérifiez que son identifiant est valide et stocké via un mécanisme de secret approuvé.
+
+Ne réessayez pas à plusieurs reprises après un refus d'autorisation confirmé. Demandez à un administrateur DII de vérifier les autorisations du locataire et des ressources de l'utilisateur.
+
+
+
+[[an-object-query-rejects-a-field]]
+== Une requête d’objet rejette un champ
+
+Les attributs et les métriques des objets varient selon leur type.
+
+. Appelez +ObjectService_getObjectTypes+.
+. Veuillez confirmer le type d'objet exact.
+. Appelez +ObjectService_getMetadataForObjectType+.
+. Copiez exactement les noms de champs à partir des métadonnées.
+. Vérifiez que le type de valeur et la fonction d'agrégation sont compatibles.
+
+
+Seuls les attributs marqués comme groupables peuvent être utilisés pour regrouper des objets.
+
+
+
+[[a-log-query-rejects-an-attribute]]
+== Une requête de journal rejette un attribut
+
+. Appelez +LogService_getLogTypes+.
+. Veuillez confirmer le type exact de journal.
+. Appelez +LogService_getLogTypeMetadata+.
+. Utilisez uniquement les attributs renvoyés pour ce type de journal.
+
+
+Les requêtes d'événements de journalisation utilisent une pagination basée sur le curseur. Transmettez le curseur renvoyé par la page précédente plutôt qu'un décalage.
+
+
+
+[[an-alert-query-rejects-a-field]]
+== Une requête d’alerte rejette un champ
+
+Appelez la fonction +AlertsService_getMetadata+ juste avant de construire la requête. Les métadonnées d'alerte peuvent être générales et dépendantes du locataire; utilisez les noms de champs exacts.
+
+
+
+[[the-time-range-is-invalid]]
+== La plage horaire n’est pas valide
+
+* Assurez-vous que  `fromTime` est antérieur ou égal à  `toTime`.
+* Utilisez les horodatages ISO-8601 avec un décalage ou  `Z`.
+* Veuillez maintenir la fenêtre demandée à moins de 30 jours.
+* Divisez les investigations plus longues en fenêtres consécutives, sans chevauchement, et résumez les résultats.
+* Veuillez indiquer un fuseau horaire IANA valide lorsque l’outil le demande.
+
+
+L'application des règles lors de l'exécution fait foi si elle est plus stricte qu'une description d'outil mise en cache côté client.
+
+
+
+[[a-query-returns-too-many-results]]
+== Une requête renvoie trop de résultats
+
+* Ajoutez un filtre valide.
+* Réduisez la plage horaire.
+* Trier selon le critère le plus pertinent.
+* Abaisser la limite de résultats.
+* Utilisez le regroupement ou un histogramme lorsque les enregistrements individuels ne sont pas nécessaires.
+* Continuez avec `offset` ou un curseur de journal uniquement lorsque plus de détails sont nécessaires.
+
+
+
+
+[[a-successful-call-returns-no-rows]]
+== Un appel réussi ne renvoie aucune ligne
+
+Un résultat vide est souvent une réponse valide. Cela peut signifier :
+
+* Aucune ressource ne correspond au filtre.
+* Aucun événement ne s'est produit dans la plage horaire sélectionnée.
+* Aucune fenêtre de maintenance ni règle de notification n'est configurée.
+* Le type de données sélectionné n'est pas renseigné par les collecteurs du locataire.
+
+
+Ne qualifiez pas un résultat vide réussi de données manquantes, sauf si d'autres éléments indiquent un problème de collecte.
+
+
+
+[[an-acquisition-unit-is-connected-but-has-never-reported]]
+== Une unité d'acquisition est connectée mais n'a jamais signalé d'activité
+
+L'état de la connexion et la réussite de la génération des rapports sont distincts. Vérifiez :
+
+* `lastReported`
+* Nombre de sources de données attribuées
+* État d'acquisition des sources de données
+* Connectivité hôte et version de AU
+* Interroger l’activité d’une source de données attribuée
+
+
+
+
+[[a-collector-is-failed]]
+== Un collecteur est en échec
+
+Utilisez +CollectorService_getDataSourceById+ pour le collecteur concerné. Consultez l'activité récente des interrogations, les informations sur les correctifs actifs, l'état des packages, la configuration et l'heure de la dernière acquisition réussie. Évitez d'afficher les identifiants ou les valeurs de configuration privées.
+
+
+
+[[webhook-results-include-complete-addresses]]
+== Les résultats du webhook incluent les adresses complètes
+
+Ne répétez pas les valeurs. Résumez uniquement les noms des cibles, les types d'intégration, les quantités et le statut. Suivez link:mcp_security.html["Sécurité et confidentialité"] si des informations confidentielles ont été affichées ou partagées.
+
+
+
+[[the-ai-assistant-selected-the-wrong-tool]]
+== L'assistant IA a sélectionné le mauvais outil
+
+Utilisez une invite plus explicite :
+
+[]
+====
+Commencez par lister les types d'objets disponibles. Récupérez ensuite les métadonnées du type sélectionné. Ensuite, interrogez uniquement les champs valides et indiquez les outils DII que vous avez utilisés.
+
+====
+Pour les enquêtes courantes, commencez par link:mcp_recipe_overview.html["recette opérationnelle"].

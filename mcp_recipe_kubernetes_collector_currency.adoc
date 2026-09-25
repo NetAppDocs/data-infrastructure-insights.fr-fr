@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_kubernetes_collector_currency.html 
+summary: Utilisez cette recette pour identifier les clusters Kubernetes dont l’opérateur DII ou les composants de collecte sont obsolètes, désactivés ou périmés. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Vérifier l’actualité du collecteur Kubernetes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette recette pour identifier les clusters Kubernetes dont l’opérateur DII ou les composants de collecte sont obsolètes, désactivés ou périmés.
+
+
+NOTE: Le DII MCP est une link:concept_preview_features.html["Aperçu"] fonctionnalité et est donc susceptible d'être modifié.
+
+
+
+[[prerequisites]]
+== Prérequis
+
+* La collecte Kubernetes est configurée dans le locataire DII.
+* Accès aux informations du collecteur Kubernetes.
+
+
+
+
+[[tools-used]]
+== Outils utilisés
+
+* +OperatorsManagement_getKubernetesCollectors+
+* Facultatif : +AcquisitionUnitsService_getAcquisitionUnits+
+* Facultatif : +CollectorService_getDataSources+
+
+
+
+
+[[starter-prompt]]
+== Invite de démarrage
+
+[]
+====
+Vérifiez l’état actuel du collecteur Kubernetes de DII. Regroupez les clusters par état général, identifiez les opérateurs et composants obsolètes ou désactivés et signalez les horodatages du dernier rapport périmés. N’affichez pas les adresses internes ni les UUID.
+
+====
+
+
+[[agent-workflow]]
+== Flux de travail de l’agent
+
+. Lister les collecteurs Kubernetes.
+. Normalisez chaque cluster comme suit :
++
+** À jour
+** Obsolète
+** Désactivées
+** Inconnu
+
+
+. Comparez :
++
+** Version de l'opérateur
+** Version du composant Performance réseau et Map
+** Modifier la version du composant Change Analysis
+
+
+. Convertissez l'horodatage du dernier relevé dans le fuseau horaire demandé.
+. Signaler les clusters qui n’ont pas communiqué dans le délai de fraîcheur convenu.
+. Distinguez `N/A`-la d’une version obsolète :
++
+** `N/A` peut signifier que le composant n'est pas installé, n'est pas activé ou n'est pas applicable.
+
+
+. Si les rapports ne sont pas à jour, vérifiez l'état de l'unité d'acquisition et du collecteur concernés, le cas échéant.
+. Renvoyez une liste priorisée des mises à niveau et des investigations.
+
+
+
+
+[[interpretation]]
+== Interprétation
+
+* *Obsolète :* au moins un composant installé est antérieur à la version attendue par DII.
+* *Désactivé :* la collection est désactivée de manière intentionnelle ou administrative.
+* *Rapports obsolètes :* les données de version peuvent ne pas refléter l’état actuel du cluster.
+* *N/A:* nécessite un contexte ; ne le classez pas automatiquement comme un échec.
+
+
+L’outil indique les versions et l’état. Il n’effectue pas de mises à niveau.
+
+
+
+[[suggested-output]]
+== Résultat suggéré
+
+. Nombre de clusters par statut
+. Classement des clusters obsolètes par fraîcheur des rapports
+. Différences de version au niveau des composants
+. Composants désactivés ou indisponibles
+. Étapes de vérification recommandées
+
+
+
+
+[[limits-and-privacy]]
+== Limites et confidentialité
+
+* Les noms de cluster peuvent être sensibles; utilisez les méthodes approuvées lors du partage des résultats.
+* Ne déduisez pas l'exposition aux vulnérabilités de la seule actualité de la version.
+* Validez la compatibilité de la mise à niveau et le processus en dehors de ce flux de travail en lecture seule.
+
+
+
+
+[[follow-up-prompts]]
+== Messages de relance
+
+[]
+====
+Quels clusters ont un opérateur obsolète et n'ont pas transmis de données au cours de la dernière heure?
+
+====
+[]
+====
+Séparez les clusters dont le composant Change Analysis est obsolète de ceux où ce composant n’est pas disponible.
+
+====
+[]
+====
+Pour les clusters obsolètes, vérifiez si l’infrastructure de collecte DII associée est opérationnelle.
+
+====
+link:mcp_recipe_overview.html["Retour aux recettes"]

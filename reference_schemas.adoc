@@ -17,6 +17,4 @@ keywords: dwh, data warehouse, schema, reporting
 Ces tableaux de schémas sont fournis ici à titre de référence pour Data Infrastructure Insights Reporting.
 
 
-NOTE: La fonctionnalité de reporting est disponible dans Data Infrastructure Insightslink:concept_subscribing_to_cloud_insights.html["Édition Premium"] .
-
-link:reporting_schema_capacity.html["Tables de schéma - Capacité"] link:reporting_schema_capacity_efficiency.html["Tables de schéma - Efficacité de capacité"] link:reporting_schema_fs_util.html["Tables de schéma - Utilisation du système de fichiers"] link:reporting_schema_inventory.html["Tables de schéma - Inventaire"] link:reporting_schema_performance.html["Tables de schéma - Performance"] link:reporting_schema_ports.html["Tables de schéma - Ports"]
+NOTE: La fonctionnalité de reporting est disponible dans Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Édition Premium"]. link:reporting_schema_capacity.html["Tables de schéma - Capacité"] link:reporting_schema_capacity_efficiency.html["Tables de schéma - Efficacité de capacité"] link:reporting_schema_fs_util.html["Tables de schéma - Utilisation du système de fichiers"] link:reporting_schema_inventory.html["Tables de schéma - Inventaire"] link:reporting_schema_performance.html["Tables de schéma - Performance"] link:reporting_schema_ports.html["Tables de schéma - Ports"]
