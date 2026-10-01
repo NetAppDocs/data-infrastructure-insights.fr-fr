@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, file system, fs util
 :imagesdir: ./media/
 
 
+[role="lead"]
+Le schéma d'utilisation du système de fichiers permet de suivre la consommation du stockage et les modèles d'utilisation dans l'ensemble des systèmes de fichiers, des hôtes et des ressources de calcul. Utilisez ce schéma pour identifier les points chauds de capacité et optimiser l'allocation du stockage au niveau du système de fichiers.
+
 Source : point de terminaison OData *dwh_fs_util* — Data Infrastructure Insights
 
 Tables trouvées : *8* | Associations : *7*

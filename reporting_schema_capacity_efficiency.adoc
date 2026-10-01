@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, capacity efficiency
 :imagesdir: ./media/
 
 
+[role="lead"]
+Le schéma d’efficacité de la capacité fournit des indicateurs sur l’efficacité du stockage, notamment les taux de réduction des données et les possibilités d’optimisation. Utilisez ce schéma pour surveiller et analyser l’efficacité des technologies de stockage telles que la déduplication et la compression.
+
 Source : point de terminaison OData *dwh_capacity_efficiency* — Data Infrastructure Insights
 
 Tables trouvées : *3* | Associations : *2*

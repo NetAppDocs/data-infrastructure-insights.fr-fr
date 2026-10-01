@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, ports
 :imagesdir: ./media/
 
 
+[role="lead"]
+Le schéma Ports contient des données sur les ports réseau et les commutateurs, notamment la connectivité des ports, leur état et leurs relations avec les périphériques connectés. Utilisez ce schéma pour analyser la topologie du réseau et l’état du fabric au sein de votre infrastructure de stockage.
+
 Source : point de terminaison OData *dwh_ports* — Data Infrastructure Insights
 
 Tables trouvées : *7* | Associations : *4*

@@ -36,9 +36,9 @@ image:ai_assistant-column_graph.png["Visualisation de l'assistant IA"]
 [[enhanced-vm-analyzer-filtering]]
 === Filtrage amélioré de l'analyseur de machine virtuelle
 
-Une nouvelle option dans la vue VM Analyzer permet de masquer les volumes montés sans datastore, offrant ainsi une vue plus claire pour simplifier le dépannage des VMs.
+Une nouvelle option dans la vue VM Analyzer permet de masquer les volumes montés sans datastore, offrant ainsi une vue plus claire pour simplifier le dépannage des machines virtuelles.
 
-image:vm_analyzer_datastore_only_view.png["curseur de vue réservé au datastore"]
+image:vm_analyzer_datastore_only_view.png["VM Analyzer affiche l’option permettant de masquer les volumes montés sans datastore"]
 
 
 
@@ -51,9 +51,9 @@ Modifiez uniquement lorsque nécessaire. Depuis un panneau coulissant, développ
 
 Vous pouvez également ouvrir directement la page d'accueil de la ressource et sélectionner Modifier dans le coin supérieur droit.
 
-image:UserDataEdit-Slideout.png["Modifier les données utilisateur dans le panneau latéral - Icône crayon, largeur=400"]
+image:user_data_edit_slideout.png["Panneau latéral des détails de la ressource affichant les données utilisateur en mode lecture seule, l'icône en forme de crayon permettant de passer en mode édition, largeur=400"]
 
-image:UserDataEdit-LP.png["Mode d'édition de la page d'accueil, largeur=200"]
+image:user_data_edit_lp.png["Page de destination de la ressource avec les données utilisateur ouvertes en mode édition et prêtes à enregistrer les modifications, largeur=200"]
 
 '''
 

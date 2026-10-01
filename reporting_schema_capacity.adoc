@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, capacity
 :imagesdir: ./media/
 
 
+[role="lead"]
+Le schéma de capacité contient des tables et des indicateurs relatifs à la capacité de stockage, à son utilisation et à son provisionnement au sein de votre infrastructure. Utilisez ce schéma pour analyser les tendances de capacité, prévoir les besoins futurs et optimiser l'allocation des ressources.
+
 Source : Point de terminaison OData *dwh_capacity* — Data Infrastructure Insights
 
 Tables trouvées : *44* | Associations : *92*

@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, inventory
 :imagesdir: ./media/
 
 
+[role="lead"]
+Le schéma d’inventaire contient des données exhaustives sur les ressources et les objets, notamment les systèmes de stockage, les hôtes, les applications et les annotations. Il s’agit du schéma le plus volumineux de l’entrepôt de données et il constitue la base de la gestion des ressources et de la visibilité de l’infrastructure.
+
 Source : point de terminaison OData *dwh_inventory* — Data Infrastructure Insights
 
 Tables trouvées : *106* | Associations : *171*
