@@ -34,13 +34,15 @@ Vous pouvez cliquer sur l’un des liens d’actifs pour afficher leurs pages d�
 
 NOTE: Vous remarquerez peut-être que la capacité du volume peut être supérieure à 100 % sur certains actifs de stockage.  Cela est dû aux métadonnées liées à la capacité du volume faisant partie des données de capacité consommée signalées par l'actif.
 
+[NOTE]
+====
+Vous remarquerez peut-être que les chiffres de capacité pour FlexGroups peuvent afficher « 0 », tandis que les constituants affichent des valeurs. Dans DII, les FlexGroups eux-mêmes mettent à zéro la plupart des métriques de capacité, tandis que les constituants les incluent. Le problème est un double comptage : si les deux entités devaient signaler des métriques de capacité complètes, DII signalerait la même capacité deux fois (une fois sur le flexgroup et une fois sur le constituant). Privilégier le reporting au niveau du constituant prend en charge des cas d’utilisation clés tout en évitant cette duplication.
 
-NOTE: Vous remarquerez peut-être que les chiffres de capacité pour FlexGroups peuvent afficher « 0 », tandis que les constituants affichent des valeurs. Dans DII, les FlexGroups eux-mêmes mettent à zéro la plupart des métriques de capacité, tandis que les constituants les incluent. Le problème est un double comptage : si les deux entités devaient signaler des métriques de capacité complètes, DII signalerait la même capacité deux fois (une fois sur le flexgroup et une fois sur le constituant). Privilégier le reporting au niveau du constituant prend en charge des cas d’utilisation clés tout en évitant cette duplication.
+Dans ce cas, pour signaler la capacité d'un constituant d'un FlexGroup dans une requête, un tableau de bord ou un outil de surveillance, utilisez la référence du constituant à son FlexGroup parent. Vous pouvez ensuite regrouper les constituants selon cette référence et agréger leurs valeurs de capacité.
 
-+ Dans ce cas, pour signaler la capacité d’un FlexGroup dans une requête, un tableau de bord ou un outil de surveillance, utilisez la référence du constituant vers son FlexGroup parent. Vous pouvez ensuite regrouper les constituants selon cette référence et agréger leurs valeurs de capacité.
+DII définit intentionnellement la capacité du parent FlexGroup sur zéro ; ONTAP lui-même continue de rapporter la capacité. Cela s'applique aux indicateurs de capacité/efficacité, et non aux indicateurs de performance. Il est recommandé de regrouper les composants par ID de groupe, car le nom du groupe peut ne pas être globalement unique.
 
-+ DII définit intentionnellement la capacité du parent FlexGroup sur zéro ; ONTAP continue toutefois à signaler la capacité. Cela s'applique aux indicateurs de capacité et d'efficacité, et non aux indicateurs de performance. Il est recommandé de regrouper les composants par ID de groupe, car le nom du groupe peut ne pas être globalement unique.
-
+====
 
 
 [[performance-section]]

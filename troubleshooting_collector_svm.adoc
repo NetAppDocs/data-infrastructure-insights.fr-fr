@@ -110,8 +110,8 @@ ____
 
 *Erreurs exactes couvertes*
 
-* Impossible de déterminer le type ONTAP pour ++[++host++]++. Raison : erreur de connexion au système de stockage : hôte inaccessible
-* ++[++IP++]++ est identifié comme un cluster/nœud et ne peut pas être ajouté dans ce mode
+* Impossible de déterminer le type d’ONTAP pour [host]. Motif : erreur de connexion au système de stockage : l’hôte est inaccessible
+* [IP] est identifié comme un cluster/nœud et ne peut pas être ajouté dans ce mode
 * Aucune interface de données valide trouvée sur le SVM
 * Autorisation manquante : vserver fpolicy
 * Rôles attribués au niveau du groupe plutôt qu'au niveau de l'utilisateur pour cet utilisateur Active Directory
@@ -177,7 +177,7 @@ Cela signifie que ONTAP ne peut pas maintenir la connexion qui envoie l'activit�
 
 *Résolu lorsque*
 
-* La politique FPolicy cloudsecure++_++ est activée et le collecteur reste en cours d'exécution.
+* La stratégie cloudsecure_ FPolicy est activée et le collecteur reste en cours d'exécution.
 
 
 
@@ -240,8 +240,8 @@ Un collecteur dégradé est toujours en cours d'exécution, mais une ou plusieur
 . Vérifiez que le protocole client est activé et, pour SMB, que la SVM dispose d'un serveur CIFS.
 . Examinez les partages et les volumes inclus et exclus. Utilisez des noms complets sans guillemets.
 . Activez la surveillance des accès aux dossiers lorsque des événements généraux d'accès aux dossiers sont requis. La création, le renommage et la suppression de dossiers sont collectés sans cette option.
-. Si seules les activités .ini et .DS++_++Store sont manquantes, aucune action n'est requise ; ces extensions sont exclues de la collecte d'événements FPolicy.
-. Si aucune activité n'est toujours constatée, utilisez les diagnostics avancés pour vérifier la politique cloudsecure++_++ et le journal des événements ONTAP FPolicy.
+. Si seules les activités .ini et .DS_Store sont manquantes, aucune action n'est requise ; ces extensions sont exclues de la collecte d'événements FPolicy.
+. Si aucune activité n'est toujours constatée, utilisez les diagnostics avancés pour vérifier la politique cloudsecure_ et le journal des événements FPolicy d'ONTAP.
 
 
 *Résolu lorsque*
@@ -309,7 +309,7 @@ L'audit ONTAP fonctionne ; la résolution d'identité est un problème distinct.
 . Vérifiez que le collecteur est en cours d'exécution et non en pause.
 . Pour bloquer les utilisateurs, utilisez les identifiants au niveau du cluster. Un utilisateur personnalisé a également besoin d'un accès SSH sur TCP 22 et des privilèges de blocage documentés.
 . Vérifiez que l'utilisateur personnalisé dispose des privilèges de snapshot requis.
-. Si ONTAP Multi-Admin Verify est activé, ajoutez les exclusions documentées pour les snapshots cloudsecure++_++ et l'opération set utilisée par le blocage utilisateur.
+. Si ONTAP Multi-Admin Verify est activé, ajoutez les exclusions documentées pour les snapshots cloudsecure_ et l'opération set utilisée par le blocage des utilisateurs.
 . Exécutez Test Connection en mode cluster et examinez les résultats des fonctionnalités Snapshot et User Blocking.
 
 
@@ -334,7 +334,7 @@ L'audit ONTAP fonctionne ; la résolution d'identité est un problème distinct.
 | Dégradé répertorie un nœud sans LIF de données locales | ONTAP ne peut pas établir de canal FPolicy à partir d'un nœud qui ne dessert pas localement la SVM. | Le nœud listé possède une interface de données SVM opérationnelle. 
 
 
-| Aucun événement pour .ini ou .DS++_++Store | Ces extensions sont exclues du périmètre de FPolicy. | D'autres activités de fichiers attendues sont également manquantes. 
+| Aucun événement pour .ini ou .DS_Store | Ces extensions sont exclues du périmètre de FPolicy. | D'autres activités de fichiers attendues sont également manquantes. 
 
 
 | Bref état d'initialisation, d'arrêt ou de dégradation | Le redémarrage, la mise à niveau, la migration, le basculement et la reprise nécessitent une reconnexion. | L'état persiste au-delà de l'opération ou se répète. 
@@ -374,7 +374,7 @@ La commande crée le fichier cloudsecure-agent-symptoms.zip. Installez zip si le
 
 
 | Journal de collecte  a| 
-/opt/netapp/cloudsecure/data-collectors/++<++collector-uuid++>++/logs/dsc.log
+/opt/netapp/cloudsecure/data-collectors/{lt}collector-uuid{gt}/logs/dsc.log
 
 Contient toutes les activités du collecteur, y compris les erreurs. Utilisez ce journal pour analyser les problèmes du collecteur.
 
@@ -384,9 +384,9 @@ Contient toutes les activités du collecteur, y compris les erreurs. Utilisez ce
 
 
 | Installation et mise à niveau de l'agent  a| 
-/opt/netapp/cloudsecure/agent/logs/cloudsecure++_++agent++_++install.log
+/opt/netapp/cloudsecure/agent/logs/cloudsecure_agent_install.log
 
-/opt/netapp/cloudsecure/agent/logs/cloudsecure++_++agent++_++upgrade.log
+/opt/netapp/cloudsecure/agent/logs/cloudsecure_agent_upgrade.log
 
 
 
@@ -419,7 +419,7 @@ event log show -source fpolicy -fields event,action,description
 fpolicy show
 fpolicy show-engine
 ----
-Recherchez une stratégie Workload Security avec le préfixe cloudsecure++_++. La stratégie doit être activée et chaque nœud de diffusion de données doit afficher un moteur externe connecté. Conservez la raison de l’événement et le nom du nœud lorsqu’un canal est déconnecté.
+Recherchez une stratégie Workload Security avec le préfixe cloudsecure_. Cette stratégie doit être activée, et chaque nœud de service de données doit afficher un moteur externe connecté. Conservez la raison de l'événement et le nom du nœud lorsqu'un canal est déconnecté.
 
 
 
@@ -455,7 +455,7 @@ ____
 
 [listing]
 ----
-curl -kv https://++<++management-ip++>++:443
+curl -kv https://<management-ip>:443
 ----
 Une réponse TLS confirme le chemin TCP. Un délai d'attente indique un blocage de routage ou de pare-feu. Une réponse d'authentification prouve l'accessibilité, mais pas que les informations d'identification ou les rôles sont corrects.
 
@@ -468,7 +468,7 @@ Depuis ONTAP, testez le routage à partir de chaque LIF de données SVM pertinen
 
 [listing]
 ----
-network ping -vserver ++<++svm++>++ -lif ++<++data-lif++>++ -destination ++<++agent-ip++>++ -show-detail
+network ping -vserver <svm> -lif <data-lif> -destination <agent-ip> -show-detail
 ----
 Sur l'agent, inspectez le pare-feu hôte :
 
@@ -486,17 +486,10 @@ Vérifiez que les ports de rappel réservés sont autorisés en entrée depuis t
 
 À partir d'ONTAP 9.8 et des versions ultérieures, une LIF de données SVM opérationnelle doit inclure data-fpolicy-client avec data-nfs et/ou data-cifs.
 
-[listing]
-----
-network interface show -vserver ++<++svm++>++ -fields service-policy,status-admin,status-oper
-----
+ network interface show -vserver <svm> -fields service-policy,status-admin,status-oper
 Si aucune politique appropriée n'existe, créez-en une ou modifiez-en une selon la conception réseau de votre ONTAP. Par exemple :
 
-[listing]
-----
-net int service-policy create -policy only++_++data++_++fpolicy -vserver ++<++svm++>++ ++\++ \
--allowed-addresses 0.0.0.0/0 -services data-cifs,data-nfs,data,-core,data-fpolicy-client
-----
+ net int service-policy create -policy only_data_fpolicy -vserver <svm> \
 *Remarque :* Sur ONTAP antérieur à 9.8, data-fpolicy-client n’est pas requis. La LIF doit avoir le rôle data, être opérationnelle et prendre en charge NFS et/ou CIFS.
 
 
@@ -509,7 +502,7 @@ N'utilisez une trace de paquets qu'après avoir effectué le test de connexion e
 . Lancez une analyse de paquets sur ONTAP pour la LIF de données concernée et l'adresse IP de l'agent.
 . Tentez un test de connexion ou redémarrez le collecteur.
 . Attendez la panne, puis arrêtez la trace.
-. Récupérez la trace à partir de https://++<++cluster-management-ip++>++/spi/++<++cluster-name++>++/etc/log/packet++_++traces/[].
+. Récupérez la trace à partir de https://<cluster-management-ip>/spi/<cluster-name>/etc/log/packet_traces/[].
 . Recherchez un SYN envoyé par ONTAP au port de rappel de l’Agent. L’absence de SYN indique un problème de chemin ou de stratégie côté ONTAP. Un SYN sans établissement de liaison complet indique un problème de pare-feu ou de routage entre ONTAP et l’Agent.
 
 
@@ -539,7 +532,7 @@ Deux collecteurs ne peuvent pas surveiller la même SVM, même s'ils appartienne
 
 [quote]
 ____
-*Remarque :* Ne supprimez pas les objets cloudsecure++_++ d’un collecteur actif. Le collecteur possède et met à jour ces objets.
+*Remarque :* Ne supprimez pas les objets cloudsecure_ d’un collecteur actif. Le collecteur est propriétaire de ces objets et les met à jour.
 
 ____
 
@@ -553,11 +546,11 @@ Pour une politique inutilisée, supprimez ses objets dans l'ordre de dépendance
 
 [listing]
 ----
-fpolicy disable -vserver ++<++svm++>++ -policy-name ++<++policy-name++>++
-fpolicy policy scope delete -vserver ++<++svm++>++ -policy-name ++<++policy-name++>++
-fpolicy policy delete -vserver ++<++svm++>++ -policy-name ++<++policy-name++>++
-fpolicy policy event delete -vserver ++<++svm++>++ -event-name ++<++event-name++>++
-fpolicy policy external-engine delete -vserver ++<++svm++>++ -engine-name ++<++engine-name++>++
+fpolicy disable -vserver <svm> -policy-name <policy-name>
+fpolicy policy scope delete -vserver <svm> -policy-name <policy-name>
+fpolicy policy delete -vserver <svm> -policy-name <policy-name>
+fpolicy policy event delete -vserver <svm> -event-name <event-name>
+fpolicy policy external-engine delete -vserver <svm> -engine-name <engine-name>
 ----
 Redémarrez le collecteur Workload Security après que les emplacements de séquence ou les objets en conflit ont été effacés.
 
@@ -583,7 +576,7 @@ Redémarrez le collecteur Workload Security après que les emplacements de séqu
 | AGENT009 | Vérifiez que le collecteur existe toujours dans l'Agent et l'environnement sélectionnés et qu'une suppression ou une migration simultanée ne l'a pas supprimé. 
 
 
-| Agent NON++_++CONNECTÉ | Vérifiez systemctl et journalctl, la sortie SaaS sur TCP 443, la configuration du proxy, l’inspection SSL et le compte cssys. 
+| Agent NOT_CONNECTED | Vérifiez systemctl et journalctl, la sortie SaaS sur TCP 443, la configuration du proxy, l’inspection SSL et le compte cssys. 
 |===
 Utilisez l'outil de vérification du taux d'événements pour dimensionner l'agent. Ne vous fiez pas uniquement au nombre de collecteurs ; le volume d'événements et les fonctionnalités activées influent sur la charge.
 
@@ -593,7 +586,7 @@ Utilisez l'outil de vérification du taux d'événements pour dimensionner l'age
 == *Enquêter sur l'absence d'activité après les vérifications de base*
 
 . Exécutez la commande event log show -source fpolicy et conservez toute erreur.
-. Exécutez la commande fpolicy show et vérifiez qu'une politique cloudsecure++_++ est activée.
+. Exécutez la commande fpolicy show et vérifiez qu'une politique cloudsecure_ est activée.
 . Vérifiez que le protocole générant les opérations client est activé dans le collecteur et autorisé sur la SVM.
 . Confirmez que le partage ou le volume n'est pas exclu.
 . Vérifiez que le collecteur n'était pas en pause lorsque l'opération a eu lieu.
@@ -640,7 +633,7 @@ La vérification multi-administrateur peut bloquer les commandes ONTAP utilisée
 
 [quote]
 ____
-multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !++*++cloudsecure++_*++" + multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !++*++cloudsecure++_*++" + multi-admin-verify rule delete -operation set
+multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !\*cloudsecure\_*" + multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !\*cloudsecure\_*" + multi-admin-verify rule delete -operation set
 
 *Remarque :* La suppression de la règle de configuration modifie la protection Multi-Admin Verify pour cette opération. Examinez la modification avec votre administrateur de sécurité ONTAP.
 
@@ -655,7 +648,7 @@ Contactez le support si une erreur persiste après les vérifications ordonnées
 
 *Inclure*
 
-* Le message complet de Status ++>++ Plus de détails et l'heure de la panne.
+* Le message complet de Status > More detail, ainsi que l'heure de l'échec.
 * Résultats du test de connexion, y compris les vérifications ignorées.
 * Versions des agents et des collecteurs et leur état actuel.
 * Version ONTAP, nom du cluster et du SVM, mode de connexion et modifications récentes de la topologie.
@@ -666,4 +659,4 @@ Contactez le support si une erreur persiste après les vérifications ordonnées
 * Pour la capacité : utilisation avant et après l’abonnement et capacité brute signalée par chaque collecteur.
 
 
-Utilisez Help ++>++ Support dans Data Infrastructure Insights pour ouvrir un ticket.
+Utilisez Aide > Support dans Data Infrastructure Insights pour ouvrir un dossier.

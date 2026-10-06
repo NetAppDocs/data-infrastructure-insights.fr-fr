@@ -15320,8 +15320,6 @@
   <block id="afd0c3c4cdf600c241e6062de7efc38d" category="list-text">Si l'adresse IP SVM et vsadmin sont utilisés, utilisez une LIF dédiée à la gestion uniquement. Une LIF avec des rôles combinés Données et Gestion peut répondre au ping même si l'accès à la gestion échoue.</block>
   <block id="9410d3dd17bd3b4647e1b70d1d1e6745" category="list-text">Pour les fonctionnalités optionnelles, accordez les privilèges indiqués par le test des fonctionnalités, puis exécutez à nouveau Test Connection.</block>
   <block id="052cdb9ec1abf182e678dbe78454c893" category="paragraph">*Erreurs exactes couvertes*</block>
-  <block id="e9a0103a0775b98e2814bd92d2a62dda" category="list-text">Impossible de déterminer le type ONTAP pour ++[++host++]++. Raison : erreur de connexion au système de stockage : hôte inaccessible</block>
-  <block id="035aadd245a74b453daf0d268eee41c9" category="list-text">++[++IP++]++ est identifié comme un cluster/nœud et ne peut pas être ajouté dans ce mode</block>
   <block id="9266ab3354c0bb9a2d4706509e093c35" category="list-text">Aucune interface de données valide trouvée sur le SVM</block>
   <block id="8bc4b2d3427ec80982ffc645e4e2e663" category="list-text">Autorisation manquante : vserver fpolicy</block>
   <block id="633ff01f97949aad10c07c3050299b8f" category="list-text">Rôles attribués au niveau du groupe plutôt qu'au niveau de l'utilisateur pour cet utilisateur Active Directory</block>
@@ -15350,7 +15348,6 @@
   <block id="5d3f323b7708802c99d3b55d34c784e6" category="list-text">Échec de la configuration de fpolicy sur la SVM... L’utilisateur n’est pas autorisé</block>
   <block id="085ae3f401d2a02104ded446925f5fa7" category="list-text">Aucun numéro de séquence valide n'est disponible pour activer la politique fpolicy</block>
   <block id="60acbda9b6d8687d4f8ee9a8df323d0a" category="list-text">Échec de la configuration du stockage persistant... Les informations de performance pour l'agrégat ne sont actuellement pas disponibles</block>
-  <block id="37f4c8d9b3bc335487b57648a25e1c45" category="list-text">La politique FPolicy cloudsecure++_++ est activée et le collecteur reste en cours d'exécution.</block>
   <block id="42250c9902d77a942ca166de080c8e73" category="section-title">*Capacité de l’agent ou état de santé du collecteur*</block>
   <block id="aa8e789605cb94bb5e2b9cad3e988d48" category="list-text">Saisissez à nouveau le mot de passe du collecteur : ouvrez Édition, saisissez le mot de passe et enregistrez.</block>
   <block id="e5b427e63010950b710856ccba203384" category="list-text">Vérifiez la marge de manœuvre du processeur et de la mémoire de l'agent ainsi que le nombre de collecteurs hébergés.</block>
@@ -15378,8 +15375,6 @@
   <block id="9d5558de49864a5aaf09bbc466325f62" category="list-text">Vérifiez que le protocole client est activé et, pour SMB, que la SVM dispose d'un serveur CIFS.</block>
   <block id="78e4147d2fcb665330522205434cc942" category="list-text">Examinez les partages et les volumes inclus et exclus. Utilisez des noms complets sans guillemets.</block>
   <block id="de8dab0414b0315e30cded2b46a453aa" category="list-text">Activez la surveillance des accès aux dossiers lorsque des événements généraux d'accès aux dossiers sont requis. La création, le renommage et la suppression de dossiers sont collectés sans cette option.</block>
-  <block id="4759d60f794302252cb46abffa2003de" category="list-text">Si seules les activités .ini et .DS++_++Store sont manquantes, aucune action n'est requise ; ces extensions sont exclues de la collecte d'événements FPolicy.</block>
-  <block id="8c22f9462036f0dd20c80fc189249549" category="list-text">Si aucune activité n'est toujours constatée, utilisez les diagnostics avancés pour vérifier la politique cloudsecure++_++ et le journal des événements ONTAP FPolicy.</block>
   <block id="d347513df0e13aad5feb241cbab4bdfc" category="list-text">Les nouvelles opérations client apparaissent dans Activity Forensics avec le protocole, le partage, le chemin et les informations utilisateur attendus.</block>
   <block id="f8acf423c23d41fcdb70a66757da8e59" category="section-title">*L'activité affiche un SID au lieu d'un nom d'utilisateur*</block>
   <block id="3787b0669929b027268b3b24a4fe3c62" category="paragraph">L'audit ONTAP fonctionne ; la résolution d'identité est un problème distinct.</block>
@@ -15406,7 +15401,6 @@
   <block id="6b922742b49720893c54e6b1e398b6cc" category="list-text">Vérifiez que le collecteur est en cours d'exécution et non en pause.</block>
   <block id="1e784234b40a4ed8a4c8884e71201bba" category="list-text">Pour bloquer les utilisateurs, utilisez les identifiants au niveau du cluster. Un utilisateur personnalisé a également besoin d'un accès SSH sur TCP 22 et des privilèges de blocage documentés.</block>
   <block id="78c3532ecef5ab1659ad612cc4c53bd2" category="list-text">Vérifiez que l'utilisateur personnalisé dispose des privilèges de snapshot requis.</block>
-  <block id="d57fd269eade28c34db56bbb026b8383" category="list-text">Si ONTAP Multi-Admin Verify est activé, ajoutez les exclusions documentées pour les snapshots cloudsecure++_++ et l'opération set utilisée par le blocage utilisateur.</block>
   <block id="ed39e8caebd174407031fe2936738028" category="list-text">Exécutez Test Connection en mode cluster et examinez les résultats des fonctionnalités Snapshot et User Blocking.</block>
   <block id="3eeafc54af73f87800ed2ce617a3f8b7" category="list-text">Workload Security peut créer et supprimer ses instantanés et peut bloquer et rétablir l'accès des utilisateurs.</block>
   <block id="0aa7337be8ed8a5fc38708f43902ba4b" category="section-title">Comportement attendu — aucune action requise</block>
@@ -15419,7 +15413,6 @@
   <block id="f06cf56d9192258142217bc7534ffa29" category="cell">Dégradé répertorie un nœud sans LIF de données locales</block>
   <block id="523eaf1144fe5e0cc0ce6ccf0aa0fdbc" category="cell">ONTAP ne peut pas établir de canal FPolicy à partir d'un nœud qui ne dessert pas localement la SVM.</block>
   <block id="86f505c2b43c4bab68db6b2721e92825" category="cell">Le nœud listé possède une interface de données SVM opérationnelle.</block>
-  <block id="0c024c9786b0a130ef9f2209b5b4eef7" category="cell">Aucun événement pour .ini ou .DS++_++Store</block>
   <block id="d2b54416d881f7bd67a08215cba775e7" category="cell">Ces extensions sont exclues du périmètre de FPolicy.</block>
   <block id="5eac15c2b8b9fc80cd9b41574c1acf1a" category="cell">D'autres activités de fichiers attendues sont également manquantes.</block>
   <block id="4f46848b0dbf0fd386dde599cb8868ce" category="cell">Bref état d'initialisation, d'arrêt ou de dégradation</block>
@@ -15437,13 +15430,10 @@
   <block id="0be76c87d632cbbfa4e3922e4adcc907" category="cell">*Preuve*</block>
   <block id="eef4b2f23f3a025cf83eab51354896eb" category="cell">*Emplacement ou commande*</block>
   <block id="609b6fe2bd0fb9e30ab6cb0642ad9815" category="cell">Journal de collecte</block>
-  <block id="4b5f755dff50d04d0ef018545e6f1842" category="paragraph">/opt/netapp/cloudsecure/data-collectors/++&lt;++collector-uuid++&gt;++/logs/dsc.log</block>
   <block id="4e236688e06bc3fc103e6f1c01f16cf0" category="paragraph">Contient toutes les activités du collecteur, y compris les erreurs. Utilisez ce journal pour analyser les problèmes du collecteur.</block>
   <block id="ceb60f8be137b22ec9c994e3859fc9d3" category="cell">Journal de l'agent</block>
   <block id="8ea61ce76dc83026cf34e9ad16a24974" category="cell">/opt/netapp/cloudsecure/agent/logs/agent.log</block>
   <block id="b775cc33ad81bc8796a92737fbe1fef0" category="cell">Installation et mise à niveau de l'agent</block>
-  <block id="4fb306285a138205d2951fdac023a9ab" category="paragraph">/opt/netapp/cloudsecure/agent/logs/cloudsecure++_++agent++_++install.log</block>
-  <block id="92e3160f317eea05bbcd97704c2e390e" category="paragraph">/opt/netapp/cloudsecure/agent/logs/cloudsecure++_++agent++_++upgrade.log</block>
   <block id="49ab5aaeb16e40d2787f6cc6532c99a3" category="cell">Test de connexion</block>
   <block id="837a3cd2b56827ebcf5b9a67fba50b92" category="cell">/opt/netapp/cloudsecure/test-connection/logs/</block>
   <block id="655ba6865da50cb3947405fa07a09371" category="cell">Service d'agent</block>
@@ -15452,7 +15442,6 @@
   <block id="566c4a298f7b5a7e738daecdc8429aa7" category="paragraph">*Remarque :* Le répertoire des journaux du collecteur peut également contenir un fichier error.log, mais il ne s'agit pas d'un journal d'erreurs général. Il n'est créé que lorsqu'un collecteur ne peut pas démarrer en raison d'une configuration incorrecte, et l'Agent le supprime après avoir signalé cette raison dans l'état du collecteur. Il est généralement absent ou vide, utilisez donc dsc.log.</block>
   <block id="1f19c695deb1ea2cfc7730a695c1da0d" category="section-title">*Valider l'état FPolicy ONTAP*</block>
   <block id="ed6326945366f78c6138656fa831567e" category="paragraph">Exécutez ces commandes depuis le contexte d'administration ONTAP approprié :</block>
-  <block id="7f5bdaa89a1d8cc7785d87c89e903aef" category="paragraph">Recherchez une stratégie Workload Security avec le préfixe cloudsecure++_++. La stratégie doit être activée et chaque nœud de diffusion de données doit afficher un moteur externe connecté. Conservez la raison de l’événement et le nom du nœud lorsqu’un canal est déconnecté.</block>
   <block id="10e79af04432e7c04ea6e975d6340b34" category="section-title">*Valider chaque chemin réseau*</block>
   <block id="e71a4b7488a97c0e5d8b3ab3efe619e4" category="cell">*Direction*</block>
   <block id="139a0086c51a356d51b9adbdd2abcd41" category="cell">Agent → Adresse IP de gestion du cluster ou de la SVM</block>
@@ -15481,7 +15470,6 @@
   <block id="9319f07e493af8a26e0543b0ed658b50" category="list-text">Lancez une analyse de paquets sur ONTAP pour la LIF de données concernée et l'adresse IP de l'agent.</block>
   <block id="456fd97b69d8c1f180393a803e319725" category="list-text">Tentez un test de connexion ou redémarrez le collecteur.</block>
   <block id="e9b6af72f3ca122d88bd922fd574735b" category="list-text">Attendez la panne, puis arrêtez la trace.</block>
-  <block id="5bff9b997a211d5666ffda85aad32c5f" category="list-text">Récupérez la trace à partir de<block ref="8257c599cb4030b99e5758145816d417" category="inline-link-rx"></block>.</block>
   <block id="4c48ff6a88114f32654d41d561b9f2e7" category="list-text">Recherchez un SYN envoyé par ONTAP au port de rappel de l’Agent. L’absence de SYN indique un problème de chemin ou de stratégie côté ONTAP. Un SYN sans établissement de liaison complet indique un problème de pare-feu ou de routage entre ONTAP et l’Agent.</block>
   <block id="13bae038f53424549e687573baa305f9" category="paragraph">*Remarque :* Les traces de paquets peuvent contenir des informations réseau. Traitez-les conformément à vos exigences en matière de traitement des données.</block>
   <block id="e5a6d800b320650499428b863e2fea63" category="section-title">*Diagnostiquer les collecteurs SVM dupliqués*</block>
@@ -15491,7 +15479,6 @@
   <block id="fb40f0a3377da0677df294df514ce170" category="list-text">Conservez un collecteur et supprimez les doublons.</block>
   <block id="83ec7b975b509497443f363336b2878a" category="list-text">Redémarrez le collecteur conservé et confirmez que son canal FPolicy reste connecté.</block>
   <block id="952e188cbe99d625d6ae54372872a42c" category="section-title">*Nettoyez les objets FPolicy inutilisés confirmés*</block>
-  <block id="e4920097354c598ef6752b5bc14cee04" category="paragraph">*Remarque :* Ne supprimez pas les objets cloudsecure++_++ d’un collecteur actif. Le collecteur possède et met à jour ces objets.</block>
   <block id="4a1659c2394e857673030dacc385655d" category="paragraph">Répertoriez la configuration FPolicy et identifiez les objets confirmés comme inutilisés :</block>
   <block id="e95c6549d2974824b4453d611bbdfe4e" category="paragraph">Pour une politique inutilisée, supprimez ses objets dans l'ordre de dépendance :</block>
   <block id="a656df570b8da2747fb3faad17385d76" category="paragraph">Redémarrez le collecteur Workload Security après que les emplacements de séquence ou les objets en conflit ont été effacés.</block>
@@ -15506,12 +15493,10 @@
   <block id="4850e98bb8a39839a6bb92e01777cbcf" category="cell">Réessayez dans quelques minutes. Si l'action échoue toujours, redémarrez cloudsecure-agent.service et notez l'action exacte ainsi que la raison.</block>
   <block id="16be73a2b9210092fc8fe6820b245503" category="cell">AGENT009</block>
   <block id="a9d00c660fbf0bc3f42c37f8cf43f676" category="cell">Vérifiez que le collecteur existe toujours dans l'Agent et l'environnement sélectionnés et qu'une suppression ou une migration simultanée ne l'a pas supprimé.</block>
-  <block id="91c26bc5047d4ec1362dbf32c0f86a5e" category="cell">Agent NON++_++CONNECTÉ</block>
   <block id="4a0da87311c8e8744d432fb03ee3b1d8" category="cell">Vérifiez systemctl et journalctl, la sortie SaaS sur TCP 443, la configuration du proxy, l’inspection SSL et le compte cssys.</block>
   <block id="0345935c483ab0eaa99d31263cc2f72e" category="paragraph">Utilisez l'outil de vérification du taux d'événements pour dimensionner l'agent. Ne vous fiez pas uniquement au nombre de collecteurs ; le volume d'événements et les fonctionnalités activées influent sur la charge.</block>
   <block id="6ea9628ebc17179ccc4454528a3ab14d" category="section-title">*Enquêter sur l'absence d'activité après les vérifications de base*</block>
   <block id="688373a52a32242a1525ed2568c00aad" category="list-text">Exécutez la commande event log show -source fpolicy et conservez toute erreur.</block>
-  <block id="779bdc55b359ee63c911efcfcc0e8688" category="list-text">Exécutez la commande fpolicy show et vérifiez qu'une politique cloudsecure++_++ est activée.</block>
   <block id="39124cfeb8730bd8fe9d1be3bb163565" category="list-text">Vérifiez que le protocole générant les opérations client est activé dans le collecteur et autorisé sur la SVM.</block>
   <block id="57ca85a860df4ace6caa7e08fa8f33e5" category="list-text">Confirmez que le partage ou le volume n'est pas exclu.</block>
   <block id="802fcf9cbb96d250f3575d08755fa373" category="list-text">Vérifiez que le collecteur n'était pas en pause lorsque l'opération a eu lieu.</block>
@@ -15531,12 +15516,10 @@
   <block id="079a9de08ebe445d6180d268b0db4f7b" category="paragraph">Vérifiez le nom du serveur, le port, le DN de liaison, le mot de passe, la forêt ou la base de recherche, ainsi que les droits d'accès en lecture. Redémarrez le collecteur d'annuaire après une correction pour demander une nouvelle synchronisation.</block>
   <block id="2f0f47626d0bec33bd993cee56586690" category="section-title">*Contrôles de vérification multi-administrateurs*</block>
   <block id="0f478b151a9500cf69f64fb647b097cb" category="paragraph">La vérification multi-administrateur peut bloquer les commandes ONTAP utilisées pour les instantanés et le blocage des utilisateurs. Examinez les règles existantes avant de les modifier. Les exclusions de Workload Security documentées sont :</block>
-  <block id="bf3cb288a9b88a2fc95a1063d9e6d11e" category="paragraph">multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !++*++cloudsecure++_*++" + multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !++*++cloudsecure++_*++" + multi-admin-verify rule delete -operation set</block>
   <block id="444f280bbd2d0cce542fd9d8aba0671d" category="paragraph">*Remarque :* La suppression de la règle de configuration modifie la protection Multi-Admin Verify pour cette opération. Examinez la modification avec votre administrateur de sécurité ONTAP.</block>
   <block id="76ee106a6ea5ef6d8e735d293787d3db" category="section-title">*Contactez l’assistance NetApp*</block>
   <block id="0e97d92ce4baab6ec2b2a655cf4a3812" category="paragraph">Contactez le support si une erreur persiste après les vérifications ordonnées, ONTAP signale une panne de nœud ou si la capacité reste incorrecte après l’actualisation des données du collecteur.</block>
   <block id="3b250ab7948f1e0ddee4a50c56e89018" category="paragraph">*Inclure*</block>
-  <block id="23d31771696a63dc720a7a7a2f14889a" category="list-text">Le message complet de Status ++&gt;++ Plus de détails et l'heure de la panne.</block>
   <block id="653175e9b87d13e599ea4371e94298a3" category="list-text">Résultats du test de connexion, y compris les vérifications ignorées.</block>
   <block id="61423e0605b0cbdcf8f0bebd958e94f1" category="list-text">Versions des agents et des collecteurs et leur état actuel.</block>
   <block id="4850584f0032dfb26d5d8c2ffb395fb4" category="list-text">Version ONTAP, nom du cluster et du SVM, mode de connexion et modifications récentes de la topologie.</block>
@@ -15545,7 +15528,6 @@
   <block id="0c9d71e2f36e202f52a80a1e18d84631" category="list-text">Trace de paquets lorsqu'un chemin de rappel reste inexpliqué.</block>
   <block id="a6fa4aea2a61c78e74a437025bfc4121" category="list-text">Pour les performances : la chronologie de la latence et des IOPS, ainsi que la chronologie du taux d'événements.</block>
   <block id="2f5a98a7fe17728f8b6f19bb7dde8ff4" category="list-text">Pour la capacité : utilisation avant et après l’abonnement et capacité brute signalée par chaque collecteur.</block>
-  <block id="7db2da5d72ca4cfd4dc3591cdb8b5f7a" category="paragraph">Utilisez Help ++&gt;++ Support dans Data Infrastructure Insights pour ouvrir un ticket.</block>
   <block id="a0d5cf132ea60556950b6db3b75e1331" category="summary">Comprendre ces concepts aide un assistant IA à sélectionner les bons outils et à construire des requêtes valides.</block>
   <block id="3e22aa14b911d8584c3de2cb2d09c8e3" category="doc">Concepts et modèle de données DII MCP</block>
   <block id="845c2e1f81c7167073b0b3f255d00af4" category="admonition">Le DII MCP est une <block ref="312c0c6b46ba32b4b11ba8c9da5788ed" category="inline-link-macro-rx"></block> fonctionnalité et est donc susceptible d'être modifié.</block>
@@ -16287,7 +16269,25 @@
   <block id="77b5c5ee27c770993c6041b7b3f0105c" category="paragraph">Si le collecteur passe ultérieurement à l’état Erreur ou Dégradé, ouvrez État &gt; Plus de détails et suivez la procédure de dépannage du collecteur de données ONTAP SVM. Les conditions d’exécution telles que les collecteurs en double, la surcharge du taux d’événements, les collecteurs en pause, le placement du stockage persistant, les transitions MetroCluster, l’absence d’activité et la résolution d’identité ne sont pas prises en compte dans le workflow Test Connection avant l’enregistrement.</block>
   <block id="954c32784463d0103797201c7694bdf9" category="list-text">Vérifiez que le collecteur atteint l’état Running et que des événements apparaissent dans Workload Security &gt; Activity Forensics après de réelles E/S client.</block>
   <block id="5eb14926e2b0223f53564d7659171c1c" category="admonition">Vous remarquerez peut-être que les chiffres de capacité pour FlexGroups peuvent afficher « 0 », tandis que les constituants affichent des valeurs. Dans DII, les FlexGroups eux-mêmes mettent à zéro la plupart des métriques de capacité, tandis que les constituants les incluent. Le problème est un double comptage : si les deux entités devaient signaler des métriques de capacité complètes, DII signalerait la même capacité deux fois (une fois sur le flexgroup et une fois sur le constituant). Privilégier le reporting au niveau du constituant prend en charge des cas d’utilisation clés tout en évitant cette duplication.</block>
-  <block id="4613ec50b199e8fe1a45e8365d1126ed" category="paragraph">+ Dans ce cas, pour signaler la capacité d’un FlexGroup dans une requête, un tableau de bord ou un outil de surveillance, utilisez la référence du constituant vers son FlexGroup parent. Vous pouvez ensuite regrouper les constituants selon cette référence et agréger leurs valeurs de capacité.</block>
-  <block id="77064528bd054f741f0468e85617bf35" category="paragraph">+ DII définit intentionnellement la capacité du parent FlexGroup sur zéro ; ONTAP continue toutefois à signaler la capacité. Cela s'applique aux indicateurs de capacité et d'efficacité, et non aux indicateurs de performance. Il est recommandé de regrouper les composants par ID de groupe, car le nom du groupe peut ne pas être globalement unique.</block>
   <block id="53faddfe1edffe14cfa22b21a8e4e255" category="cell">Ceci est intentionnel. La plupart des indicateurs de capacité sont rapportés sur les composants du FlexGroup, et non sur le FlexGroup parent. Rapporter la même capacité sur les deux entraînerait un double comptage. Privilégier les rapports au niveau des composants prend en charge les principaux cas d'utilisation tout en évitant cette duplication. Pour rapporter la capacité d'un FlexGroup dans une requête, un tableau de bord ou un moniteur, utilisez la référence du composant à son FlexGroup parent. Regroupez les composants selon cette référence et agrégez leurs valeurs de capacité. DII définit intentionnellement la capacité du parent FlexGroup sur zéro ; ONTAP lui-même continue de rapporter la capacité. Cela s'applique aux indicateurs de capacité/efficacité, et non aux indicateurs de performance. Il est recommandé de regrouper les composants par ID de groupe, car le nom du groupe peut ne pas être globalement unique.</block>
+  <block id="b0b97f3348cdc669199b59397d5cfda9" category="paragraph">Dans ce cas, pour signaler la capacité d'un constituant d'un FlexGroup dans une requête, un tableau de bord ou un outil de surveillance, utilisez la référence du constituant à son FlexGroup parent. Vous pouvez ensuite regrouper les constituants selon cette référence et agréger leurs valeurs de capacité.</block>
+  <block id="df0226880b0292bb3e39fbb512638c4a" category="paragraph">DII définit intentionnellement la capacité du parent FlexGroup sur zéro ; ONTAP lui-même continue de rapporter la capacité. Cela s'applique aux indicateurs de capacité/efficacité, et non aux indicateurs de performance. Il est recommandé de regrouper les composants par ID de groupe, car le nom du groupe peut ne pas être globalement unique.</block>
+  <block id="11c755b8329995c080a4059e4bf242e6" category="list-text">Impossible de déterminer le type d’ONTAP pour [host]. Motif : erreur de connexion au système de stockage : l’hôte est inaccessible</block>
+  <block id="f02b1b5ed10b4dbe05da2a063a182088" category="list-text">[IP] est identifié comme un cluster/nœud et ne peut pas être ajouté dans ce mode</block>
+  <block id="3d00f3f42cac2e414eee4dcb9d0d9483" category="list-text">La stratégie cloudsecure_ FPolicy est activée et le collecteur reste en cours d'exécution.</block>
+  <block id="293c08cd401f87c15336eaf417d06e57" category="list-text">Si seules les activités .ini et .DS_Store sont manquantes, aucune action n'est requise ; ces extensions sont exclues de la collecte d'événements FPolicy.</block>
+  <block id="8fa18ab7a18929f7f0879be2fb8b3054" category="list-text">Si aucune activité n'est toujours constatée, utilisez les diagnostics avancés pour vérifier la politique cloudsecure_ et le journal des événements FPolicy d'ONTAP.</block>
+  <block id="1c65b961301c2b223a8bf45311f05dd4" category="list-text">Si ONTAP Multi-Admin Verify est activé, ajoutez les exclusions documentées pour les snapshots cloudsecure_ et l'opération set utilisée par le blocage des utilisateurs.</block>
+  <block id="76778495a87770e10d3bc7b730dc736b" category="cell">Aucun événement pour .ini ou .DS_Store</block>
+  <block id="60869d1abd3ecf7441cbb614b23131a0" category="paragraph">/opt/netapp/cloudsecure/data-collectors/{lt}collector-uuid{gt}/logs/dsc.log</block>
+  <block id="48e5b137f1782a0dff6b1d690fd29c78" category="paragraph">/opt/netapp/cloudsecure/agent/logs/cloudsecure_agent_install.log</block>
+  <block id="2bf9ae67b6a7c5df6ba0e09cf1dc81fe" category="paragraph">/opt/netapp/cloudsecure/agent/logs/cloudsecure_agent_upgrade.log</block>
+  <block id="0d3dee47dc809f7fc5a86fb82b4caf0e" category="paragraph">Recherchez une stratégie Workload Security avec le préfixe cloudsecure_. Cette stratégie doit être activée, et chaque nœud de service de données doit afficher un moteur externe connecté. Conservez la raison de l'événement et le nom du nœud lorsqu'un canal est déconnecté.</block>
+  <block id="b9a0a25a4fe58508d1c1bb635a53d91d" category="list-text">Récupérez la trace à partir de<block ref="8024a7e052cfeb7e469f12b11909df83" category="inline-link-rx"></block>.</block>
+  <block id="2dfc455baa46eb666025dbc7b414efa9" category="paragraph">*Remarque :* Ne supprimez pas les objets cloudsecure_ d’un collecteur actif. Le collecteur est propriétaire de ces objets et les met à jour.</block>
+  <block id="42afc33a95a008fa50b39816238d5ae4" category="cell">Agent NOT_CONNECTED</block>
+  <block id="ebad25052221f4ee537e35e4f5dbaad7" category="list-text">Exécutez la commande fpolicy show et vérifiez qu'une politique cloudsecure_ est activée.</block>
+  <block id="d822a0d21d568ecd22e518ef5dc10ebb" category="paragraph">multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !\*cloudsecure\_*" + multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !\*cloudsecure\_*" + multi-admin-verify rule delete -operation set</block>
+  <block id="4ff2cea234868624331b11228fa5ab0d" category="list-text">Le message complet de Status &gt; More detail, ainsi que l'heure de l'échec.</block>
+  <block id="9277538c12d62b57cf00dc1681c9a5af" category="paragraph">Utilisez Aide &gt; Support dans Data Infrastructure Insights pour ouvrir un dossier.</block>
 </blocks>
