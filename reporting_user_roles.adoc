@@ -76,6 +76,28 @@ Le tableau suivant présente les fonctions disponibles pour chaque rôle de repo
 |===
 
 
+[[reporting-administration]]
+== Administration des rapports
+
+L'ancienne console d'administration des rapports n'est plus disponible. Utilisez Manage pour l'administration des rapports.
+
+. Dans Data Infrastructure Insights, ouvrez *Rapports*.
+. Sélectionnez *Menu > Manage*.
+
+
+Depuis Manage, un administrateur de rapports peut configurer les rapports et travailler avec les activités de reporting actuelles, passées et à venir.
+
+Pour afficher les détails d'exécution d'une activité terminée :
+
+. Sélectionnez *Menu > Gérer > Activités > Passées*.
+. Dans l'activité, ouvrez le menu à trois points.
+. Sélectionnez *Détails d'exécution*.
+
+
+Pour plus d'informations, consultez link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/IBM_Cognos_Administration_Console_Does_Not_Load_for_DII_Reporting_Scheduled_Reports["Article de la base de connaissances"^].
+
+
+
 [[setting-reporting-cognos-email-preferences]]
 == Définition des préférences de courrier électronique pour les rapports (Cognos)
 
